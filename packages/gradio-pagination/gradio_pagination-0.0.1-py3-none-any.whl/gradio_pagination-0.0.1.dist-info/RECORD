@@ -1,0 +1,10 @@
+gradio_pagination/__init__.py,sha256=Um4NK0iMcDT_YonIco-DHEZJpN_N5ddAb-WBUWjBkHM,62
+gradio_pagination/pagination.py,sha256=jHeK-ZyToqTv1nfpEmJoRFrZxyFoOaDJIyo_fd1aio4,4647
+gradio_pagination/pagination.pyi,sha256=FMb8WMOQbCt8tTNGHbwq6TnZFt3XIiIisF0wo0e-iOQ,74336
+gradio_pagination/templates/component/index.js,sha256=qh2rvIHmYonQZW1Xk_Q_v0Ru8vurDezMdc6EbMhXTLY,8006
+gradio_pagination/templates/component/style.css,sha256=5bainq65RBoXwSyB_M1IxF1U2gNOrUUvAb9Z69D87r4,858
+gradio_pagination/templates/example/index.js,sha256=OS9nWHtrMBcPa-vuGta3RE8gDLSp0_43pHlFTZPPASA,2315
+gradio_pagination/templates/example/style.css,sha256=-DHk5asz3SWFNLQlCnYuMN4b4gTf_srMmlu5x_xU_Pw,147
+gradio_pagination-0.0.1.dist-info/METADATA,sha256=LZazZ_JIY-8hCApcZbrJyU7QF9a1SI2eXgEKk4oXD7A,7092
+gradio_pagination-0.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+gradio_pagination-0.0.1.dist-info/RECORD,,
