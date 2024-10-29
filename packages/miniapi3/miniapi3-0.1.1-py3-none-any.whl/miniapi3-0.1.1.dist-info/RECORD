@@ -1,0 +1,15 @@
+miniapi3/__init__.py,sha256=n1EidEF87KWdYuMW2ORSi5YExPQ7dtgPm8vuNc3suyw,377
+miniapi3/core.py,sha256=qelgxPIP1OK80Ke9NGpkviiMNdJMqxGM8fE-nXah_o4,1922
+miniapi3/handlers.py,sha256=lLFtas1m3ThXI0XtOlZ5DhAJpeDr_Tr7S-cQ9a_gIDk,11338
+miniapi3/http.py,sha256=2lGSSAnA96CPiBdl8CJNfS9OGatgbObjj-SvwQ5XiMw,3627
+miniapi3/middleware.py,sha256=pxV1QP0iTnFypg7Lwm9VbtbXkaFD0iPvNuJLDAZBATY,1036
+miniapi3/parameter_resolver.py,sha256=rsA8eHf4IJJHzaTvDo38omY66ayeNXeWGlDXWIgy4lM,3040
+miniapi3/router.py,sha256=WfSwSlnHdO6913fXVGMBoZ3-7b5ZMXiwKsUjYhEI_BE,2143
+miniapi3/server.py,sha256=32tb9RCoz5zblvCcfOxZdfkBnzN2Vu2iHI3KXoQDcsw,303
+miniapi3/utils.py,sha256=Li7yl09-Hkt4ohIrtjHcZOkKob1dkfQfelCNaeYZWFw,167
+miniapi3/validation.py,sha256=ifvhlxVWqvNDv8EGYdTGuvYwVV-s0K_mbbwL7vBZiHk,43
+miniapi3/websocket.py,sha256=cRjMPu_EVHHBhKkk4fb0GEimiV5UWhoOU2pfmV4d8yA,1722
+miniapi3-0.1.1.dist-info/METADATA,sha256=RWuvxWlMNSo3LK4Ko15NLli6RJK0fUHdQPUVEVddxLA,2099
+miniapi3-0.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+miniapi3-0.1.1.dist-info/top_level.txt,sha256=pBf4Sz_b2wywws9ZZY840Ic-BmEhXmmyVvfZcAKeFYM,9
+miniapi3-0.1.1.dist-info/RECORD,,
