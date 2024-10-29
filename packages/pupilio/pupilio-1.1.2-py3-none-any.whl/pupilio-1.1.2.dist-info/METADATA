@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pupilio
+Version: 1.1.2
+Summary: Pupilio Library
+Home-page: https://deep-gaze.com/sdk/python
+Author: Pupilio
+Author-email: zhugc2016@gmail.com
+Requires-Dist: numpy
+Requires-Dist: pygame
+Requires-Dist: websockets
+Requires-Dist: opencv-python
+
