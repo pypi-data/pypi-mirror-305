@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: km-plugin-feishu
+Version: 1.0
+Summary: 知识管理系统插件-飞书系统对接
+Author: KnowledgeManagement
+Requires-Dist: km-sdk
+Requires-Dist: requests
