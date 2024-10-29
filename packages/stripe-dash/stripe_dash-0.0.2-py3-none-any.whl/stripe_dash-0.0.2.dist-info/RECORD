@@ -1,0 +1,12 @@
+stripe_dash/StripeDash.py,sha256=L3p2X_8Zu7hKVoYqkVzRaY_mlDTWq3jv3L7kj3G99-g,2309
+stripe_dash/__init__.py,sha256=9k8gpoBC8cIzDVJUniISGlxJLFjuJbYKHgQGfm5xbSo,2251
+stripe_dash/_imports_.py,sha256=6J0P0nivG_D8noEOcVGDP3dCHqz3X5NhLj0PRXLZgMQ,66
+stripe_dash/metadata.json,sha256=gKocFNDWcaD8eACgNbLwDk6ZLmW-SLVt6P8cvJHq5sE,2127
+stripe_dash/package-info.json,sha256=SdQKu3hkG_rDTTMPL4bIYz4VB3ldWrnzkzCqfAgUCSI,1831
+stripe_dash/stripe_dash.min.js,sha256=PloXhgVdB4HyLaKliWqg9rcL37pp4Y8upMW83ustluA,44013
+stripe_dash/stripe_dash.min.js.map,sha256=Rx_YxIgNcJmOc47QJABlJwdbgJ-KFPfUTrS-FQEIv5U,129078
+stripe_dash-0.0.2.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stripe_dash-0.0.2.dist-info/METADATA,sha256=pCp6OBWgLtdJfC05QD0mNW6z31Ii9iVrIAOEWGwsPgQ,3909
+stripe_dash-0.0.2.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+stripe_dash-0.0.2.dist-info/top_level.txt,sha256=k14nR8KMwxv5exngaLbNNTbdTUK5vYZDYfMoBfl-75E,12
+stripe_dash-0.0.2.dist-info/RECORD,,
