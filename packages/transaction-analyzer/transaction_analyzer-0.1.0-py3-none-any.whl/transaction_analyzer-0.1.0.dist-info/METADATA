@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: transaction_analyzer
+Version: 0.1.0
+Summary: A package for analyzing financial transactions.
+Author-email: Alex <haylarrr@yandex.ru>
+Requires-Dist: pandas
+
