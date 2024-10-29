@@ -1,0 +1,8 @@
+pyserial
+
+[gpio]
+gpiozero
+
+[images]
+numpy
+pillow
