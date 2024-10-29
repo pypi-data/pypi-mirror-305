@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CUB_customer_analysis"
+version = "0.1.0"
+description = "A package for analyzing customer data and generating reports."
+
+dependencies = ["pandas"]
+[tool.setuptools]
+py-modules = []

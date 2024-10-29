@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: CUB_customer_analysis
+Version: 0.1.0
+Summary: A package for analyzing customer data and generating reports.
+Requires-Dist: pandas
