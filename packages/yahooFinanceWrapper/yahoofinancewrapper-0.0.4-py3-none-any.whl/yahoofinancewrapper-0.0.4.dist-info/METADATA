@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: yahooFinanceWrapper
+Version: 0.0.4
+Summary: A wrapper for an unofficial Yahoo Finance API
+Project-URL: Homepage, https://github.com/maddaxlallatin/stockApiWrapper/tree/main/python
+Project-URL: Issues, https://github.com/maddaxlallatin/stockApiWrapper/issues
+Author-email: Maddax Lallatin <maddaxlallatin@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
