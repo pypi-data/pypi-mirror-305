@@ -1,0 +1,6 @@
+nc_to_gpkg/__init__.py,sha256=Ie5tLTggisL_jt0944V9HrEu0-0y-NM7UB2Ib1AytsQ,29
+nc_to_gpkg/nc_to_gpkg.py,sha256=gYcFrSUZNxolpZbmvADFiv36BQ84THJrfFd65wxOxN4,3842
+netcdf_to_gpkg-0.0.1.dist-info/METADATA,sha256=1pQCXtF6CAh-dzV_qLE4vkoi_2D4j2z_9mUCIO-B0rM,395
+netcdf_to_gpkg-0.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+netcdf_to_gpkg-0.0.1.dist-info/top_level.txt,sha256=bAFfZzkRSJic7DyoQZ8YEa1Ecp0pXzM3kDWwWUxgriU,11
+netcdf_to_gpkg-0.0.1.dist-info/RECORD,,
