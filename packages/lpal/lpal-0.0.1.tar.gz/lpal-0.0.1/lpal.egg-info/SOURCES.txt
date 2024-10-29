@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+lpal.egg-info/PKG-INFO
+lpal.egg-info/SOURCES.txt
+lpal.egg-info/dependency_links.txt
+lpal.egg-info/requires.txt
+lpal.egg-info/top_level.txt
