@@ -1,0 +1,18 @@
+[project]
+name = "osrs"
+version = "0.0.12"
+authors = [
+  { name="extreme4all"},
+]
+description = "a wrapper around osrs api's"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Bot-detector/osrs"
+"Bug Tracker" = "https://github.com/Bot-detector/osrs/issues"
