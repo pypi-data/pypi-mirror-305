@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pinecone-plugin-records
+Version: 0.1.0.dev20241029054918
+Summary: Records plugin for Pinecone SDK
+Home-page: https://www.pinecone.io
+License: Apache-2.0
+Author: Pinecone Systems, Inc.
+Author-email: support@pinecone.io
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pinecone (==5.4.0.dev4)
+Requires-Dist: pinecone-plugin-interface (>=0.0.7,<0.0.8)
+Requires-Dist: pytest-mock (>=3.14.0,<4.0.0)
+Requires-Dist: python-dateutil (>=2.5.3)
+Project-URL: Documentation, https://pinecone.io/docs
+Description-Content-Type: text/markdown
+
+# Records API plugin for Pinecone python SDK
+
+## Installation
+
+The plugin is distributed separately from the core python SDK.
+
+```
+# Install the base python SDK, version 4.1.1 or higher
+pip install pinecone
+
+# And also the plugin functionality
+pip install pinecone-plugin-records
+```
+
+## Usage
+
+TODO
+
