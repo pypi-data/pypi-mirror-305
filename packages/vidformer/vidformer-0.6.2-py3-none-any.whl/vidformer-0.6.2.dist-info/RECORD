@@ -1,0 +1,7 @@
+vidformer/__init__.py,sha256=JnJ5T-Afn8dZXAkwmq38cFzrnK4aZZZSFhHdUqVLdno,113
+vidformer/vf.py,sha256=0idKHOkWXC5bki1thrgihKQwJ91gDCzf96tl3Gm5vaA,31059
+vidformer/cv2/__init__.py,sha256=wOjDsYyUKlP_Hye8-tyz-msu9xwaPMpN2sGMu3Lh3-w,22
+vidformer/cv2/vf_cv2.py,sha256=CO9LZ7FwOhrzNJ1eFjd9JddZm0PjY-XtOlKIYGB3iQQ,15486
+vidformer-0.6.2.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+vidformer-0.6.2.dist-info/METADATA,sha256=_jQnVbcd_OHAy57G7HXIijyXUOoR9Q8AzURvjn3ljDA,1487
+vidformer-0.6.2.dist-info/RECORD,,
