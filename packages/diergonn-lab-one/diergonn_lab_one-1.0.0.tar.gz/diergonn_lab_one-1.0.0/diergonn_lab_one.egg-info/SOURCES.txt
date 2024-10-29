@@ -1,0 +1,10 @@
+README.md
+setup.py
+diergonn_lab_one.egg-info/PKG-INFO
+diergonn_lab_one.egg-info/SOURCES.txt
+diergonn_lab_one.egg-info/dependency_links.txt
+diergonn_lab_one.egg-info/top_level.txt
+lab1/__init__.py
+lab1/main.py
+lab1/testing/__init__.py
+lab1/testing/test.py
