@@ -1,0 +1,10 @@
+passagemath_libbraiding-10.4.33.dist-info/RECORD,,
+passagemath_libbraiding-10.4.33.dist-info/WHEEL,sha256=MEOz_tF93mhuxSdnRa5kGRoxad4Bof6OBDd6wk9uVNQ,109
+passagemath_libbraiding-10.4.33.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_libbraiding-10.4.33.dist-info/METADATA,sha256=dv1cRg9YiHHF6qP74G0evRCNEcN5W3erG_6LUf6phRM,2449
+passagemath_libbraiding.dylibs/libpari-gmp-tls.dylib,sha256=AmPioImBEu7Fq1Zc-DjQLcv3xYBiTD-FkIN4YfKS6ts,9820768
+passagemath_libbraiding.dylibs/libbraiding.0.0.0.dylib,sha256=0enf-M-lfHHlbn9TaP9KKOQ_nwL3zkV50TeX5tR9aiA,298640
+passagemath_libbraiding.dylibs/libgmp.10.dylib,sha256=uPtx-3vnqflommmCtzJAIzzF5o-vbBwULfavHSqfEwg,606176
+sage/all__sagemath_libbraiding.py,sha256=HzvyH9JZ1Fjh65Qx_jwx_UD5XSJg2iOTg7L5ajVVYvs,50
+sage/libs/all__sagemath_libbraiding.py,sha256=HzvyH9JZ1Fjh65Qx_jwx_UD5XSJg2iOTg7L5ajVVYvs,50
+sage/libs/braiding.cpython-310-darwin.so,sha256=BgAQFlbfNrwCiFamHzu81nRLnd40LA9naiBVBqTwU8E,168160
