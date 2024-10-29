@@ -1,0 +1,7 @@
+module_qc_data_tools/__init__.py,sha256=LrVU023KEOSNsTI2HXrlBa-emZLfaknElMtVt62zWSo,847
+module_qc_data_tools/_version.py,sha256=7zwThZ_JOKbd1mS94wO3dah_re9fi4zaOmlX2kZgah4,413
+module_qc_data_tools/qcDataFrame.py,sha256=wN-DQBmtJ7rXAZEUGC4KfqrjwE2DjKPs4ciZcdh6eaA,25576
+module_qc_data_tools-1.0.17.dist-info/METADATA,sha256=wd6fvI6mghZU7urUBtFaCy3itqhOAeoVdYhEu9CHVTc,4660
+module_qc_data_tools-1.0.17.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+module_qc_data_tools-1.0.17.dist-info/licenses/LICENSE,sha256=1I6sNUgFZU5npeq5QKUHMKWjeRhoQv2y14imTTNKRtQ,1067
+module_qc_data_tools-1.0.17.dist-info/RECORD,,
