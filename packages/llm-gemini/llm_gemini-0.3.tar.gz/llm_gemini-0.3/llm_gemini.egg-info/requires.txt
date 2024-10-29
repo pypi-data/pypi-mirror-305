@@ -1,0 +1,6 @@
+llm>=0.17
+httpx
+ijson
+
+[test]
+pytest
