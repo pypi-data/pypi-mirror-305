@@ -1,0 +1,3 @@
+oscrypto
+requests
+roadlib>=0.23

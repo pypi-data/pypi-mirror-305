@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: roadtune
+Version: 0.0.1
+Summary: ROADtools Intune client
+Home-page: https://github.com/dirkjanm/ROADtools/
+Author: Dirk-jan Mollema
+Author-email: dirkjan@outsidersecurity.nl
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
