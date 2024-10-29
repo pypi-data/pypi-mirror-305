@@ -1,0 +1,5 @@
+jsonargparse[signatures]>=4.32.0
+lightning>=2.4.0
+transformers>=4.44.0
+torch>=2.4.0
+torchmetrics>=1.4.0.post0
