@@ -1,0 +1,2 @@
+[console_scripts]
+roiloc = roiloc.roiloc:start
