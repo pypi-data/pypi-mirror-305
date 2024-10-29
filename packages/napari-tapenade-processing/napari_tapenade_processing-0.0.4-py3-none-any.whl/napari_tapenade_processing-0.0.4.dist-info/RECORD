@@ -1,0 +1,13 @@
+napari_tapenade_processing/__init__.py,sha256=uhUsgDe1fXJg0y9viAqwIFChn-18V3eO1iuJXKQD5vM,120
+napari_tapenade_processing/_custom_widgets.py,sha256=f7h4vg6ExynWWwAGSPNxrwnK_rBC7d3kdylqOWHjl68,4864
+napari_tapenade_processing/_macro_recorder.py,sha256=d9I_1VzmIosGdhaMYTrpfrgNQYzJ4AYEJYm0DqHd3u8,3829
+napari_tapenade_processing/_processing_graph.py,sha256=KTBZBTRQG0aIzjjXfzfRwKfR4lsS-ZHhIT3oWKqWEB8,9916
+napari_tapenade_processing/_widget.py,sha256=xhQXV2kTgo-OPXtfuaHY4kHpPn5dPRDohE5heM43Ibc,104537
+napari_tapenade_processing/napari.yaml,sha256=PIyrsYgiTI_AGt9L3BstQIQIftTfkba3wet0XryBAFI,591
+napari_tapenade_processing/logo/__init__.py,sha256=2GWffEF1rjyrveUGdfR8y3cl3JUnX0gJjr8Ryy_u4JQ,21
+napari_tapenade_processing-0.0.4.dist-info/LICENSE,sha256=6e3GnTbNqDHHEpm7pOkrOMukJbnZ4otal6ZLFXp1jwk,1081
+napari_tapenade_processing-0.0.4.dist-info/METADATA,sha256=HJFqHs0BuOJsMYdYyUpw6ZYxCiIuiscMI-B4PGzssOQ,10075
+napari_tapenade_processing-0.0.4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+napari_tapenade_processing-0.0.4.dist-info/entry_points.txt,sha256=SBj2CjmJ_v5_uQ4eQHb-ZDcx03AEVh-WyGBphVgKUfo,86
+napari_tapenade_processing-0.0.4.dist-info/top_level.txt,sha256=ImfPCdg3YxxV7bl5jjhhR1zClQktethb9e3teOS25H4,27
+napari_tapenade_processing-0.0.4.dist-info/RECORD,,
