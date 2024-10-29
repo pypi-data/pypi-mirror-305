@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/RevSS.egg-info/PKG-INFO
+src/RevSS.egg-info/SOURCES.txt
+src/RevSS.egg-info/dependency_links.txt
+src/RevSS.egg-info/top_level.txt
