@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: showhype_lib
+Version: 0.1.0
+Summary: Async service callback library
+Author-email: fang bin <bin_fang@zixun.com>
+Project-URL: Homepage, https://github.com/yourusername/showhype_lib
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: asyncio
+
+# Showhype Lib
+
+A simple async service callback library.
+
+## 安装
