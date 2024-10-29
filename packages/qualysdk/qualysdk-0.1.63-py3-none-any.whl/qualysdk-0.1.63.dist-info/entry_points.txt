@@ -1,0 +1,4 @@
+[console_scripts]
+qualysdk-updater=qualysdk.cli.cli_updater:main
+qualysdk-was=qualysdk.cli.qualysdk_was:main
+
