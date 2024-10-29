@@ -1,0 +1,17 @@
+backtrack_sampler/__init__.py,sha256=kQOYo0Mn1OXNtItxn9N4oYhW9D7prT_zVlHHmhnNOxg,594
+backtrack_sampler/backtrack_sampler.py,sha256=wIJGoD00AzWjkXXgviDflb2mSBXGQzcK8yZOrHFgH_k,4512
+backtrack_sampler/provider/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backtrack_sampler/provider/base_provider.py,sha256=7djrvEjGatiBLZGr-MFkABnLhZMJ8AxaC5vJDsykUY8,658
+backtrack_sampler/provider/llamacpp_provider.py,sha256=VZQQ6rQEaQ1kPf-OSMNUd87MA_8MrWnpKzBs60nYLEY,1972
+backtrack_sampler/provider/transformers_provider.py,sha256=QLbmXtYjKr3aFj1cvVz1Tr01DeHYs-sVZ4xHbtYg0Rk,1822
+backtrack_sampler/strategy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backtrack_sampler/strategy/adaptive_temperature_strategy.py,sha256=qUt5DvDb-7LHl8FOXLoxd_wz3SLiBC2DjYI6aX9G-us,2108
+backtrack_sampler/strategy/antislop_strategy.py,sha256=KOewVtyKPF2j6kBTigNZcc17hX-Jo3RsNdyScrCzU0g,3731
+backtrack_sampler/strategy/base_strategy.py,sha256=wyKbYRatr8cVlXMOQ-5Z_ci26VUZTzR8mAQKwUQWSyA,1260
+backtrack_sampler/strategy/creative_writing_strategy.py,sha256=woGRXVrziANsMK3wDmd1rnBE1D5Wo9sLZbTyF2fDfhc,4240
+backtrack_sampler/strategy/debug_strategy.py,sha256=cFGH0hsyo5Pq-bPEfdpVu7QrD6AUO6WwDKtV6BMaowo,1231
+backtrack_sampler/strategy/human_guidance_strategy.py,sha256=f8ExJbxMKVIYZPGqYQZR7TYZWbAvYAGyd48FujBMKYQ,5466
+backtrack_sampler-2.0.0.dist-info/METADATA,sha256=0dooRA8m_FjSKwrkEyW2OV28QL9IXO53kPk2ZVuZ0RQ,8470
+backtrack_sampler-2.0.0.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+backtrack_sampler-2.0.0.dist-info/top_level.txt,sha256=4k2UWEVmcqpngtMovPNKKaafD9ARzdpcUJJwRZbxro8,18
+backtrack_sampler-2.0.0.dist-info/RECORD,,
