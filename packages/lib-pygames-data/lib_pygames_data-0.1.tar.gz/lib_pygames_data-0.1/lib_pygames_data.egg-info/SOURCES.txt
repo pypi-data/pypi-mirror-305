@@ -1,0 +1,25 @@
+MANIFEST.in
+setup.py
+lib_pygames_data.egg-info/PKG-INFO
+lib_pygames_data.egg-info/SOURCES.txt
+lib_pygames_data.egg-info/dependency_links.txt
+lib_pygames_data.egg-info/top_level.txt
+pygame_data/Camera Shake Controller.py
+pygame_data/__init__.py
+pygame_data/basic_module.py
+pygame_data/coinscript.py
+pygame_data/movescript.py
+pygame_data/scorescript.py
+pygame_data/scroll_module.py
+pygame_data/shooter_module.py
+pygame_data/snake_module.py
+pygame_data/data/bg.png
+pygame_data/data/coin.png
+pygame_data/data/game character.png
+pygame_data/data/game.png
+pygame_data/data/ground.jpg
+pygame_data/data/scene.png
+pygame_data/data/snow imp instrution.txt
+pygame_data/data/snow.png
+pygame_data/data/ufo.png
+pygame_data/data/wall.jpg
