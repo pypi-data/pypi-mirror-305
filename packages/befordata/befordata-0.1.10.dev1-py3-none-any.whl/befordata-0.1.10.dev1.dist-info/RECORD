@@ -1,0 +1,9 @@
+befordata/__init__.py,sha256=2x-VWcafIcxPt4FMR5_8AMxhhdkLgQo_vduexwC0X7U,187
+befordata/_data.py,sha256=wzyZywE3-5eWqYY9NFg8rFatoEQSVJzaAQkUdxkqEcQ,10774
+befordata/_epochs.py,sha256=9OusaILwe8Y3c3u5aLSubzPigXGoXMRIi-W9ei4dPYw,2718
+befordata/csv.py,sha256=WkWrQjP4dxjrXgoMjAr3kVyordvmeaMSAjr2pAODjUE,2927
+befordata/force_tools.py,sha256=ickBsEmdjrHufLOVUxIIGA0zLDxVW3rZVtkhZ7CXuJo,2155
+befordata-0.1.10.dev1.dist-info/LICENSE,sha256=IcRhOMsHnf_lGtQLEsTal1gKNmmBTOU8lqlXWcSC1b8,1073
+befordata-0.1.10.dev1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+befordata-0.1.10.dev1.dist-info/METADATA,sha256=GVWm-aiyo1RgoHYNtYwukFOS0S1ao8I15Hs39UrERNU,591
+befordata-0.1.10.dev1.dist-info/RECORD,,
