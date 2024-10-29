@@ -1,0 +1,10 @@
+src/__init__.py,sha256=9nIfMUVc4DUsOrfbHNW1rBOjgUfNGw5rRoxFypWrcxM,438
+src/functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/functions/generate_content.py,sha256=4KKhIlPgFuDMXBtC31cDD6qwIc89xBDsYXwMfj23YIg,485
+src/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/service.py,sha256=rdJcnXw1IxXlz_KeMyi0mbFouUaXsrLKw4GC1MKERaQ,742
+src/task_queue.py,sha256=tMpa6_1x14Tf6IpMt7kS-mVVzMA11HBwKB8e8QYig_0,28
+src/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restack_integrations_gemini-0.0.1.dist-info/METADATA,sha256=QecOwt_ytPd0PqyniPM0H0KKkNOTQtzGG5Lec0XOlDU,627
+restack_integrations_gemini-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+restack_integrations_gemini-0.0.1.dist-info/RECORD,,
