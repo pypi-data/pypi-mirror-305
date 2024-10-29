@@ -1,0 +1,14 @@
+pillow
+pandas>=2.0
+numpy
+matplotlib>=3.5.2
+tqdm
+humanize
+sanitize_ml_labels>=1.0.47
+
+[test]
+pytest
+validate_version_code
+data-science-types
+pytest_readme
+numpy
