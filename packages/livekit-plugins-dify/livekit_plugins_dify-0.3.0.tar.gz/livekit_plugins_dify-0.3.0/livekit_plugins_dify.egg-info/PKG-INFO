@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: livekit-plugins-dify
+Version: 0.3.0
+Summary: Dify plugin for LiveKit Agents
+Home-page: https://github.com/livekit/agents
+Author: sorphwer@riino.site
+Author-email: sorphwer@gmail.com
+License: Apache-2.0
+Project-URL: Documentation, https://docs.livekit.io
+Project-URL: Website, https://livekit.io/
+Project-URL: Source, https://github.com/livekit/agents
+Keywords: webrtc,realtime,audio,video,livekit,dify
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+Requires-Dist: livekit-agents>=0.8.0.dev0
+
+# LiveKit Plugins Dify
+
+LLM inference implemention from Dify API
+
+Usage:
+```
+    agent = VoicePipelineAgent(
+        vad=ctx.proc.userdata["vad"],
+        stt=deepgram.STT(model=dg_model),
+        llm=dify.LLM(
+            base_url="Your dify API",
+            api_key="Your Dify App API Key",
+        ),
+        tts=openai.TTS(),
+        chat_ctx=initial_ctx,
+    )
+```
+
+Notes: Do not use `initial_ctx = llm.ChatContext().append` to add system prompt or context. Implement these in your Dify.
+
+Only 'Chatflow' is supported.

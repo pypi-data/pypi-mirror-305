@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+livekit/plugins/dify/__init__.py
+livekit/plugins/dify/llm.py
+livekit/plugins/dify/log.py
+livekit/plugins/dify/models.py
+livekit/plugins/dify/version.py
+livekit_plugins_dify.egg-info/PKG-INFO
+livekit_plugins_dify.egg-info/SOURCES.txt
+livekit_plugins_dify.egg-info/dependency_links.txt
+livekit_plugins_dify.egg-info/requires.txt
+livekit_plugins_dify.egg-info/top_level.txt
