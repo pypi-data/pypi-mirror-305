@@ -1,0 +1,8 @@
+diffusers
+transformers
+huggingface-hub>=0.26.2
+safetensors
+requests
+torch
+jax
+natsort
