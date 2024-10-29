@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: deprecated-crypt-alternative
+Version: 0.1.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Summary: Python deprecated library `_crypt` replacement.
+Author: Jeong, YunWon <python-deadlib@youknowone.org>
+Author-email: Jeong, YunWon <python-deadlib@youknowone.org>
+License: LGPL-2.1
+Requires-Python: >=3.13
+Project-URL: Source Code, https://github.com/youknowone/python-deadlib
