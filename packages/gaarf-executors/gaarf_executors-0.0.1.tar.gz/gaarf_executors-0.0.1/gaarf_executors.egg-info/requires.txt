@@ -1,0 +1,13 @@
+gaarf_core==0.0.1
+gaarf-io==0.0.1
+
+[all]
+gaarf-executors[bq,sql]
+
+[bq]
+gaarf-io[bq]
+pandas
+
+[sql]
+gaarf-io[sqlalchemy]
+pandas

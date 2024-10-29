@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaarf-executors"
+version = "0.0.1"
+dependencies = [
+  "gaarf_core==0.0.1",
+  "gaarf-io==0.0.1",
+]
+authors = [
+  {name = "Google Inc. (gTech gPS CSE team)", email = "no-reply@google.com"},
+]
+requires-python = ">=3.8"
+description = "Executes queries against API and writes data to local/remote storage."
+readme = "README.md"
+license = {text = "Apache 2.0"}
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: Apache Software License",
+]
+
+[project.optional-dependencies]
+bq=[
+  "gaarf-io[bq]",
+  "pandas",
+]
+sql=[
+  "gaarf-io[sqlalchemy]",
+  "pandas",
+]
+all = [
+  "gaarf-executors[bq,sql]"
+]
+[project.scripts]
+gaarf-sql-executor="gaarf_executors.entrypoints.cli.sql:main"
+gaarf-bq-executor="gaarf_executors.entrypoints.cli.bq:main"
