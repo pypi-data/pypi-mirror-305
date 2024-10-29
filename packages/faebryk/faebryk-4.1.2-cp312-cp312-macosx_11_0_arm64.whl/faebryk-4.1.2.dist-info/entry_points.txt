@@ -1,0 +1,2 @@
+[console_scripts]
+faebryk = faebryk.tools.main:__main__

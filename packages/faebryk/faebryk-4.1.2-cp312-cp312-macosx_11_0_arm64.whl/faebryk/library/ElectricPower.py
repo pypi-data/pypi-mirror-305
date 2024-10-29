@@ -1,0 +1,101 @@
+# This file is part of the faebryk project
+# SPDX-License-Identifier: MIT
+
+
+import math
+from typing import Self
+
+import faebryk.library._F as F
+from faebryk.core.moduleinterface import ModuleInterface
+from faebryk.core.node import Node
+from faebryk.libs.library import L
+from faebryk.libs.units import P, Quantity
+from faebryk.libs.util import RecursionGuard
+
+
+class ElectricPower(F.Power):
+    class can_be_decoupled_power(F.can_be_decoupled_defined):
+        def __init__(self) -> None: ...
+
+        def on_obj_set(self):
+            obj = self.get_obj(ElectricPower)
+            super().__init__(hv=obj.hv, lv=obj.lv)
+
+        def decouple(self):
+            obj = self.get_obj(ElectricPower)
+            return (
+                super()
+                .decouple()
+                .builder(
+                    lambda c: c.rated_voltage.merge(
+                        F.Range(obj.voltage * 2.0, math.inf * P.V)
+                    )
+                )
+            )
+
+    class can_be_surge_protected_power(F.can_be_surge_protected_defined):
+        def __init__(self) -> None: ...
+
+        def on_obj_set(self):
+            obj = self.get_obj(ElectricPower)
+            super().__init__(obj.lv, obj.hv)
+
+        def protect(self):
+            obj = self.get_obj(ElectricPower)
+            return [
+                tvs.builder(lambda t: t.reverse_working_voltage.merge(obj.voltage))
+                for tvs in super().protect()
+            ]
+
+    hv: F.Electrical
+    lv: F.Electrical
+
+    voltage: F.TBD[Quantity]
+    max_current: F.TBD[Quantity]
+    """
+    Only for this particular power interface
+    Does not propagate to connections
+    """
+
+    surge_protected: can_be_surge_protected_power
+    decoupled: can_be_decoupled_power
+
+    @L.rt_field
+    def single_electric_reference(self):
+        return F.has_single_electric_reference_defined(self)
+
+    def fused(self, attach_to: Node | None = None):
+        fused_power = type(self)()
+        fuse = fused_power.add(F.Fuse())
+
+        fused_power.hv.connect_via(fuse, self.hv)
+        fused_power.lv.connect(self.lv)
+
+        self.connect_shallow(fused_power)
+
+        fuse.trip_current.merge(F.Constant(self.max_current))
+        # fused_power.max_current.merge(F.Range(0 * P.A, fuse.trip_current))
+
+        if attach_to is not None:
+            attach_to.add(fused_power)
+
+        return fused_power
+
+    def __preinit__(self) -> None:
+        ...
+        # self.voltage.merge(
+        #    self.hv.potential - self.lv.potential
+        # )
+
+    def _on_connect(self, other: ModuleInterface) -> None:
+        super()._on_connect(other)
+
+        if not isinstance(other, ElectricPower):
+            return
+
+        self.voltage.merge(other.voltage)
+
+    # TODO remove with lazy mifs
+    def connect(self: Self, *other: Self, linkcls=None) -> Self:
+        with RecursionGuard():
+            return super().connect(*other, linkcls=linkcls)
