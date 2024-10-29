@@ -1,0 +1,20 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools]
+py-modules = []
+
+[project]
+name = 'Sem6_task2_blackpython'
+version = '0.1.0'
+description = 'Тут можно сделать описание бла-бла'
+authors = [
+    { name = 'Amad8y', email = 'mihailkaverinskij4838@gmail.com' }
+]
+dependencies = [
+  'pandas>=2.2.0' # Тут пишешь какие библиотеки должны быть скачены, чтобы работало
+]
+readme = 'README.md'
+license = { text = 'MIT' }
+requires-python = '>=3.10'
