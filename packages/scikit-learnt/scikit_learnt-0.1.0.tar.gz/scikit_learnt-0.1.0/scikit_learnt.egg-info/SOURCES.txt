@@ -1,0 +1,8 @@
+setup.py
+scikit_learns/__init__.py
+scikit_learns/core.py
+scikit_learnt.egg-info/PKG-INFO
+scikit_learnt.egg-info/SOURCES.txt
+scikit_learnt.egg-info/dependency_links.txt
+scikit_learnt.egg-info/requires.txt
+scikit_learnt.egg-info/top_level.txt
