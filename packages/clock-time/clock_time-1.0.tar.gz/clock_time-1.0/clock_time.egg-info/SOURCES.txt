@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+clock_time.egg-info/PKG-INFO
+clock_time.egg-info/SOURCES.txt
+clock_time.egg-info/dependency_links.txt
+clock_time.egg-info/top_level.txt
+src/__init__.py
+src/__init__.pyi
+src/_clock_time.c
+src/py.typed
+tests/test_clock_time.py
