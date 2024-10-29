@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: Sem6_task5_blackpython
+Version: 0.1.0
+Summary: Тут можно сделать описание бла-бла
+Author-email: Amad8y <mihailkaverinskij4838@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=2.2.0
