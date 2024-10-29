@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: count_sales_plankin
+Version: 0.1.0
+Summary: Подсчет продаж и количества товаров
+Author: Kirill
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+
+--input-file - входной файл с покупками, в котором категория, сумма и количество
+
+--output-file - выходной файл, куда будет записан подсчет
+
+Пример команды: python3 -m count_sales_csv --input-file data/sales_data.csv --output-file out.csv
