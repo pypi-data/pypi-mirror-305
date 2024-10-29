@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+educabiz/__init__.py
+educabiz/client.py
+educabiz/exceptions.py
+educabiz.egg-info/PKG-INFO
+educabiz.egg-info/SOURCES.txt
+educabiz.egg-info/dependency_links.txt
+educabiz.egg-info/entry_points.txt
+educabiz.egg-info/requires.txt
+educabiz.egg-info/top_level.txt
+tests/test_client.py
