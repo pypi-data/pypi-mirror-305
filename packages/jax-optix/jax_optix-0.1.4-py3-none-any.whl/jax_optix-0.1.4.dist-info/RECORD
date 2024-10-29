@@ -1,0 +1,6 @@
+optix/__init__.py,sha256=rXlHhfLb1aRU6zpHIjrV93r0DkWARBOczNuffxVPWN4,3354
+optix/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jax_optix-0.1.4.dist-info/METADATA,sha256=Ig2m6cntD-XKDJxNBpcZh5tT8v4IwHn9rx0oPl6zcDY,1610
+jax_optix-0.1.4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+jax_optix-0.1.4.dist-info/licenses/LICENSE.md,sha256=Xa38QjlFMmp94gE4FNVuT3og5vrGVEDKbKTKPoRmhZI,1077
+jax_optix-0.1.4.dist-info/RECORD,,
