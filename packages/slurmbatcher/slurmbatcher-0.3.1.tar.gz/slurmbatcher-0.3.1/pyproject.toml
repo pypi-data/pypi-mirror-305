@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "slurmbatcher"
+version = "0.3.1"
+description = ""
+authors = ["Daniel Grießhaber <griesshaber@hdm-stuttgart.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.9.2"
+rich = "^13.9.3"
+
+[tool.poetry.scripts]
+slurmbatcher = "slurmbatcher.__main__:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
