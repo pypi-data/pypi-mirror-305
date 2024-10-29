@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+PackageTest/__init__.py
+PackageTest/add_one.py
+deeplearningprojects.egg-info/PKG-INFO
+deeplearningprojects.egg-info/SOURCES.txt
+deeplearningprojects.egg-info/dependency_links.txt
+deeplearningprojects.egg-info/top_level.txt
