@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: myndress-django
+Version: 0.0.1
+Summary: This a package that makes an overload arround django
+Author-email: Tim <jupitr.timothe@gmail.fr>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+
