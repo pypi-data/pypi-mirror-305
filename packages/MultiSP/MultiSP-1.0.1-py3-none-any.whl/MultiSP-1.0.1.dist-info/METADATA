@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: MultiSP
+Version: 1.0.1
+Summary: Accurate spatial domain detection by integrating spatial multi-omics data using MultiSP
+Home-page: https://github.com/ChenfengMo316/MultiSP
+Author: Chenfeng Mo
+Author-email: mochenfeng316@whu.edu.cn
+License: MIT
+License-File: LICENSE.txt
+Requires-Dist: requests
+
