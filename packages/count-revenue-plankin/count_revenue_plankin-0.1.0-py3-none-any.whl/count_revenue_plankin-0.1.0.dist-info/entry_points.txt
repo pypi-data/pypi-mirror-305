@@ -1,0 +1,2 @@
+[console_scripts]
+count_revenue_costs = count_revenue_costs.__main__:main
