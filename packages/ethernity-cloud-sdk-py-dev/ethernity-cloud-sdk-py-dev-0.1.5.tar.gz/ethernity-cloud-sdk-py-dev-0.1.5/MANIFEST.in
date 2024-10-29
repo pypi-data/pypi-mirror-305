@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include ethernity_cloud_sdk_py/templates *
+recursive-include ethernity_cloud_sdk_py/commands *
