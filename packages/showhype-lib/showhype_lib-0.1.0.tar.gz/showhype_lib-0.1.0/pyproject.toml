@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "showhype_lib"
+version = "0.1.0"
+description = "Async service callback library"
+authors = [
+    {name = "fang bin", email = "bin_fang@zixun.com"}
+]
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "aiohttp",
+    "asyncio",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["showhype_lib"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/showhype_lib"
