@@ -1,0 +1,11 @@
+dag_insight_plugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dag_insight_plugin/my_plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dag_insight_plugin/my_plugins/dag_insight.py,sha256=SfCE4EYYRSQTxlxC4pVKJm21pXnIwe96vc3FwxDAf90,18442
+dag_insight_plugin/my_plugins/helper/event_driven_dags_query.sql,sha256=r7rfunhivlBfUHgbLfWUC8ZARxVUrryjMGWVcM6Ni3k,9254
+dag_insight_plugin/my_plugins/templates/dag_insight.html,sha256=07M9y0_Qv3GHo7-ZueeupuGOhdYf4JOfclHQ5RpsXcE,15825
+dag_insight_plugin-0.1.0a2.dist-info/LICENSE,sha256=imzvQHEg453p_1i08jEvdsiKh2FhoPBYKFME575xzEM,1069
+dag_insight_plugin-0.1.0a2.dist-info/METADATA,sha256=injX2ulV_3Szfweb8Q9TgE9YZ06qT9gwUs2-fHjsyJY,833
+dag_insight_plugin-0.1.0a2.dist-info/NOTICE,sha256=8Pe7c4W9pHNSlHUDK1P0l0l0mqNFCywtBQYirw6PPEw,155
+dag_insight_plugin-0.1.0a2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+dag_insight_plugin-0.1.0a2.dist-info/entry_points.txt,sha256=1Ub1VdfS6-4XVxB5LB75ax3Foi98aeQvlaDbY1UwX6o,97
+dag_insight_plugin-0.1.0a2.dist-info/RECORD,,
