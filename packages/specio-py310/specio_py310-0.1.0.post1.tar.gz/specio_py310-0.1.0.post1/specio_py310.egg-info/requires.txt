@@ -1,0 +1,14 @@
+numpy>=1.20
+six
+
+[docs]
+sphinx>=4.0
+sphinx-gallery
+sphinx_rtd_theme
+numpydoc
+matplotlib
+
+[tests]
+pytest>=6.0
+pytest-cov
+pytest-mock

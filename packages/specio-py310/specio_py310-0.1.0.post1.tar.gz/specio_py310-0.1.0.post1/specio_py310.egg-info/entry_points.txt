@@ -1,0 +1,2 @@
+[console_scripts]
+specio = specio.cli:main
