@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+aspcore/__init__.py
+aspcore/filterclasses.py
+aspcore/filterclassesdynamic.py
+aspcore/freqdomainfiltering.py
+aspcore.egg-info/PKG-INFO
+aspcore.egg-info/SOURCES.txt
+aspcore.egg-info/dependency_links.txt
+aspcore.egg-info/requires.txt
+aspcore.egg-info/top_level.txt
+aspcore/unittests/__init__.py
+aspcore/unittests/conftest.py
+aspcore/unittests/test_filterclasses.py
+aspcore/unittests/test_filterclassesdynamic.py
+aspcore/unittests/test_freqdomainfiltering.py
