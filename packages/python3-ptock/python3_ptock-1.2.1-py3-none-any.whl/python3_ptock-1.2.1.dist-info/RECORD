@@ -1,0 +1,11 @@
+ptock/__init__.py,sha256=hGCsoWsyEU-fcfnrQ-r1sCRJaJ9C-us9XkLvCZavsCo,41
+ptock/font.py,sha256=3jOEsjl22NARYIOxcQXkvpx437wOpiJzs3LpcE1mBhQ,1560
+ptock/main.py,sha256=w-3vmBbOg6OsPDaoFXfb1CAdTUaqNezRl_uivc41N2o,7359
+ptock/mechanism.py,sha256=Ll6KykUpqlqqtzAbQcQ0bnNUYmnEONTGyEDZYnDNyyY,2649
+ptock/view.py,sha256=Rg3isocKRXonEIypIUDXMyWW-ZipMrp-PG-xE0fIplk,13908
+python3_ptock-1.2.1.dist-info/LICENSE,sha256=ic2V98ERyKANsbuz_DGdF2YpqHdQ_K5S4-EpArTW6Q0,1078
+python3_ptock-1.2.1.dist-info/METADATA,sha256=y_H8t3us_E0cv5_SCnGm-Pql2P-mzG_A2wi2ZhgodY4,2973
+python3_ptock-1.2.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+python3_ptock-1.2.1.dist-info/entry_points.txt,sha256=WmVDkOrDX5cwCerWTiBWyLoBfPDWikviCo69fKlm_3A,42
+python3_ptock-1.2.1.dist-info/top_level.txt,sha256=DAZf1LJZiSXu4fC5fR2d17fZaqk10fd0-v2c0pMUFck,6
+python3_ptock-1.2.1.dist-info/RECORD,,
