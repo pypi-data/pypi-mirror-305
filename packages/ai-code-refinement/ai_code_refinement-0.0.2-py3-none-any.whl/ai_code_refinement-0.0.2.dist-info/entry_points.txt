@@ -1,0 +1,2 @@
+[console_scripts]
+tdc = cli.cli:main
