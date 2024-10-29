@@ -1,0 +1,2 @@
+[console_scripts]
+CUB_financial_calculator = CUB_financial_calculator.cli:main
