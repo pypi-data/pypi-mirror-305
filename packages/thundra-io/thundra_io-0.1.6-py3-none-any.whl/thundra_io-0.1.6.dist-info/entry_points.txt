@@ -1,0 +1,3 @@
+[console_scripts]
+thundra-io=thundra_io.cli:main
+
