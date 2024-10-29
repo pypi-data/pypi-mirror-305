@@ -1,0 +1,10 @@
+social_tools/__init__.py,sha256=nFzsBi1b5sEdashYkUUqt32cJWh5w0yHUPG6a6_CCTk,147
+social_tools/emotion_detection.py,sha256=3x7ST8AHTgtmwmN1dnCrrugYSRX-7PUPc7BlmKbwXVA,4492
+social_tools/sentiment_analysis.py,sha256=IkwLgUvKZWQH3ppdGLwk0dPUnG1nsr-Z6L37vmQCKZk,7199
+social_tools/toxicity_detection.py,sha256=7gjgh0ScQdDiUfClg-ZTXn-tx-3nN_JXe4qb5bTDkFk,5291
+social_tools/utils.py,sha256=imxBbHam7t2gjhkgSGRYZ_PAhLAbttVBfd1DrTb8yD8,849
+social_tools-1.0.2.dev0.dist-info/LICENSE,sha256=FUQ5EZuXW0kpeH4wk3T7uPe5NBHjJN0RuNGZrcpd4ME,1069
+social_tools-1.0.2.dev0.dist-info/METADATA,sha256=S62r9FnK5_GiOwc7BEIBzJxC8apf4lfz_rOi6R5Ojxw,6905
+social_tools-1.0.2.dev0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+social_tools-1.0.2.dev0.dist-info/top_level.txt,sha256=ch0DNxze_mv6uFkXMqX-lZ-r-UanbpWdZM6KmNEs6M4,13
+social_tools-1.0.2.dev0.dist-info/RECORD,,
