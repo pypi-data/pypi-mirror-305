@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: rawpython
+Version: 0.1
+Summary: a library for people who hate libraries
+Author: Diego Llanes
+Author-email: rawpython@diegollanes.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+A collection of <u>simple</u> tools that are written in python with no required dependencies.
+
+This repo is for people who hate having to solve loads of installs just for something as simple as a config manager.
+
+
