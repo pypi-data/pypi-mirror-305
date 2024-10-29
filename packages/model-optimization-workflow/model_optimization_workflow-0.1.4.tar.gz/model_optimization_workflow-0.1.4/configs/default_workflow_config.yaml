@@ -1,0 +1,73 @@
+provider:
+  re_download: false
+  instruments:
+    - 'UNIUSDT'
+    - 'ETHUSDT'
+  day_from: '2024-10-01'
+  day_to: '2024-10-10'
+  ohlc_loader:
+    class: loader.binance_vision.ohlc_loader.BinanceVisionOhlcLoader
+  trades_loader:
+    class: loader.binance_vision.trades_loader.BinanceVisionTradesLoader
+  book_depth_loader:
+    class: loader.binance_vision.book_depth_loader.BinanceVisionBookDepthLoader
+  max_workers: 5
+
+assembler:
+  instruments:
+    - 'UNIUSDT'
+    - 'ETHUSDT'
+  aggregation_window: [ 5 ]
+  dataset_labeler:
+    class: assembling.volatility_dataset_labeler.VolatilityDatasetLabeler
+    parameters:
+      training_window_length: [ 10 ]
+      prediction_window_length: [ 5 ]
+  indicators:
+    - class: indicators.ma_indicator.MovingAverageIndicator
+      parameters:
+        window_length: [ 5 ]
+  dataset_cleanup_keys:
+    - 'trades'
+
+workflow:
+  multiprocessing_size: 5
+  root_path: './out/workflow'
+  total_folds: [ 10 ]
+  model_containers:
+    - name: 1_TestModelContainer
+      parameters:
+        class: model_container.test_model_container.TestModelContainer
+        fold_from: 0
+        fold_to: 2
+        test_1: [1, 4, 7]
+    - name: 2_TestModelContainer
+      parameters:
+        class: model_container.test_model_container.TestModelContainer
+        fold_from: 1
+        fold_to: 3
+        test_2: [1, 2, 7]
+
+report:
+  validation_filter:
+    parameters:
+      class: report.visualization_filter.VisualizationFilter
+      window_indices: [ ]
+      container_indices: [ 1 ]
+      model_indices: [ 1 ]
+
+hyperparameter_optimizer:
+  score_calculator:
+    parameters:
+      class: optimizer.binary_class_score_calculator.BinaryClassScoreCalculator
+      window_indices: [ ]
+      container_indices: [ 1 ]
+      model_indices: [ 1 ]
+
+  patience: 10
+  tolerance: 10
+  storage_url: 'sqlite:///global_hyperparameter_optimizer.db'
+  study_name: 'global_optimization_study'
+  direction: 'maximize'
+
+
