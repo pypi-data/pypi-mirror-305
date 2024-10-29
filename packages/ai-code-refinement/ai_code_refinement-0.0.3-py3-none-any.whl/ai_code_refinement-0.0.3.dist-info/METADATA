@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ai_code_refinement
+Version: 0.0.3
+Summary: AI Code Refinement
+Home-page: https://github.com/TeraTheDataConsultant/ai_code_refinement
+Author: Tera Earlywine
+Author-email: tera.earlywine@qbizinc.com
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# AI Code Refinement Tool 
