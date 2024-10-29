@@ -1,0 +1,10 @@
+[project]
+  name = 'business-calculate'
+  version = '0.1.0'
+  description = 'Расчёты метрик'
+  authors = [
+    {name = 'Matvey Perminov', email = 'mectu@mail.ru'}
+  ]
+  readme = 'README.md'
+  license = {text = 'MIT'}
+  requires-python = '>=3.12'
