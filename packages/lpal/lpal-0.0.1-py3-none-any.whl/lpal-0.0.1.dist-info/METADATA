@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: lpal
+Version: 0.0.1
+Summary: An open-source tools for teaching the solution of mixed-integer linear programs
+Home-page: https://github.com/rusk-ey/lpal
+Author: Brendan Ruskey
+Author-email: bjr221@lehigh.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# LPaL 1.0
+
+## A linear programming (LP) problem solver for instructional use
+
+## Solve LPs using the simplex method
+
+## Choose your own entering at each simplex iteration, and see how the tableau changes step-by-step
+
+## Useful for generating in-class and homework assignment LP examples
+
