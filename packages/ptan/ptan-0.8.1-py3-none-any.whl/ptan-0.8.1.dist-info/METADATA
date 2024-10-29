@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ptan
+Version: 0.8.1
+Summary: PyTorch reinforcement learning framework
+Author: Max Lapan
+Author-email: max.lapan@gmail.com
+License: GPL-v3
+License-File: LICENSE
+Requires-Dist: gymnasium[atari] >=0.29.0
+Requires-Dist: gymnasium[classic-control] >=0.29.0
+Requires-Dist: moviepy ==1.0.3
+Requires-Dist: numpy <2
+Requires-Dist: opencv-python ==4.10.0.84
+Requires-Dist: torch ==2.5.0
+Requires-Dist: torchvision ==0.20.0
+Requires-Dist: pytorch-ignite ==0.5.1
+Requires-Dist: stable-baselines3 ==2.3.2
+
