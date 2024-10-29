@@ -1,0 +1,14 @@
+aspcore/__init__.py,sha256=_4HeEaldc-F9F82JIlrxxAO9ozj0J5phZ9U1a9J7HHM,47
+aspcore/filterclasses.py,sha256=5jr7goAXBCyHtzV6v9uVGnjCgjO1JhSNwJokPZPInOI,19315
+aspcore/filterclassesdynamic.py,sha256=jZOHhB_KPITTBZqXTypfdqABjF_J5tCRyCVcO7fBGIE,4046
+aspcore/freqdomainfiltering.py,sha256=uH5-OD3qcIfS7nxdKzxfXoLDZ9fvqxwkEIVoJrjun9k,14603
+aspcore/unittests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aspcore/unittests/conftest.py,sha256=VKv5mvLNZB3BD3Uz8vFWf84zlilXniuInm-y4v745Ws,293
+aspcore/unittests/test_filterclasses.py,sha256=4bvcooDCN-Ef6wyLQ1dEuISsl3TEQfezNUmiG0sX2VI,3062
+aspcore/unittests/test_filterclassesdynamic.py,sha256=tmyzvNeEDdK5BpOxTgnaGLn5Rc5-9uG9o1JDGprmAjE,9651
+aspcore/unittests/test_freqdomainfiltering.py,sha256=USm64408nq9pl2FFM39NeXYC4pRxDe5gmSIG43aV7jM,1299
+aspcore-0.0.1.dist-info/LICENSE,sha256=emcmNoIactZWv6rau-CRsNLjZGTGKs1Kvb0ZycWA6ck,1067
+aspcore-0.0.1.dist-info/METADATA,sha256=JlJF_K2jluy8Jki-LVqGnMWfBSP4BgL_mxgL_l58BJY,2859
+aspcore-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+aspcore-0.0.1.dist-info/top_level.txt,sha256=--b3fUoXr1SaHzHM4oo5myoG5ZM6LHnKfNZUaDq8vbY,8
+aspcore-0.0.1.dist-info/RECORD,,
