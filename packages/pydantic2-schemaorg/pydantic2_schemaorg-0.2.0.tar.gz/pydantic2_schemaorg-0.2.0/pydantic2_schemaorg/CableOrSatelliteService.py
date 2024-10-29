@@ -1,0 +1,15 @@
+from __future__ import annotations
+
+
+from pydantic.v1 import Field
+from pydantic2_schemaorg.Service import Service
+
+
+class CableOrSatelliteService(Service):
+    """A service which provides access to media programming like TV or radio. Access may be via cable or satellite.
+
+    See: https://schema.org/CableOrSatelliteService
+    Model depth: 4
+    """
+    type_: str = Field(default="CableOrSatelliteService", alias='@type', const=True)
+    

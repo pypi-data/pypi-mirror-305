@@ -1,0 +1,16 @@
+from __future__ import annotations
+
+
+from pydantic.v1 import Field
+from pydantic2_schemaorg.LegalValueLevel import LegalValueLevel
+
+
+class DefinitiveLegalValue(LegalValueLevel):
+    """Indicates a document for which the text is conclusively what the law says and is legally binding. (E.g. the
+     digitally signed version of an Official Journal.) Something \"Definitive\" is considered to be also [[AuthoritativeLegalValue]].
+
+    See: https://schema.org/DefinitiveLegalValue
+    Model depth: 5
+    """
+    type_: str = Field(default="DefinitiveLegalValue", alias='@type', const=True)
+    

@@ -1,0 +1,17 @@
+from __future__ import annotations
+
+
+from pydantic.v1 import Field
+from pydantic2_schemaorg.Offer import Offer
+
+
+class OfferForPurchase(Offer):
+    """An [[OfferForPurchase]] in Schema.org represents an [[Offer]] to sell something, i.e. an [[Offer]] whose
+     [[businessFunction]] is [sell](http://purl.org/goodrelations/v1#Sell.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations)
+     for background on the underlying concepts.
+
+    See: https://schema.org/OfferForPurchase
+    Model depth: 4
+    """
+    type_: str = Field(default="OfferForPurchase", alias='@type', const=True)
+    
