@@ -1,0 +1,9 @@
+yuumi/__init__.py,sha256=LGF6rfTevbkd2HnZ2Nf0zlFaj91wZcVcDsif7fS0GTQ,136
+yuumi/cli.py,sha256=N_H_Sk-pqXDPfCH7OTcNBdes0eRBuv4XM0o0pIY1ffI,1785
+yuumi/debrid/__init__.py,sha256=rdlW4dpAYa0Py1ZQItbG1ORsjh1i9QQQL7wkGCOb_I0,38
+yuumi/debrid/real_debrid.py,sha256=gLQcnxbSjSxiTy-fECjL4Q8r7VyKz6B6bfUNJMZlkhI,9495
+yuumi/requests.py,sha256=-6md93gnnkWWpXfbCWSCO5Vv6W01zFPFzG0mTJKUsoo,1451
+yuumi-0.2.1.dist-info/METADATA,sha256=m2qTurOCfHjA4CU8t8tKm0YTymvtaIBGCTER2opaEBs,2834
+yuumi-0.2.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+yuumi-0.2.1.dist-info/entry_points.txt,sha256=w2sWhFBHKsVMBpl0NVWWZX3hpxoW2k33T8RsCkwECCU,40
+yuumi-0.2.1.dist-info/RECORD,,

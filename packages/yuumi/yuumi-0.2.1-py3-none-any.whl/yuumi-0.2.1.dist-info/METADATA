@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: yuumi
+Version: 0.2.1
+Summary: Debrid Manager Python package
+Author: Dreu LaVelle
+Author-email: dreu.lavelle@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Yuumi
+
+Yuumi is a Python package that allows you to use multiple debrid services in your Python projects.
+
+## Installation
+
+```bash
+poetry add Yuumi
+```
+
+or
+
+```bash
+pip install Yuumi
+```
+
+## Usage
+
+```python
+from Yuumi.debrid import RealDebridAPI
+
+api = RealDebridAPI("your_access_token")
+
+# Get user info
+user_info = await api.get_user_info()
+print(user_info)
+
+# Check instant availability
+instant_availability = await api.get_instant_availability("2f5a5ccb7dc32b7f7d7b150dd6efbce87d2fc371")
+print(instant_availability)
+
+# Download a file
+download = await api.add_magnet("magnet:?xt=urn:btih:2f5a5ccb7dc32b7f7d7b150dd6efbce87d2fc371")
+print(download)
+```
+
+## Download Example
+
+```python
+import asyncio
+from yuumi.debrid import RealDebridAPI
+
+async def main():
+    api = RealDebridAPI("your_access_token")
+
+    # Example: Downloading a cached torrent
+    torrent_hash = "your_torrent_hash"
+    availability = await api.get_instant_availability(torrent_hash)
+    if availability:
+        magnet_link = "your_magnet_link"
+        torrent_info = await api.add_magnet(magnet_link)
+        torrent_id = torrent_info["id"]
+        await api.select_torrent_files(torrent_id, "all")
+        print("Files selected and ready for download.")
+    else:
+        print("Torrent is not cached.")
+
+    # Example: Downloading a non-cached torrent
+    magnet_link = "your_magnet_link"
+    torrent_info = await api.add_magnet(magnet_link)
+    torrent_id = torrent_info["id"]
+    print("Torrent added. Waiting for it to be cached...")
+
+    # Timeout mechanism: Give up after 5 minutes (300 seconds)
+    timeout = 300
+    start_time = asyncio.get_event_loop().time()
+
+    while True:
+        torrent_status = await api.get_torrent_info(torrent_id)
+        if torrent_status["status"] == "downloaded":
+            await api.select_torrent_files(torrent_id, "all")
+            print("Files selected and ready for download.")
+            break
+        if asyncio.get_event_loop().time() - start_time > timeout:
+            print("Timeout reached. Torrent is not cached. Giving up.")
+            break
+        await asyncio.sleep(30)  # Wait for 30 seconds before checking again
+
+# Run the main function
+asyncio.run(main())
+```
+
+## CLI Usage
+
+```bash
+yuumi --token YOUR_ACCESS_TOKEN --user
+```
+
+More information can be found here:
+```bash
+yuumi --help
+```
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
