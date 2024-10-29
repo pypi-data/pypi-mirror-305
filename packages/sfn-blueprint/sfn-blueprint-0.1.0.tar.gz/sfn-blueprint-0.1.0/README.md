@@ -1,0 +1,130 @@
+```md
+# SFNBlueprint Framework
+
+SFNBlueprint is a modular framework for rapid building of intelligent agents to handle various data-related tasks, such as category identification, code execution, feature suggestion generation, data analysis, and more. These agents integrate with OpenAI to perform their tasks and can be extended with custom logic.
+
+## Features
+
+- **Base Agent**: A base class for all agents to extend.
+- **Category Identification**: Automatically categorize datasets based on column names.
+- **Data Cleaning Suggestions**: Generate suggestions for cleaning datasets.
+- **Code Execution**: Dynamically execute code on data frames.
+- **Feature Suggestion**: Get feature engineering suggestions based on your dataset.
+- **Data Analysis**: Analyze datasets and return detailed statistics.
+
+## Installation
+
+You can install the SFNBlueprint framework via pip:
+
+```bash
+pip install SFNBlueprint
+```
+
+## Usage
+
+### 1. Environment Setup
+
+To use the agents, you need an API key from OpenAI. Store the key in a `.env` file in your project root directory:
+
+```bash
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+Ensure the `python-dotenv` package is installed to load environment variables.
+
+### 2. Using Agents
+
+Each agent extends the base agent class `SFNAgent` and implements its own logic. Below are a few usage examples:
+
+#### Example 1: Category Identification Agent
+
+```python
+from agents.category_identification_agent import SFNCategoryIdentificationAgent
+from tasks.task import Task
+import pandas as pd
+
+# Create sample data
+data = {'col1': [1, 2], 'col2': [3, 4]}
+df = pd.DataFrame(data)
+
+# Initialize the agent
+category_agent = SFNCategoryIdentificationAgent()
+
+# Create a task
+task = Task(data=df)
+
+# Execute the agent
+category = category_agent.execute_task(task)
+print(f"Identified category: {category}")
+```
+
+#### Example 2: Clean Suggestion Generator Agent
+
+```python
+from agents.clean_suggestion_generator import SFNCleanSuggestionGeneratorAgent
+from tasks.task import Task
+
+# Initialize the agent
+clean_agent = SFNCleanSuggestionGeneratorAgent()
+
+# Prepare analysis data for cleaning
+task_data = {
+    'shape': (100, 5),
+    'columns': ['col1', 'col2', 'col3', 'col4', 'col5'],
+    'dtypes': {'col1': 'int64', 'col2': 'float64'},
+    'missing_values': {'col1': 0, 'col2': 5},
+    'duplicates': 2
+}
+
+task = Task(analysis=task_data)
+
+# Execute the agent
+suggestions = clean_agent.execute_task(task)
+print("Cleaning suggestions:", suggestions)
+```
+
+#### Example 3: Code Executor Agent
+
+```python
+from agents.code_executor import SFNCodeExecutorAgent
+from tasks.task import Task
+import pandas as pd
+
+# Sample DataFrame
+data = {'A': [1, 2, 3], 'B': [4, 5, 6]}
+df = pd.DataFrame(data)
+
+# Sample code to execute on the DataFrame
+code = """
+df['C'] = df['A'] + df['B']
+"""
+
+# Initialize the agent and create a task
+executor_agent = SFNCodeExecutorAgent()
+task = Task(data=df, code=code)
+
+# Execute the code on the DataFrame
+df_result = executor_agent.execute_task(task)
+print(df_result)
+```
+
+### 3. Extending Agents
+
+You can create custom agents by extending the base class `SFNAgent`. Here's a minimal example of creating a new agent:
+
+```python
+from agents.base_agent import SFNAgent
+
+class CustomAgent(SFNAgent):
+    def __init__(self):
+        super().__init__(name="Custom Agent", role="Performs custom task")
+
+    def execute_task(self, task):
+        # Custom logic here
+        return "Task executed"
+```
+
+## Contact
+
+For any queries or issues, please contact the maintainer at `rajesh@stepfunction.ai`.
+```
