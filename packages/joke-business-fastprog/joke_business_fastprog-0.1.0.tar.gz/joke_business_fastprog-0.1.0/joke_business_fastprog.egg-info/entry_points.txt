@@ -1,0 +1,2 @@
+[console_scripts]
+business_prog = joke_business_fastprog.__main__:main

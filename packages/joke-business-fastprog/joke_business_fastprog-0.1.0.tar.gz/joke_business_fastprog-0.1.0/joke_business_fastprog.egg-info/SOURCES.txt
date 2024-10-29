@@ -1,0 +1,8 @@
+README.md
+setup.py
+joke_business_fastprog.egg-info/PKG-INFO
+joke_business_fastprog.egg-info/SOURCES.txt
+joke_business_fastprog.egg-info/dependency_links.txt
+joke_business_fastprog.egg-info/entry_points.txt
+joke_business_fastprog.egg-info/requires.txt
+joke_business_fastprog.egg-info/top_level.txt
