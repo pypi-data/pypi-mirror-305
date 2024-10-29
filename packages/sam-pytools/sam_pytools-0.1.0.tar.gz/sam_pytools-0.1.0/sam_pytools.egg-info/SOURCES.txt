@@ -1,0 +1,16 @@
+.gitignore
+CHANGES.rst
+LICENSE.txt
+README.md
+example_usage.py
+pyproject.toml
+sample_pypirc_test.txt
+setup.cfg
+setup.py
+towncrier.toml
+sam_pytools/__init__.py
+sam_pytools.egg-info/PKG-INFO
+sam_pytools.egg-info/SOURCES.txt
+sam_pytools.egg-info/dependency_links.txt
+sam_pytools.egg-info/requires.txt
+sam_pytools.egg-info/top_level.txt
