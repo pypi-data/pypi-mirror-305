@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finalHWcringe"
+version = "0.3.0"
+description = "applications for managing orders and users."
+authors = [
+    { name = "osisochka", email = "a.onufrienko@edu.centraluniversity.ru" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.6"
+
+dependencies = [
+    "pandas"
+]
+
+[project.scripts]
+manager = "__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
