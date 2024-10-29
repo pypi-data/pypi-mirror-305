@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: speaker-diarization
+Version: 0.0.2
+Home-page: https://github.com/pengzhendong/speaker-diarization
+Author: Zhendong Peng
+Author-email: pzd17@tsinghua.org.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: modelscope
+Requires-Dist: sherpa-onnx
+Requires-Dist: soundfile
+
+# speaker-diarization
