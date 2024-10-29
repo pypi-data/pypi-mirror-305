@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+ts_pip_scan/__init__.py
+ts_pip_scan/commands.py
+ts_pip_scan/models.py
+ts_pip_scan/scanner.py
+ts_pip_scan/ts_client.py
+ts_pip_scan.egg-info/PKG-INFO
+ts_pip_scan.egg-info/SOURCES.txt
+ts_pip_scan.egg-info/dependency_links.txt
+ts_pip_scan.egg-info/entry_points.txt
+ts_pip_scan.egg-info/requires.txt
+ts_pip_scan.egg-info/top_level.txt

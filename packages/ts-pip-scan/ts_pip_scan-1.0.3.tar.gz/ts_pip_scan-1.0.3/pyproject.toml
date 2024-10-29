@@ -1,0 +1,44 @@
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ts-pip-scan"
+dynamic = ["version"]
+authors = [
+    {name = "Joseph Manyiel"}
+]
+maintainers = [
+  {name = "Joseph Manyiel", email = "jmagany@gmail.com"}
+]
+description = "TrustSource plugin for scanning python project installed pip dependencies and uploading them to [TrustSource](https://app.trustsource.io) via its API for code compliance evaluation"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Apache 2.0"}
+dependencies = [
+    "click>=8.1.7",
+    "httpx",
+    "GitPython",
+    "pydantic"
+]
+
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.12"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "ts_pip_scan.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["ts_pip_scan*"]
+
+[project.scripts]
+ts-pip-scan = "ts_pip_scan.commands:cli"
+
+[project.urls]
+Homepage = "https://github.com/JoeMabor/TrustSource-pip-scan"
+Repository = "https://github.com/JoeMabor/TrustSource-pip-scan.git"
+
