@@ -1,0 +1,71 @@
+Metadata-Version: 2.3
+Name: redfetch
+Version: 0.3.4
+Summary: Download and publish EverQuest scripts and software using the RedGuides API
+Project-URL: Homepage, https://www.redguides.com
+Project-URL: Documentation, https://www.redguides.com/community/resources/redfetch.3177/
+Project-URL: Repository, https://github.com/RedGuides/redfetch
+Project-URL: Issues, https://github.com/RedGuides/redfetch/issues
+Project-URL: Changelog, https://github.com/RedGuides/redfetch/blob/main/CHANGELOG.md
+Project-URL: Source_archive, https://github.com/RedGuides/redfetch/archive/deb3a513d44d9923b18e61fdeec62c75e2a59f26.zip
+Author-email: Redbot <ask@redguides.com>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Utilities
+Requires-Dist: cheroot
+Requires-Dist: dynaconf
+Requires-Dist: flask
+Requires-Dist: flask-cors
+Requires-Dist: keepachangelog
+Requires-Dist: keyring
+Requires-Dist: md2bbcode
+Requires-Dist: packaging
+Requires-Dist: platformdirs
+Requires-Dist: pyperclip
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: rich-argparse
+Requires-Dist: textual
+Requires-Dist: textual-fspicker
+Requires-Dist: tomlkit
+Description-Content-Type: text/markdown
+
+# RedFetch
+
+RedFetch is a tool for downloading software and scripts from RedGuides. You can use it from the command line, a terminal UI, or a web UI.
+
+## Installation
+
+Install the dependencies and run redfetch.py
+
+### Command-Line Options
+
+- `--logout`: Log out and clear cached tokens.
+- `--download-resource <RESOURCE_ID>`: Download a specific resource by its ID.
+- `--download-watched`: Download all watched and special resources.
+- `--force-download`: Force download of all watched resources.
+
+- `--list-resources`: List all resources in the cache.
+- `--serve`: Run as a server to handle download requests.
+- `--update-setting <SETTING_PATH> <VALUE>`: Update a configuration setting. The setting path should be dot-separated.
+- `--switch-env <ENVIRONMENT>`: Change the server type (`LIVE`, `TEST`, `EMU`).
+
+
+### Examples
+
+- **Download all watched resources**
+
+  ```bash
+  python redfetch.py --download-watched
+  ```
+
+- **Force re-download all watched resources**
+
+  ```bash
+  python redfetch.py --force-download --download-watched
+  ```
