@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: processamento_de_imagem_em_python_desafio_dio
+Version: 0.0.5
+Summary: Image Processing Package using skimage
+Home-page: https://github.com/joaodatapaulo/criando-um-pacote-de-processamento-de-imagem-com-python
+Author: João Paulo
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image>=0.16.1
+
+# processamento_de_imagem_em_python_desafio_dio
+
+**Description**
+<br><br>The package package_name is used to:
+<br><br>    Processing:
+<br>	    - Histogram matching
+<br>	    - Structural similarity
+<br>	    - Resize image
+<br><br>	Utils:
+<br>	    - Read image
+<br>	    - Save image
+<br>	    - Plot image
+<br>		- Plot histogram
+
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install *processamento_de_imagem_desafio_dio*
+
+```bash
+pip install processamento_de_imagem_em_python_desafio_dio
+```
+
+## Usage
+
+```python
+from processamento_de_imagem_em_python_desafio_dio.utils import io, plot
+from processamento_de_imagem_em_python_desafio_dio.processamento import combinacao, transformacao
+```
+
+## Author
+Joao Paulo
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
