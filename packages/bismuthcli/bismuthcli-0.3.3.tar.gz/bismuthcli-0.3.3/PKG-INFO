@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: bismuthcli
+Version: 0.3.3
+License-File: LICENSE
+Requires-Dist: prompt-toolkit
+Requires-Dist: requests
+Requires-Dist: termcolor
+Description-Content-Type: text/markdown
+
+# BismuthCLI
+
+This is the CLI installer shim for the [Bismuth Cloud](https://www.bismuth.cloud) platform.
