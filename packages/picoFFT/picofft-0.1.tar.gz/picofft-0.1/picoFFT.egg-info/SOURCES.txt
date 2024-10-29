@@ -1,0 +1,10 @@
+setup.py
+picoFFT/__init__.py
+picoFFT/fft.py
+picoFFT/train.py
+picoFFT.egg-info/PKG-INFO
+picoFFT.egg-info/SOURCES.txt
+picoFFT.egg-info/dependency_links.txt
+picoFFT.egg-info/top_level.txt
+picoFFT/input/__init__.py
+picoFFT/input/tokenizer.py
