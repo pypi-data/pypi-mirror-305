@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: Livenodes
+Version: 1.0.0
+Summary: LiveNodes: node based live streaming sensor/data and visualization suite.
+Author-email: Yale Hartmann <yale.hartmann@uni-bremen.de>
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: numpy>=1.22.1
+Requires-Dist: matplotlib>=3.5.1
+Requires-Dist: graphviz>=0.19.1
+Requires-Dist: joblib>=1.1.0
+Requires-Dist: phx-class-registry>=5.0.0
+Requires-Dist: python-dotenv
+Requires-Dist: aioprocessing>=2.0.1
+Requires-Dist: deprecation>=2.1.0
+Requires-Dist: pyyaml>=6.0.0
+Requires-Dist: networkx>=3.0.0
+Requires-Dist: pandas
+Requires-Dist: scipy
+Provides-Extra: dev
+Requires-Dist: tox; extra == "dev"
+Requires-Dist: pytest>=7.0.1; extra == "dev"
+
