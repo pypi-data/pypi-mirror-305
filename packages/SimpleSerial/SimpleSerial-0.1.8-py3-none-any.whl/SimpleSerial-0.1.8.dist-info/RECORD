@@ -1,0 +1,10 @@
+SimpleSerial/SimpleSerialMain.py,sha256=6Hu6AmsUQ_62NaQCk30jCRUICTNq4UKk61fDiWC3t7A,1098
+SimpleSerial/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SimpleSerial/colourprint.py,sha256=kEU0XkpxOPGQCPvr89GA8NvqAYnvkDbpNl9svcdsbIU,243
+SimpleSerial/communication.py,sha256=vdJf0TwcmIGhg8AVI5_BRiCp9cBw4c9UDgySYKeo2Q0,7232
+SimpleSerial/constants.py,sha256=ybWTYcDpMYDS69MQa3Jc-o7LfH5P8U9q2JBkpyH_rlQ,1519
+SimpleSerial/multiRead.py,sha256=FsXPQbq775bL55CjSwEJjkLrHPoUGideUTGvQWtjFDY,993
+SimpleSerial-0.1.8.dist-info/METADATA,sha256=Vf-sjGCveRie2PyImIlLWWoiXhC33RNiyZ43TSPbzio,3486
+SimpleSerial-0.1.8.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+SimpleSerial-0.1.8.dist-info/top_level.txt,sha256=lm3nknn596M8AegDiQf2eC0Apem4aTw9dE46kK_KZJk,13
+SimpleSerial-0.1.8.dist-info/RECORD,,
