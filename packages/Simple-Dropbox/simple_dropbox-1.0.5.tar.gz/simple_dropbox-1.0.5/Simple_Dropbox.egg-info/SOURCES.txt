@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+Dropbox_module_setup/Script.py
+Dropbox_module_setup/__init__.py
+Simple_Dropbox.egg-info/PKG-INFO
+Simple_Dropbox.egg-info/SOURCES.txt
+Simple_Dropbox.egg-info/dependency_links.txt
+Simple_Dropbox.egg-info/top_level.txt
