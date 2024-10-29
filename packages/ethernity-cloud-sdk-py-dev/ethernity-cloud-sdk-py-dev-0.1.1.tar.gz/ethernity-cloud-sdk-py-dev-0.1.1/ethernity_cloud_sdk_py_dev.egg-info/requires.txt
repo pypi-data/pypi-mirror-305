@@ -1,0 +1,6 @@
+requests
+python-dotenv
+ipfshttpclient
+tqdm
+pyopenssl
+ethernity-cloud-runner-py-dev
