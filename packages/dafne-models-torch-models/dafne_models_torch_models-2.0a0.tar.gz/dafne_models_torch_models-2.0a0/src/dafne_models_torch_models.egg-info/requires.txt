@@ -1,0 +1,5 @@
+matplotlib
+dafne_dl-torch_models
+
+[gui]
+PyQt5
