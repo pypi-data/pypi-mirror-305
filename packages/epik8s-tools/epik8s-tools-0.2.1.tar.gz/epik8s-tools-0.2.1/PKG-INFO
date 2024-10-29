@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: epik8s-tools
+Version: 0.2.1
+Summary: A set of tools for generating Kubernetes Helm charts for EPICS-based systems.
+Home-page: https://github.com/yourusername/epik8s-tools
+Author: Andrea Michelotti
+Author-email: andrea.michelotti@infn.it
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# testbeamline Configuration
+
+## IO Controllers (IOCs)
+
+
+## Services
+
+
+## Applications
+
+- **Application Name**: icpdastemp01
+- **Version**: 
+
+
