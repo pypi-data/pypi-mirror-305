@@ -1,0 +1,13 @@
+AUTHORS.rst
+LICENSE
+README.rst
+pyproject.toml
+src/statpairviz/__init__.py
+src/statpairviz/annotation.py
+src/statpairviz/version.py
+src/statpairviz.egg-info/PKG-INFO
+src/statpairviz.egg-info/SOURCES.txt
+src/statpairviz.egg-info/dependency_links.txt
+src/statpairviz.egg-info/requires.txt
+src/statpairviz.egg-info/top_level.txt
+test/test_packaging.py

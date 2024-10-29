@@ -1,0 +1,17 @@
+
+[doc]
+sphinx
+sphinx-gallery
+sphinx-rtd-theme
+
+[dvlpt]
+twine
+
+[example]
+matplotlib
+
+[test]
+coverage
+pytest
+pytest-cov
+pytest-mock
