@@ -1,0 +1,9 @@
+maia2/__init__.py,sha256=Fm2gf6wG_YuvbKyR1utqywHJl-2qg99vNBKX1D2Wafw,66
+maia2/fetch_data.sh,sha256=LefV6tal7pp0a34ODhcx6y1-i0p4m1mLvS1ALIB0PeM,746
+maia2/inference.py,sha256=faoIrFw2B4RezE9sV4B2bOT6-yaRzHAuVmjY1mex_iA,5544
+maia2/main.py,sha256=tlAem5JhRmdbUf-iQ9yBvATZjAecwbPMg8uZERorv08,26107
+maia2/utils.py,sha256=dvriII8I6zzS-ZIsNEDDV6tAXfiqaa0OZ0NTOARlgd0,10560
+maia2-0.2.0.dist-info/LICENSE,sha256=T0nFxRZvtWtfqPnjU6vIWkdL0t13hvAAhwHRZhluelc,1295
+maia2-0.2.0.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+maia2-0.2.0.dist-info/METADATA,sha256=cMmsBY-iLYBERD4S82yALg0w76TS5hXTd9efR7n-rY4,295
+maia2-0.2.0.dist-info/RECORD,,
