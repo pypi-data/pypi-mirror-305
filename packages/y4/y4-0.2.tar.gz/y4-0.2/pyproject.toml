@@ -1,0 +1,14 @@
+[project]
+name = "y4"
+version = "0.2"
+dependencies = [
+    "jq",
+    "pyyaml",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+y4 = "y4.__main__:main"
