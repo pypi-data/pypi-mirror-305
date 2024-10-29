@@ -1,0 +1,10 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minicrm_api/__init__.py,sha256=QlPds_28R-YWNkvb3nUyz2LRDr6Q-w_oUuWjfGgsEGI,39
+minicrm_api/minicrm.py,sha256=hmB7ak6Nr3klduonlAuM9vd35Sxklpqre93vjIrNWVQ,10626
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/another_file.py,sha256=pNx8pbAT9d7MuOLS4vPI2gvGWIJmSDmxMGQ8O_QtJV4,259
+minicrm_api-0.0.10.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+minicrm_api-0.0.10.dist-info/METADATA,sha256=Vi-MB7-6kz9ikfxwJ-XiZimxScnrIIdqy91UeraXLc4,671
+minicrm_api-0.0.10.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+minicrm_api-0.0.10.dist-info/top_level.txt,sha256=9eE87OizXMVkueMdQxKWGwEDbBQFgp72Rsg068uNxQY,26
+minicrm_api-0.0.10.dist-info/RECORD,,
