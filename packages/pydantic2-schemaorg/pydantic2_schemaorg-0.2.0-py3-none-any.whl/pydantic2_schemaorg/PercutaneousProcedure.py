@@ -1,0 +1,16 @@
+from __future__ import annotations
+
+
+from pydantic.v1 import Field
+from pydantic2_schemaorg.MedicalProcedureType import MedicalProcedureType
+
+
+class PercutaneousProcedure(MedicalProcedureType):
+    """A type of medical procedure that involves percutaneous techniques, where access to organs or tissue is achieved
+     via needle-puncture of the skin. For example, catheter-based procedures like stent delivery.
+
+    See: https://schema.org/PercutaneousProcedure
+    Model depth: 6
+    """
+    type_: str = Field(default="PercutaneousProcedure", alias='@type', const=True)
+    

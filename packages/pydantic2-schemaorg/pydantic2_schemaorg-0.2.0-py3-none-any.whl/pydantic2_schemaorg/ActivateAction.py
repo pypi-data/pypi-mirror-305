@@ -1,0 +1,15 @@
+from __future__ import annotations
+
+
+from pydantic.v1 import Field
+from pydantic2_schemaorg.ControlAction import ControlAction
+
+
+class ActivateAction(ControlAction):
+    """The act of starting or activating a device or application (e.g. starting a timer or turning on a flashlight).
+
+    See: https://schema.org/ActivateAction
+    Model depth: 4
+    """
+    type_: str = Field(default="ActivateAction", alias='@type', const=True)
+    

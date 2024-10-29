@@ -1,0 +1,16 @@
+from __future__ import annotations
+
+
+from pydantic.v1 import Field
+from pydantic2_schemaorg.MedicalSpecialty import MedicalSpecialty
+
+
+class SpeechPathology(MedicalSpecialty):
+    """The scientific study and treatment of defects, disorders, and malfunctions of speech and voice, as stuttering,
+     lisping, or lalling, and of language disturbances, as aphasia or delayed language acquisition.
+
+    See: https://schema.org/SpeechPathology
+    Model depth: 6
+    """
+    type_: str = Field(default="SpeechPathology", alias='@type', const=True)
+    
