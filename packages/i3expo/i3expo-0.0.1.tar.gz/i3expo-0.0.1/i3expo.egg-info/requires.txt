@@ -1,0 +1,16 @@
+pygame
+pulp
+i3ipc
+pyxdg
+Pillow
+
+[test]
+pytest
+coverage
+flake8
+black
+isort
+pytest-cov
+mypy
+gitchangelog
+mkdocs
