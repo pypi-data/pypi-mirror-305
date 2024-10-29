@@ -1,0 +1,2 @@
+fastapi
+zimran-config==1.1.*
