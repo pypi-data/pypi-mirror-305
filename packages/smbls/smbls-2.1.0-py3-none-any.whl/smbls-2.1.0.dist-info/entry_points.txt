@@ -1,0 +1,3 @@
+[console_scripts]
+smbls = smbls:smbls
+smblsreport = smbls:report
