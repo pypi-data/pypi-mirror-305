@@ -1,0 +1,17 @@
+matplobblib/__init__.py,sha256=N2jK9gJo77iKMEEIwtZu4Qr-BPXBs9w4GtfsHMBkwJg,238
+matplobblib/aisd/AISD.py,sha256=qoZiSIt9RXZxh9DsGeuBUkkf0uBIJ1VTMcM4R_WZ8EY,3133
+matplobblib/aisd/__init__.py,sha256=fT5EhZVP1Eo_QldjGDjDg4fgUjNbBm5LvR98PF1eENU,21
+matplobblib/aisd/additional_funcs.py,sha256=TwT9FT7phGCMTwFKhs-2cEWa32LxFub1_PokLr23Yr4,10899
+matplobblib/aisd/data_structures.py,sha256=qR941br7qnsMhaS2A_ZmU3GiGZFNpNQlZXTi11NGgSI,16944
+matplobblib/aisd/search_algorythms.py,sha256=-aHn10Z6jBanMg0NLIP6jHbpAxZdzg8kvt_gSFZj4NU,4122
+matplobblib/tvims/CRV.py,sha256=2AaO2oPj-JUfH9YsCEBKrxdrd57R0ldmgnyvvfB4Xvk,5443
+matplobblib/tvims/NRV.py,sha256=OwWKTQbB8rGkid3aTxZ1XyHhcDq28TYcUPqRbT_7Luw,6685
+matplobblib/tvims/TVIMS.py,sha256=XK-l5rsQ8cU1reHKfLIQWvfEQXoW5rz_x4iD-CQ9k7k,29330
+matplobblib/tvims/__init__.py,sha256=S1n-CFOotpU45Ya1Y5-WPAX0vp-wQaI9wVGy6yzg-4o,22
+matplobblib/tvims/describe_text.py,sha256=cwWTs32plrcoikMzCLT7cGVAzncVAmsgClgPRj1yDH4,7262
+matplobblib/tvims/rrstr.py,sha256=tChY_bMDgfoxAfTjYsLZwlDZAFOVPmX5A_pB9k2T5fg,158
+matplobblib-0.1.32.dist-info/LICENSE.txt,sha256=ASR36wrmBod1ADC1s9EgbdWhckT_5e1TAARP6vauYq0,38
+matplobblib-0.1.32.dist-info/METADATA,sha256=Z7T8bODPOms-BEzy1TjC2JT66xyvkn3R2XaAvD15oB8,414
+matplobblib-0.1.32.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+matplobblib-0.1.32.dist-info/top_level.txt,sha256=qsTsgzYIH92WQ2sskyCjnABKXhyjhGQZAblaEcVCPBs,12
+matplobblib-0.1.32.dist-info/RECORD,,
