@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <h2>{{ obj }}</h2>
+    {% if obj.description %}
+        <p>
+            <em>{{ obj.description }}</em>
+        </p>
+    {% endif %}
+    <table class="table table-hover table-sm">
+        <tbody>
+            <tr {% if obj.url %}role="button" data-href="{{ obj.url }}"{% endif %}>
+                <th scope="row">URL</th>
+                <td>
+                    {% if obj.url %}
+                        {{ obj.url }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Content</th>
+                <td>
+                    {% if obj.content %}
+                        {{ obj.content }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Date Time</th>
+                <td>
+                    {% if obj.datetime %}
+                        {{ obj.datetime }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            {% for related in related_objects %}
+                <tr role="button" data-href="{{ related.href }}">
+                    <th scope="row">{{ related.title }}</th>
+                    <td>{{ related.count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
