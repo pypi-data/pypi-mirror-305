@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "torch"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "cuda-py"
+version = "1.0.0"
+authors = [
+  { name="GloriousGlider8", email="sam.g.plimmer@gmail.com" },
+]
+description = "A very simple python wrapper for running code on CUDA devices."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
