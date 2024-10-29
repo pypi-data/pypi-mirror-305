@@ -1,0 +1,14 @@
+telesm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+telesm/__main__.py,sha256=zdGK0ivc8ErKnLcMidYHNd-1F469e-dmFBjmgHG9V-c,68
+telesm/ai.py,sha256=9yriV9WS8q8g4VY5IVJCPltIeNJ4eY11h1AeWeA8JJU,1619
+telesm/db.py,sha256=ItDpKlpJ0_AGbziWK9njjFpXB1L8AxmpbRQfudsWx9c,3566
+telesm/decorators.py,sha256=RoJAgY5c0fqu0YqDX4LCyaZ7fp56Lg1Uz2T-VplplDY,2515
+telesm/env.py,sha256=uFeNeu5fZwlk42TscyBPE6V_YvavbJNVBMipt_WVB5k,253
+telesm/main.py,sha256=OVexG-tr4fLXCv6zGXprDUgndRFrdcyrMov4nhNWaRM,1408
+telesm/operations.py,sha256=lhi58iG5aMdZ_5Tljz_wwjhxxFsQIcsO40_YZ6RAYXM,3077
+telesm-0.2.3.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+telesm-0.2.3.dist-info/METADATA,sha256=kLiA_6-Y9vJMr0ia8ggM7MSZjWFC8VibI7DkauSWNVs,2946
+telesm-0.2.3.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+telesm-0.2.3.dist-info/entry_points.txt,sha256=_z1aExqHVPCLYJsST71S7YUFNZYQ2ArzllMVkKZ0Sz4,48
+telesm-0.2.3.dist-info/top_level.txt,sha256=xZ1_PI6osoRHZSODkSkm7drxOOG-OCucZxOJcPNOvbE,7
+telesm-0.2.3.dist-info/RECORD,,
