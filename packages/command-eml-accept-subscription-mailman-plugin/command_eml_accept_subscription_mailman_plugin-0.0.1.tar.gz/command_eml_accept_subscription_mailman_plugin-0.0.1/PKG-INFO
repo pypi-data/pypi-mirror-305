@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: command-eml-accept-subscription-mailman-plugin
+Version: 0.0.1
+Summary: Plugin that add a command to accept a subscription request to mailing list by email
+Home-page: https://github.com/Tann-dev/command-eml-accept-subscription-mailman-plugin
+Author: Tann-dev
+Author-email: snakestone@myyahoo.com
+License-File: LICENSE
+Requires-Dist: mailman
+Requires-Dist: atpublic
+
+Plugin that add a command to accept a subscription request to mailing list by email
