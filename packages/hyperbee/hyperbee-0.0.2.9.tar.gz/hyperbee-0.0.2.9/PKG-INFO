@@ -1,0 +1,49 @@
+Metadata-Version: 2.3
+Name: hyperbee
+Version: 0.0.2.9
+Summary: The official Python library for the hyperbee API
+Project-URL: Homepage, https://github.com/HyperbeeAI/hyperbee-python
+Project-URL: Repository, https://github.com/HyperbeeAI/hyperbee-python
+Author-email: HyperBeeAI <support@hyperbee.ai>
+License-Expression: Apache-2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.7.1
+Requires-Dist: anyio<5,>=3.5.0
+Requires-Dist: cached-property; python_version < '3.8'
+Requires-Dist: distro<2,>=1.7.0
+Requires-Dist: httpx<1,>=0.23.0
+Requires-Dist: openai<2,>=1.10.0
+Requires-Dist: pydantic<3,>=1.9.0
+Requires-Dist: sniffio
+Requires-Dist: tqdm>4
+Requires-Dist: typing-extensions<5,>=4.7
+Provides-Extra: datalib
+Requires-Dist: numpy>=1; extra == 'datalib'
+Requires-Dist: pandas-stubs>=1.1.0.11; extra == 'datalib'
+Requires-Dist: pandas>=1.2.3; extra == 'datalib'
+Description-Content-Type: text/markdown
+
+# HyperChat™ Python Client
+
+The HyperChat™ Python client provides convenient access to HyperChat™ REST APIs from any Python 3.7+ application. The library includes type definitions for all request params and response fields, and offers both synchronous and asynchronous clients powered by [httpx](https://github.com/encode/httpx) as well as programmatic Collection management functions for RAG applications.
+
+Installation:
+```sh
+pip install hyperbee
+```
+
+See the documentation and examples at [docs.hyperbee.ai](https://docs.hyperbee.ai/api_and_libraries/python_client).
