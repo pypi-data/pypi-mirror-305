@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+count_sales_plankin.egg-info/PKG-INFO
+count_sales_plankin.egg-info/SOURCES.txt
+count_sales_plankin.egg-info/dependency_links.txt
+count_sales_plankin.egg-info/entry_points.txt
+count_sales_plankin.egg-info/requires.txt
+count_sales_plankin.egg-info/top_level.txt

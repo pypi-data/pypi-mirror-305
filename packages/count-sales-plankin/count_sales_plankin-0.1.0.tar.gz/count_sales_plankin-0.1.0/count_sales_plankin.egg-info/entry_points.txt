@@ -1,0 +1,2 @@
+[console_scripts]
+sales_quan = count_sales_csv.main:main

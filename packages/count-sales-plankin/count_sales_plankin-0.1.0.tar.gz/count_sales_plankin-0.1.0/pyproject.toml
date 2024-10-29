@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "count_sales_plankin"
+version = "0.1.0"
+description = "Подсчет продаж и количества товаров"
+authors = [{ name = "Kirill"}]
+dependencies = ["pandas"]
+license = {text = 'MIT'}
+readme = 'README.md'
+
+[project.scripts]
+sales_quan = "count_sales_csv.main:main"
