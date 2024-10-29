@@ -1,0 +1,8 @@
+LICENSE.md
+README.md
+setup.py
+r2d2_bigquery_duckdb_analysis_engine.egg-info/PKG-INFO
+r2d2_bigquery_duckdb_analysis_engine.egg-info/SOURCES.txt
+r2d2_bigquery_duckdb_analysis_engine.egg-info/dependency_links.txt
+r2d2_bigquery_duckdb_analysis_engine.egg-info/requires.txt
+r2d2_bigquery_duckdb_analysis_engine.egg-info/top_level.txt

@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: r2d2_bigquery_duckdb_analysis_engine
+Version: 0.3
+Summary: Pacote para consultas e manipulação de dados no BigQuery com DuckDB, focado em analytics engineering.
+Author: Tiago Navarro
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: google-auth
+Requires-Dist: google-cloud-bigquery
+Requires-Dist: pandas
+Requires-Dist: duckdb
+Requires-Dist: jinja2
+
+# r2d2_bigquery_duckdb_analysis_engine
+
+`r2d2_bigquery_duckdb_analysis_engine` é um pacote Python desenvolvido para facilitar o carregamento de dados do BigQuery e a execução de consultas SQL flexíveis no DuckDB. Ele permite carregar dados de qualquer tabela do BigQuery em um DataFrame pandas e realizar análises avançadas no DuckDB, sendo ideal para workflows de analytics engineering.
+
+## Instalação
+
+Para instalar diretamente do GitHub, execute:
+
+```python
+pip install git+https://github.com/ResultadosDigitais/r2d2-bigquery-duckdb-analysis-engine.git
+```
+
+## Estrutura do Pacote
+
+```plaintext
+r2d2_bigquery_duckdb_analysis_engine/
+├── r2d2_bigquery_duckdb_analysis_engine/
+│   ├── __init__.py
+│   ├── bigquery_client.py
+│   ├── bigquery_to_pandas.py
+│   └── interaction_service.py
+├── setup.py
+├── requirements.txt
+└── README.md
+```
+
+### Módulos Principais
+
+- **`BigQueryClient`**: Estabelece uma conexão com o BigQuery e executa consultas SQL.
+- **`BigQueryToPandas`**: Carrega dados do BigQuery em um DataFrame pandas e aplica filtros e conversões de tipo.
+- **`InteractionService`**: Carrega dados de qualquer tabela do BigQuery, registra-os no DuckDB e executa consultas SQL personalizadas.
+
+## Exemplo de Uso
+
+Aqui está um exemplo de como utilizar o `InteractionService` para carregar dados do BigQuery, registrá-los no DuckDB e realizar consultas SQL personalizadas:
+
+```python
+from r2d2_bigquery_duckdb_analysis_engine.interaction_service import InteractionService
+
+# Configurações
+project_id = 'data-lake-raw-production'
+table_name = 'rd-dl-trusted-prd-infra-01.rdsm_events.events_created'
+tenant_id = 955000000001305584
+date = '2024-10-15'
+layer = 'trusted'
+
+# Inicialize o serviço de interação
+interaction_service = InteractionService(project_id)
+
+# Carregue os dados do BigQuery e registre-os no DuckDB
+df = interaction_service.load_data_to_duckdb(table_name, tenant_id, layer, date, duckdb_table_name='events_created')
+
+# Execute uma consulta personalizada no DuckDB
+query = """
+  SELECT event_type,
+         event_uuid,
+         contact_uuid,
+         event_payload,
+         json_extract_string(event_payload, '$.email') AS email
+  FROM events_created
+  WHERE json_extract_string(event_payload, '$.email') IN ('art_roi_03@gmail.com', 'art_roi_09@gmail.com')
+"""
+result_df = interaction_service.run_duckdb_query(query)
+
+# Exibir os resultados
+interaction_service.display_query_results(query)
+```
+
+## API do Pacote
+
+### `InteractionService`
+
+- **`load_data_to_duckdb(table_name, tenant_id, layer, date, duckdb_table_name='temp_table')`**: 
+  Carrega dados de uma tabela BigQuery em um DataFrame pandas e registra-o como uma tabela no DuckDB.
+
+  - **Parâmetros**:
+    - `table_name` (str): Nome da tabela BigQuery no formato `project.dataset.table`.
+    - `tenant_id` (int): ID do tenant para filtragem.
+    - `layer` (str): Camada da tabela (e.g., 'trusted' ou 'refined').
+    - `date` (str): Data para filtragem.
+    - `duckdb_table_name` (str, opcional): Nome para registrar a tabela no DuckDB (padrão: `'temp_table'`).
+
+  - **Retorno**: `pd.DataFrame` com os dados filtrados.
+
+- **`run_duckdb_query(query)`**: Executa uma consulta SQL no DuckDB e retorna os resultados em um DataFrame pandas.
+
+  - **Parâmetros**:
+    - `query` (str): Consulta SQL a ser executada.
+
+  - **Retorno**: `pd.DataFrame` com os resultados da consulta.
+
+- **`display_query_results(query)`**: Executa uma consulta SQL no DuckDB e exibe os resultados, útil para visualização em notebooks.
+
+  - **Parâmetros**:
+    - `query` (str): Consulta SQL a ser executada.
+
+## Contribuindo
+
+Contribuições são bem-vindas! Abra issues e pull requests conforme necessário. Para contribuições maiores, entre em contato para discutir as mudanças propostas.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
