@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "scaleway",
+  "version": "1.17.0-alpha.1730194779",
+  "server": "github://api.github.com/pulumiverse"
+}
