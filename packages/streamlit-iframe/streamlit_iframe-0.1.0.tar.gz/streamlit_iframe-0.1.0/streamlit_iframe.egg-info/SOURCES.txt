@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+streamlit_iframe/__init__.py
+streamlit_iframe/version.py
+streamlit_iframe.egg-info/PKG-INFO
+streamlit_iframe.egg-info/SOURCES.txt
+streamlit_iframe.egg-info/dependency_links.txt
+streamlit_iframe.egg-info/requires.txt
+streamlit_iframe.egg-info/top_level.txt
+streamlit_iframe/frontend/build/asset-manifest.json
+streamlit_iframe/frontend/build/index.html
+streamlit_iframe/frontend/build/static/js/main.199cde9b.js
+streamlit_iframe/frontend/build/static/js/main.199cde9b.js.LICENSE.txt
+streamlit_iframe/frontend/build/static/js/main.199cde9b.js.map
