@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: fispkg
+Version: 1.0.0
+Summary: This is just a nice experiment
+Home-page: https://github.com/your-username/your-repo
+Author: Baholo Mokoena
+Author-email: baholom@mindworx.co.za
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+This is a very simple but awesome demonstration of a deploying a Python Package.
+Lets Rock!

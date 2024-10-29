@@ -1,0 +1,8 @@
+README.md
+setup.py
+HelloProject/__init__.py
+HelloProject/hello.py
+fispkg.egg-info/PKG-INFO
+fispkg.egg-info/SOURCES.txt
+fispkg.egg-info/dependency_links.txt
+fispkg.egg-info/top_level.txt
