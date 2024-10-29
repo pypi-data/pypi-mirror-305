@@ -1,0 +1,83 @@
+Metadata-Version: 2.3
+Name: handles
+Version: 0.1.1
+Summary: Command-line tool to check the availability of a username on various platforms.
+Project-URL: Homepage, https://github.com/4mbl/handles
+Project-URL: Bug Tracker, https://github.com/4mbl/handles/issues
+Project-URL: Documentation, https://github.com/4mbl/handles/blob/main/README.md
+Project-URL: Repository, https://github.com/4mbl/handles
+Author: 4MBL
+License: MIT License
+        
+        Copyright (c) 2024 4MBL
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: CLI,handle,social media,username
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Requires-Dist: requests<2.33.0,>=2.32.0
+Description-Content-Type: text/markdown
+
+# [handles](https://4mbl.link/gh/handles)
+
+> Command-line tool to check the availability of a username on various platforms.
+
+## Table of Contents
+
+* [Table of Contents](#table-of-contents)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+
+### Installation
+
+Use pip to install `handles`.
+
+```bash
+python3 -m pip install --upgrade handles
+```
+
+## Usage
+
+```python
+# check if a username is available on any of the supported platforms
+handles --platforms '*' myusername
+
+# check if usernames on a file are available on github
+handles --platforms github --file usernames.txt
+```
+
+## License
+
+Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
