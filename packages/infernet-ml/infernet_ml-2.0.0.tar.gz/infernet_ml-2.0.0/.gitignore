@@ -1,0 +1,7 @@
+# model files
+**/*.torch
+**/iris.onnx
+
+docs/reference
+
+mkdocs.yml
