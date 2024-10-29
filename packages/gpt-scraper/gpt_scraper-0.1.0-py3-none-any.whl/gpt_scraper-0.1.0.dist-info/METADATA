@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: gpt-scraper
+Version: 0.1.0
+Summary: GPT-Scraper is an autonomous, LLM-based agent that generates code to extract structured information from web pages.
+Home-page: https://github.com/bes-dev/gpt-scraper.git
+Author: Sergei Belousov aka BeS
+Author-email: sergei.o.belousov@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: openai
+Requires-Dist: pydantic
+Requires-Dist: selenium
+
+UNKNOWN
+

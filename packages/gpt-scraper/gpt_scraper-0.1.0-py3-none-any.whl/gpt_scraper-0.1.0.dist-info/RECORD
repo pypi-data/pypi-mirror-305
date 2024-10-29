@@ -1,0 +1,12 @@
+gpt_scraper/__init__.py,sha256=AaFp_JG0yuadTxdTbet41fOG5c_FmI6H0uSZxtkBCFg,36
+gpt_scraper/cli.py,sha256=_dI4dhdejeNK0a8klUrAGlBVcDNoQ27DqfPxavctOis,3945
+gpt_scraper/gpt_scraper.py,sha256=SMTj3aFDRkr56bSA-ix4dh09JebgLTBqVI8jnlUdjPo,4578
+gpt_scraper/prompts.py,sha256=jygbq2gf2Iieyjp793vbGVnoG3LO3tnF1bRr-cQRmbs,1249
+gpt_scraper/selenium_utils.py,sha256=npjEUaSzvxxqnkDz0Jf-fny6Qpuh6k1HVbqbu3gw5FE,5228
+gpt_scraper/utils.py,sha256=BKiKX3HjYL8RAkXOi1pDQMml48WURJlpFzBFCje5Z7o,3103
+gpt_scraper-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gpt_scraper-0.1.0.dist-info/METADATA,sha256=tN1tRquBhttiBT7fhsNuQVSDSh30PlDTQT7wAuAvJRg,626
+gpt_scraper-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gpt_scraper-0.1.0.dist-info/entry_points.txt,sha256=Se84gYoh2ODqgXufyAzb6yPhww44OhvlKbcmSFm8Kic,54
+gpt_scraper-0.1.0.dist-info/top_level.txt,sha256=9ZlLe476x2RmiWq053-HgTmT74zJQFGBOBJUEE4OYbc,12
+gpt_scraper-0.1.0.dist-info/RECORD,,
