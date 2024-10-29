@@ -1,0 +1,7 @@
+setup.py
+shooter_module/__init__.py
+shooter_module/shooter_module.py
+shooter_module.egg-info/PKG-INFO
+shooter_module.egg-info/SOURCES.txt
+shooter_module.egg-info/dependency_links.txt
+shooter_module.egg-info/top_level.txt
