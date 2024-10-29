@@ -1,0 +1,2 @@
+[console_scripts]
+glfy = glfy.cli:main
