@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: uniquebible-maps-5
+Version: 0.0.3
+Summary: Map images for UniqueBible App. Read more at https://github.com/eliranwong/UniqueBible
+Home-page: https://www.uniquebible.app/
+Author: Eliran Wong
+Author-email: support@marvel.bible
+License: GNU General Public License (GPL)
+Project-URL: Source, https://github.com/eliranwong/UniqueBible
+Project-URL: Tracker, https://github.com/eliranwong/UniqueBible/issues
+Project-URL: Documentation, https://github.com/eliranwong/UniqueBible/wiki
+Project-URL: Funding, https://www.paypal.me/MarvelBible
+Keywords: bible scripture na28 bsha hebrew greek ai marvelbible biblebento uba uniquebible
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Utilities
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8, <3.13
+License-File: LICENSE
+
+Map images for UniqueBible App. Read more at https://github.com/eliranwong/UniqueBible
+
