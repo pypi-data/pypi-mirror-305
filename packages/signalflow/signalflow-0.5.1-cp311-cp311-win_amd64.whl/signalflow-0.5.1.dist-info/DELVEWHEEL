@@ -1,0 +1,2 @@
+Version: 1.8.3
+Arguments: ['C:\\Users\\Test\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\delvewheel\\__main__.py', 'repair', '--add-path=dlls', 'signalflow-0.5.1-cp310-cp310-win_amd64.whl', 'signalflow-0.5.1-cp311-cp311-win_amd64.whl', 'signalflow-0.5.1-cp312-cp312-win_amd64.whl', 'signalflow-0.5.1-cp313-cp313-win_amd64.whl', 'signalflow-0.5.1-cp38-cp38-win_amd64.whl', 'signalflow-0.5.1-cp39-cp39-win_amd64.whl']
