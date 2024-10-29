@@ -1,0 +1,20 @@
+[project]
+name = "pyappstoreconnect"
+version = "1.0.7"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Grigory Efimov", email = "grigory.efimov@gmail.com"},
+]
+maintainers = [
+    {name = "Grigory Efimov", email = "grigory.efimov@gmail.com"},
+]
+
+dependencies = [
+    "python-sirp>=1.0.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/fb929/pyappstoreconnect"
+Documentation = "https://github.com/fb929/pyappstoreconnect"
+Repository = "https://github.com/fb929/pyappstoreconnect"
