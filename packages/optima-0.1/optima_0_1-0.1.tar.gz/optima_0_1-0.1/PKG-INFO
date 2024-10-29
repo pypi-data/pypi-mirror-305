@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: optima-0.1
+Version: 0.1
+Requires-Dist: click==8.1.7
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: Requests==2.32.3
+Requires-Dist: setuptools==74.1.2
