@@ -1,0 +1,2 @@
+[console_scripts]
+specio_py310 = specio_py310.cli:main
