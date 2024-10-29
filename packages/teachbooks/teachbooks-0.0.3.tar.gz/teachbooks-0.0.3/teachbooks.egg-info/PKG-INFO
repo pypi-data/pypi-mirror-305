@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: teachbooks
+Version: 0.0.3
+Summary: TU Delft CiTG Jupyter Book Software Stack
+Author-email: Caspar Jungbacker <c.a.a.jungbacker@tudelft.nl>
+Project-URL: Homepage, https://gitlab.tudelft.nl/interactivetextbooks-citg/extensions/teachbooks-package
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: jupyter-book~=1.0
+Requires-Dist: click
+Requires-Dist: psutil
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: pandas
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: flaky; extra == "testing"
+Provides-Extra: docs
+Requires-Dist: furo; extra == "docs"
+Requires-Dist: numpydoc; extra == "docs"
+Requires-Dist: sphinx-click; extra == "docs"
+
+# TeachBooks: Our Custom Python Package
+
+TeachBooks has created a Python package and released it on PyPI. It can easily be used like this:
+```
+pip install teachbooks
+```
+
+The source code is hosted in a repository on GitHub, [github.com/teachBooks/teachbooks](https://github.com/teachBooks/teachbooks), and is accompanied by a documentation website, [teachbooks.github.io/TeachBooks/](https://teachbooks.github.io/TeachBooks/).
+
+The features and documentation will increase with time; until then, note there are two important reasons to use the teachbooks package:
+1. Use the `REMOVE-FROM-RELEASE` feature to more easily maintain draft and released versions of your TeachBook. This removes any sections surrounded by REMOVE-FROM-RELEASE tags from _config.yml and _toc.yml
+2. Easily start and stop a local Python server to better test your book while writing (e.g., the interactive Python features require a local server to properly check certain TeachBooks features)
+
+For case 1, the `teachbooks` package is meant to be used instead of `jupyter book build book` to build your book (it executes `jupyter book build book` for you).
+
+Case 2 is meant to be used independently, for example, once you have successfully built a book, simply run `teachbooks serve` and open the resulting URL that is printed in the terminal. To stop the server use `teachbooks serve stop`; see {ref}`this page <setup-local-server>` for additional explanation for how to use this feature and why it is needed.
+
