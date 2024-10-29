@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+parquet_viewer.egg-info/PKG-INFO
+parquet_viewer.egg-info/SOURCES.txt
+parquet_viewer.egg-info/dependency_links.txt
+parquet_viewer.egg-info/entry_points.txt
+parquet_viewer.egg-info/requires.txt
+parquet_viewer.egg-info/top_level.txt
