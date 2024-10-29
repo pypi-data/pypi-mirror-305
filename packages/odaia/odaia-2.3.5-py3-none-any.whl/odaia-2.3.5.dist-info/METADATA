@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: odaia
+Version: 2.3.5
+Summary: Orpheus Desktop AI Assistant powered by GPT-4, GPT-4o, GPT-4V, GPT-3.5, DALL-E 3, Llama 3, Mistral, Gemini, Claude, Langchain LLMs, Llama-index, Whisper with chatbot, assistant, text completion, vision and image generation, internet access, chat with files, commands and code execution, file upload and download, and more.
+Home-page: https://github.com/jgwill/odaia
+License: MIT
+Keywords: py_gpt,py-gpt,pygpt,desktop,app,gpt,gpt4,gpt4-o,gpt4-v,gpt3.5,gpt-4,gpt-4V,gpt-3.5,llama3,mistral,gemini,claude,tts,whisper,vision,chatgpt,dall-e,chat,chatbot,assistant,text completion,image generation,ai,api,openai,api key,langchain,llama-index,presets,ui,qt,pyside
+Author: Jean Guillaume Isabelle
+Author-email: info@jgwill.com
+Requires-Python: >=3.10,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Utilities
+Requires-Dist: EbookLib (>=0.18,<0.19)
+Requires-Dist: Markdown (>=3.7,<4.0)
+Requires-Dist: PyAudio (>=0.2.14,<0.3.0)
+Requires-Dist: PySide6 (==6.4.2)
+Requires-Dist: PySide6-Addons (==6.4.2)
+Requires-Dist: PySide6-Essentials (==6.4.2)
+Requires-Dist: Pygments (>=2.18.0,<3.0.0)
+Requires-Dist: SQLAlchemy (>=2.0.27,<3.0.0)
+Requires-Dist: SpeechRecognition (>=3.10.1,<4.0.0)
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: chromadb (>=0.4.23,<0.5.0)
+Requires-Dist: croniter (>=2.0.1,<3.0.0)
+Requires-Dist: docker (>=7.0.0,<8.0.0)
+Requires-Dist: docx2txt (>=0.8,<0.9)
+Requires-Dist: langchain (>=0.2.14,<0.3.0)
+Requires-Dist: langchain-community (>=0.2.12,<0.3.0)
+Requires-Dist: langchain-experimental (>=0.0.64,<0.0.65)
+Requires-Dist: langchain-openai (>=0.1.22,<0.2.0)
+Requires-Dist: llama-index (>=0.10.65,<0.11.0)
+Requires-Dist: llama-index-core (==0.10.67)
+Requires-Dist: llama-index-embeddings-azure-openai (>=0.1.6,<0.2.0)
+Requires-Dist: llama-index-embeddings-ollama (>=0.2.0,<0.3.0)
+Requires-Dist: llama-index-embeddings-openai (>=0.1.6,<0.2.0)
+Requires-Dist: llama-index-llms-anthropic (>=0.1.17,<0.2.0)
+Requires-Dist: llama-index-llms-azure-openai (>=0.1.10,<0.2.0)
+Requires-Dist: llama-index-llms-gemini (>=0.2.0,<0.3.0)
+Requires-Dist: llama-index-llms-ollama (>=0.2.2,<0.3.0)
+Requires-Dist: llama-index-llms-openai (==0.1.29)
+Requires-Dist: llama-index-readers-chatgpt-plugin (>=0.1.3,<0.2.0)
+Requires-Dist: llama-index-readers-database (>=0.1.4,<0.2.0)
+Requires-Dist: llama-index-readers-file (>=0.1.33,<0.2.0)
+Requires-Dist: llama-index-readers-github (>=0.1.9,<0.2.0)
+Requires-Dist: llama-index-readers-google (>=0.2.11,<0.3.0)
+Requires-Dist: llama-index-readers-microsoft-onedrive (>=0.1.9,<0.2.0)
+Requires-Dist: llama-index-readers-twitter (>=0.1.3,<0.2.0)
+Requires-Dist: llama-index-readers-web (>=0.1.23,<0.2.0)
+Requires-Dist: llama-index-vector-stores-chroma (>=0.1.4,<0.2.0)
+Requires-Dist: llama-index-vector-stores-elasticsearch (>=0.1.4,<0.2.0)
+Requires-Dist: llama-index-vector-stores-pinecone (>=0.1.3,<0.2.0)
+Requires-Dist: llama-index-vector-stores-redis (>=0.1.2,<0.2.0)
+Requires-Dist: nbconvert (>=7.16.1,<8.0.0)
+Requires-Dist: openai (>=1.41.0,<1.50.0)
+Requires-Dist: opencv-python (>=4.9.0.80,<5.0.0.0)
+Requires-Dist: packaging (>=23.2,<24.0)
+Requires-Dist: pandas (>=2.2.0,<3.0.0)
+Requires-Dist: pillow (>=10.2.0,<11.0.0)
+Requires-Dist: pinecone-client (>=3.1.0,<4.0.0)
+Requires-Dist: pydub (>=0.25.1,<0.26.0)
+Requires-Dist: pygame (>=2.5.2,<3.0.0)
+Requires-Dist: pypdf (>=4.0.2,<5.0.0)
+Requires-Dist: pyserial (>=3.5,<4.0)
+Requires-Dist: qt-material (>=2.14,<3.0)
+Requires-Dist: redis (>=5.0.1,<6.0.0)
+Requires-Dist: show-in-file-manager (>=1.1.4,<2.0.0)
+Requires-Dist: tiktoken (>=0.7.0,<0.8.0)
+Requires-Dist: wikipedia (>=1.4.0,<2.0.0)
+Requires-Dist: youtube-transcript-api (>=0.6.2,<0.7.0)
+Project-URL: Documentation, https://pygpt.readthedocs.io/
+Project-URL: Repository, https://github.com/jgwill/odaia
+Description-Content-Type: text/markdown
+
+# oDAIa - Desktop AI Assistant
+
+
+
+## Overview
+
+
+**oDAIa** is a Desktop AI Assistant that interacts with OpenAI language models, including `GPT-4`, `GPT-4 Vision`, and `GPT-3.5`, through the `OpenAI API`. It supports alternative LLMs via `Langchain` and `Llama-index`, such as models on `HuggingFace`, `Llama 3`, `Mistral`, `Google Gemini`, and `Anthropic Claude`.
+
+The assistant offers modes like chat, completions, and image tasks using `DALL-E 3` and `GPT-4 Vision`. It has filesystem capabilities, can generate and run Python code, execute system commands, and manage file transfers. It also supports web searches.
+
+For audio interactions, **oDAIa** includes speech synthesis using `Microsoft Azure`, `Google`, `Eleven Labs`, and `OpenAI` Text-To-Speech services.
+
+JGWill Orpheus Desktop AI Assistant Aim to include Creative Orientation in Prompt Engineering and more
+
+## Installation
+
+```sh
+pip install -U odaia
+```
+
+## Usage
+
+```sh
+odaia
+```
+
+## Features
+
+JGWill Creative Practicionners features
+
+### TODO
+
+* Learn about engineering prompting of autonomous mode (normal and extended 241028)
+

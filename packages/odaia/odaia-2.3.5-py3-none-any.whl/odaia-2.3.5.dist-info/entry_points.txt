@@ -1,0 +1,3 @@
+[console_scripts]
+odaiaapp=pygpt_net.app:run
+
