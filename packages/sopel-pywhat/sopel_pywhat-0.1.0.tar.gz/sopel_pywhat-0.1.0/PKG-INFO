@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: sopel-pywhat
+Version: 0.1.0
+Summary: A Sopel plugin for quickly checking text in pyWhat.
+Author-email: dgw <dgw@technobabbl.es>
+License: EFL-2.0
+Project-URL: Homepage, https://github.com/dgw/sopel-pywhat
+Project-URL: Bug Tracker, https://github.com/dgw/sopel-pywhat/issues
+Keywords: sopel,plugin,bot,irc
+Platform: Linux x86, x86-64
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: Eiffel Forum License (EFL)
+Classifier: License :: OSI Approved :: Eiffel Forum License
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Requires-Python: <4,>=3.8
+Description-Content-Type: text/markdown
+License-File: COPYING
+Requires-Dist: sopel>=8.0
+Requires-Dist: pywhat~=5.1
+
+# sopel-pywhat
+
+A Sopel plugin for quickly checking text in pyWhat.
+
+## Installing
+
+Releases are hosted on PyPI, so after installing Sopel, all you need is `pip`:
+
+```shell
+$ pip install sopel-pywhat
+```
+
+`pywhat` needs to be on Sopel's `$PATH` for this plugin to work. Generally this
+is automatic (e.g. if you run Sopel in a venv, or a well-configured shell) but
+you should double check the environment if there are errors.
+
+## Using
+
+Use the `.pywhat` command (replace `.` with your bot's prefix, if needed) to
+invoke `pywhat`:
+
+```
+<dgw> .pywhat AIzajofahiuoifohiawhoiuehfaafjoiawerasdf
+<Sopel> Matched on: AIzajofahiuoifohiawhoiuehfaafjoiawerasd | Name: Google API
+        Key
+<Sopel> Matched on: AIzajofahiuoifohiawhoiuehfaafjoiawerasdf | Name: Amazon Web
+        Services Secret Access Key
+```
+
+_(The example above is a keyboard-mash. If it happens to match any real API
+keys—those are incredible odds!)_
+
+## Changelog
+
+### 0.1.0
+
+First release of `sopel-pywhat`.

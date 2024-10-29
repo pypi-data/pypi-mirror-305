@@ -1,0 +1,13 @@
+COPYING
+MANIFEST.in
+NEWS
+README.md
+pyproject.toml
+sopel_pywhat/__init__.py
+sopel_pywhat/plugin.py
+sopel_pywhat.egg-info/PKG-INFO
+sopel_pywhat.egg-info/SOURCES.txt
+sopel_pywhat.egg-info/dependency_links.txt
+sopel_pywhat.egg-info/entry_points.txt
+sopel_pywhat.egg-info/requires.txt
+sopel_pywhat.egg-info/top_level.txt
