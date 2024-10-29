@@ -1,0 +1,10 @@
+atlas_hgdatasets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atlas_hgdatasets/atlas_hgdatasets.py,sha256=K0mcWZ2BjJxG3Eg4xgCByS_DT9lBR6mk447TytHeZOA,3736
+cores/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cores/core_functions.py,sha256=nkqd_MSAIphmEAYn5mO_gY3bA8kTmAupo0KgxTJCVXI,7688
+atlas_hfdatasets-1.1.0.dist-info/LICENSE,sha256=z4bqA3qF3YCzji54DD2PROLg4MJnLuDRbHp7bu4OvsI,1089
+atlas_hfdatasets-1.1.0.dist-info/METADATA,sha256=EhFfD9Y8eBplHjarzvl8Rgzl8voWIWe31txrI8xy7AA,2052
+atlas_hfdatasets-1.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+atlas_hfdatasets-1.1.0.dist-info/entry_points.txt,sha256=IDO7gEh3D33wqYdYGMCi1zp3aIsLvbL8-0PIQoZVb3k,76
+atlas_hfdatasets-1.1.0.dist-info/top_level.txt,sha256=qW2bUKnznX_m2k1h1w9wlP-YEkwnG1omiPCHu-zBgMI,23
+atlas_hfdatasets-1.1.0.dist-info/RECORD,,
