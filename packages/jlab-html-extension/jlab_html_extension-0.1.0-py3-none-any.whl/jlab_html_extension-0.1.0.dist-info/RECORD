@@ -1,0 +1,16 @@
+jlab_html_extension/__init__.py,sha256=YQPZtn3K-3xVgMfamCbpuLE6dDsS0TMVTF00Cc6MHTg,596
+jlab_html_extension/_version.py,sha256=ac3tgjoOzsODOlacRPCwz99LbZv0NK7ZYAaBWulFo7E,171
+jlab_html_extension-0.1.0.data/data/share/jupyter/labextensions/jlab_html_extension/build_log.json,sha256=mQf8ExB1QEgbIMQrtJiDfahfvLO9MprNYdS2xdZD-a0,22497
+jlab_html_extension-0.1.0.data/data/share/jupyter/labextensions/jlab_html_extension/package.json,sha256=UkQ-khuu_8DQx6-LAcFIeHaQ5NKU7yU_eeKorbHxSo0,5548
+jlab_html_extension-0.1.0.data/data/share/jupyter/labextensions/jlab_html_extension/static/lib_index_js.9901b9bcea409f79b3e6.js,sha256=wh7Wz6NOlDwuz10QndNTbRamLyNq9yffSDeGQfoIeTM,4330
+jlab_html_extension-0.1.0.data/data/share/jupyter/labextensions/jlab_html_extension/static/lib_index_js.9901b9bcea409f79b3e6.js.map,sha256=ff8JexoxzXduJBiEKRwjPcOEKZDZesFYdjzjNuXV5Ro,4565
+jlab_html_extension-0.1.0.data/data/share/jupyter/labextensions/jlab_html_extension/static/remoteEntry.3772c0320be21248cfc4.js,sha256=ZBeP1wR_VTOn-0VldX7VDUiAQUBYgNtsFVP8Ax2lF5U,27818
+jlab_html_extension-0.1.0.data/data/share/jupyter/labextensions/jlab_html_extension/static/remoteEntry.3772c0320be21248cfc4.js.map,sha256=oOSPHCDCH7JVyH3QMWKT8ttpFf-rvnPMUMdx0s2QnIo,26669
+jlab_html_extension-0.1.0.data/data/share/jupyter/labextensions/jlab_html_extension/static/style.js,sha256=GX-4jxpvmJAD1AzR7vdjAoH9Jbd-wKJX6j5HKC2qykA,162
+jlab_html_extension-0.1.0.data/data/share/jupyter/labextensions/jlab_html_extension/static/style_index_js.7fcb970f16636f3a44be.js,sha256=CuMf884YVjD4Kfmh3CkKX8rw92maTkA8zu7qJN73zgw,19355
+jlab_html_extension-0.1.0.data/data/share/jupyter/labextensions/jlab_html_extension/static/style_index_js.7fcb970f16636f3a44be.js.map,sha256=DpDrxci_dTc0mtIONLzLGL0Wv_t1kYFqBrq2J9x3Jx8,14780
+jlab_html_extension-0.1.0.data/data/share/jupyter/labextensions/jlab_html_extension/install.json,sha256=vgm3WdpYv4OQRrAoSdeBKja4Oa0ECQdj9o-SX0JlzfY,199
+jlab_html_extension-0.1.0.dist-info/METADATA,sha256=oa613lL_t-zZ2v1Y2u0avw60eSEALFB4__2W-8WxArk,5284
+jlab_html_extension-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+jlab_html_extension-0.1.0.dist-info/licenses/LICENSE,sha256=ARdM6EXr53lnJa0fZgvVHGm2yEyL5E9VwWNlEBYOuqQ,1518
+jlab_html_extension-0.1.0.dist-info/RECORD,,
