@@ -1,0 +1,2 @@
+[console_scripts]
+ts-pip-scan = ts_pip_scan.commands:cli
