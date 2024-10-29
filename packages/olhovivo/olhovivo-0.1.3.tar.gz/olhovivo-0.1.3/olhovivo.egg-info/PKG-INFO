@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: olhovivo
+Version: 0.1.3
+Summary: API para o OlhoVivo da SPTrans
+Author: Erick Ghuron
+Author-email: ghuron@usp.br
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Requires-Dist: requests
