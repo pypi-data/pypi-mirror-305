@@ -1,0 +1,126 @@
+Metadata-Version: 2.1
+Name: flask-request-id-header-middleware
+Version: 0.0.2
+Summary: Python Flask Middleware to log and set Request ID in the HTTP header
+Home-page: UNKNOWN
+Author: Shatrugna Rao Korukanti
+Author-email: shatrugna_korukanti@tecnics.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Flask RequestID Middleware
+A Flask middleware to log and set Request ID in the HTTP header.
+
+### Overview
+This project provides a Flask middleware that ensures a unique Request ID is generated and logged for each incoming request. The Request ID is also included in the response back to the client.
+
+#### Features
+Generates a unique Request ID for each incoming request
+Logs the Request ID using a log filter
+Includes the Request ID in the response back to the client
+Installation
+To install the middleware, run the following command:
+
+```bash
+pip install flask-request-id-header-middleware
+```
+
+#### Usage
+To use the middleware in your Flask application, simply import and initialize it:
+
+```python
+from flask import Flask
+from flask_request_id_header_middleware import RequestID
+
+app = Flask(__name__)
+RequestID(app)
+```
+
+#### Configuration
+
+The middleware can be configured using the following settings:
+
+- `REQUEST_ID_UNIQUE_VALUE_PREFIX`: a prefix that indicates a request ID should be considered unique
+
+```python
+app.config['REQUEST_ID_UNIQUE_VALUE_PREFIX'] = 'MY-APP-'
+```
+In this example, any request ID that starts with MY-APP- will be considered unique, and will not be modified by the middleware.
+
+For instance, if the client sends a request with the header X-Request-ID: MY-APP-12345, the middleware will not append a new request ID, and will instead return the original value.
+ <!-- generate a example for the request_id_unique_value_prefix -->
+
+#### Logging
+
+The middleware uses a log filter to inject the current request ID into log records. To use the log filter, add it to your logging configuration:
+
+```python
+from flask_request_id_header_middleware.log_filter import RequestIDLogFilter
+
+logging.basicConfig()
+logger = logging.getLogger()
+logger.addFilter(RequestIDLogFilter())
+```
+
+
+#### Example
+Here is an example of how to use the middleware in a Flask application:
+
+```python
+from flask import Flask
+from flask_request_id_header_middleware import RequestID
+
+app = Flask(__name__)
+RequestID(app)
+
+@app.route("/")
+def index():
+    return "Hello, World!"
+
+if __name__ == "__main__":
+    app.run()
+```
+
+In this example, the middleware will generate a unique Request ID for each incoming request and log it using the log filter. The Request ID will also be included in the response back to the client.
+
+<!-- ## Requests Patch
+
+When making outgoing requests using the patched requests library, the current request ID is automatically included in the X-Request-ID header. This allows you to propagate the request ID to downstream services and track the request flow.
+
+##### No Additional Code Required
+
+Since the requests library is patched, you don't need to manually add the X-Request-ID header to the outgoing request. The patched library will automatically include the current request ID in the header.
+
+Example Code
+
+Here's an example of how to use the patched requests library:
+
+```python
+import requests
+
+@app.route("/")
+def index():
+    response = requests.get("https://example.com")
+    return response.text
+```
+
+In this example, the patched requests library will automatically include the current request ID in the X-Request-ID header of the outgoing request.
+
+`Note: The patched requests library only works within the context of a Flask application that has the RequestID middleware installed. If you're using the requests library outside of a Flask application, you'll need to manually add the X-Request-ID header to the outgoing request.` -->
+
+### Tests
+
+To run the tests, run the following command:
+
+```bash
+flask --app manage.py test
+```
+
