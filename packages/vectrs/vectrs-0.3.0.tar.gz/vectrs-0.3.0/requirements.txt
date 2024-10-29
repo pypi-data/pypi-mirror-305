@@ -1,0 +1,35 @@
+# Core dependencies - Used in main.py and vector operations
+numpy==1.21.5
+faiss-cpu==1.7.2
+
+
+# Networking and P2P - Used for KademliaNode and networking
+kademlia==2.2.2
+aiohttp==3.8.5
+
+
+# Vector Database and Indexing - Used for vector operations
+hnswlib==0.7.0
+scipy==1.9.3
+
+# AI and Machine Learning - Used for Swarm and RAG features
+anthropic==0.2.8
+transformers==4.30.2
+sentence-transformers==2.2.2
+
+# Utilities and Tools - Used for logging and data handling
+python-dotenv==1.0.0
+loguru==0.7.0
+
+# Testing and Development - Essential for project development
+pytest==7.4.0
+pytest-asyncio==0.21.1
+
+# Additional packages found in main.py
+pydantic>=1.10.0  # For data validation in message_broker
+websockets>=10.0  # For MessageBroker class
+networkx>=2.8.0   # For graph operations in GraphineIndex
+
+# Database related
+langchain>=0.0.200  # For RAG workflow
+
