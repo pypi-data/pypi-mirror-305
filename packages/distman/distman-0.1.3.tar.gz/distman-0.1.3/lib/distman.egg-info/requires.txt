@@ -1,0 +1,2 @@
+envstack>=0.5.0
+GitPython==3.1.43
