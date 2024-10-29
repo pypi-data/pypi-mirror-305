@@ -1,0 +1,9 @@
+pytest
+pytest-asyncio
+flask
+urllib3
+requests
+aiohttp
+python-socketio[client]
+psutil
+cloudpickle
