@@ -1,0 +1,7 @@
+
+[dev]
+pytest>=8.3.3
+invoke>=2.2.0
+
+[dynamic]
+optional-dependencies
