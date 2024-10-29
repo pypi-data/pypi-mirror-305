@@ -1,0 +1,3 @@
+[console_scripts]
+rubble=django_rubble.cli:app
+
