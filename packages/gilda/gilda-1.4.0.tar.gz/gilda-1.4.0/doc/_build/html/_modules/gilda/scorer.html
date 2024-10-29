@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gilda.scorer &mdash; gilda 1.2.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../../_static/documentation_options.js?v=ca842793"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            gilda
+          </a>
+              <div class="version">
+                1.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/index.html">Gilda modules reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">gilda</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">gilda.scorer</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for gilda.scorer</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">.process</span> <span class="kn">import</span> <span class="n">replace_dashes</span><span class="p">,</span> <span class="n">replace_whitespace</span><span class="p">,</span> <span class="n">normalize</span><span class="p">,</span> \
+    <span class="n">get_capitalization_pattern</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Match&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;generate_match&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;score_string_match&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;score_status&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;score&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<div class="viewcode-block" id="Match">
+<a class="viewcode-back" href="../../modules/index.html#gilda.scorer.Match">[docs]</a>
+<span class="k">class</span> <span class="nc">Match</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class representing a match between a query and a reference string&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">ref</span><span class="p">,</span> <span class="n">exact</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">space_mismatch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dash_mismatches</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cap_combos</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ref</span> <span class="o">=</span> <span class="n">ref</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exact</span> <span class="o">=</span> <span class="n">exact</span> <span class="k">if</span> <span class="n">exact</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">space_mismatch</span> <span class="o">=</span> <span class="n">space_mismatch</span> <span class="k">if</span> <span class="n">space_mismatch</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> \
+            <span class="k">else</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dash_mismatches</span> <span class="o">=</span> <span class="n">dash_mismatches</span> <span class="k">if</span> <span class="n">dash_mismatches</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> \
+            <span class="k">else</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cap_combos</span> <span class="o">=</span> <span class="n">cap_combos</span> <span class="k">if</span> <span class="n">cap_combos</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Match(</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()]))</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">,</span>
+            <span class="s1">&#39;ref&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="p">,</span>
+            <span class="s1">&#39;exact&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">exact</span><span class="p">,</span>
+            <span class="s1">&#39;space_mismatch&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">space_mismatch</span><span class="p">,</span>
+            <span class="s1">&#39;dash_mismatches&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dash_mismatches</span><span class="p">),</span>
+            <span class="s1">&#39;cap_combos&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">cap_combos</span>
+        <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">_query_cases</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cap_combos</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">_ref_cases</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cap_combos</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">score_short_abbr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">3</span> <span class="ow">and</span> \
+                <span class="p">((</span><span class="s1">&#39;all_caps&#39;</span><span class="p">,</span> <span class="s1">&#39;all_lower&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cap_combos</span> <span class="ow">or</span>
+                 <span class="p">(</span><span class="s1">&#39;all_lower&#39;</span><span class="p">,</span> <span class="s1">&#39;all_caps&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cap_combos</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">score_mixed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;mixed&#39;</span><span class="p">,</span> <span class="s1">&#39;mixed&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cap_combos</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="s1">&#39;mixed&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_query_cases</span><span class="p">())</span> <span class="ow">or</span> \
+                <span class="p">(</span><span class="s1">&#39;mixed&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ref_cases</span><span class="p">()):</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">2</span>
+
+    <span class="k">def</span> <span class="nf">score_exact</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">exact</span> <span class="ow">is</span> <span class="kc">True</span> <span class="k">else</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">score_acic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">exact</span> <span class="ow">is</span> <span class="kc">True</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cap_combos</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">2</span>
+        <span class="k">elif</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cap_combos</span><span class="p">)</span> <span class="o">==</span> <span class="p">{(</span><span class="s1">&#39;sentence_initial&#39;</span><span class="p">,</span> <span class="s1">&#39;all_lower&#39;</span><span class="p">)}:</span>
+            <span class="k">return</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">exact</span> <span class="ow">is</span> <span class="kc">True</span> <span class="ow">and</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cap_combos</span><span class="p">)</span> <span class="o">&lt;=</span> \
+                <span class="p">{(</span><span class="s1">&#39;all_caps&#39;</span><span class="p">,</span> <span class="s1">&#39;sentence_initial_cap&#39;</span><span class="p">),</span>
+                 <span class="p">(</span><span class="s1">&#39;sentence_initial_cap&#39;</span><span class="p">,</span> <span class="s1">&#39;all_caps&#39;</span><span class="p">)}:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">score_combo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">qc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_query_cases</span><span class="p">()</span>
+        <span class="n">rc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ref_cases</span><span class="p">()</span>
+        <span class="n">query_combo</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">qc</span><span class="p">)</span>
+        <span class="n">ref_combo</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">rc</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;single_cap_letter&#39;</span> <span class="ow">in</span> <span class="n">qc</span> <span class="ow">and</span> \
+                <span class="p">(</span><span class="s1">&#39;all_caps&#39;</span> <span class="ow">in</span> <span class="n">qc</span> <span class="ow">or</span> <span class="s1">&#39;initial_cap&#39;</span> <span class="ow">in</span> <span class="n">qc</span><span class="p">):</span>
+            <span class="n">query_combo</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="s1">&#39;single_cap_letter&#39;</span> <span class="ow">in</span> <span class="n">rc</span> <span class="ow">and</span> \
+                <span class="p">(</span><span class="s1">&#39;all_caps&#39;</span> <span class="ow">in</span> <span class="n">rc</span> <span class="ow">or</span> <span class="s1">&#39;initial_cap&#39;</span> <span class="ow">in</span> <span class="n">rc</span><span class="p">):</span>
+            <span class="n">ref_combo</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="s1">&#39;sentence_initial_cap&#39;</span> <span class="ow">in</span> <span class="n">qc</span> <span class="ow">and</span> \
+                <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">qc</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span>
+                 <span class="p">(</span><span class="s1">&#39;sentence_initial_cap&#39;</span><span class="p">,</span> <span class="s1">&#39;all_lower&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cap_combos</span><span class="p">)</span> \
+                <span class="ow">or</span> \
+                 <span class="p">{</span><span class="s1">&#39;single_cap_letter&#39;</span><span class="p">,</span> <span class="s1">&#39;initial_cap&#39;</span><span class="p">,</span> <span class="s1">&#39;all_lower&#39;</span><span class="p">}</span> <span class="o">&amp;</span> <span class="n">qc</span><span class="p">:</span>
+            <span class="n">query_combo</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">combo</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">query_combo</span><span class="p">,</span> <span class="n">ref_combo</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">combo</span>
+
+    <span class="k">def</span> <span class="nf">score_dash</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dash_mismatches</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="generate_match">
+<a class="viewcode-back" href="../../modules/index.html#gilda.scorer.generate_match">[docs]</a>
+<span class="k">def</span> <span class="nf">generate_match</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">ref</span><span class="p">,</span> <span class="n">beginning_of_sentence</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a match data structure based on comparing a query to a ref str.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    query : str</span>
+<span class="sd">        The string to be compared against a reference string.</span>
+<span class="sd">    ref : str</span>
+<span class="sd">        The reference string against which the incoming query string is</span>
+<span class="sd">        compared.</span>
+<span class="sd">    beginning_of_sentence : bool</span>
+<span class="sd">        True if the query_str appears at the beginning of a sentence, relevant</span>
+<span class="sd">        for how capitalization is evaluated.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Match</span>
+<span class="sd">        A Match object characterizing the match between the two strings.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Pre-process both strings first by replacing multiple white spaces</span>
+    <span class="c1"># with a single ASCII space, and all kinds of dashes with a single</span>
+    <span class="c1"># ASCII dash.</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">replace_dashes</span><span class="p">(</span><span class="n">replace_whitespace</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+    <span class="n">ref</span> <span class="o">=</span> <span class="n">replace_dashes</span><span class="p">(</span><span class="n">replace_whitespace</span><span class="p">(</span><span class="n">ref</span><span class="p">))</span>
+
+    <span class="c1"># If we have an exact match at this point then we can return immediately</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">beginning_of_sentence</span> <span class="ow">and</span> <span class="n">query</span> <span class="o">==</span> <span class="n">ref</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Match</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">ref</span><span class="p">,</span> <span class="n">exact</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">query_suffix</span> <span class="o">=</span> <span class="n">query</span>
+    <span class="n">ref_suffix</span> <span class="o">=</span> <span class="n">ref</span>
+    <span class="n">query_pieces</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">]</span>
+    <span class="n">ref_pieces</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">]</span>
+    <span class="n">dash_mismatches</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">query_suffix</span> <span class="ow">and</span> <span class="n">ref_suffix</span><span class="p">:</span>
+        <span class="c1"># Deal with spaces first</span>
+        <span class="n">qs</span> <span class="o">=</span> <span class="p">(</span><span class="n">query_suffix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="n">rs</span> <span class="o">=</span> <span class="p">(</span><span class="n">ref_suffix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="c1"># If both have spaces, we start new pieces and skip the spaces</span>
+        <span class="k">if</span> <span class="n">qs</span> <span class="ow">and</span> <span class="n">rs</span><span class="p">:</span>
+            <span class="n">query_suffix</span> <span class="o">=</span> <span class="n">query_suffix</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">ref_suffix</span> <span class="o">=</span> <span class="n">ref_suffix</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">query_pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="n">ref_pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="c1"># This means that there is a space inconsistency which we don&#39;t allow</span>
+        <span class="c1"># and return immediately</span>
+        <span class="k">elif</span> <span class="n">qs</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">rs</span> <span class="ow">or</span> <span class="n">rs</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">qs</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Match</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">ref</span><span class="p">,</span> <span class="n">space_mismatch</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># We next deal with dashes</span>
+        <span class="n">qd</span> <span class="o">=</span> <span class="p">(</span><span class="n">query_suffix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+        <span class="n">rd</span> <span class="o">=</span> <span class="p">(</span><span class="n">ref_suffix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+        <span class="c1"># If both are dashes, we skip them</span>
+        <span class="k">if</span> <span class="n">qd</span> <span class="ow">and</span> <span class="n">rd</span><span class="p">:</span>
+            <span class="n">query_suffix</span> <span class="o">=</span> <span class="n">query_suffix</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">ref_suffix</span> <span class="o">=</span> <span class="n">ref_suffix</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">query_pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="n">ref_pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="c1"># If there is a mismatch, we introduce new pieces but only skip the one</span>
+        <span class="c1"># dash and record the inconsistency</span>
+        <span class="k">elif</span> <span class="n">qd</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">rd</span><span class="p">:</span>
+            <span class="n">dash_mismatches</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;query&#39;</span><span class="p">)</span>
+            <span class="n">query_suffix</span> <span class="o">=</span> <span class="n">query_suffix</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">query_pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="n">ref_pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">qd</span> <span class="ow">and</span> <span class="n">rd</span><span class="p">:</span>
+            <span class="n">dash_mismatches</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;ref&#39;</span><span class="p">)</span>
+            <span class="n">ref_suffix</span> <span class="o">=</span> <span class="n">ref_suffix</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">query_pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="n">ref_pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="c1"># Otherwise both strings start with a non space/dash character that we</span>
+        <span class="c1"># add to the latest piece</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">query_pieces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">query_suffix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">ref_pieces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">ref_suffix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">ref_suffix</span> <span class="o">=</span> <span class="n">ref_suffix</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">query_suffix</span> <span class="o">=</span> <span class="n">query_suffix</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+    <span class="c1"># Now that we have the final pieces in place, we can count the matches and</span>
+    <span class="c1"># capitalization relationships</span>
+    <span class="n">combinations</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">first</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">exact</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">qp</span><span class="p">,</span> <span class="n">rp</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">query_pieces</span><span class="p">,</span> <span class="n">ref_pieces</span><span class="p">):</span>
+        <span class="n">first_bos</span> <span class="o">=</span> <span class="n">first</span> <span class="ow">and</span> <span class="n">beginning_of_sentence</span>
+        <span class="n">first</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">qp</span> <span class="o">==</span> <span class="n">rp</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">first_bos</span><span class="p">:</span>
+            <span class="n">exact</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">qcp</span> <span class="o">=</span> <span class="n">get_capitalization_pattern</span><span class="p">(</span><span class="n">qp</span><span class="p">,</span> <span class="n">first_bos</span><span class="p">)</span>
+            <span class="n">rcp</span> <span class="o">=</span> <span class="n">get_capitalization_pattern</span><span class="p">(</span><span class="n">rp</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">qcp</span> <span class="o">==</span> <span class="n">rcp</span> <span class="ow">and</span> <span class="n">qp</span> <span class="o">==</span> <span class="n">rp</span><span class="p">:</span>
+                <span class="n">exact</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">combinations</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">qcp</span><span class="p">,</span> <span class="n">rcp</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">Match</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">ref</span><span class="p">,</span> <span class="n">dash_mismatches</span><span class="o">=</span><span class="n">dash_mismatches</span><span class="p">,</span>
+                 <span class="n">exact</span><span class="o">=</span><span class="n">exact</span><span class="p">,</span> <span class="n">cap_combos</span><span class="o">=</span><span class="n">combinations</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="score_string_match">
+<a class="viewcode-back" href="../../modules/index.html#gilda.scorer.score_string_match">[docs]</a>
+<span class="k">def</span> <span class="nf">score_string_match</span><span class="p">(</span><span class="n">match</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a score between 0 and 1 for the goodness of a match.</span>
+
+<span class="sd">    This score is purely based on the relationship of the two strings and</span>
+<span class="sd">    does not take the status of the reference into account.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    match : gilda.scorer.Match</span>
+<span class="sd">        The Match object characterizing the relationship of the query and</span>
+<span class="sd">        reference strings.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        A match score between 0 and 1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">terms</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">score_short_abbr</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">score_mixed</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">score_exact</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">score_acic</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">score_combo</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">score_dash</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">norm</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">fun</span><span class="p">,</span> <span class="n">coeff</span> <span class="ow">in</span> <span class="n">terms</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="n">coeff</span> <span class="o">*</span> <span class="n">score</span> <span class="o">+</span> <span class="n">fun</span><span class="p">()</span>
+        <span class="n">norm</span> <span class="o">*=</span> <span class="n">coeff</span>
+    <span class="n">score</span> <span class="o">/=</span> <span class="p">(</span><span class="n">norm</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">score</span></div>
+
+
+
+<span class="k">def</span> <span class="nf">score_status</span><span class="p">(</span><span class="n">term</span><span class="p">):</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;curated&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s1">&#39;synonym&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;former_name&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">scores</span><span class="p">[</span><span class="n">term</span><span class="o">.</span><span class="n">status</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="n">match</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
+    <span class="n">string_match_score</span> <span class="o">=</span> <span class="n">score_string_match</span><span class="p">(</span><span class="n">match</span><span class="p">)</span>
+    <span class="n">status_score</span> <span class="o">=</span> <span class="n">score_status</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="p">((</span><span class="mi">0</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="n">status_score</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">string_match_score</span><span class="p">)</span> <span class="o">/</span> <span class="mi">9</span>
+    <span class="k">return</span> <span class="n">score</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, Benjamin M. Gyori.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

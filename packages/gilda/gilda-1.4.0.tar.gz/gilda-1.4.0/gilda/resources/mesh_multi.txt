@@ -1,0 +1,366 @@
+--------------
+Choose one if approproate:
+MESH	D000069261	Podosomes	GO	GO:0071437	invadopodium
+MESH	D000069261	Podosomes	GO	GO:0002102	podosome
+-----
+Choose one if approproate:
+MESH	D000077214	Becaplermin	HGNC	8800	PDGFB
+MESH	D000077214	Becaplermin	FPLX	PDGF_BB	PDGF_BB
+-----
+Choose one if approproate:
+MESH	D000108	Acetylcarnitine	CHEBI	CHEBI:57589	O-acetyl-L-carnitine
+MESH	D000108	Acetylcarnitine	CHEBI	CHEBI:73024	O-acetylcarnitine
+-----
+Choose one if approproate:
+MESH	D000118	Acetylglucosaminidase	HGNC	7056	OGA
+MESH	D000118	Acetylglucosaminidase	HGNC	2496	CTBS
+-----
+Choose one if approproate:
+MESH	D000214	Acyl Coenzyme A	CHEBI	CHEBI:17984	acyl-CoA
+MESH	D000214	Acyl Coenzyme A	CHEBI	CHEBI:37554	fatty acyl-CoA
+-----
+Choose one if approproate:
+MESH	D000305	Adrenal Cortex Hormones	CHEBI	CHEBI:36699	corticosteroid hormone
+MESH	D000305	Adrenal Cortex Hormones	CHEBI	CHEBI:50858	corticosteroid
+-----
+Choose one if approproate:
+MESH	D000324	Adrenocorticotropic Hormone	HGNC	9201	POMC
+MESH	D000324	Adrenocorticotropic Hormone	CHEBI	CHEBI:3892	corticotropin
+-----
+Choose one if approproate:
+MESH	D000475	Alkenes	CHEBI	CHEBI:32878	alkene
+MESH	D000475	Alkenes	CHEBI	CHEBI:33641	olefin
+-----
+Choose one if approproate:
+MESH	D000480	Alkynes	CHEBI	CHEBI:33644	acetylenes
+MESH	D000480	Alkynes	CHEBI	CHEBI:73474	acetylenic compound
+MESH	D000480	Alkynes	CHEBI	CHEBI:22339	alkyne
+-----
+Choose one if approproate:
+MESH	D000535	Aluminum	CHEBI	CHEBI:37968	aluminium-27 atom
+MESH	D000535	Aluminum	CHEBI	CHEBI:28984	aluminium atom
+-----
+Choose one if approproate:
+MESH	D000969	Antinematodal Agents	CHEBI	CHEBI:35444	antinematodal drug
+MESH	D000969	Antinematodal Agents	CHEBI	CHEBI:25491	nematicide
+-----
+Choose one if approproate:
+MESH	D000998	Antiviral Agents	CHEBI	CHEBI:36044	antiviral drug
+MESH	D000998	Antiviral Agents	CHEBI	CHEBI:22587	antiviral agent
+-----
+Choose one if approproate:
+MESH	D001578	Benzopyrans	CHEBI	CHEBI:22727	benzopyran
+MESH	D001578	Benzopyrans	CHEBI	CHEBI:23232	chromenes
+-----
+Choose one if approproate:
+MESH	D002086	Butylscopolammonium Bromide	CHEBI	CHEBI:145701	butylscopolamine
+MESH	D002086	Butylscopolammonium Bromide	CHEBI	CHEBI:32123	butylscopolamine bromide
+-----
+Choose one if approproate:
+MESH	D002316	Cardiotonic Agents	CHEBI	CHEBI:77307	cardioprotective agent
+MESH	D002316	Cardiotonic Agents	CHEBI	CHEBI:38147	cardiotonic drug
+-----
+Choose one if approproate:
+MESH	D002400	Cathartics	CHEBI	CHEBI:75325	cathartic
+MESH	D002400	Cathartics	CHEBI	CHEBI:50503	laxative
+-----
+Choose one if approproate:
+MESH	D002787	Sterol Esterase	HGNC	1848	CEL
+MESH	D002787	Sterol Esterase	HGNC	6621	LIPE
+-----
+Choose one if approproate:
+MESH	D003516	Cycloparaffins	CHEBI	CHEBI:33642	cyclic olefin
+MESH	D003516	Cycloparaffins	CHEBI	CHEBI:23453	cycloalkane
+-----
+Choose one if approproate:
+MESH	D003575	Cytochromes c1	HGNC	2579	CYC1
+MESH	D003575	Cytochromes c1	CHEBI	CHEBI:4067	cytochrome c1
+-----
+Choose one if approproate:
+MESH	D003633	Dichlorodiphenyl Dichloroethylene	CHEBI	CHEBI:16598	DDE
+MESH	D003633	Dichlorodiphenyl Dichloroethylene	CHEBI	CHEBI:27454	1-chloro-2,2-bis(4'-chlorophenyl)ethylene
+-----
+Choose one if approproate:
+MESH	D004083	Cholestanol	CHEBI	CHEBI:144052	cholestan-3-ol
+MESH	D004083	Cholestanol	CHEBI	CHEBI:86570	(5alpha)-cholestan-3beta-ol
+-----
+Choose one if approproate:
+MESH	D004224	Diterpenes	CHEBI	CHEBI:35190	diterpene
+MESH	D004224	Diterpenes	CHEBI	CHEBI:23849	diterpenoid
+-----
+Choose one if approproate:
+MESH	D004295	Dihydroxyphenylalanine	CHEBI	CHEBI:15765	L-dopa
+MESH	D004295	Dihydroxyphenylalanine	CHEBI	CHEBI:49168	dopa
+-----
+Choose one if approproate:
+MESH	D004852	Epoxy Compounds	CHEBI	CHEBI:32955	epoxide
+MESH	D004852	Epoxy Compounds	CHEBI	CHEBI:37407	cyclic ether
+-----
+Choose one if approproate:
+MESH	D004967	Estrogens	CHEBI	CHEBI:50114	estrogen
+MESH	D004967	Estrogens	CHEBI	CHEBI:63951	estrogen receptor agonist
+-----
+Choose one if approproate:
+MESH	D005493	Folic Acid Antagonists	CHEBI	CHEBI:73913	antifolate
+MESH	D005493	Folic Acid Antagonists	CHEBI	CHEBI:50683	EC 1.5.1.3 (dihydrofolate reductase) inhibitor
+-----
+Choose one if approproate:
+MESH	D006025	Glycosaminoglycans	CHEBI	CHEBI:18085	glycosaminoglycan
+MESH	D006025	Glycosaminoglycans	CHEBI	CHEBI:37395	mucopolysaccharide
+-----
+Choose one if approproate:
+MESH	D006416	Hematoxylin	CHEBI	CHEBI:51686	haematoxylin
+MESH	D006416	Hematoxylin	CHEBI	CHEBI:5601	(+)-haematoxylin
+-----
+Choose one if approproate:
+MESH	D006418	Heme	CHEBI	CHEBI:17627	ferroheme b
+MESH	D006418	Heme	CHEBI	CHEBI:26355	heme b
+-----
+Choose one if approproate:
+MESH	D006843	Hydrocarbons, Chlorinated	CHEBI	CHEBI:23115	chlorohydrocarbon
+MESH	D006843	Hydrocarbons, Chlorinated	CHEBI	CHEBI:36683	organochlorine compound
+-----
+Choose one if approproate:
+MESH	D006923	Hymecromone	CHEBI	CHEBI:17224	4-methylumbelliferone
+MESH	D006923	Hymecromone	CHEBI	CHEBI:5679	herniarin
+-----
+Choose one if approproate:
+MESH	D007483	Iothalamic Acid	CHEBI	CHEBI:31713	Iotalamic acid
+MESH	D007483	Iothalamic Acid	CHEBI	CHEBI:53691	amidotrizoic acid
+-----
+Choose one if approproate:
+MESH	D007651	Keto Acids	CHEBI	CHEBI:25754	oxo carboxylic acid
+MESH	D007651	Keto Acids	CHEBI	CHEBI:24833	oxoacid
+-----
+Choose one if approproate:
+MESH	D007987	Gonadotropin-Releasing Hormone	CHEBI	CHEBI:5520	gonadorelin
+MESH	D007987	Gonadotropin-Releasing Hormone	HGNC	4419	GNRH1
+-----
+Choose one if approproate:
+MESH	D008075	Lipoproteins, HDL	FPLX	HDL	HDL
+MESH	D008075	Lipoproteins, HDL	CHEBI	CHEBI:39025	high-density lipoprotein
+-----
+Choose one if approproate:
+MESH	D008775	Methylprednisolone	CHEBI	CHEBI:50366	6-methylprednisolone
+MESH	D008775	Methylprednisolone	CHEBI	CHEBI:6888	6alpha-methylprednisolone
+-----
+Choose one if approproate:
+MESH	D009153	Mutagens	CHEBI	CHEBI:50902	genotoxin
+MESH	D009153	Mutagens	CHEBI	CHEBI:25435	mutagen
+-----
+Choose one if approproate:
+MESH	D009320	Atrial Natriuretic Factor	HGNC	4877	HESX1
+MESH	D009320	Atrial Natriuretic Factor	HGNC	7939	NPPA
+-----
+Choose one if approproate:
+MESH	D009556	Niobium	CHEBI	CHEBI:33344	niobium atom
+MESH	D009556	Niobium	CHEBI	CHEBI:52460	niobium-93 atom
+-----
+Choose one if approproate:
+MESH	D009592	Nitrohydroxyiodophenylacetate	CHEBI	CHEBI:53797	(4-hydroxy-3-iodo-5-nitrophenyl)acetyl group
+MESH	D009592	Nitrohydroxyiodophenylacetate	CHEBI	CHEBI:53798	(4-hydroxy-3-iodo-5-nitrophenyl)acetic acid
+MESH	D009592	Nitrohydroxyiodophenylacetate	CHEBI	CHEBI:53799	(4-hydroxy-5-iodo-3-nitrophenyl)acetate
+-----
+Choose one if approproate:
+MESH	D010697	Eosine I Bluish	CHEBI	CHEBI:39077	eosin b
+MESH	D010697	Eosine I Bluish	CHEBI	CHEBI:87192	phloxine B
+-----
+Choose one if approproate:
+MESH	D010710	Phosphates	CHEBI	CHEBI:24838	inorganic phosphate
+MESH	D010710	Phosphates	CHEBI	CHEBI:26020	phosphate
+-----
+Choose one if approproate:
+MESH	D010743	Phospholipids	CHEBI	CHEBI:37739	glycerophospholipid
+MESH	D010743	Phospholipids	CHEBI	CHEBI:16247	phospholipid
+-----
+Choose one if approproate:
+MESH	D010751	Phosphopyruvate Hydratase	FPLX	ENO	ENO
+MESH	D010751	Phosphopyruvate Hydratase	HGNC	3350	ENO1
+-----
+Choose one if approproate:
+MESH	D010937	Plant Growth Regulators	CHEBI	CHEBI:37848	plant hormone
+MESH	D010937	Plant Growth Regulators	CHEBI	CHEBI:26155	plant growth regulator
+-----
+Choose one if approproate:
+MESH	D010959	Tissue Plasminogen Activator	HGNC	9051	PLAT
+MESH	D010959	Tissue Plasminogen Activator	HGNC	12404	TTPA
+-----
+Choose one if approproate:
+MESH	D011136	Polysorbates	CHEBI	CHEBI:53424	polysorbate 20
+MESH	D011136	Polysorbates	CHEBI	CHEBI:53422	polysorbate
+-----
+Choose one if approproate:
+MESH	D011280	Pregnanolone	CHEBI	CHEBI:50168	3-hydroxypregnan-20-one
+MESH	D011280	Pregnanolone	CHEBI	CHEBI:1712	3alpha-hydroxy-5beta-pregnan-20-one
+-----
+Choose one if approproate:
+MESH	D011372	Progestins	CHEBI	CHEBI:50745	progestogen
+MESH	D011372	Progestins	CHEBI	CHEBI:59826	progestin
+-----
+Choose one if approproate:
+MESH	D011453	Prostaglandins	CHEBI	CHEBI:26333	prostaglandin
+MESH	D011453	Prostaglandins	CHEBI	CHEBI:26347	prostanoid
+-----
+Choose one if approproate:
+MESH	D011480	Protease Inhibitors	CHEBI	CHEBI:82973	EC 3.4.24.11 (neprilysin) inhibitor
+MESH	D011480	Protease Inhibitors	CHEBI	CHEBI:60258	EC 3.4.* (hydrolases acting on peptide bond) inhibitor
+-----
+Choose one if approproate:
+MESH	D012266	Ribose	CHEBI	CHEBI:47013	D-ribofuranose
+MESH	D012266	Ribose	CHEBI	CHEBI:27476	beta-D-ribopyranose
+-----
+Choose one if approproate:
+MESH	D012695	L-Serine Dehydratase	HGNC	14398	SRR
+MESH	D012695	L-Serine Dehydratase	HGNC	10691	SDS
+-----
+Choose one if approproate:
+MESH	D012794	Sialic Acids	CHEBI	CHEBI:21622	N-acetylneuraminic acids
+MESH	D012794	Sialic Acids	CHEBI	CHEBI:26667	sialic acid
+-----
+Choose one if approproate:
+MESH	D013463	Sulfuric Acid Esters	CHEBI	CHEBI:25704	organic sulfate
+MESH	D013463	Sulfuric Acid Esters	CHEBI	CHEBI:26819	sulfuric ester
+-----
+Choose one if approproate:
+MESH	D013634	Tannins	CHEBI	CHEBI:75211	tannic acid
+MESH	D013634	Tannins	CHEBI	CHEBI:26848	tannin
+-----
+Choose one if approproate:
+MESH	D013729	Terpenes	CHEBI	CHEBI:35186	terpene
+MESH	D013729	Terpenes	CHEBI	CHEBI:26873	terpenoid
+-----
+Choose one if approproate:
+MESH	D015786	Cytochromes b5	HGNC	2570	CYB5A
+MESH	D015786	Cytochromes b5	CHEBI	CHEBI:18097	ferricytochrome b5
+-----
+Choose one if approproate:
+MESH	D015842	Serine Proteinase Inhibitors	CHEBI	CHEBI:5924	EC 3.4.21.* (serine endopeptidase) inhibitor
+MESH	D015842	Serine Proteinase Inhibitors	CHEBI	CHEBI:64926	serine protease inhibitor
+-----
+Choose one if approproate:
+MESH	D017127	Glycation End Products, Advanced	CHEBI	CHEBI:84123	advanced glycation end-product
+MESH	D017127	Glycation End Products, Advanced	CHEBI	CHEBI:77523	Maillard reaction product
+-----
+Choose one if approproate:
+MESH	D017640	Silicates	CHEBI	CHEBI:29241	silicate(4-)
+MESH	D017640	Silicates	CHEBI	CHEBI:46663	silicate mineral
+-----
+Choose one if approproate:
+MESH	D017886	Durapatite	CHEBI	CHEBI:52254	apatite
+MESH	D017886	Durapatite	CHEBI	CHEBI:52255	hydroxylapatite
+-----
+Choose one if approproate:
+MESH	D018004	Receptors, Bombesin	HGNC	4609	GRPR
+MESH	D018004	Receptors, Bombesin	HGNC	7843	NMBR
+-----
+Choose one if approproate:
+MESH	D018722	Nicotinic Agonists	CHEBI	CHEBI:47958	nicotinic acetylcholine receptor agonist
+MESH	D018722	Nicotinic Agonists	CHEBI	CHEBI:48878	nicotinic antagonist
+-----
+Choose one if approproate:
+MESH	D019063	Tenascin	HGNC	5318	TNC
+MESH	D019063	Tenascin	FPLX	TN	TN
+-----
+Choose one if approproate:
+MESH	D019161	Hydroxymethylglutaryl-CoA Reductase Inhibitors	CHEBI	CHEBI:35664	EC 1.1.1.34/EC 1.1.1.88 (hydroxymethylglutaryl-CoA reductase) inhibitor
+MESH	D019161	Hydroxymethylglutaryl-CoA Reductase Inhibitors	CHEBI	CHEBI:87631	statin
+-----
+Choose one if approproate:
+MESH	D019824	beta-MSH	CHEBI	CHEBI:5941	intermedine
+MESH	D019824	beta-MSH	CHEBI	CHEBI:80348	beta-Melanotropin
+-----
+Choose one if approproate:
+MESH	D020097	Natriuretic Peptide, Brain	CHEBI	CHEBI:80234	Brain natriuretic peptide
+MESH	D020097	Natriuretic Peptide, Brain	CHEBI	CHEBI:135919	nesiritide
+-----
+Choose one if approproate:
+MESH	D020717	Eukaryotic Initiation Factor-2B	FPLX	EIF2B	EIF2B
+MESH	D020717	Eukaryotic Initiation Factor-2B	HGNC	3257	EIF2B1
+-----
+Choose one if approproate:
+MESH	D020784	Matrix Metalloproteinase 8	HGNC	7155	MMP1
+MESH	D020784	Matrix Metalloproteinase 8	HGNC	7175	MMP8
+-----
+Choose one if approproate:
+MESH	D022142	Secretory Vesicles	GO	GO:0030141	secretory granule
+MESH	D022142	Secretory Vesicles	GO	GO:0099503	secretory vesicle
+-----
+Choose one if approproate:
+MESH	D024482	Vitamin K 2	CHEBI	CHEBI:16374	menaquinone
+MESH	D024482	Vitamin K 2	CHEBI	CHEBI:78277	menatetrenone
+-----
+Choose one if approproate:
+MESH	D033963	Adaptor Protein Complex 3	GO	GO:0030123	AP-3 adaptor complex
+MESH	D033963	Adaptor Protein Complex 3	FPLX	Adaptor_protein_III	Adaptor_protein_III
+-----
+Choose one if approproate:
+MESH	D039821	Monoterpenes	CHEBI	CHEBI:35187	monoterpene
+MESH	D039821	Monoterpenes	CHEBI	CHEBI:25409	monoterpenoid
+-----
+Choose one if approproate:
+MESH	D040262	Receptors, Vascular Endothelial Growth Factor	FPLX	VEGFR	VEGFR
+MESH	D040262	Receptors, Vascular Endothelial Growth Factor	HGNC	3763	FLT1
+-----
+Choose one if approproate:
+MESH	D042461	Vascular Endothelial Growth Factor A	FPLX	VEGF	VEGF
+MESH	D042461	Vascular Endothelial Growth Factor A	HGNC	12680	VEGFA
+-----
+Choose one if approproate:
+MESH	D043425	Glutamate Carboxypeptidase II	HGNC	13636	FOLH1B
+MESH	D043425	Glutamate Carboxypeptidase II	HGNC	14526	NAALAD2
+MESH	D043425	Glutamate Carboxypeptidase II	HGNC	23536	NAALADL1
+-----
+Choose one if approproate:
+MESH	D044042	Receptors, Formyl Peptide	FPLX	Chemokine_receptor	Chemokine_receptor
+MESH	D044042	Receptors, Formyl Peptide	HGNC	3826	FPR1
+-----
+Choose one if approproate:
+MESH	D044767	Ubiquitin-Protein Ligases	FPLX	E3_Ub_ligase	E3_Ub_ligase
+MESH	D044767	Ubiquitin-Protein Ligases	HGNC	4914	UBE2K
+MESH	D044767	Ubiquitin-Protein Ligases	HGNC	12479	UBE2E3
+-----
+Choose one if approproate:
+MESH	D045304	Cytochromes c	HGNC	19986	CYCS
+MESH	D045304	Cytochromes c	CHEBI	CHEBI:15991	ferricytochrome c
+MESH	D045304	Cytochromes c	CHEBI	CHEBI:16928	ferrocytochrome c
+-----
+Choose one if approproate:
+MESH	D046948	Secologanin Tryptamine Alkaloids	CHEBI	CHEBI:65323	monoterpenoid indole alkaloid
+MESH	D046948	Secologanin Tryptamine Alkaloids	CHEBI	CHEBI:65321	terpenoid indole alkaloid
+-----
+Choose one if approproate:
+MESH	D047992	TNF Receptor-Associated Factor 2	HGNC	12033	TRAF3
+MESH	D047992	TNF Receptor-Associated Factor 2	HGNC	12032	TRAF2
+-----
+Choose one if approproate:
+MESH	D050986	YY1 Transcription Factor	HGNC	12856	YY1
+MESH	D050986	YY1 Transcription Factor	HGNC	9811	RAD21
+-----
+Choose one if approproate:
+MESH	D051178	alpha Catenin	HGNC	2509	CTNNA1
+MESH	D051178	alpha Catenin	FPLX	CTNNA	CTNNA
+-----
+Choose one if approproate:
+MESH	D051818	Replication Protein C	FPLX	RFC	RFC
+MESH	D051818	Replication Protein C	HGNC	9299	PPP2CA
+-----
+Choose one if approproate:
+MESH	D053759	Interleukin-23	HGNC	15488	IL23A
+MESH	D053759	Interleukin-23	HGNC	15563	IL37
+-----
+Choose one if approproate:
+MESH	D056485	Retinoblastoma-Binding Protein 2	HGNC	20815	KDM3A
+MESH	D056485	Retinoblastoma-Binding Protein 2	HGNC	9886	KDM5A
+-----
+Choose one if approproate:
+MESH	D059003	Topoisomerase Inhibitors	CHEBI	CHEBI:50276	EC 5.99.1.2 (DNA topoisomerase) inhibitor
+MESH	D059003	Topoisomerase Inhibitors	CHEBI	CHEBI:70727	topoisomerase inhibitor
+-----
+Choose one if approproate:
+MESH	D063246	Organogenesis, Plant	GO	GO:0099402	plant organ development
+MESH	D063246	Organogenesis, Plant	GO	GO:1905393	plant organ formation
+-----
+Choose one if approproate:
+MESH	D064729	Neurokinin-1 Receptor Antagonists	CHEBI	CHEBI:55350	neurokinin-1 receptor antagonist
+MESH	D064729	Neurokinin-1 Receptor Antagonists	CHEBI	CHEBI:55351	substance P receptor antagonist
+-----

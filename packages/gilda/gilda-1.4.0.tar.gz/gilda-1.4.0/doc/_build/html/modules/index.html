@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gilda modules reference &mdash; gilda 1.2.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../_static/documentation_options.js?v=ca842793"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Software documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            gilda
+          </a>
+              <div class="version">
+                1.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gilda modules reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-gilda.api">API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.api.annotate"><code class="docutils literal notranslate"><span class="pre">annotate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.api.get_grounder"><code class="docutils literal notranslate"><span class="pre">get_grounder()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.api.get_models"><code class="docutils literal notranslate"><span class="pre">get_models()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.api.get_names"><code class="docutils literal notranslate"><span class="pre">get_names()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.api.ground"><code class="docutils literal notranslate"><span class="pre">ground()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.api.make_grounder"><code class="docutils literal notranslate"><span class="pre">make_grounder()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gilda.grounder">Grounder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.grounder.Grounder"><code class="docutils literal notranslate"><span class="pre">Grounder</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.Grounder.get_ambiguities"><code class="docutils literal notranslate"><span class="pre">Grounder.get_ambiguities()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.Grounder.get_models"><code class="docutils literal notranslate"><span class="pre">Grounder.get_models()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.Grounder.get_names"><code class="docutils literal notranslate"><span class="pre">Grounder.get_names()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.Grounder.ground"><code class="docutils literal notranslate"><span class="pre">Grounder.ground()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.Grounder.ground_best"><code class="docutils literal notranslate"><span class="pre">Grounder.ground_best()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.Grounder.lookup"><code class="docutils literal notranslate"><span class="pre">Grounder.lookup()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.Grounder.print_summary"><code class="docutils literal notranslate"><span class="pre">Grounder.print_summary()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.Grounder.summary_str"><code class="docutils literal notranslate"><span class="pre">Grounder.summary_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.grounder.ScoredMatch"><code class="docutils literal notranslate"><span class="pre">ScoredMatch</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.ScoredMatch.term"><code class="docutils literal notranslate"><span class="pre">ScoredMatch.term</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.ScoredMatch.score"><code class="docutils literal notranslate"><span class="pre">ScoredMatch.score</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.ScoredMatch.match"><code class="docutils literal notranslate"><span class="pre">ScoredMatch.match</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.ScoredMatch.disambiguation"><code class="docutils literal notranslate"><span class="pre">ScoredMatch.disambiguation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.ScoredMatch.subsumed_terms"><code class="docutils literal notranslate"><span class="pre">ScoredMatch.subsumed_terms</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.ScoredMatch.get_grounding_dict"><code class="docutils literal notranslate"><span class="pre">ScoredMatch.get_grounding_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.ScoredMatch.get_groundings"><code class="docutils literal notranslate"><span class="pre">ScoredMatch.get_groundings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.grounder.ScoredMatch.get_namespaces"><code class="docutils literal notranslate"><span class="pre">ScoredMatch.get_namespaces()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.grounder.load_entries_from_terms_file"><code class="docutils literal notranslate"><span class="pre">load_entries_from_terms_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.grounder.load_terms_file"><code class="docutils literal notranslate"><span class="pre">load_terms_file()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gilda.scorer">Scorer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.scorer.Match"><code class="docutils literal notranslate"><span class="pre">Match</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.scorer.generate_match"><code class="docutils literal notranslate"><span class="pre">generate_match()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.scorer.score_string_match"><code class="docutils literal notranslate"><span class="pre">score_string_match()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gilda.term">Term</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.term.Term"><code class="docutils literal notranslate"><span class="pre">Term</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.norm_text"><code class="docutils literal notranslate"><span class="pre">Term.norm_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.text"><code class="docutils literal notranslate"><span class="pre">Term.text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.db"><code class="docutils literal notranslate"><span class="pre">Term.db</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.id"><code class="docutils literal notranslate"><span class="pre">Term.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.entry_name"><code class="docutils literal notranslate"><span class="pre">Term.entry_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.status"><code class="docutils literal notranslate"><span class="pre">Term.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.source"><code class="docutils literal notranslate"><span class="pre">Term.source</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.organism"><code class="docutils literal notranslate"><span class="pre">Term.organism</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.source_db"><code class="docutils literal notranslate"><span class="pre">Term.source_db</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.source_id"><code class="docutils literal notranslate"><span class="pre">Term.source_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.get_curie"><code class="docutils literal notranslate"><span class="pre">Term.get_curie()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.get_groundings"><code class="docutils literal notranslate"><span class="pre">Term.get_groundings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.get_namespaces"><code class="docutils literal notranslate"><span class="pre">Term.get_namespaces()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.to_json"><code class="docutils literal notranslate"><span class="pre">Term.to_json()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.term.Term.to_list"><code class="docutils literal notranslate"><span class="pre">Term.to_list()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.term.dump_terms"><code class="docutils literal notranslate"><span class="pre">dump_terms()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gilda.process">Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.dashes"><code class="docutils literal notranslate"><span class="pre">dashes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.depluralize"><code class="docutils literal notranslate"><span class="pre">depluralize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.get_capitalization_pattern"><code class="docutils literal notranslate"><span class="pre">get_capitalization_pattern()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.normalize"><code class="docutils literal notranslate"><span class="pre">normalize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.remove_dashes"><code class="docutils literal notranslate"><span class="pre">remove_dashes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.replace_dashes"><code class="docutils literal notranslate"><span class="pre">replace_dashes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.replace_greek_latin"><code class="docutils literal notranslate"><span class="pre">replace_greek_latin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.replace_greek_spelled_out"><code class="docutils literal notranslate"><span class="pre">replace_greek_spelled_out()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.replace_greek_uni"><code class="docutils literal notranslate"><span class="pre">replace_greek_uni()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.replace_unicode"><code class="docutils literal notranslate"><span class="pre">replace_unicode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.replace_whitespace"><code class="docutils literal notranslate"><span class="pre">replace_whitespace()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.process.split_preserve_tokens"><code class="docutils literal notranslate"><span class="pre">split_preserve_tokens()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gilda.ner">Named Entity Recognition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#brat">BRAT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.ner.Annotation"><code class="docutils literal notranslate"><span class="pre">Annotation</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.ner.Annotation.text"><code class="docutils literal notranslate"><span class="pre">Annotation.text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.ner.Annotation.matches"><code class="docutils literal notranslate"><span class="pre">Annotation.matches</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.ner.Annotation.start"><code class="docutils literal notranslate"><span class="pre">Annotation.start</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gilda.ner.Annotation.end"><code class="docutils literal notranslate"><span class="pre">Annotation.end</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.ner.annotate"><code class="docutils literal notranslate"><span class="pre">annotate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.ner.get_brat"><code class="docutils literal notranslate"><span class="pre">get_brat()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gilda.pandas_utils">Pandas Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.pandas_utils.ground_df"><code class="docutils literal notranslate"><span class="pre">ground_df()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gilda.pandas_utils.ground_df_map"><code class="docutils literal notranslate"><span class="pre">ground_df_map()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gilda</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Gilda modules reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gilda-modules-reference">
+<h1>Gilda modules reference<a class="headerlink" href="#gilda-modules-reference" title="Link to this heading"></a></h1>
+<section id="module-gilda.api">
+<span id="api"></span><h2>API<a class="headerlink" href="#module-gilda.api" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.api.annotate">
+<span class="sig-prename descclassname"><span class="pre">gilda.api.</span></span><span class="sig-name descname"><span class="pre">annotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sent_split_fun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organisms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespaces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/api.html#annotate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.api.annotate" title="Link to this definition"></a></dt>
+<dd><p>Annotate a given text with Gilda (i.e., do named entity recognition).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The text to be annotated.</p></li>
+<li><p><strong>sent_split_fun</strong> (<em>Callable</em><em>, </em><em>optional</em>) – A function that splits the text into sentences. The default is
+<code class="xref py py-func docutils literal notranslate"><span class="pre">nltk.tokenize.sent_tokenize()</span></code>. The function should take a string
+as input and return an iterable of strings corresponding to the sentences
+in the input text.</p></li>
+<li><p><strong>organisms</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>, </em><em>optional</em>) – A list of organism names to pass to the grounder. If not provided,
+human is used.</p></li>
+<li><p><strong>namespaces</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>, </em><em>optional</em>) – A list of namespaces to pass to the grounder to restrict the matches
+to. By default, no restriction is applied.</p></li>
+<li><p><strong>context_text</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]) – A longer span of text that serves as additional context for the text
+being annotated for disambiguation purposes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of matches where each match is a tuple consisting of
+the matches text span, the list of ScoredMatches, and the
+start and end character offsets of the text span.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a>[<a class="reference internal" href="#gilda.grounder.ScoredMatch" title="gilda.grounder.ScoredMatch">ScoredMatch</a>], <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.api.get_grounder">
+<span class="sig-prename descclassname"><span class="pre">gilda.api.</span></span><span class="sig-name descname"><span class="pre">get_grounder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/api.html#get_grounder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.api.get_grounder" title="Link to this definition"></a></dt>
+<dd><p>Initialize and return the default Grounder instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#gilda.grounder.Grounder" title="gilda.grounder.Grounder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grounder</span></code></a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A Grounder instance whose attributes and methods can be used
+directly.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.api.get_models">
+<span class="sig-prename descclassname"><span class="pre">gilda.api.</span></span><span class="sig-name descname"><span class="pre">get_models</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/api.html#get_models"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.api.get_models" title="Link to this definition"></a></dt>
+<dd><p>Return a list of entity texts for which disambiguation models exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of entity texts for which a disambiguation model is
+available.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.api.get_names">
+<span class="sig-prename descclassname"><span class="pre">gilda.api.</span></span><span class="sig-name descname"><span class="pre">get_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/api.html#get_names"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.api.get_names" title="Link to this definition"></a></dt>
+<dd><p>Return a list of entity texts corresponding to a given database ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>db</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The database in which the ID is an entry, e.g., HGNC.</p></li>
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The ID of an entry in the database.</p></li>
+<li><p><strong>status</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – If given, only entity texts with the given status e.g., “synonym”
+are returned.</p></li>
+<li><p><strong>source</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – If given, only entity texts from the given source e.g., “uniprot”
+are returned.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.api.ground">
+<span class="sig-prename descclassname"><span class="pre">gilda.api.</span></span><span class="sig-name descname"><span class="pre">ground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organisms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespaces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/api.html#ground"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.api.ground" title="Link to this definition"></a></dt>
+<dd><p>Return a list of scored matches for a text to ground.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The entity text to be grounded.</p></li>
+<li><p><strong>context</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – Any additional text that serves as context for disambiguating the
+given entity text, used if a model exists for disambiguating the
+given text.</p></li>
+<li><p><strong>organisms</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>]</em>) – A list of taxonomy identifiers to use as a priority list
+when surfacing matches for proteins/genes from multiple organisms.</p></li>
+<li><p><strong>namespaces</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>]</em>) – A list of namespaces to restrict the matches to. By default, no
+restriction is applied.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of ScoredMatch objects representing the groundings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a>[<a class="reference internal" href="#gilda.grounder.ScoredMatch" title="gilda.grounder.ScoredMatch">gilda.grounder.ScoredMatch</a>]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Ground a string corresponding to an entity name, label, or synonym</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">gilda</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scored_matches</span> <span class="o">=</span> <span class="n">gilda</span><span class="o">.</span><span class="n">ground</span><span class="p">(</span><span class="s1">&#39;mapt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The matches are sorted in descending order by score, and in the event of
+a tie, by the namespace of the primary grounding. Each scored match has a
+<a class="reference internal" href="#gilda.term.Term" title="gilda.term.Term"><code class="xref py py-class docutils literal notranslate"><span class="pre">gilda.term.Term</span></code></a> object that contain information about the primary
+grounding.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scored_matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">db</span>
+<span class="go">&#39;hgnc&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scored_matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">id</span>
+<span class="go">&#39;6893&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scored_matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">get_curie</span><span class="p">()</span>
+<span class="go">&#39;hgnc:6893&#39;</span>
+</pre></div>
+</div>
+<p>The score for each match can be accessed directly:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scored_matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">score</span>
+<span class="go">0.7623</span>
+</pre></div>
+</div>
+<p>The rationale for each match is contained in the <code class="docutils literal notranslate"><span class="pre">match</span></code> attribute
+whose fields are described in <a class="reference internal" href="#gilda.scorer.Match" title="gilda.scorer.Match"><code class="xref py py-class docutils literal notranslate"><span class="pre">gilda.scorer.Match</span></code></a>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">match_object</span> <span class="o">=</span> <span class="n">scored_matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">match</span>
+</pre></div>
+</div>
+<p>Give optional context to be used by Gilda’s disambiguation models, if available</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scored_matches</span> <span class="o">=</span> <span class="n">gilda</span><span class="o">.</span><span class="n">ground</span><span class="p">(</span><span class="s1">&#39;ER&#39;</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="s1">&#39;Calcium is released from the ER.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Only return results from a certain namespace, such as when a family and gene have the same name</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scored_matches</span> <span class="o">=</span> <span class="n">gilda</span><span class="o">.</span><span class="n">ground</span><span class="p">(</span><span class="s1">&#39;ESR&#39;</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;hgnc&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.api.make_grounder">
+<span class="sig-prename descclassname"><span class="pre">gilda.api.</span></span><span class="sig-name descname"><span class="pre">make_grounder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/api.html#make_grounder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.api.make_grounder" title="Link to this definition"></a></dt>
+<dd><p>Create a custom grounder from a list of Terms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>terms</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#gilda.term.Term" title="gilda.term.Term"><code class="xref py py-class docutils literal notranslate"><span class="pre">Term</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#gilda.term.Term" title="gilda.term.Term"><code class="xref py py-class docutils literal notranslate"><span class="pre">Term</span></code></a>]]]) – Specifies the grounding terms that should be loaded in the Grounder.
+If str, it is interpreted as a path to a grounding
+terms gzipped TSV file which is then loaded. If list, it is assumed to
+be a flat list of Terms. If dict, it is assumed to be a grounding terms
+dict with normalized entity strings as keys and lists of Term objects
+as values.
+Default: None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#gilda.grounder.Grounder" title="gilda.grounder.Grounder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grounder</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A Grounder instance, initialized with either the default terms
+loaded from the resource file or a custom set of terms
+if the terms argument was specified.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>The following example shows how to get an ontology with <code class="xref py py-mod docutils literal notranslate"><span class="pre">obonet</span></code> and
+load custom terms:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gilda</span> <span class="kn">import</span> <span class="n">make_grounder</span>
+<span class="kn">from</span> <span class="nn">gilda.process</span> <span class="kn">import</span> <span class="n">normalize</span>
+<span class="kn">from</span> <span class="nn">gilda</span> <span class="kn">import</span> <span class="n">Term</span>
+
+<span class="n">prefix</span> <span class="o">=</span> <span class="s2">&quot;UBERON&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/uberon/basic.obo&quot;</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">obonet</span><span class="o">.</span><span class="n">read_obo</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">custom_obo_terms</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">it</span> <span class="o">=</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">nodes</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">unit_scale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;node&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
+    <span class="c1"># Skip entries imported from other ontologies</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">node</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">):</span>
+        <span class="k">continue</span>
+
+    <span class="n">identifier</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+    <span class="n">custom_obo_terms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gilda</span><span class="o">.</span><span class="n">Term</span><span class="p">(</span>
+        <span class="n">norm_text</span><span class="o">=</span><span class="n">normalize</span><span class="p">(</span><span class="n">name</span><span class="p">),</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">db</span><span class="o">=</span><span class="n">prefix</span><span class="p">,</span>
+        <span class="nb">id</span><span class="o">=</span><span class="n">identifier</span><span class="p">,</span>
+        <span class="n">entry_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">status</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+        <span class="n">source</span><span class="o">=</span><span class="n">prefix</span><span class="p">,</span>
+    <span class="p">))</span>
+
+    <span class="c1"># Add terms for all synonyms</span>
+    <span class="k">for</span> <span class="n">synonym_raw</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;synonym&quot;</span><span class="p">,</span> <span class="p">[]):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Try to parse out of the quoted OBO Field</span>
+            <span class="n">synonym</span> <span class="o">=</span> <span class="n">synonym_raw</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">continue</span>  <span class="c1"># the synonym was malformed</span>
+
+        <span class="n">custom_obo_terms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gilda</span><span class="o">.</span><span class="n">Term</span><span class="p">(</span>
+            <span class="n">norm_text</span><span class="o">=</span><span class="n">normalize</span><span class="p">(</span><span class="n">synonym</span><span class="p">),</span>
+            <span class="n">text</span><span class="o">=</span><span class="n">synonym</span><span class="p">,</span>
+            <span class="n">db</span><span class="o">=</span><span class="n">prefix</span><span class="p">,</span>
+            <span class="nb">id</span><span class="o">=</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="n">entry_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="s2">&quot;synonym&quot;</span><span class="p">,</span>
+            <span class="n">source</span><span class="o">=</span><span class="n">prefix</span><span class="p">,</span>
+        <span class="p">))</span>
+
+<span class="n">custom_grounder</span> <span class="o">=</span> <span class="n">gilda</span><span class="o">.</span><span class="n">make_grounder</span><span class="p">(</span><span class="n">custom_obo_terms</span><span class="p">)</span>
+<span class="n">scored_matches</span> <span class="o">=</span> <span class="n">custom_grounder</span><span class="o">.</span><span class="n">ground</span><span class="p">(</span><span class="s2">&quot;head&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Additional examples for loading custom content from OBO Graph JSON,
+<a class="reference external" href="https://pyobo.readthedocs.io/en/latest/index.html#module-pyobo" title="(in PyOBO v0.8.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyobo</span></code></a>, and more can be found in the <a class="reference external" href="https://github.com/indralab/gilda/tree/master/notebooks">Jupyter notebooks</a>
+in the Gilda repository on GitHub.</p>
+</dd></dl>
+
+</section>
+<section id="module-gilda.grounder">
+<span id="grounder"></span><h2>Grounder<a class="headerlink" href="#module-gilda.grounder" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="gilda.grounder.Grounder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gilda.grounder.</span></span><span class="sig-name descname"><span class="pre">Grounder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace_priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#Grounder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.Grounder" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class to look up and ground query texts in a terms file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>terms</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code></a>[<a class="reference internal" href="#gilda.term.Term" title="gilda.term.Term"><code class="xref py py-class docutils literal notranslate"><span class="pre">Term</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#gilda.term.Term" title="gilda.term.Term"><code class="xref py py-class docutils literal notranslate"><span class="pre">Term</span></code></a>]], <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>]) – <p>Specifies the grounding terms that should be loaded in the Grounder.</p>
+<ul>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the default grounding terms are loaded from the
+versioned resource folder.</p></li>
+<li><p>If <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></a>, it is interpreted
+as a path to a grounding terms gzipped TSV file which is then
+loaded. If it’s a str and looks like a URL, will be downloaded from the internet</p></li>
+<li><p>If <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>, it is assumed to be a grounding terms dict with
+normalized entity strings as keys and <a class="reference internal" href="#gilda.term.Term" title="gilda.term.Term"><code class="xref py py-class docutils literal notranslate"><span class="pre">gilda.term.Term</span></code></a>
+instances as values.</p></li>
+<li><p>If <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>, or any other iterable,
+it is assumed to be a flat list of
+<a class="reference internal" href="#gilda.term.Term" title="gilda.term.Term"><code class="xref py py-class docutils literal notranslate"><span class="pre">gilda.term.Term</span></code></a> instances.</p></li>
+</ul>
+</p></li>
+<li><p><strong>namespace_priority</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]]) – Specifies a term namespace priority order. For example, if multiple
+terms are matched with the same score, will use this list to decide
+which are given by which namespace appears further towards the front
+of the list. By default, <code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_NAMESPACE_PRIORITY</span></code> is used,
+which, for example, prioritizes famplex entities over HGNC ones.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.grounder.Grounder.get_ambiguities">
+<span class="sig-name descname"><span class="pre">get_ambiguities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skip_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_curated</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_name_matches</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_species_ambigs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#Grounder.get_ambiguities"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.Grounder.get_ambiguities" title="Link to this definition"></a></dt>
+<dd><p>Return a list of ambiguous term groups in the grounder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>skip_names</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – If True, groups of terms where one has the “name” status are
+skipped. This makes sense usually since these are prioritized over
+synonyms anyway.</p></li>
+<li><p><strong>skip_curated</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – If True, groups of terms where one has the “curated” status
+are skipped. This makes sense usually since these are prioritized
+over synonyms anyway.</p></li>
+<li><p><strong>skip_name_matches</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – If True, groups of terms that all share the same standard name
+are skipped. This is effective at eliminating spurious ambiguities
+due to unresolved cross-references between equivalent terms
+in different namespaces.</p></li>
+<li><p><strong>skip_species_ambigs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – If True, groups of terms that are all genes or proteins, and are
+all from different species (one term from each species) are skipped.
+This is effective at eliminating ambiguities between orthologous
+genes in different species that are usually resolved using the
+organism priority list.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#gilda.term.Term" title="gilda.term.Term"><code class="xref py py-class docutils literal notranslate"><span class="pre">Term</span></code></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.grounder.Grounder.get_models">
+<span class="sig-name descname"><span class="pre">get_models</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#Grounder.get_models"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.Grounder.get_models" title="Link to this definition"></a></dt>
+<dd><p>Return a list of entity texts for which disambiguation models exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of entity texts for which a disambiguation model is
+available.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.grounder.Grounder.get_names">
+<span class="sig-name descname"><span class="pre">get_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#Grounder.get_names"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.Grounder.get_names" title="Link to this definition"></a></dt>
+<dd><p>Return a list of entity texts corresponding to a given database ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>db</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The database in which the ID is an entry, e.g., HGNC.</p></li>
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The ID of an entry in the database.</p></li>
+<li><p><strong>status</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – If given, only entity texts with the given status e.g., “synonym”
+are returned.</p></li>
+<li><p><strong>source</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – If given, only entity texts from the given source e.g., “uniprot”
+are returned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>names</strong> – A list of entity texts corresponding to the given database/ID</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.grounder.Grounder.ground">
+<span class="sig-name descname"><span class="pre">ground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organisms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespaces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#Grounder.ground"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.Grounder.ground" title="Link to this definition"></a></dt>
+<dd><p>Return scored groundings for a given raw string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw_str</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – A string to be grounded with respect to the set of Terms that the
+Grounder contains.</p></li>
+<li><p><strong>context</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – Any additional text that serves as context for disambiguating the
+given entity text, used if a model exists for disambiguating the
+given text.</p></li>
+<li><p><strong>organisms</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>]</em>) – An optional list of organism identifiers defining a priority
+ranking among organisms, if genes/proteins from multiple
+organisms match the input. If not provided, the default
+[‘9606’] i.e., human is used.</p></li>
+<li><p><strong>namespaces</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>]</em>) – A list of namespaces to restrict matches to. This will apply to
+both the primary namespace of a matched term, to any subsumed
+matches, and to the source namespaces of terms if they were
+created using cross-reference mappings. By default, no
+restriction is applied.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of ScoredMatch objects representing the groundings sorted
+by decreasing score.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a>[<a class="reference internal" href="#gilda.grounder.ScoredMatch" title="gilda.grounder.ScoredMatch">gilda.grounder.ScoredMatch</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.grounder.Grounder.ground_best">
+<span class="sig-name descname"><span class="pre">ground_best</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organisms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespaces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#Grounder.ground_best"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.Grounder.ground_best" title="Link to this definition"></a></dt>
+<dd><p>Return the best scored grounding for a given raw string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw_str</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – A string to be grounded with respect to the set of Terms that the
+Grounder contains.</p></li>
+<li><p><strong>context</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – Any additional text that serves as context for disambiguating the
+given entity text, used if a model exists for disambiguating the
+given text.</p></li>
+<li><p><strong>organisms</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>]</em>) – An optional list of organism identifiers defining a priority
+ranking among organisms, if genes/proteins from multiple
+organisms match the input. If not provided, the default
+[‘9606’] i.e., human is used.</p></li>
+<li><p><strong>namespaces</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>]</em>) – A list of namespaces to restrict matches to. This will apply to
+both the primary namespace of a matched term, to any subsumed
+matches, and to the source namespaces of terms if they were
+created using cross-reference mappings. By default, no
+restriction is applied.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The best ScoredMatch returned by <a class="reference internal" href="#gilda.grounder.Grounder.ground" title="gilda.grounder.Grounder.ground"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ground()</span></code></a> if any are returned,
+otherwise None.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="#gilda.grounder.ScoredMatch" title="gilda.grounder.ScoredMatch">gilda.grounder.ScoredMatch</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.grounder.Grounder.lookup">
+<span class="sig-name descname"><span class="pre">lookup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#Grounder.lookup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.Grounder.lookup" title="Link to this definition"></a></dt>
+<dd><p>Return matching Terms for a given raw string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>raw_str</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – A string to be looked up in the set of Terms that the Grounder
+contains.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#gilda.term.Term" title="gilda.term.Term"><code class="xref py py-class docutils literal notranslate"><span class="pre">Term</span></code></a>]</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of Terms that are potential matches for the given string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.grounder.Grounder.print_summary">
+<span class="sig-name descname"><span class="pre">print_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#Grounder.print_summary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.Grounder.print_summary" title="Link to this definition"></a></dt>
+<dd><p>Print the summary of this grounder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.grounder.Grounder.summary_str">
+<span class="sig-name descname"><span class="pre">summary_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#Grounder.summary_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.Grounder.summary_str" title="Link to this definition"></a></dt>
+<dd><p>Summarize the contents of the grounder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="gilda.grounder.ScoredMatch">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gilda.grounder.</span></span><span class="sig-name descname"><span class="pre">ScoredMatch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">term</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disambiguation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subsumed_terms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#ScoredMatch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.ScoredMatch" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class representing a scored match to a grounding term.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.grounder.ScoredMatch.term">
+<span class="sig-name descname"><span class="pre">term</span></span><a class="headerlink" href="#gilda.grounder.ScoredMatch.term" title="Link to this definition"></a></dt>
+<dd><p>The Term that the scored match is for.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gilda.grounder.Term</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.grounder.ScoredMatch.score">
+<span class="sig-name descname"><span class="pre">score</span></span><a class="headerlink" href="#gilda.grounder.ScoredMatch.score" title="Link to this definition"></a></dt>
+<dd><p>The score associated with the match.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.grounder.ScoredMatch.match">
+<span class="sig-name descname"><span class="pre">match</span></span><a class="headerlink" href="#gilda.grounder.ScoredMatch.match" title="Link to this definition"></a></dt>
+<dd><p>The Match object characterizing the match to the Term.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#gilda.scorer.Match" title="gilda.scorer.Match">gilda.scorer.Match</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.grounder.ScoredMatch.disambiguation">
+<span class="sig-name descname"><span class="pre">disambiguation</span></span><a class="headerlink" href="#gilda.grounder.ScoredMatch.disambiguation" title="Link to this definition"></a></dt>
+<dd><p>Meta-information about disambiguation, when available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)">dict</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.grounder.ScoredMatch.subsumed_terms">
+<span class="sig-name descname"><span class="pre">subsumed_terms</span></span><a class="headerlink" href="#gilda.grounder.ScoredMatch.subsumed_terms" title="Link to this definition"></a></dt>
+<dd><p>A list of additional Term objects that also matched, have the same
+db/id value as the term associated with the match, but were further
+down the score ranking. In some cases examining the subsumed terms
+associated with a match can provide additional metadata in
+downstream applications.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a>[gilda.grounder.Term]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.grounder.ScoredMatch.get_grounding_dict">
+<span class="sig-name descname"><span class="pre">get_grounding_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#ScoredMatch.get_grounding_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.ScoredMatch.get_grounding_dict" title="Link to this definition"></a></dt>
+<dd><p>Get the groundings as CURIEs and URLs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.grounder.ScoredMatch.get_groundings">
+<span class="sig-name descname"><span class="pre">get_groundings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#ScoredMatch.get_groundings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.ScoredMatch.get_groundings" title="Link to this definition"></a></dt>
+<dd><p>Return all groundings for this match including from mapped and
+subsumed terms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]]</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A set of tuples representing groundings for this match including
+the grounding for the primary term as well as any subsumed
+terms, and groundings that come from having mapped an original
+source grounding during grounding resource construction.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.grounder.ScoredMatch.get_namespaces">
+<span class="sig-name descname"><span class="pre">get_namespaces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#ScoredMatch.get_namespaces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.ScoredMatch.get_namespaces" title="Link to this definition"></a></dt>
+<dd><p>Return all namespaces for this match including from mapped and
+subsumed terms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A set of strings representing namespaces for terms involved in
+this match, including the namespace for the primary term as well
+as any subsumed terms, and groundings that come from having
+mapped an original source grounding during grounding resource
+construction.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.grounder.load_entries_from_terms_file">
+<span class="sig-prename descclassname"><span class="pre">gilda.grounder.</span></span><span class="sig-name descname"><span class="pre">load_entries_from_terms_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terms_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#load_entries_from_terms_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.load_entries_from_terms_file" title="Link to this definition"></a></dt>
+<dd><p>Yield Terms from a compressed terms TSV file path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>terms_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a>]) – Path to a compressed TSV terms file with columns corresponding to the
+serialized elements of a Term.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterator</span></code></a>[<a class="reference internal" href="#gilda.term.Term" title="gilda.term.Term"><code class="xref py py-class docutils literal notranslate"><span class="pre">Term</span></code></a>]</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Terms loaded from the file yielded by a generator.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.grounder.load_terms_file">
+<span class="sig-prename descclassname"><span class="pre">gilda.grounder.</span></span><span class="sig-name descname"><span class="pre">load_terms_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terms_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/grounder.html#load_terms_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.grounder.load_terms_file" title="Link to this definition"></a></dt>
+<dd><p>Load a TSV file containing terms into a lookup dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>terms_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a>]) – Path to a compressed TSV terms file with columns corresponding to the
+serialized elements of a Term.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#gilda.term.Term" title="gilda.term.Term"><code class="xref py py-class docutils literal notranslate"><span class="pre">Term</span></code></a>]]</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A lookup dictionary whose keys are normalized entity texts, and values
+are lists of Terms with that normalized entity text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-gilda.scorer">
+<span id="scorer"></span><h2>Scorer<a class="headerlink" href="#module-gilda.scorer" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="gilda.scorer.Match">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gilda.scorer.</span></span><span class="sig-name descname"><span class="pre">Match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space_mismatch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dash_mismatches</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cap_combos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/scorer.html#Match"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.scorer.Match" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class representing a match between a query and a reference string</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.scorer.generate_match">
+<span class="sig-prename descclassname"><span class="pre">gilda.scorer.</span></span><span class="sig-name descname"><span class="pre">generate_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginning_of_sentence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/scorer.html#generate_match"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.scorer.generate_match" title="Link to this definition"></a></dt>
+<dd><p>Return a match data structure based on comparing a query to a ref str.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The string to be compared against a reference string.</p></li>
+<li><p><strong>ref</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The reference string against which the incoming query string is
+compared.</p></li>
+<li><p><strong>beginning_of_sentence</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – True if the query_str appears at the beginning of a sentence, relevant
+for how capitalization is evaluated.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A Match object characterizing the match between the two strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#gilda.scorer.Match" title="gilda.scorer.Match">Match</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.scorer.score_string_match">
+<span class="sig-prename descclassname"><span class="pre">gilda.scorer.</span></span><span class="sig-name descname"><span class="pre">score_string_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">match</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/scorer.html#score_string_match"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.scorer.score_string_match" title="Link to this definition"></a></dt>
+<dd><p>Return a score between 0 and 1 for the goodness of a match.</p>
+<p>This score is purely based on the relationship of the two strings and
+does not take the status of the reference into account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>match</strong> (<a class="reference internal" href="#gilda.scorer.Match" title="gilda.scorer.Match"><em>gilda.scorer.Match</em></a>) – The Match object characterizing the relationship of the query and
+reference strings.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A match score between 0 and 1.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-gilda.term">
+<span id="term"></span><h2>Term<a class="headerlink" href="#module-gilda.term" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="gilda.term.Term">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gilda.term.</span></span><span class="sig-name descname"><span class="pre">Term</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">norm_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organism</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/term.html#Term"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.term.Term" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Represents a text entry corresponding to a grounded term.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.term.Term.norm_text">
+<span class="sig-name descname"><span class="pre">norm_text</span></span><a class="headerlink" href="#gilda.term.Term.norm_text" title="Link to this definition"></a></dt>
+<dd><p>The normalized text corresponding to the text entry, used for lookups.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.term.Term.text">
+<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#gilda.term.Term.text" title="Link to this definition"></a></dt>
+<dd><p>The text entry itself.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.term.Term.db">
+<span class="sig-name descname"><span class="pre">db</span></span><a class="headerlink" href="#gilda.term.Term.db" title="Link to this definition"></a></dt>
+<dd><p>The database / name space corresponding to the grounded term.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.term.Term.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#gilda.term.Term.id" title="Link to this definition"></a></dt>
+<dd><p>The identifier of the grounded term within the database / name space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.term.Term.entry_name">
+<span class="sig-name descname"><span class="pre">entry_name</span></span><a class="headerlink" href="#gilda.term.Term.entry_name" title="Link to this definition"></a></dt>
+<dd><p>The standardized name corresponding to the grounded term.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.term.Term.status">
+<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#gilda.term.Term.status" title="Link to this definition"></a></dt>
+<dd><p>The relationship of the text entry to the grounded term, e.g., synonym.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.term.Term.source">
+<span class="sig-name descname"><span class="pre">source</span></span><a class="headerlink" href="#gilda.term.Term.source" title="Link to this definition"></a></dt>
+<dd><p>The source from which the term was obtained.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.term.Term.organism">
+<span class="sig-name descname"><span class="pre">organism</span></span><a class="headerlink" href="#gilda.term.Term.organism" title="Link to this definition"></a></dt>
+<dd><p>When the term represents a protein, this attribute provides the
+taxonomy code of the species for the protein.
+For non-proteins, not provided. Default: None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.term.Term.source_db">
+<span class="sig-name descname"><span class="pre">source_db</span></span><a class="headerlink" href="#gilda.term.Term.source_db" title="Link to this definition"></a></dt>
+<dd><p>If the term’s db/id was mapped from a different, original db/id
+from a given source, this attribute provides the original db value
+before mapping.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.term.Term.source_id">
+<span class="sig-name descname"><span class="pre">source_id</span></span><a class="headerlink" href="#gilda.term.Term.source_id" title="Link to this definition"></a></dt>
+<dd><p>If the term’s db/id was mapped from a different, original db/id
+from a given source, this attribute provides the original ID value
+before mapping.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.term.Term.get_curie">
+<span class="sig-name descname"><span class="pre">get_curie</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/term.html#Term.get_curie"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.term.Term.get_curie" title="Link to this definition"></a></dt>
+<dd><p>Get the compact URI for this term.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.term.Term.get_groundings">
+<span class="sig-name descname"><span class="pre">get_groundings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/term.html#Term.get_groundings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.term.Term.get_groundings" title="Link to this definition"></a></dt>
+<dd><p>Return all groundings for this term, including from a mapped source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]]</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A set of tuples representing the main grounding for this term,
+as well as any source grounding from which the main grounding
+was mapped.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.term.Term.get_namespaces">
+<span class="sig-name descname"><span class="pre">get_namespaces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/term.html#Term.get_namespaces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.term.Term.get_namespaces" title="Link to this definition"></a></dt>
+<dd><p>Return all namespaces for this term, including from a mapped source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A set of strings including the main namespace for this term,
+as well as any source namespace from which the main grounding
+was mapped.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.term.Term.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/term.html#Term.to_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.term.Term.to_json" title="Link to this definition"></a></dt>
+<dd><p>Return the term serialized into a JSON dict.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gilda.term.Term.to_list">
+<span class="sig-name descname"><span class="pre">to_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/term.html#Term.to_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.term.Term.to_list" title="Link to this definition"></a></dt>
+<dd><p>Return the term serialized into a list of strings.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.term.dump_terms">
+<span class="sig-prename descclassname"><span class="pre">gilda.term.</span></span><span class="sig-name descname"><span class="pre">dump_terms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/term.html#dump_terms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.term.dump_terms" title="Link to this definition"></a></dt>
+<dd><p>Dump a list of terms to a tsv.gz file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-gilda.process">
+<span id="process"></span><h2>Process<a class="headerlink" href="#module-gilda.process" title="Link to this heading"></a></h2>
+<p>Module containing various string processing functions used for grounding.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="gilda.process.dashes">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">dashes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['−',</span> <span class="pre">'-',</span> <span class="pre">'‐',</span> <span class="pre">'‑',</span> <span class="pre">'‒',</span> <span class="pre">'–',</span> <span class="pre">'—',</span> <span class="pre">'―']</span></em><a class="headerlink" href="#gilda.process.dashes" title="Link to this definition"></a></dt>
+<dd><p>A list of all kinds of dashes</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.process.depluralize">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">depluralize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/process.html#depluralize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.process.depluralize" title="Link to this definition"></a></dt>
+<dd><p>Return the depluralized version of the word, along with a status flag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>word</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The word which is to be depluralized.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The original word, if it is detected to be non-plural, or the
+depluralized version of the word, and a status flag representing the
+detected pluralization status of the
+word, with non_plural (e.g., BRAF), plural_oes (e.g., mosquitoes),
+plural_ies (e.g., antibodies), plural_es (e.g., switches),
+plural_cap_s (e.g., MAPKs), and plural_s (e.g., receptors).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a> of str pairs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.process.get_capitalization_pattern">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">get_capitalization_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beginning_of_sentence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/process.html#get_capitalization_pattern"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.process.get_capitalization_pattern" title="Link to this definition"></a></dt>
+<dd><p>Return the type of capitalization for the string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>word</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The word whose capitalization is determined.</p></li>
+<li><p><strong>beginning_of_sentence</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a><em>]</em>) – True if the word appears at the beginning of a sentence. Default: False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The capitalization pattern of the given word. Returns one of the
+following: sentence_initial_cap, single_cap_letter, all_caps, all_lower,
+initial_cap, mixed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.process.normalize">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/process.html#normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.process.normalize" title="Link to this definition"></a></dt>
+<dd><p>Normalize white spaces, dashes and case of a given string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>s</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The string to be normalized.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The normalized string.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.process.remove_dashes">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">remove_dashes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/process.html#remove_dashes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.process.remove_dashes" title="Link to this definition"></a></dt>
+<dd><p>Remove all types of dashes in the given string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>s</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The string in which all types of dashes should be replaced.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The string from which dashes have been removed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.process.replace_dashes">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">replace_dashes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/process.html#replace_dashes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.process.replace_dashes" title="Link to this definition"></a></dt>
+<dd><p>Replace all types of dashes in a given string with a given replacement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The string in which all types of dashes should be replaced.</p></li>
+<li><p><strong>rep</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – The string with which dashes should be replaced. By default, the plain
+ASCII dash (-) is used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The string in which dashes have been replaced.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.process.replace_greek_latin">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">replace_greek_latin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/process.html#replace_greek_latin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.process.replace_greek_latin" title="Link to this definition"></a></dt>
+<dd><p>Replace Greek spelled out letters with their latin character.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.process.replace_greek_spelled_out">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">replace_greek_spelled_out</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/process.html#replace_greek_spelled_out"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.process.replace_greek_spelled_out" title="Link to this definition"></a></dt>
+<dd><p>Replace Greek unicode character with latin spelled out.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.process.replace_greek_uni">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">replace_greek_uni</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/process.html#replace_greek_uni"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.process.replace_greek_uni" title="Link to this definition"></a></dt>
+<dd><p>Replace Greek spelled out letters with their unicode character.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.process.replace_unicode">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">replace_unicode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/process.html#replace_unicode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.process.replace_unicode" title="Link to this definition"></a></dt>
+<dd><p>Replace unicode with ASCII equivalent, except Greek letters.</p>
+<p>Greek letters are handled separately and aren’t replaced in this context.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.process.replace_whitespace">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">replace_whitespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/process.html#replace_whitespace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.process.replace_whitespace" title="Link to this definition"></a></dt>
+<dd><p>Replace any length white spaces in the given string with a replacement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The string in which any length whitespaces should be replaced.</p></li>
+<li><p><strong>rep</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – The string with which all whitespace should be replaced. By default,
+the plain ASCII space ( ) is used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The string in which whitespaces have been replaced.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.process.split_preserve_tokens">
+<span class="sig-prename descclassname"><span class="pre">gilda.process.</span></span><span class="sig-name descname"><span class="pre">split_preserve_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/process.html#split_preserve_tokens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.process.split_preserve_tokens" title="Link to this definition"></a></dt>
+<dd><p>Return split words of a string including the non-word tokens.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>s</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The string to be split.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of words in the string including the separator tokens,
+typically spaces and dashes..</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a> of <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-gilda.ner">
+<span id="named-entity-recognition"></span><h2>Named Entity Recognition<a class="headerlink" href="#module-gilda.ner" title="Link to this heading"></a></h2>
+<p>Gilda implements a simple dictionary-based named entity
+recognition (NER) algorithm. It can be used as follows:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">gilda.ner</span> <span class="kn">import</span> <span class="n">annotate</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;MEK phosphorylates ERK&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">annotate</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The results are a list of Annotation objects each of which contains:</p>
+<ul class="simple">
+<li><p>the <cite>text</cite> string matched</p></li>
+<li><p>a list of <a class="reference internal" href="#gilda.grounder.ScoredMatch" title="gilda.grounder.ScoredMatch"><code class="xref py py-class docutils literal notranslate"><span class="pre">gilda.grounder.ScoredMatch</span></code></a> instances containing a sorted list of matches
+for the given text span (first one is the best match)</p></li>
+<li><p>the <cite>start</cite> position in the text string where the entity starts</p></li>
+<li><p>the <cite>end</cite> position in the text string where the entity ends</p></li>
+</ul>
+<p>In this example, the two concepts are grounded to FamPlex entries.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">get_curie</span><span class="p">(),</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">end</span>
+<span class="go">(&#39;MEK&#39;, &#39;fplx:MEK&#39;, 0, 3)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">results</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">get_curie</span><span class="p">(),</span> <span class="n">results</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">results</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">end</span>
+<span class="go">(&#39;ERK&#39;, &#39;fplx:ERK&#39;, 19, 22)</span>
+</pre></div>
+</div>
+<p>If you directly look in the second part of the 4-tuple, you get a full
+description of the match itself:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">ScoredMatch(Term(mek,MEK,FPLX,MEK,MEK,curated,famplex,None,None,None),0.9288806431663574,Match(query=mek,ref=MEK,exact=False,space_mismatch=False,dash_mismatches=set(),cap_combos=[(&#39;all_lower&#39;, &#39;all_caps&#39;)]))</span>
+</pre></div>
+</div>
+<section id="brat">
+<h3>BRAT<a class="headerlink" href="#brat" title="Link to this heading"></a></h3>
+<p>Gilda implements a way to output annotation in a format appropriate for the
+<a class="reference external" href="https://brat.nlplab.org/index.html">BRAT Rapid Annotation Tool (BRAT)</a>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">gilda.ner</span> <span class="kn">import</span> <span class="n">get_brat</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">brat_string</span> <span class="o">=</span> <span class="n">get_brat</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;results.ann&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">brat_string</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;results.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For brat to work, you need to store the text in a file with
+the extension <code class="docutils literal notranslate"><span class="pre">.txt</span></code> and the annotations in a file with the
+same name but extension <code class="docutils literal notranslate"><span class="pre">.ann</span></code>.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="gilda.ner.Annotation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gilda.ner.</span></span><span class="sig-name descname"><span class="pre">Annotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matches</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/ner.html#Annotation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.ner.Annotation" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A class to represent an annotation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.ner.Annotation.text">
+<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#gilda.ner.Annotation.text" title="Link to this definition"></a></dt>
+<dd><p>The text span that was annotated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.ner.Annotation.matches">
+<span class="sig-name descname"><span class="pre">matches</span></span><a class="headerlink" href="#gilda.ner.Annotation.matches" title="Link to this definition"></a></dt>
+<dd><p>The list of scored matches for the text span.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#gilda.grounder.ScoredMatch" title="gilda.grounder.ScoredMatch">ScoredMatch</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.ner.Annotation.start">
+<span class="sig-name descname"><span class="pre">start</span></span><a class="headerlink" href="#gilda.ner.Annotation.start" title="Link to this definition"></a></dt>
+<dd><p>The start character offset of the text span.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gilda.ner.Annotation.end">
+<span class="sig-name descname"><span class="pre">end</span></span><a class="headerlink" href="#gilda.ner.Annotation.end" title="Link to this definition"></a></dt>
+<dd><p>The end character offset of the text span.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.ner.annotate">
+<span class="sig-prename descclassname"><span class="pre">gilda.ner.</span></span><span class="sig-name descname"><span class="pre">annotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grounder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sent_split_fun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organisms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespaces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/ner.html#annotate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.ner.annotate" title="Link to this definition"></a></dt>
+<dd><p>Annotate a given text with Gilda.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The text to be annotated.</p></li>
+<li><p><strong>grounder</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#gilda.grounder.Grounder" title="gilda.grounder.Grounder"><em>gilda.grounder.Grounder</em></a><em>]</em>) – The Gilda grounder to use for grounding.</p></li>
+<li><p><strong>sent_split_fun</strong> (<em>Optional</em><em>[</em><em>Callable</em><em>]</em>) – A function that splits the text into sentences. The default is
+<code class="xref py py-func docutils literal notranslate"><span class="pre">nltk.tokenize.sent_tokenize()</span></code>. The function should take a string
+as input and return an iterable of strings corresponding to the sentences
+in the input text.</p></li>
+<li><p><strong>organisms</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>]</em>) – A list of organism names to pass to the grounder. If not provided,
+human is used.</p></li>
+<li><p><strong>namespaces</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>]</em>) – A list of namespaces to pass to the grounder to restrict the matches
+to. By default, no restriction is applied.</p></li>
+<li><p><strong>context_text</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]) – A longer span of text that serves as additional context for the text
+being annotated for disambiguation purposes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of Annotations where each contains as attributes
+the text span that was matched, the list of ScoredMatches, and the
+start and end character offsets of the text span.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#gilda.ner.Annotation" title="gilda.ner.Annotation">Annotation</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.ner.get_brat">
+<span class="sig-prename descclassname"><span class="pre">gilda.ner.</span></span><span class="sig-name descname"><span class="pre">get_brat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annotations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Entity'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ix_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/ner.html#get_brat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.ner.get_brat" title="Link to this definition"></a></dt>
+<dd><p>Return brat-formatted annotation strings for the given entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annotations</strong> (<em>List</em><em>[</em><a class="reference internal" href="#gilda.ner.Annotation" title="gilda.ner.Annotation"><em>Annotation</em></a><em>]</em>) – A list of named entity annotations in the text.</p></li>
+<li><p><strong>entity_type</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – The brat entity type to use for the annotations. The default is
+‘Entity’. This is useful for differentiating between annotations in
+the same text extracted from different reading systems.</p></li>
+<li><p><strong>ix_offset</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a><em>]</em>) – The index offset to use for the brat annotations. The default is 1.</p></li>
+<li><p><strong>include_text</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a><em>]</em>) – Whether to include the text of the entity in the brat annotations.
+The default is True. If not provided, the text that matches the span
+will be written to the annotation file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A string containing the brat-formatted annotations.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-gilda.pandas_utils">
+<span id="pandas-utilities"></span><h2>Pandas Utilities<a class="headerlink" href="#module-gilda.pandas_utils" title="Link to this heading"></a></h2>
+<p>Utilities for Pandas.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.pandas_utils.ground_df">
+<span class="sig-prename descclassname"><span class="pre">gilda.pandas_utils.</span></span><span class="sig-name descname"><span class="pre">ground_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_column</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grounder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/pandas_utils.html#ground_df"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.pandas_utils.ground_df" title="Link to this definition"></a></dt>
+<dd><p>Ground the elements of a column in a Pandas dataframe as CURIEs, in-place.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code>) – A pandas dataframe</p></li>
+<li><p><strong>source_column</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]) – The column to ground. This column contains text corresponding
+to named entities’ labels or synonyms</p></li>
+<li><p><strong>target_column</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]) – The column where to put the groundings (either a CURIE string,
+or None). It’s possible to create a new column when passing
+a string for this argument. If not given, will create a new
+column name like <code class="docutils literal notranslate"><span class="pre">&lt;source</span> <span class="pre">column&gt;_grounded</span></code>.</p></li>
+<li><p><strong>grounder</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#gilda.grounder.Grounder" title="gilda.grounder.Grounder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grounder</span></code></a>]) – A custom grounder. If none given, uses the built-in grounder.</p></li>
+<li><p><strong>kwargs</strong> – Keyword arguments passed to <code class="xref py py-meth docutils literal notranslate"><span class="pre">Grounder.ground()</span></code>, could
+include context, organisms, or namespaces.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>The following example shows how to use this function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">gilda</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/OBOAcademy/obook/master/docs/tutorial/linking_data/data.csv&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">gilda</span><span class="o">.</span><span class="n">ground_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">source_column</span><span class="o">=</span><span class="s2">&quot;disease&quot;</span><span class="p">,</span> <span class="n">target_column</span><span class="o">=</span><span class="s2">&quot;disease_curie&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gilda.pandas_utils.ground_df_map">
+<span class="sig-prename descclassname"><span class="pre">gilda.pandas_utils.</span></span><span class="sig-name descname"><span class="pre">ground_df_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_column</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grounder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gilda/pandas_utils.html#ground_df_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gilda.pandas_utils.ground_df_map" title="Link to this definition"></a></dt>
+<dd><p>Ground the elements of a column in a Pandas dataframe as CURIEs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code>) – A pandas dataframe</p></li>
+<li><p><strong>source_column</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]) – The column to ground. This column contains text corresponding
+to named entities’ labels or synonyms</p></li>
+<li><p><strong>grounder</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#gilda.grounder.Grounder" title="gilda.grounder.Grounder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grounder</span></code></a>]) – A custom grounder. If none given, uses the built-in ground.</p></li>
+<li><p><strong>kwargs</strong> – Keyword arguments passed to <code class="xref py py-meth docutils literal notranslate"><span class="pre">Grounder.ground()</span></code>, could
+include context, organisms, or namespaces.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pandas series representing the grounded CURIE strings.
+Contains NaNs if grounding was not successful or if
+there was an NaN in the cell before.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>series</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Software documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, Benjamin M. Gyori.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

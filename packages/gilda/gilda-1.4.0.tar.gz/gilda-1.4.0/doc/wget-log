@@ -1,0 +1,11 @@
+--2021-09-30 16:11:58--  https://s3.console.aws.amazon.com/s3/object/depmap-analysis?region=us-east-1
+Resolving s3.console.aws.amazon.com (s3.console.aws.amazon.com)... 76.223.79.155, 13.248.199.77
+Connecting to s3.console.aws.amazon.com (s3.console.aws.amazon.com)|76.223.79.155|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1023 [text/html]
+Saving to: ‘depmap-analysis?region=us-east-1’
+
+          depmap-an   0%[                    ]       0  --.-KB/s               depmap-analysis?reg 100%[===================>]    1023  --.-KB/s    in 0s      
+
+2021-09-30 16:11:58 (244 MB/s) - ‘depmap-analysis?region=us-east-1’ saved [1023/1023]
+

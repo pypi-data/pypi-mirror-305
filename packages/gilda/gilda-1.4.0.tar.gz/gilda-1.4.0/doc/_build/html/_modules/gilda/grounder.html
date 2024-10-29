@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gilda.grounder &mdash; gilda 1.2.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../../_static/documentation_options.js?v=ca842793"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            gilda
+          </a>
+              <div class="version">
+                1.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/index.html">Gilda modules reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">gilda</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">gilda.grounder</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for gilda.grounder</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">gzip</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">collections.abc</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span><span class="p">,</span> <span class="n">Counter</span>
+<span class="kn">from</span> <span class="nn">textwrap</span> <span class="kn">import</span> <span class="n">dedent</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Iterable</span>
+<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlretrieve</span>
+
+<span class="kn">from</span> <span class="nn">adeft.disambiguate</span> <span class="kn">import</span> <span class="n">load_disambiguator</span>
+<span class="kn">from</span> <span class="nn">adeft.modeling.classify</span> <span class="kn">import</span> <span class="n">load_model_info</span>
+<span class="kn">from</span> <span class="nn">adeft</span> <span class="kn">import</span> <span class="n">available_shortforms</span> <span class="k">as</span> <span class="n">available_adeft_models</span>
+<span class="kn">from</span> <span class="nn">.term</span> <span class="kn">import</span> <span class="n">Term</span><span class="p">,</span> <span class="n">get_identifiers_curie</span><span class="p">,</span> <span class="n">get_identifiers_url</span>
+<span class="kn">from</span> <span class="nn">.process</span> <span class="kn">import</span> <span class="n">normalize</span><span class="p">,</span> <span class="n">replace_dashes</span><span class="p">,</span> <span class="n">replace_greek_uni</span><span class="p">,</span> \
+    <span class="n">replace_greek_latin</span><span class="p">,</span> <span class="n">replace_greek_spelled_out</span><span class="p">,</span> <span class="n">depluralize</span><span class="p">,</span> \
+    <span class="n">replace_roman_arabic</span>
+<span class="kn">from</span> <span class="nn">.scorer</span> <span class="kn">import</span> <span class="n">Match</span><span class="p">,</span> <span class="n">generate_match</span><span class="p">,</span> <span class="n">score</span>
+<span class="kn">from</span> <span class="nn">.resources</span> <span class="kn">import</span> <span class="n">get_gilda_models</span><span class="p">,</span> <span class="n">get_grounding_terms</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Grounder&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GrounderInput&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ScoredMatch&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;load_terms_file&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;load_entries_from_terms_file&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;filter_for_organism&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;load_adeft_models&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;load_gilda_models&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="n">GrounderInput</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Term</span><span class="p">],</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Term</span><span class="p">]]]</span>
+
+<span class="c1">#: The default namespace priority order</span>
+<span class="n">DEFAULT_NAMESPACE_PRIORITY</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;FPLX&#39;</span><span class="p">,</span> <span class="s1">&#39;HGNC&#39;</span><span class="p">,</span> <span class="s1">&#39;UP&#39;</span><span class="p">,</span> <span class="s1">&#39;CHEBI&#39;</span><span class="p">,</span> <span class="s1">&#39;GO&#39;</span><span class="p">,</span> <span class="s1">&#39;MESH&#39;</span><span class="p">,</span> <span class="s1">&#39;DOID&#39;</span><span class="p">,</span> <span class="s1">&#39;HP&#39;</span><span class="p">,</span> <span class="s1">&#39;EFO&#39;</span>
+<span class="p">]</span>
+
+
+<div class="viewcode-block" id="Grounder">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.Grounder">[docs]</a>
+<span class="k">class</span> <span class="nc">Grounder</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class to look up and ground query texts in a terms file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    terms :</span>
+<span class="sd">        Specifies the grounding terms that should be loaded in the Grounder.</span>
+
+<span class="sd">        - If ``None``, the default grounding terms are loaded from the</span>
+<span class="sd">          versioned resource folder.</span>
+<span class="sd">        - If :class:`str` or :class:`pathlib.Path`, it is interpreted</span>
+<span class="sd">          as a path to a grounding terms gzipped TSV file which is then</span>
+<span class="sd">          loaded. If it&#39;s a str and looks like a URL, will be downloaded from the internet</span>
+<span class="sd">        - If :class:`dict`, it is assumed to be a grounding terms dict with</span>
+<span class="sd">          normalized entity strings as keys and :class:`gilda.term.Term`</span>
+<span class="sd">          instances as values.</span>
+<span class="sd">        - If :class:`list`, :class:`set`, :class:`tuple`, or any other iterable,</span>
+<span class="sd">          it is assumed to be a flat list of</span>
+<span class="sd">          :class:`gilda.term.Term` instances.</span>
+<span class="sd">    namespace_priority :</span>
+<span class="sd">        Specifies a term namespace priority order. For example, if multiple</span>
+<span class="sd">        terms are matched with the same score, will use this list to decide</span>
+<span class="sd">        which are given by which namespace appears further towards the front</span>
+<span class="sd">        of the list. By default, :data:`DEFAULT_NAMESPACE_PRIORITY` is used,</span>
+<span class="sd">        which, for example, prioritizes famplex entities over HGNC ones.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">entries</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Term</span><span class="p">]]</span>
+    <span class="n">namespace_priority</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">terms</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">GrounderInput</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">namespace_priority</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="k">if</span> <span class="n">terms</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">terms</span> <span class="o">=</span> <span class="n">get_grounding_terms</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">terms</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">):</span>
+            <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryDirectory</span><span class="p">()</span> <span class="k">as</span> <span class="n">directory</span><span class="p">:</span>
+                <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;terms.tsv.gz&quot;</span><span class="p">)</span>
+                <span class="n">urlretrieve</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>  <span class="c1"># noqa:S310</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">entries</span> <span class="o">=</span> <span class="n">load_terms_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">)):</span>
+            <span class="n">extension</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">terms</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">extension</span> <span class="o">==</span> <span class="s1">&#39;.db&#39;</span><span class="p">:</span>
+                <span class="kn">from</span> <span class="nn">.resources.sqlite_adapter</span> <span class="kn">import</span> <span class="n">SqliteEntries</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">entries</span> <span class="o">=</span> <span class="n">SqliteEntries</span><span class="p">(</span><span class="n">terms</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">entries</span> <span class="o">=</span> <span class="n">load_terms_file</span><span class="p">(</span><span class="n">terms</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entries</span> <span class="o">=</span> <span class="n">terms</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Iterable</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entries</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">terms</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">[</span><span class="n">term</span><span class="o">.</span><span class="n">norm_text</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entries</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;terms is neither a path nor a list of terms,&#39;</span>
+                            <span class="s1">&#39;nor a normalized entry name to term dictionary&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">prefix_index</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_build_prefix_index</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">adeft_disambiguators</span> <span class="o">=</span> <span class="n">find_adeft_models</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gilda_disambiguators</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">namespace_priority</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">DEFAULT_NAMESPACE_PRIORITY</span>
+            <span class="k">if</span> <span class="n">namespace_priority</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span>
+            <span class="n">namespace_priority</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_prefix_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">prefix_index</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">norm_term</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">norm_term</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="n">norm_term</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">parts</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">prefix_index</span><span class="p">[</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prefix_index</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">prefix_index</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Grounder.lookup">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.Grounder.lookup">[docs]</a>
+    <span class="k">def</span> <span class="nf">lookup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Term</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return matching Terms for a given raw string.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        raw_str :</span>
+<span class="sd">            A string to be looked up in the set of Terms that the Grounder</span>
+<span class="sd">            contains.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        :</span>
+<span class="sd">            A list of Terms that are potential matches for the given string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lookups</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_lookups</span><span class="p">(</span><span class="n">raw_str</span><span class="p">)</span>
+        <span class="n">entries</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">lookup</span> <span class="ow">in</span> <span class="n">lookups</span><span class="p">:</span>
+            <span class="n">entries</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lookup</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">return</span> <span class="n">entries</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_generate_lookups</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="c1"># TODO: we should propagate flags about depluralization and possible</span>
+        <span class="c1">#  other modifications made here and take them into account when</span>
+        <span class="c1">#  scoring</span>
+        <span class="c1"># We first add the normalized string itself</span>
+        <span class="n">norm</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">raw_str</span><span class="p">)</span>
+        <span class="n">lookups</span> <span class="o">=</span> <span class="p">{</span><span class="n">norm</span><span class="p">}</span>
+        <span class="c1"># Then we add a version with dashes replaced by spaces</span>
+        <span class="n">norm_spacedash</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">replace_dashes</span><span class="p">(</span><span class="n">raw_str</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">))</span>
+        <span class="n">lookups</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">norm_spacedash</span><span class="p">)</span>
+        <span class="c1"># We then try to replace spelled out greek letters with</span>
+        <span class="c1"># their unicode equivalents or their latin equivalents</span>
+        <span class="n">greek_replaced</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">replace_greek_uni</span><span class="p">(</span><span class="n">raw_str</span><span class="p">))</span>
+        <span class="n">lookups</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">greek_replaced</span><span class="p">)</span>
+        <span class="n">greek_replaced</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">replace_greek_latin</span><span class="p">(</span><span class="n">raw_str</span><span class="p">))</span>
+        <span class="n">lookups</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">greek_replaced</span><span class="p">)</span>
+        <span class="n">greek_replaced</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">replace_greek_spelled_out</span><span class="p">(</span><span class="n">raw_str</span><span class="p">))</span>
+        <span class="n">lookups</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">greek_replaced</span><span class="p">)</span>
+        <span class="c1"># We try exchanging roman and arabic numerals</span>
+        <span class="n">roman_arabic</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">replace_roman_arabic</span><span class="p">(</span><span class="n">raw_str</span><span class="p">))</span>
+        <span class="n">lookups</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">roman_arabic</span><span class="p">)</span>
+        <span class="c1"># Finally, we attempt to depluralize the word</span>
+        <span class="k">for</span> <span class="n">singular</span><span class="p">,</span> <span class="n">rule</span> <span class="ow">in</span> <span class="n">depluralize</span><span class="p">(</span><span class="n">raw_str</span><span class="p">):</span>
+            <span class="n">lookups</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">normalize</span><span class="p">(</span><span class="n">singular</span><span class="p">))</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Looking up the following strings: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span>
+                     <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lookups</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">lookups</span>
+
+    <span class="k">def</span> <span class="nf">_score_namespace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">term</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Apply a priority to the term based on its namespace.</span>
+
+<span class="sd">        .. note::</span>
+
+<span class="sd">            This is currently not included as an explicit score term.</span>
+<span class="sd">            It is just used to rank identically scored entries.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">namespace_priority</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">namespace_priority</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">db</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="Grounder.ground_best">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.Grounder.ground_best">[docs]</a>
+    <span class="k">def</span> <span class="nf">ground_best</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">raw_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">context</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">organisms</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">namespaces</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;ScoredMatch&quot;</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the best scored grounding for a given raw string.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        raw_str : str</span>
+<span class="sd">            A string to be grounded with respect to the set of Terms that the</span>
+<span class="sd">            Grounder contains.</span>
+<span class="sd">        context : Optional[str]</span>
+<span class="sd">            Any additional text that serves as context for disambiguating the</span>
+<span class="sd">            given entity text, used if a model exists for disambiguating the</span>
+<span class="sd">            given text.</span>
+<span class="sd">        organisms : Optional[List[str]]</span>
+<span class="sd">            An optional list of organism identifiers defining a priority</span>
+<span class="sd">            ranking among organisms, if genes/proteins from multiple</span>
+<span class="sd">            organisms match the input. If not provided, the default</span>
+<span class="sd">            [&#39;9606&#39;] i.e., human is used.</span>
+<span class="sd">        namespaces : Optional[List[str]]</span>
+<span class="sd">            A list of namespaces to restrict matches to. This will apply to</span>
+<span class="sd">            both the primary namespace of a matched term, to any subsumed</span>
+<span class="sd">            matches, and to the source namespaces of terms if they were</span>
+<span class="sd">            created using cross-reference mappings. By default, no</span>
+<span class="sd">            restriction is applied.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Optional[gilda.grounder.ScoredMatch]</span>
+<span class="sd">            The best ScoredMatch returned by :meth:`ground` if any are returned,</span>
+<span class="sd">            otherwise None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">scored_matches</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ground</span><span class="p">(</span>
+            <span class="n">raw_str</span><span class="o">=</span><span class="n">raw_str</span><span class="p">,</span>
+            <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">,</span>
+            <span class="n">organisms</span><span class="o">=</span><span class="n">organisms</span><span class="p">,</span>
+            <span class="n">namespaces</span><span class="o">=</span><span class="n">namespaces</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">scored_matches</span><span class="p">:</span>
+            <span class="c1"># Because of the way the ground() function is implemented,</span>
+            <span class="c1"># the first element is guaranteed to have the best score</span>
+            <span class="c1"># (after filtering by namespace)</span>
+            <span class="k">return</span> <span class="n">scored_matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="Grounder.ground">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.Grounder.ground">[docs]</a>
+    <span class="k">def</span> <span class="nf">ground</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_str</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">organisms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+               <span class="n">namespaces</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return scored groundings for a given raw string.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        raw_str : str</span>
+<span class="sd">            A string to be grounded with respect to the set of Terms that the</span>
+<span class="sd">            Grounder contains.</span>
+<span class="sd">        context : Optional[str]</span>
+<span class="sd">            Any additional text that serves as context for disambiguating the</span>
+<span class="sd">            given entity text, used if a model exists for disambiguating the</span>
+<span class="sd">            given text.</span>
+<span class="sd">        organisms : Optional[List[str]]</span>
+<span class="sd">            An optional list of organism identifiers defining a priority</span>
+<span class="sd">            ranking among organisms, if genes/proteins from multiple</span>
+<span class="sd">            organisms match the input. If not provided, the default</span>
+<span class="sd">            [&#39;9606&#39;] i.e., human is used.</span>
+<span class="sd">        namespaces : Optional[List[str]]</span>
+<span class="sd">            A list of namespaces to restrict matches to. This will apply to</span>
+<span class="sd">            both the primary namespace of a matched term, to any subsumed</span>
+<span class="sd">            matches, and to the source namespaces of terms if they were</span>
+<span class="sd">            created using cross-reference mappings. By default, no</span>
+<span class="sd">            restriction is applied.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list[gilda.grounder.ScoredMatch]</span>
+<span class="sd">            A list of ScoredMatch objects representing the groundings sorted</span>
+<span class="sd">            by decreasing score.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">organisms</span><span class="p">:</span>
+            <span class="n">organisms</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;9606&#39;</span><span class="p">]</span>
+        <span class="c1"># Stripping whitespaces is done up front directly on the raw string</span>
+        <span class="c1"># so that all lookups and comparisons are done with respect to the</span>
+        <span class="c1"># stripped string</span>
+        <span class="n">raw_str</span> <span class="o">=</span> <span class="n">raw_str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="c1"># Initial lookup of all possible matches</span>
+        <span class="n">entries</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">raw_str</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Filtering </span><span class="si">%d</span><span class="s1"> entries by organism&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">entries</span><span class="p">))</span>
+        <span class="n">entries</span> <span class="o">=</span> <span class="n">filter_for_organism</span><span class="p">(</span><span class="n">entries</span><span class="p">,</span> <span class="n">organisms</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Comparing </span><span class="si">%s</span><span class="s1"> with </span><span class="si">%d</span><span class="s1"> entries&#39;</span> <span class="o">%</span>
+                     <span class="p">(</span><span class="n">raw_str</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">entries</span><span class="p">)))</span>
+        <span class="c1"># For each entry to compare to, we generate a match data structure</span>
+        <span class="c1"># describing the comparison of the raw (unnormalized) input string</span>
+        <span class="c1"># and the entity text corresponding to the matched Term. This match</span>
+        <span class="c1"># is then further scored to account for the nature of the grounding</span>
+        <span class="c1"># itself.</span>
+        <span class="n">scored_matches</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">:</span>
+            <span class="n">match</span> <span class="o">=</span> <span class="n">generate_match</span><span class="p">(</span><span class="n">raw_str</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+            <span class="n">sc</span> <span class="o">=</span> <span class="n">score</span><span class="p">(</span><span class="n">match</span><span class="p">,</span> <span class="n">term</span><span class="p">)</span>
+            <span class="n">scored_match</span> <span class="o">=</span> <span class="n">ScoredMatch</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">sc</span><span class="p">,</span> <span class="n">match</span><span class="p">)</span>
+            <span class="n">scored_matches</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scored_match</span><span class="p">)</span>
+
+        <span class="c1"># Return early if we don&#39;t have anything to avoid calling other</span>
+        <span class="c1"># functions with no matches</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">scored_matches</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">scored_matches</span>
+
+        <span class="c1"># Merge equivalent matches</span>
+        <span class="n">unique_scores</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_merge_equivalent_matches</span><span class="p">(</span><span class="n">scored_matches</span><span class="p">)</span>
+
+        <span class="c1"># If there&#39;s context available, disambiguate based on that</span>
+        <span class="k">if</span> <span class="n">context</span><span class="p">:</span>
+            <span class="n">unique_scores</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">disambiguate</span><span class="p">(</span><span class="n">raw_str</span><span class="p">,</span> <span class="n">unique_scores</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+        <span class="c1"># Then sort by decreasing score</span>
+        <span class="n">rank_fun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">score</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_score_namespace</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">term</span><span class="p">))</span>
+        <span class="n">unique_scores</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">unique_scores</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">rank_fun</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># If we have a namespace constraint, we filter to the given</span>
+        <span class="c1"># namespaces.</span>
+        <span class="k">if</span> <span class="n">namespaces</span><span class="p">:</span>
+            <span class="n">unique_scores</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">scored_match</span> <span class="k">for</span> <span class="n">scored_match</span> <span class="ow">in</span> <span class="n">unique_scores</span>
+                <span class="k">if</span> <span class="n">scored_match</span><span class="o">.</span><span class="n">get_namespaces</span><span class="p">()</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">namespaces</span><span class="p">)</span>
+            <span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">unique_scores</span></div>
+
+
+    <span class="k">def</span> <span class="nf">disambiguate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_str</span><span class="p">,</span> <span class="n">scored_matches</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="c1"># This is only called if context was passed in so we do lazy</span>
+        <span class="c1"># loading here</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gilda_disambiguators</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gilda_disambiguators</span> <span class="o">=</span> <span class="n">load_gilda_models</span><span class="p">()</span>
+        <span class="c1"># If we don&#39;t have a disambiguator for this string, we return with</span>
+        <span class="c1"># the original scores intact. Otherwise, we attempt to disambiguate.</span>
+        <span class="k">if</span> <span class="n">raw_str</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adeft_disambiguators</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Running Adeft disambiguation for </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">raw_str</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">scored_matches</span> <span class="o">=</span> \
+                    <span class="bp">self</span><span class="o">.</span><span class="n">disambiguate_adeft</span><span class="p">(</span><span class="n">raw_str</span><span class="p">,</span> <span class="n">scored_matches</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">raw_str</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gilda_disambiguators</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Running Gilda disambiguation for </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">raw_str</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">scored_matches</span> <span class="o">=</span> \
+                    <span class="bp">self</span><span class="o">.</span><span class="n">disambiguate_gilda</span><span class="p">(</span><span class="n">raw_str</span><span class="p">,</span> <span class="n">scored_matches</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">scored_matches</span>
+
+    <span class="k">def</span> <span class="nf">disambiguate_adeft</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_str</span><span class="p">,</span> <span class="n">scored_matches</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="c1"># We find the disambiguator for the given string and pass in</span>
+        <span class="c1"># context</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">adeft_disambiguators</span><span class="p">[</span><span class="n">raw_str</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">adeft_disambiguators</span><span class="p">[</span><span class="n">raw_str</span><span class="p">]</span> <span class="o">=</span> <span class="n">load_disambiguator</span><span class="p">(</span><span class="n">raw_str</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">adeft_disambiguators</span><span class="p">[</span><span class="n">raw_str</span><span class="p">]</span><span class="o">.</span><span class="n">disambiguate</span><span class="p">([</span><span class="n">context</span><span class="p">])</span>
+        <span class="c1"># The actual grounding dict is at this index in the result</span>
+        <span class="n">grounding_dict</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Result from Adeft: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">grounding_dict</span><span class="p">))</span>
+        <span class="c1"># We attempt to get the score for the &#39;ungrounded&#39; entry</span>
+        <span class="n">ungrounded_score</span> <span class="o">=</span> <span class="n">grounding_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ungrounded&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="c1"># Now we check if each scored match has a corresponding Adeft</span>
+        <span class="c1"># grounding and score. If we find one, we multiply the original</span>
+        <span class="c1"># match score with the Adeft score. Otherwise, we multiply the</span>
+        <span class="c1"># original score with the &#39;ungrounded&#39; score given by Adeft.</span>
+        <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">scored_matches</span><span class="p">:</span>
+            <span class="n">has_adeft_grounding</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">for</span> <span class="n">grounding</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">grounding_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="c1"># There is a corner case here where grounding is</span>
+                <span class="c1"># some name other than &#39;ungrounded&#39; but is not a proper</span>
+                <span class="c1"># ns:id pair.</span>
+                <span class="k">if</span> <span class="n">grounding</span> <span class="o">==</span> <span class="s1">&#39;ungrounded&#39;</span> <span class="ow">or</span> <span class="s1">&#39;:&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">grounding</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">db</span><span class="p">,</span> <span class="nb">id</span> <span class="o">=</span> <span class="n">grounding</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">match</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">db</span> <span class="o">==</span> <span class="n">db</span> <span class="ow">and</span> <span class="n">match</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
+                    <span class="k">match</span><span class="o">.</span><span class="n">disambiguation</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;adeft&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="n">score</span><span class="p">,</span>
+                                            <span class="s1">&#39;match&#39;</span><span class="p">:</span> <span class="s1">&#39;grounded&#39;</span><span class="p">}</span>
+                    <span class="k">match</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+                    <span class="n">has_adeft_grounding</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">break</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">has_adeft_grounding</span><span class="p">:</span>
+                <span class="k">match</span><span class="o">.</span><span class="n">disambiguation</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;adeft&#39;</span><span class="p">,</span>
+                                        <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="n">ungrounded_score</span><span class="p">,</span>
+                                        <span class="s1">&#39;match&#39;</span><span class="p">:</span> <span class="s1">&#39;ungrounded&#39;</span><span class="p">}</span>
+                <span class="k">match</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">ungrounded_score</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">scored_matches</span>
+
+    <span class="k">def</span> <span class="nf">disambiguate_gilda</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_str</span><span class="p">,</span> <span class="n">scored_matches</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gilda_disambiguators</span><span class="p">[</span><span class="n">raw_str</span><span class="p">]</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">([</span><span class="n">context</span><span class="p">])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;No result from disambiguation.&#39;</span><span class="p">)</span>
+        <span class="n">grounding_dict</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">scored_matches</span><span class="p">:</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">:</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">db</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+            <span class="n">score_entry</span> <span class="o">=</span> <span class="n">grounding_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">score_entry</span> <span class="k">if</span> <span class="n">score_entry</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mf">0.0</span>
+            <span class="k">match</span><span class="o">.</span><span class="n">disambiguation</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;gilda&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="n">score</span><span class="p">,</span>
+                                    <span class="s1">&#39;match&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;grounded&#39;</span>
+                                              <span class="k">if</span> <span class="n">score_entry</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                                              <span class="k">else</span> <span class="s1">&#39;ungrounded&#39;</span><span class="p">)}</span>
+            <span class="k">match</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">scored_matches</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_merge_equivalent_matches</span><span class="p">(</span><span class="n">scored_matches</span><span class="p">):</span>
+        <span class="n">unique_entries</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># Characterize an entry by its grounding</span>
+        <span class="n">term_dbid</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">db</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="c1"># Sort and group scores by grounding</span>
+        <span class="n">scored_matches</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">term_dbid</span><span class="p">)</span>
+        <span class="n">entry_groups</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">scored_matches</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">term_dbid</span><span class="p">)</span>
+        <span class="c1"># Now look at each group and find the highest scoring match</span>
+        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">entry_group</span> <span class="ow">in</span> <span class="n">entry_groups</span><span class="p">:</span>
+            <span class="n">entries</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">entry_group</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">score</span><span class="p">,</span>
+                             <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">entries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">subsumed_terms</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">term</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span>
+            <span class="n">unique_entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entries</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="c1"># Return the list of unique entries</span>
+        <span class="k">return</span> <span class="n">unique_entries</span>
+
+<div class="viewcode-block" id="Grounder.get_models">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.Grounder.get_models">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_models</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a list of entity texts for which disambiguation models exist.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list[str]</span>
+<span class="sd">            The list of entity texts for which a disambiguation model is</span>
+<span class="sd">            available.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gilda_disambiguators</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gilda_disambiguators</span> <span class="o">=</span> <span class="n">load_gilda_models</span><span class="p">()</span>
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gilda_disambiguators</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span></div>
+
+
+<div class="viewcode-block" id="Grounder.get_names">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.Grounder.get_names">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a list of entity texts corresponding to a given database ID.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        db : str</span>
+<span class="sd">            The database in which the ID is an entry, e.g., HGNC.</span>
+<span class="sd">        id : str</span>
+<span class="sd">            The ID of an entry in the database.</span>
+<span class="sd">        status : Optional[str]</span>
+<span class="sd">            If given, only entity texts with the given status e.g., &quot;synonym&quot;</span>
+<span class="sd">            are returned.</span>
+<span class="sd">        source : Optional[str]</span>
+<span class="sd">            If given, only entity texts from the given source e.g., &quot;uniprot&quot;</span>
+<span class="sd">            are returned.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        names: list[str]</span>
+<span class="sd">            A list of entity texts corresponding to the given database/ID</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">entries</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">:</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">db</span> <span class="o">==</span> <span class="n">db</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="nb">id</span><span class="p">)</span> <span class="ow">and</span> \
+                   <span class="p">(</span><span class="ow">not</span> <span class="n">status</span> <span class="ow">or</span> <span class="n">entry</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">status</span><span class="p">)</span> <span class="ow">and</span> \
+                   <span class="p">(</span><span class="ow">not</span> <span class="n">source</span> <span class="ow">or</span> <span class="n">entry</span><span class="o">.</span><span class="n">source</span> <span class="o">==</span> <span class="n">source</span><span class="p">):</span>
+                    <span class="n">names</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Grounder.get_ambiguities">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.Grounder.get_ambiguities">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_ambiguities</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                        <span class="n">skip_names</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                        <span class="n">skip_curated</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                        <span class="n">skip_name_matches</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                        <span class="n">skip_species_ambigs</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Term</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a list of ambiguous term groups in the grounder.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        skip_names :</span>
+<span class="sd">            If True, groups of terms where one has the &quot;name&quot; status are</span>
+<span class="sd">            skipped. This makes sense usually since these are prioritized over</span>
+<span class="sd">            synonyms anyway.</span>
+<span class="sd">        skip_curated :</span>
+<span class="sd">            If True, groups of terms where one has the &quot;curated&quot; status</span>
+<span class="sd">            are skipped. This makes sense usually since these are prioritized</span>
+<span class="sd">            over synonyms anyway.</span>
+<span class="sd">        skip_name_matches :</span>
+<span class="sd">            If True, groups of terms that all share the same standard name</span>
+<span class="sd">            are skipped. This is effective at eliminating spurious ambiguities</span>
+<span class="sd">            due to unresolved cross-references between equivalent terms</span>
+<span class="sd">            in different namespaces.</span>
+<span class="sd">        skip_species_ambigs :</span>
+<span class="sd">            If True, groups of terms that are all genes or proteins, and are</span>
+<span class="sd">            all from different species (one term from each species) are skipped.</span>
+<span class="sd">            This is effective at eliminating ambiguities between orthologous</span>
+<span class="sd">            genes in different species that are usually resolved using the</span>
+<span class="sd">            organism priority list.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ambig_entries</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">terms</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">terms</span><span class="p">:</span>
+                <span class="c1"># We consider it an ambiguity if the same text entry appears</span>
+                <span class="c1"># multiple times</span>
+                <span class="n">key</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">text</span>
+                <span class="n">ambig_entries</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+
+        <span class="c1"># It&#39;s only an ambiguity if there are two entries at least</span>
+        <span class="n">ambig_entries</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">ambig_entries</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">}</span>
+
+        <span class="n">ambigs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">text</span><span class="p">,</span> <span class="n">entries</span> <span class="ow">in</span> <span class="n">ambig_entries</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">dbs</span> <span class="o">=</span> <span class="p">{</span><span class="n">e</span><span class="o">.</span><span class="n">db</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">}</span>
+            <span class="n">db_ids</span> <span class="o">=</span> <span class="p">{(</span><span class="n">e</span><span class="o">.</span><span class="n">db</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">}</span>
+            <span class="n">statuses</span> <span class="o">=</span> <span class="p">{</span><span class="n">e</span><span class="o">.</span><span class="n">status</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">}</span>
+            <span class="n">sources</span> <span class="o">=</span> <span class="p">{</span><span class="n">e</span><span class="o">.</span><span class="n">source</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">}</span>
+            <span class="n">names</span> <span class="o">=</span> <span class="p">{</span><span class="n">e</span><span class="o">.</span><span class="n">entry_name</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">}</span>
+            <span class="c1"># If the entries all point to the same ID, we skip it</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">db_ids</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="c1"># If there is a name in statuses, we skip it because it&#39;s</span>
+            <span class="c1"># prioritized</span>
+            <span class="k">if</span> <span class="n">skip_names</span> <span class="ow">and</span> <span class="s1">&#39;name&#39;</span> <span class="ow">in</span> <span class="n">statuses</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="c1"># We skip curated terms because they are prioritized anyway</span>
+            <span class="k">if</span> <span class="n">skip_curated</span> <span class="ow">and</span> <span class="s1">&#39;curated&#39;</span> <span class="ow">in</span> <span class="n">statuses</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="c1"># If there is an adeft model already, we skip it</span>
+            <span class="k">if</span> <span class="s1">&#39;adeft&#39;</span> <span class="ow">in</span> <span class="n">sources</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">skip_name_matches</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">({</span><span class="n">e</span><span class="o">.</span><span class="n">entry_name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">})</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">skip_species_ambigs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">dbs</span> <span class="o">&lt;=</span> <span class="p">{</span><span class="s1">&#39;HGNC&#39;</span><span class="p">,</span> <span class="s1">&#39;UP&#39;</span><span class="p">}</span> <span class="ow">and</span> \
+                        <span class="nb">len</span><span class="p">({</span><span class="n">e</span><span class="o">.</span><span class="n">organism</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">})</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">entries</span><span class="p">):</span>
+                    <span class="k">continue</span>
+            <span class="c1"># Everything else is an ambiguity</span>
+            <span class="n">ambigs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ambigs</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_iter_terms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">terms</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">yield from</span> <span class="n">terms</span>
+
+<div class="viewcode-block" id="Grounder.summary_str">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.Grounder.summary_str">[docs]</a>
+    <span class="k">def</span> <span class="nf">summary_str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Summarize the contents of the grounder.&quot;&quot;&quot;</span>
+        <span class="n">namespaces</span> <span class="o">=</span> <span class="p">{</span><span class="n">ns</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_iter_terms</span><span class="p">()</span> <span class="k">for</span> <span class="n">ns</span> <span class="ow">in</span> <span class="n">term</span><span class="o">.</span><span class="n">get_namespaces</span><span class="p">()}</span>
+        <span class="n">status_counter</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">status</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_iter_terms</span><span class="p">()))</span>
+        <span class="k">return</span> <span class="n">dedent</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">        Lookups: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span>
+<span class="s2">        Terms: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">terms</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">terms</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">values</span><span class="p">())</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span>
+<span class="s2">        Term Namespaces: </span><span class="si">{</span><span class="n">namespaces</span><span class="si">}</span>
+<span class="s2">        Term Statuses: </span><span class="si">{</span><span class="n">status_counter</span><span class="si">}</span>
+<span class="s2">        Adeft Disambiguators: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">adeft_disambiguators</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span>
+<span class="s2">        Gilda Disambiguators: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gilda_disambiguators</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Grounder.print_summary">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.Grounder.print_summary">[docs]</a>
+    <span class="k">def</span> <span class="nf">print_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Print the summary of this grounder.&quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">summary_str</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="ScoredMatch">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.ScoredMatch">[docs]</a>
+<span class="k">class</span> <span class="nc">ScoredMatch</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class representing a scored match to a grounding term.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    -----------</span>
+<span class="sd">    term : gilda.grounder.Term</span>
+<span class="sd">        The Term that the scored match is for.</span>
+<span class="sd">    score : float</span>
+<span class="sd">        The score associated with the match.</span>
+<span class="sd">    match : gilda.scorer.Match</span>
+<span class="sd">        The Match object characterizing the match to the Term.</span>
+<span class="sd">    disambiguation : Optional[dict]</span>
+<span class="sd">        Meta-information about disambiguation, when available.</span>
+<span class="sd">    subsumed_terms : Optional[list[gilda.grounder.Term]]</span>
+<span class="sd">        A list of additional Term objects that also matched, have the same</span>
+<span class="sd">        db/id value as the term associated with the match, but were further</span>
+<span class="sd">        down the score ranking. In some cases examining the subsumed terms</span>
+<span class="sd">        associated with a match can provide additional metadata in</span>
+<span class="sd">        downstream applications.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">term</span><span class="p">:</span> <span class="n">Term</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="n">match</span><span class="p">:</span> <span class="n">Match</span><span class="p">,</span> <span class="n">disambiguation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">subsumed_terms</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">term</span> <span class="o">=</span> <span class="n">term</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">get_idenfiers_url</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="n">score</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">match</span> <span class="o">=</span> <span class="n">match</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">disambiguation</span> <span class="o">=</span> <span class="n">disambiguation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subsumed_terms</span> <span class="o">=</span> <span class="n">subsumed_terms</span> <span class="k">if</span> <span class="n">subsumed_terms</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">disamb_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">disambiguation</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> \
+            <span class="p">(</span><span class="s1">&#39;,disambiguation=&#39;</span> <span class="o">+</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">disambiguation</span><span class="p">))</span>
+        <span class="k">return</span> <span class="s1">&#39;ScoredMatch(</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s%s</span><span class="s1">)&#39;</span> <span class="o">%</span> \
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">term</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">score</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">match</span><span class="p">,</span> <span class="n">disamb_str</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">js</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;term&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">to_json</span><span class="p">(),</span>
+            <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
+            <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">score</span><span class="p">,</span>
+            <span class="s1">&#39;match&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">match</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">disambiguation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">js</span><span class="p">[</span><span class="s1">&#39;disambiguation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">disambiguation</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">subsumed_terms</span><span class="p">:</span>
+            <span class="n">js</span><span class="p">[</span><span class="s1">&#39;subsumed_terms&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">term</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+                                    <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">subsumed_terms</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">js</span>
+
+    <span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Multiplying the score of &quot;</span><span class="si">%s</span><span class="s1">&quot; with </span><span class="si">%.3f</span><span class="s1">&#39;</span>
+                     <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">entry_name</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">*</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="ScoredMatch.get_namespaces">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.ScoredMatch.get_namespaces">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_namespaces</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return all namespaces for this match including from mapped and</span>
+<span class="sd">        subsumed terms.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        :</span>
+<span class="sd">            A set of strings representing namespaces for terms involved in</span>
+<span class="sd">            this match, including the namespace for the primary term as well</span>
+<span class="sd">            as any subsumed terms, and groundings that come from having</span>
+<span class="sd">            mapped an original source grounding during grounding resource</span>
+<span class="sd">            construction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">ns</span> <span class="k">for</span> <span class="n">ns</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_groundings</span><span class="p">()}</span></div>
+
+
+<div class="viewcode-block" id="ScoredMatch.get_groundings">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.ScoredMatch.get_groundings">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_groundings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return all groundings for this match including from mapped and</span>
+<span class="sd">        subsumed terms.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        :</span>
+<span class="sd">            A set of tuples representing groundings for this match including</span>
+<span class="sd">            the grounding for the primary term as well as any subsumed</span>
+<span class="sd">            terms, and groundings that come from having mapped an original</span>
+<span class="sd">            source grounding during grounding resource construction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">term_groundings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">term</span><span class="o">.</span><span class="n">get_groundings</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">subsumed_terms</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">sub_term</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">subsumed_terms</span><span class="p">:</span>
+                <span class="n">term_groundings</span> <span class="o">|=</span> <span class="n">sub_term</span><span class="o">.</span><span class="n">get_groundings</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">term_groundings</span></div>
+
+
+<div class="viewcode-block" id="ScoredMatch.get_grounding_dict">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.ScoredMatch.get_grounding_dict">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_grounding_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the groundings as CURIEs and URLs.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">get_identifiers_curie</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">db_id</span><span class="p">):</span> <span class="n">get_identifiers_url</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">db_id</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">db</span><span class="p">,</span> <span class="n">db_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_groundings</span><span class="p">()</span>
+        <span class="p">}</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="load_entries_from_terms_file">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.load_entries_from_terms_file">[docs]</a>
+<span class="k">def</span> <span class="nf">load_entries_from_terms_file</span><span class="p">(</span><span class="n">terms_file</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Term</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Yield Terms from a compressed terms TSV file path.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    terms_file :</span>
+<span class="sd">        Path to a compressed TSV terms file with columns corresponding to the</span>
+<span class="sd">        serialized elements of a Term.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        Terms loaded from the file yielded by a generator.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">terms_file</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="n">entries</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">fh</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="c1"># Skip header</span>
+        <span class="nb">next</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+            <span class="n">row_nones</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">if</span> <span class="n">r</span> <span class="k">else</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">row</span><span class="p">]</span>
+            <span class="k">yield</span> <span class="n">Term</span><span class="p">(</span><span class="o">*</span><span class="n">row_nones</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="load_terms_file">
+<a class="viewcode-back" href="../../modules/index.html#gilda.grounder.load_terms_file">[docs]</a>
+<span class="k">def</span> <span class="nf">load_terms_file</span><span class="p">(</span><span class="n">terms_file</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Term</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load a TSV file containing terms into a lookup dictionary.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    terms_file :</span>
+<span class="sd">        Path to a compressed TSV terms file with columns corresponding to the</span>
+<span class="sd">        serialized elements of a Term.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        A lookup dictionary whose keys are normalized entity texts, and values</span>
+<span class="sd">        are lists of Terms with that normalized entity text.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">entries</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">load_entries_from_terms_file</span><span class="p">(</span><span class="n">terms_file</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">norm_text</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">:</span>
+            <span class="n">entries</span><span class="p">[</span><span class="n">term</span><span class="o">.</span><span class="n">norm_text</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">entries</span><span class="p">[</span><span class="n">term</span><span class="o">.</span><span class="n">norm_text</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">term</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">entries</span></div>
+
+
+
+<span class="k">def</span> <span class="nf">filter_for_organism</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="n">organisms</span><span class="p">):</span>
+    <span class="c1"># First we organize terms by organism, including None</span>
+    <span class="n">terms_by_organism</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">terms</span><span class="p">:</span>
+        <span class="c1"># We filter out any organisms that aren&#39;t in the list provided</span>
+        <span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">organism</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">term</span><span class="o">.</span><span class="n">organism</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">organisms</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">terms_by_organism</span><span class="p">[</span><span class="n">term</span><span class="o">.</span><span class="n">organism</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+    <span class="c1"># We first take the terms without organism</span>
+    <span class="n">all_terms</span> <span class="o">=</span> <span class="n">terms_by_organism</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+    <span class="c1"># We now find the top organism for which we have at least</span>
+    <span class="c1"># one term and then add the corresponding terms to the list</span>
+    <span class="c1"># of all terms</span>
+    <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">terms_by_organism</span><span class="p">)</span> <span class="o">!=</span> <span class="p">{</span><span class="kc">None</span><span class="p">}:</span>
+        <span class="n">top_organism</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">terms_by_organism</span><span class="p">)</span> <span class="o">-</span> <span class="p">{</span><span class="kc">None</span><span class="p">},</span>
+                           <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">organisms</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">all_terms</span> <span class="o">+=</span> <span class="n">terms_by_organism</span><span class="p">[</span><span class="n">top_organism</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">all_terms</span>
+
+
+<span class="k">def</span> <span class="nf">find_adeft_models</span><span class="p">():</span>
+    <span class="n">adeft_disambiguators</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">shortform</span> <span class="ow">in</span> <span class="n">available_adeft_models</span><span class="p">:</span>
+        <span class="n">adeft_disambiguators</span><span class="p">[</span><span class="n">shortform</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">adeft_disambiguators</span>
+
+
+<span class="k">def</span> <span class="nf">load_adeft_models</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">shortform</span><span class="p">:</span> <span class="n">load_disambiguator</span><span class="p">(</span><span class="n">shortform</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">shortform</span> <span class="ow">in</span> <span class="n">find_adeft_models</span><span class="p">()}</span>
+
+
+<span class="k">def</span> <span class="nf">load_gilda_models</span><span class="p">(</span><span class="n">cutoff</span><span class="o">=</span><span class="mf">0.7</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">get_gilda_models</span><span class="p">(),</span> <span class="s1">&#39;rt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="n">models</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">load_model_info</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                  <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                  <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;stats&#39;</span><span class="p">][</span><span class="s1">&#39;f1&#39;</span><span class="p">][</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">cutoff</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">models</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, Benjamin M. Gyori.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

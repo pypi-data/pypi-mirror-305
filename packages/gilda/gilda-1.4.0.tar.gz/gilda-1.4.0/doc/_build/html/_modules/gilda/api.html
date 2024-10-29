@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gilda.api &mdash; gilda 1.2.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../../_static/documentation_options.js?v=ca842793"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            gilda
+          </a>
+              <div class="version">
+                1.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/index.html">Gilda modules reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">gilda</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">gilda.api</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for gilda.api</h1><div class="highlight"><pre>
+<span></span><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;ground&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get_models&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get_names&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get_grounder&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;make_grounder&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;annotate&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">gilda.grounder</span> <span class="kn">import</span> <span class="n">Grounder</span>
+<span class="kn">from</span> <span class="nn">gilda.term</span> <span class="kn">import</span> <span class="n">Term</span>
+
+
+<span class="k">class</span> <span class="nc">GrounderInstance</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">grounder</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">get_grounder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">grounder</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">grounder</span> <span class="o">=</span> <span class="n">Grounder</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">grounder</span>
+
+    <span class="k">def</span> <span class="nf">ground</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">organisms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+               <span class="n">namespaces</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_grounder</span><span class="p">()</span><span class="o">.</span><span class="n">ground</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">,</span>
+                                          <span class="n">organisms</span><span class="o">=</span><span class="n">organisms</span><span class="p">,</span>
+                                          <span class="n">namespaces</span><span class="o">=</span><span class="n">namespaces</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_models</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_grounder</span><span class="p">()</span><span class="o">.</span><span class="n">get_models</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_grounder</span><span class="p">()</span><span class="o">.</span><span class="n">get_names</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span>
+                                             <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="p">,</span>
+                                             <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">prefix_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_grounder</span><span class="p">()</span><span class="o">.</span><span class="n">prefix_index</span>
+
+
+<span class="n">grounder</span> <span class="o">=</span> <span class="n">GrounderInstance</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="ground">
+<a class="viewcode-back" href="../../modules/index.html#gilda.api.ground">[docs]</a>
+<span class="k">def</span> <span class="nf">ground</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">organisms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a list of scored matches for a text to ground.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The entity text to be grounded.</span>
+<span class="sd">    context : Optional[str]</span>
+<span class="sd">        Any additional text that serves as context for disambiguating the</span>
+<span class="sd">        given entity text, used if a model exists for disambiguating the</span>
+<span class="sd">        given text.</span>
+<span class="sd">    organisms : Optional[List[str]]</span>
+<span class="sd">        A list of taxonomy identifiers to use as a priority list</span>
+<span class="sd">        when surfacing matches for proteins/genes from multiple organisms.</span>
+<span class="sd">    namespaces : Optional[List[str]]</span>
+<span class="sd">        A list of namespaces to restrict the matches to. By default, no</span>
+<span class="sd">        restriction is applied.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list[gilda.grounder.ScoredMatch]</span>
+<span class="sd">        A list of ScoredMatch objects representing the groundings.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Ground a string corresponding to an entity name, label, or synonym</span>
+
+<span class="sd">    &gt;&gt;&gt; import gilda</span>
+<span class="sd">    &gt;&gt;&gt; scored_matches = gilda.ground(&#39;mapt&#39;)</span>
+
+<span class="sd">    The matches are sorted in descending order by score, and in the event of</span>
+<span class="sd">    a tie, by the namespace of the primary grounding. Each scored match has a</span>
+<span class="sd">    :class:`gilda.term.Term` object that contain information about the primary</span>
+<span class="sd">    grounding.</span>
+
+<span class="sd">    &gt;&gt;&gt; scored_matches[0].term.db</span>
+<span class="sd">    &#39;hgnc&#39;</span>
+<span class="sd">    &gt;&gt;&gt; scored_matches[0].term.id</span>
+<span class="sd">    &#39;6893&#39;</span>
+<span class="sd">    &gt;&gt;&gt; scored_matches[0].term.get_curie()</span>
+<span class="sd">    &#39;hgnc:6893&#39;</span>
+
+<span class="sd">    The score for each match can be accessed directly:</span>
+
+<span class="sd">    &gt;&gt;&gt; scored_matches[0].score</span>
+<span class="sd">    0.7623</span>
+
+<span class="sd">    The rationale for each match is contained in the ``match`` attribute</span>
+<span class="sd">    whose fields are described in :class:`gilda.scorer.Match`:</span>
+
+<span class="sd">    &gt;&gt;&gt; match_object = scored_matches[0].match</span>
+
+<span class="sd">    Give optional context to be used by Gilda&#39;s disambiguation models, if available</span>
+
+<span class="sd">    &gt;&gt;&gt; scored_matches = gilda.ground(&#39;ER&#39;, context=&#39;Calcium is released from the ER.&#39;)</span>
+
+<span class="sd">    Only return results from a certain namespace, such as when a family and gene have the same name</span>
+
+<span class="sd">    &gt;&gt;&gt; scored_matches = gilda.ground(&#39;ESR&#39;, namespaces=[&quot;hgnc&quot;])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">grounder</span><span class="o">.</span><span class="n">ground</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">,</span> <span class="n">organisms</span><span class="o">=</span><span class="n">organisms</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="n">namespaces</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="annotate">
+<a class="viewcode-back" href="../../modules/index.html#gilda.api.annotate">[docs]</a>
+<span class="k">def</span> <span class="nf">annotate</span><span class="p">(</span>
+    <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">sent_split_fun</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">organisms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">namespaces</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">context_text</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Annotate a given text with Gilda (i.e., do named entity recognition).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be annotated.</span>
+<span class="sd">    sent_split_fun : Callable, optional</span>
+<span class="sd">        A function that splits the text into sentences. The default is</span>
+<span class="sd">        :func:`nltk.tokenize.sent_tokenize`. The function should take a string</span>
+<span class="sd">        as input and return an iterable of strings corresponding to the sentences</span>
+<span class="sd">        in the input text.</span>
+<span class="sd">    organisms : list[str], optional</span>
+<span class="sd">        A list of organism names to pass to the grounder. If not provided,</span>
+<span class="sd">        human is used.</span>
+<span class="sd">    namespaces : list[str], optional</span>
+<span class="sd">        A list of namespaces to pass to the grounder to restrict the matches</span>
+<span class="sd">        to. By default, no restriction is applied.</span>
+<span class="sd">    context_text :</span>
+<span class="sd">        A longer span of text that serves as additional context for the text</span>
+<span class="sd">        being annotated for disambiguation purposes.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list[tuple[str, list[ScoredMatch], int, int]]</span>
+<span class="sd">        A list of matches where each match is a tuple consisting of</span>
+<span class="sd">        the matches text span, the list of ScoredMatches, and the</span>
+<span class="sd">        start and end character offsets of the text span.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">.ner</span> <span class="kn">import</span> <span class="n">annotate</span> <span class="k">as</span> <span class="n">_annotate</span>
+
+    <span class="k">return</span> <span class="n">_annotate</span><span class="p">(</span>
+        <span class="n">text</span><span class="p">,</span>
+        <span class="n">grounder</span><span class="o">=</span><span class="n">grounder</span><span class="p">,</span>
+        <span class="n">sent_split_fun</span><span class="o">=</span><span class="n">sent_split_fun</span><span class="p">,</span>
+        <span class="n">organisms</span><span class="o">=</span><span class="n">organisms</span><span class="p">,</span>
+        <span class="n">namespaces</span><span class="o">=</span><span class="n">namespaces</span><span class="p">,</span>
+        <span class="n">context_text</span><span class="o">=</span><span class="n">context_text</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_models">
+<a class="viewcode-back" href="../../modules/index.html#gilda.api.get_models">[docs]</a>
+<span class="k">def</span> <span class="nf">get_models</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a list of entity texts for which disambiguation models exist.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list[str]</span>
+<span class="sd">        The list of entity texts for which a disambiguation model is</span>
+<span class="sd">        available.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">grounder</span><span class="o">.</span><span class="n">get_models</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="get_names">
+<a class="viewcode-back" href="../../modules/index.html#gilda.api.get_names">[docs]</a>
+<span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a list of entity texts corresponding to a given database ID.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    db : str</span>
+<span class="sd">        The database in which the ID is an entry, e.g., HGNC.</span>
+<span class="sd">    id : str</span>
+<span class="sd">        The ID of an entry in the database.</span>
+<span class="sd">    status : Optional[str]</span>
+<span class="sd">        If given, only entity texts with the given status e.g., &quot;synonym&quot;</span>
+<span class="sd">        are returned.</span>
+<span class="sd">    source : Optional[str]</span>
+<span class="sd">        If given, only entity texts from the given source e.g., &quot;uniprot&quot;</span>
+<span class="sd">        are returned.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">grounder</span><span class="o">.</span><span class="n">get_names</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_grounder">
+<a class="viewcode-back" href="../../modules/index.html#gilda.api.get_grounder">[docs]</a>
+<span class="k">def</span> <span class="nf">get_grounder</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Grounder</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize and return the default Grounder instance.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        A Grounder instance whose attributes and methods can be used</span>
+<span class="sd">        directly.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">grounder</span><span class="o">.</span><span class="n">get_grounder</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="make_grounder">
+<a class="viewcode-back" href="../../modules/index.html#gilda.api.make_grounder">[docs]</a>
+<span class="k">def</span> <span class="nf">make_grounder</span><span class="p">(</span>
+    <span class="n">terms</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Term</span><span class="p">],</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Term</span><span class="p">]]],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Grounder</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a custom grounder from a list of Terms.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    terms :</span>
+<span class="sd">        Specifies the grounding terms that should be loaded in the Grounder.</span>
+<span class="sd">        If str, it is interpreted as a path to a grounding</span>
+<span class="sd">        terms gzipped TSV file which is then loaded. If list, it is assumed to</span>
+<span class="sd">        be a flat list of Terms. If dict, it is assumed to be a grounding terms</span>
+<span class="sd">        dict with normalized entity strings as keys and lists of Term objects</span>
+<span class="sd">        as values.</span>
+<span class="sd">        Default: None</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        A Grounder instance, initialized with either the default terms</span>
+<span class="sd">        loaded from the resource file or a custom set of terms</span>
+<span class="sd">        if the terms argument was specified.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    The following example shows how to get an ontology with :mod:`obonet` and</span>
+<span class="sd">    load custom terms:</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        from gilda import make_grounder</span>
+<span class="sd">        from gilda.process import normalize</span>
+<span class="sd">        from gilda import Term</span>
+
+<span class="sd">        prefix = &quot;UBERON&quot;</span>
+<span class="sd">        url = &quot;http://purl.obolibrary.org/obo/uberon/basic.obo&quot;</span>
+<span class="sd">        g = obonet.read_obo(url)</span>
+<span class="sd">        custom_obo_terms = []</span>
+<span class="sd">        it = tqdm(g.nodes(data=True), unit_scale=True, unit=&quot;node&quot;)</span>
+<span class="sd">        for node, data in it:</span>
+<span class="sd">            # Skip entries imported from other ontologies</span>
+<span class="sd">            if not node.startswith(f&quot;{prefix}:&quot;):</span>
+<span class="sd">                continue</span>
+
+<span class="sd">            identifier = node.removeprefix(f&quot;{prefix}:&quot;)</span>
+
+<span class="sd">            name = data[&quot;name&quot;]</span>
+<span class="sd">            custom_obo_terms.append(gilda.Term(</span>
+<span class="sd">                norm_text=normalize(name),</span>
+<span class="sd">                text=name,</span>
+<span class="sd">                db=prefix,</span>
+<span class="sd">                id=identifier,</span>
+<span class="sd">                entry_name=name,</span>
+<span class="sd">                status=&quot;name&quot;,</span>
+<span class="sd">                source=prefix,</span>
+<span class="sd">            ))</span>
+
+<span class="sd">            # Add terms for all synonyms</span>
+<span class="sd">            for synonym_raw in data.get(&quot;synonym&quot;, []):</span>
+<span class="sd">                try:</span>
+<span class="sd">                    # Try to parse out of the quoted OBO Field</span>
+<span class="sd">                    synonym = synonym_raw.split(&#39;&quot;&#39;)[1].strip()</span>
+<span class="sd">                except IndexError:</span>
+<span class="sd">                    continue  # the synonym was malformed</span>
+
+<span class="sd">                custom_obo_terms.append(gilda.Term(</span>
+<span class="sd">                    norm_text=normalize(synonym),</span>
+<span class="sd">                    text=synonym,</span>
+<span class="sd">                    db=prefix,</span>
+<span class="sd">                    id=identifier,</span>
+<span class="sd">                    entry_name=name,</span>
+<span class="sd">                    status=&quot;synonym&quot;,</span>
+<span class="sd">                    source=prefix,</span>
+<span class="sd">                ))</span>
+
+<span class="sd">        custom_grounder = gilda.make_grounder(custom_obo_terms)</span>
+<span class="sd">        scored_matches = custom_grounder.ground(&quot;head&quot;)</span>
+
+<span class="sd">    Additional examples for loading custom content from OBO Graph JSON,</span>
+<span class="sd">    :mod:`pyobo`, and more can be found in the `Jupyter notebooks</span>
+<span class="sd">    &lt;https://github.com/indralab/gilda/tree/master/notebooks&gt;`_</span>
+<span class="sd">    in the Gilda repository on GitHub.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Grounder</span><span class="p">(</span><span class="n">terms</span><span class="o">=</span><span class="n">terms</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, Benjamin M. Gyori.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

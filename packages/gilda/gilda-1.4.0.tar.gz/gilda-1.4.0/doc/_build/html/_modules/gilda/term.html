@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gilda.term &mdash; gilda 1.2.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../../_static/documentation_options.js?v=ca842793"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            gilda
+          </a>
+              <div class="version">
+                1.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/index.html">Gilda modules reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">gilda</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">gilda.term</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for gilda.term</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">gzip</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Term&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_identifiers_curie&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_identifiers_url&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;filter_out_duplicates&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dump_terms&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Term">
+<a class="viewcode-back" href="../../modules/index.html#gilda.term.Term">[docs]</a>
+<span class="k">class</span> <span class="nc">Term</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a text entry corresponding to a grounded term.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    norm_text : str</span>
+<span class="sd">        The normalized text corresponding to the text entry, used for lookups.</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text entry itself.</span>
+<span class="sd">    db : str</span>
+<span class="sd">        The database / name space corresponding to the grounded term.</span>
+<span class="sd">    id : str</span>
+<span class="sd">        The identifier of the grounded term within the database / name space.</span>
+<span class="sd">    entry_name : str</span>
+<span class="sd">        The standardized name corresponding to the grounded term.</span>
+<span class="sd">    status : str</span>
+<span class="sd">        The relationship of the text entry to the grounded term, e.g., synonym.</span>
+<span class="sd">    source : str</span>
+<span class="sd">        The source from which the term was obtained.</span>
+<span class="sd">    organism : Optional[str]</span>
+<span class="sd">        When the term represents a protein, this attribute provides the</span>
+<span class="sd">        taxonomy code of the species for the protein.</span>
+<span class="sd">        For non-proteins, not provided. Default: None</span>
+<span class="sd">    source_db : Optional[str]</span>
+<span class="sd">        If the term&#39;s db/id was mapped from a different, original db/id</span>
+<span class="sd">        from a given source, this attribute provides the original db value</span>
+<span class="sd">        before mapping.</span>
+<span class="sd">    source_id : Optional[str]</span>
+<span class="sd">        If the term&#39;s db/id was mapped from a different, original db/id</span>
+<span class="sd">        from a given source, this attribute provides the original ID value</span>
+<span class="sd">        before mapping.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">norm_text</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">entry_name</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span>
+                 <span class="n">organism</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source_db</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source_id</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">text</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Text for Term cannot be empty&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">norm_text</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Normalized text for Term cannot be empty&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">norm_text</span> <span class="o">=</span> <span class="n">norm_text</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="n">db</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entry_name</span> <span class="o">=</span> <span class="n">entry_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">source</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">organism</span> <span class="o">=</span> <span class="n">organism</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source_db</span> <span class="o">=</span> <span class="n">source_db</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source_id</span> <span class="o">=</span> <span class="n">source_id</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Term(</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">norm_text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">entry_name</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">organism</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_db</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">source_id</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Term.to_json">
+<a class="viewcode-back" href="../../modules/index.html#gilda.term.Term.to_json">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the term serialized into a JSON dict.&quot;&quot;&quot;</span>
+        <span class="n">js</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;norm_text&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">norm_text</span><span class="p">,</span>
+            <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span>
+            <span class="s1">&#39;db&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="p">,</span>
+            <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s1">&#39;entry_name&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">entry_name</span><span class="p">,</span>
+            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">,</span>
+            <span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">organism</span><span class="p">:</span>
+            <span class="n">js</span><span class="p">[</span><span class="s1">&#39;organism&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">organism</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_db</span><span class="p">:</span>
+            <span class="n">js</span><span class="p">[</span><span class="s1">&#39;source_db&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_db</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_id</span><span class="p">:</span>
+            <span class="n">js</span><span class="p">[</span><span class="s1">&#39;source_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_id</span>
+        <span class="k">return</span> <span class="n">js</span></div>
+
+
+<div class="viewcode-block" id="Term.to_list">
+<a class="viewcode-back" href="../../modules/index.html#gilda.term.Term.to_list">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the term serialized into a list of strings.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">norm_text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">entry_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">organism</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_db</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_id</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="Term.get_curie">
+<a class="viewcode-back" href="../../modules/index.html#gilda.term.Term.get_curie">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_curie</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the compact URI for this term.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">get_identifiers_curie</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">get_idenfiers_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">get_identifiers_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Term.get_groundings">
+<a class="viewcode-back" href="../../modules/index.html#gilda.term.Term.get_groundings">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_groundings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return all groundings for this term, including from a mapped source.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        :</span>
+<span class="sd">            A set of tuples representing the main grounding for this term,</span>
+<span class="sd">            as well as any source grounding from which the main grounding</span>
+<span class="sd">            was mapped.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">groundings</span> <span class="o">=</span> <span class="p">{(</span><span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_db</span><span class="p">:</span>
+            <span class="n">groundings</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">source_db</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_id</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">groundings</span></div>
+
+
+<div class="viewcode-block" id="Term.get_namespaces">
+<a class="viewcode-back" href="../../modules/index.html#gilda.term.Term.get_namespaces">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_namespaces</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return all namespaces for this term, including from a mapped source.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        :</span>
+<span class="sd">            A set of strings including the main namespace for this term,</span>
+<span class="sd">            as well as any source namespace from which the main grounding</span>
+<span class="sd">            was mapped.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">namespaces</span> <span class="o">=</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="p">}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_db</span><span class="p">:</span>
+            <span class="n">namespaces</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source_db</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">namespaces</span></div>
+</div>
+
+
+
+<span class="k">def</span> <span class="nf">get_identifiers_curie</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="n">curie_pattern</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{db}</span><span class="s1">:</span><span class="si">{id}</span><span class="s1">&#39;</span>
+    <span class="k">if</span> <span class="n">db</span> <span class="o">==</span> <span class="s1">&#39;UP&#39;</span><span class="p">:</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="s1">&#39;uniprot&#39;</span>
+    <span class="n">id_parts</span> <span class="o">=</span> <span class="nb">id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">id_parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">curie_pattern</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">id_parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">curie_pattern</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">=</span><span class="n">id_parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="nb">id</span><span class="o">=</span><span class="n">id_parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">get_identifiers_url</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+    <span class="n">curie</span> <span class="o">=</span> <span class="n">get_identifiers_curie</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">curie</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;https://identifiers.org/</span><span class="si">{</span><span class="n">curie</span><span class="si">}</span><span class="s1">&#39;</span>
+
+
+<span class="k">def</span> <span class="nf">_term_key</span><span class="p">(</span><span class="n">term</span><span class="p">:</span> <span class="n">Term</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="n">term</span><span class="o">.</span><span class="n">db</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">text</span>
+
+
+<span class="n">statuses</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;curated&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;synonym&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;former_name&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">_priority_key</span><span class="p">(</span><span class="n">term</span><span class="p">:</span> <span class="n">Term</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Prioritize terms (that are pre-grouped by db/id/text) first</span>
+<span class="sd">    based on status, and if the status is the same, give priority</span>
+<span class="sd">    to the ones that are from primary resources</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">statuses</span><span class="p">[</span><span class="n">term</span><span class="o">.</span><span class="n">status</span><span class="p">],</span>
+        <span class="mi">0</span> <span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span> <span class="o">==</span> <span class="n">term</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span> <span class="k">else</span> <span class="mi">1</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">filter_out_duplicates</span><span class="p">(</span><span class="n">terms</span><span class="p">):</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Filtering </span><span class="si">%d</span><span class="s1"> terms for uniqueness...&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">terms</span><span class="p">))</span>
+    <span class="n">new_terms</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">terms</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">_term_key</span><span class="p">),</span>
+                                      <span class="n">key</span><span class="o">=</span><span class="n">_term_key</span><span class="p">):</span>
+        <span class="n">terms</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">_priority_key</span><span class="p">)</span>
+        <span class="n">new_terms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">terms</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="c1"># Re-sort the terms</span>
+    <span class="n">new_terms</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">new_terms</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">db</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Got </span><span class="si">%d</span><span class="s1"> unique terms...&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_terms</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">new_terms</span>
+
+
+<span class="n">TERMS_HEADER</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;norm_text&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;db&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;entry_name&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="s1">&#39;organism&#39;</span><span class="p">,</span> <span class="s1">&#39;source_db&#39;</span><span class="p">,</span> <span class="s1">&#39;source_id&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="dump_terms">
+<a class="viewcode-back" href="../../modules/index.html#gilda.term.dump_terms">[docs]</a>
+<span class="k">def</span> <span class="nf">dump_terms</span><span class="p">(</span><span class="n">terms</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Term</span><span class="p">],</span> <span class="n">fname</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Dump a list of terms to a tsv.gz file.&quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Dumping into </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s1">&#39;wt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">fh</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">TERMS_HEADER</span><span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">terms</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, Benjamin M. Gyori.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
