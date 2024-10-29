@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: SpringRank
+Version: 0.0.8
+Summary: SpringRank: A physical model for efficient ranking in networks
+Home-page: https://github.com/LarremoreLab/SpringRank
+Author: Caterina De Bacco; Daniel Larremore; Cris Moore
+Author-email: daniel.larremore@colorado.edu
+Keywords: rankings,SpringRank
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+SpringRank: A physical model for efficient ranking in networks
