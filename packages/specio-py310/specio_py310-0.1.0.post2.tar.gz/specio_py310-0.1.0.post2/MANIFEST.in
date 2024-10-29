@@ -1,0 +1,9 @@
+include MANIFEST.in
+include LICENSE
+include README.md
+include setup.py
+
+# Exclude test data directories from distribution
+prune specio_py310/core/tests/data
+prune specio_py310/plugins/tests/data
+prune specio_py310/datasets/data
