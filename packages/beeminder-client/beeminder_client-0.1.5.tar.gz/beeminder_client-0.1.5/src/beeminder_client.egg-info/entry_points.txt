@@ -1,0 +1,2 @@
+[console_scripts]
+beeminder-cli = beeminder_client.beeminder_cli:main

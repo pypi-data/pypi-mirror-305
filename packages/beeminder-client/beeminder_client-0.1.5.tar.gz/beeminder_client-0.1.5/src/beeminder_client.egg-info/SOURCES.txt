@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/beeminder_client/__init__.py
+src/beeminder_client/beeminder.py
+src/beeminder_client/beeminder_cli.py
+src/beeminder_client/models.py
+src/beeminder_client.egg-info/PKG-INFO
+src/beeminder_client.egg-info/SOURCES.txt
+src/beeminder_client.egg-info/dependency_links.txt
+src/beeminder_client.egg-info/entry_points.txt
+src/beeminder_client.egg-info/requires.txt
+src/beeminder_client.egg-info/top_level.txt
