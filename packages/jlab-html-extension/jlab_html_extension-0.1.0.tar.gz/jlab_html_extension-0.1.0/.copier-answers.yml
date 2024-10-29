@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.3.5
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: oli.howson@open.ac.uk
+author_name: Oli Howson
+has_binder: false
+has_settings: false
+kind: frontend
+labextension_name: jlab_html_extension
+project_short_description: Jupyter Lab extension to ease creating web pages.
+python_name: jlab_html_extension
+repository: ''
+test: false
+
