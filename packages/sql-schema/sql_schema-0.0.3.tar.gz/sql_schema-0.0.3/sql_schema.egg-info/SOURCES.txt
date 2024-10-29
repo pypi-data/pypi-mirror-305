@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+sql_schema/__init__.py
+sql_schema/schema.py
+sql_schema.egg-info/PKG-INFO
+sql_schema.egg-info/SOURCES.txt
+sql_schema.egg-info/dependency_links.txt
+sql_schema.egg-info/requires.txt
+sql_schema.egg-info/top_level.txt
