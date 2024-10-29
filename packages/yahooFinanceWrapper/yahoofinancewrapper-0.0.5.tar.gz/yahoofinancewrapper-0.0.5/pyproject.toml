@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "yahooFinanceWrapper"
+version = "0.0.5"
+authors = [
+  { name="Maddax Lallatin", email="maddaxlallatin@gmail.com" },
+]
+description = "A wrapper for an unofficial Yahoo Finance API"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/maddaxlallatin/stockApiWrapper/tree/main/python"
+Issues = "https://github.com/maddaxlallatin/stockApiWrapper/issues"
