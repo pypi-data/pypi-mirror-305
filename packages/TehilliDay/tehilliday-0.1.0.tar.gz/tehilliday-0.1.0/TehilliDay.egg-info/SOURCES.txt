@@ -1,0 +1,8 @@
+setup.py
+TehilliDay.egg-info/PKG-INFO
+TehilliDay.egg-info/SOURCES.txt
+TehilliDay.egg-info/dependency_links.txt
+TehilliDay.egg-info/requires.txt
+TehilliDay.egg-info/top_level.txt
+tehilliday/__init__.py
+tehilliday/tehillim.py
