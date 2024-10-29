@@ -1,0 +1,13 @@
+ssh_gpu_monitor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ssh_gpu_monitor/__main__.py,sha256=VsY4KUg1GRoeEWC6TDssn38yp4lt2s4OTsj3inN7kuI,296
+ssh_gpu_monitor/main.py,sha256=TNo8Zvy0QBQa2unWkw5V246rNj2_RFBWULte1Tzmu9s,13433
+ssh_gpu_monitor/config/config.yaml,sha256=Zs-g4MIsuLwR9w0taqRFVpXU3V-tDksQ3qpQH815rZg,1168
+ssh_gpu_monitor/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ssh_gpu_monitor/src/config_loader.py,sha256=Y7L3xWGKcKiLDXwUElKMG2Xx7P645AsUcdiLEkHMp5s,5199
+ssh_gpu_monitor/src/table_display.py,sha256=S0a8UfuhscLSeKDeip8lj848Eq-J31JX2XqcpXiyuTY,7014
+ssh_gpu_monitor-1.0.2.dist-info/LICENSE,sha256=tOsQQw7-J_8gvByKIH9TU5QZA_P0wmgjC3sIgTzXACs,1075
+ssh_gpu_monitor-1.0.2.dist-info/METADATA,sha256=EtdiNwxb4o3s79KeJJRI_0z1YVWkUR0_xSwFoSolStw,7337
+ssh_gpu_monitor-1.0.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+ssh_gpu_monitor-1.0.2.dist-info/entry_points.txt,sha256=s58GuPbFMIthCK55AW0HJC5VpII-ZgE-SzRapIOCXik,72
+ssh_gpu_monitor-1.0.2.dist-info/top_level.txt,sha256=f8iuvPbyvcFkVWGDdri7k1cV5oP5-MB5fee90bvLoIY,16
+ssh_gpu_monitor-1.0.2.dist-info/RECORD,,

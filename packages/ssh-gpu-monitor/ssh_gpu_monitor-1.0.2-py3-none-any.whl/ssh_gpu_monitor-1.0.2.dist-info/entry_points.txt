@@ -1,0 +1,2 @@
+[console_scripts]
+ssh-gpu-monitor = ssh_gpu_monitor.__main__:main_entry
