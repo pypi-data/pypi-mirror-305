@@ -1,0 +1,3 @@
+[submodule "vendor/bark.cpp"]
+	path = vendor/bark.cpp
+	url = https://github.com/PABannier/bark.cpp.git
