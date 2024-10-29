@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.py
+MultiSP/__init__.py
+MultiSP/layer.py
+MultiSP/model.py
+MultiSP/module.py
+MultiSP/preprocess.py
+MultiSP/utils.py
+MultiSP.egg-info/PKG-INFO
+MultiSP.egg-info/SOURCES.txt
+MultiSP.egg-info/dependency_links.txt
+MultiSP.egg-info/not-zip-safe
+MultiSP.egg-info/requires.txt
+MultiSP.egg-info/top_level.txt
