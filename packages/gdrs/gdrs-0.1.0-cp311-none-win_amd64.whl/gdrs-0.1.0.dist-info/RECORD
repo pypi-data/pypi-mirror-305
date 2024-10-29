@@ -1,0 +1,5 @@
+gdrs-0.1.0.dist-info/METADATA,sha256=KltVO6Gy8XsfgESgYyyw4eSHGNzmg1KQMHp3RF_FnuQ,253
+gdrs-0.1.0.dist-info/WHEEL,sha256=bNtRK4IG-ZINiRwRhIvmsDSb0Vife_pt6vsyhyhjHi8,95
+gdrs/__init__.py,sha256=zHEsLp_SNvxVaSAGzF0saFuQhQbYwPPGeFEejA2GkPE,99
+gdrs/gdrs.cp311-win_amd64.pyd,sha256=S7egob8HPVPt6f1CjpRRlQff-g8o6CXq96NiSvC4L5k,428032
+gdrs-0.1.0.dist-info/RECORD,,
