@@ -1,0 +1,11 @@
+phyde/__init__.py,sha256=LhSL3L4FT21tXsL2SSTQrc6lGVlcWf-h1eM3CEKzoYI,215
+phyde/bootstrap.py,sha256=rfP5VBdskfjiLijBtq-6TByET1vu9Q__rUkTLYcLO3Y,7584
+phyde/data.cpp,sha256=wMOAPYmNlRfyuaPBx_AflyCIm4fbAiNy9TyCCdQA0ps,1862694
+phyde/data.pyx,sha256=wybF6YtUcxsApAlQwnYCtcXdJRlV3D-CSLTBnckFMZk,27161
+phyde/result.py,sha256=RWVijBqUlkae1n-5yKhlGgzhLK_2SseRAkG9M8Q5GAU,3768
+phyde/utils.py,sha256=LMW_Vvr4ZejcjhdpV4595LF7MyvqGpZs5zfxKeOF360,606
+phyde-1.0.0.dist-info/LICENSE,sha256=g0B9V70Y6SUg2K62J_WssXIvnLnxqiFtIXF6uEI9z0I,1100
+phyde-1.0.0.dist-info/METADATA,sha256=-5DsblFwCrwmPsuJrvRwp9HMPckHdw0P1ePY1qEPNLc,5272
+phyde-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+phyde-1.0.0.dist-info/top_level.txt,sha256=DPsdAJWXKS87Mz8ggbc25o08jzY6QoYQJ0zhY2MFDYU,6
+phyde-1.0.0.dist-info/RECORD,,
