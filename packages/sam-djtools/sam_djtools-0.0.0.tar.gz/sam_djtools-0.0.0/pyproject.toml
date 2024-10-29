@@ -1,0 +1,28 @@
+# This file is protected via CODEOWNERS
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sam-djtools"
+description = "1. sam_tools.utils, 2. Primary key based form navigation to explore next/prev records."
+readme = "README.md"
+keywords = ["urllib", "httplib", "http"]
+authors = [{name = "Sami Akram", email="samiakram@live.com"}, ]
+maintainers = [{name = "Sami Akram", email="samiakram@live.com"}, ]
+classifiers = [ "Operating System :: OS Independent", "Programming Language :: Python :: 3.5"]
+requires-python = ">=3.5"
+dynamic = ["version"]
+
+[project.urls]
+"Changelog" = "https://github.com/humblesami/sam-djtools/CHANGES.rst"
+"Code" = "https://github.com/humblesami/sam-djtools"
+"Issue tracker" = "https://github.com/humblesami/sam-djtools/issues"
+
+[tool.hatch.build.targets.sdist]
+include = [ "/requirements.txt", "/README.md",  "/LICENSE.txt"]
+markers = ["limit_memory"]
+log_level = "DEBUG"
+add_imports = "from __future__ import annotations"
+skip = ["setup.py"]
