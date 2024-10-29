@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "lalian"
+version = "0.1.1"
+description = "Create a pseudo-executable with embedded Python code using zipimport."
+authors = ["Koutaro Mukai <mukai.k1011k@outlook.jp>"]
+license = "GNU General Public License v3 (GPLv3)"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.13.0"
+black = "^24.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+lalian = "lalian.__main__:main"
