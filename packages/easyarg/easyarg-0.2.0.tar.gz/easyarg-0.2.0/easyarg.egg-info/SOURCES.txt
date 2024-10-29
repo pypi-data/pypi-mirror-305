@@ -1,0 +1,8 @@
+README.md
+setup.py
+easyarg/__init__.py
+easyarg/easyarg.py
+easyarg.egg-info/PKG-INFO
+easyarg.egg-info/SOURCES.txt
+easyarg.egg-info/dependency_links.txt
+easyarg.egg-info/top_level.txt

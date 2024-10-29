@@ -1,0 +1,53 @@
+# easyarg
+
+
+Create a parameter
+
+```python
+from easyarg import AGR
+
+parser=AGR()
+# create two parameters --say and --cry
+parser.add_agr('--say')
+parser.add_agr('--cry')
+# read all parameters and arguments, this is a required function
+parser.parse_agrs()
+# return argument of --say and --cry
+say_data=parser.get_value('--say')
+cry_data=parser.get_value('--cry')
+print(say_data)
+print(cry_data)
+# Run it on terminal like this
+# python yourfile.py --say "hello this is my test" --cry huhu
+# output: hello this is my test
+#         huhu
+```
+If you want a parameter to have a default argument,this default value can be changed.
+```python
+from easyarg import AGR
+
+parser=AGR()
+parser.add_agr('--say',default='hello world')
+parser.parse_agrs()
+say_data=parser.get_value('--say')
+print(say_data)
+# this is default:
+# output: hello world
+# change value:
+# python yourfile.py --say "hello this is my test"
+# output: hello this is my test
+```
+If you just want to add parameters without arguments
+```python
+from easyarg import AGR
+parser=AGR()
+parser.add_agr('--help',action='store_true')
+parser.parse_agrs()
+help_data=parser.get_value('--help')
+if help_data:
+    print('User entered help')
+# python yourfile.py --help
+# output: User entered help
+```
+Thanks from Phan Huynh Thien Phu
+
