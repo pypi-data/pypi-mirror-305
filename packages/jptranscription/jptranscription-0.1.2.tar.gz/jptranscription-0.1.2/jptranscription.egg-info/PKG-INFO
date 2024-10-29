@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: jptranscription
+Version: 0.1.2
+Summary: Transcribes German words into Katakana using IPA
+Author: Philipp Schmitz
+Author-email: schmxtz@gmail.com
+License-File: LICENSE
