@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: UtilityHub
+Version: 0.1.2
+Summary: Your all-in-one toolkit for everyday development
+Author: hyp3r00t
+Author-email: rajesh@hyperoot.dev
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# UtilityHub
+
+UtilityHub is a versatile collection of essential Python functions for common development tasks, from file handling to data processing. Built with simplicity and efficiency in mind, it’s your go-to toolkit for everyday coding needs.
+
