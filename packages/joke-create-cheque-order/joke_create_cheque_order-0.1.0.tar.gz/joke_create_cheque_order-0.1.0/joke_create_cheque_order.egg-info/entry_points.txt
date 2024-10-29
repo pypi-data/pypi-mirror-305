@@ -1,0 +1,2 @@
+[console_scripts]
+joke_create_cheque_order = joke_create_cheque_order.__main__:main

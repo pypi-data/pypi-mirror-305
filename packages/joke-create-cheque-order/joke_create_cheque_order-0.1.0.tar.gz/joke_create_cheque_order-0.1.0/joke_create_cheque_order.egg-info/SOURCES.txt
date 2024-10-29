@@ -1,0 +1,8 @@
+README.md
+setup.py
+joke_create_cheque_order.egg-info/PKG-INFO
+joke_create_cheque_order.egg-info/SOURCES.txt
+joke_create_cheque_order.egg-info/dependency_links.txt
+joke_create_cheque_order.egg-info/entry_points.txt
+joke_create_cheque_order.egg-info/requires.txt
+joke_create_cheque_order.egg-info/top_level.txt
