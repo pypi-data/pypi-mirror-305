@@ -1,0 +1,2 @@
+[console_scripts]
+cnt = count_city_csv.main:main
