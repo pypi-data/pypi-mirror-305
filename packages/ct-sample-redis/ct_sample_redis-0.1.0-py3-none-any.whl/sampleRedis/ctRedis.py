@@ -1,0 +1,123 @@
+import inspect
+import json
+import os
+from functools import wraps
+
+import redis
+from flask import g
+from redis.backoff import NoBackoff
+from redis.retry import Retry
+
+
+class CtRedis:
+    def __init__(self, redis_cache_config, logger):
+        self.logger = logger
+        self.cache_config = redis_cache_config
+
+    def redis_cache(self, template_cache_key, field, expire_time=None):
+        def decorator(func):
+            @wraps(func)
+            def wrapper(*args, **kwargs):
+                func_output = None
+                if not self.cache_config.config['REDIS_CACHE'] or 'redis_pool' not in g:
+                    return func(*args, **kwargs)
+                try:
+                    if g.redis_pool is not None and 'redis_conn' not in g:
+                        redis_conn = redis.Redis(connection_pool=g.redis_pool, retry_on_timeout=True,
+                                                 retry=Retry(retries=2, backoff=NoBackoff(),
+                                                             supported_errors=(ConnectionError, TimeoutError)))
+                        pipe = redis_conn.pipeline()
+                        pipe.multi()
+                        g.pipe = pipe
+                        g.redis_conn = redis_conn
+                    generated_cache_key, hash_field = self.generate_cache_key_and_hash_field(template_cache_key, func,
+                                                                                             field,
+                                                                                             *args)
+                    hash_value_from_cache = g.redis_conn.hget(generated_cache_key, hash_field)
+                    if hash_value_from_cache is not None:
+                        return json.loads(hash_value_from_cache)
+                    else:
+                        func_output = func(*args, **kwargs)
+                        g.pipe.hset(generated_cache_key, hash_field, json.dumps(func_output))
+                        g.pipe.expire(generated_cache_key,
+                                      expire_time if expire_time is not None else self.cache_config['REDIS_CACHE_EXPIRE_TIME'])
+                        return func_output
+                except TypeError as error:
+                    self.logger.info("Caught exception from cache  :: {}".format(error))
+                    return func_output if func_output is not None else func(*args, **kwargs)
+                except Exception as error:
+                    self.logger.info("Caught exception from cache  :: {}".format(error))
+                    return func(*args, **kwargs)
+
+            return wrapper
+
+        return decorator
+
+    def generate_cache_key_and_hash_field(self, template_cache_key, func, template_hash_field, *args):
+        env = os.getenv("ENVIRONMENT").lower()
+        # get full args from the function
+        arg_values = dict(zip(inspect.getfullargspec(func).args, args))
+        cache_key = template_cache_key  # ':$abc.xyz'
+        for arg_name, arg_value in arg_values.items():
+            placeholder_start = f':${arg_name}.'  # ':$abc.'
+            while placeholder_start in cache_key:
+                key_start = cache_key.find(placeholder_start) + len(placeholder_start)  # key starting length
+                key_end = cache_key.find(':', key_start)  # key ending length
+                key_placeholder = cache_key[key_start:key_end] if key_end != -1 else cache_key[
+                                                                                     key_start:]  # xyz from $abc.xyz
+                if key_placeholder:
+                    attr_value = self.__get_nested_attribute_value(arg_value, key_placeholder)  # value of abc.xyz
+                    cache_key = cache_key.replace(f'${arg_name}.{key_placeholder}',
+                                                  str(attr_value) if attr_value is not None else 'None')
+                else:
+                    break
+            # Replace the cache key name with value if there is not nested attribute
+            cache_key = cache_key.replace(f':${arg_name}', f':{arg_value}')
+
+        hash_field = self.__get_nested_attribute_value(arg_values, template_hash_field.split('$', 1)[1]) \
+            if '$' in template_hash_field else template_hash_field
+        hash_field = str(hash_field) if hash_field is not None else template_hash_field.split('$')[1].split('.')[0]
+
+        env = '' if env == 'prod' else env + ':'
+        cache_key = f"{env}{self.cache_config['CACHE_CLIENT_NAME']}:{cache_key}"
+        return cache_key, str(hash_field)
+
+    @staticmethod
+    def __get_nested_attribute_value(obj, attr_path):
+        """
+        Retrieves the value of a nested attribute from an object or json.
+        Args:
+            obj: The object from which to retrieve the attribute.
+            attr_path: The path of nested attributes.
+        Returns:
+            The value of the nested attribute if found, None otherwise.
+        """
+        attrs = attr_path.split('.')
+        attr_val = obj
+        for attr in attrs:
+            if hasattr(attr_val, attr):
+                attr_val = getattr(attr_val, attr)
+            elif isinstance(attr_val, dict) and attr in attr_val:
+                attr_val = attr_val[attr]
+            else:
+                raise Exception(attr + ' not found in the hash_field or cache_key')
+        return attr_val
+
+    def configure_redis_pool(self, logger):
+        redis_pool = None
+        host = self.cache_config['CACHE_REDIS_HOST']
+        port = self.cache_config['CACHE_REDIS_PORT']
+        if self.cache_config['REDIS_CACHE'] and host is not None and port is not None:
+            try:
+                redis_pool = redis.ConnectionPool(host=host,
+                                                  port=port,
+                                                  client_name=self.cache_config['CACHE_CLIENT_NAME'],
+                                                  max_connections=20
+                                                  )
+
+                g.redis_pool = redis_pool
+            except Exception as error:
+                logger.error("Redis connection failed :: {}".format(error))
+                return None
+        else:
+            g.redis_pool = redis_pool
