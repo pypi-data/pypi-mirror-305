@@ -1,0 +1,10 @@
+numpy
+scikit-image
+scipy
+dill
+requests
+flexidep
+torch
+
+[:python_version < "3.10"]
+importlib_resources
