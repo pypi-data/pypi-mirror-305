@@ -1,0 +1,14 @@
+# Pages navigation
+nav:
+  - Usage:
+      - ‣ Usage: index.md
+  - Specifications:
+      - ‣ GitLab CI: gitlab-ci.md
+      - ‣ Hooks: hooks.md
+  - Features:
+      - ‣ Deprecations: deprecations.md
+  - About:
+      - ‣ Changelog: about/changelog/
+      - ‣ Documentation: documentation.pdf
+      - ‣ License: about/license/
+      - ‣ Quality: about/quality/
