@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/ptock/__init__.py
+src/ptock/font.py
+src/ptock/main.py
+src/ptock/mechanism.py
+src/ptock/view.py
+src/python3_ptock.egg-info/PKG-INFO
+src/python3_ptock.egg-info/SOURCES.txt
+src/python3_ptock.egg-info/dependency_links.txt
+src/python3_ptock.egg-info/entry_points.txt
+src/python3_ptock.egg-info/top_level.txt
