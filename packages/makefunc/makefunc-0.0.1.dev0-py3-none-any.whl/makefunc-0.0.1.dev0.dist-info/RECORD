@@ -1,0 +1,9 @@
+makefunc/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+makefunc/core/__init__.py,sha256=IXwdoI0EuaokNs6-h6-rwlgfLTVBygUGmwekOnyLlrY,453
+makefunc/tests/__init__.py,sha256=0JS0Y2ZKoVMatkgRpQjLGpA4A8XhwHyCYNSA8gJTQ-Y,229
+makefunc/tests/test_1984.py,sha256=GPfy8FPaGbj-w9uGHkJYSjmlSReVAXwiHS8JydJaERw,187
+makefunc-0.0.1.dev0.dist-info/LICENSE.txt,sha256=QwqYepQwTN5xG57cngKt6xxYD9z9hw9d3lcI8zSLiNg,1074
+makefunc-0.0.1.dev0.dist-info/METADATA,sha256=robfh5tcBs56bljZJzMps_hOvPq03qnkUwG7TeuZCWg,2074
+makefunc-0.0.1.dev0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+makefunc-0.0.1.dev0.dist-info/top_level.txt,sha256=jMwIaHhPNjgbH3glvQl05uIoSG-r1hEbuOvWjlbtSjg,9
+makefunc-0.0.1.dev0.dist-info/RECORD,,
