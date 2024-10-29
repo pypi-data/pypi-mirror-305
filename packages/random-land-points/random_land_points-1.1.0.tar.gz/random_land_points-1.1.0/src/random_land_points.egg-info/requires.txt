@@ -1,0 +1,11 @@
+numpy<3.0.0,>=2.0.0
+geopandas<2.0.0,>=1.0.0
+shapely<3.0.0,>=2.0.0
+
+[dev]
+pytest
+pytest-cov
+
+[examples]
+matplotlib
+cartopy

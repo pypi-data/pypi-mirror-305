@@ -1,0 +1,39 @@
+[project]
+name = "random-land-points"
+version = "1.1.0"
+authors = [
+  { name="Duncan Eddy", email="duncan.eddy@gmail.com" },
+]
+description = "Sampling random points from non-convex polygons and land areas"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "numpy>=2.0.0,<3.0.0",
+    "geopandas>=1.0.0,<2.0.0",
+    "shapely>=2.0.0,<3.0.0",
+]
+
+# Add dev dependencies
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
+
+examples = [
+    "matplotlib",
+    "cartopy",
+]
+
+[project.urls]
+Homepage = "https://github.com/duncaneddy/random-land-points"
+
+[tool.setuptools]
+py-modules = ['random_land_points']
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*"]
