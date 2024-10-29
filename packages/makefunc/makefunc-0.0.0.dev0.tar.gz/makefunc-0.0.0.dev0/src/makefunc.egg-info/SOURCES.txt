@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/makefunc/__init__.py
+src/makefunc/__main__.py
+src/makefunc.egg-info/PKG-INFO
+src/makefunc.egg-info/SOURCES.txt
+src/makefunc.egg-info/dependency_links.txt
+src/makefunc.egg-info/top_level.txt
+src/makefunc/tests/__init__.py
+src/makefunc/tests/test_1984.py
