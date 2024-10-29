@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: online-store-cu-super
+Version: 0.1.0
+Summary: Исполняемый пакет для управления пользователями и заказами в онлайн-магазине
+Author-email: Anastasia <a.opushneva@edu.centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.19.2
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2.1; extra == "dev"
+Requires-Dist: flake8>=3.8.4; extra == "dev"
+
+# online-store
+
+## Описание
+
+Этот пакет предоставляет функциональность для управления пользователями и заказами в онлайн-магазине.
+
+## Установка и использование
+
+```bash
+pip install online-store
