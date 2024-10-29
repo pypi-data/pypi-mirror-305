@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+descript_mlx/__init__.py
+descript_mlx.egg-info/PKG-INFO
+descript_mlx.egg-info/SOURCES.txt
+descript_mlx.egg-info/dependency_links.txt
+descript_mlx.egg-info/requires.txt
+descript_mlx.egg-info/top_level.txt
+tests/test.py
