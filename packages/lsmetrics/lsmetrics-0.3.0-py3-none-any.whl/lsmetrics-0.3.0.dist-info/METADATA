@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: lsmetrics
+Version: 0.3.0
+Summary: Latent Space Metrics
+Requires-Python: <3.13,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pymatgen >=2024.10.3
+Requires-Dist: scikit-learn >=1.5.2
+Requires-Dist: torch >=2.4.1
+Requires-Dist: torch-geometric >=2.6.1
+Requires-Dist: tqdm >=4.66.5
+Requires-Dist: pytorch-lightning >=2.4.0
+Requires-Dist: loguru >=0.7.2
+
+# lsmetrics
