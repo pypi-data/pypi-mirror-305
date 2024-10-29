@@ -1,0 +1,8 @@
+README.md
+setup.py
+ratify/__init__.py
+ratify/ratify.py
+ratify.egg-info/PKG-INFO
+ratify.egg-info/SOURCES.txt
+ratify.egg-info/dependency_links.txt
+ratify.egg-info/top_level.txt
