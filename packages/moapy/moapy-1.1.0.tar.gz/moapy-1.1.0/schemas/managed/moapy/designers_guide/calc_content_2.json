@@ -1,0 +1,184 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "moapy",
+    "description": "Schema for moapy",
+    "version": "0.9.8"
+  },
+  "servers": [
+    {
+      "url": "https://moa.rpm.kr-dv-midasit.com/backend/python-executor/"
+    },
+    {
+      "url": "https://moa.rpm.kr-st-midasit.com/backend/function-executor/python-execute/"
+    }
+  ],
+  "paths": {
+    "/execute?functionId=moapy-designers_guide-content_function-calc_content_2-execute_calc": {
+      "post": {
+        "summary": "Guide to Calculating Peak Velocity Pressure at Height",
+        "description": "This guide provides a detailed approach for calculating the peak velocity pressure at a specific height by accounting for both mean wind velocity and short-term fluctuations caused by turbulence. The calculation includes determining key parameters such as air density, mean wind velocity, and the exposure factor. The peak velocity pressure is influenced by the turbulence intensity and the exposure factor, which take into account the effects of terrain and height on wind speed. This guide explains how to determine these parameters using the appropriate methods and values, ensuring that engineers can accurately assess wind loads on structures at various elevations.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "G3_NODE_2": {
+                    "title": "Fundamental wind velocity",
+                    "type": "number",
+                    "description": "The fundamental wind velocity is the baseline 10-minute mean wind speed measured at a height of 10 meters above open terrain with minimal vegetation and few obstacles. It is the starting point for calculating the basic wind velocity, before applying any adjustments for wind direction or season. The value is typically provided in national standards.",
+                    "symbol": "v_{b,0}",
+                    "unit": "m/s",
+                    "default": 0.001
+                  },
+                  "G3_NODE_3": {
+                    "title": "Wind directional adjustment factor",
+                    "type": "number",
+                    "description": "The directional factor is a coefficient that adjusts the basic wind velocity based on the wind direction. It accounts for the variability in wind speeds depending on which direction the wind is coming from. The value of this factor may vary depending on national standards, but a common recommended value is 1.0.",
+                    "symbol": "c_{dir}",
+                    "unit": "",
+                    "default": 1.0,
+                    "readOnly": true
+                  },
+                  "G1_NODE_3": {
+                    "title": "Return Period",
+                    "type": "number",
+                    "description": "Annual probability of maximum (minimum) shade air temperature being exceeded",
+                    "symbol": "p_{years}",
+                    "unit": "years",
+                    "default": 50.0
+                  },
+                  "G3_NODE_4": {
+                    "title": "Wind probability adjustment factor",
+                    "type": "number",
+                    "description": "The seasonal adjustment factor accounts for changes in wind speed due to seasonal variations. It modifies the basic wind velocity to reflect different wind conditions throughout the year. The recommended value is often 1.0, indicating no adjustment for seasons.",
+                    "symbol": "c_{season}",
+                    "unit": "",
+                    "default": 1.0,
+                    "readOnly": true
+                  },
+                  "G3_NODE_8": {
+                    "title": "Wind speed shape parameter for extreme events",
+                    "type": "number",
+                    "description": "The wind speed shape parameter for extreme events is a statistical coefficient that characterizes the distribution of extreme wind speeds. It influences the adjustment of the probability factor, reflecting the variability and likelihood of extreme wind conditions. This parameter is typically determined based on the variation in wind speed data and is provided in national standards.",
+                    "symbol": "K",
+                    "unit": "",
+                    "default": 0.2,
+                    "readOnly": true
+                  },
+                  "G3_NODE_9": {
+                    "title": "Wind speed shape parameter for extreme events",
+                    "type": "number",
+                    "description": "The exponent for wind probability adjustment is a factor used to modify the probability factor in wind speed calculations. It determines the degree of influence that the probability of extreme wind events has on the adjusted wind velocity.",
+                    "symbol": "n",
+                    "unit": "",
+                    "default": 0.5,
+                    "readOnly": true
+                  },
+                  "G3_NODE_10": {
+                    "title": "Reference height above ground",
+                    "type": "number",
+                    "description": "The reference height is the maximum height above ground for the section being considered. This height is used in wind load calculations to determine the peak wind velocity and other wind-related forces acting on the structure.",
+                    "symbol": "z_{e}",
+                    "unit": "m",
+                    "default": 0.001
+                  },
+                  "G3_NODE_13": {
+                    "title": "Orography adjustment factor for mean wind speed",
+                    "type": "number",
+                    "description": "The orography adjustment factor for mean wind speed takes into account the effects of terrain features such as hills or valleys on wind speed at various heights. It adjusts the mean wind speed based on these topographical variations. Typically, the value is set to 1.0 unless specified otherwise in national standards, indicating no adjustment for orography.",
+                    "symbol": "c_{o}(z)",
+                    "unit": "",
+                    "default": 1.0,
+                    "readOnly": true
+                  },
+                  "G3_NODE_16": {
+                    "title": "Roughness length for terrain",
+                    "type": "number",
+                    "description": "The roughness length is a parameter that represents the height above ground level where the wind speed theoretically becomes zero due to surface roughness. It is used in the calculation of the terrain roughness factor and depends on the type of terrain. The value of the roughness length varies according to different terrain categories.",
+                    "symbol": "z_{0}",
+                    "unit": "m",
+                    "default": 0.003
+                  },
+                  "G3_NODE_17": {
+                    "title": "Minimum height for roughness factor calculation",
+                    "type": "number",
+                    "description": "The minimum height is the lowest height above the ground at which the roughness factor is applicable. Below this height, the roughness factor remains constant. The value of the minimum height is determined by the terrain category and is used in the calculation of wind speed adjustments.",
+                    "symbol": "z_{min}",
+                    "unit": "m",
+                    "default": 1
+                  },
+                  "G3_NODE_19": {
+                    "title": "Reference roughness length for terrain category II",
+                    "type": "number",
+                    "description": "The reference roughness length for terrain category II is a standard value used as a baseline for calculating the terrain factor in wind speed assessments. It represents the roughness length for open terrain with low vegetation, typically set at 0.05 meters. This value is used to compare other terrain roughness lengths and adjust the wind speed accordingly.",
+                    "symbol": "z_{0,II}",
+                    "unit": "m",
+                    "default": 0.05,
+                    "readOnly": true
+                  },
+                  "G3_NODE_20": {
+                    "title": "Maximum height for roughness factor calculation",
+                    "type": "number",
+                    "description": "The maximum height is the highest altitude above ground where the roughness factor is considered in wind speed calculations. Above this height, the roughness factor does not apply. For most cases, the maximum height is set at 200 meters, unless otherwise specified.",
+                    "symbol": "z_{max}",
+                    "unit": "m",
+                    "default": 200,
+                    "readOnly": true
+                  },
+                  "G3_NODE_22": {
+                    "title": "Turbulence factor",
+                    "type": "number",
+                    "description": "The turbulence factor is a coefficient used in the calculation of wind turbulence intensity. It accounts for the variability of turbulence in different wind conditions and terrains. The value of the turbulence factor may be specified in national standards, with a commonly recommended value being 1.0. This factor adjusts the standard deviation of wind turbulence in relation to the basic wind velocity.",
+                    "symbol": "k_{l}",
+                    "unit": "m",
+                    "default": 1.0,
+                    "readOnly": true
+                  },
+                  "G3_NODE_25": {
+                    "title": "Air density during wind storms",
+                    "type": "number",
+                    "description": "Air density during wind storms is a crucial factor in wind load calculations, as it depends on altitude, temperature, and barometric pressure expected in the region during extreme wind events. This parameter affects the calculation of peak velocity pressure and can vary with changing atmospheric conditions.",
+                    "symbol": "\\rho",
+                    "unit": "kg/m^3",
+                    "default": 1.25,
+                    "readOnly": true
+                  }
+                },
+                "required": [
+                  "G3_NODE_2",
+                  "G1_NODE_3",
+                  "G3_NODE_10",
+                  "G3_NODE_16",
+                  "G3_NODE_17"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "G3_NODE_24": {
+                      "title": "Peak velocity pressure at height",
+                      "type": "number",
+                      "description": "The peak velocity pressure at height accounts for both the mean wind velocity and short-term wind fluctuations at a specific height above the ground. It is calculated using the air density, mean wind velocity, and an exposure factor, which reflects the terrain and other local conditions. The peak velocity pressure helps in determining the wind loads on structures.",
+                      "symbol": "q_{p(z)}",
+                      "unit": "kN/m^2"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
