@@ -1,0 +1,8 @@
+sql_schema/__init__.py,sha256=BobYGZSM4Zl5CPG_mJmhON70qIOyIkgAKk0F7pokYWo,26
+sql_schema/import schema.py,sha256=Bdk6fF2fDAQyWJvjBth8w8j4W3JW0YTdS0Jz65VPzH4,39
+sql_schema/schema.py,sha256=_x2A1bE-L45xTgj7xxdgyV8TJ3cIverR1ZCzAI-DTbM,3339
+sql_schema-0.0.4.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sql_schema-0.0.4.dist-info/METADATA,sha256=yMRmwVGjqs6RuE9FT-qODOtHolySENRNdaJiI2Y2mC8,312
+sql_schema-0.0.4.dist-info/WHEEL,sha256=Wyh-_nZ0DJYolHNn1_hMa4lM7uDedD_RGVwbmTjyItk,91
+sql_schema-0.0.4.dist-info/top_level.txt,sha256=ca1uZsxGcU-ttiVqgik3q2vEF-5dlLmhbsUJMqls-ZI,11
+sql_schema-0.0.4.dist-info/RECORD,,
