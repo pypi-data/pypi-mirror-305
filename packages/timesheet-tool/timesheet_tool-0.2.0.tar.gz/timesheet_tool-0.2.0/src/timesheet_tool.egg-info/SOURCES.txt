@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/timesheet_tool/__init__.py
+src/timesheet_tool/config.py
+src/timesheet_tool/jira_worklogs.py
+src/timesheet_tool/main.py
+src/timesheet_tool/toggl.py
+src/timesheet_tool.egg-info/PKG-INFO
+src/timesheet_tool.egg-info/SOURCES.txt
+src/timesheet_tool.egg-info/dependency_links.txt
+src/timesheet_tool.egg-info/requires.txt
+src/timesheet_tool.egg-info/top_level.txt
+src/timesheet_tool/tests/__init__.py
+src/timesheet_tool/tests/test_toggl.py

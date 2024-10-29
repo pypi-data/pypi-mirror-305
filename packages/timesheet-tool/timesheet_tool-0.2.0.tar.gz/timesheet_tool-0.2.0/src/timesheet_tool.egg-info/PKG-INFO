@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: timesheet-tool
+Version: 0.2.0
+Summary: This is intended to be used every week to compile your time in Jira and Clockify.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bandit==1.7.5
+Requires-Dist: black==23.3.0
+Requires-Dist: flake8==6.0.0
+Requires-Dist: isort==5.12.0
+Requires-Dist: jira==3.5.0
+Requires-Dist: pytest==7.3.1
+Requires-Dist: python-dotenv==1.0.0
+Requires-Dist: pytz==2023.3
+Requires-Dist: requests==2.28.2
+
+# ⏰ Timesheet tool
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
+
+This is intended to be used every week to compile your time in Jira and Clockify.
+
+
+## Authors
+- [@RosaliePerron](https://github.com/RosaliePerron/)
+
+
+## Installation
+```bash
+pip install timesheet_tool
+```
+
+
+## Configuration
+Start by creating a copy of the environment file like so `cp .env.example .env`.
+You are now ready to configure the program, here is a little explainer for every variable. 
+
+**TOGGL_TOKEN**
+
+This is the token from your Toggl account, retrieve it by going to https://track.toggl.com/profile, scrolling all the way down to *API Token*.
+
+**TICKET_PREFIX**
+
+This is the prefix used in your Jira project for the tickets you will be working on. With a ticket format that looks like this: `XXX-240`, set this variable to `XXX`.
+
+**HOURS_IN_DAY**
+
+This is the number of hours you will be working every day. This should be a `float`.
+
+**MEETING_TICKET**
+
+This is the ticket number for your ticket that englobes every "meeting" type tasks.
+
+**JIRA_EMAIL**
+
+The email linked to your Jira account.
+
+**JIRA_TOKEN**
+
+This is the token from your Jira account, retrieve it by going to https://id.atlassian.com/manage-profile/security/api-tokens. Once there, click on `Create API token`, name it however you like. Click on `Create` and set this variable to the resulting token. 
+
+**JIRA_URL**
+
+This is the root url of your Jira project.
+
+**CLOCKIFY_API_KEY**
+
+This is the API key from your Clockify account, retrieve it by going to https://clockify.me/user/settings.
+
+**CLOCKIFY_USER_ID**
+
+This is the user id from your Clockify account.
+
+
+## How to use
+1. Clone this repo somewhere on your computer.
+
+    `git clone git@github.com:SamuelPerron/timesheet-tool.git`
+2. Go into the new cloned directory.
+
+    `cd ./timesheet-tool`
+3. Configure the program by following the steps into the ***Configuration*** section.
+4. Install the dependencies.
+
+    `uv sync`
+5. Invoke the script by passing it the start and end date.
+    `python ./app/main.py -s {start_date} -e {end_date}`
+6. The script is gonna parse through your logged time from Toggl and extract time spent working on Jira tickets. It will then output a list of the compiled times. If happy with the result, continue by inputting `y`.
+7. The script will send the computed times to Jira as Jira Worklogs, make sure everything is correct and, if so, input `n` to exit the program. If an error as occured or you changed your mind and want to cancel, input `y` and all previously created Jira Worklogs will be deleted.
