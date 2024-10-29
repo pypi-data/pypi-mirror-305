@@ -1,0 +1,16 @@
+git_browse/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_browse/bitbucket.py,sha256=Ub_MtjPIStpoUmDYuuLYI9aG-rIVR4_LzZ957WFrK-0,2723
+git_browse/browse.py,sha256=3UdiFiieRCuw7_XhEIB8_6B2DA8sdpmsx_AMZYp8YKo,7035
+git_browse/github.py,sha256=0l9B8uQFMT3DAYNwKyAYLWLAfvZvaKoy6yV5EjWaBWI,2609
+git_browse/gitlab.py,sha256=KQkfmDzf6yJ85bNy-GwePXhU9s1xxmkwteBGJ1HlwVY,2615
+git_browse/godocs.py,sha256=UbClOMjZU81J6E3QMIh12XNSemZpEp-HmlV7pRdOh7o,2400
+git_browse/phabricator.py,sha256=9nl03MdhSId1InW97k8E7Bmw27BTuJtWTaeKT7o0gcc,3552
+git_browse/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_browse/sourcegraph.py,sha256=eSQxPjw12iSuZXCb_PN4XKZVMdKkXNMzx0yr-YK5Mh4,2975
+git_browse/typedefs.py,sha256=OaA-W3y7_09kBrjAyVl9By9RvCRkvH8tD_TuwrNvIl0,2015
+git_browse-2.13.11.dist-info/LICENSE,sha256=tpDFYW1v5nJSgjEHf8FtHFYHKUMXEIGbuX22Naa8vMw,1068
+git_browse-2.13.11.dist-info/METADATA,sha256=DfcWxn8bkImxd8bQgWmeTz40Stk8UmQUG0ZgoBqnowk,5999
+git_browse-2.13.11.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+git_browse-2.13.11.dist-info/entry_points.txt,sha256=eWyv_iX0B7HUCOqf8ocoE9N1UCn0gUfK9RePiFTumHk,54
+git_browse-2.13.11.dist-info/top_level.txt,sha256=G1Ah37p7LJepw_EG-XPi6o3_8Avn3uDrdrY5MQx8NuA,11
+git_browse-2.13.11.dist-info/RECORD,,
