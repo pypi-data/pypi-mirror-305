@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: lestari-classifier
+Version: 0.1.1
+Summary: An ensemble classifier that combines multiple base models using learned weights
+Home-page: https://github.com/arifinrio95/lestari-classifier
+Author: Rio Nur Arifin
+Author-email: arifinrio95@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: scikit-learn>=0.24.0
+Requires-Dist: catboost>=0.24
+Requires-Dist: lightgbm>=3.0.0
+
+# LestariClassifier
+
+LESTARI (Layered Ensemble Stacking Technique with Adaptive Regression of Individual-errors) is an advanced ensemble classifier that intelligently combines multiple base models using a weighted ensemble approach. The weights are dynamically learned based on the prediction errors of individual instances across each base model.
+LESTARI was developed as part of my Master of Computer Science thesis at BINUS University, and is lovingly dedicated to my beloved wife, whose surname Lestari inspired the name of this technique.
+
+## Features
+
+- Multiple base models support
+- Automatic weight learning
+- Scikit-learn compatible
+- Probability estimates
+- Internal cross-validation
+
+## Install
+
+```bash
+pip install lestari-classifier
+```
+
+## Usage
+
+```python
+from lestari_classifier import LestariClassifier
+from lightgbm import LGBMClassifier
+from catboost import CatBoostClassifier
+
+estimators = [
+    ('lgbm', LGBMClassifier()),
+    ('cb', CatBoostClassifier(verbose=0))
+]
+
+clf = LestariClassifier(estimators=estimators)
+clf.fit(X_train, y_train)
+predictions = clf.predict(X_test)
+probabilities = clf.predict_proba(X_test)
+```
+
+## Changelog
+
+### 0.1.1
+- Enhanced predict_proba to return full probability matrix
+- Improved probability estimation
+
+### 0.1.0
+- Initial release
