@@ -1,0 +1,3 @@
+[console_scripts]
+decoil = decoil.main:main
+decoil-pipeline = decoil.command:entry_point
