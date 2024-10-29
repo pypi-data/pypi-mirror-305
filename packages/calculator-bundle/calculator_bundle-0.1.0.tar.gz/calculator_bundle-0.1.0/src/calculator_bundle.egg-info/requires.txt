@@ -1,0 +1,5 @@
+calculator_bundle.adder>=0.1.0
+calculator_bundle.multiplier>=0.1.0
+
+[test]
+pytest
