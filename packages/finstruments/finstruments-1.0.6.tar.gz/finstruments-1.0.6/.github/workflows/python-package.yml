@@ -1,0 +1,134 @@
+name: Python Package CI
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - 'v*'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install black
+        run: |
+          python -m pip install --upgrade pip
+          pip install black==24.10.0
+
+      - name: Run black to check code formatting
+        run: |
+          black --check --verbose .
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Run tests
+        run: |
+          pytest
+
+  version:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          tags: true  # Fetch all tags to ensure setuptools_scm can use them
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Upgrade setuptools and setuptools_scm
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade setuptools>=61 setuptools_scm[toml]>=8
+
+      - name: Determine the clean version
+        id: get_version
+        run: |
+          VERSION=$(python -c "import setuptools_scm; print(setuptools_scm.get_version())")
+          CLEAN_VERSION=$(echo $VERSION | sed 's/\.dev[0-9]\+.*//')
+          echo "VERSION=$CLEAN_VERSION" >> $GITHUB_ENV
+
+      - name: Create and push a clean tag
+        env:
+          VERSION: ${{ env.VERSION }}
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git tag -a "$VERSION" -m "Release version $VERSION"
+          git push origin "$VERSION"
+
+  publish:
+    needs: [ lint, test, version ]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/v')
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Upgrade setuptools and setuptools_scm
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools>=61 setuptools_scm[toml]>=8
+
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine
+
+      - name: Clean up previous builds
+        run: rm -rf dist
+
+      - name: Build the package with the correct version
+        env:
+          VERSION: ${{ env.VERSION }}
+        run: |
+          python -m build --sdist --wheel --outdir dist
+
+      - name: Publish to PyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          python -m twine upload dist/*
