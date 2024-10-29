@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Johann Klähn <johann@jklaehn.de>
+#
+# SPDX-License-Identifier: MIT
+# -*- mode: yaml; -*-
+[
+{ include: ["<clang/AST/AttrIterator.h>", private, "<clang/AST/Attr.h>", public ] },
+{ include: ["<clang/AST/Attrs.inc>", private, "<clang/AST/Attr.h>", public ] },
+{ include: ["<clang/AST/DeclBase.h>", private, "<clang/AST/Decl.h>", public ] },
+{ include: ["@<gmock/.*>", private, "<gmock/gmock.h>", public ] },
+{ include: ["@<gtest/.*>", private, "<gtest/gtest.h>", public ] },
+{ include: ["<assert.h>", public, "<cassert>", public ] }
+]

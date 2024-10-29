@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2024 Johann Klähn <johann@jklaehn.de>
+#
+# SPDX-License-Identifier: MIT
+
+cache-dir = ".cache/ruff/"
+extend-exclude = ["extern/"]
+
+[format]
+line-ending = "lf"
+
+[lint]
+select = ["A", "B", "C4", "E", "F", "I", "N", "PT", "UP"]
+ignore = ["E501"]

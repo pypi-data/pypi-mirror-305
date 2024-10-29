@@ -1,0 +1,55 @@
+// SPDX-FileCopyrightText: 2024 Johann Klähn <johann@jklaehn.de>
+//
+// SPDX-License-Identifier: MIT
+
+#ifndef ANNOTATION_KIND
+#define ANNOTATION_KIND(Enum, Spelling)
+#endif
+
+// NamedDecl
+ANNOTATION_KIND(ExposeAs, expose_as) // (String|Default)
+ANNOTATION_KIND(Hidden, hidden)      // ()
+ANNOTATION_KIND(Visible, visible)    // (Boolean|Default)?
+
+// EnumDecl
+ANNOTATION_KIND(Arithmetic, arithmetic)      // (Boolean)?
+ANNOTATION_KIND(ExportValues, export_values) // (Boolean)?
+
+// CXXMethodDecl only (but not CXXConstructorDecl, CXXConversionDecl, CXXDestructorDecl, and operators)
+ANNOTATION_KIND(GetterFor, getter_for) // (String)+
+ANNOTATION_KIND(SetterFor, setter_for) // (String)+
+
+// CXXRecordDecl
+ANNOTATION_KIND(DynamicAttr, dynamic_attr) // (Boolean)?
+ANNOTATION_KIND(HideBase, hide_base)       // (String)+
+ANNOTATION_KIND(HolderType, holder_type)   // (String)
+ANNOTATION_KIND(InlineBase, inline_base)   // (String)+
+
+// CXXConstructorDecl
+ANNOTATION_KIND(ImplicitConversion, implicit_conversion) // (Boolean)?
+
+// FunctionDecl (but not CXXConversionDecl, CXXDeductionGuideDecl, CXXDestructorDecl)
+ANNOTATION_KIND(KeepAlive, keep_alive)                  // (String)+
+ANNOTATION_KIND(Noconvert, noconvert)                   // (String)+
+ANNOTATION_KIND(Required, required)                     // (String)+
+ANNOTATION_KIND(ReturnValuePolicy, return_value_policy) // (String)
+
+// VarDecl
+ANNOTATION_KIND(Manual, manual)       // ()
+ANNOTATION_KIND(Postamble, postamble) // ()
+
+// NamespaceDecl
+ANNOTATION_KIND(Module, module) // (String)?
+ANNOTATION_KIND(OnlyExposeIn, only_expose_in) // (String)
+
+// TypedefNameDecl
+ANNOTATION_KIND(ExposeHere, expose_here) // ()
+ANNOTATION_KIND(Encourage, encourage) // ()
+
+// FieldDecl or VarDecl
+ANNOTATION_KIND(Readonly, readonly) // (Boolean)?
+
+#undef ANNOTATION_KIND
+// Local Variables:
+// mode: c++
+// End:
