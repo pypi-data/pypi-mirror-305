@@ -1,0 +1,12 @@
+timesheet_tool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+timesheet_tool/config.py,sha256=bP5EJpzbgmZjsyFXmE3J3z3dUOkMEbZUjXykU_yQ7rM,594
+timesheet_tool/jira_worklogs.py,sha256=V0qRaXcQTR3ykXyqjEnE9QHEI3idkLZ_PmLieagMXHo,1162
+timesheet_tool/main.py,sha256=0M5Wq4jT-hyqTz9mpQ4j8wzwvIzZ7JwYTnKmGGA1evM,1158
+timesheet_tool/toggl.py,sha256=7OmGQQuxLQXzSfQf9UZF-xYgfudstbgvH-M_yjfgw4c,5603
+timesheet_tool/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+timesheet_tool/tests/test_toggl.py,sha256=yBTydgPQUlL_Ko_D0HACEPSjhXIUnOCi5JS4M3wxkJg,5611
+timesheet_tool-0.2.0.dist-info/LICENSE,sha256=7O1iS6C7dcMk5YBpBZB3AOSytB3Jq6vA7MapEtS8liI,1061
+timesheet_tool-0.2.0.dist-info/METADATA,sha256=0K4sElR1u6Bd5vZmG2Wnt8CZO3OdJIaVyomMgknH3OM,3165
+timesheet_tool-0.2.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+timesheet_tool-0.2.0.dist-info/top_level.txt,sha256=YApznumdiaQsQUPC_mC0ba6bIPbnLH_cU5dY3Oi2yvU,15
+timesheet_tool-0.2.0.dist-info/RECORD,,
