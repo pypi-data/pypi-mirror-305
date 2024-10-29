@@ -1,0 +1,9 @@
+apsw
+babel
+gdown
+prompt_toolkit
+requests
+uniquebible_maps_1
+
+[gui]
+PySide6
