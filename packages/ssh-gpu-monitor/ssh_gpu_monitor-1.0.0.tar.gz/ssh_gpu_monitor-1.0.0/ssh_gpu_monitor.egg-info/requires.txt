@@ -1,0 +1,5 @@
+rich>=10.0.0
+asyncssh>=2.13.1
+pyyaml>=6.0.1
+pyOpenSSL==23.1.1
+cryptography==40.0.2

@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/__init__.py
+src/config_loader.py
+src/main.py
+src/table_display.py
+ssh_gpu_monitor.egg-info/PKG-INFO
+ssh_gpu_monitor.egg-info/SOURCES.txt
+ssh_gpu_monitor.egg-info/dependency_links.txt
+ssh_gpu_monitor.egg-info/entry_points.txt
+ssh_gpu_monitor.egg-info/requires.txt
+ssh_gpu_monitor.egg-info/top_level.txt
