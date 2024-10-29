@@ -1,0 +1,16 @@
+bylexa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bylexa/actions.py,sha256=GHH3krxy7qQlmDRYwsAjjozcpT3KiKOcI2TTwsLmNYo,5872
+bylexa/cli.py,sha256=XjFcwxetOyVtrhoqUZ53LUGXemCR73wEpOlsvHUFboA,536
+bylexa/commands.py,sha256=W3F9jUZLmX1K4nWVLhk6N-nK9Hz9kMYV4hHs55MEw5M,4103
+bylexa/config.py,sha256=i6MunglETCcfDpudQPABYyTsALWbKmJ_iALWIhOa_-w,6078
+bylexa/config_gui.py,sha256=IJ0I2VUVB7GDgZeofItUgL2Uderqx9bl0cRDmUlLkZg,10011
+bylexa/constants.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bylexa/main.py,sha256=RxOrpDcm1k1adZEKnwD-8sh7CdhvxNwca42EhAvV3b8,873
+bylexa/token.py,sha256=GauqaGitVDJDxzz_YfUPGwC93q7VCozVfeTVNl8isAw,986
+bylexa/websocket_client.py,sha256=ZaUCBVhFAYS_cDeLSv79D3Xs-yCTCwPXseWklGlmsUE,4906
+bylexa-1.1.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bylexa-1.1.0.dist-info/METADATA,sha256=mmsEJpYixrRdyGBWx0hV3WJ05W86Mqn7vW9oW_SWPNE,426
+bylexa-1.1.0.dist-info/WHEEL,sha256=cVxcB9AmuTcXqmwrtPhNK88dr7IR_b6qagTj0UvIEbY,91
+bylexa-1.1.0.dist-info/entry_points.txt,sha256=c_hRd9FzYwDqGQ5nj_WCjCCSJCqvRFEqrEgt7YiKeBc,43
+bylexa-1.1.0.dist-info/top_level.txt,sha256=o5PcMvMXXCORwnkSlsTFl31fviLjB7qhuu96gfydKrg,7
+bylexa-1.1.0.dist-info/RECORD,,
