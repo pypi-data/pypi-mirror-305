@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "vocab-study-cli"
+version = "0.2.0"
+description = "A CLI tool for vocabulary learning in Anki using GenAI API"
+authors = ["Takuya Sato <business@satotakuya.jp>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+openai = "^1.52.2"
+requests = "^2.32.3"
+python-dotenv = "^1.0.1"
+anthropic = "^0.37.1"
+selenium = "^4.25.0"
+undetected-chromedriver = "^3.5.5"
+setuptools = "^75.2.0"
+pillow = "8.4.0"
+google-cloud-translate = "^3.17.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+vocab = "vocab_study_cli.main:main"
