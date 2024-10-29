@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: curlyDL
+Version: 0.1.0
+Summary: A Python Download Manager SDK using libcurl
+Author: Hamed Kazemi
+Author-email: kafa1942@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: psutil (>=6.1.0,<7.0.0)
+Requires-Dist: pycurl (>=7.45.0,<8.0.0)
+Requires-Dist: tqdm (>=4.66.6,<5.0.0)
