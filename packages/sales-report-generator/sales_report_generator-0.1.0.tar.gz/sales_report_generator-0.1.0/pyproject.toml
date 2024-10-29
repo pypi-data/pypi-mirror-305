@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sales_report_generator"
+version = "0.1.0"
+description = "A package for analyzing sales data and generating reports."
+authors = [
+    { name="Alex", email="haylarrr@yandex.ru" }
+]
+dependencies = ["pandas"]
+[tool.setuptools]
+py-modules = []

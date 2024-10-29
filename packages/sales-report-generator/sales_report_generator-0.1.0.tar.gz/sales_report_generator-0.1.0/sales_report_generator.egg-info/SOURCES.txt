@@ -1,0 +1,6 @@
+pyproject.toml
+sales_report_generator.egg-info/PKG-INFO
+sales_report_generator.egg-info/SOURCES.txt
+sales_report_generator.egg-info/dependency_links.txt
+sales_report_generator.egg-info/requires.txt
+sales_report_generator.egg-info/top_level.txt

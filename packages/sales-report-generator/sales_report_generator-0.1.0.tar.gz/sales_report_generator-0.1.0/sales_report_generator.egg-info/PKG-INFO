@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: sales_report_generator
+Version: 0.1.0
+Summary: A package for analyzing sales data and generating reports.
+Author-email: Alex <haylarrr@yandex.ru>
+Requires-Dist: pandas
