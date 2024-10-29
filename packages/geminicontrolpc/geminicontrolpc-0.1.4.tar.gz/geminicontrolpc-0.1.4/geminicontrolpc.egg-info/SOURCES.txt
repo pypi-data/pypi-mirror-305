@@ -1,0 +1,10 @@
+README.md
+setup.py
+geminicontrolpc/__init__.py
+geminicontrolpc/geminicontrolpc.py
+geminicontrolpc.egg-info/PKG-INFO
+geminicontrolpc.egg-info/SOURCES.txt
+geminicontrolpc.egg-info/dependency_links.txt
+geminicontrolpc.egg-info/entry_points.txt
+geminicontrolpc.egg-info/requires.txt
+geminicontrolpc.egg-info/top_level.txt
