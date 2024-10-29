@@ -1,0 +1,13 @@
+bosos-dev-tools
+ldap3
+python-dotenv
+sqlalchemy
+winkerberos
+cryptography
+unidecode
+
+[lint]
+pylint
+
+[test]
+coverage
