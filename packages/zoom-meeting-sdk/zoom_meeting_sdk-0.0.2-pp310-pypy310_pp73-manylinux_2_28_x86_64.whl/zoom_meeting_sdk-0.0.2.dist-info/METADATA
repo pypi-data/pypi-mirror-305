@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: zoom-meeting-sdk
+Version: 0.0.2
+Summary: Python Bindings for the Zoom Meeting SDK
+Author-Email: Noah Duncan <nduncan@hmc.edu>
+Classifier: License :: OSI Approved :: BSD License
+Project-URL: Homepage, https://github.com/noah-duncan/py-zoom-meeting-sdk
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# PyZoomMeetingSDK
+
+Python bindings for the Zoom Meeting SDK for Linux.
+
+## Requirements
+
+Only runs on Linux. Requires Python 3.10+
+
+A Dockerfile to run a suitable Linux machine is provided in the repository. Just run `docker compose run --rm develop` from the repository root to start it.
+
+## Installation
+
+### Simple
+
+1. Start a Linux Machine with Python 3.10+ installed.
+2. `pip install zoom-meeting-sdk`
