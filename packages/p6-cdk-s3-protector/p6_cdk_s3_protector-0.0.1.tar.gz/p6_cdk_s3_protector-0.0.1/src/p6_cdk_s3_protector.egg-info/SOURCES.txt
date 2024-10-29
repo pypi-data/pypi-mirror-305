@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/p6_cdk_s3_protector/__init__.py
+src/p6_cdk_s3_protector/py.typed
+src/p6_cdk_s3_protector.egg-info/PKG-INFO
+src/p6_cdk_s3_protector.egg-info/SOURCES.txt
+src/p6_cdk_s3_protector.egg-info/dependency_links.txt
+src/p6_cdk_s3_protector.egg-info/requires.txt
+src/p6_cdk_s3_protector.egg-info/top_level.txt
+src/p6_cdk_s3_protector/_jsii/__init__.py
+src/p6_cdk_s3_protector/_jsii/p6-cdk-s3-protector@0.0.1.jsii.tgz
