@@ -1,0 +1,14 @@
+fairly/__init__.py,sha256=39KbEeaP_cLPxXiARhh0RrSAtIAKMdEk2-AxPBSMOpU,144
+fairly/multimodal_analyzer.py,sha256=fTXidKdqkd_AISRyFI50BFbJS2xKzva2_CaG2Bq7nHc,1515
+fairly/test.py,sha256=24zW27rHeymUkrYM00wB8IjdS7em6pJzv5YZvik5BQ8,988
+fairly/text_analyzer.py,sha256=O8VqiuY2Pqz804Xg4lI2GGTCV2Ol0irg9CNFb5lRPFA,3032
+fairly/models/__init__.py,sha256=MjXhO3oggxw7czaCdSZqy7zO6zGNfqmy7D0sM-z6iYo,271
+fairly/models/fairly_aspects.py,sha256=IE0C0ICurbCj7_Z4JPqmRo66rkxh_vYSzwvALIF4C-g,493
+fairly/models/fnd_clip.py,sha256=xFy-Tpntiipqwv4_yK8KG3YcxQLBYPy0X1OsPL6p_dU,4179
+fairly/models/gus_net.py,sha256=trcsun3_Mij0_5rIiqYNVZWQZ-Gn6hEcN8VPbfDz2Es,1662
+fairly/models/unbias.py,sha256=ZwauARzRspZC13L1aT4q1PXUZJ4AsuHEkb0y7t-CHBo,326
+the_fairly_project-0.4.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+the_fairly_project-0.4.dist-info/METADATA,sha256=SxyLqgKdX2p98NpFvMci8MTv9wOyaxCI26qSI9WT328,1094
+the_fairly_project-0.4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+the_fairly_project-0.4.dist-info/top_level.txt,sha256=aPF8HdH5QJxtK9FgzATV12hcwqxJJlSCMe0oSQ3RffQ,7
+the_fairly_project-0.4.dist-info/RECORD,,
