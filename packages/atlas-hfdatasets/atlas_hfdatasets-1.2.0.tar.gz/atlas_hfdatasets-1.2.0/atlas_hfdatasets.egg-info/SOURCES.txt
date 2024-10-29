@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+atlas_hfdatasets.egg-info/PKG-INFO
+atlas_hfdatasets.egg-info/SOURCES.txt
+atlas_hfdatasets.egg-info/dependency_links.txt
+atlas_hfdatasets.egg-info/entry_points.txt
+atlas_hfdatasets.egg-info/requires.txt
+atlas_hfdatasets.egg-info/top_level.txt
+atlas_hgdatasets/__init__.py
+atlas_hgdatasets/atlas_hgdatasets.py
+cores/__init__.py
+cores/core_functions.py
