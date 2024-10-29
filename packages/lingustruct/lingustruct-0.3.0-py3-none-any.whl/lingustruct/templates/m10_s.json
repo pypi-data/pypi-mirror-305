@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "meta": {
+            "type": "object",
+            "properties": {
+                "t_v": {
+                    "type": "string",
+                    "description": "Template version"
+                },
+                "p_n": {
+                    "type": "string",
+                    "description": "Project name"
+                },
+                "p_v": {
+                    "type": "string",
+                    "description": "Project version"
+                },
+                "desc": {
+                    "type": "string",
+                    "description": "Description"
+                },
+                "scale": {
+                    "type": "string",
+                    "enum": ["s", "m", "l", "e"],
+                    "description": "Scale"
+                }
+            },
+            "required": ["t_v", "p_n", "p_v", "desc", "scale"]
+        }
+    },
+    "required": ["meta"]
+}
