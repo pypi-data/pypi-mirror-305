@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: appium_utils
+Version: 0.0.1
+Summary: Appium 테스트 자동화를 위한 유틸리티 패키지
+Home-page: https://github.com/kimkitae/appium_utils
+Author: Kim Kitae
+Author-email: daearcdo@kimkitae.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+Requires-Dist: appium-python-client
+
+# appium-utils
+Appium 유틸리티 pypi 저장소 입니다.

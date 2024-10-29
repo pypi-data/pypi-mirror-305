@@ -1,0 +1,7 @@
+README.md
+setup.py
+appium_utils.egg-info/PKG-INFO
+appium_utils.egg-info/SOURCES.txt
+appium_utils.egg-info/dependency_links.txt
+appium_utils.egg-info/requires.txt
+appium_utils.egg-info/top_level.txt
