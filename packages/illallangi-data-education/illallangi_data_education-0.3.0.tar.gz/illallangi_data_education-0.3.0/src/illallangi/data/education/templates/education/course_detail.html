@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <h2>{{ obj }}</h2>
+    {% if obj.description %}
+        <p>
+            <em>{{ obj.description }}</em>
+        </p>
+    {% endif %}
+    <table class="table table-hover table-sm">
+        <tbody>
+            <tr>
+                <th scope="row">Start</th>
+                <td>
+                    {% if obj.start %}
+                        {{ obj.start }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Finish</th>
+                <td>
+                    {% if obj.finish %}
+                        {{ obj.finish }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Institution</th>
+                <td>
+                    {% if obj.institution %}
+                        {{ obj.institution }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Street</th>
+                <td>
+                    {% if obj.street %}
+                        {{ obj.street }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Locality</th>
+                <td>
+                    {% if obj.locality %}
+                        {{ obj.locality }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Region</th>
+                <td>
+                    {% if obj.region %}
+                        {{ obj.region }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Postal Code</th>
+                <td>
+                    {% if obj.postal_code %}
+                        {{ obj.postal_code }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Country</th>
+                <td>
+                    {% if obj.country %}
+                        {{ obj.country }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr {% if obj.open_location_code %}role="button" data-href="https://plus.codes/{{ obj.open_location_code }}"{% endif %}>
+                <th scope="row">Open Location Code</th>
+                <td>
+                    {% if obj.open_location_code %}
+                        {{ obj.open_location_code }}
+                    {% else %}
+                        <em>Unknown</em>
+                    {% endif %}
+                </td>
+            </tr>
+            {% for related in related_objects %}
+                <tr role="button" data-href="{{ related.href }}">
+                    <th scope="row">{{ related.title }}</th>
+                    <td>{{ related.count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
