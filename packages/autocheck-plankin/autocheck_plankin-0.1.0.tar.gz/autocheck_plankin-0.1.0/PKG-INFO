@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: autocheck_plankin
+Version: 0.1.0
+Summary: Перевод чека json в чек txt
+Author: Kirill
+License: MIT
+Description-Content-Type: text/markdown
+
+--input-file - входной файл с заказ, в котором категория, сумма и количество
+
+--output-file - выходной файл, куда будет записан чек в формате txt
+
+Пример команды: python3 -m autocheck --input-file data/order.json --output-file rrr.txt

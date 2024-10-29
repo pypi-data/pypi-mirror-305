@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autocheck_plankin"
+version = "0.1.0"
+description = "Перевод чека json в чек txt"
+authors = [{ name = "Kirill"}]
+dependencies = []
+license = {text = 'MIT'}
+readme = 'README.md'
+
+[project.scripts]
+autocheck="autocheck.main:main"
