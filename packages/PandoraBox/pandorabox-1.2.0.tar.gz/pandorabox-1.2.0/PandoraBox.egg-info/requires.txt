@@ -1,0 +1,13 @@
+requests
+anyio
+h11
+fastapi
+uvicorn
+pydantic
+jupyter-client
+ipython
+ipykernel
+pandas
+numpy
+matplotlib
+jsonlines
