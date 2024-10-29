@@ -1,0 +1,2 @@
+[console_scripts]
+roi_net_profit = roi_net_profit.__main__:main
