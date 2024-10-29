@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: CSVtoTableNameless
+Version: 2.2.2
+Summary: Simple commandline utility to convert CSV files to searchable and sortable HTML table.
+Home-page: https://github.com/NanashiTheNameless/csvtotable
+Download-URL: https://github.com/NanashiTheNameless/csvtotable/archive/2.2.2.tar.gz
+Author: NanashiTheNameless
+Author-email: NanashiTheNameless@NamelessNanashi.dev
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+License-File: LICENSE
+Requires-Dist: click>=6.7
+Requires-Dist: jinja2>=2.9.6
+Requires-Dist: unicodecsv>=0.14.1
+Requires-Dist: six>=1.10.0
+
+Simple commandline utility to convert CSV files to searchable and sortable HTML table.
