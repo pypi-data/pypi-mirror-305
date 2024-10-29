@@ -1,0 +1,13 @@
+AzureAuthenticate/AzureAuthenticator.py,sha256=diU-S9MePtpDG6yUi8RtEdG_ue2FoLEmxXKUzVgYWjU,1985
+AzureAuthenticate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AzureKeyValut/AzureKeyVault.py,sha256=Ib-V99v5PKbET1ITdioGOO_jRH9GHbKYum8XM0kYt9E,1728
+AzureKeyValut/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AzureResourceManger/AzureResourceManager.py,sha256=z9rXsfiTfNbVKToi0QZbNYv5-tRN3LIdBUYqObAExFk,2190
+AzureResourceManger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AzureStorage/AzureBlobStorage.py,sha256=aBjzzaXntmZw7_5WdgQOOrv8cwCH4RF9mdF0DLGU_HY,3355
+AzureStorage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AzurePythonConnectors-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+AzurePythonConnectors-1.0.0.dist-info/METADATA,sha256=o3beQZL3OrgN3suaNlLb__PcYpyGb_5dekn8WOFY3vE,611
+AzurePythonConnectors-1.0.0.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+AzurePythonConnectors-1.0.0.dist-info/top_level.txt,sha256=bbaEazdrjaVzM2JGyIgZvq-6gjGP1_CQSIA3H8-uVOk,65
+AzurePythonConnectors-1.0.0.dist-info/RECORD,,
