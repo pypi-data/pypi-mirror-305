@@ -1,0 +1,10 @@
+cows3/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cows3/detectorstates.py,sha256=z4IAYV7zNgabwd0GlPB6yoALCDQOYDkxh_NapM8mQjc,4506
+cows3/ephemeris.py,sha256=u-wboqFrwlKlG0yxzBOToHgTUsxkzVq544xFokmE2yc,252
+cows3/sensitivity.py,sha256=7_37jODzWEjP2aF7IqG5-R1ZSB4Te9JdJmgPFDQvrfo,1382
+cows3/snr.py,sha256=p4XkYkxi3lpKgugV_5ncxG3eboDl5JAkTIeJHB13Sc0,6977
+cows3-0.0.1.dist-info/LICENSE.md,sha256=o4m3hgEiVXy9sBkJ-2IDnQbPcQ0NXBebtkUL_uHuS3Y,1091
+cows3-0.0.1.dist-info/METADATA,sha256=Vg-w6Ra_gipc09cxG3IzHe3QnPrm24aA9fiKz0uF3lY,3539
+cows3-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+cows3-0.0.1.dist-info/top_level.txt,sha256=aifHFffyf2vQ6TWHsZ8pdRtgmpNEBNr_ySoIzhKT1y0,6
+cows3-0.0.1.dist-info/RECORD,,
