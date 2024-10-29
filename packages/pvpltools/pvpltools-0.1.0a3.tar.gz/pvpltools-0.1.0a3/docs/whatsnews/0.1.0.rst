@@ -1,0 +1,8 @@
+v0.1.0
+======
+
+2024-15-01
+
+* First official release of the project on PyPI.
+
+.. note:: Feedback and contributions are welcome!
