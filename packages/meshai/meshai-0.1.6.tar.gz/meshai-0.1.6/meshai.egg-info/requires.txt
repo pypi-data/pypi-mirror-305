@@ -1,0 +1,10 @@
+torch
+torchvision
+transformers
+pandas
+scikit-learn
+numpy
+joblib
+Pillow
+PyPDF2
+cryptography
