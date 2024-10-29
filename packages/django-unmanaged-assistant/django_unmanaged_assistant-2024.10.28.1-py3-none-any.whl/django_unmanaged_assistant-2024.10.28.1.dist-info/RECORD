@@ -1,0 +1,14 @@
+django_unmanaged_assistant/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_unmanaged_assistant/apps.py,sha256=tCNP4pyIotow_i4NIHFlFVFAbXMyNJBhdjg0qQjCYZg,289
+django_unmanaged_assistant/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_unmanaged_assistant/management/__pycache__/__init__.cpython-312.pyc,sha256=x3LsjRqtBUhfRHKmLKfuntFFE0bowORgzZvveiNQt2U,211
+django_unmanaged_assistant/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_unmanaged_assistant/management/commands/create_databases.py,sha256=AMjNmW4qtW5nvxRMNH2K-ZI0ZulIYpMcj44E1B1PZ7o,6451
+django_unmanaged_assistant/management/commands/create_unmanaged_tables.py,sha256=4nIntTFPrCOmgSy3XdsjYbfdXyATWHMK690H2CRwlBE,24120
+django_unmanaged_assistant/management/commands/__pycache__/__init__.cpython-312.pyc,sha256=ZNYodVcaxoUMpood1H1zsHXvcAJqt6Jrm3iDHUOwOrE,220
+django_unmanaged_assistant/management/commands/__pycache__/create_unmanaged_tables.cpython-312.pyc,sha256=-xENVqaaMJghWFZ89TLPVhLWwdVYZaNaBuha_Ctrw04,25116
+django_unmanaged_assistant-2024.10.28.1.dist-info/LICENSE.txt,sha256=fiaav7QHTFcvoigUsxdEp9F6GyD0rDtxCQS6EimcDiw,1066
+django_unmanaged_assistant-2024.10.28.1.dist-info/METADATA,sha256=gHRk0b7J7iaQi6lJlKhz-K3urt3N9Uaa_rhTYuXS21k,9631
+django_unmanaged_assistant-2024.10.28.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+django_unmanaged_assistant-2024.10.28.1.dist-info/top_level.txt,sha256=HiBbF9j_izM8_hSc7WuPuLNa1Ovv2m3fLbUXFWjpfyk,27
+django_unmanaged_assistant-2024.10.28.1.dist-info/RECORD,,
