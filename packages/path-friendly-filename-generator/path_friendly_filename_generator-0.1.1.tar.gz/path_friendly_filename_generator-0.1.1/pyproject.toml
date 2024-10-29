@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "path_friendly_filename_generator"
+version = "0.1.1"
+description = "A package to generate path-friendly filenames across different operating systems."
+authors = [{name = "Sammy", email = "dussinsa01@esj.org"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+keywords = ["filename", "generator", "path-friendly", "cross-platform"]
+
+[project.urls]
+"Homepage" = "https://github.com/greenstorm5417/path-friendly-filename-generator"  
+"Documentation" = "https://github.com/greenstorm5417/path-friendly-filename-generator"
+"Source Code" = "https://github.com/greenstorm5417/path-friendly-filename-generator"
+
+[project.optional-dependencies]
+test = ["unittest"]
+
+[tool.setuptools.packages.find]
+where = ["path_friendly_filename_generator"]

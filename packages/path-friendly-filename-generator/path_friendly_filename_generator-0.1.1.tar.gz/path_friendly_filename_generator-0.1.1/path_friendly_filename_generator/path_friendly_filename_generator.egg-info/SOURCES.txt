@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+path_friendly_filename_generator/path_friendly_filename_generator.egg-info/PKG-INFO
+path_friendly_filename_generator/path_friendly_filename_generator.egg-info/SOURCES.txt
+path_friendly_filename_generator/path_friendly_filename_generator.egg-info/dependency_links.txt
+path_friendly_filename_generator/path_friendly_filename_generator.egg-info/requires.txt
+path_friendly_filename_generator/path_friendly_filename_generator.egg-info/top_level.txt
+tests/test_generator.py
+tests/test_validators.py
