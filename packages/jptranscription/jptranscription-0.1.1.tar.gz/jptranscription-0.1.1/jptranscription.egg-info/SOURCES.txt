@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+jptranscription/__init__.py
+jptranscription.egg-info/PKG-INFO
+jptranscription.egg-info/SOURCES.txt
+jptranscription.egg-info/dependency_links.txt
+jptranscription.egg-info/top_level.txt
+jptranscription/phonetics/__init__.py
+jptranscription/phonetics/phonetizer.py
+jptranscription/phonetics/wikitionary_processor.py
+jptranscription/transcription/__init__.py
+jptranscription/transcription/ipakatamapping.py
+jptranscription/transcription/katakanizer.py
