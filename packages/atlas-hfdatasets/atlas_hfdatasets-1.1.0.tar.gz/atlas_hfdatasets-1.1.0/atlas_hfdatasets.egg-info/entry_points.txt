@@ -1,0 +1,2 @@
+[console_scripts]
+atlas_hgdatasets = atlas_hgdatasets.atlas_hgdatasets:main
