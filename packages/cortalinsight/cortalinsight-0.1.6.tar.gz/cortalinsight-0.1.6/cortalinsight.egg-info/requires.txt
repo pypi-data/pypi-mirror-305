@@ -1,0 +1,4 @@
+requests>=2.25
+tqdm==4.66.1
+opencv-python>=4.1
+PyYAML>=6.0
