@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: schemantis
+Version: 0.0.2
+Summary: A python client for schemantis api
+Author-email: James Rao <james@10xtech.ca>
+Project-URL: Homepage, https://git.10xtech.ca/root/schemantis-docs
+Project-URL: Bug Tracker, https://git.10xtech.ca/root/schemantis-docs
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+

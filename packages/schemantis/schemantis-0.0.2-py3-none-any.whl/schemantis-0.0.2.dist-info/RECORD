@@ -1,0 +1,10 @@
+schemantis/__init__.py,sha256=7glnc0uLMy86PSsh3VbmDeHtl3LYQzEPsNDX9hp9cSc,1058
+schemantis/api_client.py,sha256=f-OL9eMvIG1ePgZdqS7Co5BrgmZg0roZ9EAKL7Eu3IQ,26001
+schemantis/api_response.py,sha256=WhxwYDSMm6wPixp9CegO8dJzjFxDz3JF1yCq9s0ZqKE,639
+schemantis/configuration.py,sha256=q3p7dXjsLNNU5noRSSrzc_bIRycM9TLxeBO_JHom8QY,16057
+schemantis/exceptions.py,sha256=t9ssbJpwxna5Qnc8t8wL5L87IRKOfV1LLg9CXcGuhl4,5872
+schemantis/rest.py,sha256=2Iqe73pNrPB7B2t-ywGmGH6_mNyyad6HcD6JG6Zkhds,9189
+schemantis-0.0.2.dist-info/METADATA,sha256=TxoCZDoq_qN9NkBGjU5KGp_5-JjI1aaSqwBF3fDQ5-M,488
+schemantis-0.0.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+schemantis-0.0.2.dist-info/top_level.txt,sha256=W_p6kZqBAuMo74-gUdbnSmFND74cZnxK3jcWyHif6t4,11
+schemantis-0.0.2.dist-info/RECORD,,
