@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: IPFX
+Version: 2.0.0
+Summary: Intrinsic Physiology Feature Extractor (IPFX) - tool for computing neuronal features from the intracellular electrophysiological recordings
+Home-page: https://github.com/AllenInstitute/ipfx
+Author: Allen Institute for Brain Science
+Author-email: Marmot@AllenInstitute.onmicrosoft.com
+Keywords: neuroscience,bioinformatics,scientific
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: allensdk
+Requires-Dist: argschema
+Requires-Dist: dictdiffer
+Requires-Dist: h5py
+Requires-Dist: marshmallow
+Requires-Dist: matplotlib
+Requires-Dist: methodtools
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pg8000
+Requires-Dist: pillow
+Requires-Dist: pyabf
+Requires-Dist: pynwb==2.2.0
+Requires-Dist: pyYAML
+Requires-Dist: ruamel.yaml<0.18.0
+Requires-Dist: scipy
+Requires-Dist: simplejson
+Requires-Dist: watchdog
+
+Welcome to Intrinsic Physiology Feature Extractor (IPFX)
+==========================================
+
+IPFX is a Python package for computing intrinsic cell features from electrophysiology data. With this package you can:
+
+- Perform cell data quality control (e.g. resting potential stability)
+- Detect action potentials and their features (e.g. threshold time and voltage)
+- Calculate features of spike trains (e.g., adaptation index)
+- Calculate stimulus-specific cell features
+
+This software is designed for use in the Allen Institute for Brain Science electrophysiology data processing pipeline.
+
+For usage and installation instructions, see the [documentation](https://ipfx.readthedocs.io/en/latest/).
+
+Quick Start
+------------
+To start analyzing data now, check out the [quick_start](https://ipfx.readthedocs.io/en/latest/quick_start.html) . For a more in depth guide to IPFX, see [tutorial](https://ipfx.readthedocs.io/en/latest/tutorial.html)
+
+Contributing
+------------
+We welcome contributions! Please see our [contribution guide](https://github.com/AllenInstitute/ipfx/blob/master/CONTRIBUTING.md) for more information. Thank you!
+
+Deprecation Warning
+-------------------
+
+The 2.0.0 release of IPFX drops support for Python 3.6 which reached end of life and stopped receiving security updated on December 23, 2021.
+IPFX is now tested on Python 3.9 and higher.
