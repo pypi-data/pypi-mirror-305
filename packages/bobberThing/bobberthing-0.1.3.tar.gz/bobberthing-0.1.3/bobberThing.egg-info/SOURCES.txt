@@ -1,0 +1,8 @@
+README.md
+setup.py
+bobberThing/__init__.py
+bobberThing/bob.py
+bobberThing.egg-info/PKG-INFO
+bobberThing.egg-info/SOURCES.txt
+bobberThing.egg-info/dependency_links.txt
+bobberThing.egg-info/top_level.txt
