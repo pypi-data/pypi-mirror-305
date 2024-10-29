@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: calculadora_lib
+Version: 0.1.0
+Summary: Uma biblioteca de exemplo para manipulação de dados
+Home-page: https://github.com/seu_usuario/minha_biblioteca
+Author: Seu Nome
+Author-email: seu_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+calculadora_codigos/__init__.py
+calculadora_codigos/soma.py
+calculadora_lib.egg-info/PKG-INFO
+calculadora_lib.egg-info/SOURCES.txt
+calculadora_lib.egg-info/dependency_links.txt
+calculadora_lib.egg-info/requires.txt
+calculadora_lib.egg-info/top_level.txt
