@@ -1,0 +1,10 @@
+[project]
+name = "ors"
+version = "0.1.5"
+description = "An openrouteservice client"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT License"}
+dependencies = [
+    "urllib3>=2.2.3",
+]
