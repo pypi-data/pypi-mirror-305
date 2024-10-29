@@ -1,0 +1,15 @@
+cdklabs/aws_data_solutions_framework/__init__.py,sha256=DxZ289TCgQw7r2Cd1zxhGrWVpyWOTAK5PZcW1mcP0-c,1074
+cdklabs/aws_data_solutions_framework/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdklabs/aws_data_solutions_framework/_jsii/__init__.py,sha256=u_VfaxmKoz80axVh1al6uRW0PrZ3caUPm2bAOBebrh0,569
+cdklabs/aws_data_solutions_framework/_jsii/aws-data-solutions-framework@1.15.1.jsii.tgz,sha256=vxHCX6aXZRT_dJ87ODArQmfKLGc-zis1wti7pVCDCos,4889930
+cdklabs/aws_data_solutions_framework/consumption/__init__.py,sha256=DeHvRs0TDgqdmaDq8gBuIffF7pXvQ5Zn5O8gqA3czdM,269266
+cdklabs/aws_data_solutions_framework/governance/__init__.py,sha256=lK7_M8b_ILRjoi8RxP8g_4TSqfZIb-AFT0iRbv8nLfc,158894
+cdklabs/aws_data_solutions_framework/processing/__init__.py,sha256=E6kxuJT_Vqo3Rcqq5g9DFa85E9qaRpnYl836A99mNKY,261591
+cdklabs/aws_data_solutions_framework/storage/__init__.py,sha256=I0_LsMT--WvcOZBqlvNXCtbWJqnG2gkIiVLiiaPsXgM,87013
+cdklabs/aws_data_solutions_framework/streaming/__init__.py,sha256=ORYRm3HteQpzymYVH9ZCqhJJzpO3UqkHVKHpb54afCQ,198128
+cdklabs/aws_data_solutions_framework/utils/__init__.py,sha256=6ejGhVnayiVFA6aVpY0m5os-yHlmJm614AtQM56Ygec,107912
+cdklabs.aws_data_solutions_framework-1.15.1.dist-info/LICENSE,sha256=XcbkLqlAVYHS5JmUfglW5m-ltZnTRjEd2qC2T2uZ5iM,11392
+cdklabs.aws_data_solutions_framework-1.15.1.dist-info/METADATA,sha256=QE3j-pYhCacAM32wlVFHDCNkrmZojPu6REg6K17G2nM,1641
+cdklabs.aws_data_solutions_framework-1.15.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+cdklabs.aws_data_solutions_framework-1.15.1.dist-info/top_level.txt,sha256=Vs44V5-Co6j_Qx_ucqQGxTOZFFDDj84KkvQ3MpexszY,8
+cdklabs.aws_data_solutions_framework-1.15.1.dist-info/RECORD,,
