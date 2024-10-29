@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Sem6_task4_blackpython.egg-info/PKG-INFO
+Sem6_task4_blackpython.egg-info/SOURCES.txt
+Sem6_task4_blackpython.egg-info/dependency_links.txt
+Sem6_task4_blackpython.egg-info/requires.txt
+Sem6_task4_blackpython.egg-info/top_level.txt
