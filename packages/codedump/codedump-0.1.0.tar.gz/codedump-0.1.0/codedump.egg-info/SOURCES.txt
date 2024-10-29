@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+codedump/__init__.py
+codedump/codedump.py
+codedump.egg-info/PKG-INFO
+codedump.egg-info/SOURCES.txt
+codedump.egg-info/dependency_links.txt
+codedump.egg-info/entry_points.txt
+codedump.egg-info/requires.txt
+codedump.egg-info/top_level.txt
