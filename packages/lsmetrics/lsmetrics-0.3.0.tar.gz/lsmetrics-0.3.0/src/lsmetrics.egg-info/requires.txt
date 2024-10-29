@@ -1,0 +1,7 @@
+pymatgen>=2024.10.3
+scikit-learn>=1.5.2
+torch>=2.4.1
+torch-geometric>=2.6.1
+tqdm>=4.66.5
+pytorch-lightning>=2.4.0
+loguru>=0.7.2

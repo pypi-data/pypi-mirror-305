@@ -1,0 +1,30 @@
+[project]
+name = "lsmetrics"
+version = "0.3.0"
+description = "Latent Space Metrics"
+readme = "README.md"
+requires-python = ">=3.10, <3.13"
+dependencies = [
+    "pymatgen>=2024.10.3",
+    "scikit-learn>=1.5.2",
+    "torch>=2.4.1",
+    "torch-geometric>=2.6.1",
+    "tqdm>=4.66.5",
+    "pytorch-lightning>=2.4.0",
+    "loguru>=0.7.2",
+]
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "mp-api>=0.42.2",
+    "ruff>=0.7.1",
+    "seaborn>=0.13.2",
+]
+test = [
+    "pytest>=8.3.3",
+]
