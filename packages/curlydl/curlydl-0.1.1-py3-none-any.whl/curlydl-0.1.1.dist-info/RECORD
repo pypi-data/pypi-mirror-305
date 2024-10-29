@@ -1,0 +1,13 @@
+src/__init__.py,sha256=sSMQpp42-qgKpE8lyVHw9y2NVoOChvn6ESKg40ylJnc,150
+src/download_manager.py,sha256=pJl76w-A1gPceNozo_Zv3rsZYQHSV01yX7amKALPA1Y,8900
+src/engine.py,sha256=j7WqL9rCixq9f5B3AxsdzuO-_U74t7SzLYYzIIRS4y8,20191
+src/error_handler.py,sha256=cpsm-r6A4qJ-18j6-aNHHwMu72k0162fF0gmpM85Zrg,9578
+src/filesystem.py,sha256=SerVQbndtd98RpozaTmbY64DIQ7j5G-7NLX8TUyuxHE,11428
+src/metadata/__init__.py,sha256=IUo74D-tj7KE0qVMrLnj4q5AqW0o-jBcl98tkr4mcP0,642
+src/metadata/exceptions.py,sha256=j-s-21rkI2h7Ie4ATWQxnQ_1PtyGzTOkBIMTq6fJxnY,615
+src/metadata/manager.py,sha256=dq-4hbwEkBxtBsRMfdoNOwLZlTV-A81LWEEkAdpSvSA,11206
+src/metadata/models.py,sha256=3bNNmH4jln_pknOF6GqtLCeEIgvi5g4_LuA-WhEKY-I,5277
+src/metadata/storage.py,sha256=NTRpzKxTXc1xMo48bD9cvRSRB2dHSCmBcfvDTwv-hTc,6591
+curlydl-0.1.1.dist-info/METADATA,sha256=Q-gB2djY-zUxT29wlS6w10tSg5LAmwYM2B6y45e0LPg,7607
+curlydl-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+curlydl-0.1.1.dist-info/RECORD,,
