@@ -1,0 +1,7 @@
+jrmpc/__init__.py,sha256=-eML75CslKboHL6_Mi3uejSsHO3xs7B7GsV5_YJMYTY,233
+jrmpc/numpy.py,sha256=O-eZc3KZVSpjVqtuIemf7adDszcv66tKB-KrpGResXw,8781
+jrmpc/torch.py,sha256=vvPGKWI0VeagWmLVRtT8MC9S6Jt9BVoLOtErT18KESk,12748
+jrmpc-1.0.0.dist-info/METADATA,sha256=9ejouYcZk77zKtmDLOvL-m-isQIR9LvaaB3sFc2iMrE,6541
+jrmpc-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+jrmpc-1.0.0.dist-info/top_level.txt,sha256=7uUwi9jmG38V_7ac2mJ2QCMUg14Dz7eTTKowrQCB_po,6
+jrmpc-1.0.0.dist-info/RECORD,,
