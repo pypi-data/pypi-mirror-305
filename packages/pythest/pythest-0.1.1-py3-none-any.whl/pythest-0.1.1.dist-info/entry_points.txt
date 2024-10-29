@@ -1,0 +1,2 @@
+[console_scripts]
+dire-bonjour = pythest.main:dire_bonjour
