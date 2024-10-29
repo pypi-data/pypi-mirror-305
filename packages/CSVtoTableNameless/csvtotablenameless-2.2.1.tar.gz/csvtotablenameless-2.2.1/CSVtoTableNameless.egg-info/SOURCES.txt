@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+CSVtoTableNameless.egg-info/PKG-INFO
+CSVtoTableNameless.egg-info/SOURCES.txt
+CSVtoTableNameless.egg-info/dependency_links.txt
+CSVtoTableNameless.egg-info/entry_points.txt
+CSVtoTableNameless.egg-info/requires.txt
+CSVtoTableNameless.egg-info/top_level.txt
+csvtotable/__init__.py
+csvtotable/cli.py
+csvtotable/convert.py
+csvtotable/templates/template.j2

@@ -1,0 +1,3 @@
+recursive-include csvtotable *.j2 *.py
+include LICENSE
+include README.rst
