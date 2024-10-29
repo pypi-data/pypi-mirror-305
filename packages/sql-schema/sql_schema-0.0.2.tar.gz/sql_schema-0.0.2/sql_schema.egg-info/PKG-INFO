@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: sql_schema
+Version: 0.0.2
+Summary: Schema Transfer/Drop Helper
+Author: Mohammed Abu Bakkar Kuchikar
+Author-email: abu813684@gmail.com
+Keywords: python,sql_server,sql,schema,drop,transfer
+Description-Content-Type: text/plain
+License-File: LICENSE
+Requires-Dist: pypyodbc
+
+
