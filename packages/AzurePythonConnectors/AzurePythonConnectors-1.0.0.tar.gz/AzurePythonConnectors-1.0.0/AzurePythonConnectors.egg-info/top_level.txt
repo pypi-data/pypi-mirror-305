@@ -1,0 +1,4 @@
+AzureAuthenticate
+AzureKeyValut
+AzureResourceManger
+AzureStorage

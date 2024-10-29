@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: AzurePythonConnectors
+Version: 1.0.0
+Summary: A package for connecting to various Azure services using Python.
+Home-page: UNKNOWN
+Author: Srikanth Mohan
+Author-email: tmsrikanth1982@gmail.com
+License: GPL
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
