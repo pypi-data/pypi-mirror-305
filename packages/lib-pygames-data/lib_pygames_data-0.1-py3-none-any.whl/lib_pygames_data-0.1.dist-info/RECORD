@@ -1,0 +1,23 @@
+pygame_data/Camera Shake Controller.py,sha256=Ai5O3XjHVhpFMoRXtrC3JhS8GMfdlYsnCJu6eEcFHe0,868
+pygame_data/__init__.py,sha256=zixnlRu1aQmVdh9yS-eBYLtJQvPsBu4e8N2XELTCOSc,12
+pygame_data/basic_module.py,sha256=qQje8r88xkJjQFJNiAWbyovp_czI1GH2eqDC6n5FASY,1446
+pygame_data/coinscript.py,sha256=4_iTQmLBBYDZHaUVWfy-0q4Jak7GEUvm03q1gB4iZP4,256
+pygame_data/movescript.py,sha256=Kjn2PYCZunym6Ze1for1UwRKkBIVbIzli1xuWmezLc0,526
+pygame_data/scorescript.py,sha256=6gpUSrP0rx-buHffGzuS4dSMmtUcnm_zD8JAuVaBFiQ,359
+pygame_data/scroll_module.py,sha256=Itn50IBIqkL2C2GnNmX9E13Jdkhq0cGJUpjTnuAWnhc,1157
+pygame_data/shooter_module.py,sha256=nuK-d_w2hAqG9wj2T3v3AGrt9ctBHKkcIe1ScPaUGac,2925
+pygame_data/snake_module.py,sha256=ekEF1MDnps3t_NDtpE59wsd68IdchbyX8W3C4wsdrno,3282
+pygame_data/data/bg.png,sha256=1VOB9sjUSsiTHdY_g9UzaOyIClrzYgc7cz_NRxSMlkY,244357
+pygame_data/data/coin.png,sha256=0vH6SHMyAdyORKLKYFNMid-zFEzSKvfzsDvGUc9vwMw,166643
+pygame_data/data/game character.png,sha256=ZmUK0rjdY7Kz6tUWUjj4sSkqwTSiRkSHeECxdZ43tX0,86121
+pygame_data/data/game.png,sha256=1GyosGAC4QWNrboeJpJHp3cUdRHNAPnvZDusIk6nlR4,263956
+pygame_data/data/ground.jpg,sha256=hoqxkOBgNuKJypVnqoa2rPhPA4dYHR8haht-A6O7HkM,8810
+pygame_data/data/scene.png,sha256=_3GW3oN5o3C828ACbWemYAmTc11b83aEmGhETgYUrms,152331
+pygame_data/data/snow imp instrution.txt,sha256=8X1qKgLmX90py8g_pM2IjnqqnVe8Brq3vvdsu2IAEq4,566
+pygame_data/data/snow.png,sha256=YVzsSG-lRe9MvjdrWX3ggXCEfoT-OkOWzl1n5F5SOzY,10625
+pygame_data/data/ufo.png,sha256=MLVC2KZqnmzYFMbt9cyDHuF8SGdd8dP74DXxJ4gH-eA,105023
+pygame_data/data/wall.jpg,sha256=39wYFAuQUgOjvuUJ4RINfQOnA_Lw-goEU86G_ADhgxQ,15631
+lib_pygames_data-0.1.dist-info/METADATA,sha256=YIuvhum5GGtq8WVb7dE8ExINpB1KX4KfBxfjCC_2Ixg,136
+lib_pygames_data-0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+lib_pygames_data-0.1.dist-info/top_level.txt,sha256=Vv02tHDjYomOIiMI58rzwp-jGN6xIKiwwSbyhtINS-4,12
+lib_pygames_data-0.1.dist-info/RECORD,,

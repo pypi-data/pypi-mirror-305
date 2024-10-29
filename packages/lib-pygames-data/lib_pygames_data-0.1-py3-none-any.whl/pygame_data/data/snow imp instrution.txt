@@ -1,0 +1,19 @@
+1.add images to hierarchy
+2.hieracry rght click effect particle ffect
+
+
+Check and update the below properties
+1.	Particle System
+Duration: 10, Looping Checked and 
+Start Size – Click on right most dropdown arrow and select Random Between Two Constants and edit its values between 0.1 and 1.
+
+
+2.	Emission
+Rate over Time: 20
+3.	Shape
+Shape: Cone, Angle:25 and Radius:7 
+4.	Texture Sheet Animation
+Here we have to add our snow particle image into this texture sheet animation. 
+First, we have to change the Mode from Grid to Sprites 
+5.	Renderer
+
