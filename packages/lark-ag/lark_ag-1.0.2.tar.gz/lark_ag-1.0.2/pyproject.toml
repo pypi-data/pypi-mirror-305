@@ -1,0 +1,17 @@
+[build-system]
+requires = ["flit_core >=3.2,<4", "lark >=1.1.9"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "lark-ag"
+authors = [{name = "Daniel Faria", email = "danielfaria089@gmail.com"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+dependencies = [
+    "lark >=1.1.9"
+]
+readme = "README.md"
+
+[tool.flit.sdist]
+include = ["src/lark_ag/generator_layer/grammar.lark"]

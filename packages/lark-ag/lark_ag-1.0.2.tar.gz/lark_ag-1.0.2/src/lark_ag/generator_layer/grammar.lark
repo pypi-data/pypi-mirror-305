@@ -1,0 +1,93 @@
+start: attributes+ _item+ //attributes -> attribute_block
+
+_item: rule
+     | token
+     | statement
+
+rule: RULE rule_params priority? ":" expansions
+token: TOKEN token_params priority? ":" expansions_token
+
+rule_params: ["{" RULE ("," RULE)* "}"]
+token_params: ["{" TOKEN ("," TOKEN)* "}"]
+
+priority: "." NUMBER
+
+statement: "%ignore" expansions                    -> ignore
+         | "%import" import_path ["->" name]       -> import
+         | "%import" import_path name_list         -> multi_import
+         | "%override" rule                        -> override_rule
+         | "%declare" name+                        -> declare
+
+!import_path: "."? name ("." name)*
+name_list: "(" name ("," name)* ")"
+
+expansions: alias (_VBAR alias)*
+
+expansions_token: alias_token (_VBAR alias_token)*
+
+alias: expansion semantics
+
+alias_token: value
+
+expansion: expr*
+
+?expr: atom [OP | "~" NUMBER [".." NUMBER]]
+
+?atom: "(" expansions ")" -> group
+     | "[" expansions "]" -> maybe
+     | value
+
+?value: STRING ".." STRING -> literal_range
+      | name
+      | (REGEXP | STRING) -> literal
+      | name "{" value ("," value)* "}" -> template_usage
+
+name: RULE
+    | TOKEN
+
+
+attributes: (SA|IA) "(" nt_id ")" "{" attribute ("," attribute)* "}"
+attribute: att_id ":" type
+
+nt_id: RULE
+att_id: RULE
+type: RULE ("[" type "]")?
+
+semantics: evaluations conditions? translations?
+
+evaluations: "ER" "{" (evaluation)* "}"
+evaluation: attribute_call "=" CODE_EXPR ";"
+
+conditions: "CC" "{" (condition)* "}"
+condition: CODE_EXPR ("->" STRING)? ";"
+
+translations: "TR" "{" (translation)* "}"
+translation: fun_id "(" attribute_call ("," attribute_call)* ")" ";" 
+
+fun_id: RULE
+
+attribute_call: nt_id ("[" NUMBER "]")? "." att_id
+
+
+_VBAR: "|"
+OP: /[+*]|[?](?![a-z])/
+TOKEN: /[A-Z][_A-Z0-9]*/
+RULE: /[a-z][_a-z0-9]*/
+STRING: _STRING "i"?
+REGEXP: /\/.*?[^\\]\//
+_NL: /(\r?\n)+\s*/
+
+CODE_EXPR.-1: /.+?(?=->|;)/
+
+SA: "SA"
+IA: "IA"
+
+
+%import common.ESCAPED_STRING -> _STRING
+%import common.SIGNED_INT -> NUMBER
+%import common.WS
+
+COMMENT: /\s*/ "//" /[^\n]/* | /\s*/ "#" /[^\n]/*
+
+%ignore WS
+%ignore COMMENT
