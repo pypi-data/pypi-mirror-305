@@ -1,0 +1,5 @@
+[console_scripts]
+2dilate=arclight.twodilate.main:main
+nwscript-lint=arclight.nwscript_lint.main:main
+nwscriptd=arclight.nwscriptd.cli:cli
+
