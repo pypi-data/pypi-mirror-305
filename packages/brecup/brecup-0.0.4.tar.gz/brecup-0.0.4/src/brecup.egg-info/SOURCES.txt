@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/brecup/__init__.py
+src/brecup/main.py
+src/brecup.egg-info/PKG-INFO
+src/brecup.egg-info/SOURCES.txt
+src/brecup.egg-info/dependency_links.txt
+src/brecup.egg-info/entry_points.txt
+src/brecup.egg-info/requires.txt
+src/brecup.egg-info/top_level.txt
