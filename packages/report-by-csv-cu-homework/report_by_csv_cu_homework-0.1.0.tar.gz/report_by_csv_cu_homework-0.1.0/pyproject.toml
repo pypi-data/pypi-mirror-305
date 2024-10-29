@@ -1,0 +1,14 @@
+[project]
+  name = 'report-by-csv-cu-homework'
+  version = '0.1.0'
+  description = 'Отчёт по csv file'
+  authors = [
+    {name = 'Matvey Perminov', email = 'mectu@mail.ru'}
+  ]
+  readme = 'README.md'
+  license = {text = 'MIT'}
+  requires-python = '>=3.12'
+  dependencies = [
+    'numpy>=2.1.2',
+    'pandas>=2.2.3'
+  ]

@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+report_by_csv_cu_homework.egg-info/PKG-INFO
+report_by_csv_cu_homework.egg-info/SOURCES.txt
+report_by_csv_cu_homework.egg-info/dependency_links.txt
+report_by_csv_cu_homework.egg-info/requires.txt
+report_by_csv_cu_homework.egg-info/top_level.txt
+reporter/__init__.py
+reporter/__main__.py
+reporter/main.py
