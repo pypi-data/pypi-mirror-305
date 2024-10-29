@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/p6_cdk_stack/__init__.py
+src/p6_cdk_stack/py.typed
+src/p6_cdk_stack.egg-info/PKG-INFO
+src/p6_cdk_stack.egg-info/SOURCES.txt
+src/p6_cdk_stack.egg-info/dependency_links.txt
+src/p6_cdk_stack.egg-info/requires.txt
+src/p6_cdk_stack.egg-info/top_level.txt
+src/p6_cdk_stack/_jsii/__init__.py
+src/p6_cdk_stack/_jsii/p6-cdk-name@0.1.7.jsii.tgz
