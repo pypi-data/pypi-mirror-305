@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: zhoub-demo
+Version: 0.0.2
+Summary: test
+Home-page: 
+Author: zhoubing
+Author-email: zhoubing19820720@163.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+
+#### This is long description read from markdown file
