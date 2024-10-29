@@ -1,0 +1,9 @@
+lalsuite
+numpy
+scipy
+solar_system_ephemerides
+
+[dev]
+black
+flake8
+pytest
