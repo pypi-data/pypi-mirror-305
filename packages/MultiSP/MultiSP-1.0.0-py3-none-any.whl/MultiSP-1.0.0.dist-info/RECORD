@@ -1,0 +1,11 @@
+MultiSP/__init__.py,sha256=A9YfbEPTKTqCtC798NoP953IzbxqGWzu48PgOIwPr60,122
+MultiSP/layer.py,sha256=iZhN30cZRpIxX8CsuSus7GAeeFCXVPqzbBFubnfAx8Y,11498
+MultiSP/model.py,sha256=94KqxZ2jFTQ9iYiUCqIjWf3fvdYYs6djB6evXZ975uc,15216
+MultiSP/module.py,sha256=92xsZ8sC_OkziEAJXIUKUXPO9G9-ru9QFmHCta-smow,1184
+MultiSP/preprocess.py,sha256=EzgG3aU_emCkPbu2OYU1tNyA_ILds8jaeerRH3f6lFk,5864
+MultiSP/utils.py,sha256=V5Z52dpjrjYZws7-RlljYIgIYLMipBAOyNqBjLBrOjQ,10384
+MultiSP-1.0.0.dist-info/LICENSE.txt,sha256=dp1gc5TmUoXiAcqWHjAayHGJFAifqkjIF8UlMNYrJxE,1070
+MultiSP-1.0.0.dist-info/METADATA,sha256=phDyRsYHt0T8palFtZ2SMBvhrlXEIOTxORsOEbDIon4,334
+MultiSP-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+MultiSP-1.0.0.dist-info/top_level.txt,sha256=H_BCwb2FB2Y3e9bYBb3r07MxSp0VSabIcJuxUItvf1A,8
+MultiSP-1.0.0.dist-info/RECORD,,
