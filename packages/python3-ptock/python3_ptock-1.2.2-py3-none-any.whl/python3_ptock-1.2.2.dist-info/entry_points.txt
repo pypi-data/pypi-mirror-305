@@ -1,0 +1,2 @@
+[console_scripts]
+ptock = ptock.main:main
