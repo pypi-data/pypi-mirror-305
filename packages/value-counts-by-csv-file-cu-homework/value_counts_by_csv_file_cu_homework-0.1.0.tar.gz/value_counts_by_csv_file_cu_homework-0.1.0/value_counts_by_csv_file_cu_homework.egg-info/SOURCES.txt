@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+customer_analysis/__init__.py
+customer_analysis/__main__.py
+customer_analysis/main.py
+value_counts_by_csv_file_cu_homework.egg-info/PKG-INFO
+value_counts_by_csv_file_cu_homework.egg-info/SOURCES.txt
+value_counts_by_csv_file_cu_homework.egg-info/dependency_links.txt
+value_counts_by_csv_file_cu_homework.egg-info/requires.txt
+value_counts_by_csv_file_cu_homework.egg-info/top_level.txt
