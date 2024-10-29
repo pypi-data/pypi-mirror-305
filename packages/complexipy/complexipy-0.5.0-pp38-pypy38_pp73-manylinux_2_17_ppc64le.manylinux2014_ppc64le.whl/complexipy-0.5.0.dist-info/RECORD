@@ -1,0 +1,10 @@
+complexipy-0.5.0.dist-info/METADATA,sha256=fJRS4uM7AvAAvmL5QdZ-eb5gwS-haDXMYZnl9P8qrRc,11187
+complexipy-0.5.0.dist-info/WHEEL,sha256=-7qcZK6avNafiXfE7dBOqPOwrU6sHIy62KTkoOcwU08,136
+complexipy-0.5.0.dist-info/entry_points.txt,sha256=7BRIkSuvn7A9AIDAQhKigIXLQxrXjnz7bsB1wYis61g,49
+complexipy-0.5.0.dist-info/licenses/LICENSE,sha256=MccBmZTjStS1c2uPXMfSske-lxxdWioLj-O2ZGTDKa4,1071
+complexipy/utils.py,sha256=dcLqAkxbdCSGNk2AQ6CF04O5h8DEeUbpvXp5eFVCMgg,4377
+complexipy/main.py,sha256=UZ8E6F-IdxggSxcaM4Nx-WTCeP04I4Uk5bGYzKwC0Cw,3686
+complexipy/__init__.py,sha256=HoiFidM8N0O-IxQ8YS7O9P5K6Tda5NTfZQIndRZ2PoU,292
+complexipy/types.py,sha256=FeyqzgA7aGzsoEuuMSfsz-QBlDrP36jX1HJxH0SDOFU,324
+complexipy/rust.pypy38-pp73-ppc_64-linux-gnu.so,sha256=0OliTJrdnNNxW90f7mE2bDDy6oCYgOlnZQd2lmNXyjs,6682272
+complexipy-0.5.0.dist-info/RECORD,,
