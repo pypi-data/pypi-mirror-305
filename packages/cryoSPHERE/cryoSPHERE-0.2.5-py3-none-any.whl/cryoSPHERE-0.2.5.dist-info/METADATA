@@ -1,0 +1,139 @@
+Metadata-Version: 2.1
+Name: cryoSPHERE
+Version: 0.2.5
+Summary: structural heterogeneous cryoEM reconstruction
+Requires-Python: >=3.9-20
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy ==1.23.5
+Requires-Dist: biopython ==1.84
+Requires-Dist: biotite ==0.40.0
+Requires-Dist: certifi ==2024.8.30
+Requires-Dist: charset-normalizer ==3.4.0
+Requires-Dist: cycler ==0.12.1
+Requires-Dist: docker-pycreds ==0.4.0
+Requires-Dist: einops ==0.8.0
+Requires-Dist: filelock ==3.16.1
+Requires-Dist: fonttools ==4.54.1
+Requires-Dist: fsspec ==2024.9.0
+Requires-Dist: fvcore ==0.1.5.post20221221
+Requires-Dist: gemmi ==0.6.7
+Requires-Dist: gitdb ==4.0.11
+Requires-Dist: GitPython ==3.1.43
+Requires-Dist: idna ==3.10
+Requires-Dist: importlib-resources ==6.4.5
+Requires-Dist: iopath ==0.1.10
+Requires-Dist: Jinja2 ==3.1.4
+Requires-Dist: matplotlib ==3.9.2
+Requires-Dist: mpmath ==1.3.0
+Requires-Dist: mrc ==0.3.1
+Requires-Dist: mrcfile ==1.5.3
+Requires-Dist: msgpack ==1.1.0
+Requires-Dist: networkx ==3.2.1
+Requires-Dist: nvidia-cublas-cu12 ==12.1.3.1
+Requires-Dist: nvidia-cuda-cupti-cu12 ==12.1.105
+Requires-Dist: nvidia-cuda-nvrtc-cu12 ==12.1.105
+Requires-Dist: nvidia-cuda-runtime-cu12 ==12.1.105
+Requires-Dist: nvidia-cudnn-cu12 ==9.1.0.70
+Requires-Dist: nvidia-cufft-cu12 ==11.0.2.54
+Requires-Dist: nvidia-curand-cu12 ==10.3.2.106
+Requires-Dist: nvidia-cusolver-cu12 ==11.4.5.107
+Requires-Dist: nvidia-cusparse-cu12 ==12.1.0.106
+Requires-Dist: nvidia-nccl-cu12 ==2.20.5
+Requires-Dist: nvidia-nvjitlink-cu12 ==12.6.77
+Requires-Dist: nvidia-nvtx-cu12 ==12.1.105
+Requires-Dist: packaging ==24.1
+Requires-Dist: pandas ==2.2.3
+Requires-Dist: pillow ==10.4.0
+Requires-Dist: platformdirs ==4.3.6
+Requires-Dist: portalocker ==2.10.1
+Requires-Dist: protobuf ==5.28.2
+Requires-Dist: psutil ==6.0.0
+Requires-Dist: pyarrow ==17.0.0
+Requires-Dist: pyparsing ==3.2.0
+Requires-Dist: python-dateutil ==2.9.0.post0
+Requires-Dist: torch
+Requires-Dist: torchaudio
+Requires-Dist: torchvision
+Requires-Dist: pytz ==2024.2
+Requires-Dist: PyYAML ==6.0.2
+Requires-Dist: requests ==2.32.3
+Requires-Dist: scipy ==1.13.1
+Requires-Dist: seaborn ==0.13.2
+Requires-Dist: sentry-sdk ==2.16.0
+Requires-Dist: setproctitle ==1.3.3
+Requires-Dist: six ==1.16.0
+Requires-Dist: smmap ==5.0.1
+Requires-Dist: starfile ==0.5.8
+Requires-Dist: sympy ==1.13.3
+Requires-Dist: tabulate ==0.9.0
+Requires-Dist: termcolor ==2.5.0
+Requires-Dist: tqdm
+Requires-Dist: triton ==3.0.0
+Requires-Dist: typing-extensions ==4.12.2
+Requires-Dist: tzdata ==2024.2
+Requires-Dist: urllib3 ==2.2.3
+Requires-Dist: wandb ==0.18.3
+Requires-Dist: yacs ==0.1.8
+Requires-Dist: zipp ==3.20.2
+
+# cryoSPHERE: Single-particle heterogeneous reconstruction from cryo EM
+
+CryoSPHERE is a structural heterogeneous reconstruction software of cryoEM data.
+
+## Installation
+
+CryoSPHERE is available as a python package named `cryosphere`. Create a conda environment, install cryosphere with `pip` and then `pytorch3d`:
+```
+conda create -n cryosphere python==3.9.20
+conda activate cryosphere
+pip install cryosphere
+conda install pytorch3d -c pytorch3d
+```
+
+## Training
+The first step before running cryoSPHERE on a dataset is to run a homogeneous reconstruction software such as RELION or cryoSparc. This should yield a star file containing the poses of each image, the CTF and information about the images as well as one or several mrcs file(s) containing the actual images. You should also obtain one or several mrc files corresponding to consensus reconstruction(s). For example, you obtained a `conensus_map.mrc`
+The second step is to fit a good atomic structure of the protein of interest into the volume obtained at step one (`consensus_map.mrc`), using e.g ChimeraX. Save this structure in pdb format: `fitted_structure.pdb`. You can now use cryopshere command line tools to center the structure:
+```
+cryosphere_center_origin --pdb_file_path fitted_structure.pdb --mrc_file_path consensus_map.mrc
+```
+This yields another pdb file `fitted_structure_centered.pdb".
+
+The third step is to run cryoSPHERE. To run it, you need  two yaml files: a `parameters.yaml` file, defining all the parameters of the training run and a `image.yaml` file, containing informations about the images. You need to set the `folder_experiment` entry of the paramters.yaml to the path of the folder containing your data. You also need to change the `base_structure` entry to `fitted_structure_centered.pdb`. You can then run cryosphere using the command line tool:
+```
+cryosphere_train --experiment_yaml /path/to/parameters.yaml
+```
+
+## Analysis
+
+You can first get the latent variables corresponding to the imagaes and generate a PCA analysis of the latent space, with latent traversal of first principal components::
+```
+cryosphere_analyze --experiment_yaml /path/to/parameters.yaml --model /path/to/model.pt --output_path /path/to/outpout_folder --no-generate_structures
+```
+where `model.pt` is the saved torch model you want to analyze and output_folder is the folder where you want to save the results of the analysis.
+This will create the following directory structure:
+```
+analysis
+   |	z.npy
+   |	pc0
+	   |   structure_z_1.pdb
+	   .
+	   .
+	   .
+	   |   structure_z_10.pdb
+           |   pca.png
+
+	pc1
+	   |   structure_z_1.pdb
+	   .
+	   .
+           .
+```
+ If you want to generate all structures (one for each images), you can set `--generate_structures` instead. This will skip the PCA step.
+
+It is also possible to get the structures corresponding to specific images. Save the latent variables corresponding to the images of interest into a `z_interest.npy`. You can then run:
+```
+cryosphere_analyze --experiment_yaml /path/to/parameters.yaml --model /path/to/model.pt --output_path /path/to/outpout_folder --z /path/to/z_interest.npy --generate_structures
+``` 
+Setting the `--z /path/to/z_interest.npy` argument will directly decode the latent variables in `z_interest.npy` into structures.
+ 
