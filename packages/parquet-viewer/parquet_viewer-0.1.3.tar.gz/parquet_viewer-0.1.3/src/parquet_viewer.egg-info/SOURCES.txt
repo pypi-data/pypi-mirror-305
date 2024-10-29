@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/parquet_viewer/__init__.py
+src/parquet_viewer/cli.py
+src/parquet_viewer/viewer.py
+src/parquet_viewer.egg-info/PKG-INFO
+src/parquet_viewer.egg-info/SOURCES.txt
+src/parquet_viewer.egg-info/dependency_links.txt
+src/parquet_viewer.egg-info/entry_points.txt
+src/parquet_viewer.egg-info/requires.txt
+src/parquet_viewer.egg-info/top_level.txt
