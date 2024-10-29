@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: geochatt
+Version: 0.0.1
+Summary: Utility Functions for Working with Open GeoSpatial Data about Chattanooga
+Home-page: https://github.com/officeofperformancemanagement/geochatt
+Download-URL: https://github.com/officeofperformancemanagement/geochatt/tarball/download
+Author: Daniel J. Dufour
+Author-email: daniel.j.dufour@gmail.com
+Keywords: data,python
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: shapely
+
+# geochatt
+Utility Functions for Working with Open GeoSpatial Data about Chattanooga
+
+## features
+- very fast: uses [STRTree](https://shapely.readthedocs.io/en/2.0.4/strtree.html) for super fast reverse geocoding
+- get address from point
+- get city council district from point
+- get municipality from point
+- get zip code from point
+
+## install
+```sh
+pip install geochatt
+```
+
+## usage
+```py
+import geochatt
+
+geochatt.get_address(longitude=-85.3076591, latitude=35.0432979)
+"101 E 11TH ST"
+
+geochatt.get_city_council_district(longitude=-85.3076591, latitude=35.0432979)
+8
+
+geochatt.get_municipality(longitude=-85.3076591, latitude=35.0432979)
+"Chattanooga"
+
+geochatt.get_zipcode(longitude=-85.3076591, latitude=35.0432979)
+37402
+```
+
+## performance
+Reverse geocoding is super fast thanks to [STRTree](https://shapely.readthedocs.io/en/2.0.4/strtree.html).
+The performance test of geocoding 1 million random points takes 122.900 seconds, which is 0.000122 seconds per point.
