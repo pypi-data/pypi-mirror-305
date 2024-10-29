@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+customer_attributes/__init__.py
+customer_attributes.egg-info/PKG-INFO
+customer_attributes.egg-info/SOURCES.txt
+customer_attributes.egg-info/dependency_links.txt
+customer_attributes.egg-info/top_level.txt
