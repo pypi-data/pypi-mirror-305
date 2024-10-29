@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: TehilliDay
+Version: 0.1.0
+Summary: A library to fetch daily Tehillim (Psalms)
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+
+# TTehilliDay
+
+A simple Python library to fetch daily Tehillim (Psalms) from Chabad.org.
+
+## Installation
+
+```bash
+pip install TehilliDay
+```
+
+## Usage
+
+```python
+from tehilliday import TehilliDay
+
+tehillim = TehilliDay()
+daily_tehillim = tehillim.get_daily_tehillim()
+print(daily_tehillim)
+```
