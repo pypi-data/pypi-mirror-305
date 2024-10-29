@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+setup.py
+urdfactory/__init__.py
+urdfactory.egg-info/PKG-INFO
+urdfactory.egg-info/SOURCES.txt
+urdfactory.egg-info/dependency_links.txt
+urdfactory.egg-info/not-zip-safe
+urdfactory.egg-info/requires.txt
+urdfactory.egg-info/top_level.txt

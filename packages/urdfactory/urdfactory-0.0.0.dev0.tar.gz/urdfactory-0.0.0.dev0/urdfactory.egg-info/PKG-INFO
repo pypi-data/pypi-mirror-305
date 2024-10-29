@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: urdfactory
+Version: 0.0.0.dev0
+Summary: Robot URDF composer
+Author-email: Kolin Guo <ruguo@ucsd.edu>
+License: Copyright (c) [2024] [HILLBOT.AI]. All rights reserved.
+        
+        No part of this software may be used, reproduced, distributed, sold, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the company, except in the case of brief quotations embodied in critical reviews
+        
+Keywords: robotics,mesh,geometry,visualization
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Framework :: Robot Framework :: Library
+Classifier: Framework :: Robot Framework :: Tool
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Education
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: transforms3d
+Requires-Dist: trimesh
