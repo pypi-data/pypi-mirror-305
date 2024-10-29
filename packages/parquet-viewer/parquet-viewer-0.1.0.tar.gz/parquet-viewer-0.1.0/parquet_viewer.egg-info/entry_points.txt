@@ -1,0 +1,3 @@
+[console_scripts]
+pqview = parquet_viewer.cli:main
+
