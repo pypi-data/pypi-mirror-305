@@ -1,0 +1,8 @@
+README.md
+setup.py
+HelloProject/__init__.py
+HelloProject/hello.py
+happypeopleyeah.egg-info/PKG-INFO
+happypeopleyeah.egg-info/SOURCES.txt
+happypeopleyeah.egg-info/dependency_links.txt
+happypeopleyeah.egg-info/top_level.txt
