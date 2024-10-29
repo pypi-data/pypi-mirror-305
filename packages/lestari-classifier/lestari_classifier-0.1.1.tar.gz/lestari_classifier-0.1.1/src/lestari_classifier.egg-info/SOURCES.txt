@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+src/lestari_classifier/__init__.py
+src/lestari_classifier/classifier.py
+src/lestari_classifier.egg-info/PKG-INFO
+src/lestari_classifier.egg-info/SOURCES.txt
+src/lestari_classifier.egg-info/dependency_links.txt
+src/lestari_classifier.egg-info/requires.txt
+src/lestari_classifier.egg-info/top_level.txt
