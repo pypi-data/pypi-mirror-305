@@ -1,0 +1,13 @@
+nonebot_plugin_nailongremove-1.1.8.dist-info/METADATA,sha256=Gxgefk46_7IHyfhebUhV2HnevSXNI0GCxGPsQ_i31GY,9993
+nonebot_plugin_nailongremove-1.1.8.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+nonebot_plugin_nailongremove-1.1.8.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+nonebot_plugin_nailongremove-1.1.8.dist-info/licenses/LICENSE,sha256=XLY9BynpQ9ltktFAXXz0OULT106HySuINyQyprjJzgo,1064
+nonebot_plugin_nailongremove/__init__.py,sha256=cEfRRHa94xm2pYn3CYhO1ep-MX--FSmGjly-dPoLemM,747
+nonebot_plugin_nailongremove/config.py,sha256=XdeHYQeWzpYn0vYXl8cnDJrt5ZLjD2b7q1iC-i_nHH8,732
+nonebot_plugin_nailongremove/handler.py,sha256=wCFpPNKR2HqneBtp4cK7FEwM4TGlpHNMBXCnS843cg8,5685
+nonebot_plugin_nailongremove/model.py,sha256=JcdNJN7feFkQdEbYuwYpKfI3kI5WeKzp4A_W8R4OnKY,4097
+nonebot_plugin_nailongremove/uniapi/__init__.py,sha256=YVOoC621U4Cm3mFDsjl8Wg6sGpRiS0LGbkNM38vYBKs,69
+nonebot_plugin_nailongremove/uniapi/mute.py,sha256=Myv7OJXZLmCpsxMX2C_qx6cVWzsa7yVnZuXRPfJmnk4,4132
+nonebot_plugin_nailongremove/uniapi/recall.py,sha256=gN47mdzdQwHpPButIwJ189QljhgcWGZQ1XsVZ2NFN54,5906
+nonebot_plugin_nailongremove/uniapi/yolox_utils.py,sha256=_Ubel41h8_inA63g4BzwxQjEbX-SVm05pPxvomUwFM0,10043
+nonebot_plugin_nailongremove-1.1.8.dist-info/RECORD,,
