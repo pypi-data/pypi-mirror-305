@@ -1,0 +1,17 @@
+streamlit_chat_widget/__init__.py,sha256=XIZzWOQAN5iFKoP73bfUId-KCpr0QoDbj_JzHw45kWg,565
+streamlit_chat_widget/frontend/build/asset-manifest.json,sha256=wwv-dsEkB3Jp2D8iJyMoKhmLcJmYzMB_pzmuEWXTVhM,374
+streamlit_chat_widget/frontend/build/bootstrap.min.css,sha256=X9ITP3t3djkRs4SffIkA1Q2WMy-oYl6au5HFYTVShe0,206960
+streamlit_chat_widget/frontend/build/index.html,sha256=kZsgKEExt4RC3pfKkzmTb8cD3hFaLv21ZSMwbkwrR4Q,553
+streamlit_chat_widget/frontend/build/static/css/main.fc235b66.css,sha256=dVgUfl7YHMrJ5ej4nXtx0KW-RJASo718queoGPGf4kQ,1885
+streamlit_chat_widget/frontend/build/static/css/main.fc235b66.css.map,sha256=lu7mAO5R5OFeTo11rHEe824xae3waXO2j7rPXkNE31o,4725
+streamlit_chat_widget/frontend/build/static/js/main.b2693a7e.js,sha256=sia6UOLCllXdGAEJYbkUEhymf8qmjiYXGZ9fcEXifcA,549950
+streamlit_chat_widget/frontend/build/static/js/main.b2693a7e.js.LICENSE.txt,sha256=N5JbirNDBoU12AHiI9OZowKSFtRHmu7v8DCeJ44zmmw,1621
+streamlit_chat_widget/frontend/build/static/js/main.b2693a7e.js.map,sha256=-b26OE7fenHRdFH4VOQwVLLmz_J11H1ZDifg-1iEMnQ,2592023
+streamlit_chat_widget/frontend/build/static/js/main.f461ee52.js,sha256=BxUan_QNvNVbE2LZB4hVS9WDcSJncA26Fg-kh7DrktQ,568072
+streamlit_chat_widget/frontend/build/static/js/main.f461ee52.js.LICENSE.txt,sha256=Juje8reotTht8AXIyXSl18XZjDwlY1K7gWeLepqdSoc,1842
+streamlit_chat_widget/frontend/build/static/js/main.f461ee52.js.map,sha256=D_qOmRXP5lF6giL8aa2M_fVmn0QXMBrPR_FdYgXJnYY,2644448
+streamlit_chat_widget-0.1.0.dist-info/LICENSE,sha256=0sJstbcl2MPfF_XOsIbNlTwA0DCZgkwf7qX1P45M5bo,1080
+streamlit_chat_widget-0.1.0.dist-info/METADATA,sha256=cAD9YS2ooy9yxcRROwnZTpacWWOhf8zH-i4w8KxCOdk,4728
+streamlit_chat_widget-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+streamlit_chat_widget-0.1.0.dist-info/top_level.txt,sha256=uWn-QCO8bb22FndSvKIi0JqJjHEXTFP3LSpGRfajFTs,22
+streamlit_chat_widget-0.1.0.dist-info/RECORD,,
