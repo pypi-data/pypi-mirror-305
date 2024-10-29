@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: cobra-ai
+Version: 0.1.0
+Summary: Package to preprocess ontologies, train OntoVAE and COBRA models and obtain TF and pathway activities.
+Home-page: https://github.com/hdsu-bioquant/cobra-ai
+License: GPLv3
+Author: daria-dc
+Author-email: daria.doncevic@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: colorcet (>=3.1.0)
+Requires-Dist: goatools (>=1.4.12)
+Requires-Dist: hyperopt (>=0.2.7)
+Requires-Dist: numpy (<2.0)
+Requires-Dist: pandas (>=2.2.3)
+Requires-Dist: ray (>=2.38.0)
+Requires-Dist: scanpy (>=1.10.3)
+Requires-Dist: seaborn (>=0.13.2)
+Requires-Dist: torch (>=1.13.1)
+Requires-Dist: tqdm (>=4.64.1)
+Project-URL: Repository, https://github.com/hdsu-bioquant/cobra-ai
+Description-Content-Type: text/markdown
+
+<img src="https://github.com/user-attachments/assets/33ed7bfe-1192-4e9d-b199-19e423de0010" alt="drawing" width="300"/>
+
+COBRA extends our previously published OntoVAE model (https://doi.org/10.1093/bioinformatics/btad387) with an adversarial approach that allows decoupling of covariates in the latent space. Thus, users can obtain TF or pathway activities that depend on a specific covariate from the interpretable decoder of the model. The code for the original OntoVAE model has undergone some major improvements and is now also hosted in this repository.
+
+## Installation
+
+```
+conda create -n cobra python=3.10
+conda activate cobra
+pip install cobra-ai
+```
+
+## Usage
+
+In python, import neccessary modules
+```
+from cobra_ai.module.ontobj import *
+from cobra_ai.module.utils import *
+```
+
+For COBRA
+```
+from cobra_ai.model.cobra import *
+```
+
+For OntoVAE
+```
+from cobra_ai.model.onto_vae import *
+```
+
+Examples on how to initialize an ontobj and train a model can be found in the vignette folder. This documentation is still work-in-progress and will be updated soon.
+
+## Citation
+
+If you use COBRA for your research, please cite:
+```
+Daria Doncevic, Carlos Ramirez Alvarez, Albert Li, Youcheng Zhang, Anna von Bachmann, Kasimir Noack, and Carl Herrmann: Prediction of context-specific regulatory programs and pathways using interpretable deep learning
+```
+
+
+
