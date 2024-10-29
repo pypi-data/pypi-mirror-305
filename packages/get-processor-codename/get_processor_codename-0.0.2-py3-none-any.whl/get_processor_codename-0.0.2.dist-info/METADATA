@@ -1,0 +1,33 @@
+Metadata-Version: 2.3
+Name: get_processor_codename
+Version: 0.0.2
+Summary: Easily get an intel processor's code name in Python.
+Project-URL: Homepage, https://github.com/samuellouf/get-processor-codename
+Project-URL: Issues, https://github.com/samuellouf/get-processor-codename/issues
+Author: SamuelLouf
+License-File: LICENSE
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System
+Classifier: Topic :: System :: Hardware
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+# get-processor-codename
+Easily get an intel processor's code name in Python
+
+## Installation
+Open your terminal and type
+```bash
+pip install get-processor-codename
+```
+
+Or
+```bash
+pip install get-processor-codename --break-system-packages
+```
+if you are using an externally managed python environement on linux.
