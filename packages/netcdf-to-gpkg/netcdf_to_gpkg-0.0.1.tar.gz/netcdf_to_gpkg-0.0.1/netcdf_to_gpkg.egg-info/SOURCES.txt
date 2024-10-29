@@ -1,0 +1,8 @@
+setup.py
+nc_to_gpkg/__init__.py
+nc_to_gpkg/nc_to_gpkg.py
+netcdf_to_gpkg.egg-info/PKG-INFO
+netcdf_to_gpkg.egg-info/SOURCES.txt
+netcdf_to_gpkg.egg-info/dependency_links.txt
+netcdf_to_gpkg.egg-info/requires.txt
+netcdf_to_gpkg.egg-info/top_level.txt
