@@ -1,0 +1,2 @@
+[console_scripts]
+main = cdef_cohort.main:main
