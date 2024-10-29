@@ -1,0 +1,2 @@
+[sopel.plugins]
+pywhat = sopel_pywhat.plugin
