@@ -1,0 +1,3 @@
+[console_scripts]
+lalian=lalian.__main__:main
+
