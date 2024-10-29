@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pop-serbot2
+Version: 0.0.8
+Summary: AIoT serbot2 library for pop
+Author: hanback
+Author-email: lab2@hanback.co.kr
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pop-genlib
+Requires-Dist: traitlets
+Requires-Dist: pyaudio
+Requires-Dist: librosa
+Requires-Dist: ipywidgets
+Provides-Extra: win_amd64
+Requires-Dist: opencv-python ; extra == 'win_amd64'
+
