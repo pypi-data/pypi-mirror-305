@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: maia2
+Version: 0.4
+Summary: An amazing sample package for maia2.
+Author-email: csslab <josephtang@cs.toronto.edu>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Project-URL: Home, https://github.com/CSSLab/maia2
+
+# maia2
