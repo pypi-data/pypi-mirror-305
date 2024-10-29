@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: py_singl_slider
+Version: 1.0.4
+Summary: A single virtual slider control
+Home-page: https://github.com/kerodekroma/py-singl-slider
+Author: kerodekroma
+Author-email: kerodekroma@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+If you want to run in local you need first these libraries:
+
+- pygame
+
+- pygbag
+
+Just run in terminal:
+
+~ python3 main.py
+
+If you want to validate in a browser, just run:
+
+~ python3 -m pygbag .
+
+
