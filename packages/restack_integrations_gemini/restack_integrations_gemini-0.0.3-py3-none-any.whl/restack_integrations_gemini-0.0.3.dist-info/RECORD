@@ -1,0 +1,10 @@
+restack_integrations_gemini/__init__.py,sha256=9nIfMUVc4DUsOrfbHNW1rBOjgUfNGw5rRoxFypWrcxM,438
+restack_integrations_gemini/functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restack_integrations_gemini/functions/generate_content.py,sha256=3EJV7ijaAY58k-Ux6WN05LLZCbtM5AMMu7mVyWH_pGI,480
+restack_integrations_gemini/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restack_integrations_gemini/service.py,sha256=rdJcnXw1IxXlz_KeMyi0mbFouUaXsrLKw4GC1MKERaQ,742
+restack_integrations_gemini/task_queue.py,sha256=tMpa6_1x14Tf6IpMt7kS-mVVzMA11HBwKB8e8QYig_0,28
+restack_integrations_gemini/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restack_integrations_gemini-0.0.3.dist-info/METADATA,sha256=cxaOOl5zkxXd6lP6MRP3A5saOEyB4Izu4EteIm-sAbU,627
+restack_integrations_gemini-0.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+restack_integrations_gemini-0.0.3.dist-info/RECORD,,
