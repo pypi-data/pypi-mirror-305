@@ -1,0 +1,9 @@
+setup.py
+TorinMyPackage.egg-info/PKG-INFO
+TorinMyPackage.egg-info/SOURCES.txt
+TorinMyPackage.egg-info/dependency_links.txt
+TorinMyPackage.egg-info/top_level.txt
+torinmypackage.egg-info/PKG-INFO
+torinmypackage.egg-info/SOURCES.txt
+torinmypackage.egg-info/dependency_links.txt
+torinmypackage.egg-info/top_level.txt
