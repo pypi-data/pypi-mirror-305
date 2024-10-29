@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "count_city_csv_plankin"
+version = "0.1.0"
+description = "Подсчет клиентов по возрасту и городу"
+authors = [{ name = "Kirill"}]
+dependencies = ['pandas']
+license = {text = 'MIT'}
+readme = 'README.md'
+
+[project.scripts]
+cnt="count_city_csv.main:main"
