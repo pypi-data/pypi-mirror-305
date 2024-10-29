@@ -1,0 +1,328 @@
+Metadata-Version: 2.1
+Name: court-queue
+Version: 1.0.3
+Summary: Sophisticate Court Queue
+Home-page: https://pypi.org/project/court-queue/
+Author: khiat Mohammed Abderrezzak
+Author-email: khiat.dev@gmail.com
+License: MIT
+Keywords: court queue
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tabulate (>=0.9.0)
+
+# court-queue
+
+
+[![PyPI version](https://badge.fury.io/py/court-queue.svg)](https://badge.fury.io/py/court-queue)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+This library was created for modeling and simulating non-linear, snake-like queues as observed in high-density environments such as airports, stadiums, theme parks, courts, and other crowd-controlled areas. Traditional queue structures typically operate in a simple, linear order; however, non-linear queues take a more spatially efficient, serpentine form, allowing for greater throughput within confined spaces while preserving orderly progression.
+
+
+## Installation
+
+
+You can install `court-queue` via pip:
+
+
+```bash
+pip install court-queue
+```
+
+
+## Usage 
+
+
+### You can create the queue from a predefined, static 2D array (matrix)
+
+
+```python
+from court_queue import courtQueue
+
+
+static_matrix = [[1, 2, 3], [6, 5, 4], [7, 8, 9]]
+x = courtQueue(static_matrix)
+print(x)
+```
+
+
+### Output
+
+
+```bash
+[[1, 2, 3], [6, 5, 4], [7, 8, 9]]
+```
+
+
+### You can show all details
+
+
+```python
+from court_queue import courtQueue
+
+
+static_matrix = [[1, 2, 3], [6, 5, 4], [7, 8, 9]]
+x = courtQueue(static_matrix, detail=True)
+print(x)
+```
+
+
+### Output
+
+
+```bash
+╒══════════╤═══╤═══╤═══╤══════════╕
+│ <- EXIT  │ 1 │ 2 │ 3 │ <- ENTER │
+├──────────┼───┼───┼───┼──────────┤
+│ ENTER -> │ 6 │ 5 │ 4 │ EXIT ^   │
+├──────────┼───┼───┼───┼──────────┤
+│ ^ EXIT   │ 7 │ 8 │ 9 │ <- ENTER │
+╘══════════╧═══╧═══╧═══╧══════════╛
+```
+
+
+### You can dequeue values
+
+
+```python
+from court_queue import courtQueue
+
+
+static_matrix = [[1, 2, 3], [6, 5, 4], [7, 8, 9]]
+x = courtQueue(static_matrix, detail=True)
+print(x)
+x.dequeue()
+print(x)
+```
+
+
+### Output
+
+
+```bash
+╒══════════╤═══╤═══╤═══╤══════════╕
+│ <- EXIT  │ 1 │ 2 │ 3 │ <- ENTER │
+├──────────┼───┼───┼───┼──────────┤
+│ ENTER -> │ 6 │ 5 │ 4 │ EXIT ^   │
+├──────────┼───┼───┼───┼──────────┤
+│ ^ EXIT   │ 7 │ 8 │ 9 │ <- ENTER │
+╘══════════╧═══╧═══╧═══╧══════════╛
+╒══════════╤═══╤═══╤═══╤══════════╕
+│ <- EXIT  │ 2 │ 3 │ 4 │ <- ENTER │
+├──────────┼───┼───┼───┼──────────┤
+│ ENTER -> │ 7 │ 6 │ 5 │ EXIT ^   │
+├──────────┼───┼───┼───┼──────────┤
+│ ^ EXIT   │ 8 │ 9 │   │ <- ENTER │
+╘══════════╧═══╧═══╧═══╧══════════╛
+```
+
+
+### You can enqueue values
+
+
+```python
+from court_queue import courtQueue
+
+
+static_matrix = [[1, 2, 3], [6, 5, 4], [7, 8, None]]
+x = courtQueue(static_matrix, detail=True)
+print(x)
+x.enqueue(9)
+print(x)
+```
+
+
+### Output
+
+
+```bash
+╒══════════╤═══╤═══╤═══╤══════════╕
+│ <- EXIT  │ 1 │ 2 │ 3 │ <- ENTER │
+├──────────┼───┼───┼───┼──────────┤
+│ ENTER -> │ 6 │ 5 │ 4 │ EXIT ^   │
+├──────────┼───┼───┼───┼──────────┤
+│ ^ EXIT   │ 7 │ 8 │   │ <- ENTER │
+╘══════════╧═══╧═══╧═══╧══════════╛
+╒══════════╤═══╤═══╤═══╤══════════╕
+│ <- EXIT  │ 1 │ 2 │ 3 │ <- ENTER │
+├──────────┼───┼───┼───┼──────────┤
+│ ENTER -> │ 6 │ 5 │ 4 │ EXIT ^   │
+├──────────┼───┼───┼───┼──────────┤
+│ ^ EXIT   │ 7 │ 8 │ 9 │ <- ENTER │
+╘══════════╧═══╧═══╧═══╧══════════╛
+```
+
+
+### You can create the queue from scratch
+
+
+```python
+from court_queue import courtQueue
+
+
+x = courtQueue(rows=3, columns=3, detail=True)
+print(x)
+for i in range(9):
+    x.enqueue(i + 1)
+print(x)
+```
+
+
+### Output
+
+
+```bash
+╒══════════╤══╤══╤══╤══════════╕
+│ <- EXIT  │  │  │  │ <- ENTER │
+├──────────┼──┼──┼──┼──────────┤
+│ ENTER -> │  │  │  │ EXIT ^   │
+├──────────┼──┼──┼──┼──────────┤
+│ ^ EXIT   │  │  │  │ <- ENTER │
+╘══════════╧══╧══╧══╧══════════╛
+╒══════════╤═══╤═══╤═══╤══════════╕
+│ <- EXIT  │ 1 │ 2 │ 3 │ <- ENTER │
+├──────────┼───┼───┼───┼──────────┤
+│ ENTER -> │ 6 │ 5 │ 4 │ EXIT ^   │
+├──────────┼───┼───┼───┼──────────┤
+│ ^ EXIT   │ 7 │ 8 │ 9 │ <- ENTER │
+╘══════════╧═══╧═══╧═══╧══════════╛
+```
+
+
+### You can show how many values are in the queue
+
+
+```python
+from court_queue import courtQueue
+
+
+static_matrix = [[1, 2, 3], [6, 5, 4], [7, 8, 9]]
+x = courtQueue(static_matrix, detail=True)
+print(len(x))
+```
+
+
+### Output
+
+
+```bash
+9
+```
+
+
+### You can check whether the queue is empty
+
+
+```python
+from court_queue import courtQueue
+
+
+static_matrix = [[None, None, None], [None, None, None], [None, None, None]]
+x = courtQueue(static_matrix, detail=True)
+print(x.isEmpty())
+x.enqueue(1)
+print(x.isEmpty())
+```
+
+
+### Output
+
+
+```bash
+True
+False
+```
+
+
+### You can check whether the queue is full
+
+
+```python
+from court_queue import courtQueue
+
+
+static_matrix = [[1, 2, 3], [6, 5, 4], [7, 8, 9]]
+x = courtQueue(static_matrix, detail=True)
+print(x.isFull())
+x.dequeue()
+print(x.isFull())
+```
+
+
+### Output
+
+
+```bash
+True
+False
+```
+
+
+### You can check the next value to be dequeued using peek or top
+
+
+```python
+from court_queue import courtQueue
+
+
+static_matrix = [[1, 2, 3], [6, 5, 4], [7, 8, 9]]
+x = courtQueue(static_matrix, detail=True)
+print(x.peek())
+print(x.top())
+```
+
+
+### Output
+
+
+```bash
+1
+1
+```
+
+
+### You can clear all the values from the queue
+
+
+```python
+from court_queue import courtQueue
+
+
+static_matrix = [[1, 2, 3], [6, 5, 4], [7, 8, 9]]
+x = courtQueue(static_matrix, detail=True)
+print(x)
+x.clear()
+print(x)
+```
+
+
+### Output
+
+
+```bash
+╒══════════╤═══╤═══╤═══╤══════════╕
+│ <- EXIT  │ 1 │ 2 │ 3 │ <- ENTER │
+├──────────┼───┼───┼───┼──────────┤
+│ ENTER -> │ 6 │ 5 │ 4 │ EXIT ^   │
+├──────────┼───┼───┼───┼──────────┤
+│ ^ EXIT   │ 7 │ 8 │ 9 │ <- ENTER │
+╘══════════╧═══╧═══╧═══╧══════════╛
+╒══════════╤══╤══╤══╤══════════╕
+│ <- EXIT  │  │  │  │ <- ENTER │
+├──────────┼──┼──┼──┼──────────┤
+│ ENTER -> │  │  │  │ EXIT ^   │
+├──────────┼──┼──┼──┼──────────┤
+│ ^ EXIT   │  │  │  │ <- ENTER │
+╘══════════╧══╧══╧══╧══════════╛
+```
+
+
+## License
+
+
+This project is licensed under the MIT LICENSE - see the [LICENSE](https://opensource.org/licenses/MIT) for more details.
