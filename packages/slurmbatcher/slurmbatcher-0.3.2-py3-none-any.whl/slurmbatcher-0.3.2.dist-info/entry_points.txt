@@ -1,0 +1,3 @@
+[console_scripts]
+slurmbatcher=slurmbatcher.__main__:main
+
