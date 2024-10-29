@@ -1,0 +1,3 @@
+[console_scripts]
+audiogen = airoot.bin.audiogen:main
+audiototext = airoot.bin.audiototext:main
