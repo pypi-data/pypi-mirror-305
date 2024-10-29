@@ -1,0 +1,11 @@
+uwcwidth/tables.pxd,sha256=k-FIs6Ac3lf7N2oDjwKb2VgUZnsp6x-HGV9IvJNCJN0,13436
+uwcwidth/__init__.py,sha256=1AMtbOPcMIIe_gGQcuVdR_3gnzvwDHel0fUoxsOmWaA,104
+uwcwidth/uwcwidth.pyx,sha256=45zOVa8vHWgTvu1jqnxrjLirZWfP5Pivb4grlpaHTag,2686
+uwcwidth/uwcwidth.cpython-38-x86_64-linux-gnu.so,sha256=JgGwQfvVc7GJzLg66P-pZcfcWuSbScIrGTNTp8nagUw,266168
+uwcwidth/uwcwidth.pxd,sha256=_g9Tiko8EoLjlIXZL4kDjfGbPi4iC3ScsxCKUCrPJBM,268
+uwcwidth/__init__.pxd,sha256=qfuA2zWNTjQtFa5x8E-6EEHxM-R9v6Mm6uB8oWiOoHs,179
+uwcwidth-1.0.0.dist-info/top_level.txt,sha256=Tr61O5db29AaCaGKdS7cWJnG6PObf_-ygMOViQxof1o,9
+uwcwidth-1.0.0.dist-info/RECORD,,
+uwcwidth-1.0.0.dist-info/LICENSE,sha256=13C-RRJwvgsFQ_K5sQot9Qak1Is-ez2AEpJI2Mhnm5A,1149
+uwcwidth-1.0.0.dist-info/METADATA,sha256=lrlw7OkN2Lk-MGgL0mwUZHDqwVYXjQUnDqSuclNdo_g,6089
+uwcwidth-1.0.0.dist-info/WHEEL,sha256=MnIZbyzaiMtvFCQcbQ6OPM-v24Q4cwIcpUDBtN-BMPw,110
