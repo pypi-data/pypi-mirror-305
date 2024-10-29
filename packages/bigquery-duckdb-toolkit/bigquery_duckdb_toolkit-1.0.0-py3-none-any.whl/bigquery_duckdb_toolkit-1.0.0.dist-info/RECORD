@@ -1,0 +1,9 @@
+bigquery_duckdb_toolkit/__init__.py,sha256=1RiZgxLseQFMJy99HV2bVJjecZKpDYIDm6aXSwH6NZ8,145
+bigquery_duckdb_toolkit/bigquery_client.py,sha256=RXUGjb2-EHtTF4kKpdFZnRcG_bw_e6N1TDQTTapeQjY,368
+bigquery_duckdb_toolkit/bigquery_to_pandas.py,sha256=OkizFN7N_oGfAXQNeD3yCd4FBoE_Q6rgnnHYZcJf2r8,2465
+bigquery_duckdb_toolkit/interaction_service.py,sha256=28USMVdb6RPsRp4wTHP5f5bIpiwBGToCxlM0Kh-yS2E,1949
+bigquery_duckdb_toolkit-1.0.0.dist-info/LICENSE,sha256=9bp93H9zGnuiR3bPWaIKVYO5AoOXYfU8cif45T-mCxA,1078
+bigquery_duckdb_toolkit-1.0.0.dist-info/METADATA,sha256=ehEt7ggCPNQwf7q3PHVu8wIqEG4_1DH5ysesxP21lEE,4700
+bigquery_duckdb_toolkit-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+bigquery_duckdb_toolkit-1.0.0.dist-info/top_level.txt,sha256=26tIoGFGiM2MZJ7ftkxFn1-Kf-XT3yYp479PbF2uRrw,24
+bigquery_duckdb_toolkit-1.0.0.dist-info/RECORD,,
