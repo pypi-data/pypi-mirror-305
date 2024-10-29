@@ -1,0 +1,2 @@
+[pydantic]
+basedtyping = pydantic_basedtyping:plugin
