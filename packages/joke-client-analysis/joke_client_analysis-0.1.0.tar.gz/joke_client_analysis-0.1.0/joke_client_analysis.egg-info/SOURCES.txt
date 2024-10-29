@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+joke_client_analysis/__init__.py
+joke_client_analysis/__main__.py
+joke_client_analysis.egg-info/PKG-INFO
+joke_client_analysis.egg-info/SOURCES.txt
+joke_client_analysis.egg-info/dependency_links.txt
+joke_client_analysis.egg-info/requires.txt
+joke_client_analysis.egg-info/top_level.txt

@@ -1,0 +1,17 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'joke_client_analysis'
+version = '0.1.0'
+description = 'Быстрая статистика клиентов по возрасту и городу'
+authors = [
+  {name = 'Pablo_3_16', email = 'p.ergle@edu.centraluniversity.ru'}
+]
+readme = 'README.md'
+license = {text = 'MIT'}
+requires-python = '>=3.12'
+dependencies = [
+    'pandas>=2.2.3'
+]
