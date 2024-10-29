@@ -1,0 +1,2 @@
+[console_scripts]
+console_bundle = calculator_bundle.multiplier:multiply
