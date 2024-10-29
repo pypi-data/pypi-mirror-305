@@ -1,0 +1,9 @@
+README.md
+setup.py
+py_singl_slider/__init__.py
+py_singl_slider.egg-info/PKG-INFO
+py_singl_slider.egg-info/SOURCES.txt
+py_singl_slider.egg-info/dependency_links.txt
+py_singl_slider.egg-info/entry_points.txt
+py_singl_slider.egg-info/requires.txt
+py_singl_slider.egg-info/top_level.txt
