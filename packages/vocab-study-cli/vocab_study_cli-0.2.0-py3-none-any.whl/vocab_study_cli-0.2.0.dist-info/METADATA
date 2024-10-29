@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: vocab-study-cli
+Version: 0.2.0
+Summary: A CLI tool for vocabulary learning in Anki using GenAI API
+License: MIT
+Author: Takuya Sato
+Author-email: business@satotakuya.jp
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: anthropic (>=0.37.1,<0.38.0)
+Requires-Dist: google-cloud-translate (>=3.17.0,<4.0.0)
+Requires-Dist: openai (>=1.52.2,<2.0.0)
+Requires-Dist: pillow (==8.4.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: selenium (>=4.25.0,<5.0.0)
+Requires-Dist: setuptools (>=75.2.0,<76.0.0)
+Requires-Dist: undetected-chromedriver (>=3.5.5,<4.0.0)
+Description-Content-Type: text/markdown
+
+# Vocab Study CLI
+
+A simple CLI tool to help language learners study vocabulary by providing definitions via the Claude.ai API.
+
+## Usage
+
+```bash
+vocab [word]
+```
+
+## Examples:
+vocab apple
+vocab "a piece of cake"
+vocab "感謝"
+
+## .env
+ANTHROPIC_API_KEY
+OPENAI_API_KEY
+GOOGLE_API_KEY
+GOOGLE_APPLICATION_CREDENTIALS
+MEDIA_PATH=
+

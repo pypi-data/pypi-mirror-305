@@ -1,0 +1,3 @@
+[console_scripts]
+vocab=vocab_study_cli.main:main
+
