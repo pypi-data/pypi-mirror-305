@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: joke_create_cheque_order
+Version: 0.1.0
+Summary: Быстрый генератор чека
+Author: Pablo-3_16
+Author-email: p.ergle@edu.centraluniversity.ru
+Requires-Python: >=3.7
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: json
+
