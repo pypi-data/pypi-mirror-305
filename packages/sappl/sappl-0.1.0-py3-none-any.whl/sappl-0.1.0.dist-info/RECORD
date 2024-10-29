@@ -1,0 +1,11 @@
+sappl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sappl/feature_extraction.py,sha256=3IsNIqbo6HMkRaOCRBopO9Wrvn_GKdgDD6h_DpQANv8,5340
+sappl/io.py,sha256=9bc-VbyqTF5Aq5R75vsUIfsIyovjNKfNFR8B9_yrjqY,3781
+sappl/processor.py,sha256=RVIuE5qmNWYQArweWZuimdu6tpxWYb-cVr-zrmJv27E,7009
+sappl/transform.py,sha256=4gZof6WJxRBw7w8EfeqE_IeLvP2K1p3xl0tNYlgR5Og,7345
+sappl/transforms.py,sha256=luuZ2G5WxY2hopr-mORLtlhEtpHiDsjP5_higFjz8rs,5976
+sappl/utils.py,sha256=pULuTY3au2BHXTYP3BGQ9LDjOaKjISXxXNTJaQAXCts,5428
+sappl-0.1.0.dist-info/METADATA,sha256=prb_EJduY9bN529rvYHBMeVplVP79c2mmTjp5uMfJKU,11666
+sappl-0.1.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+sappl-0.1.0.dist-info/top_level.txt,sha256=uNFA0crNxYP_tm1eUw5Nw5dY5uHJUaZHQVTWFiZfPSg,6
+sappl-0.1.0.dist-info/RECORD,,
