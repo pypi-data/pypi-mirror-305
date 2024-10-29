@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+store_conversion/__init__.py
+store_conversion.egg-info/PKG-INFO
+store_conversion.egg-info/SOURCES.txt
+store_conversion.egg-info/dependency_links.txt
+store_conversion.egg-info/top_level.txt
