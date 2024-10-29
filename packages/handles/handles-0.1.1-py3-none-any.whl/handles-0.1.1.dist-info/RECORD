@@ -1,0 +1,16 @@
+handles/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+handles/__main__.py,sha256=OUgM68rfNmOCKRKBDo0YYSVFlknxrR8QOMgxd7Ju418,99
+handles/cli.py,sha256=xO5C2_Yc4yTtzFH0lZj-VH3GSvDHLDBbQW7frubOZuI,3426
+handles/mapping.py,sha256=6LZtMR2BRS1jYvaKxjUAKBdzNrzlHRDfbT_MRKPwyi0,372
+handles/platform.py,sha256=MQNzh8ob0Ckgag_5Wypd5xdny8J7wXStvV-ROKPDOIs,219
+handles/platforms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+handles/platforms/github.py,sha256=hkEsrnoaCMl53fwVhiVbjo2Tu1HHjgaRCZAAbkE5gSA,393
+handles/platforms/instagram.py,sha256=IlF2dZ9EVjY3rgq6N5WEjIOEhWHwi6QjnjF6eZHUjto,390
+handles/platforms/medium.py,sha256=mTd1jh0l42qaUbetOwYxDjh7KzmBY5ksLSBDHCmJe8U,516
+handles/platforms/npm.py,sha256=nQLzJYNorCf8MD4Ll_7oV7le6k92QLW71D72ybVtp3g,380
+handles/platforms/youtube.py,sha256=Rrpjk9Abclb4REVg7WkXOl_zNbQZV1P_O5NVW7Ng7qU,385
+handles-0.1.1.dist-info/METADATA,sha256=DOI8iOKyhly3W-pG2ahwu4S_RA_k_OIDBIZ_FnV7VoA,3223
+handles-0.1.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+handles-0.1.1.dist-info/entry_points.txt,sha256=hC0kDnaMlkXEyP7KCiYNnfKFvhaTz4N2ffUTMrINEa4,44
+handles-0.1.1.dist-info/licenses/LICENSE,sha256=eY2D_tUkQk2mkZyEkCvU76P6I0rOabq2Cguuh9C6yxE,1061
+handles-0.1.1.dist-info/RECORD,,

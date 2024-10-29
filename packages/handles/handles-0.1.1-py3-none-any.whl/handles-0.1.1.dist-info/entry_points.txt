@@ -1,0 +1,2 @@
+[console_scripts]
+handles = handles.cli:cli
