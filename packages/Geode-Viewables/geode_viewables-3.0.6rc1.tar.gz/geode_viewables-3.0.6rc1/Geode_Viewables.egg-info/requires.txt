@@ -1,0 +1,4 @@
+geode-common==33.*,>=33.0.7rc1
+opengeode-core==15.*,>=15.5.5rc1
+opengeode-geosciences==8.*,>=8.1.1rc1
+opengeode-io==7.*,>=7.0.5rc1
