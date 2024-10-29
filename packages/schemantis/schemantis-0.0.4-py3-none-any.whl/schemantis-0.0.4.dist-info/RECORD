@@ -1,0 +1,15 @@
+schemantis/__init__.py,sha256=7glnc0uLMy86PSsh3VbmDeHtl3LYQzEPsNDX9hp9cSc,1058
+schemantis/api_client.py,sha256=f-OL9eMvIG1ePgZdqS7Co5BrgmZg0roZ9EAKL7Eu3IQ,26001
+schemantis/api_response.py,sha256=WhxwYDSMm6wPixp9CegO8dJzjFxDz3JF1yCq9s0ZqKE,639
+schemantis/configuration.py,sha256=q3p7dXjsLNNU5noRSSrzc_bIRycM9TLxeBO_JHom8QY,16057
+schemantis/exceptions.py,sha256=t9ssbJpwxna5Qnc8t8wL5L87IRKOfV1LLg9CXcGuhl4,5872
+schemantis/rest.py,sha256=2Iqe73pNrPB7B2t-ywGmGH6_mNyyad6HcD6JG6Zkhds,9189
+schemantis/api/__init__.py,sha256=qtXsHhlmnJj-35Em-hoj9WT6AHi858EmsPOz2JaenaU,97
+schemantis/api/default_api.py,sha256=bLdCKHRgSX7iikrpGw7LfmaBB8ZIGAtzQfVIailIxAQ,11402
+schemantis/models/__init__.py,sha256=l4h37TgrwjNuHNzcwBrCzlFtSBdo49O7h8nS1AWhpYs,500
+schemantis/models/retrieve_map_post_request.py,sha256=kmdXeTKQKuINolwbe7cdSonOSyG-UmnFNlUyX1_ZenI,3149
+schemantis/models/retrieve_map_post_request_config.py,sha256=tcvFL0hC_2wdo3TLVKro8dPwsiBWX4j0Gd-jbWIc82A,3246
+schemantis-0.0.4.dist-info/METADATA,sha256=U1lZ-_XIKDl96EMoJZaypuB_NwK-T2Hh9vgc1qdeUuU,3563
+schemantis-0.0.4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+schemantis-0.0.4.dist-info/top_level.txt,sha256=W_p6kZqBAuMo74-gUdbnSmFND74cZnxK3jcWyHif6t4,11
+schemantis-0.0.4.dist-info/RECORD,,
