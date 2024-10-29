@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: nc_to_gpkg
+Version: 0.0.7
+Summary: A package for processing NetCDF files and merging with shapefiles
+Author: Isaac Barnhart
+Author-email: isaac.barnhart@corteva.com
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: pandas
+Requires-Dist: geopandas
+Requires-Dist: xarray
+Requires-Dist: shapely
+Requires-Dist: tqdm
+
