@@ -1,0 +1,11 @@
+uwcwidth/__init__.pxd,sha256=fBRdfR9M7RigCYYtsa9f3iqlT7IqQaIHu9nps0b51MQ,183
+uwcwidth/__init__.py,sha256=w8xgBH5H6AIPfc3dusRMXU0j3myaC_HfB5XzF6ocvug,106
+uwcwidth/tables.pxd,sha256=mymrvCfWCC6bYsX1qZQfSCSAnKeQMUsDKNLdRf_FwJg,13624
+uwcwidth/uwcwidth.cp313-win_amd64.pyd,sha256=WfPBEOAEinx8rlG8nG4MCuOa6gll3HagZC0T474iFzE,47104
+uwcwidth/uwcwidth.pxd,sha256=TiWs_OLBrH2G8suZyVevqKvo4NenctwHo4-NGo9-oC8,277
+uwcwidth/uwcwidth.pyx,sha256=UTvkhWj9wEYfuWi6g0DtNDN1shnM5YQiNlRhqyWWG0w,2763
+uwcwidth-1.0.0.dist-info/LICENSE,sha256=zuqgi1bbqeRKDWtXBbbiAFnGjuZ_8KJ987XYjx-wuk0,1159
+uwcwidth-1.0.0.dist-info/METADATA,sha256=-W90ObWaPmJFuty8QAkiFAR5oQVev8ZH9-7vYGkRuC8,6189
+uwcwidth-1.0.0.dist-info/WHEEL,sha256=-v_yZ08fSknsoT62oIKG9wp1eCBV9_ao2rO4BeIReTY,101
+uwcwidth-1.0.0.dist-info/top_level.txt,sha256=Tr61O5db29AaCaGKdS7cWJnG6PObf_-ygMOViQxof1o,9
+uwcwidth-1.0.0.dist-info/RECORD,,
