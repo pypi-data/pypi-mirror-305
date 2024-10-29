@@ -1,0 +1,14 @@
+{
+    "git_describe": {
+        "dirty": "6.24.4-tainted",
+        "tag": "6.24.4"
+    },
+    "git_hash": "454d978191ed42c8202a2244dc092dfb6fd8c83a",
+    "package_build_date": "2024-10-28T15:46",
+    "version": {
+        "major": "6",
+        "minor": "24",
+        "rc": "",
+        "revision": "4"
+    }
+}
