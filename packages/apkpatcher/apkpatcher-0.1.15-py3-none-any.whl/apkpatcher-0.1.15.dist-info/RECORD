@@ -1,0 +1,11 @@
+apkpatcher/__init__.py,sha256=m8I7lss5d8OBej5Wrl_5lOwE-FFkSgJssivcBHHej2I,29062
+apkpatcher/__main__.py,sha256=y3nJvt5pbzjvGMxD4Z0PpZqzofT_6GR0gE3dYON3BAc,155
+apkpatcher/cli.py,sha256=-2QzRaJ0fpQYzPU4ORlTUKNx-Z38W7Qu-Z0CLvqPpKM,4218
+apkpatcher/conf.py,sha256=ehUoFIqmckF-gtp27qT_oACuxjPyCXQhi-BbAJ-EI8E,18
+apkpatcher/smalipatching.py,sha256=n5uvcrPnciilSOcJnGwRlGAzlehmtVtc9hL7YTuoyxI,4063
+apkpatcher-0.1.15.dist-info/LICENSE,sha256=2ylvL381vKOhdO-w6zkrOxe9lLNBhRQpo9_0EbHC_HM,18046
+apkpatcher-0.1.15.dist-info/METADATA,sha256=dIlz3Or-kA5Qcddx8tBGazV2lLCVBMdnjUxQze5Of3o,23196
+apkpatcher-0.1.15.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+apkpatcher-0.1.15.dist-info/entry_points.txt,sha256=bXVXaV9PW6b3jpTvDn0AMpCa7IpDLZVOkphia_PvuU8,51
+apkpatcher-0.1.15.dist-info/top_level.txt,sha256=uHd_yApC63mTQouB78anCTMpyoLF3aUoiZQwnP8e1vk,11
+apkpatcher-0.1.15.dist-info/RECORD,,
