@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calculator_bundle.multiplier"
+version = "0.1.0"
+description = "A simple package to multiply two numbers."
+authors = [{ name = "Miguel Jimenez-Urias", email = "mjimenez@opendap.org" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.urls]
+"Homepage" = "https://github.com/Mikejmnez/calculator_bundle.multiplier"
+
+[project.entry-points."console_scripts"]
+console_bundle = "calculator_bundle.multiplier:multiply"
+
+[project.optional-dependencies]
+test = ["pytest"]

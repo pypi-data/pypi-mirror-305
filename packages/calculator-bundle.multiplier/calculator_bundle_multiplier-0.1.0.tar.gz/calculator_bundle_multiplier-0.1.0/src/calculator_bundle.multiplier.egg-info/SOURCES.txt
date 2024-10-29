@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/calculator_bundle.multiplier.egg-info/PKG-INFO
+src/calculator_bundle.multiplier.egg-info/SOURCES.txt
+src/calculator_bundle.multiplier.egg-info/dependency_links.txt
+src/calculator_bundle.multiplier.egg-info/entry_points.txt
+src/calculator_bundle.multiplier.egg-info/requires.txt
+src/calculator_bundle.multiplier.egg-info/top_level.txt
+src/calculator_bundle/multiplier/__init__.py
+tests/test_multiplier.py
