@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: raincolor
+Version: 0.1.4
+Summary: A versatile Python module for terminal color and style formatting, allowing easy customization of text appearance in command line applications.
+Author: Plingenn
+Author-email: raintool@engineer.com
+Keywords: terminal colors ANSI styles text formatting CLI
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Topic :: Terminals
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Rain Colors
+
+**Rain Colors** is a versatile Python module designed for formatting terminal output with colorful text and styles. This module simplifies the process of customizing the appearance of text in command-line applications, allowing developers to easily implement colorful interfaces.
+
+## Features
+
+- **Color Management**: Easily apply both foreground and background colors to text using 8-bit and 24-bit RGB options.
+- **Text Styles**: Utilize various text styles like bold, italic, underline, and more.
+- **Themed Messages**: Predefined styles for success, warning, and error messages for consistent UX.
+- **Utility Functions**: Functions for progress bars, RGB blending, and more.
+
+## Installation
+
+Install the package with pip:
+
+```bash
+pip install raincolor
