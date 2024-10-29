@@ -1,0 +1,17 @@
+.gitignore
+README.md
+bootstrap.sh
+customize.sh
+deploy.sh
+setup.py
+.github/workflows/website.yml
+docs/Makefile
+docs/build.sh
+docs/conf.py
+docs/index.rst
+docs/requirements.txt
+sphinx-gemini/__init__.py
+sphinx_gemini.egg-info/PKG-INFO
+sphinx_gemini.egg-info/SOURCES.txt
+sphinx_gemini.egg-info/dependency_links.txt
+sphinx_gemini.egg-info/top_level.txt
