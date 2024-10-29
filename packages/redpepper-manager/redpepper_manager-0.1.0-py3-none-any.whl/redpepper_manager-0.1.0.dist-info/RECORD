@@ -1,0 +1,13 @@
+redpepper/manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+redpepper/manager/__main__.py,sha256=Vjh6gwB9eJWShpplamvRSpnYinPifFa9k2O7XYMD9e0,37
+redpepper/manager/apiserver.py,sha256=8dfjaSLbYiSl5IIlgITA6s6HfYvWN0ZjWf6bAjrQNpI,17991
+redpepper/manager/config.py,sha256=rMpnAAu8sJevSJpX-_oOshvmt_rMDT5yIpAF7KCSRFA,1383
+redpepper/manager/data.py,sha256=HuxvdqQP3vyTjn0zApQtqf71_Z4QJsBICQZNgvZpp7A,11908
+redpepper/manager/entrypoint.py,sha256=LS1av5tM9zWJrrWftW1Isy8GVKJRZVym1UBMpra6yZA,1441
+redpepper/manager/eventlog.py,sha256=sSM1ju6Q6wiTnThH8VEalmqjNaJ3XcAOgg-aNj8pabM,3683
+redpepper/manager/manager.py,sha256=XIV8noTaHljyq78O5R--S9pJzlT_M-KiOfWRP7ZkhsU,13316
+redpepper/manager/manager.yml,sha256=YZAK_F9Pfon3Ei7T680cIEHlvvRz1L5-AUl90W2Ar3o,3258
+redpepper_manager-0.1.0.dist-info/METADATA,sha256=6Pqjs2hb0RNbM1DexqQ87H0N9fCiI-1zG-Bf-K-3wGA,1124
+redpepper_manager-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+redpepper_manager-0.1.0.dist-info/entry_points.txt,sha256=0Bv80S1jVa1u2v8_a3N4F6NU5nH1Qh4xiJMs8kRil18,72
+redpepper_manager-0.1.0.dist-info/RECORD,,
