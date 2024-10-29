@@ -1,0 +1,14 @@
+roiloc/__init__.py,sha256=42STGor_9nKYXumfeV5tiyD_M8VdcddX7CEexmibPBk,22
+roiloc/_cache.py,sha256=LkY6OXB2gdGkASwQFSFj5pEd-BiheznBjdVTclTtyYo,528
+roiloc/location.py,sha256=DKLD5dSt0x0bSxXhHkqA0cfCRd110qxgVTd9G9TvHAc,2921
+roiloc/locator.py,sha256=Pym-3vSCWp40K8CbPBO8sW7elnALkDpPpZ3y5bEOJDc,5440
+roiloc/registration.py,sha256=ZhTKC7YyLwQlNjwjNOqLOm8noHGTHiNAABlcssRbsWs,2310
+roiloc/roiloc.py,sha256=WqGuFjhS9I9eoOiGBOggi3fYYMo2S90EgS95B7C-wt8,7601
+roiloc/sanitychecks.py,sha256=wjUpRh_WUVMUwjvA6pyrfKehGwyZ9If_wEaFmOjBNmQ,272
+roiloc/template.py,sha256=O2lhw5viroDnY_3JxORCoDdswPOVT9VtNVNjPiSf8u8,1580
+roiloc-0.4.0.dist-info/LICENSE,sha256=HbPcCkeg4-abtheZH48TkP2Uf-RosFMwcWzc943PZt0,1072
+roiloc-0.4.0.dist-info/METADATA,sha256=ePLTmbNhA9gtKsNG8g-Gp_zTZ2-KlJyQOk9IMiYAhWQ,10760
+roiloc-0.4.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+roiloc-0.4.0.dist-info/entry_points.txt,sha256=b43rMFaHh5AAPBFndCkAmczCAhsyIco40NTNe6yjWPc,47
+roiloc-0.4.0.dist-info/top_level.txt,sha256=coBXPSrDvJj1CT1YCZ9TrBu9uEDkit-_a2aNGGdzVhA,7
+roiloc-0.4.0.dist-info/RECORD,,
