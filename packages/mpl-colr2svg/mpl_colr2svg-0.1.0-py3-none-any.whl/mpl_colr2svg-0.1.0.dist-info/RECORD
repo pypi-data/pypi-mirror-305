@@ -1,0 +1,14 @@
+mpl_colr2svg/__init__.py,sha256=VjMK-jK5bkNFa0rEXweDxfpy06Sk8rd7lbZPYgACQvY,401
+mpl_colr2svg/_version.py,sha256=30uCcJe-_REkiinJ81dfEPp-6KRyYbayl5dgSgT86nc,201
+mpl_colr2svg/color_emoji.py,sha256=SEE_-BaJfiU4FdRVnFmXGZj01mslCIrAJyerxrN-ygM,2351
+mpl_colr2svg/color_emoji_blackrenderer.py,sha256=kFcGZGhX6mfNfEVNmJEOh9aI_vA9mqxKSNGMiMoQ95M,2597
+mpl_colr2svg/colr2svg.py,sha256=egF9fiqmW60JC6Bp0DCUP4e-L9dhjWtcXeXYAtmFSd8,4262
+mpl_colr2svg/patch_nanoemoji.py,sha256=-CEdKGeTh3g2VdtsBMPjy-z3dUCNBipxd0CTX7e_Ark,1839
+mpl_colr2svg/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mpl_colr2svg/tests/test_example.py,sha256=hnZD54ijFexGz-LyrXA5kcu0ktlbK-iHgwjQc0QdLoo,513
+mpl_colr2svg-0.1.0.dist-info/LICENSE,sha256=88bonGqfrN2UXUfC7t27lU7B3O55M2HzYMxqJ1qzPVk,1301
+mpl_colr2svg-0.1.0.dist-info/LICENSE_old,sha256=6j8vtN8bVRO6-nATwIGgtHzpMteUfXO0tYUxWPWEUqE,1520
+mpl_colr2svg-0.1.0.dist-info/METADATA,sha256=odv9kDoe26NqQOMWD0xdfEEH8abUYmY9P88NzvOpoZE,1492
+mpl_colr2svg-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+mpl_colr2svg-0.1.0.dist-info/top_level.txt,sha256=AcnmXTMbWBIFb4-BBCWYyTAHgaPAo-W2P_CifvtuNeE,13
+mpl_colr2svg-0.1.0.dist-info/RECORD,,

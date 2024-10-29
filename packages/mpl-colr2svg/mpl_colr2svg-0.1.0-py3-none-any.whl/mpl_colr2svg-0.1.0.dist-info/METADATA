@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: mpl_colr2svg
+Version: 0.1.0
+Home-page: https://github.com/leejjoon/mpl-colr2svg
+Author: Jae-Joon Lee
+Author-email: lee.j.joon@gmail.com
+License: BSD 3-Clause
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE_old
+Requires-Dist: matplotlib
+Requires-Dist: fonttools
+Requires-Dist: nanoemoji
+Requires-Dist: lxml
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-mpl; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: numpydoc; extra == "dev"
+Requires-Dist: sphinx-rtd-theme; extra == "dev"
+Requires-Dist: sphinx-copybutton; extra == "dev"
+Requires-Dist: sphinx-autobuild; extra == "dev"
+Requires-Dist: sphinx-gallery>=0.8.2; extra == "dev"
+Requires-Dist: autoapi; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: numpydoc; extra == "doc"
+Requires-Dist: sphinx-rtd-theme; extra == "doc"
+Requires-Dist: sphinx-copybutton; extra == "doc"
+Requires-Dist: sphinx-autobuild; extra == "doc"
+Requires-Dist: sphinx-gallery>=0.8.2; extra == "doc"
+Requires-Dist: autoapi; extra == "doc"
+Provides-Extra: test
+Requires-Dist: black; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-mpl; extra == "test"
+
+# mpl-colr2svg
+
+Colr2SVG for Matplotlib
+
+## Installation
+
+You can install using `pip`:
+
+```bash
+pip install mpl_colr2svg
+```
+
+## Development Installation
+
+
+```bash
+pip install -e ".[dev]"
+```
+
