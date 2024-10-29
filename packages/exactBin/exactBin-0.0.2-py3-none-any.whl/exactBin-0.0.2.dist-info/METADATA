@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: exactBin
+Version: 0.0.2
+Summary: A Python module for infinite precision binary floats and arithmetic.
+License-File: license.txt
+
