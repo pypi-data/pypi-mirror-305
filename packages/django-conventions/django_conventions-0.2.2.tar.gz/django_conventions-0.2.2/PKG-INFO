@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: django_conventions
+Version: 0.2.2
+Summary: Django Convention Over Configuration
+Home-page: https://github.com/jmg/django_conventions
+Author: Juan Manuel García
+Author-email: jmg.utn@gmail.com
+License: GPL v3
+Keywords: Django Routing Convetion Over Configuration
