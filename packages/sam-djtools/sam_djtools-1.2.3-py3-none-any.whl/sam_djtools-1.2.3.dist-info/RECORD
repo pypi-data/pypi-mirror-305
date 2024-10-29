@@ -1,0 +1,10 @@
+sam_tools/__init__.py,sha256=v75SJdwurd0RrldCZhVUdLE9jUnjoxF2rq0iLnFWiNI,1794
+sam_tools/apps.py,sha256=qJBS3WqD6QmJ0NgVCl3LklyoGG1ljV8fAE8yw03J1VU,92
+sam_tools/utils.py,sha256=6PlU-ByBB2ab8DFEeBazvJiTs63973V2pXnYk90lJJ0,10713
+sam_tools/static/sam_tools/change_form_prev_next.js,sha256=jmMkUDrKdvSEAZ4Bn5AvEDlsXFTnedFhWAFYSVNCl6s,980
+sam_tools/templates/admin/change_form.html,sha256=ZJYLctVtQ-OVtkHq4cw9HoGNUeYAtbl5zL9UbFtqqxM,1338
+sam_djtools-1.2.3.dist-info/LICENSE.txt,sha256=DZC3OyBUo_bizyK4LYyWjUmYZJZi-17jVPqKaMqLzSM,29
+sam_djtools-1.2.3.dist-info/METADATA,sha256=-2ykQuW--dqHek0FAHAu0o0iW5PeWpQsRGHvqOaPb98,1991
+sam_djtools-1.2.3.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+sam_djtools-1.2.3.dist-info/top_level.txt,sha256=aMgocpNk-5yv0mYwjAvHn28Bmm1N7uug4eLiQLzvb6I,10
+sam_djtools-1.2.3.dist-info/RECORD,,
