@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: km_sdk
+Version: 1.0.1
+Summary: 知识管理系统插件开发SDK
+Home-page: 
+Author: KnowledgeManagement
+Requires-Dist: elasticsearch==8.12.1
+Requires-Dist: elasticsearch-dsl==8.12.0
+Requires-Dist: APScheduler==3.10.4
+Requires-Dist: StrEnum==0.4.15
