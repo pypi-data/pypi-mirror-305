@@ -1,0 +1,10 @@
+neural_network_kpp/__init__.py,sha256=z1teStd-XHWMm_U8Pv98R0SdjJNHCyCKBz-hkLTdRXw,207
+neural_network_kpp/activations.py,sha256=VC2Ln77VgFOSIrrs55wxRw4GG-KidrpLDRmE6bt2qD0,833
+neural_network_kpp/layers.py,sha256=GfBXHRs00IyQvq0L9UnCUK6N7F4k4UycMxOj1olhSHY,2461
+neural_network_kpp/losses.py,sha256=RR46hj5qw1Iu4obc5xnmVgEyD9gI_Grvhl376kYHX9I,667
+neural_network_kpp/network.py,sha256=IHmw7ALqoDtrR7D84kf_ErOKD5ZxhWc6BwMP8xjDD8Y,555
+neural_network_kpp/train.py,sha256=ZdWFv8Z_En5zFn-bcjPYmtTnzOAbYoIBYrdwngMHBxU,459
+neural_network_kkp-0.0.7.9.dist-info/METADATA,sha256=dYbauFuNpjdT4K-Grh3J5c-x78vWQs5Gk3DNbTaJh0U,296
+neural_network_kkp-0.0.7.9.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+neural_network_kkp-0.0.7.9.dist-info/top_level.txt,sha256=mNth9ShmnZOT1eZ2mqjYwmXO7bcMVjnQgKON_Oz_-rE,19
+neural_network_kkp-0.0.7.9.dist-info/RECORD,,
