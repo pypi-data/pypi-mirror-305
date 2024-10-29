@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: bomiot_test1
+Version: 0.0.4
+Summary: One workspace for you to do you python app
+Home-page: https://github.com/Bomiot/Bomiot
+Keywords: Bomiot,bomiot,GreaterWMS
+Author: Bomiot
+Author-email: Singosgu@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: bomiot (>=0.1.0)
+Project-URL: Repository, https://github.com/Bomiot/Bomiot
+Description-Content-Type: text/markdown
+
+# Bomiot
+Bomiot
+
