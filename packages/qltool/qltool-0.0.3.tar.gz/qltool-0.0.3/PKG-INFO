@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: qltool
+Version: 0.0.3
+Summary: Automatically created environment for python package
+Home-page: https://gitlab.com/ojr/qltool
+Author: me
+Author-email: ojr@gmail.com
+License: GPL2
+Description-Content-Type: text/markdown
+
+qltool
+======
+
+*barebones made by codeframe*
+
+**Purpose:** `qltool` is
+
+Example
+-------
+
+``` {.python}
+# example
+```
+
+Installation
+------------
+
+``` {.bash org-language="sh"}
+pip3 install qltool
+```
+
+Usage
+-----
