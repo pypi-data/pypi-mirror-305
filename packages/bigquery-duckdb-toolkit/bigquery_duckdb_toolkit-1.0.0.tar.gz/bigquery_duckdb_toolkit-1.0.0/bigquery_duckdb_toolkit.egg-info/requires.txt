@@ -1,0 +1,7 @@
+db-dtypes
+ipython
+google-auth
+google-cloud-bigquery
+pandas
+duckdb
+jinja2
