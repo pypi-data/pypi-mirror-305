@@ -1,0 +1,14 @@
+xroms/__init__.py,sha256=5EjPzQBotzpbcMuCPt2Bw3QsD37Rx21NeAtb2Qubn-g,1075
+xroms/accessor.py,sha256=bGRef-J5w-zd8L0o0h5Oa8YH16WcOolC7-zzwMyRPjQ,66328
+xroms/datasets.py,sha256=TD1A8eEFOYuyrWmLrlepgBcQaqiBM6rwX5SeFhFmKnw,1173
+xroms/derived.py,sha256=V3cMK78Z2Wh7vmSZfZPwxKMi1cTurz4cIXX--i6zO9g,27303
+xroms/interp.py,sha256=XMtCBeBdeUT4rrPX2mBr9fV2zNnXguvIdMI8WF9D_Tk,11537
+xroms/roms_seawater.py,sha256=W9khGbXNdhTCpOEABlIjh9DGVp5LOTPWdqog7Qro4W4,12880
+xroms/utilities.py,sha256=6AwTW_gZGWr0OGgVYmXqdB8r7iWs0znA470M2U67zAE,53184
+xroms/vector.py,sha256=FoUx5SR-3dVUy4lfLgLi3a9TYsipLS9jfZncXuP067U,3593
+xroms/xroms.py,sha256=4Y0aBl1x-TiPPGMHlNqiUZf20ffazRsqydsK6XZ4zCE,38091
+xroms-0.6.1.dist-info/LICENSE,sha256=_GBdxIe5ih_QdzsIj-tPEt5QvaaKtpKuS0y1Fx98uc0,1068
+xroms-0.6.1.dist-info/METADATA,sha256=fvDLMZBynY4j7Q6fo3WODS2ds6pVwa3bFQN5w3Le-Cc,4585
+xroms-0.6.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+xroms-0.6.1.dist-info/top_level.txt,sha256=QIY9WPYTPeToYe0kd_jIsZThVVSzrRp_8GjkmjIudOM,6
+xroms-0.6.1.dist-info/RECORD,,
