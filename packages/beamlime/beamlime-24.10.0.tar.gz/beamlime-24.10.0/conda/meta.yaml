@@ -1,0 +1,64 @@
+package:
+  name: beamlime
+
+  version: {{ GIT_DESCRIBE_TAG }}
+
+source:
+  path: ..
+
+
+{% set pyproject = load_file_data('pyproject.toml') %}
+{% set dependencies = pyproject.get('project', {}).get('dependencies', {}) %}
+{% set conda_package_name_registry = {
+    "graphviz": "python-graphviz",
+    "confluent_kafka": "python-confluent-kafka"
+} %}
+
+requirements:
+  build:
+    - setuptools
+    - setuptools_scm
+  run:
+    - rich
+    - essreduce
+    - python>=3.10
+
+  {% for package in dependencies %}
+    - {{conda_package_name_registry.get(package, package)}}
+  {% endfor %}
+
+
+test:
+  imports:
+    - beamlime
+  requires:
+    - pytest
+    - pytest-asyncio
+    - psutil
+    - pandas
+    - pyarrow  # Future hard-dependency of pandas, it can be removed from pandas>3.0
+    - numpy
+    - scipp
+    - plopp
+    - sciline
+    - essreduce
+    - pooch
+  source_files:
+    - pyproject.toml
+    - tests/
+  commands:
+    # We ignore warnings during release package builds
+    - python -m pytest -Wignore tests
+
+build:
+  noarch: python
+  script:
+    - python -m pip install .
+
+about:
+  home: https://github.com/scipp/beamlime
+  license: BSD-3-Clause
+  summary: Live data reduction visualisation framework for ESS.
+  description: Live data reduction visualisation framework for ESS.
+  dev_url: https://github.com/scipp/beamlime
+  doc_url: https://scipp.github.io/beamlime
