@@ -1,0 +1,9 @@
+README.md
+gff_to_xlsx.py
+setup.py
+gff_to_xlsx.egg-info/PKG-INFO
+gff_to_xlsx.egg-info/SOURCES.txt
+gff_to_xlsx.egg-info/dependency_links.txt
+gff_to_xlsx.egg-info/entry_points.txt
+gff_to_xlsx.egg-info/requires.txt
+gff_to_xlsx.egg-info/top_level.txt
