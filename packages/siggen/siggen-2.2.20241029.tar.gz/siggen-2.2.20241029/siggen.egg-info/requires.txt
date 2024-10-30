@@ -1,0 +1,15 @@
+glom
+
+[cli]
+requests<3
+
+[dev]
+build
+check-manifest
+pytest
+requests<3
+ruff
+tox
+tox-gh-actions
+twine
+wheel
