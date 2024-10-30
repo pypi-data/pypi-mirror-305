@@ -1,0 +1,14 @@
+mphot/__init__.py,sha256=Q1eIGglzw8QjIqisGIM2fno-9hZmSQuPHdUilWxx0Bc,140
+mphot/core.py,sha256=OQgqllxZZZrFHrwVOeYLDb4ZRgXu9GJ9SKAL0ZdHy-I,38581
+mphot/datafiles/16_order_poly.npy,sha256=ySkR7I3B67fLzij_rtc8eVMRwXTIsfjIcHAE0X-mpf0,264
+mphot/datafiles/pre_grid_2400m_flux.pkl,sha256=-7u3iHZ8tAvOw800TCWlRxln--U_HVU84nZ8Qvfe4NU,45736303
+mphot/datafiles/pre_grid_2400m_radiance.pkl,sha256=4v0D8f0r3PKLgymWiJdBRn2rU27Ol1fksOlgjk8Uaz0,45736303
+mphot/datafiles/vega.csv,sha256=ahNrzc8Gve9FBKgwkHd560LGb2DGc_Rn8750Wd_nGLg,556297
+mphot/datafiles/system_responses/.gitignore,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mphot/datafiles/system_responses/speculoos_Andor_iKon-L-936_-60_I+z_instrument_system_response.csv,sha256=VqtjWvaUbWSUT3j_SJsBPEU1tx8BR9aYo_uFQh83w3w,157907
+mphot/datafiles/system_responses/speculoos_PIRT_1280SciCam_-60_zYJ_instrument_system_response.csv,sha256=RqEykzCkktIRBBki8h6SXOawl5oBmEW-08ykVDoGTCo,455551
+mphot/grids/.gitignore,sha256=cM2Qvl_2LuWoVMWj24GdwPBpMfWOfvQxxcq24QpGqlY,5
+mphot-1.0.0.dist-info/METADATA,sha256=VrJcciG2CHrYyfwQPZfUWUYU2cMGQe6RW1yl7FGygYw,2434
+mphot-1.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+mphot-1.0.0.dist-info/licenses/LICENSE,sha256=_GYPZ1bzCDJcHP9wzx-2RSzravepExgIbTsXcIxfsKY,1080
+mphot-1.0.0.dist-info/RECORD,,
