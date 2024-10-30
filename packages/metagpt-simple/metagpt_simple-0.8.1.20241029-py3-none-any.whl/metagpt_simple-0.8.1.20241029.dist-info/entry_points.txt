@@ -1,0 +1,4 @@
+[console_scripts]
+install-mermaid=scripts.install_mermaid:install_mermaid_cli
+metagpt=metagpt.software_company:app
+
