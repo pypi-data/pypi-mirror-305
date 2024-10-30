@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+shaderbang/gl.py
+shaderbang/inotify.py
+shaderbang/input.py
+shaderbang.egg-info/PKG-INFO
+shaderbang.egg-info/SOURCES.txt
+shaderbang.egg-info/dependency_links.txt
+shaderbang.egg-info/top_level.txt

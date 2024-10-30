@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: shaderbang
+Version: 0.0.0
+Summary: A Python toolkit for OpenGL rendering with EGL/DRM/KMS
+Author: Antonin Stefanutti
+License: MIT License
+Project-URL: GitHub, https://github.com/astefanutti/shaderbang
+Requires-Python: >=3.10
+License-File: LICENSE
