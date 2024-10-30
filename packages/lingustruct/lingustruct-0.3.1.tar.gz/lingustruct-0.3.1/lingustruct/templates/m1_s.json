@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "properties": {
+        "t_v": {"type": "string"},
+        "p_n": {"type": "string"},
+        "p_v": {"type": "string"},
+        "desc": {"type": "string"},
+        "scale": {"type": "string", "enum": ["s", "m", "l", "e"]}
+    },
+    "required": ["t_v", "p_n", "p_v", "desc", "scale"]
+}
