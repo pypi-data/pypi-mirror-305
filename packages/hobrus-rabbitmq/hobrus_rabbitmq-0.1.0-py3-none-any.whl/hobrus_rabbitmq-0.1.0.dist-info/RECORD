@@ -1,0 +1,8 @@
+hobrus_rabbitmq/__init__.py,sha256=Dbo2LHT7jNTH-xrE1L0DtaeZWnxf6BRO28Ij04x6Xns,95
+hobrus_rabbitmq/broker.py,sha256=dXUCy2Qp2y2jhQu1BDQmUZZ8PgJGSlhtPTSwp8obrn8,562
+hobrus_rabbitmq/publisher.py,sha256=J8uTomEw3Etim89ErJOvYKMlx2a9Kf-Fx1UtUG0WZBw,446
+hobrus_rabbitmq/subscriber.py,sha256=0LCiIzpF1lJWlNDVTwek2hFyNrPhMtt0hPtOyHXDz6E,219
+hobrus_rabbitmq-0.1.0.dist-info/METADATA,sha256=115cBHGdGLGZSUJ6OYvO1OTfGA0vfbGIMCezDf5m48U,3674
+hobrus_rabbitmq-0.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+hobrus_rabbitmq-0.1.0.dist-info/top_level.txt,sha256=MrfboInywz8x-sQwOFuNp7t-lFic4g2K2gHDt_-Eh84,16
+hobrus_rabbitmq-0.1.0.dist-info/RECORD,,

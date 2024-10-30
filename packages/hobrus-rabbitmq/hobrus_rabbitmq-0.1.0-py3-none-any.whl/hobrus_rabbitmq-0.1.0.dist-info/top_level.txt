@@ -1,0 +1,1 @@
+hobrus_rabbitmq
