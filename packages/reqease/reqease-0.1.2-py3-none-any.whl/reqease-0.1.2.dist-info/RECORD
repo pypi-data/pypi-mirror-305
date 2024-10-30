@@ -1,0 +1,11 @@
+reqease/__init__.py,sha256=k_5Qkhc6YbszDEjAvVLNsQx89sNrPzSbV0bGo6DTHUQ,53
+reqease/data_classes.py,sha256=I2s0Ojn4OWf4K0YarpyNt8YOFaNP_Tr7RNVQLFGhxKc,560
+reqease/http_get.py,sha256=P9ifg7GuPRIyj44N1IyhjATHQPZlCNRpsIILSnVuBDY,2535
+reqease/http_post.py,sha256=eXaT4x6q6MhcTemzB6c5-UeEaQ-wsojgxptUyNItsbs,2971
+reqease/protocols.py,sha256=BbFppxqd1O9cYAUc0EUDZonYalAO_3C0FoO6F6IxDyI,426
+reqease/response_processor.py,sha256=29eTJxqKNFxZ5iboyE4uDJoGzrT8vpMumykhRS8biXE,2542
+reqease-0.1.2.dist-info/LICENSE,sha256=k2Ef8ZpTHodcM3z9cyrWzQD7JcVs8UVXLiQouJoSnus,1069
+reqease-0.1.2.dist-info/METADATA,sha256=4BXSmzhF_dEqPSFI_Efs_YfDgBcqGpDAyyxzEccqwbA,7256
+reqease-0.1.2.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+reqease-0.1.2.dist-info/top_level.txt,sha256=w3W-hXiM94y_o7MlgDNQEyjxkS_WNLXXLL8dQNOCSNE,8
+reqease-0.1.2.dist-info/RECORD,,
