@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+hashtbl/__init__.py
+hashtbl.egg-info/PKG-INFO
+hashtbl.egg-info/SOURCES.txt
+hashtbl.egg-info/dependency_links.txt
+hashtbl.egg-info/requires.txt
+hashtbl.egg-info/top_level.txt
