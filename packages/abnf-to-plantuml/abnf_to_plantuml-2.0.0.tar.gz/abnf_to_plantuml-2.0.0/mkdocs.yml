@@ -1,0 +1,40 @@
+site_name: ABNF to PlantUML
+
+theme:
+  name: "material"
+
+plugins: 
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          docstring_section_style: list
+          show_inheritance_diagram: true
+          show_symbol_type_heading: true
+          show_signature_annotations: true
+          separate_signature: true
+          docstring_style: google
+  - print-site
+
+
+
+markdown_extensions:
+  - toc
+  - def_list
+  - footnotes
+  - sane_lists
+  - admonition
+  - markdown_sub_sup
+  - mkdocs-click 
+  - markdown_checklist.extension
+  - mdx_math
+
+
+nav:
+  - ABNF to PlantUML Docs: index.md
+  - tutorials.md
+  - How-To Guides: how-to-guides.md
+  - reference.md
+  - explanation.md
+

@@ -1,0 +1,110 @@
+[build-system]
+requires = ["hatchling", "versioningit"]
+build-backend = "hatchling.build"
+
+[project]
+name = "abnf-to-plantuml"
+dynamic = ["version"]
+description = 'A tool to transform ABNF-grammars into the subset of EBNF that PlantUML recognizes.'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+{ name = "Paul Reinerfelt", email = "Paul.Reinerfelt@gmail.com" },
+]
+classifiers = [
+	"Development Status :: 4 - Beta",
+	"Environment :: Console",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3.9",
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"Programming Language :: Python :: 3.12",
+	"Programming Language :: Python :: Implementation :: CPython",
+	"Programming Language :: Python :: Implementation :: PyPy",
+	"Topic :: File Formats",
+	"Topic :: Software Development :: Documentation",
+	"Topic :: Text Processing",
+	"Typing :: Typed"
+]
+dependencies = [
+	"click",
+	"abnf",
+	"click-logging",
+	"click-spinner",
+]
+
+[tool.hatch.env]
+requires = [
+	"hatch-mkdocs",
+]
+
+[tool.hatch.env.collectors.mkdocs.docs]
+path = "mkdocs.yml"
+
+[tool.hatch.envs.docs]
+detached = false
+
+[project.urls]
+Documentation = "https://github.com/Paul Reinerfelt/abnf-to-plantuml#readme"
+Issues = "https://github.com/Paul Reinerfelt/abnf-to-plantuml/issues"
+Source = "https://github.com/Paul Reinerfelt/abnf-to-plantuml"
+
+[project.scripts]
+abnf-to-plantuml = "abnf_to_plantuml.cli:abnf_to_plantuml"
+
+[tool.hatch.version]
+source = "versioningit"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+	"mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/abnf_to_plantuml tests}"
+
+[tool.coverage.run]
+source_pkgs = ["abnf_to_plantuml", "tests"]
+branch = true
+parallel = true
+omit = [
+	"src/abnf_to_plantuml/__about__.py",
+]
+
+[tool.coverage.paths]
+abnf_to_plantuml = ["src/abnf_to_plantuml", "*/abnf-to-plantuml/src/abnf_to_plantuml"]
+tests = ["tests", "*/abnf-to-plantuml/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+	"no cov",
+	"if __name__ == .__main__.:",
+	"if TYPE_CHECKING:",
+]
+
+[tool.versioningit]
+vcs = "hg"
+
+[tool.versioningit.next-version]
+method = "smallest"
+
+[tool.versioningit.format]
+distance = "{next_version}.dev{distance}+{vcs}{rev}"
+# Example formatted version: 1.2.4.dev42+ge174a1f
+
+dirty = "{base_version}+d{build_date:%Y%m%d}"
+# Example formatted version: 1.2.3+d20230922
+
+distance-dirty = "{next_version}.dev{distance}+{vcs}{rev}.d{build_date:%Y%m%d}"
+# Example formatted version: 1.2.4.dev42+ge174a1f.d20230922
+
+[tool.ruff.lint]
+# On top of the defaults (`E4`, E7`, `E9`, and `F`), enable some other categories as well
+select = ["E4", "E7", "E9", "F", "I", "ANN", "S", "B", "A", "C4", "EXE", "PIE", "RUF"]
+ignore = ["ANN101"]
+
+[tool.ruff.format]
+# Enable reformatting of code snippets in docstrings.
+docstring-code-format = true

@@ -1,0 +1,68 @@
+# Tools to be used in the project
+
+
+Hatch
+:   Tool of choice for Python version management, Environment management, and Building and Publishing a package.
+    
+    - versioningit
+    - hatch-mkdocs
+
+UV
+:   Tool of choice for Package management (does everything Pip does, with extra precautions).
+
+Ruff
+:   Replaces every linter and formatter in the book, including iSort and Black.
+
+MyPy
+:   Type-hinting is A Good Thing™ and MyPy is the watchman.
+
+Pyment
+:   Creates stubs for docstrings.
+
+Sphinx
+:   Handles the API-documentation side.
+    
+    - MyST
+
+:   MyST in turn needs some extensions:
+    
+    myst_enable_extensions = [
+        "attrs_inline",
+        "attrs_block",
+        "colon_fence",
+        "deflist",
+        "dollarmath",
+        "fieldlist", 
+        "tasklist",
+    ]
+    
+
+MkDocs
+:   Handles the rest of the documentation
+    
+    - mkdocs-material
+    - mkdocs-print-site-plugin
+    - mkdocstrings
+
+:   Also needs some Python Markdown extensions:
+    
+    - def_list
+    - footnotes
+    - sane_lists
+    - (admonition)
+    - [md4mathjax](https://github.com/a358003542/md4mathjax)
+    - [markdown_sub_sup](https://github.com/alberic89/markdown_sub_sup)
+    - [checklist](https://github.com/FND/markdown-checklist)
+    
+
+PyTest
+:   Handles testing
+    
+    - [pytest-sugar](https://github.com/Teemu/pytest-sugar)
+
+Hypothesis
+:   Adds Property testing.
+
+
+
+

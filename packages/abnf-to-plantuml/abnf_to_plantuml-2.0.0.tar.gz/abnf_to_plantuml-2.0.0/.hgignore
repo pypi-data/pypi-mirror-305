@@ -1,0 +1,56 @@
+syntax: glob
+# This line is a comment, and will be skipped.
+# Empty lines are skipped too.
+
+# Backup files left behind by the Emacs editor.
+*~
+
+# Lock files used by the Emacs editor.
+# Notice that the "#" character is quoted with a backslash.
+# This prevents it from being interpreted as starting a comment.
+.\#*
+
+# Temporary files used by the vim editor.
+.*.swp
+
+# A hidden file created by the Mac OS X Finder.
+.DS_Store
+
+# Compiled Python
+*.pyc
+
+# LaTeX artifacts
+*.aux
+*.bib
+*.bbl
+*.glo
+*.idx
+*.ist
+*.log
+*.out
+*.toc
+*.tof
+*.tol
+
+# pytest cache
+.pytest_cache
+
+# Coverage data file
+.coverage
+
+# ruff cache
+.ruff_cache
+
+# mypy cache
+.mypy_cache
+
+# build artefacts
+dist
+
+# mkdocs build site
+site
+
+# Compiled C/C++/Objective C
+*.o
+
+# Project specific
