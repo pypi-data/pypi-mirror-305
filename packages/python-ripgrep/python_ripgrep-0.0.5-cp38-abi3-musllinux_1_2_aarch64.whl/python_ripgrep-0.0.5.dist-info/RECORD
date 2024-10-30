@@ -1,0 +1,8 @@
+python_ripgrep-0.0.5.dist-info/METADATA,sha256=U5fny96WmMbb8-kGrQuFqfYeCPZoa1Ba4qpNNHliN6g,7316
+python_ripgrep-0.0.5.dist-info/WHEEL,sha256=si7vvCejCAKzbXX7B7q1wzBxZcs6qPGvTQg1PgNww7E,106
+python_ripgrep.libs/libgcc_s-e52197c3.so.1,sha256=vkPW1Auw6CH9Bjk7frmX3hry_1H9c0tRI0Ncyg71WUI,724137
+python_ripgrep/__init__.py,sha256=Kk6xxYMLGMjvzHYGbdEn75OuE0kYEpNOsin3iLWkmY0,133
+python_ripgrep/__init__.pyi,sha256=9tvlmBtLWMXfPJ7t0NX7LHl_0qNRF056XVi_8xIUTts,1265
+python_ripgrep/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_ripgrep/python_ripgrep.abi3.so,sha256=_-B3v_QjHXvVLRqQVfO4QsGDHzU0gEpQST9CUyDlicI,4918713
+python_ripgrep-0.0.5.dist-info/RECORD,,
