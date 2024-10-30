@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: textual-pyfiglet-fonts
+Version: 0.2.1
+Summary: The full extended fonts collection packaged as an optional dependency for textual-pyfiglet
+License: MIT
+Author: edward-jazzhands
+Author-email: ed.jazzhands@gmail.com
+Requires-Python: >=3.0,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+This contains the full extended fonts collection for Textual-PyFiglet.
+
+The original PyFiglet contains all fonts in the package. For Textual-PyFiglet they were split into their own package, since the fonts data is almost 100x the size of the program data.
+
+This is intended to be installed like this:   
+`pip install textual-pyfiglet[fonts]`
+
+But you can also just download the package directly.
