@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: waxtion
+Version: 0.1.7
+Summary: A transaction signer and table fetcher on wax made easier.
+Home-page: https://github.com/funkaclau
+Author: funkaclau
+Requires-Dist: pyntelope
+
