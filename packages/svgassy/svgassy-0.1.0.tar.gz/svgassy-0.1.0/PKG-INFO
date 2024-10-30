@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: svgassy
+Version: 0.1.0
+Summary: 
+Author: Marek
+Author-email: marek@mp76.pl
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+
