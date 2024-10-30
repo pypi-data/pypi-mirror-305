@@ -1,0 +1,26 @@
+[package]
+name = "common_email_check"
+version = "0.2.1"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+csv = "1.1"
+check-if-email-exists = "0.9"
+serde_json = "1.0" # <- 추가
+pyo3 = { version = "0.17", features = ["extension-module"] }
+
+[lib]
+name = "common_email_check"
+crate-type = ["cdylib"]  # Python 모듈로 빌드하기 위한 설정
+
+[profile.release]
+opt-level = "z"        # 사이즈 최적화
+lto = true             # Link Time Optimization 활성화
+codegen-units = 1      # 코드 생성 유닛 줄이기
+panic = "abort"        # 패닉 처리 방식 변경으로 크기 감소
+
+# tar.gz에서 불필요한 파일 제외
+exclude = ["docs/*", "tests/*", "examples/*", "*.md", "*.toml", "target/*"]
