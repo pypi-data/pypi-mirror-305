@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: common_email_check
+Version: 0.1.4
+Summary: A module for email checking
+Author: Your Name
+Author-email: your_email@example.com
+Requires-Dist: pyo3
