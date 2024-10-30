@@ -1,0 +1,13 @@
+from setuptools import setup, find_namespace_packages
+
+setup(name = 'sciklt',
+      version = '1.7',
+      description = 'Dependency for ML based modules',
+      long_description = open("sciklt/README.md", "r").read(),
+      long_description_content_type="text/markdown",
+      author = 'Anonymus',
+      package_data = {'':['licence.txt', 'README.md', 'data\\**']},
+      include_package_data = True,
+      install_requires = ['networkx','matplotlib'],
+      packages = find_namespace_packages(),
+      zip_safe = False)
