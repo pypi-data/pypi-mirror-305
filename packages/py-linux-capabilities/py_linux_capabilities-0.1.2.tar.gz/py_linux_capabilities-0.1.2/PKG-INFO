@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: py-linux-capabilities
+Version: 0.1.2
+Summary: A Python library providing an enumeration of Linux capabilities.
+Home-page: https://github.com/damwiw/py-linux-capabilities
+Author: damwiw
+License: MIT
+Project-URL: Homepage, https://github.com/damwiw/py-linux-capabilities
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# linux-capabilities
+
+`linux-capabilities` is a Python library that provides an enumeration of Linux capabilities based on the [capabilities(7) Linux man page](https://man7.org/linux/man-pages/man7/capabilities.7.html).
+
+## Installation
+
+For a standard installation, use:
+```
+python3 -m pip install [--break-system-packages] py-linux-capabilities
+```
+
+To install from TestPyPI, use:
+
+```
+pip install -i https://test.pypi.org/simple/ py-linux-capabilities
+```
+
+## Build
+```
+python3 -m build
+```
+
+## Usage
+```
+from linux_capabilities import LinuxCapabilities
+
+mycap = LinuxCapabilities.CAP_SYS_ADMIN
+print(mycap)
+```
