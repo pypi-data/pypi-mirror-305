@@ -1,0 +1,6 @@
+google-generativeai
+pillow
+ipywidgets
+ipython
+pytest
+pytest-cov

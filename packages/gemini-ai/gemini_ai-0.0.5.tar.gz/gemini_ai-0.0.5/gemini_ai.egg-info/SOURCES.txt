@@ -1,0 +1,11 @@
+README.md
+setup.py
+gemini_ai/__init__.py
+gemini_ai/gemini.py
+gemini_ai/utils.py
+gemini_ai.egg-info/PKG-INFO
+gemini_ai.egg-info/SOURCES.txt
+gemini_ai.egg-info/dependency_links.txt
+gemini_ai.egg-info/requires.txt
+gemini_ai.egg-info/top_level.txt
+tests/test_gemini.py
