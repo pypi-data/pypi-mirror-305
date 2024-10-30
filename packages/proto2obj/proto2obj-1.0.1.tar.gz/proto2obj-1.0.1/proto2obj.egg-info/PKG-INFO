@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: proto2obj
+Version: 1.0.1
+Summary: Python Package made by Mhadhbi Issam . 
+Home-page: https://gitlab.com/game-dev-comapny/libraries/proto2obj.git
+Author: mhadhbixissam
+Author-email: mhadhbixissam@gmail.com
+Project-URL: Documentation, https://pydefold.readthedocs.io/en/latest/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: protobuf==4.25.0
+
+# proto2obj
+
+Python library to convert Protobuff message to python classes , where each message memeber is mapped into class property . This library created for main purpose is to be able to inhirt from Protobuff message , but insted of meessage inhirit from fake class that share same data , and convertable to meesgae Protobuff data .
+
+## Installation 
+```bash
+pip install proto2obj
+```
+
+
+## Example of usage  : 
+### Example 1 : 
+```python
+from proto2obj import Proto2Obj 
+
+
+# msg is a protobuff message type 
+
+fake_msg_type = Proto2Obj(msg).convert()
+#def convert(self,base = tuple() , attrs = dict()) :
+#   base  = baseclasses , to generate the new type as drived from base classes 
+#   attrs = extra static memebers assigned to new generated type 
+
+# get fields  : 
+print(f"Message fields : {instance.__fields__}")
+# get enums 
+print(f"Message enums : {instance.__enums__}")
+# get nested types , they are converted also 
+print(f"Message nested types : {instance.__nested_types__}")
+# the original protobuff message which is converted from 
+print(f"Message original  protobuff message  : {instance.__protobuf__}")
+
+## create instance 
+instance = fake_msg_type(var = value , ....)
+
+# assigne memebers like normal python object 
+instance.var = value2
+
+# convert back to protobuff instance 
+msg_instance = instance.proto()
+
+```
+
+
+### Example 2 : 
+```python
+from proto2obj import Proto2Obj 
+
+
+# msg is a protobuff message type 
+
+fake_msg_type = Proto2Obj(msg).convert()
+
+
+class DrivedType(fake_msg_type) : 
+    pass 
+
+instance = DrivedType(var = value , ....)
+```

@@ -1,0 +1,9 @@
+setup.py
+proto2obj/Main.py
+proto2obj/__init__.py
+proto2obj.egg-info/PKG-INFO
+proto2obj.egg-info/SOURCES.txt
+proto2obj.egg-info/dependency_links.txt
+proto2obj.egg-info/entry_points.txt
+proto2obj.egg-info/requires.txt
+proto2obj.egg-info/top_level.txt
