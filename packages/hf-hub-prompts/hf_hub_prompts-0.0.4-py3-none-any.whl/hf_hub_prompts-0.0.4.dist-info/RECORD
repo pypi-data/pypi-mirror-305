@@ -1,0 +1,8 @@
+hf_hub_prompts/__init__.py,sha256=wBsSv_jaBh8q0VD_dQeceOqqbxPL83b6dQ3LPe1fhHY,346
+hf_hub_prompts/hub_api.py,sha256=kJm0Uppu7aXIn22oE9_M9qbCKmaGbbfDBsYyRlN2WYA,3718
+hf_hub_prompts/populated_prompt.py,sha256=My9cn7u_IW2t9qGO50fjRpNwJhYZ1hY2snoz-ukYBvI,2546
+hf_hub_prompts/prompt_templates.py,sha256=BsVpaMKi5dcLciM4FUJfBAcF0-sVxILUdYl7XRtpUzg,9788
+hf_hub_prompts-0.0.4.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+hf_hub_prompts-0.0.4.dist-info/METADATA,sha256=GbyBfhFHQPHEXr6p0Xk61AicrqUSEEssJZeKtQ2bgew,24698
+hf_hub_prompts-0.0.4.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+hf_hub_prompts-0.0.4.dist-info/RECORD,,
