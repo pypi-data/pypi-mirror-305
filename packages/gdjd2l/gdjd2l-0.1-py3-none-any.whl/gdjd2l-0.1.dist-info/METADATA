@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: gdjd2l
+Version: 0.1
+Summary: use for deep to learn
+Home-page: UNKNOWN
+Author: Goodongj
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch (>=2.3.1)
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+# My Python Package
+
+use for deep to learn
+
+## Installation
+
+To install My Python Package, run this command in your terminal:
+
+```bash
+pip install gdjd2l
+pip uninstall gdjd2l
+```
+
+
