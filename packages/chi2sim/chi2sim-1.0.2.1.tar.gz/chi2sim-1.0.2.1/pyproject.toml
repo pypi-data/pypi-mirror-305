@@ -1,0 +1,40 @@
+# pyproject.toml
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "Cython>=0.29.21",
+    "numpy>=1.19.2"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chi2sim"
+version = "1.0.2.1"
+authors = [
+    {name = "Joshua Marie Ongcoy", email = "joshstat126@gmail.com"},
+]
+description = "Chi-square test with Monte Carlo simulation"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Intended Audience :: Science/Research"
+]
+
+dependencies = [
+    "numpy>=1.19.2",
+]
+
+keywords = ["statistics", "chi-square", "monte-carlo", "simulation"]
+
+[project.urls]
+"Homepage" = "https://github.com/kisha126/chi2sim"
+"Bug Tracker" = "https://github.com/kisha126/chi2sim/issues"
+"Documentation" = "https://github.com/kisha126/chi2sim#readme"
