@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+.coverage
+.ropeproject
+.tox
+_build
+dist/
+examples/uplot
+htmlcov/
