@@ -1,0 +1,2 @@
+[console_scripts]
+visualdl = visualdl.server.app:main
