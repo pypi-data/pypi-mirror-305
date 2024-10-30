@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: fuit
+Version: 1.4
+Summary: FU IT&ABD
+Home-page: 
+Author: DaSh-More
+Author-email: 
+License: MIT
+Platform: any
+Description-Content-Type: text/markdown
+Requires-Dist: httpx
+Requires-Dist: pyperclip
+
+# FU IT&ABD
+
+- cat
