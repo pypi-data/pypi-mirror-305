@@ -1,0 +1,159 @@
+[tool.poetry]
+name = "metagpt-simple"
+version = "0.8.1.20241029"
+description = "The Multi-Agent Framework"
+authors = ["Alexander Wu <alexanderwu@deepwisdom.ai>"]
+license = "MIT"
+readme = "README.md"
+keywords = [
+    "metagpt",
+    "multi-agent",
+    "multi-role",
+    "programming",
+    "gpt",
+    "llm",
+    "metaprogramming",
+]
+homepage = "https://github.com/geekan/MetaGPT"
+repository = "https://github.com/geekan/MetaGPT"
+packages = [{ include = "metagpt", from = "." }]
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aiohttp = "*"
+channels = "*"
+faiss_cpu = "*"
+fire = "*"
+typer = "*"
+lancedb = "*"
+loguru = "*"
+meilisearch = "*"
+numpy = "*"
+openai = "*"
+openpyxl = "*"
+beautifulsoup4 = "*"
+pandas = "*"
+pydantic = "*"
+python_docx = "*"
+PyYAML = "*"
+setuptools = "*"
+tenacity = "*"
+tiktoken = "*"
+tqdm = "*"
+anthropic = "*"
+typing-inspect = "*"
+libcst = "*"
+qdrant-client = "*"
+ta = "*"
+semantic-kernel = "*"
+wrapt = "*"
+redis = "*"
+curl-cffi = "*"
+httplib2 = "*"
+websocket-client = "*"
+aiofiles = "*"
+gitpython = "*"
+zhipuai = "*"
+rich = "*"
+nbclient = "*"
+nbformat = "*"
+ipython = "*"
+ipykernel = "*"
+scikit_learn = "*"
+typing-extensions = "*"
+socksio = "*"
+gitignore-parser = "*"
+websockets = "*"
+networkx = "*"
+google-generativeai = "*"
+playwright = "*"
+anytree = "*"
+ipywidgets = "*"
+Pillow = "*"
+imap_tools = "*"
+qianfan = "*"
+dashscope = "*"
+rank-bm25 = "*"
+jieba = "*"
+volcengine-python-sdk = "*"
+gymnasium = "*"
+boto3 = "*"
+spark_ai_python = "*"
+agentops = "*"
+semantic_kernel = "*"
+
+[tool.poetry.extras]
+selenium = ["selenium", "webdriver_manager", "beautifulsoup4"]
+search-google = ["google-api-python-client"]
+search-ddg = ["duckduckgo-search"]
+ocr = ["paddlepaddle", "paddleocr", "tabulate"]
+rag = [
+    "llama-index-core",
+    "llama-index-embeddings-azure-openai",
+    "llama-index-embeddings-openai",
+    "llama-index-embeddings-gemini",
+    "llama-index-embeddings-ollama",
+    "llama-index-llms-azure-openai",
+    "llama-index-readers-file",
+    "llama-index-retrievers-bm25",
+    "llama-index-vector-stores-faiss",
+    "llama-index-vector-stores-elasticsearch",
+    "llama-index-vector-stores-chroma",
+    "llama-index-postprocessor-cohere-rerank",
+    "llama-index-postprocessor-colbert-rerank",
+    "llama-index-postprocessor-flag-embedding-reranker",
+    "docx2txt",
+]
+test = [
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "pytest-mock",
+    "pytest-html",
+    "pytest-xdist",
+    "pytest-timeout",
+    "connexion",
+    "azure-cognitiveservices-speech",
+    "aioboto3",
+    "gradio",
+    "grpcio-status",
+    "grpcio-tools",
+    "google-api-core",
+    "protobuf",
+    "pylint",
+    "pybrowsers",
+]
+pyppeteer = ["pyppeteer"]
+dev = ["pylint", "black", "isort", "pre-commit"]
+android_assistant = [
+    "pyshine",
+    "opencv-python",
+    "protobuf",
+    "modelscope",
+    "tensorflow",
+    "tensorflow-macos",
+    "keras",
+    "torch",
+    "torchvision",
+    "transformers",
+    "opencv-python",
+    "matplotlib",
+    "pycocotools",
+    "SentencePiece",
+    "tf_slim",
+    "tf_keras",
+    "pyclipper",
+    "shapely",
+    "groundingdino-py",
+    "datasets",
+    "clip-openai",
+]
+
+[tool.poetry.scripts]
+metagpt = "metagpt.software_company:app"
+install-mermaid = "scripts.install_mermaid:install_mermaid_cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
