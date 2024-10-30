@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+SSD/SSD.py
+SSD/__init__.py
+SSD_python.egg-info/PKG-INFO
+SSD_python.egg-info/SOURCES.txt
+SSD_python.egg-info/dependency_links.txt
+SSD_python.egg-info/requires.txt
+SSD_python.egg-info/top_level.txt
