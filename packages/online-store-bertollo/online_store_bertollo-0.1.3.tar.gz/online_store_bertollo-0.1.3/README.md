@@ -1,0 +1,56 @@
+# Online Store
+
+The package is a simple customer management system with the ability to add, modify, delete or search for customers and orders on any of the platforms.
+
+## Features
+
+* CLI mode
+* Importing package as module
+
+## Installation
+
+```sh
+pip3 install online-store-bertollo
+```
+
+## Usage
+
+* ### CLI mode
+
+    Just run `online_store` in your terminal. You will see a menu with options. The data will be deleted when the session ends
+
+* ### As module
+
+    ```python
+    from online_store import UserManager, OrderManager
+
+    manager = UserManager()
+    order_manager = OrderManager()
+
+    # Adding a new customer
+    manager.add_user("user1@example.com", {"name": "John Doe", "age": 30})
+
+    # Updating customer data
+    manager.update_user("user1@example.com", {"age": 31})
+
+    # Finding a customer
+    print(manager.find_user("user1@example.com"))
+
+    # Deleting a customer
+    manager.remove_user("user1@example.com")
+
+    # Attempting to search for a remote customer
+    print(manager.find_user("user1@example.com"))
+
+    # Creating a new order
+    order_manager.create_order(
+        "order1001", {"user": "Alice", "item": "Smartphone", "price": 799}
+    )
+
+    # Updating order data
+    order_manager.update_order("order1001", {"status": "shipped"})
+
+    # Order cancellation
+    order_manager.cancel_order("order1001")
+    
+    ```
