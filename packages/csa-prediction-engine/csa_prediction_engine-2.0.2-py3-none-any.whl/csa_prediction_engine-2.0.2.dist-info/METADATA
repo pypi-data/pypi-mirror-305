@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: csa-prediction-engine
+Version: 2.0.2
+Summary: The csa_prediction_engine library provides a suite of tools and functions for performing relevance-based predictions using the Cambridge Sports Analytics Prediction Engine API. The package is designed to facilitate single and multi-task predictions, allowing for flexible model evaluation and experimentation.
+Author: Cambridge Sports Analytics
+Author-email: prediction@csanalytics.io
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=2.1
+Requires-Dist: requests
+Requires-Dist: csa-common-lib-alpha
+
+# Cambridge Sports Analytics Relevance Engine
+
+Welcome to the **CSA Prediction Engine** package. This Python library provides a suite of tools and functions for performing relevance-based predictions using the Cambridge Sports Analytics (CSA) API. The package is designed to facilitate single and multi-task predictions, allowing for flexible model evaluation and experimentation.
+
+## Package Structure
+
+The package is structured as follows:
+
+```
+csa_prediction_engine/
+    â”œâ”€â”€ api_client.py                # Main module for user interactions
+    â”œâ”€â”€ bin/                         # Internal modules for task management
+    â”‚   â”œâ”€â”€ _workers.py              # Executes various single prediction models
+    â”‚   â””â”€â”€ single_tasks.py          # Handles single task predictions
+    â”œâ”€â”€ helpers/                     # Helper modules for internal operations
+    â”‚   â”œâ”€â”€ _auth_manager.py         # Manages authentication for API access
+    â”‚   â”œâ”€â”€ _details_handler.py      # Manages retrieval and storage of model details
+    â”‚   â”œâ”€â”€ _payload_handler.py      # Manages API payload construction and processing
+    â”‚   â”œâ”€â”€ _postmaster.py           # Manages internal communications
+    â”‚   â””â”€â”€ _router.py               # Routes tasks based on input configurations
+    â”œâ”€â”€ parallel/                    # Modules for parallel processing
+    â”‚   â”œâ”€â”€ _dispatchers.py          # Dispatches tasks to workers
+    â”‚   â”œâ”€â”€ _workers.py              # Executes parallel tasks
+    â”‚   â””â”€â”€ _threaded_predictions.py # Handles predictions in a multi-threaded environment
+    â””â”€â”€ __init__.py                  # Package initialization
+```
+
+## Key Features
+
+- **Single Task Predictions**: Support for predictions with one dependent variable and one set of circumstances.
+- **Multi-y Predictions**: Perform predictions with multiple dependent variables and a single set of circumstances.
+- **Multi-theta Predictions**: Perform predictions with one dependent variable and multiple sets of circumstances.
+- **Relevance-Based Grid Predictions**: Generate optimal predictions by evaluating all thresholds and variable combinations.
+- **Grid Singularity Predictions**: Analyze grid predictions to find the singular optimal solution.
+- **MaxFit Predictions**: Find the best-fit model based on adjusted relevance.
+
+
+## Contributing
+
+We welcome contributions to the CSA Relevance Engine package. If you find a bug or have a feature request, please reach out to the CSA support team: support@csanalytics.io
+
+## License
+
+(c) 2023 - 2024 Cambridge Sports Analytics, LLC. All rights reserved.
