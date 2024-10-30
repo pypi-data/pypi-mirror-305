@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PsychoPy2experiment" type="PsychoPy2experimentType"/>
+  <xs:complexType name="ParamType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="val" use="optional"/>
+        <xs:attribute type="xs:string" name="valType" use="optional"/>
+        <xs:attribute type="xs:string" name="updates" use="optional"/>
+        <xs:attribute type="xs:string" name="name" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="SettingsType">
+    <xs:sequence>
+      <xs:element type="ParamType" name="Param" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EyetrackerRecordComponentType">
+    <xs:sequence>
+      <xs:element type="ParamType" name="Param" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name"/>
+  </xs:complexType>
+  <xs:complexType name="RegionOfInterestComponentType">
+    <xs:sequence>
+      <xs:element type="ParamType" name="Param" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name"/>
+  </xs:complexType>
+  <xs:complexType name="PolygonComponentType">
+    <xs:sequence>
+      <xs:element type="ParamType" name="Param" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="RoutineType" mixed="true">
+    <xs:sequence>
+      <xs:element type="EyetrackerRecordComponentType" name="EyetrackerRecordComponent" minOccurs="0"/>
+      <xs:element type="RegionOfInterestComponentType" name="RegionOfInterestComponent" minOccurs="0"/>
+      <xs:element type="PolygonComponentType" name="PolygonComponent" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="TextboxComponentType" name="TextboxComponent" minOccurs="0"/>
+      <xs:element type="KeyboardComponentType" name="KeyboardComponent" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="EyetrackerCalibrationRoutineType" mixed="true">
+    <xs:sequence>
+      <xs:element type="ParamType" name="Param" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="EyetrackerValidationRoutineType" mixed="true">
+    <xs:sequence>
+      <xs:element type="ParamType" name="Param" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="EyetrackerRecordComponentType" name="EyetrackerRecordComponent" minOccurs="0"/>
+      <xs:element type="RegionOfInterestComponentType" name="RegionOfInterestComponent" minOccurs="0"/>
+      <xs:element type="PolygonComponentType" name="PolygonComponent" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="TextboxComponentType" name="TextboxComponent" minOccurs="0"/>
+      <xs:element type="KeyboardComponentType" name="KeyboardComponent" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="TextboxComponentType">
+    <xs:sequence>
+      <xs:element type="ParamType" name="Param" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name"/>
+  </xs:complexType>
+  <xs:complexType name="KeyboardComponentType">
+    <xs:sequence>
+      <xs:element type="ParamType" name="Param" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name"/>
+  </xs:complexType>
+  <xs:complexType name="RoutinesType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="RoutineType" name="Routine"/>
+      <xs:element type="EyetrackerCalibrationRoutineType" name="EyetrackerCalibrationRoutine"/>
+      <xs:element type="EyetrackerValidationRoutineType" name="EyetrackerValidationRoutine"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="LoopInitiatorType" mixed="true">
+    <xs:sequence>
+      <xs:element type="ParamType" name="Param" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="EyetrackerRecordComponentType" name="EyetrackerRecordComponent" minOccurs="0"/>
+      <xs:element type="RegionOfInterestComponentType" name="RegionOfInterestComponent" minOccurs="0"/>
+      <xs:element type="PolygonComponentType" name="PolygonComponent" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="TextboxComponentType" name="TextboxComponent" minOccurs="0"/>
+      <xs:element type="KeyboardComponentType" name="KeyboardComponent" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="loopType" use="optional"/>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="LoopTerminatorType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="name"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="FlowType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="EyetrackerCalibrationRoutineType" name="EyetrackerCalibrationRoutine"/>
+      <xs:element type="EyetrackerValidationRoutineType" name="EyetrackerValidationRoutine"/>
+      <xs:element type="RoutineType" name="Routine"/>
+      <xs:element type="LoopInitiatorType" name="LoopInitiator"/>
+      <xs:element type="LoopTerminatorType" name="LoopTerminator"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="PsychoPy2experimentType">
+    <xs:sequence>
+      <xs:element type="SettingsType" name="Settings"/>
+      <xs:element type="RoutinesType" name="Routines"/>
+      <xs:element type="FlowType" name="Flow"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="encoding"/>
+    <xs:attribute type="xs:string" name="version"/>
+  </xs:complexType>
+</xs:schema>
