@@ -1,0 +1,11 @@
+aranea/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aranea/g2d/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aranea/g2d/log_example.py,sha256=Vgi3aDldGAAcf40pWhDoIG5WfcD4uCcPECPRmnE2GZs,1108
+aranea/p2g/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aranea/p2g/models.py,sha256=xudohyee7evxFiXVszBOEEDsDsIjrHly4uio5sEl-q0,1447
+aranea/p2g/pdf2graph.py,sha256=Rd5-T-UjacW8Rp8BMpsi7bN2l6npc4-g7fbElR6I_iI,3344
+aranea/p2g/serialize.py,sha256=y0FYbZuQUq68tzV0c4XrGOg79raQh73l_7aU5mR-R6k,1185
+aranea-0.0.1.dist-info/LICENSE,sha256=Xn1RhXFFw7WOPGH5LjhW4T1UWbbzmN7HhnlLOLrrPf4,1232
+aranea-0.0.1.dist-info/METADATA,sha256=xNtwjYLBi5g9WG6dog5g9npJTzIojthK3m3ogV_XHak,1833
+aranea-0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+aranea-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: aranea
+Version: 0.0.1
+Summary: Aranea is an automated architecture analysis tool for parsing a car architecture from a PDF file.
+Home-page: https://www.uni-ulm.de/in/fakultaet/studium/inf-mi/studienplanung-se/apse/#c914734
+License: MIT
+Keywords: aaa,AAA,UUlm,SE,MBTI,Aranea,Architecture,Analysis,Tool,PDF,Parsing,Car,Automated
+Author: Thorben Carl
+Author-email: thorben.carl@uni-ulm.de
+Requires-Python: >=3.13.0,<4.0.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: German
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Security
+Requires-Dist: PyMuPDF (>=1.24.11,<2.0.0)
+Requires-Dist: dataclasses (>=0.6,<0.7)
+Requires-Dist: numpy (>=2.1.2,<3.0.0)
+Requires-Dist: shapely (>=2.0.6,<3.0.0)
+Project-URL: Documentation, https://gitlab.uni-ulm.de/api/v4/projects/6351/jobs/artifacts/main/raw/latex/aranea.pdf?job=build-docs
+Project-URL: Issues, https://gitlab.uni-ulm.de/se/mbti/automated-architecture-analysis/-/issues
+Project-URL: Repository, https://gitlab.uni-ulm.de/se/mbti/automated-architecture-analysis
+Description-Content-Type: text/markdown
+
+# Automated Architecture Analysis
+
+You can download the PDF version of the documentation [here](https://gitlab.uni-ulm.de/api/v4/projects/6351/jobs/artifacts/main/raw/latex/aranea.pdf?job=build-docs) (from the `main` branch).
+The documentation of the `develop` branch can be found [here](https://gitlab.uni-ulm.de/api/v4/projects/6351/jobs/artifacts/develop/raw/latex/aranea.pdf?job=build-docs).
+
