@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cupi
+Version: 0.0.1
+Summary: Python Package Installation for ClaudeAI Computer Use.
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: anthropic[bedrock,vertex]>=0.37.1
+Requires-Dist: pillow
+Requires-Dist: PyAutoGUI
+
+
+
+## Installation
+
+```bash
+pip install cupi
+```
