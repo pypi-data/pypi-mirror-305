@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+muse_python.egg-info/PKG-INFO
+muse_python.egg-info/SOURCES.txt
+muse_python.egg-info/dependency_links.txt
+muse_python.egg-info/top_level.txt
+tests/test_foo.py
