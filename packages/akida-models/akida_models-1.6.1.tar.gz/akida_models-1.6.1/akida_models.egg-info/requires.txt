@@ -1,0 +1,10 @@
+cnn2snn~=2.10.0
+quantizeml~=0.12.1
+scipy
+opencv-python
+mtcnn==0.1.1
+imgaug
+trimesh
+librosa
+tqdm
+soundata
