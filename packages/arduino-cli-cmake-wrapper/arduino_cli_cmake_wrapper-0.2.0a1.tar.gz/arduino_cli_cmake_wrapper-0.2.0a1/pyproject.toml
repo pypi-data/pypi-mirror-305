@@ -1,0 +1,139 @@
+[build-system]
+requires = [
+    "setuptools>=30.3.0",
+    "setuptools_scm[toml]>=6.2",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arduino-cli-cmake-wrapper"
+dynamic = ["version"]
+description = "A wrapper for arduino CLI allowing it to integrate with a CMakeSystem"
+readme = "README.rst"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+keywords = ["fprime", "embedded", "nasa", "arduino", "cmake"]
+authors = [
+  {name = "Sterling Lewis Peet", email = "sterling.peet@gatech.edu"},
+  {name = "Michael Starch", email = "Michael.D.Starch@jpl.nasa.gov"},
+  {name = "Thomas Boyer-Chammard", email = "Thomas.Boyer.Chammard@jpl.nasa.gov"},
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: Unix",
+    "Operating System :: POSIX",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "License :: OSI Approved :: Apache Software License",
+    'Topic :: Utilities',
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+
+[project.urls]
+Documentation = "https://arduino-cli-cmake-wrapper.readthedocs.io/"
+Changelog = "https://arduino-cli-cmake-wrapper.readthedocs.io/en/latest/changelog.html"
+Issues = "https://github.com/SterlingPeet/arduino-cli-cmake-wrapper/issues"
+Repository = "https://github.com/SterlingPeet/arduino-cli-cmake-wrapper"
+
+####
+# Entry Points:
+#
+# Defines the list of entry-level (scripts) that are defined by this package. This allows
+# standard use of utilities that ship as part of F prime.
+####
+[project.scripts]
+arduino-cli-wrapper = "arduino_cli_cmake_wrapper.cli:main"
+
+####
+# setuptools_scm dynamically generates version number from git, as well as automatically
+# include all data files tracked by git (e.g. cookiecutter templates).
+# See https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+####
+[tool.setuptools_scm]
+
+[tool.docformatter]
+recursive = true
+wrap-summaries = 95
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.ruff]
+extend-exclude = ["static", "ci/templates"]
+line-length = 89
+src = ["src", "tests"]
+target-version = "py38"
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint]
+ignore = [
+  "RUF001",  # ruff-specific rules ambiguous-unicode-character-string
+  "S101",  # flake8-bandit assert
+  "S308",  # flake8-bandit suspicious-mark-safe-usage
+  "S603",  # flake8-bandit subprocess-without-shell-equals-true
+  "S607",  # flake8-bandit start-process-with-partial-path
+  "E501"  # pycodestyle line-too-long
+]
+select = [
+  "B",  # flake8-bugbear
+  "C4",  # flake8-comprehensions
+  "DTZ",  # flake8-datetimez
+  "E",  # pycodestyle errors
+  "EXE",  # flake8-executable
+  "F",  # pyflakes
+  "I",  # isort
+  "INT",  # flake8-gettext
+  "PIE",  # flake8-pie
+  "PLC",  # pylint convention
+  "PLE",  # pylint errors
+  "PT",  # flake8-pytest-style
+  "PTH",  # flake8-use-pathlib
+  "Q",  # flake8-quotes
+  "RSE",  # flake8-raise
+  "RUF",  # ruff-specific rules
+  "S",  # flake8-bandit
+  "UP",  # pyupgrade
+  "W"  # pycodestyle warnings
+]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+
+[tool.ruff.lint.isort]
+force-single-line = true
+forced-separate = ["conftest"]
+
+[tool.ruff.lint.per-file-ignores]
+"ci/*" = ["S"]
+
+
+####
+# Additional notes
+#
+# With regards to the configuration of the older versions of setup.py:
+# - package_data: included by default, and setuptools_scm will automatically include all files tracked by git
+# - package discovery (src/): setuptools will automatically discover all packages as we use the src-layout
+#
+# Reference:
+# - https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+# - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#src-layout
+####
