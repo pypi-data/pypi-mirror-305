@@ -1,0 +1,341 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Specimen Listing - {{task['name']}}
+{% endblock %}
+
+{% block content %}
+
+<style>
+.zoom {
+  transition: transform .2s; /* Animation */
+  max-width: 200px;
+  height: 75px;
+}
+
+.zoom:hover {
+  transform: scale(2.56) translate(5pt,0pt); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  position: absolute;
+}
+
+.spanner {
+  height: 75px;
+}
+</style>
+
+<table style="width:100%; position: relative;">
+  <tr>
+    <td>
+      <a href="{{ url_for('slide.index')}}">Home</a> : 
+      <a href="{{ url_for('slide.project_detail', project=project)}}">{{project_name}}</a> :
+      {{task['name']}}
+      <span id="span_specimen_display"></span>
+      <span id="span_block_name"></span>      
+    </td>
+    <td style="text-align: right">
+      <form id="form_pref" target="#" style="display: inline; white-space: nowrap;">
+        <label for="resolution_select">Resolution:</label>
+        <select id="resolution_select" style="font-size: 80%; color: black;">
+            <option value="raw">1:1</option>
+            <option value="x16">1:16</option>
+        </select>
+      </form>  
+    </td>
+  </tr>
+</table>
+
+<div class="pure-g">
+  <div class="pure-u-1 pure-u-md-7-24">
+    <h3 align="center">SPECIMENS</h3>
+    <table id="specimen" class="compact stripe hover" style="width:100%">
+      <thead>
+        <tr>
+          <th>Specimen</th>
+          <th>#Blk</th>
+          <th>#Sld</th>
+          {% if task['mode'] == 'annot' %}
+            <th>#Ann</th>
+          {% elif task['mode'] == 'dltrain' %}
+            <th>#Sam</th>
+          {% elif task['mode'] == 'sampling' %}
+            <th>#ROIs</th>
+          {% endif %}
+        </tr>
+      </thead>
+      </tbody>
+    </table>
+  </div>
+  <div class="pure-u-1 pure-u-md-1-24">
+  </div>
+  <div class="pure-u-1 pure-u-md-5-24" id="d_blocks" style="display:none;">
+    <h3 align="center">BLOCKS</h3>
+    <table id="block" class="compact stripe hover" style="width:100%">
+      <thead>
+        <tr>
+          <th>Block</th>
+          <th>#Sld</th>
+          {% if task['mode'] == 'annot' %}
+            <th>#Ann</th>
+          {% elif task['mode'] == 'dltrain' %}
+            <th>#Sam</th>
+          {% elif task['mode'] == 'sampling' %}
+            <th>#Sam</th>
+          {% endif %}
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <div class="pure-u-1 pure-u-md-1-24">
+  </div>
+  <div class="pure-u-1 pure-u-md-10-24" id="d_slides" style="display:none;">
+    <h3 align="center">SLIDES</h3>
+    <table id="slide" class="compact stripe hover" style="width:100%">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Section</th>
+          <th>Slice</th>
+          <th>Stain</th>
+          {% if task['mode'] == 'annot' %}
+            <th>#Ann</th>
+          {% elif task['mode'] == 'dltrain' %}
+            <th>#Sam</th>
+          {% elif task['mode'] == 'sampling' %}
+            <th>#Sam</th>
+          {% endif %}
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- DataTable support -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='DataTables/datatables.min.css') }}"/>
+<script type="text/javascript" charset="utf8" src="{{ url_for('static', filename='jquery-3.6.4.min.js') }}"></script>
+<script type="text/javascript" charset="utf8" src="{{ url_for('static', filename='DataTables/datatables.min.js') }}"></script>
+
+<script type="text/javascript" charset="utf8">
+$(document).ready(function() {
+
+  mode="{{task['mode']}}";
+
+  // Preferred resolution
+  var pref_resolution = '{{pref_resolution}}';
+  $('#resolution_select').val(pref_resolution);
+
+  // AJAX url templates
+  var url_spc="{{url_for('slide.task_specimen_listing', task_id=task_id)}}";
+  var url_blk="{{url_for('slide.specimen_block_listing', task_id=task_id, specimen=999999)}}";
+  var url_sld="{{url_for('slide.block_slide_listing', task_id=task_id, specimen=999999, block_name='YYYY')}}";
+  var url_tmb="{{url_for('slide.thumb', id=999999)}}";
+  var url_slide="{{url_for('slide.slide_view', task_id=task_id, slide_id=999999, affine_mode=pref_affine_mode, resolution='XXXXXX')}}";
+  var url_self="{{url_for('slide.block_detail_by_id', task_id=task_id, specimen=999999, block_name='YYYY')}}";
+  var url_set_resolution_pref="{{url_for('slide.task_set_resolution_preference', task_id=task_id, resolution='XXXXXX')}}";
+
+  // Thumbnail render function
+  var fn_render_thumb = function(data, type, row) {
+    var url = url_tmb.replace('999999',data);
+    return '<div class="spanner"><img class="zoom" src="'+url+'" /></div>';
+  };
+
+  // Render functions with URLs
+  var fn_annot_link = function(data, type, row) {
+    var url = url_slide.replace('999999',data).replace('XXXXXX', pref_resolution);
+    return '<a class="action" href="'+url+'">Annotate</a>';
+  };
+
+  var fn_dltrain_link = function(data, type, row) {
+    var url = url_slide.replace('999999',data).replace('XXXXXX', pref_resolution);
+    return '<a class="action" href="'+url+'">Train</a>';
+  };
+
+  var fn_sroi_link = function(data, type, row) {
+    var url = url_slide.replace('999999',data).replace('XXXXXX', pref_resolution);
+    return '<a class="action" href="'+url+'">Sample</a>';
+  };
+
+  var fn_browse_link = function(data, type, row) {
+    var url = url_slide.replace('999999',data).replace('XXXXXX', pref_resolution);
+    return '<a class="action" href="'+url+'">View</a>';
+  };
+
+  // Column descriptions for different tables
+  col_desc = [ 
+    { data: "specimen_display" }, 
+    { data: "nblocks" }, 
+    { data: "nslides" },
+  ];
+
+  blk_col_desc = [ 
+    { data: "block_name" }, 
+    { data: "nslides" } 
+  ];
+
+  sld_col_desc = [
+    { data: "id", render: fn_render_thumb },
+    { data: "section" },
+    { data: "slide" },
+    { data: "stain" }
+  ];
+
+  if(mode === 'annot') {
+    col_desc.push({ data: "nannot"});
+    blk_col_desc.push({ data: "nannot"});
+    sld_col_desc.push({ data: "n_annot"});
+    sld_col_desc.push({ data: "id", render: fn_annot_link});
+  }
+  else if(mode === 'dltrain') {
+    col_desc.push({ data: "nsamples"});
+    blk_col_desc.push({ data: "nsamples"});
+    sld_col_desc.push({ data: "n_samples"});
+    sld_col_desc.push({ data: "id", render: fn_dltrain_link});
+  }
+  else if(mode === 'sampling') {
+    col_desc.push({ data: "nsamples"});
+    blk_col_desc.push({ data: "nsamples"});
+    sld_col_desc.push({ data: "n_samples"});
+    sld_col_desc.push({ data: "id", render: fn_sroi_link});
+  }
+  else {
+    sld_col_desc.push({ data: "id", render: fn_browse_link});
+  }
+
+  col_desc.push({ data: "specimen", visible: false, searchable: false });
+
+
+  t_specimen = $('#specimen').DataTable( {
+    "ajax": function(data, callback, settings) {
+      $.ajax({
+        url: url_spc,
+        success: function(resp_text) {
+          callback({data: JSON.parse(resp_text)});
+          if(request_spc) {
+            fn_select_row(t_specimen, col_desc.length-1, request_spc);
+            request_spc=null;
+          }
+        }
+      });
+    },
+    columns: col_desc,
+    paging: false,
+    scrollY: "600px",
+    scrollCollapse: true,
+    info: false,
+    select: 'single'
+  } );
+
+  t_block = $('#block').DataTable( {
+    "ajax": function(data, callback, settings) {
+      if(selected_spc) {
+        $.ajax({
+          url: url_blk.replace('999999',selected_spc),
+          success: function(resp_text) {
+            callback({data: JSON.parse(resp_text)});
+            if(request_blk) {
+              fn_select_row(t_block, 0, request_blk);
+              request_blk=null;
+            }
+          }
+        });
+      }
+    },
+    columns: blk_col_desc,
+    paging: false,
+    scrollY: "600px",
+    scrollCollapse: true,
+    info: false,
+    select: 'single'
+  } );
+
+  var selected_spc = null;
+  var selected_blk = null;
+
+  var py2js = function(str) { return str==="None" ? null : str; }
+  var py2int = function(str) { return str==="None" ? null : parseInt(str); }
+  var request_spc=py2int("{{specimen}}");
+  var request_blk=py2js("{{block_name}}");
+
+  var fn_select_row = function(table, col, value) {
+    var indexes = table.rows().eq( 0 ).filter( function (rowIdx) {
+          return table.cell( rowIdx, col ).data() === value;
+    } );
+    if(indexes.length === 1) {
+      table.row(indexes[0]).select();
+    }
+  };
+
+  t_slide = $('#slide').DataTable( {
+    "ajax": function(data, callback, settings) {
+      if(selected_spc && selected_blk) {
+        $.ajax({
+          url: url_sld.replace('999999',selected_spc).replace('YYYY',selected_blk),
+          success: function(resp_text) {
+            callback({data: JSON.parse(resp_text)});
+          }
+        });
+      }
+    },
+    columns: sld_col_desc,
+    paging: false,
+    scrollY: "600px",
+    scrollCollapse: true,
+    info: false
+  } );
+
+  t_specimen.on('select', function(e,dt,type,indexes) {
+    if(type==='row') {
+      // Set the target url
+      selected_spc = t_specimen.rows(indexes).data().pluck('specimen')[0];
+      selected_spc_name = t_specimen.rows(indexes).data().pluck('specimen_display')[0];
+      t_block.ajax.reload();
+      $('#span_specimen_display').text(" : " + selected_spc_name);
+      $('#span_block_name').text("");
+      $('#d_blocks').css('display','block');
+
+      selected_blk = null;
+      $('#d_slides').css('display','none');
+    }
+  });
+
+  t_specimen.on('deselect', function(e,dt,type,indexes) {
+    selected_spc = null;
+    $('#span_specimen_display').text("");
+    $('#d_blocks').css('display','none');
+  })
+
+  t_block.on('select', function(e,dt,type,indexes) {
+    if(type==='row') {
+
+      selected_blk=t_block.rows(indexes).data().pluck('block_name')[0];
+      t_slide.ajax.reload();
+      $('#span_block_name').text(" : " + selected_blk);
+      $('#d_slides').css('display','block');
+      var new_url=url_self.replace('999999', selected_spc).replace('YYYY', selected_blk);
+      history.pushState({urlPath:new_url},selected_spc+":"+selected_blk,new_url);
+    }
+  });
+
+  t_block.on('deselect', function(e,dt,type,indexes) {
+    selected_blk = null;
+    $('#span_block_name').text("");
+    $('#d_slides').css('display','none');
+  });
+
+  // Handle preferred resolution by modifying all the URLs in the rightmost table
+  $("#resolution_select").change(function() {
+    pref_resolution = $("#resolution_select").val();
+    t_slide.rows().invalidate().draw();
+    $.ajax({ url: url_set_resolution_pref.replace('XXXXXX', pref_resolution) });
+  });
+
+
+} );
+
+</script>
+
+{% endblock %}

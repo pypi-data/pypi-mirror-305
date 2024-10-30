@@ -1,0 +1,319 @@
+{% extends 'base.html' %}
+
+{% set itemname = 'Sample' if task['mode'] == 'dltrain' else 'Sampling ROI' %}
+
+{% block title %}
+{{itemname}} Listing - {{task['name']}}
+{% endblock %}
+
+{% block content %}
+
+<style>
+.zoom {
+  transition: transform .2s; /* Animation */
+  max-width: 200px;
+  height: 75px;
+}
+
+.zoom:hover {
+  transform: scale(2.56) translate(5pt,0pt); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  position: absolute;
+}
+
+.spanner {
+  height: 75px;
+}
+</style>
+
+
+<a href="{{ url_for('slide.index')}}">Home</a> : 
+<a href="{{ url_for('slide.project_detail', project=project)}}">{{project_name}}</a> :
+{{task['name']}}
+<span id="span_specimen_display"></span>
+<span id="span_block_name"></span>
+
+<div class="pure-g">
+  <div class="pure-u-1 pure-u-md-19-24">
+    <h3 align="center">TASK {{task_id}} {{itemname.upper()}} LISTING</h3>
+    <table id="samples" class="compact stripe hover" style="width:100%">
+      <thead>
+        <tr>
+          <th>RandomOrder</th>
+          <th>Id</th>
+          <th>Specimen</th>
+          <th>Block</th>
+          <th>Stain</th>
+          <th>Section</th>
+          <th>Slice</th>
+          <th>Label</th>
+          <th>Creator</th>
+          <th>CreateDate</th>
+          <th>Editor</th>
+          <th>EditDate</th>
+          <!--
+          {% if task['mode'] == 'annot' %}
+            <th>#Ann</th>
+          {% elif task['mode'] == 'dltrain' %}
+            <th>#Sam</th>
+          {% endif %}
+          -->
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <div class="pure-u-1 pure-u-md-1-24">
+  </div>
+  <div class="pure-u-1 pure-u-md-4-24" style="display:none;" id="thumb_panel">
+    <h3 align="center">SELECTED {{itemname.upper()}}</h3>
+    <div id="thumb_div" width="100%">
+        <canvas id="thumb_canvas" style="width:100%; max-width:512;"></canvas>
+    </div>
+    <div id="thumb_ctl" width="100%">
+      <label for="zoom_slider">Zoom factor:</label>
+      <input type="range" min="0" max="3" value="0" class="slider" id="zoom_slider">
+    </div>
+    <div style="margin-top: 1em; text-align: center;">
+      <form id="form_edit_sample" action="" target="_blank" method="post" class="pure-form">
+        <input id="input_sample_id" name="sample_id" type="hidden">
+        <input id="input_sample_cx" name="sample_cx" type="hidden">
+        <input id="input_sample_cy" name="sample_cy" type="hidden">
+        <button type="submit" class="pure-button pure-button-primary">Edit {{itemname}}</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- DataTable support -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.6.0/css/select.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.4/css/buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/keytable/2.8.1/css/keyTable.dataTables.min.css">
+
+<script type="text/javascript" src="{{ url_for('static', filename='jquery-3.6.4.min.js') }}"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.6.0/js/dataTables.select.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.3.4/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/keytable/2.8.1/js/dataTables.keyTable.min.js"></script>
+
+<script type="text/javascript" charset="utf8">
+$(document).ready(function() {
+
+  mode="{{task['mode']}}";
+
+  // AJAX url templates
+  var url_sample;
+  var url_tmb;
+  if(mode == "dltrain") {
+    url_sample="{{url_for('dltrain.task_sample_listing', task_id=task_id)}}";
+    url_tmb="{{url_for('dltrain.get_sample_png', id=999999)}}";
+  }
+  else if(mode == "sampling") {
+    url_sample="{{url_for('dltrain.task_sampling_roi_listing', task_id=task_id)}}";
+    url_tmb="{{url_for('dltrain.make_thumbnail_for_sampling_roi', sroi_id=999999, task_id=task_id)}}";
+  }
+
+  var url_sample_link="{{url_for('slide.slide_view', task_id=task_id, slide_id=999999, affine_mode='raw', resolution='raw')}}";
+  // var url_ann="{{url_for('slide.slide_view', task_id=task_id, slide_id=999999, affine_mode='affine', resolution='x16')}}";
+  // var url_dlt="{{url_for('slide.slide_view', task_id=task_id, slide_id=999999, affine_mode='raw', resolution='raw')}}";
+
+  // Random key for ordering the table
+  var random_key = Math.floor(Math.random() * 1000000);
+
+  // Thumbnail render function
+  var fn_render_thumb = function(data, type, row) {
+    var url = url_tmb.replace('999999',data);
+    return '<div class="spanner"><img class="zoom" src="'+url+'" /></div>';
+  };
+
+  // Render functions with URLs
+  var fn_render_id_link = function(data, type, row) {
+    var slide_id = row['slide_id'];
+    var sample_id = row['id']
+    var url = url_sample_link.replace('999999',slide_id);
+    var cx = 0.5 * (parseFloat(row['x0']) + parseFloat(row['x1']));
+    var cy = 0.5 * (parseFloat(row['y0']) + parseFloat(row['y1']));
+    html = $('<a class="action" href="'+url+'">'+sample_id+'</a>');
+    /*
+    html = html.click(function(e) {
+      $('<form>').attr('method','post').attr('action',url).append(
+                        $('<input type="hidden" name="sample_id">').attr("value", sample_id),
+                        $('<input type="hidden" name="sample_cx">').attr("value", cx),
+                        $('<input type="hidden" name="sample_cy">').attr("value", cy)).appendTo('body').submit()
+      });
+      */
+    return html.html();
+  };
+
+  // Function to render a date
+  var fn_render_date = function(data, type, row) {
+    return data.split(" ")[0];
+  }
+
+  // Column descriptions for different tables
+  sample_col_desc = [
+    { data: "random_index", visible: false},
+    { data: "id" },
+    { data: "specimen_name" },
+    { data: "block_name" },
+    { data: "stain" },
+    { data: "section" },
+    { data: "slide" },
+    { data: "label_name"},
+    { data: "creator" },
+    { data: "dt_create", render: fn_render_date },
+    { data: "editor" },
+    { data: "dt_edit", render: fn_render_date  },
+    { data: "slide_id", visible: false },
+    { data: "x0", visible: false },
+    { data: "y0", visible: false },
+    { data: "x1", visible: false },
+    { data: "y1", visible: false }
+  ];
+
+  var py2js = function(str) { return str==="None" ? null : str; }
+  var py2int = function(str) { return str==="None" ? null : parseInt(str); }
+
+  var fn_select_row = function(table, col, value) {
+    var indexes = table.rows().eq( 0 ).filter( function (rowIdx) {
+          return table.cell( rowIdx, col ).data() === value;
+    } );
+    if(indexes.length === 1) {
+      table.row(indexes[0]).select();
+    }
+  };
+
+  let t_sample_opts = {
+    serverSide: true,
+    ajax: { 
+        url: url_sample, 
+        contentType: "application/json",
+        type: "POST",
+        data: function(d) { d.random_key = random_key; return JSON.stringify(d); }
+        // data: function ( d ) { return JSON.stringify( d ); } 
+    },
+    columns: sample_col_desc,
+    ordering: true,
+    select: 'single',
+    stateSave: true,
+    dom: 'lBfrtip',
+    buttons: [ {
+      text: 'randomize',
+      action: function ( e, dt, node, config ) {
+        dt.order([[0, 'desc']]);
+        dt.ajax.reload();
+        random_key = Math.floor(Math.random() * 1000000);
+        // t_sample_opts.ordering = !t_sample_opts.ordering;
+        // t_samples.destroy();
+        // t_samples = $('#samples').DataTable(t_sample_opts);
+      }
+    }],
+    keys: {
+      keys: [ 13 /* ENTER */, 38 /* UP */, 40 /* DOWN */ ]
+    }
+  };
+
+  // Create table
+  let t_samples = $('#samples').DataTable(t_sample_opts);
+
+  // Initially order the table in reverse edit order
+  t_samples.order([[11, 'desc']]);
+
+  /*
+  
+  */
+
+  let fn_update_thumb = function(indexes) {
+    let sel_rows = (indexes != null) ? t_samples.rows(indexes) : t_samples.rows({selected: true});
+    if(sel_rows.count() > 0)
+    {
+      // Set the target url
+      let selected_id = sel_rows.data().pluck('id')[0];
+      let x0 = parseInt(sel_rows.data().pluck('x0')[0]);
+      let y0 = parseInt(sel_rows.data().pluck('y0')[0]);
+      let x1 = parseInt(sel_rows.data().pluck('x1')[0]);
+      let y1 = parseInt(sel_rows.data().pluck('y1')[0]);
+      let box_w = x1 - x0;
+      let box_h = y1 - y0;
+      let canvas = $('#thumb_canvas')[0];
+      let ctx = canvas.getContext('2d');
+      let zoom_value = 1 << parseInt($('#zoom_slider').val())
+
+      let img = new Image();
+      img.onload = () => {
+        let iw = img.width;
+        let ih = img.height;
+        canvas.width  = iw;
+        canvas.height = ih;
+        let sw = iw / zoom_value;
+        let sh = ih / zoom_value;
+        let bw = box_w * zoom_value;
+        let bh = box_h * zoom_value;
+        ctx.drawImage(img, (iw - sw)/2, (ih - sh)/2, sw, sh, 0, 0, iw, ih);
+        ctx.beginPath();
+        ctx.lineWidth = "2";
+        ctx.strokeStyle = "red";
+        ctx.rect(canvas.width/2-bw/2, canvas.height/2-bh/2, bw, bh);  
+        ctx.stroke();
+      }
+      img.src = url_tmb.replace('999999', selected_id);
+      $('#thumb_panel').css('display','block');
+
+      var slide_id = sel_rows.data().pluck('slide_id')[0];
+      var cx = 0.5 * (x0+x1);
+      var cy = 0.5 * (y0+y1);
+      $('#form_edit_sample').attr('action', url_sample_link.replace('999999',slide_id));
+      $('#input_sample_cx').attr('value', cx);
+      $('#input_sample_cy').attr('value', cy);
+      $('#input_sample_id').attr('value', selected_id);
+    }
+    else
+    {
+      let canvas = $('#thumb_canvas')[0];
+      let ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      $('#thumb_panel').css('display','none');
+    }
+  }
+
+  t_samples.on('select', function(e,dt,type,indexes) {
+    if(type==='row') {
+      fn_update_thumb(indexes);
+    }
+  });
+
+  t_samples.on('deselect', function(e,dt,type,indexes) {
+    if(type==='row') {
+      fn_update_thumb();
+    }
+  });
+
+    // Handle keyboard navigation
+  // Handle event when cell gains focus
+  $('#samples').on('key-focus.dt', function(e, datatable, cell, orig_event){
+      // Select highlighted row
+      if(orig_event.type == 'keydown') {
+        t_samples.row(cell.index().row).select();
+        return true;
+      }
+  });
+
+  // Handle event when cell looses focus
+  /*
+  $('#samples').on('key-blur.dt', function(e, datatable, cell, orig_event){
+      // Deselect highlighted row
+      // t_samples.row(cell.index().row).deselect();
+      //return true;
+  });
+  */
+
+
+
+  $('#zoom_slider').change(function() { fn_update_thumb(null) });
+
+} );
+</script>
+
+{% endblock %}

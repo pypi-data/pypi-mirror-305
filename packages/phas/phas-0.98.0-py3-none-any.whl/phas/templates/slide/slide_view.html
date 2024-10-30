@@ -1,0 +1,3134 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block title %}
+{{slide_info['specimen_display']}} {{slide_info['block_name']}} {{slide_info['section']}} {{slide_info['slide']}} {{slide_info['stain']}} - {{task['name']}}
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='jquery-ui/jquery-ui.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='DataTables/datatables.min.css') }}"/>
+<script type="text/javascript" src="{{ url_for('static', filename='openseadragon-bin-2.4.0/openseadragon.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='jquery-3.6.4.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='jquery-ui/jquery-ui.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='openseadragon-scalebar.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='openseadragon-paperjs-overlay.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='openseadragon-filtering.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='mousetrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='paper-full.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js.cookie.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='colormaps.js') }}"></script>
+<script type="text/javascript" charset="utf8" src="{{ url_for('static', filename='DataTables/datatables.min.js') }}"></script>
+
+
+{% if seg_mode == 'dltrain' %}
+  {% include 'dbtrain/label_table_bare.html' %}
+  {% include 'dbtrain/sample_table_bare.html' %}
+{% endif %}
+
+{% if seg_mode == 'sampling' %}
+  {% include 'dbtrain/label_table_bare.html' %}
+{% endif %}
+
+<style type="text/css">
+
+    html {
+        overflow: hidden;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    div#view {
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background-color: white;
+        color: black;
+    }
+
+    button.bottom_button {
+        border-radius: 3px;
+        margin: 0 5px 5px 5px;
+        padding: 2px 0 2px 0;
+        cursor: pointer;
+    }
+
+    button.enabled {
+        border: 2px solid blue;
+        color: blue;
+    }
+
+    button.active, button.enabled:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    button.disabled, button.disabled:hover {
+        color: lightgray;
+        border: 2px solid lightgray;
+    }
+
+    input.button_link {
+        background: #e0e0e0;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 80%;
+        color: #909090;
+        border: lightgray 1px solid;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: text-bottom;
+        display: inline;
+    }
+
+    input.button_link:disabled {
+        color: #c0c0c0;
+    }
+
+    button.button_link:hover {
+        filter: brightness(90%);
+    }
+
+    /* The dropdown container */
+    .display-opts-dropdown {
+      /* float: left; */
+      /* overflow: hidden; */
+    }
+
+    /* Dropdown button */
+    .display-opts-dropdown .dropbtn {
+      border: none;
+      outline: none;
+      background-color: inherit;
+      font: inherit; /* Important for vertical align on mobile phones */
+    }
+
+    /* Add a red background color to navbar links on hover */
+    .display-opts-dropdown:hover .dropbtn {
+        background-color: #e8e8e8;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .display-opts-dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      width: min(500px, 80%);
+      /* padding-right: 20px; */
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      background-color: #e8e8e8;
+    }
+
+    .display-opts-dropdown-content h4 {
+        /* margin: 0px; */
+        text-align: left; 
+        border-bottom: 1px solid lightgray; 
+        margin-bottom: 5px;
+        line-height: 0.85em;
+    }
+
+    /* Show the dropdown menu on hover */
+    .display-opts-dropdown:hover .display-opts-dropdown-content {
+      display: block;
+    }
+
+    /* Class to hide a panel */
+    .display-opts-hidden-content {
+        display: none;
+        padding-bottom: 2em;
+    }
+
+    .display-opts-visible-content {
+        display: block;
+        padding-bottom: 2em;
+    }
+
+    /* Class for slider handles */
+    .slider-custom-handle {
+        width: 3em !important;
+        height: 1.6em !important;
+        top: 50% !important;
+        margin-top: -.8em !important;
+        text-align: center !important;
+        line-height: 1.6em !important;
+    }
+
+    /* Class for left-side labels */
+
+    .display-opts-row {
+        width: 100%;
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
+    }
+
+    .display-opts-row:last-child {
+        padding-bottom: 1.2em;
+    }
+
+    .display-opts-row:first-child {
+        padding-top: 1.2em;
+    }
+    
+    .display-opts-dropdown-content label {
+        font-weight: bold;
+        padding-right: 1em;
+    }
+
+    .display-opts-dropdown-content select {
+        width: 100%;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    .display-opts-dropdown-content input {
+        width: 100%;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    
+
+    /*
+    .display-opts-left-label {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        vertical-align: middle;
+        text-align: right;
+        font-weight: bold;
+        padding-right: 1em;
+        height: 1.6em;
+    } */
+
+    .display-opts-right-container {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        vertical-align: middle;
+        height: 1.6em;
+    }
+
+    .display-opts-right-slider {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+</style>
+
+<!-- The main div. In browse/annot modes it spans the whole window, in dltrain, only 4/5 of the window -->
+<div class="pure-g">
+    {% if seg_mode == 'annot' or seg_mode == 'browse' %}
+    <div class="pure-u-5-5">
+    {% elif seg_mode == 'dltrain' or seg_mode == 'sampling' %}
+    <div class="pure-u-4-5">
+    {% endif %}
+
+        <div><table style="width:100%; position: relative;"><tr>
+            <td>
+                <a href="{{ url_for('slide.index')}}">Home</a> :
+                <a href="{{ url_for('slide.project_detail', project=project)}}">{{project_name}}</a> :
+                <a href="{{ url_for('slide.task_detail', task_id = task_id)}}">{{task['name']}}</a> :
+                <a href="{{ url_for('slide.specimen_detail_by_id', task_id = task_id, specimen=slide_info['specimen']) }}">{{ slide_info['specimen_display'] }}</a> :
+                <a href="{{ url_for('slide.block_detail_by_id', task_id = task_id, specimen=slide_info['specimen'], block_name=slide_info['block_name']) }}">{{ slide_info['block_name'] }}</a>
+                --- {{sample_id}}
+            </td>
+            <td style="text-align: center; white-space: nowrap;">
+                <form style="display:inline;" id="form-prev"
+                      action="{{url_for('slide.slide_view', task_id=task_id, slide_id=prev_slide['id'] if prev_slide != None else slide_id, affine_mode=affine_mode, resolution=resolution)}}" action="get">
+                    <input class="button_link" id="prev_slide_button" type="submit" value="❮" />
+                </form>
+                <span style="color:black;">Section {{ slide_info['section'] }}</span>
+                <form style="display:inline;" id="form-next"
+                      action="{{url_for('slide.slide_view', task_id=task_id, slide_id=next_slide['id'] if next_slide != None else slide_id, affine_mode=affine_mode,resolution=resolution)}}" action="get">
+                    <input class="button_link" id="next_slide_button" type="submit" value="❯" />
+                </form>
+            </td>
+            <td style="text-align: right">
+                <form id="form_stain" target="#" style="display: inline; white-space: nowrap;">
+                    <label for="form_stain_select">Stain:</label>
+                    <select id="form_stain_select" style="font-size: 80%; color: black;">
+                        {% for s in stain_list %}
+                        <option value="{{s['id']}}">{{s['stain']}}</option>
+                        {% endfor %}
+                    </select>
+                </form>
+                <span class="display-opts-dropdown">
+                    <button class="dropbtn">Display <i class="fa fa-caret-down"></i></button>
+                    <div class="display-opts-dropdown-content" style="font-size: 75%;">
+                        <div id="display-opts-dropdown-tabs">
+                            <ul>
+                                <li><a href="#tabs-opts">Display Options</a></li>
+                                <li><a href="#tabs-overlay">Overlays</a></li>
+                                <li id="display-opts-tab-label"><a href="#tabs-label">Label</a></li>
+                                <li id="display-opts-tab-macro"><a href="#tabs-macro">Macro</a></li>
+                                <li><a href="#tabs-header">Header</a></li>
+                            </ul>
+                            <div id="tabs-opts">
+                                <!-- Main image contrast properties -->
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-md-1-1"> 
+                                        <h4>Contrast Adjustment</h4>
+                                    </div> 
+                                    <div class="pure-u-1 pure-u-md-1-2"> <label> Level: </label> </div>
+                                    <div class="pure-u-1 pure-u-md-1-2"> 
+                                        <div id="primary_level" class="display-opts-right-slider"></div>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-2"> <label> Window: </label> </div>
+                                    <div class="pure-u-1 pure-u-md-1-2"> 
+                                        <div id="primary_window" class="display-opts-right-slider"></div>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-1"> 
+                                        <h4>Slide Display Options</h4>
+                                    </div> 
+                                    <div class="pure-u-1 pure-u-md-1-2"> <label> Rotation: </label> </div>
+                                    <div class="pure-u-1 pure-u-md-1-2"> 
+                                        <div id="slide_rotation" class="display-opts-right-slider"></div>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-2"> <label> Zoom: </label> </div>
+                                    <div class="pure-u-1 pure-u-md-1-2 pure-form"> 
+                                        <input id="slide_zoom" step="0.001" type="number">
+                                    </div>
+
+                                    <!-- affine or raw mode -->
+                                    {% if seg_mode != 'dltrain' %}
+                                    <form id="form_server_disp_opt" target="#"></form>
+                                    <div class="pure-u-1 pure-u-md-1-2"> <label> Spatial Transform: </label> </div>
+                                    <div class="pure-u-1 pure-u-md-1-2 pure-form"> 
+                                        <select id="form_mode_select" class="pure-input-1-1" required>
+                                            {% if have_affine  %}
+                                            <option value="affine">Aligned to MRI</option>
+                                            {% endif %}
+                                            <option value="raw">Native Space</option>
+                                        </select>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-2"> <label> Slide resolution: </label> </div>
+                                    <div class="pure-u-1 pure-u-md-1-2 pure-form"> 
+                                        <select id="form_res_select" class="pure-input-1-1" required>
+                                            {% if have_x16  %}
+                                            <option value="x16">1:16</option>
+                                            {% endif %}
+                                            <option value="raw">1:1</option>
+                                        </select>
+                                    </div>
+                                    {% endif %}
+                                    <!-- </form> -->
+
+                                    <div class="pure-u-1 pure-u-md-1-1"> 
+                                        <h4>Slide Information</h4>
+                                    </div> 
+                                    <div class="pure-u-1 pure-u-md-1-2"> <label>Slide dimensions (pixels):</label> </div>
+                                    <div class="pure-u-1 pure-u-md-1-2"> 
+                                        <input id="form_info_dims" class="pure-input-1-1" value="{{dims_str}}" readonly>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-2"> <label>Pixel spacing (µm):</label> </div>
+                                    <div class="pure-u-1 pure-u-md-1-2"> 
+                                        <input id="form_info_spacing" class="pure-input-1-1" value="{{spacing_str}}" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tabs-overlay">
+
+                                <!-- Overlay options -->
+                                <div class="pure-g">
+                                    {% if seg_mode != 'dltrain' and seg_mode != 'sampling' %}
+                                    <div class="pure-u-1 pure-u-md-1-2"> <label> Slide overlay: </label> </div>
+                                    <div class="pure-u-1 pure-u-md-1-2 pure-form"> 
+                                        <select id="form_overlay_select" class="pure-input-1-1" required>
+                                            <option value="none">None</option>
+                                        </select>
+                                    </div>
+                                    <div id="div_overlay_options" class="display-opts-hidden-content">
+                                        <div class="pure-u-1 pure-u-md-1-1"> 
+                                            <h4>Overlay Properties</h4>
+                                        </div> 
+                                        <div class="pure-u-1 pure-u-md-1-2"> <label>Overlay Opacity:</label> </div>
+                                        <div class="pure-u-1 pure-u-md-1-2"> 
+                                            <div id="overlay_opacity_slider" class="display-opts-right-slider"></div>
+                                        </div>
+                                        <div class="pure-u-1 pure-u-md-1-2"> <label>Overlay Level:</label> </div>
+                                        <div class="pure-u-1 pure-u-md-1-2"> 
+                                            <div id="overlay_level" class="display-opts-right-slider"></div>
+                                        </div>
+                                        <div class="pure-u-1 pure-u-md-1-2"> <label>Overlay Window:</label> </div>
+                                        <div class="pure-u-1 pure-u-md-1-2"> 
+                                            <div id="overlay_window" class="display-opts-right-slider"></div>
+                                        </div>
+                                        <div class="pure-u-1 pure-u-md-1-2"> <label>Overlay Ramp:</label> </div>
+                                        <div class="pure-u-1 pure-u-md-1-2"> 
+                                            <div id="overlay_opacity_ramp" class="display-opts-right-slider"></div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+
+                                    <!-- Annotation overlay dropdown -->
+                                    <div class="pure-u-1 pure-u-md-1-2"> <label> Annotation overlay: </label> </div>
+                                    <div class="pure-u-1 pure-u-md-1-2 pure-form"> 
+                                        <select id="form_overlay_annot_select" class="pure-input-1-1" required>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="tabs-label">
+                                <div class="pure-u-1 pure-u-md-1-1"> 
+                                    <img id="slide_label" alt="Slide label image" style="display: block; margin-left: auto; margin-right: auto; max-width:100%; max-height:100%;">
+                                </div> 
+                            </div>
+                            <div id="tabs-macro">
+                                <div class="pure-u-1 pure-u-md-1-1"> 
+                                    <img id="slide_macro" alt="Slide macro image" style="display: block; margin-left: auto; margin-right: auto; max-width:100%; max-height:100%;">
+                                </div> 
+                            </div>
+                            <div id="tabs-header">
+                                <div class="pure-u-1 pure-u-md-1-1"> 
+                                    <table id="slide_header" class="compact stripe hover" style="width:100%">
+                                        <thead>
+                                          <tr>
+                                            <th>Property</th>
+                                            <th>Value</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                      </table>                                
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div align="center" style="padding:5px; margin-top: 20px;">
+                            <button id="button_download" class="pure-button">Download slide ...</button>
+                        </div>
+                        
+                    </div>
+                </span>
+            </td>
+        </tr></table></div>
+
+
+
+
+
+        <!-- The main slide view -->
+        <div id="view">
+            {% if seg_mode == 'annot' %}
+            <input id="marker" placeholder="Enter Text" style="display:none; position: absolute; left:0px; top:0px; width:100px; height:40px;"></input>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if seg_mode == 'dltrain' %}
+    <div class="pure-u-1-5">
+        <div id="div_dltrain_labels" style="padding-left: 1em">
+        </div>
+        <p></p>
+        <div id="div_dltrain_samples" style="padding-left: 1em;">
+        </div>
+    </div>
+    {% endif %}
+
+    {% if seg_mode == 'sampling' %}
+    <div class="pure-u-1-5">
+        <div id="div_dltrain_labels" style="padding-left: 1em">
+        </div>
+    </div>
+    {% endif %}
+
+
+</div>
+
+<!-- A dialog showing slide loading progress -->
+<div id="progress_dialog_container" title="Downloading Slide from Cloud Storage">
+    Download progress: <div id="progress_bar"></div>
+    <div id="progress_comment" style="font-size:80%; color:red;" ></div>
+</div>
+
+<!-- A dialog showing keyboard help -->
+<div id="help_dialog_container" title="Keyboard shortcuts" class="pure-table">
+    <table>
+        <tbody>
+        <tr><td>a</td><td>Pan view left</td></tr>
+        <tr><td>d</td><td>Pan view right</td></tr>
+        <tr><td>w</td><td>Pan view up</td></tr>
+        <tr><td>s</td><td>Pan view down</td></tr>
+        <tr><td>&lt;</td><td>Go to previous section</td></tr>
+        <tr><td>&gt;</td><td>Go to next section</td></tr>
+        <tr><td>D</td><td>Download current slide</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- A slide download dialog -->
+<div id="dl_dialog_container" title="Download Slide">
+    <div >
+        <form id="dl_dialog_form" target="#" class="pure-form pure-form-aligned">
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="dl_dialog_raw">Image to download:</label>
+                    <select id="dl_dialog_raw" class="pure-input-1-2" required>
+                        <option value="tiff">Downsampled .tiff</option>
+                        <option value="nii">Downsampled .nii.gz</option>
+                        <option value="fullres">Full-resolution .{{slide_ext}}</option>
+                        <option value="label">Label image</option>
+                        <option value="macro">Macro image</option>
+                    </select>
+                </div>
+                <div class="pure-control-group">
+                    <label for="dl_dialog_width">Size (in pixels):</label>
+                    <input id="dl_dialog_width" name="dl_dialog_width" class="pure-input-1-2" value=1000>
+                </div>
+                <div class="pure-controls">
+                    <input type="submit" id="dl_dialog_submit" value="Download" class="pure-button pure-button-primary">
+                </div>
+            </fieldset>
+        <!--
+            <div>
+            <input type="radio" id="dl_dialog_cb_raw" name="dl_dialog_radio" value=0>
+            <label for="dl_dialog_cb_raw"> Download raw image</label><br>
+            <input type="radio" id="dl_dialog_cb_downsample" name="dl_dialog_radio" value=1 checked> 
+            <label for="dl_dialog_cb_downsample"> Download downsampled image</label>
+            </div>
+            <div>
+            <label for="dl_dialog_width"> Downsample size (in pixels):</label><br>
+            <input type="number" id="dl_dialog_width" name="dl_dialog_width" value=1000>
+            </div>
+            <input type="button" id="dl_dialog_submit" value="Download">
+        -->
+        </form>
+    </div>
+</div>
+
+<button id="nav_button" class="bottom_button enabled active">&nbsp Zoom and Pan (Z) &nbsp</button>
+
+{% if seg_mode == 'annot' %}
+<button id="draw_button" class="bottom_button enabled">&nbsp Draw Lines (L) &nbsp</button>
+<button id="marker_button" class="bottom_button enabled">&nbsp Place Marker (M) &nbsp</button>
+{% elif seg_mode == 'dltrain' %}
+<button id="box_button" class="bottom_button enabled">&nbsp Place Box (B) &nbsp</button>
+{% elif seg_mode == 'sampling' %}
+<button id="trap_button" class="bottom_button enabled">&nbsp Draw Trapezoid (T) &nbsp</button>
+<button id="poly_button" class="bottom_button enabled">&nbsp Draw Polygon (P) &nbsp</button>
+{% endif %}
+
+{% if seg_mode == 'dltrain' or seg_mode == 'annot' or seg_mode == 'sampling' %}
+<button id="del_button" class="bottom_button disabled">&nbsp Delete (Del) &nbsp</button>
+{% endif %}
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+    // Segmentation/interaction mode
+    const task_id = parseInt('{{task_id}}');
+    const seg_mode='{{seg_mode}}';
+
+    // Mode-specific properties
+    let fixed_box_size = 0;
+    if (seg_mode === 'dltrain') {
+        fixed_box_size = parseInt("{{ fixed_box_size if fixed_box_size != None else 0 }}");
+    }
+
+    // Load the initial rotation and flip
+    const user_prefs = {{user_prefs|tojson}};
+    const init_rotation = user_prefs.rotation || 0;
+    const init_flip = user_prefs.flip || false;
+    const overlays = {{overlays|tojson}};
+    const other_tasks_dict = {{other_tasks|tojson}};
+
+    // Common URLs
+    url_dl_annot = "{{ url_for('slide.get_annot_json', task_id = '999999', slide_id = slide_id, mode = affine_mode, resolution=resolution) }}";
+
+
+    // Initialize the viewer
+    var viewer = new OpenSeadragon({
+        id: "view",
+        prefixUrl: "{{ url_for('static', filename='openseadragon-bin-2.4.0/images/') }}",
+        showNavigator: true,
+        showRotationControl: true,
+        showFlipControl: true,
+        showSequenceControl: true,
+        animationTime: 0.5,
+        blendTime: 0.1,
+        constrainDuringPan: false,
+        maxZoomPixelRatio: 2.0,
+        minPixelRatio: 1.0,
+        minZoomLevel: 1,
+        visibilityRatio: 0.25,
+        zoomPerScroll: Math.sqrt(2.0),
+        timeout: 120000,
+        degrees: init_rotation,
+        flipped: init_flip
+    });
+
+    viewer.addHandler("open", function() {
+        // To improve load times, ignore the lowest-resolution Deep Zoom
+        // levels.  This is a hack: we can't configure the minLevel via
+        // OpenSeadragon configuration options when the viewer is created
+        // from DZI XML.
+        viewer.source.minLevel = 8;
+    });
+
+    // This handler for rotate and zoom events stores them in a server-side cookie
+    // so that these preferences can be retained. The advantage for doing this on
+    // the server is that it will be consistent between browsers
+    let fn_update_user_pose = function () {
+        // These are the settings we want to send to the server
+        let data = {"rotation": viewer.viewport.getRotation(), "flip": viewer.viewport.getFlip()};
+
+        // Update the slider
+        fn_update_slider(slide_rotation_slider, viewer.viewport.getRotation());
+
+        // Make the ajax call
+        const url = "{{url_for('slide.set_slide_user_preferences', task_id = task_id, slide_id = slide_id)}}";
+        $.post(url, JSON.stringify(data));
+
+        // Also adjust the rotation of text items
+        adjust_paperjs_text_rotation();
+    };
+
+    // Add handlers for rotate and flip events
+    viewer.addHandler("rotate", fn_update_user_pose);
+    viewer.addHandler("flip", fn_update_user_pose);
+
+    // Get the current image zoom level
+    let get_image_zoomlevel = function() {
+        let viewportZoom = viewer.viewport.getZoom(true);
+        let image1 = viewer.world.getItemAt(0);
+        return image1.viewportToImageZoom(viewportZoom);
+    };
+
+    // Scaling function for strokes/fonts/etc
+    let zoom_paperjs_scaling_fn = function(raw_value, raw_accel, img_zoom) {
+        let adj_value = raw_value / img_zoom;
+        return Math.max(1, adj_value);
+    };
+
+    // Adjusts the scaling of the paper.js style elements (stroke width, etc.)
+    // to match the current zoom factors.
+    let adjust_paperjs_scaling = function(paperZoom) {
+
+        // Handle paths
+        let paths = paper.project.getItems({class: paper.Path});
+        for (let i = 0; i < paths.length; i++) {
+            if(paths[i].data.rawStrokeWidth) {
+                paths[i].strokeWidth = zoom_paperjs_scaling_fn(paths[i].data.rawStrokeWidth, 0, paperZoom);
+            }
+        }
+
+        // Handle markers
+        let markers = paper.project.getItems({class: paper.PointText});
+        for (let i = 0; i < markers.length; i++) {
+            markers[i].style.fontSize = get_width_in_canvas_units(10);
+            markers[i].style.leading = markers[i].style.fontSize * 1.2;
+        }
+
+        paper.view.draw();
+    };
+
+    // Adjust the rotation of paper.js text elements so that they look right no matter the rotation
+    let adjust_paperjs_text_rotation = function() {
+
+        let markers = paper.project.getItems({class: paper.PointText});
+        for (i = 0; i < markers.length; i++) {
+
+            // Unapply the view matrix
+            let p = markers[i].point;
+            markers[i].matrix.reset();
+            markers[i].matrix.rotate(-viewer.viewport.getRotation(), p);
+            if(viewer.viewport.getFlip())
+                markers[i].matrix.scale(-1, 1, p);
+            markers[i].matrix.translate(p);
+        }
+
+        paper.view.draw();
+    };
+
+    // Reset the rotation of paper.js text elements as if there is no viewport rotation or flip
+    let reset_paperjs_text_rotation = function() {
+        let markers = paper.project.getItems({class: paper.PointText});
+        for (i = 0; i < markers.length; i++) {
+
+            // Unapply the view matrix
+            let p = markers[i].point;
+            markers[i].matrix.reset();
+            markers[i].matrix.translate(p);
+        }
+    };
+
+
+    // Handle display zoom, adjusting the styling of displayed items
+    let last_zoom = -1;
+    viewer.addHandler("update-viewport", function() {
+        let viewportZoom = viewer.viewport.getZoom(true);
+        let imageZoom = get_image_zoomlevel();
+        // Update the zoom control
+        slide_zoom_input.val(Math.round(1000.0 / imageZoom) * 0.001);
+        
+        if(last_zoom !== viewportZoom) {
+            if(paper.project) {
+                adjust_paperjs_scaling(imageZoom)
+            }
+        }
+        last_zoom = viewportZoom;
+    });
+
+    // Set the strokewidth of a Path element
+    set_paperjs_item_strokewidth = function(item, strokeWidth) {
+        // Set the desired strokewidth
+        item.data.rawStrokeWidth = strokeWidth;
+        item.strokeWidth = zoom_paperjs_scaling_fn(strokeWidth, 0, get_image_zoomlevel());
+    };
+
+    var mpp = parseFloat("{{ spacing[0] }}");
+    console.log("MPP", mpp);
+    viewer.scalebar({
+        pixelsPerMeter: mpp ? (1e3 / mpp) : 0,
+	    location: OpenSeadragon.ScalebarLocation.BOTTOM_RIGHT,
+        xOffset: 10,
+        yOffset: 50,
+	    minWidth: "75px",
+        barThickness: 3,
+	    backgroundColor: "rgba(255, 255, 255, 0.2)",
+	    stayInsideImage: false});
+
+    // Something to do about overlapping timers
+    var timer_map = {};
+    var do_delay = function(fn, t_wait) {
+        if(timer_map[fn.name])
+            clearTimeout(timer_map[fn.name])
+        timer_map[fn.name] = setTimeout( () => { fn() }, t_wait);
+    };
+
+    // Initialization for paper_js
+    var overlay;
+    function init_paperjs() {
+        // This function will setup the paper.js project (calls paper.setup())
+        overlay = viewer.paperjsOverlay();
+
+        // Add extra layers to paper.js
+        let main_layer = paper.project.activeLayer;
+        let annot_overlay = new paper.Layer();
+        annot_overlay.name = 'annot_overlay';
+        annot_overlay.locked = true;
+        annot_overlay.opacity = 0.5;
+        paper.project.addLayer(annot_overlay);
+
+        main_layer.activate();
+
+        // Does some important calibration of canvas and paperjs
+        overlay.resize();
+        overlay.resizecanvas();
+
+        // Get the initial data
+        if (seg_mode === 'annot') {
+            download_annot();
+        }
+        else if (seg_mode === 'dltrain') {
+            sample_api.refresh_samples();
+
+            // If initial sample specified, focus on it
+            setTimeout(function() { focus_on_initial_sample() }, 250);
+        }
+        else if (seg_mode === 'sampling') {
+            // let f_refresh = function(f) { sroi_api.refresh_rois(f); }
+            // let f_refresh_del = function(f) { do_delay(f_refresh(f), 10000) } }
+            // f_refresh(function() { do_delay(f_refresh, 10000) });
+            // sroi_api.refresh_rois(function() {
+            //    setTimeout( () => { f_refresh(f_refresh) }, 10000);
+            //    // do_delay(sroi_api.refresh_rois, 10000) 
+            // });
+            sroi_api.refresh_rois();
+            setTimeout(function() { focus_on_initial_sampling_roi() }, 250);
+        }
+    }
+
+    // Paper default settings
+    paper.settings.handleSize = 10;
+
+    // Get a URL for
+    // Add the tiled image to the viewer and when successful, initialize the overlay
+    var init_viewer = function() {
+        viewer.addTiledImage({
+            tileSource: "{{url_tmpl_dzi}}".replace("XXXXX","{{resolution}}"),
+            x: 0,
+            y: 0,
+            success: init_paperjs,
+            error: function() { window.alert("Slide failed to load"); }
+        });
+    };
+
+
+    // A dialog to display slide cache progress
+    var progress_dialog = $("#progress_dialog_container").dialog({
+        autoOpen: false,
+        resizable: false,
+        height: "auto",
+        width: 400,
+        modal: true
+    });
+
+    // A progress bar
+    var progress_bar = $("#progress_bar").progressbar({
+        value:0
+    });
+
+    // A help dialog
+    let help_dialog = $("#help_dialog_container").dialog({
+        autoOpen: false,
+        resizable: false,
+        height: "auto",
+        width: "auto",
+        modal: true
+    });
+
+    // A download dialog
+    let dl_dialog = $("#dl_dialog_container").dialog({
+        autoOpen: false,
+        resizable: false,
+        height: "auto",
+        width: "auto",
+        modal: true
+    });
+
+    // Tabs on the display options dropdown
+    let tabs_display_opts = $("#display-opts-dropdown-tabs").tabs();
+
+    // This function reformats the header json into something I can display in a table
+    let parseJSONDictionary = function(jsonDict) {
+        const jsonArray = [];
+        // Iterate over the keys of the JSON object
+        for (const key in jsonDict) {
+            if (jsonDict.hasOwnProperty(key)) {
+                // Create a dictionary with 'key' and 'value' entries
+                const dictEntry = {
+                    "key": key,
+                    "value": jsonDict[key]
+                };
+                // Push the dictionary to the array
+                jsonArray.push(dictEntry);
+            }
+        }
+        return jsonArray;
+    }
+
+    // Handle loading of label and macro images
+    let load_label_or_macro_image = function(url, tab, image) {
+        tab.hide();
+        image.hide();
+        $.ajax({
+            url: url,
+            type: 'HEAD', // Only fetch the headers to check if the file exists
+            success: function() {
+                // If the request succeeds, set the image source and show the image
+                image.attr("src", url);
+                tab.show();
+                image.show();
+            },
+            error: function() {}
+        });
+    }
+
+    load_label_or_macro_image(
+        "{{url_tmpl_download_label}}", 
+        $("#display-opts-tab-label"), $("#slide_label"));
+    load_label_or_macro_image(
+        "{{url_tmpl_download_macro}}", 
+        $("#display-opts-tab-macro"), $("#slide_macro"));
+
+
+    // Slide header table
+    let slide_header_table = $("#slide_header").DataTable( {
+        ajax: function(data, callback, settings) {
+            $.ajax({
+                url: "{{url_tmpl_download_header}}".replace("XXXXX", "{{resolution}}"),
+                success: function(resp_text) {
+                    callback({data: parseJSONDictionary(JSON.parse(resp_text))});
+                }
+            });
+        },
+        columns: [
+            { data: "key" },
+            { 
+                data: "value", 
+                render: function (data, type, row, meta) {
+                    return typeof(data) == 'string' ? data.replaceAll('\n','<br>') : data;
+                }
+            }
+        ],
+        paging: false,
+        select: 'none',
+        searching: false,
+        scrollY: '400px'
+      } );
+
+    // Initialize the viewer
+    init_viewer();
+
+    // Contrast adjustment and overlay settings
+    let display_options = {
+        primary: {
+            level: 0, window: 255
+        },
+        overlay: {
+            colormap: cm_hot,
+            level: 0, window: 255,
+            alpha: [0, 255],
+            enabled: false
+        }
+    };
+
+    // This function does window-level adjustment
+    const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+    
+    let fn_window_level = function(window, level) {
+        return function(context, callback) {
+            var imgData = context.getImageData(
+                0, 0, context.canvas.width, context.canvas.height);
+            var pixels = imgData.data;
+            for (var i = 0; i < pixels.length; i += 4) {
+                pixels[i] = clamp(255 * (pixels[i] - level) / window, 0, 255);
+                pixels[i + 1] = clamp(255 * (pixels[i+1] - level) / window, 0, 255);
+                pixels[i + 2] = clamp(255 * (pixels[i+2] - level) / window, 0, 255);
+            }
+            context.putImageData(imgData, 0, 0);
+            callback();
+        };
+    };
+
+    // This function applies display options to the viewer
+    let apply_display_options = function() {
+        let filters = [];
+        let primary_proc = [];
+        let o = display_options.primary;
+        if(o.level != 0 || o.window != 255) {
+            primary_proc = [ fn_window_level(o.window, o.level) ];
+        }
+        filters.push({
+                    items: viewer.world.getItemAt(0),
+                    processors: primary_proc
+                });
+
+        if(display_options.overlay.enabled) {
+            let o = display_options.overlay;
+            filters.push({
+                items: viewer.world.getItemAt(1),
+                processors: [OpenSeadragon.Filters.COLORMAP4(o.colormap, o.level, o.window, o.alpha[0], o.alpha[1])]
+            });
+        }
+
+        viewer.setFilterOptions({ filters: filters, loadMode: 'sync' });
+    };
+
+
+    // A function to update the colormap of the overlay
+    let set_overlay_colormap = function (c_map, level, window, a0, a1) {
+        display_options.overlay.colormap = c_map;
+        display_options.overlay.level = level;
+        display_options.overlay.window = window;
+        display_options.overlay.alpha[0] = a0;
+        display_options.overlay.alpha[1] = a1;
+        apply_display_options();
+    };
+
+    // A function to load an overlay of type 'resource' into the main viewer
+    var add_overlay_dzi = function(resource, cb_loaded) {
+
+        // Check if overlay already exists
+        var exists = viewer.world.getItemCount() > 1;
+
+        // Callback for when the resource was loaded
+        var on_loaded = function() {
+            viewer.addTiledImage({
+                tileSource: "{{url_tmpl_dzi}}".replace("XXXXX", resource),
+                x: 0,
+                y: 0,
+                index: 1,
+                replace: exists,
+                compositeOperation: 'source-over',
+                opacity: 1,
+                success: function() { cb_loaded(); },
+                error: function() { window.alert("Overlay failed to load")}
+            });
+        };
+
+        // Preload the resource
+        // preload_dzi(resource, on_loaded);
+    };
+
+    // A function to remove an overlay
+    let remove_all_overlays = function() {
+        while(viewer.world.getItemCount() > 1) {
+            viewer.world.removeItem(viewer.world.getItemAt(viewer.world.getItemCount()-1));
+        }
+    };
+
+    // Populate the menu with available annotation overlays
+    let populate_annot_overlays_select = function() {
+        const sel = $('#form_overlay_annot_select');
+        sel.empty();
+        sel.append($('<option></option>').val(-1).text('None'));
+        $.each(other_tasks_dict, function(id, details) {
+            if (details.mode === "annot" && +id !== task_id) {
+                sel.append($('<option></option>').val(+id).text(details.name));
+            }
+        })
+        sel.change(function() {
+            console.log('Selected', $(this).val());
+            if($(this).val() >= 0) {
+                download_other_task_annot($(this).val());
+            }
+            else {
+                unload_other_task_annot($(this).val());
+            }
+        });
+    }
+    populate_annot_overlays_select();
+
+    // Current interaction mode
+    var curr_mode = 'NAV';
+
+    // Initialize the paper.js overlay
+    var curr_path;
+    var curr_box;
+    var curr_box_drag_start;
+
+    // Helper function to get Point corresponding to OSD event
+    var ev_point = function(event) {
+        if(!paper || !paper.view)
+            return null;
+        return paper.view.viewToProject(new paper.Point(event.position.x, event.position.y));
+    };
+
+    var ev_orig_point = function(event) {
+        return paper.view.viewToProject(new paper.Point(event.originalEvent.x, event.originalEvent.y));
+    };
+
+    // Helper function to get the delta corresponding to OSD event
+    var ev_delta = function(event) {
+        var transformed_point1 = paper.view.viewToProject(new paper.Point(0,0));
+        var transformed_point2 = paper.view.viewToProject(new paper.Point(event.delta.x, event.delta.y));
+        return transformed_point2.subtract(transformed_point1);
+    };
+
+    var deselect_all_manipulables = function() {
+        var selected = paper.project.selectedItems;
+        for (var i = 0; i < selected.length; i++) {
+            var item = selected[i];
+            if (item instanceof paper.Path || item instanceof paper.PointText) {
+                item.selected = false;
+            }
+        }
+    };
+
+    var get_number_selected_manipulables = function() {
+        var selected = paper.project.selectedItems;
+        var n = 0;
+        for (var i = 0; i < selected.length; i++) {
+            var item = selected[i];
+            if (item instanceof paper.Path || item instanceof paper.PointText) {
+                n++;
+            }
+        }
+        return n;
+    };
+
+    var get_number_selected_boxes = function() {
+        var selected = paper.project.selectedItems;
+        var n = 0;
+        for (var i = 0; i < selected.length; i++) {
+            var item = selected[i];
+            if (item.data.id) {
+                n++;
+            }
+        }
+        return n;
+    };
+
+    var upload_annot = function() {
+        var url="{{url_for('slide.update_annot_json', task_id = task_id, slide_id = slide_id, mode = affine_mode, resolution=resolution)}}";
+
+        // Before saving the project we want to reset the rotation of the text, so that
+        // the text is saved with a proper rotation
+        reset_paperjs_text_rotation();
+
+        // This is a compatibility thing. In older code, the whole project was uploaded, which is wrong
+        // and interferes with overlays. Now we only upload and download the active layer, but since the
+        // database contains old format annotations, we add an extra layer of brackets to compensate
+        payload = `[${paper.project.activeLayer.exportJSON()}]`;
+        adjust_paperjs_text_rotation();
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: payload,
+            success: function(resp) { console.log('Success: ', resp); },
+            error: function(xhr,status,error) { console.log('Error: ', xhr, status, error); }
+            });
+    };
+
+    // An object that is being moved
+    var moving_object=null;
+    var moving_object_moved=false;
+    var moving_object_handle=null;
+
+    let set_slide_mouse_nav = function(state) {
+        if(state === true && viewer.isMouseNavEnabled() === false)
+            viewer.setMouseNavEnabled(true);
+        else if(state === false && viewer.isMouseNavEnabled() === true)
+            viewer.setMouseNavEnabled(false);
+    };
+
+    var get_width_in_canvas_units = function(full_zoom_width) {
+        // Get the total dimensions of the canvas
+        // Lets say we want the text to appear like 10-point font when the entire slide occupies
+        // a canvas of width 1000. Then the actual font is 10 * (width/1000), or really max(width,height) * 10 / 1000
+        var canvas_size = viewer.world.getItemAt(0).getContentSize();
+        return Math.round(Math.max(canvas_size.x, canvas_size.y) * full_zoom_width / 1000);
+    };
+
+
+    var download_annot = function() {
+        $.get(url_dl_annot.replace('999999', task_id),
+            function(data, status) {
+                if(status=='success' && data.length) {
+                    // This is a compatibility thing. In older code, the whole project was uploaded, which is wrong
+                    // and interferes with overlays. Now we only upload and download the active layer, but since the
+                    // database contains old format annotations, we add an extra layer of brackets to compensate
+                    paper.project.activeLayer.importJSON(JSON.stringify(JSON.parse(data)[0]));
+                    adjust_paperjs_scaling(get_image_zoomlevel());
+                    adjust_paperjs_text_rotation();
+                    deselect_all_manipulables();
+                }
+            })
+    };
+
+    var download_other_task_annot = function(other_task_id) {
+        $.get(url_dl_annot.replace('999999', other_task_id),
+            function(data, status) {
+                if(status=='success' && data.length) {
+
+                    // Due to back compatibility we stored project-level data in the database
+                    // here we need to extract data from the first layer
+                    d_proj = JSON.parse(data)
+                    if(d_proj.length) {
+                        let overlay_layer = paper.project.layers.find(l => l.name === 'annot_overlay');
+                        overlay_layer.removeChildren();
+                        overlay_layer.importJSON(JSON.stringify(d_proj[0]));
+                        overlay_layer.children.forEach(function(item, index) {
+                            item.selected = false;
+                        });
+                        adjust_paperjs_scaling(get_image_zoomlevel());
+                        adjust_paperjs_text_rotation();
+                    }
+                }
+            })
+    };
+
+    var unload_other_task_annot = function() {
+        let overlay_layer = paper.project.layers.find(l => l.name === 'annot_overlay');
+        overlay_layer.removeChildren();
+    }
+
+    // A class dealing with keeping track of training patches
+    function SampleAPI() {
+
+        // Create a self variable
+        self = this;
+
+        // A map from sample_id to the Path Item representing that sample
+        this.boxmap = new Map();
+
+        // A function to create a box
+        this.create_box = function(x0, y0, x1, y1, label_id, color, raw_stroke_width) {
+            new_box = new paper.Path({
+                segments: [ new paper.Point(x0,y0), new paper.Point(x1,y0), new paper.Point(x1,y1), new paper.Point(x0,y1) ],
+                closed: true,
+                strokeColor: color,
+                selectedColor : color});
+            new_box.data.label_id = label_id;
+            new_box.data.label_color = color;
+            new_box.data.geometry = [x0, y0, x1, y1];
+            set_paperjs_item_strokewidth(new_box, raw_stroke_width);
+
+            return new_box;
+        };
+
+        // A function to update a box with new coordinates
+        this.update_box = function(path_item, x0, y0, x1, y1) {
+            if(path_item.segments.length === 4) {
+                // Set the items
+                path_item.segments[0].point.x = x0; path_item.segments[0].point.y = y0;
+                path_item.segments[1].point.x = x1; path_item.segments[1].point.y = y0;
+                path_item.segments[2].point.x = x1; path_item.segments[2].point.y = y1;
+                path_item.segments[3].point.x = x0; path_item.segments[3].point.y = y1;
+
+                // Store the geometry in a separate data variable
+                path_item.data.geometry = [x0, y0, x1, y1];
+            }
+        };
+
+        // Update the color properties of the box
+        this.update_box_label = function(path_item, label_id, color) {
+            path_item.strokeColor = color;
+            path_item.selectedColor = color;
+            path_item.data.label_color = color;
+            path_item.data.label_id = label_id;
+        };
+
+        // Move box by a delta
+        this.move_box = function(path_item, dx, dy) {
+            if(path_item.segments.length === 4) {
+                var x0 = path_item.data.geometry[0];
+                var y0 = path_item.data.geometry[1];
+                var x1 = path_item.data.geometry[2];
+                var y1 = path_item.data.geometry[3];
+                self.update_box(path_item, x0+dx, y0+dy, x1+dx, y1+dy);
+            }
+        };
+
+        // Move box corner by a delta
+        this.move_box_corner = function(path_item, index, dx, dy) {
+            if(path_item.segments.length === 4) {
+                var x0 = path_item.data.geometry[0];
+                var y0 = path_item.data.geometry[1];
+                var x1 = path_item.data.geometry[2];
+                var y1 = path_item.data.geometry[3];
+
+                switch(index) {
+                    case 0: x0 += dx; y0 += dy; break;
+                    case 1: x1 += dx; y0 += dy; break;
+                    case 2: x1 += dx; y1 += dy; break;
+                    case 3: x0 += dx; y1 += dy; break;
+                }
+
+                self.update_box(path_item, x0, y0, x1, y1);
+            }
+        };
+
+        // Upload a sample (separate from create_box because this is only done when the user
+        // is done drawing the box)
+        this.upload_new_sample = function(box, cb_success) {
+
+            // Send the completed marker to the server
+            $.ajax({
+                url: "{{ url_for('dltrain.create_sample', task_id = task_id, slide_id = slide_id) }}",
+                type: 'post',
+                data: JSON.stringify(box.data),
+                success: function(response_text) {
+                    data = JSON.parse(response_text);
+                    box.data.id = data.id;
+                    self.boxmap.set(data.id, box);
+
+                    // Add a link to navigate to the sample to clipboard
+                    let navurl = "{{ url_for('dltrain.navigate_to_sample', task_id = task_id, sample_id = 999999, _external=True) }}";
+                    navurl = navurl.replace('999999', data.id);
+                    navigator.clipboard.writeText(navurl);
+
+                    if(cb_success)
+                        cb_success();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    box.remove();
+                    paper.view.draw();
+                    alert(xhr.responseText);
+                }
+            });
+        };
+
+        // Modify an existing sample (e.g., as a result of dragging, resizing)
+        this.modify_sample = function(box, cb_success) {
+            // If for some reason the box does not have an ID, we  need to create it, but
+            // this would be a really odd occurrence
+            if(!box.data.id) {
+                console.warn('SampleAPI.modify_sample called on box without an id');
+                self.upload_new_sample(box);
+            }
+            else {
+                // Send the completed marker to the server
+                $.post("{{ url_for('dltrain.update_sample', task_id = task_id, slide_id = slide_id) }}",
+                    JSON.stringify(box.data),
+                    function(response_text) {
+                        if(cb_success)
+                            cb_success();
+                    }
+                );
+            }
+        };
+
+        // Request a list of all samples from the server and update the paper.js canvas with
+        // the new samples
+        this.refresh_samples = function() {
+
+            // If we are in a middle of a movement action, do not perform updates
+            if((moving_object && moving_object_moved) || curr_box) {
+                do_delay(self.refresh_samples, 10000);
+                return;
+            }
+
+            // Make a request for the samples
+            $.ajax({
+                url: "{{ url_for('dltrain.get_samples', task_id = task_id, slide_id = slide_id) }}",
+                type: 'get',
+                success: function(data) {
+
+                    // Get a list of all the new samples
+                    samples = JSON.parse(data);
+
+                    // Keep track of samples that need to be removed
+                    var sample_ids = new Map();
+
+                    // Add all the new samples
+                    samples.forEach(function(item, index) {
+
+                        // Record that we received this id
+                        sample_ids.set(item.id, null);
+
+                        // Does this already exist?
+                        var old_box = self.boxmap.get(item.id);
+
+                        // Update or create the box
+                        if(old_box) {
+                            self.update_box(old_box, item.x0, item.y0, item.x1, item.y1);
+                            old_box.strokeColor = item.color;
+                            old_box.selectedColor = item.color;
+                            old_box.data.label_id = item.label;
+                            old_box.data.label_color = item.color;
+                        } else {
+                            var new_box = self.create_box(item.x0, item.y0, item.x1, item.y1, item.label, item.color, 2);
+                            self.boxmap.set(item.id, new_box);
+                            new_box.data.id = item.id;
+                        }
+                    });
+
+                    // Remove all the items that were not received (deleted elsewhere)
+                    paper.project.activeLayer.children.forEach(function(item,index) {
+                        if(! sample_ids.has(item.data.id) ) {
+                            item.remove();
+                        }
+                    });
+
+                    paper.view.draw();
+                },
+                complete: function(data) {
+                    do_delay(self.refresh_samples, 10000)
+                }
+            });
+        };
+
+        // Delete a sample
+        this.delete_sample = function(box) {
+
+            // Tell the server to delete this sample
+            console.log('Deleting ', box.data)
+            if(box.data.id) {
+                box.remove();
+                $.ajax({
+                    url: "{{ url_for('dltrain.delete_sample', task_id = task_id, slide_id = slide_id) }}",
+                    data: { id: box.data.id },
+                    type: 'post',
+                    success: function(data) {
+                        self.boxmap.delete(box.data.id);
+                        paper.view.draw();
+                    }
+                });
+            }
+            else {
+                box.remove();
+                paper.view.draw();
+            }
+        };
+
+        // Count selected samples
+        this.get_selected_samples_count = function() {
+            var selected = paper.project.selectedItems;
+            var n = 0;
+            for (var i = 0; i < selected.length; i++) {
+                var item = selected[i];
+                if (item.data.id) {
+                    n++;
+                }
+            }
+            return n;
+        };
+
+        // Relabel selected samples
+        this.relabel_selected_samples = function(new_label_id, new_label_color, cb_success) {
+            var selected = paper.project.selectedItems;
+            var n = 0;
+            for (var i = 0; i < selected.length; i++) {
+                var item = selected[i];
+                if (item.data.id && item.data.label_id != new_label_id) {
+                    item.data.label_id = new_label_id;
+                    item.data.label_color = new_label_color;
+                    item.strokeColor = new_label_color;
+                    item.selectedColor = new_label_color;
+                    self.modify_sample(item, cb_success);
+                }
+            }
+        };
+    }
+
+    let brighten_color = function(color, f=0.2) {
+        c = new paper.Color(color);
+        let [r,g,b] = c.components;
+        let delta = (1.0 - Math.max(r,g,b)) * f;
+        c.setRed(Math.min(r + delta, 1.0));
+        c.setGreen(Math.min(g + delta, 1.0));
+        c.setBlue(Math.min(b + delta, 1.0));
+        return c;
+    }
+
+    class SamplingObject {
+
+    }
+
+    class SamplingTrapezoid extends SamplingObject {
+        midline = null;
+        polygon = null;
+
+        static get_normal(x0, y0, x1, y1) {
+            let nx = y1 - y0;
+            let ny = x0 - x1;
+            let nl = Math.sqrt(nx*nx+ny*ny);
+            nx = nx / nl;
+            ny = ny / nl;
+            return [nx, ny];
+        }
+
+        recompute_polygon(x0, y0, w0, x1, y1, w1) {
+            let [nx, ny] = SamplingTrapezoid.get_normal(x0, y0, x1, y1);
+            this.polygon.segments[0].point.x = x0 + nx * w0;
+            this.polygon.segments[0].point.y = y0 + ny * w0;
+            this.polygon.segments[1].point.x = x1 + nx * w1;
+            this.polygon.segments[1].point.y = y1 + ny * w1;
+            this.polygon.segments[2].point.x = x1 - nx * w1;
+            this.polygon.segments[2].point.y = y1 - ny * w1;
+            this.polygon.segments[3].point.x = x0 - nx * w0;
+            this.polygon.segments[3].point.y = y0 - ny * w0;
+        }
+
+        // A function to update a box with new coordinates
+        update_midline(x0, y0, x1, y1) {
+
+            // Update the midline
+            this.midline.segments[0].point.x = x0;
+            this.midline.segments[0].point.y = y0;
+            this.midline.segments[1].point.x = x1;
+            this.midline.segments[1].point.y = y1;
+
+            // Update the geometry
+            this.midline.data.geometry[0][0] = x0;
+            this.midline.data.geometry[0][1] = y0;
+            this.midline.data.geometry[1][0] = x1;
+            this.midline.data.geometry[1][1] = y1;
+
+            // Update the polygon from the geometry
+            this.recompute_polygon(
+                x0, y0, this.midline.data.geometry[0][2], 
+                x1, y1, this.midline.data.geometry[1][2]);
+        }
+
+        update_label(label_id, color) {
+            this.midline.strokeColor = color;
+            this.midline.selectedColor = color;
+            this.polygon.strokeColor = color;
+            this.polygon.selectedColor = color;
+            this.midline.data.label_id = label_id;
+            this.midline.data.label_color = color;
+        }
+
+        update(geometry, label_id, color, raw_stroke_width = 2) {
+            // Read the geometry
+            let [x0, y0, w0] = geometry[0];
+            let [x1, y1, w1] = geometry[1];
+
+            // Update the midline geometry and properties
+            this.midline.segments[0].point.x = x0;
+            this.midline.segments[0].point.y = y0;
+            this.midline.segments[1].point.x = x1;
+            this.midline.segments[1].point.y = y1;
+
+            // Update the polygon
+            this.recompute_polygon(x0, y0, w0, x1, y1, w1);
+
+            // Assign the properties
+            this.midline.data.geometry = [ [ x0, y0, w0 ], [x1, y1, w1 ] ];
+
+            // Update the metadata
+            this.update_label(label_id, color);
+            set_paperjs_item_strokewidth(this.midline, raw_stroke_width * 2);
+            set_paperjs_item_strokewidth(this.polygon, raw_stroke_width);
+        }
+
+        // Function to create a trapezoid from given geometry data, label, and color
+        constructor(geometry, label_id, color, raw_stroke_width = 2) {
+            super();
+
+            // Read the geometry
+            let [x0, y0, w0] = geometry[0];
+            let [x1, y1, w1] = geometry[1];
+
+            // Create and update the polygon. This is created first so that the handle
+            // of the midline overrides the handle of the polygon
+            this.polygon = new paper.Path({
+                segments: [ new paper.Point(x0,y0), new paper.Point(x0,y0), 
+                            new paper.Point(x1,y1), new paper.Point(x1,y1) ],
+                closed: true,
+                strokeColor: color,
+                selectedColor : color});
+
+            // Create the midline
+            this.midline = new paper.Path({
+                segments: [ new paper.Point(x0,y0), new paper.Point(x1,y1) ],
+                closed: false,
+                strokeColor: color,
+                selectedColor : color});
+
+            this.recompute_polygon(x0, y0, w0, x1, y1, w1);
+
+            // Assign the properties
+            this.midline.data.label_id = label_id;
+            this.midline.data.label_color = color;
+            this.midline.data.geometry = [ [ x0, y0, w0 ], [x1, y1, w1 ] ];
+            set_paperjs_item_strokewidth(this.midline, raw_stroke_width * 2);
+            set_paperjs_item_strokewidth(this.polygon, raw_stroke_width);
+        }
+
+        // Update the width/bases of the trapezoid
+        update_widths(x, y) {
+            let x0 = this.midline.segments[0].point.x;
+            let y0 = this.midline.segments[0].point.y;
+            let x1 = this.midline.segments[1].point.x;
+            let y1 = this.midline.segments[1].point.y;
+            let [nx, ny] = SamplingTrapezoid.get_normal(x0, y0, x1, y1);
+
+            let w = Math.abs(nx * (x - x0) + ny * (y - y0));
+            this.recompute_polygon(x0, y0, w, x1, y1, w);
+            this.midline.data.geometry = [ [ x0, y0, w ], [x1, y1, w ] ];
+        }
+
+        // JSONinfy this object for AJAX
+        todict() {
+            // Create JSON describing this object
+            return {
+                "geometry": {
+                    "type": "trapezoid",
+                    "data": this.midline.data.geometry
+                },
+                "label_id": this.midline.data.label_id
+            };
+        }
+
+        get label_id() {
+            return this.midline.data.label_id;
+        }
+
+        get selected() {
+            return this.midline.selected;
+        }
+
+        get id() {
+            return this.midline.data.id;
+        }
+
+        // Update the object with server ids
+        set_id(id) {
+            this.midline.data.id = id;
+            this.polygon.data.id = id;
+        }
+
+        // Shift the shape by an amount
+        shift(dx, dy) {
+            let [x0, y0, w0] = this.midline.data.geometry[0];
+            let [x1, y1, w1] = this.midline.data.geometry[1];
+
+            // Shift coordinates by the delta
+            this.update_midline(x0+dx, y0+dy, x1+dx, y1+dy);
+        }
+
+        // Respond to movement of a "handle"
+        move_handle(path_obj, handle, dx, dy) {
+            // Which handle is being moved?
+            if(path_obj === this.midline) {
+                let [x0, y0, w0] = this.midline.data.geometry[0];
+                let [x1, y1, w1] = this.midline.data.geometry[1];
+                if(handle == 0)
+                    this.update_midline(x0+dx, y0+dy, x1, y1);
+                else
+                    this.update_midline(x0, y0, x1+dx, y1+dy);
+            } 
+            else {
+                let p = this.polygon.segments[handle].point;
+                this.update_widths(p.x + dx, p.y + dy);
+            }
+        }
+
+        // Remove the object from paper
+        remove() {
+            this.midline.remove();
+            this.polygon.remove();
+        }
+
+        select(sel_state) {
+            this.midline.selected = sel_state;
+            this.polygon.selected = sel_state;
+        }
+
+        set_highlighted(state) {
+            let true_color = new paper.Color(this.midline.data.label_color);
+            let visible_color = this.midline.strokeColor;
+            let bright_color = brighten_color(true_color, 0.5);
+            if(state && visible_color != bright_color) {
+                this.midline.strokeColor = bright_color;
+                this.polygon.strokeColor = bright_color;
+                return true;
+            }
+            else if(!state && visible_color != true_color) {
+                this.midline.strokeColor = true_color;
+                this.polygon.strokeColor = true_color;
+                return true;
+            }
+            else return false;
+        }
+    }
+
+    class SamplingPolygon extends SamplingObject {
+        polygon = null;
+
+        update_label(label_id, color) {
+            this.polygon.data.label_id = label_id;
+            this.polygon.data.label_color = color;
+            this.polygon.strokeColor = color;
+            this.polygon.selectedColor = color;
+        }
+
+        // Update the geometry of the polygon
+        update_geometry(geometry) {
+            // Replace the points in the polygon
+            let pp = this.polygon; 
+            pp.removeSegments();
+            geometry.forEach(function(p) { pp.add(new paper.Point(p[0], p[1])); } );
+            pp.closePath();
+        }
+
+        // Update the object with data from the server 
+        update(geometry, label_id, color, raw_stroke_width = 2) {
+            this.update_geometry(geometry);
+            this.update_label(label_id, color);
+            set_paperjs_item_strokewidth(this.polygon, raw_stroke_width);
+        }
+
+        // Constructor
+        constructor(label_id, color, data=null, raw_stroke_width = 2) {
+            super();
+            this.polygon = new paper.Path();
+            if(data) {
+                this.update_geometry(data);
+            }
+            this.update_label(label_id, color);
+            set_paperjs_item_strokewidth(this.polygon, raw_stroke_width);
+        }
+
+        // JSONinfy this object for AJAX
+        todict() {
+            // Create JSON describing this object
+            return {
+                "geometry": {
+                    "type": "polygon",
+                    "data": this.polygon.segments.map((p) => [p.point.x,p.point.y])
+                },
+                "label_id": this.polygon.data.label_id
+            };
+        }
+
+        get label_id() {
+            return this.polygon.data.label_id;
+        }
+
+        get selected() {
+            return this.polygon.selected;
+        }
+
+        get id() {
+            return this.polygon.data.id;
+        }
+
+        set_id(id) {
+            this.polygon.data.id = id;
+        }
+
+        // Shift the shape by an amount
+        shift(dx, dy) {
+            let dp = new paper.Point(dx,dy)
+            this.polygon.translate(dp);
+        }
+
+        remove() {
+            this.polygon.remove();
+        }
+
+        select(sel_state) {
+            this.polygon.selected = sel_state;
+        }
+
+        // Respond to movement of a "handle"
+        move_handle(path_obj, handle, dx, dy) {
+            if(path_obj == this.polygon) {
+                this.polygon.segments[handle].point.x += dx;
+                this.polygon.segments[handle].point.y += dy;
+            }
+        }
+
+        set_highlighted(state) {
+            let true_color = new paper.Color(this.polygon.data.label_color);
+            let visible_color = this.polygon.strokeColor;
+            let bright_color = brighten_color(true_color, 0.5);
+            if(state && visible_color != bright_color) {
+                this.polygon.strokeColor = bright_color;
+                return true;
+            }
+            else if(!state && visible_color != true_color) {
+                this.polygon.strokeColor = true_color;
+                return true;
+            }
+            else return false;
+        }
+    }
+
+    // A cass deaing with sampling ROIs for 
+    class SamplingRegionAPI {
+
+        // A map from server id to known ROIs
+        roimap = new Map();
+
+        // Upload a newly created ROI 
+        upload_new_roi(roi, cb_success) {
+
+            // Create JSON describing this object
+            let ajax_data = roi.todict();
+
+            // Send the completed marker to the server
+            let roimap = this.roimap;
+            $.ajax({
+                url: "{{ url_for('dltrain.create_sampling_roi',task_id=task_id,slide_id=slide_id,mode=affine_mode,resolution=resolution) }}",
+                type: 'post',
+                data: JSON.stringify(ajax_data),
+                success: function(response_text) {
+                    data = JSON.parse(response_text);
+                    roi.set_id(data.id)
+                    roimap.set(data.id, roi);
+                    if(cb_success)
+                        cb_success();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    roi.remove();
+                    paper.view.draw();
+                    alert(xhr.responseText);
+                }
+            });
+        };
+
+        // Modify an existing sample (e.g., as a result of dragging, resizing)
+        modify_roi(id, cb_success) {
+
+            // Look up the roi
+            let roi = this.roimap.get(id);
+
+            // Create JSON describing this object
+            let ajax_data = roi.todict();
+            ajax_data["id"] = id;
+
+            // Send the completed marker to the server
+            $.post("{{ url_for('dltrain.update_sampling_roi',task_id=task_id,slide_id=slide_id,mode=affine_mode,resolution=resolution) }}",
+                JSON.stringify(ajax_data),
+                function(response_text) {
+                    if(cb_success)
+                        cb_success();
+            });
+        }
+
+        // Request a list of all ROIs from the server and update the paper.js canvas with
+        refresh_rois() {
+
+            // Make a request for the samples
+            let roimap = this.roimap;
+            let self = this;
+            $.ajax({
+                url: "{{ url_for('dltrain.get_sampling_rois',task_id=task_id,slide_id=slide_id,mode=affine_mode,resolution=resolution) }}",
+                type: 'get',
+                success: function(data) {
+
+                    // Get a list of all the new samples
+                    let samples = JSON.parse(data);
+
+                    // Keep track of samples that need to be removed
+                    let sample_ids = new Map();
+
+                    // Add all the new samples
+                    samples.forEach(function(item, index) {
+
+                        // Get the geometry description
+                        let geom_data = JSON.parse(item.json);
+
+                        // Record that we received this id
+                        sample_ids.set(item.id, null);
+
+                        // Does this object already exist?
+                        var T = roimap.get(item.id);
+                        if(T) {
+                            // If the object exists, update it
+                            T.update(geom_data.data, item.label, item.color);
+                        } else {
+                            // Otherwise, create the object 
+                            if(geom_data.type === "trapezoid") {
+                                T = new SamplingTrapezoid(geom_data.data, item.label, item.color);
+                            } else if(geom_data.type === "polygon") {
+                                T = new SamplingPolygon(item.label, item.color, geom_data.data);
+                            } 
+                            if(T) {
+                                roimap.set(item.id, T);
+                                T.set_id(item.id);
+                            }
+                        }
+                    });
+
+                    // Remove all the items that were not received (deleted elsewhere)
+                    paper.project.activeLayer.children.forEach(function(item,index) {
+                        if(item.data.id && !sample_ids.has(item.data.id) ) {
+                            item.remove();
+                        }
+                    });
+
+                    paper.view.draw();
+                },
+                complete: function(data) {
+                    setTimeout(() => self.refresh_rois(), 10000);
+                }
+            });
+        };
+        
+        // Select a trapezoid
+        on_selection(path_obj, sel_state) {
+            let T = this.roimap.get(path_obj.data.id);
+            T.select(sel_state);
+        }
+
+        // Select a trapezoid
+        on_hover(path_obj) {
+            let hover_id = path_obj ? path_obj.data.id : undefined;
+            let changes_made = false;
+            this.roimap.forEach((T, key, map) => {
+                if(T.id === hover_id) 
+                    changes_made |= T.set_highlighted(true);
+                else
+                    changes_made |= T.set_highlighted(false);
+            });
+            return changes_made;
+        }
+
+        // Get the label id of the path object
+        get_label_id(path_obj) {
+            let T = this.roimap.get(path_obj.data.id);
+            return T.label_id;
+        }
+
+        // Move a trapezoid by a delta amount
+        move_roi(path_obj, dx, dy) {
+            let T = this.roimap.get(path_obj.data.id);
+            T.shift(dx, dy);
+        }
+
+        // Move a handle in the object
+        move_roi_handle(path_obj, handle, dx, dy) {
+            let T = this.roimap.get(path_obj.data.id);
+            T.move_handle(path_obj, handle, dx, dy);
+        }
+
+        // Delete a sample (input object may be a polygon or the midline)
+        delete_roi(path_obj, cb_success) {
+
+            // Look up the roi
+            let T = this.roimap.get(path_obj.data.id);
+
+            // Create JSON describing this object
+            let ajax_data = {
+                "id": path_obj.data.id
+            };
+
+            // Send the completed marker to the server
+            T.remove();
+            let self = this;
+            $.post("{{ url_for('dltrain.delete_sampling_roi', task_id = task_id, slide_id = slide_id) }}",
+                JSON.stringify(ajax_data),
+                function(response_text) {
+                    self.roimap.delete(path_obj.data.id);
+                    paper.view.draw();
+                    if(cb_success)
+                        cb_success();
+                }
+            );
+        };
+
+        // Count selected samples
+        get_selected_rois_count() {
+            let n = 0;
+            this.roimap.forEach(function(T, index) {
+                if(T.selected) n++;
+            });
+            return n;
+        };
+
+        // Relabel selected samples
+        relabel_selected_rois(new_label_id, new_label_color, cb_success) {
+            let self = this;
+            this.roimap.forEach(function(T, index) {
+                if(T.selected) {
+                    if(T.label_id != new_label_id) {
+                        T.update_label(new_label_id, new_label_color);
+                        self.modify_roi(T.id, cb_success);
+                    }
+                }
+            });
+        };
+    }
+
+    // A class for drawing sampling trapezoids
+    class SamplingTrapezoidDrawingAPI {
+        curr_trapezoid = null;
+        drag_start = null;
+        width_mode = false;
+
+        constructor(sroi_api) {
+            this.sroi_api = sroi_api;
+        }
+
+        // Press event handler
+        press_handler(event) {
+            let x = ev_point(event);
+            if(!this.width_mode) {
+                this.drag_start = x;
+                this.curr_trapezoid = new SamplingTrapezoid(
+                    [[ x.x, x.y, 0.], [ x.x, x.y, 0.]],
+                    get_current_label_id(), get_current_label_color());
+                paper.view.draw();
+            }
+            else {
+                this.sroi_api.upload_new_roi(
+                    this.curr_trapezoid, function() {
+                        do_delay(reload_label_and_sample_tables, 1000)
+                    });
+                this.curr_trapezoid = null;
+                this.drag_start = null;
+                this.width_mode = false;
+
+                // Reset mode to zoom/pan
+                update_current_mode('NAV');
+            }
+        }
+
+        // Drag event handler
+        drag_handler(event) {
+            let p0 = this.drag_start;
+            let p1 = ev_point(event);
+            this.curr_trapezoid.update_midline(p0.x, p0.y, p1.x, p1.y);
+            paper.view.draw();
+        }
+
+        dragEnd_handler(event) {
+            this.width_mode = true;
+            this.drag_start = null;
+        }
+
+        move_handler(event) {
+            if(this.width_mode) {
+                let p = ev_point(event);
+                this.curr_trapezoid.update_widths(p.x, p.y);
+                paper.view.draw();
+            }
+        }
+    }
+
+    // A class for drawing sampling polygons
+    class SamplingPolygonDrawingAPI {
+
+        // A paper path object representing the currently committed part of the polygon
+        curr_polygon = null;
+
+        // A paper path object representing the line from the last vertex to the mouse cursor
+        moving_edge = null;
+
+        // The API that handles server communication, etc
+        constructor(sroi_api) {
+            this.sroi_api = sroi_api;
+        }
+
+        is_drawing() {
+            return this.curr_polygon != null;
+        }
+
+        // Check if a point is close enough to the starting handle
+        check_snap_to_closing(x, dist_screen) {
+            let x_start = this.curr_polygon.polygon.firstSegment.point;
+            let d = x_start.getDistance(x);
+            let d_max = zoom_paperjs_scaling_fn(dist_screen, 0, get_image_zoomlevel());
+            return (d <= d_max);
+        }
+
+        // Press event handler
+        press_handler(event) {
+            let x = ev_point(event);
+            if(!this.curr_polygon) {
+                // If there is no current polygon, we create one
+                this.curr_polygon = new SamplingPolygon(get_current_label_id(), get_current_label_color());
+                this.curr_polygon.polygon.add(x);
+
+                // Also create the moving edge
+                this.moving_edge = new paper.Path();
+                this.moving_edge.add(x);
+                this.moving_edge.add(x);
+                this.moving_edge.strokeColor = get_current_label_color();
+                let dspc = zoom_paperjs_scaling_fn(5, 0, get_image_zoomlevel());
+                this.moving_edge.dashArray = [dspc, dspc];
+                set_paperjs_item_strokewidth(this.moving_edge, 2);
+            } 
+            else {
+                let p = this.curr_polygon.polygon;
+                if(p.segments.length > 2 && this.check_snap_to_closing(x, 10)) {
+                    // Path is completed
+                    p.add(p.firstSegment.point);
+
+                    // Send path to server
+                    this.sroi_api.upload_new_roi(this.curr_polygon, function() {
+                        do_delay(reload_label_and_sample_tables, 1000);
+                    });
+
+                    // Reset to initial state
+                    this.moving_edge.remove(); 
+                    this.moving_edge = null;
+                    this.curr_polygon = null;
+
+                    // Reset mode to zoom/pan
+                    update_current_mode('NAV');
+                } else {
+                    p.add(x);
+                    this.moving_edge.segments[0].point = x;
+                    this.moving_edge.segments[1].point = x;
+                }                
+            }
+
+            // Redraw canvas (probably pointless)
+            paper.view.draw();
+        }
+
+        // Move event handler
+        move_handler(event) {
+            if(this.curr_polygon && this.moving_edge) {
+                let x = ev_point(event);
+                let p = this.curr_polygon.polygon;
+                if(x != this.moving_edge.segments[1].point) {
+                    this.moving_edge.segments[1].point = x;
+                    if(this.check_snap_to_closing(x, 10)) {
+                        this.moving_edge.segments[1].point = p.firstSegment.point;
+                        this.moving_edge.strokeColor = 'red';
+                    }
+                    else {
+                        this.moving_edge.strokeColor = 'black';
+                    }
+                    paper.view.draw();
+                }
+            }
+        }
+    }
+
+    // Instantiate API for getting samples
+    var sample_api = undefined;
+    if(seg_mode == 'dltrain') {
+        sample_api = new SampleAPI();
+    }
+
+    // Instantiate API for sampling regions
+    var sroi_api = undefined;
+    var sampling_poly_draw  = undefined;
+    var sampling_trapezoid_draw = undefined;
+    if(seg_mode == 'sampling') {
+        sroi_api = new SamplingRegionAPI();
+        sampling_trapezoid_draw = new SamplingTrapezoidDrawingAPI(sroi_api);
+        sampling_poly_draw = new SamplingPolygonDrawingAPI(sroi_api);
+    }
+
+    // This variable stores the current mouse position in the viewer
+    let viewer_mouse_pos = undefined;
+
+    let press_handler = function(event) {
+        if(curr_mode === 'DRAW') {
+            curr_path = new paper.Path({
+                segments: [ev_point(event)],
+                strokeColor: 'black',
+                strokeCap: 'round'});
+            set_paperjs_item_strokewidth(curr_path, 4);
+        }
+        else if(curr_mode === 'NAV') {
+            hit = my_hit_test(ev_point(event));
+            moving_object=null;
+            if(hit) {
+                if(!hit.item.selected) {
+                    // Hitting an unselected target
+                    deselect_all_manipulables();
+                    hit.item.selected = true;
+                    if(seg_mode === 'dltrain' && hit.item.data.label_id) {
+                        select_label(hit.item.data.label_id);
+                        reset_samples_table_on_label_change(hit.item.data.label_id);
+                    }
+                    else if(seg_mode === 'sampling' && sroi_api.get_label_id(hit.item)) {
+                        sroi_api.on_selection(hit.item, true);
+                        select_label(sroi_api.get_label_id(hit.item));
+                    }
+
+                    fn_update_button_state();
+                    paper.view.draw();
+                    moving_object = hit.item;
+                    moving_object_moved = true;
+                    moving_object_handle = null;
+                }
+                else {
+                    moving_object = hit.item;
+                    moving_object_moved = false;
+
+                    if (seg_mode === 'dltrain' || seg_mode === 'sampling') {
+                        if(hit.type === 'segment') {
+                            moving_object_handle = hit.segment.index;
+                        } else {
+                            moving_object_handle = null;
+                            if(seg_mode === 'sampling') {
+                                sroi_api.on_selection(hit.item, false);
+                            }
+                        }
+                    }
+                }
+            }
+            else {
+                deselect_all_manipulables()
+                set_slide_mouse_nav(true);
+                paper.view.draw();
+            }
+        }
+        else if (curr_mode === 'BOX') {
+            // Record the starting point
+            curr_box_drag_start = ev_point(event);
+
+            // Create an empty rectangle at the point
+            curr_box = sample_api.create_box(curr_box_drag_start.x, curr_box_drag_start.y,
+                curr_box_drag_start.x, curr_box_drag_start.y,
+                get_current_label_id(), get_current_label_color(), 2);
+
+            // Redraw canvas (probably pointless)
+            paper.view.draw();
+        }
+        else if (curr_mode === 'TRAPEZOID') {
+            sampling_trapezoid_draw.press_handler(event);
+        }
+        else if (curr_mode === 'POLYGON_DRAW') {
+            sampling_poly_draw.press_handler(event);
+        }
+    };
+
+    var drag_handler = function(event) {
+
+        // Record the event
+        viewer_mouse_pos = ev_point(event);
+
+        if(curr_mode === 'DRAW') {
+            curr_path.add(ev_point(event));
+            paper.view.draw();
+        }
+        else if(curr_mode === 'BOX') {
+            let p0 = curr_box_drag_start;
+            let p1 = ev_point(event);
+            sample_api.update_box(curr_box,
+                Math.min(p0.x, p1.x), Math.min(p0.y,p1.y),
+                Math.max(p0.x, p1.x), Math.max(p0.y,p1.y));
+            paper.view.draw();
+        }
+        else if(curr_mode === 'NAV' && moving_object) {
+            if(event.delta.x !== 0 || event.delta.y !== 0) {
+                // Move the object by the delta
+                if(seg_mode === 'annot') {
+                    moving_object.position = moving_object.position.add(ev_delta(event));
+                }
+                else if(seg_mode === 'dltrain') {
+                    var delta = ev_delta(event);
+                    if(moving_object_handle != null) {
+                        sample_api.move_box_corner(moving_object, moving_object_handle, delta.x, delta.y);
+                    }
+                    else {
+                        sample_api.move_box(moving_object, delta.x, delta.y);
+                    }
+                }
+                else if(seg_mode === 'sampling') {
+                    var delta = ev_delta(event);
+                    if(moving_object_handle != null) {
+                        sroi_api.move_roi_handle(moving_object, moving_object_handle, delta.x, delta.y);
+                    }
+                    else {
+                        sroi_api.move_roi(moving_object, delta.x, delta.y);
+                    }
+                }
+
+                // Mark object as having moved
+                moving_object_moved = true;
+                paper.view.draw();
+            }
+        }
+        else if(curr_mode === 'TRAPEZOID') {
+            sampling_trapezoid_draw.drag_handler(event);
+        }
+    };
+
+    // A variable indicating whether the current tool is in sticky mode (does not snap back to navigation)
+    let sticky_tool_mode = false;
+
+    // Update current mode, setting the sticky tag if needed
+    let update_current_mode = function(new_mode) {
+        // Second click on a tool puts it into sticky mode
+        sticky_tool_mode = (new_mode !== 'NAV') && (new_mode === curr_mode);
+        curr_mode = new_mode;
+    };
+
+    // Function called when an interaction (drawing, placing a training box, etc is completed)
+    let on_interaction_completed = function() {
+        if(!sticky_tool_mode) {
+            nav_pressed_handler();
+        }
+    };
+
+    var dragEnd_handler = function(event) {
+        if(curr_mode === 'DRAW') {
+            curr_path.simplify(10);
+            upload_annot();
+            paper.view.draw();
+            on_interaction_completed();
+        }
+        else if(curr_mode === 'BOX') {
+            // Send the completed marker to the server
+            sample_api.upload_new_sample(curr_box, function() {
+                do_delay(reload_label_and_sample_tables, 1000)
+            });
+            curr_box = undefined;
+            on_interaction_completed();
+        }
+        else if(curr_mode === 'TRAPEZOID') {
+            sampling_trapezoid_draw.dragEnd_handler(event);
+        }
+        else if(curr_mode === 'NAV' && moving_object)
+        {
+            if(moving_object_moved) {
+                if(seg_mode === 'annot') {
+                    upload_annot();
+                }
+                else if(seg_mode === 'dltrain') {
+                    sample_api.modify_sample(moving_object, function() {
+                        do_delay(reload_label_and_sample_tables, 1000)
+                    });
+                }
+                else if(seg_mode === 'sampling') {
+                    sroi_api.modify_roi(moving_object.data.id, function() {
+                        do_delay(reload_label_and_sample_tables, 1000)
+                    });
+                }
+            }
+            else {
+                // Just toggle selection
+                moving_object.selected = false;
+            }
+
+            moving_object = null;
+            paper.view.draw();
+        }
+    };
+
+    var show_marker_editor = function(event, target_item) {
+        var p = ev_point(event);
+        var input = document.getElementById("marker");
+        input.style.left = "" + event.position.x - 50 + "px";
+        input.style.top = "" + event.position.y - 20 + "px";
+        input.style.width = "100px";
+        input.style.height = "40px";
+        input.style.display = "block";
+        input.style.textAlign = "center";
+        input.style.zIndex = 100;
+
+        if(target_item) { input.value = target_item.content; } else { input.value = null; }
+
+        input.focus();
+
+        input.onkeypress = function(e) {
+            if(!e) e = window.event;
+            if (e.keyCode === 13) {
+                this.style.display = "none";
+                if(target_item) {
+                    target_item.content = this.value;
+                    target_item.visible = true;
+                    target_item.selected = false;
+                } else {
+
+                    // var newtext = new paper.PointText(p);
+                    let newtext = new paper.PointText(p);
+                    newtext.content = this.value;
+                    newtext.style = {
+                        fontWeight: 'bold',
+                        fontSize: get_width_in_canvas_units(10),
+                        justification: 'center'
+                    };
+                }
+                paper.view.draw();
+                upload_annot();
+                on_interaction_completed();
+                return false;
+            }
+        }
+    };
+
+    var release_handler = function(event) {
+        if(curr_mode === 'NAV' && moving_object) {
+            if(!moving_object_moved)
+                moving_object.selected = false;
+        }
+        else if(curr_mode === 'MARKER') {
+            show_marker_editor(event, null);
+        }
+        else if(curr_mode === 'FIXEDBOX') {
+            console.log(curr_box.data)
+            sample_api.upload_new_sample(curr_box, function() {
+                do_delay(reload_label_and_sample_tables, 1000)
+            });
+            curr_box = undefined;
+            on_interaction_completed();
+        }
+    };
+
+    // Customized hit testing to include paths and text
+    var my_hit_test = function(point) {
+        if(seg_mode === 'annot') {
+            return paper.project.hitTest(point);
+        } 
+        else if (seg_mode === 'dltrain' || seg_mode === 'sampling') {
+            var hit_test_options = {
+                segments: true,
+                stroke: true,
+                fill: false,
+                tolerance: 6
+            };
+            return paper.project.hitTest(point, hit_test_options);
+        }
+    };
+
+    let update_fixed_box = function(point) {
+
+        // If a box does not exist, create it
+        if (!curr_box) {
+            curr_box = sample_api.create_box(
+                point.x - fixed_box_size / 2, point.y - fixed_box_size / 2,
+                point.x + fixed_box_size / 2, point.y + fixed_box_size / 2,
+                get_current_label_id(), get_current_label_color(), 2);
+        } else {
+            sample_api.update_box(curr_box,
+                point.x - fixed_box_size / 2, point.y - fixed_box_size / 2,
+                point.x + fixed_box_size / 2, point.y + fixed_box_size / 2);
+        }
+
+        // Set the pointer too
+        pointer = "crosshair";
+
+        // Draw the box as we move it
+        paper.view.draw();
+    };
+
+
+    var move_handler = function(event) {
+        let pointer = "default";
+        const curs_arr = [ "nwse-resize", "nesw-resize", "nwse-resize", "nesw-resize" ];
+
+        // Record the event
+        viewer_mouse_pos = ev_point(event);
+
+        if(curr_mode === 'NAV' && paper.project) {
+            let hit = my_hit_test(ev_point(event));
+            if(seg_mode === 'sampling') {
+                // Reset the opacity of every item
+                let need_redraw = sroi_api.on_hover(hit ? hit.item : undefined);
+                if(need_redraw)
+                    paper.view.draw();
+            }
+            if(hit) {
+                if(seg_mode === 'annot') {
+                    pointer = "pointer";
+                }
+                else if(seg_mode === 'dltrain') {
+                    if(!hit.item.selected) {
+                        pointer = "pointer";
+                    }
+                    else {
+                        if(hit.type==='segment') {
+                            pointer = curs_arr[hit.segment.index];
+                        }
+                        else {
+                            pointer = "move";
+                        }
+                    }
+                }
+                set_slide_mouse_nav(false);
+            }
+            else {
+                pointer = "default";
+                let sel_size = get_number_selected_manipulables();
+                // Nav behavior only available if no selection
+                if(sel_size === 0)
+                    set_slide_mouse_nav(true);
+                else
+                    set_slide_mouse_nav(false);
+            }
+        }
+        else if(curr_mode === 'FIXEDBOX') {
+            update_fixed_box(ev_point(event));
+            pointer = "crosshair";
+            paper.view.draw();
+        }
+        else if(curr_mode === 'TRAPEZOID') {
+            sampling_trapezoid_draw.move_handler(event);
+        }
+        else if(curr_mode === "POLYGON_DRAW") {
+            sampling_poly_draw.move_handler(event);
+        }
+
+        document.getElementById("view").style.cursor = pointer;
+    };
+
+    let dblClick_handler = function(event) {
+        if(curr_mode === 'NAV') {
+            hit = my_hit_test(ev_point(event));
+            if(hit && hit.item instanceof paper.PointText) {
+                hit.item.visible = false;
+                show_marker_editor(event, hit.item);
+            }
+        }
+    };
+
+    let enter_handler = function(event) {
+        viewer_mouse_pos = event.position;
+    };
+
+    let exit_handler = function(event) {
+        viewer_mouse_pos = undefined;
+    };
+
+    var mouse_tracker = new OpenSeadragon.MouseTracker({
+        element: viewer.canvas,
+        pressHandler: press_handler,
+        releaseHandler: release_handler,
+        dragHandler: drag_handler,
+        dragEndHandler: dragEnd_handler,
+        dblClickHandler: dblClick_handler,
+        moveHandler: move_handler,
+        enterHandler: enter_handler,
+        exitHandler: exit_handler
+    });
+
+    mouse_tracker.setTracking(true);
+
+    // Update button active state
+    var fn_update_button_state = function() {
+        // Is there an active selection
+        if(get_number_selected_manipulables() > 0)
+            document.getElementById("del_button").className =
+                document.getElementById("del_button").className.replace(" disabled", " enabled");
+        else
+            document.getElementById("del_button").className =
+                document.getElementById("del_button").className.replace(" enabled", " disabled");
+
+    }
+
+    // Give focus to the viewer. Call this at the beginning and when done interacting
+    // with other elements
+    var fn_focus_on_viewer = function() {
+        document.getElementById('view').querySelector('.openseadragon-canvas').focus();
+    }
+
+
+    // Active button decoration
+    var fn_active_button = function(element) {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        element.className += " active";
+    }
+
+    // Event handler
+    var draw_pressed_handler = function(options) {
+        set_slide_mouse_nav(false);
+        viewer.outerTracker.setTracking(false);
+        update_current_mode('DRAW');
+        fn_active_button(document.getElementById('draw_button'))
+        document.getElementById("view").style.cursor = "crosshair";
+    };
+
+    var nav_pressed_handler = function(options) {
+
+        // reset the sticky state
+        sticky_tool_mode = false;
+
+        set_slide_mouse_nav(true);
+        viewer.outerTracker.setTracking(true);
+        update_current_mode('NAV');
+        fn_active_button(document.getElementById('nav_button'))
+        document.getElementById("view").style.cursor = "default";
+        fn_focus_on_viewer()
+    };
+
+    var marker_pressed_handler = function(options) {
+        set_slide_mouse_nav(false);
+        viewer.outerTracker.setTracking(false);
+        update_current_mode('MARKER');
+        fn_active_button(document.getElementById('marker_button'))
+        document.getElementById("view").style.cursor = "crosshair";
+    };
+
+    var box_pressed_handler = function(options) {
+        set_slide_mouse_nav(false);
+        viewer.outerTracker.setTracking(false);
+
+        // The active mode depends on whether this is a fixed-size box
+        // or a draggable box
+        update_current_mode((fixed_box_size > 0) ? 'FIXEDBOX' : 'BOX');
+
+        // If 'FIXEDBOX', we should show the box already
+        if (curr_mode === 'FIXEDBOX' && viewer_mouse_pos) {
+            update_fixed_box(viewer_mouse_pos);
+            document.getElementById("view").style.cursor = "crosshair";
+            paper.view.draw();
+        }
+
+        fn_active_button(document.getElementById('box_button'))
+        document.getElementById("view").style.cursor = "crosshair";
+        fn_focus_on_viewer()
+    };
+
+    var trapezoid_pressed_handler = function(options) {
+        set_slide_mouse_nav(false);
+        viewer.outerTracker.setTracking(false);
+
+        // The active mode depends on whether this is a fixed-size box
+        // or a draggable box
+        update_current_mode('TRAPEZOID');
+
+        fn_active_button(document.getElementById('trap_button'))
+        document.getElementById("view").style.cursor = "crosshair";
+        fn_focus_on_viewer()
+    };
+
+    var polygon_pressed_handler = function(options) {
+        set_slide_mouse_nav(false);
+        viewer.outerTracker.setTracking(false);
+
+        // The active mode depends on whether this is a fixed-size box
+        // or a draggable box
+        update_current_mode('POLYGON_DRAW');
+
+        fn_active_button(document.getElementById('poly_button'))
+        document.getElementById("view").style.cursor = "crosshair";
+        fn_focus_on_viewer()
+    };
+
+    var del_pressed_handler = function(options) {
+        if(document.getElementById("del_button").className.includes(" enabled")) {
+            var selected = paper.project.selectedItems;
+            if(seg_mode === 'annot') {
+                for (var i = 0; i < selected.length; i++) {
+                    var item = selected[i];
+                    if (item instanceof paper.Path || item instanceof paper.PointText) {
+                        item.remove()
+                    }
+                }
+                fn_update_button_state()
+                upload_annot();
+                paper.view.draw();
+            }
+            else if(seg_mode === 'dltrain') {
+                // Iterate over the selected items
+                paper.project.selectedItems.forEach(function(item, index) {
+                    // This box needs to be deleted
+                    sample_api.delete_sample(item);
+                    reload_label_and_sample_tables();
+                    fn_update_button_state()
+                });
+            }
+            else if(seg_mode === 'sampling') {
+                 // Iterate over the selected items
+                 paper.project.selectedItems.forEach(function(item, index) {
+                    // This box needs to be deleted
+                    sroi_api.delete_roi(item);
+                    reload_label_and_sample_tables();
+                    fn_update_button_state()
+                });               
+            }
+
+            fn_focus_on_viewer();
+        }
+    };
+
+    var add_seadragon_button = function(html_id, btn_tooltip, btn_anchor, press_handler) {
+        var html_elt = document.getElementById(html_id);
+        var button = new OpenSeadragon.Button({element: html_elt, tooltip: btn_tooltip});
+        viewer.addControl(button.element, {anchor: btn_anchor});
+        button.addHandler('press', press_handler);
+        return button;
+    };
+
+    let fn_download_slide = function() {
+        var fmt = $("#dl_dialog_raw").val();
+        var ds = parseInt($("#dl_dialog_width").val(),10)
+
+        var dlink_tmpl = "{{url_tmpl_download_tiff}}"
+        if(fmt == "tiff")
+            dlink_tmpl = "{{url_tmpl_download_tiff}}"
+        else if(fmt == "nii")
+            dlink_tmpl = "{{url_tmpl_download_nii_gz}}"
+        else if(fmt == "fullres")
+            dlink_tmpl = "{{url_tmpl_download_fullres}}"
+        else if(fmt == "label")
+            dlink_tmpl = "{{url_tmpl_download_label}}"
+        else if(fmt == "macro")
+            dlink_tmpl = "{{url_tmpl_download_macro}}"
+
+        d_link = dlink_tmpl.replace("XXXXX", "{{resolution}}").replace("999999", ds.toString());
+        dl_dialog.dialog("close");
+        window.open(d_link, "_blank");
+    };
+
+    let fn_raise_dl_dialog = function() {
+        dl_dialog.dialog("open");
+        $("#dl_dialog_submit").click(fn_download_slide);
+    };
+
+    // Create a drawing button
+    var navButton = add_seadragon_button('nav_button', 'Navigate around the slide using zoom and pan', OpenSeadragon.ControlAnchor.BOTTOM_LEFT, nav_pressed_handler);
+    Mousetrap.bind(['z', 'esc'], function() { nav_pressed_handler() });
+    Mousetrap.bind('j', function() { console.log(paper.project.exportJSON()) });
+    Mousetrap.bind('D', function() { fn_raise_dl_dialog() });
+    Mousetrap.bind('?', function() { help_dialog.dialog("open"); });
+
+    // Also bind the download function to the download button
+    $("#button_download").button();
+    $("#button_download").on("click", function(event) { fn_raise_dl_dialog(); });
+
+    // Bind moving to next/previous slide
+    let prev_slide = "{{prev_slide if prev_slide != None else ''}}";
+    if(prev_slide === "")
+        $("#prev_slide_button").prop('disabled', true);
+    else
+        Mousetrap.bind('<', function() {$("form#form-prev").submit();});
+
+    let next_slide = "{{next_slide if next_slide != None else ''}}";
+    if(next_slide === "")
+        $("#next_slide_button").prop('disabled', true);
+    else
+        Mousetrap.bind('>', function() {$("form#form-next").submit();});
+
+    if (seg_mode=='annot') {
+        var drawButton = add_seadragon_button(
+            'draw_button', 
+            'Draw line segments on the slide', 
+            OpenSeadragon.ControlAnchor.BOTTOM_LEFT, 
+            draw_pressed_handler);
+        Mousetrap.bind('l', function() { draw_pressed_handler() });
+
+        var markerButton = add_seadragon_button(
+            'marker_button', 
+            'Place anatomical marker', 
+            OpenSeadragon.ControlAnchor.BOTTOM_LEFT, 
+            marker_pressed_handler);
+        Mousetrap.bind(['m', 'esc'], function() { marker_pressed_handler() });
+    }
+
+    else if(seg_mode=='dltrain') {
+        var boxButton = add_seadragon_button(
+            'box_button',
+            'Draw boxes for training classes',
+            OpenSeadragon.ControlAnchor.BOTTOM_LEFT, 
+            box_pressed_handler);
+        Mousetrap.bind('b', function() { box_pressed_handler(); });
+    }
+
+    else if(seg_mode=='sampling') {
+        var trapButton = add_seadragon_button(
+            'trap_button',
+            'Draw sampling trapezoid',
+            OpenSeadragon.ControlAnchor.BOTTOM_LEFT, 
+            trapezoid_pressed_handler);
+        var polyButton = add_seadragon_button(
+            'poly_button',
+            'Draw sampling polygon',
+            OpenSeadragon.ControlAnchor.BOTTOM_LEFT, 
+            polygon_pressed_handler);
+        Mousetrap.bind('t', function() { trapezoid_pressed_handler(); });
+        Mousetrap.bind('p', function() { polygon_pressed_handler(); });
+    }
+
+    if(seg_mode == 'annot' || seg_mode == 'dltrain' || seg_mode == 'sampling') {
+        var delButton = add_seadragon_button(
+            'del_button', 
+            'Delete selected line or text', 
+            OpenSeadragon.ControlAnchor.BOTTOM_RIGHT, 
+            del_pressed_handler);
+        Mousetrap.bind(['backspace', 'del'], function() { del_pressed_handler() });
+    }
+
+    // Sometimes the scrolling is messed up
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+    window.onresize = function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        overlay.resize();
+        overlay.resizecanvas(); }
+
+    // Disable viewer keyboard
+    var default_osd_keyDownHandler = viewer.innerTracker.keyDownHandler;
+    viewer.innerTracker.keyDownHandler = function(event) {
+        if((event.keyCode == 'R'.charCodeAt(0) && !event.ctrl && !event.meta)
+            || (event.keyCode == 'F'.charCodeAt(0) && !event.ctrl && !event.meta)) {
+            return null;
+        }
+
+        return default_osd_keyDownHandler(event)
+    };
+
+    // viewer.innerTracker.keyDownHandler = null;
+    // viewer.innerTracker.keyPressHandler = null;
+    // viewer.innerTracker.keyHandler = null;
+
+    // Initialize the slide selection form
+    $("#form_stain_select").val("{{slide_id}}");
+
+    $("#form_stain_select").change(function() {
+        tmpl="{{ url_for('slide.slide_view', task_id=task_id, slide_id=123456, affine_mode=affine_mode, resolution=resolution) }}";
+        url = tmpl.replace('123456', $("#form_stain_select").val());
+        $("#form_stain").attr("method","post").attr("action", url).submit();
+    });
+
+    // Initialize the parts of the UI corresponding to labels
+    if (seg_mode == 'dltrain') {
+
+        // Function to focus on a specific sample
+        var focus_on_sample = function(id, cx, cy) {
+
+            // Navigate there
+            pt_im = new OpenSeadragon.Point(Number(cx), Number(cy));
+            pt_vp = viewer.world.getItemAt(0).imageToViewportCoordinates(pt_im);
+            zoom_vp = viewer.world.getItemAt(0).imageToViewportZoom(0.2);
+            viewer.viewport.zoomTo(zoom_vp, false);
+            viewer.viewport.panTo(pt_vp, false);
+
+            // Select the sample with this id
+            var items = paper.project.getItems({
+                data: { id: Number(id) }
+            });
+
+            // Select the sample
+            deselect_all_manipulables();
+            items[0].selected = true;
+            select_label(items[0].data.label_id);
+            reset_samples_table_on_label_change(items[0].data.label_id);
+            fn_update_button_state();
+            fn_focus_on_viewer()
+        };
+
+        // Function to reload labels in a loop
+        var reload_label_and_sample_tables = function() {
+            load_label_table_ajax(function() {
+                var id = get_current_label_id();
+                reset_samples_table_on_label_change(id, function() {
+                    do_delay(reload_label_and_sample_tables, 10000);
+                });
+            });
+        };
+
+        // Create the labels table
+        create_label_table_html($('#div_dltrain_labels'));
+
+        // Create the samples table
+        create_samples_table_withcontrols_html($('#div_dltrain_samples'), reload_label_and_sample_tables);
+
+        // Initialize tables with data
+        reload_label_and_sample_tables();
+
+        // A callback function for when a label is clicked
+        let label_select_callback = function(id) {
+            if(curr_mode === 'NAV' && sample_api.get_selected_samples_count() > 0) {
+                if(window.confirm(`Do you want to relabel selected boxes as ${get_current_label_name()}?`)) {
+                    sample_api.relabel_selected_samples(id, get_current_label_color(), function() {
+                        reload_label_and_sample_tables();
+                    });
+                    paper.view.draw();
+                }
+            }
+            else {
+                if(curr_mode === 'FIXEDBOX' && curr_box) {
+                    sample_api.update_box_label(curr_box, id, get_current_label_color());
+                }
+                reset_samples_table_on_label_change(id);
+            }
+            fn_focus_on_viewer();
+        };
+
+        // A callback function for when a sample is clicked
+        var sample_select_callback = function(id, cx, cy, slide_id) {
+            if(slide_id === "{{slide_id}}") {
+                focus_on_sample(id, cx, cy);
+                fn_focus_on_viewer();
+            }
+            else {
+                if(confirm("Are you sure you want to navigate to another slide?")) {
+                    // Generate a URL for the new slide
+                    var url="{{url_for('slide.slide_view', task_id=task_id, slide_id=999999, affine_mode=affine_mode, resolution=resolution)}}";
+                    url = url.replace('999999', slide_id);
+                    $('<form>').attr('method','post').attr('action',url).append(
+                        $('<input type="hidden" name="sample_id">').attr("value", id),
+                        $('<input type="hidden" name="sample_cx">').attr("value", cx),
+                        $('<input type="hidden" name="sample_cy">').attr("value", cy)).appendTo('body').submit();
+                }
+            }
+        };
+
+        set_label_table_click_callback(label_select_callback);
+        set_sample_table_click_callback(sample_select_callback);
+
+        // Check if we should be navigating to a specific sample
+        var focus_on_initial_sample = function() {
+            var focus_sample_id='{{sample_id}}';
+            if(focus_sample_id && focus_sample_id.length > 0) {
+                focus_on_sample(Number(focus_sample_id), Number('{{sample_cx}}'), Number('{{sample_cy}}'));
+            }
+        };
+
+        fn_focus_on_viewer();
+
+    }
+
+    else if (seg_mode == 'sampling') {
+
+        // Create the labels table
+        create_label_table_html($('#div_dltrain_labels'));
+
+        // TODO: this is quite ugly, basically overloading reload_label_and_sample_tables; 
+        // instead this should go to the corresponding API class
+
+        // Function to reload labels in a loop
+        var reload_label_and_sample_tables = function() {
+            load_label_table_ajax(function() {
+                var id = get_current_label_id();
+                do_delay(reload_label_and_sample_tables, 10000);
+            });
+        };
+
+        // Initial load of the sample tables
+        reload_label_and_sample_tables();
+
+        let label_select_callback = function(id) {
+            if(curr_mode === 'NAV' && sroi_api.get_selected_rois_count() > 0) {
+                if(window.confirm(`Do you want to relabel selected ROIs as ${get_current_label_name()}?`)) {
+                    sroi_api.relabel_selected_rois(id, get_current_label_color(), function() {
+                        reload_label_and_sample_tables();
+                    });
+                    paper.view.draw();
+                }
+            }
+            fn_focus_on_viewer();
+        };
+
+        // Function to focus on a specific sample
+        var focus_on_sampling_roi = function(id, cx, cy) {
+
+            // Navigate there
+            pt_im = new OpenSeadragon.Point(Number(cx), Number(cy));
+            pt_vp = viewer.world.getItemAt(0).imageToViewportCoordinates(pt_im);
+            zoom_vp = viewer.world.getItemAt(0).imageToViewportZoom(0.05);
+            viewer.viewport.zoomTo(zoom_vp, false);
+            viewer.viewport.panTo(pt_vp, false);
+
+            // Select the sample with this id
+            var items = paper.project.getItems({
+                data: { id: Number(id) }
+            });
+
+            // Select the sample
+            deselect_all_manipulables();
+            items[0].selected = true;
+            select_label(sroi_api.get_label_id(items[0]));
+            fn_update_button_state();
+            fn_focus_on_viewer()
+        };
+
+        // Check if we should be navigating to a specific sample
+        var focus_on_initial_sampling_roi = function() {
+            var focus_sampling_roi_id='{{sample_id}}';
+            if(focus_sampling_roi_id && focus_sampling_roi_id.length > 0) {
+                focus_on_sampling_roi(Number(focus_sampling_roi_id), Number('{{sample_cx}}'), Number('{{sample_cy}}'));
+            }
+        };
+
+        set_label_table_click_callback(label_select_callback);
+    }
+
+    // Initialize parts of UI related to annotation
+    if (seg_mode === 'annot' || seg_mode === 'browse' || seg_mode === 'sampling') {
+
+        // Populate the transform form
+        let s_mode = $("#form_mode_select");
+        s_mode.val("{{affine_mode}}");
+
+        // Listen to changes on the form
+        s_mode.change(function() {
+            const tmpl="{{ url_for('slide.slide_view', task_id=task_id, slide_id=slide_info['id'], affine_mode='XXXX', resolution=resolution) }}";
+            let url = tmpl.replace('XXXX', s_mode.val());
+            $("#form_server_disp_opt").attr("method","post").attr("action", url).submit();
+        });
+
+        // Populate the transform form
+        let s_res = $("#form_res_select");
+
+        s_res.val("{{resolution}}");
+        s_res.change(function() {
+            // Update the resolution preferences for this task
+            let new_res = $("#form_res_select").val();
+            const url_pref="{{url_for('slide.task_set_resolution_preference', task_id=task_id, resolution='XXXX')}}".replace('XXXX', new_res);
+            const url_redirect="{{ url_for('slide.slide_view', task_id=task_id, slide_id=slide_info['id'], affine_mode=affine_mode, resolution='XXXX') }}".replace('XXXX', new_res);
+            $.ajax({ 
+                url: url_pref, 
+                success: function() {
+                    // Navigate to the new task
+                    setTimeout(function() { 
+                        $("#form_server_disp_opt").attr("method","post").attr("action", url_redirect).submit(); 
+                    }, 100);
+                } 
+            });
+        });
+    }
+
+    // Create variables for the contrast sliders
+    let primary_level_slider = $("#primary_level");
+    let primary_window_slider = $("#primary_window");
+
+    // Create a variable for the rotation slider
+    let slide_rotation_slider = $("#slide_rotation");
+    let slide_zoom_input = $("#slide_zoom");
+
+    // Watch for enter pressed in the zoom input 
+    slide_zoom_input.keypress(function(event) {
+        if(event.keyCode === 13) {
+            let iz = 1.0 / slide_zoom_input.val();
+            let image1 = viewer.world.getItemAt(0);
+            let vz = image1.imageToViewportZoom(iz);
+            viewer.viewport.zoomTo(vz, viewer.viewport.getCenter(), true);
+        }
+    });
+
+    // Function to update the rotation slider value
+    let fn_update_slider = function(obj, value) {
+        // Update the slider
+        if(obj.slider("value") != value)
+            obj.slider("value", value);
+    };
+
+    // Create variables for the overlay sliders
+    let overlay_level_slider = $("#overlay_level");
+    let overlay_window_slider = $("#overlay_window");
+    let overlay_ramp_slider = $("#overlay_opacity_ramp");
+    let overlay_opacity_slider = $("#overlay_opacity_slider");
+
+    // Callback for the level/window sliders
+    let on_primary_level_window_change = function(event, ui) {
+
+        // Get the window and level
+        let l = parseFloat(primary_level_slider.slider("value"));
+        let w = parseFloat(primary_window_slider.slider("value"));
+
+        // Use the mapping to map level/window to pixel values
+        let scale = 255.0;
+        let l_uchar = Math.floor(l * scale);
+        let w_uchar = Math.floor(w * scale);
+
+        // Set the display properties
+        display_options.primary.level = l_uchar;
+        display_options.primary.window = w_uchar;
+        apply_display_options();
+    };
+
+    // Callback for the level/window sliders
+    let on_overlay_level_window_change = function(event, ui) {
+
+        // Get the window and level
+        let l = parseFloat(overlay_level_slider.slider("value"));
+        let w = parseFloat(overlay_window_slider.slider("value"));
+
+        // Get the alpha range
+        let a0 = overlay_ramp_slider.slider("values")[0] * 255.0 / 100.0;
+        let a1 = overlay_ramp_slider.slider("values")[1] * 255.0 / 100.0;
+
+        // Use the mapping to map level/window to pixel values
+        let o = overlays[$("#form_overlay_select").val()];
+        let scale = 255.0 / (o.mapping[1] - o.mapping[0]);
+        let l_uchar = Math.floor((l - o.mapping[0]) * scale);
+        let w_uchar = Math.floor(w * scale);
+
+        // Add colormap to the data
+        set_overlay_colormap(cm_hot, l_uchar, w_uchar, a0, a1);
+    };
+
+    // Callback for slide rotation slider
+    let on_slide_rotation_change = function(event, ui) {
+        rot = slide_rotation_slider.slider("value");
+        viewer.viewport.setRotation(rot);
+        fn_update_user_pose();
+    };
+
+    // Callback for slide zoom slider
+    let on_slide_zoom_input_change = function(event, ui) {
+
+        /* TODO: convert from image units and set 
+        // Compute the actual zoom level using log scale
+        let t = slide_zoom_slider.slider("value") * 0.01;
+        let y0 = Math.log2(viewer.viewport.getMinZoom());
+        let y1 = Math.log2(viewer.viewport.getMaxZoom());
+        let y = y1 * t + y0 * (1 - t);
+        let zoom = Math.pow(2.0, y);
+        console.log(`Calling zoomTo, t=${t}`);
+        viewer.viewport.zoomTo(zoom, viewer.viewport.getCenter(true), true); */
+    };
+
+    // Function to create a decorated slider
+    let make_slider_with_handle = function (target, param, callback) {
+
+        // Add a <div> to the parent div
+        let handle_ui = $('<div class="slider-custom-handle ui-slider-handle"></div>');
+        target.append(handle_ui);
+
+        // This function adjusts the handle to be nicely inside slider limits
+        let fn_update_handle = function(val) {
+            handle_ui.text(val);
+            let x = (val - param.min) / (param.max - param.min);
+            handle_ui.css("transform", `translateX(${15+(0.-x)*90}%)`);
+        };
+
+        // Set up the slider
+        target.slider({
+            min: param.min,
+            max: param.max,
+            value: param.default,
+            step: param.step,
+            create: function () {
+                fn_update_handle($(this).slider("value"));
+            },
+            slide: function (event, ui) {
+                // Update the handle
+                fn_update_handle(ui.value);
+                callback(event, ui);
+            },
+            stop: function (event, ui) {
+                // Update the handle
+                fn_update_handle(ui.value);
+                callback(event, ui);
+            },
+            change: function(event, ui) {
+                // Update the handle
+                fn_update_handle(ui.value);
+            }
+        });
+    };
+
+    // Callback for overlay selection
+    let on_overlay_select = function() {
+
+        ovl = $("#form_overlay_select").val();
+        if(ovl === "none") {
+            remove_all_overlays();
+            $("#div_overlay_options").hide();
+        }
+        else {
+            add_overlay_dzi(overlays[ovl].pattern, function() {
+                console.log('Loaded overlay ', overlays[ovl].name);
+
+                // Populate the controls for this overlay
+                let opacity = overlay_opacity_slider.slider("value") / 255.0;
+                if(viewer.world.getItemCount() > 1)
+                    viewer.world.getItemAt(1).setOpacity(opacity);
+
+                // Load the level/window values for this overlay
+                let o = overlays[ovl];
+                make_slider_with_handle(overlay_level_slider, o.level, on_overlay_level_window_change);
+                make_slider_with_handle(overlay_window_slider, o.window, on_overlay_level_window_change);
+
+                // Initialize
+                on_overlay_level_window_change(null, null);
+
+                $("#div_overlay_options").show();
+
+
+            });
+        }
+    };
+
+    // Callback for opacity slider
+    let on_overlay_opacity_change = function(val) {
+        let opacity = val / 255.0;
+        if(viewer.world.getItemCount() > 1)
+            viewer.world.getItemAt(1).setOpacity(opacity);
+    };
+
+    // Create the primary window/level sliders
+    make_slider_with_handle(primary_level_slider, {min:0.0, max:1.0, default:0.0, step: 0.05}, on_primary_level_window_change);
+    make_slider_with_handle(primary_window_slider, {min:0.0, max:1.0, default:1.0, step: 0.05}, on_primary_level_window_change);
+
+    // Make a slider for a rotation
+    make_slider_with_handle(slide_rotation_slider, {min:0.0, max:360.0, default:init_rotation, step: 1.0}, on_slide_rotation_change);
+
+    // Configure the slider
+    overlay_opacity_slider.slider({
+        min: 0,
+        max: 255,
+        value: 127,
+        slide: function(event, ui) { on_overlay_opacity_change(ui.value); },
+        stop: function(event, ui) { on_overlay_opacity_change(ui.value); }
+    });
+
+    // Configure the alpha slider
+    overlay_ramp_slider.slider({
+        min: 0,
+        max: 100,
+        step: 10,
+        values: [0, 100],
+        slide: function(event, ui) { on_overlay_level_window_change(); },
+        stop: function(event, ui) { on_overlay_level_window_change(); }
+    });
+
+    // Fill out the list of overlays
+    if(overlays && Object.keys(overlays).length > 0) {
+
+        // Fill out the list of overlays
+        let s_ovl = $("#form_overlay_select");
+        for (ovl in overlays) {
+            s_ovl.append(new Option(overlays[ovl].name, ovl));
+        }
+
+        // Set the listener
+        s_ovl.change(on_overlay_select);
+    }
+
+});
+</script>
+{% endblock %}
