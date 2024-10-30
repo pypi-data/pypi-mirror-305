@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+ABRSQOL/__init__.py
+ABRSQOL/invert_quality_of_life.py
+ABRSQOL/testdata.py
+ABRSQOL.egg-info/PKG-INFO
+ABRSQOL.egg-info/SOURCES.txt
+ABRSQOL.egg-info/dependency_links.txt
+ABRSQOL.egg-info/entry_points.txt
+ABRSQOL.egg-info/requires.txt
+ABRSQOL.egg-info/top_level.txt
+tests/test_main.py
