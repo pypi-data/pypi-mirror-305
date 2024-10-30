@@ -1,0 +1,11 @@
+edcrop/__init__.py,sha256=xAn4wV3Y7NvtSpnX42s7kL-CGQbUAHpnQMp5H2GAuS0,53
+edcrop/__main__.py,sha256=kszIX1wwODlrFv3X0qtuT1Uop2y9uQTEelWc4wUy16s,636
+edcrop/edcrop.py,sha256=6fwUaXObTusZjbIH5H-grZtMn0iVu50sesMS_dgHRvE,129265
+edcrop/version.py,sha256=9l85HgTooBLvVEehJNT_9TYp-LDXJo1KkHzwM88BC80,163
+edcrop/Example/Weatherdata_S1.edcrop_wf,sha256=byIZrHKymkP5MJyDfeKbsRmAG4j2-baFF_1V5dwgaHs,605358
+edcrop/Example/edcrop.yaml,sha256=UJRWFB9S2p2nL4snHhBi62LbkSktJ2W6G09AWDrmnCM,436
+edcrop-1.0.0.dist-info/LICENSE,sha256=d3CcjL4xDF3XYtifEGfw_X_0-KNOHMAz9X-26vHEHtk,1145
+edcrop-1.0.0.dist-info/METADATA,sha256=RfdJAeGvR0J8wuPKMaDF26QilNdeYIa-0qA2tsqADbI,5614
+edcrop-1.0.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+edcrop-1.0.0.dist-info/top_level.txt,sha256=GkwXZl1-dS7RAeYmw85tIq9RZjVVHg4aMdlOF0p3v9s,7
+edcrop-1.0.0.dist-info/RECORD,,
