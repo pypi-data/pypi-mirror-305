@@ -1,0 +1,11 @@
+functions-framework==3.8.1
+python-dotenv==1.0.1
+
+[django]
+django==5.1.2
+
+[fastapi]
+fastapi==0.115.2
+
+[flask]
+Flask==3.0.3
