@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mys7erio-dummy"
+version = "0.1.0"
+description = ""
+authors = ["Shakir <shakirali.sacube@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+mys7erio_dummy = "mys7erio_dummy.main:main"
