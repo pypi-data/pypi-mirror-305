@@ -1,0 +1,8 @@
+pyproject.toml
+setup.cfg
+setup.py
+common_email_check.egg-info/PKG-INFO
+common_email_check.egg-info/SOURCES.txt
+common_email_check.egg-info/dependency_links.txt
+common_email_check.egg-info/requires.txt
+common_email_check.egg-info/top_level.txt
