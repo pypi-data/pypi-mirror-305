@@ -1,0 +1,13 @@
+pytraj>=2.0
+numpy
+mdtraj
+django
+statsmodels
+oslo.concurrency
+multiprocess
+pydantic
+gnuplotlib
+numdifftools
+matplotlib<3.8
+psutil
+pymbar<4.0
