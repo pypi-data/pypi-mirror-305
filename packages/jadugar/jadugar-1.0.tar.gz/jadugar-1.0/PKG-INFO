@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: jadugar
+Version: 1.0
+Summary: Jadugar is a fun project for experimentation with Python packages, read more at project links below
+Author: Raj N
+Project-URL: Linktree, https://linktr.ee/rajnandale
+Project-URL: GitHub, https://github.com/rajnandale
+Project-URL: Gist, https://gist.github.com/rajnandale/471c9f2fe5e6012b5fdd8990ef761239
+Project-URL: LinkedIn, https://www.linkedin.com/in/rajnandale
+Description-Content-Type: text/markdown
+
+Jagugar Project : It can be use to access text files(.txt) or any text based files stored within module Folder "data"
+
+for installing this module used 
+```bash
+pip install jadugar
+
+```
+after installing, for using this module within any python recognize file use following code
+```python
+from file.file2 import read_file
+data = read_file("File.txt") //here specify file name
+print(data)
+```
+
+
+here text files present in module folder can only be accessed and external files accessing is currently not supported.
+
+Future Direction, 
+1) Accessing file from Cloud Storage
+2) Dynamically add text files on cloud storage with help of module
+3) Interact with GenAI like Chatgpt, Cluade and Gemini.
+
+Collaboration :
+If u wanted to make contribution to this project then contact at linkedin or specified profile details
+Also, can mail at mail6164@duck.com
+
+## This Module is made for educational purpose only, any misuse of this module is not recommended. If used for means of any malpractices by user then it can not be associated with developer/ Owner of this module, the user is responsible only.
