@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: EilishWorld
+Version: 2.0.0
+Summary: This is just a nice experiment. And it works well.
+Home-page: https://github.com/your-username/your-repo
+Author: Mbali Phama
+Author-email: mbaliphama8@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown

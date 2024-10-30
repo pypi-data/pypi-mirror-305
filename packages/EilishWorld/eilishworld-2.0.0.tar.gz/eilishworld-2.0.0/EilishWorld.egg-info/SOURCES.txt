@@ -1,0 +1,10 @@
+README.md
+setup.py
+EilishWorld.egg-info/PKG-INFO
+EilishWorld.egg-info/SOURCES.txt
+EilishWorld.egg-info/dependency_links.txt
+EilishWorld.egg-info/top_level.txt
+Mbali Phama/__init__.py
+Mbali Phama/module1.py
+Mbali Phama/module2.py
+Mbali Phama/module3.py
