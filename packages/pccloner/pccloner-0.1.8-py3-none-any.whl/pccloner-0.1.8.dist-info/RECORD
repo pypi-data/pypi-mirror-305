@@ -1,0 +1,12 @@
+pccloner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pccloner/pcdata.py,sha256=INhHThxkqs0pphbi_l0GZI8yEfgnNWgaaHsN_AaDidY,12233
+pccloner/pctask_pr.py,sha256=ciUwHC553jM5Bx41rhAR2tovxn8M-XGxCAxOaHHdUv8,14326
+pccloner/pctask_press.py,sha256=SMatNOyfjr9MLWphO8nqPs4l0XIXkyCEdrU9F24shYw,22065
+pccloner/ubuntu.py,sha256=rN9PgiIciw57vRmCgkHu6icn8Aka5lihcVLdpWhyOTs,2145
+pccloner/utils.py,sha256=JKxAHdZWKvn8bUDFtUQGyg49-sWj3Kc0A36lwnsoG-c,3695
+pccloner/win11.py,sha256=3JIjRFlls23izkiLd4eOpcRz5PbEYoeYojg366ZnLIM,4009
+pccloner-0.1.8.dist-info/LICENSE,sha256=_iJJqmNIIiWIgYnmAyMb0fVf57YCqoP-8cS1xd2qwtA,1068
+pccloner-0.1.8.dist-info/METADATA,sha256=UlctCAWTfjiM3-fyIsXuaAvUSyC3NwJDxB9D8PCjEV4,5246
+pccloner-0.1.8.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+pccloner-0.1.8.dist-info/top_level.txt,sha256=oTbLQtH6tzX-b62qZmTVqXmeVdEuKacO2NaDfTnKyrk,9
+pccloner-0.1.8.dist-info/RECORD,,
