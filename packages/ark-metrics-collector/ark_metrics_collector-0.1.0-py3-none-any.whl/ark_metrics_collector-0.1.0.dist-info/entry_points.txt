@@ -1,0 +1,2 @@
+[console_scripts]
+ark-metrics-collector = ark_metrics_collector.app:start
