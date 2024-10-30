@@ -1,0 +1,1 @@
+md2weasypdf>=0.0.36
