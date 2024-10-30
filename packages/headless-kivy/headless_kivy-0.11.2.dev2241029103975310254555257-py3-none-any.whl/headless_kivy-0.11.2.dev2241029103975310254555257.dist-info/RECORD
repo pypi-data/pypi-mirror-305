@@ -1,0 +1,17 @@
+headless_kivy/__init__.py,sha256=VuF_Ysx7WP6d1qAZ4OvJd3csHY9TlsiJ1dhr3JFvl6c,563
+headless_kivy/_debug.py,sha256=a4pgjevs3yNdYr6JU-cnxJ-O65Pehj3piOIaOvegTlE,2927
+headless_kivy/_version.py,sha256=zTuWzlOMKo5HM0iUi-EEyWzK6uN_MnKxIxlx58syhJA,474
+headless_kivy/config.py,sha256=ibYxbEM4exTB8hao_QSlT2O2ecSUD8Zp74ZIUb7aVn4,6810
+headless_kivy/constants.py,sha256=8TwGG7fqBph7urfAxcYvmROgFM6-I9uq4XJ2LMZsMmE,1006
+headless_kivy/logger.py,sha256=An0W9CzwmjX5qSNyoC4nm24R5T_H8C9BRAOWGPbJbLU,1000
+headless_kivy/utils.py,sha256=mLo7nlsIYVm7azhae0VTfK--N0JpOxljy34mzKhvyhM,4237
+headless_kivy/widget.py,sha256=hYzJ9O5szDFuPGgArYQqr8nMg1vjiHE3uX5ngUaHNcw,8621
+headless_kivy_pytest/__init__.py,sha256=eTqWJxVGIOQSDOg340r92MPclQ-WfYix1mRoDbBpWck,39
+headless_kivy_pytest/plugin.py,sha256=m4XHSnMRGCYpjo9GN9gp1Wj8HQyEwuuue5pvYBiKbKU,381
+headless_kivy_pytest/fixtures/__init__.py,sha256=ENbE4ynqpDB_0SqIGStgyAiknYOEqbZUd6bEhCwnnQI,165
+headless_kivy_pytest/fixtures/snapshot.py,sha256=8LzP_F35_R0QY_qF3w307AMrXlZdQyySGD8CChlBhZc,6123
+headless_kivy-0.11.2.dev2241029103975310254555257.dist-info/METADATA,sha256=7rZ6Wu_dt2vJI_vFSm9IvCCmqH85HawELMjJTPUnb5g,4172
+headless_kivy-0.11.2.dev2241029103975310254555257.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+headless_kivy-0.11.2.dev2241029103975310254555257.dist-info/entry_points.txt,sha256=qWFMdTDffyOjmud11p7Kl2AdF5w7UpcELrf_t6ANFyo,118
+headless_kivy-0.11.2.dev2241029103975310254555257.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+headless_kivy-0.11.2.dev2241029103975310254555257.dist-info/RECORD,,
