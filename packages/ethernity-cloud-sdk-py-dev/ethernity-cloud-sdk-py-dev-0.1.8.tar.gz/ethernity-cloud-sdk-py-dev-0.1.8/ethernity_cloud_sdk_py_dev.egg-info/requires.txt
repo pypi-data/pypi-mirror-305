@@ -1,0 +1,7 @@
+requests
+python-dotenv
+tqdm
+pyopenssl
+cryptography
+typing-extensions==4.12
+ethernity-cloud-runner-py-dev
