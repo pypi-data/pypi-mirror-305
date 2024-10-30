@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+name_data/labeled/company_labeled.xml
+name_data/labeled/person_labeled.xml
+probablepeople/__init__.py
+probablepeople/gender.py
+probablepeople/ratios.py
+probablepeople.egg-info/PKG-INFO
+probablepeople.egg-info/SOURCES.txt
+probablepeople.egg-info/dependency_links.txt
+probablepeople.egg-info/requires.txt
+probablepeople.egg-info/top_level.txt
+tests/test_tagging.py
+tests/test_tokenizing.py
