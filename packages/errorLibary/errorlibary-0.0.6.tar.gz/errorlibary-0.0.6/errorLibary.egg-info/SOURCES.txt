@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+errorLibary.egg-info/PKG-INFO
+errorLibary.egg-info/SOURCES.txt
+errorLibary.egg-info/dependency_links.txt
+errorLibary.egg-info/requires.txt
+errorLibary.egg-info/top_level.txt
+error_libary/__init__.py
+error_libary/types_errors.py
