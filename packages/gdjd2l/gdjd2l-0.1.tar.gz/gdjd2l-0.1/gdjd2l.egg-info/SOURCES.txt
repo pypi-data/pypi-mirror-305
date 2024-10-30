@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+gdjd2l/__init__.py
+gdjd2l/torch.py
+gdjd2l.egg-info/PKG-INFO
+gdjd2l.egg-info/SOURCES.txt
+gdjd2l.egg-info/dependency_links.txt
+gdjd2l.egg-info/requires.txt
+gdjd2l.egg-info/top_level.txt
