@@ -1,0 +1,10 @@
+{
+    "test_cfg": {
+        "drivername": "sqlite",
+        "db": ":memory:",
+        "pw": "postgres2",
+        "uname": "postgres",
+        "host": "localhost"
+
+    }
+}

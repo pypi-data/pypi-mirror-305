@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+# TODO: modernize setup.cfg by moving to pyproject.toml, ie. uncomment the following lines and remove setup.cfg
+# [project]
+# name = "sdutilities"
+# version = "1.2.9"
+# description = "This package is intended to implement uniformity across SD Data Science projects."
+# readme = "README.md"
+# requires-python = ">=3.9"
+# license = {text = "Proprietary License"}
+
+# authors = [
+#   {name = "Stephen Olsen"},
+#   {name = "Taylor Ward", email = "taylorward@sociallydetermined.com"},
+#   {name = "McKenna Magoffin", email = "mckennamagoffin@sociallydetermined.com"},
+#   {name = "Jaffar Shaik"},
+#   {name = "Evan Tucker"},
+#   {name = "Chintan Dalal", email = "chintandalal@sociallydetermined.com"}
+# ]
+
+# maintainers = [
+#   {name = "Chintan Dalal", email = "chintandalal@sociallydetermined.com"}
+# ]
+
+# dependencies = [
+#   "setuptools>=70.0.0",
+#   "zipp>=3.19.1",
+#   "requests>=2.32.2",
+#   "pandas>=1.2.3",
+#   "sicpy==1.8.0",
+#   "numpy==1.23.5",
+#   "certifi>=2023.7.22",
+#   "sdcensus>=0.8.20",
+#   "us>=2.0.2",
+#   "matplotlib>=3.8.2",
+#   "Pillow>=10.0.1",
+#   "boto3>=1.17.43",
+#   "botocore>=1.19.52",
+#   "python-Levenshtein>=0.12.2",
+#   "fuzzywuzzy>=0.18.0",
+#   "fonttools>=4.47.2",
+#   "psycopg2>=2.9.9",
+#   "pytest-mock>=3.12.0",
+#   "httpx>=0.26.0"
+# ]
+
+
+# [tool.setuptools.package-data]
+# "sdutilities" = ["cfg_tables/grp_table_cfg.json", "cfg_tables/sample_table_cfg.json"]
+
+# Usage: python -m build
+# Usage with build isolation: 
+# python -m build --no-isolation

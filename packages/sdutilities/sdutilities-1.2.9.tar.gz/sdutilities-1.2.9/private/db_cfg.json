@@ -1,0 +1,8 @@
+{
+  "default": {
+    "db": "SocialScape",
+    "host": "localhost",
+    "pw": "postgres2",
+    "uname": "postgres"
+  }
+}
