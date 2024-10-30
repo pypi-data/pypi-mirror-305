@@ -1,0 +1,17 @@
+mdformat_mkdocs/__init__.py,sha256=E62SHqRMW-xUwhAvCU6nZ8eJQF9btBiAmP1Yo6cd-g8,420
+mdformat_mkdocs/_helpers.py,sha256=RWd5szzs_TZIhkGpxZ81o-s0KHgNlxKkzpQZzTONeI8,1024
+mdformat_mkdocs/_normalize_list.py,sha256=3OFTVUCLaV_WfX6ziPh0jPH8F-C6z6qSXJj10b2bSgg,14707
+mdformat_mkdocs/_postprocess_inline.py,sha256=FK6EwI1LNIuSsWS6JXtz9C6ff3TJ8jnZXBQPPV_hV7Q,2436
+mdformat_mkdocs/plugin.py,sha256=wTAU0KD6xoTOdmHPH4QEPNDIwei29mWJqiSfQT9tE28,5692
+mdformat_mkdocs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdformat_mkdocs/mdit_plugins/__init__.py,sha256=i63HGGCys6M6agMdCVr2rIpxe27stUJsr8X_rz8jUiM,973
+mdformat_mkdocs/mdit_plugins/_material_admon.py,sha256=h1Avk0x2Nr902Gv3HzqDbEg4b9e4uxle7sAJ9x5K5I4,3297
+mdformat_mkdocs/mdit_plugins/_material_content_tabs.py,sha256=2whfyszcxQM2bjaS58gFXpESCrAtDS7R0xZ0glYZvXA,2910
+mdformat_mkdocs/mdit_plugins/_mkdocstrings_autorefs.py,sha256=gNAbTtPvjtYjRErbN3cY5LggJyqfLZC4IEA4suJhhCY,3726
+mdformat_mkdocs/mdit_plugins/_mkdocstrings_crossreference.py,sha256=VfB7o7uvXrZF1Zg9eHmVsZN3IxVXYIaGz9WIRYJJg4Y,1443
+mdformat_mkdocs/mdit_plugins/_pymd_abbreviations.py,sha256=-vvCLsm5fx5OUySNJpIkDo5zX40103cJ3E-j48RZG8g,2972
+mdformat_mkdocs-3.1.0.dist-info/entry_points.txt,sha256=QBIhF5cafxBe1UfFjmYoGKp9Bv0l6hVSZr9wrEunU_I,52
+mdformat_mkdocs-3.1.0.dist-info/LICENSE,sha256=-voxTd2luDRUXIFkSXQRQGL3cHzC9AnnJkv3LJrla3o,1073
+mdformat_mkdocs-3.1.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+mdformat_mkdocs-3.1.0.dist-info/METADATA,sha256=xicBLNIvVictlQ2Ymy3jYslrf1HEpQjeeyvdYfEKk6M,7249
+mdformat_mkdocs-3.1.0.dist-info/RECORD,,
