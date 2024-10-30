@@ -1,0 +1,15 @@
+mtbacktest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mtbacktest/backtest.py,sha256=yDfjIvFkliHIKmF8Vtar3ZXPrYxzxsBa-qoBwcupZy0,5356
+mtbacktest/examples.py,sha256=q6MPZdtC6HXaRSi6_vp4xUER-yKh-7Q4FLnjsYoL0hc,2900
+mtbacktest/simulation.py,sha256=mNk5VzQS45bPKoyA0mX2o0iV4J7uDM2eLT_hn1U0Glc,982
+mtbacktest/strategy.py,sha256=8GJ0ueykcik_ou7qepLoTuiREGOHYxfGDBxPFA1EAZ0,7257
+mtbacktest/lib/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+mtbacktest/lib/data.py,sha256=5BitOoPHvP5eg9GLP7gVsBr39vSwtYTAn4GHOvBGCg4,6846
+mtbacktest/lib/metrics.py,sha256=kUAudeY81e5ZnpzCBr8rCtlqQkpxb3GuIR01QJxTEa0,383
+mtbacktest/lib/preprocessing.py,sha256=-c-gAMqNPQpKaGJLJfJ3S3qnLd_3E9l1ioKSKYOzadc,1910
+mtbacktest/lib/utils.py,sha256=nVzIgZZaZjThq20G-QeYYHlg9LI8vfQtKH31tqN6e0E,2931
+mtbacktest-0.0.16.dist-info/LICENSE,sha256=OQNynyTZAg2_Yl_ccBhIEvQGeht8_GKZZfhJSHRJIXY,1086
+mtbacktest-0.0.16.dist-info/METADATA,sha256=8v4ISZIofVFuvx7bd6O7mOD9aXKig-Io7_px-Xw8IpE,4695
+mtbacktest-0.0.16.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+mtbacktest-0.0.16.dist-info/top_level.txt,sha256=GlexJuv-eIwmLPI-mse91ze6lAZSkhgCxHPJvoBrPqo,11
+mtbacktest-0.0.16.dist-info/RECORD,,
