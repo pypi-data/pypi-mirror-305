@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: fast-er-link
+Version: 0.1.1
+Summary: GPU-Accelerated Record Linkage and Deduplication in Python
+Home-page: https://github.com/jacobmorrier/fast-er
+Author: Jacob Morrier, Sulekha Kishore, R. Michael Alvarez
+Author-email: jmorrier@caltech.edu, sulekha@caltech.edu, rma@hss.caltech.edu
+Keywords: entity resolution,GPU,probabilistic record linkage,record linkage
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Environment :: GPU :: NVIDIA CUDA
+Requires-Python: >=3.7, <4
+License-File: LICENSE.txt
+Requires-Dist: cupy-cuda12x
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+
+Fast-ER is a Python package for GPU-accelerated record linkage and deduplication.

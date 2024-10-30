@@ -1,0 +1,12 @@
+faster/__init__.py,sha256=9MQqqCipuf6E6PWZeFPX1mNfwSwk8rlD9kUBYpGQTv4,198
+faster/comparison.py,sha256=W5z6G38ZwKxFeOWNZjo2v8jiY9pz9dIMRvCp94LZPJE,28323
+faster/deduplication.py,sha256=5fcD1wBvFC3b1_wPUIroowLYQwUFdi7nffhK6shkq0c,26976
+faster/estimation.py,sha256=ZAsS28Kqi2mOV7Az9J7UUiQ7EJ7ZEataUwtPMosPf98,7014
+faster/evaluation.py,sha256=9bvpaKaTi4Rlbn3bdcU7RjuggTKoURj2qpFyh0jqy6U,2553
+faster/linkage.py,sha256=0LbsMF5bXH0hgV31xSQw7lxGFvtgDIDLBORwIuMsY0E,2688
+faster/search.py,sha256=sfwAxkf-W1oPF2AqhUstYS3sVTdulHlLUghKMaBhRSg,3942
+fast_er_link-0.1.1.dist-info/LICENSE.txt,sha256=zuS-jN5hWSIiWrh-TJeeK_iQYiii3ftGzuvcjTovpM0,1098
+fast_er_link-0.1.1.dist-info/METADATA,sha256=xJHDP07zHX_rOtorc07kxc3jX1YxRDqnIAneiyVIViE,1204
+fast_er_link-0.1.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+fast_er_link-0.1.1.dist-info/top_level.txt,sha256=crxn_Jslz4MymRZBN_aGCN_KO_Ar7sd2lZcflTmEmxQ,7
+fast_er_link-0.1.1.dist-info/RECORD,,
