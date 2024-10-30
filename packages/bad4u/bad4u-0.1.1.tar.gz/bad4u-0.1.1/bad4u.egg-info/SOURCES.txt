@@ -1,0 +1,9 @@
+README.md
+setup.py
+bad4u/__init__.py
+bad4u/bad.py
+bad4u/utils.py
+bad4u.egg-info/PKG-INFO
+bad4u.egg-info/SOURCES.txt
+bad4u.egg-info/dependency_links.txt
+bad4u.egg-info/top_level.txt
