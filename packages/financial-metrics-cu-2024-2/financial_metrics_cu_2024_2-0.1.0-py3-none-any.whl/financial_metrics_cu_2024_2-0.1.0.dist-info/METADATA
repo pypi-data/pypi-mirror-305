@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: financial_metrics_cu_2024_2
+Version: 0.1.0
+Summary: Исполняемый пакет, позволяющий легко вычислять чистую прибыль и рентабельность инвестиций (ROI)
+Home-page: https://github.com/your-username/financial_metrics
+Author: Anastasia
+Author-email: Anastasia <a.opushneva@edu.centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.19.2
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2.1; extra == "dev"
+Requires-Dist: flake8>=3.8.4; extra == "dev"
+
+# financial_metrics_cu_2024_2
+
+## Описание
+
+Это простой Python-пакет, который позволяет легко вычислять чистую прибыль и рентабельность инвестиций (ROI)
+
+## Установка и использование
+
+```bash
+pip install financial_metrics_cu_2024_2
