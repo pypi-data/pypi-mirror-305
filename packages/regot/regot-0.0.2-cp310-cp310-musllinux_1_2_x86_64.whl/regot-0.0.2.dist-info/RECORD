@@ -1,0 +1,11 @@
+regot/__init__.py,sha256=N1MCRFIz3OTQbZUheB56fhkHvfXNKmKesNrQBMRPqBs,26
+regot/_internal.cpython-310-x86_64-linux-gnu.so,sha256=lWNSCwiuHexEQyueldSdFUStSxkpD51rocAAyGnOJ0A,1091129
+regot-0.0.2.dist-info/top_level.txt,sha256=8B1tcoH2s19C7yu7MBcwvOyyY1le6Og6ymoxLyqB4-c,6
+regot-0.0.2.dist-info/RECORD,,
+regot-0.0.2.dist-info/LICENSE,sha256=7KFDeFKql08fHJ0IlwVPUewCAmKHUqyBXmN2erAZKN4,1067
+regot-0.0.2.dist-info/AUTHORS.md,sha256=fSEb8XHvRh7n64PpCLQq3XfBlrgaWP5-b-9YP-hzc28,191
+regot-0.0.2.dist-info/METADATA,sha256=APYbvZH6j49AscltDBqTgWTQD4Fn-Bl_R4fXLqkLTSY,6426
+regot-0.0.2.dist-info/WHEEL,sha256=egWltRe5xRnKhRAwSCEAy4I8_l_MXizn0Azl3PSZQT8,112
+regot.libs/libstdc++-496613c0.so.6.0.32,sha256=AwZhL5WFT99I2Q6vIxXOhW7qddfuOZ1xecxiP9QTVY4,3494361
+regot.libs/libgomp-1f0f45f5.so.1.0.0,sha256=JYZuzgiypSabjFLxXb3Nm6c4Q12fyT_uNMXOENwHwuE,336801
+regot.libs/libgcc_s-a3a07607.so.1,sha256=5ptIUeAzZweNZrFehN0_Bb5B0FcJgux7NbAFoU8vwwo,148041
