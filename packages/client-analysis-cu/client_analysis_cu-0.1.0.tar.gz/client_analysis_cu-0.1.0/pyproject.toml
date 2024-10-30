@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "client_analysis_cu"
+version = "0.1.0"
+description = "Пакет для анализа данных о клиентах"
+authors = [
+    { name="Egor", email="drobyazko_04@mail.ru" }
+]
+dependencies = ["pandas"]
