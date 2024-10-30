@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: common_email_check
+Version: 0.1.6
+Summary: A module for email checking
+Author: Your Name
+Author-email: your_email@example.com
+Requires-Python: >=3.7
+Requires-Dist: pyo3
+Provides-Extra: pyo3
+Requires-Dist: pyo3<0.15,>=0.14; python_version < "3.8" and extra == "pyo3"
+Requires-Dist: pyo3<0.16,>=0.15; (python_version >= "3.8" and python_version < "3.9") and extra == "pyo3"
+Requires-Dist: pyo3>=0.16; python_version >= "3.9" and extra == "pyo3"

@@ -1,0 +1,10 @@
+pyo3
+
+[pyo3:python_version<"3.8"]
+pyo3<0.15,>=0.14
+
+[pyo3:python_version>="3.8" and python_version<"3.9"]
+pyo3<0.16,>=0.15
+
+[pyo3:python_version>="3.9"]
+pyo3>=0.16
