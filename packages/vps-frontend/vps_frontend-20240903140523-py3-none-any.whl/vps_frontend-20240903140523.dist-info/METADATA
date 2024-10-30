@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: vps-frontend
+Version: 20240903140523
+Summary: The VPS frontend
+Home-page: https://github.com/Vioneta/vps-frontend
+Author: Vioneta
+Author-email: admin@vioneta.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# plugin Store Frontend
+
+This repository holds the frontend files of plugin Store.
+
+[For more details on how to contribute have a look here.](https://plugin.vioneta.com/docs/developer/frontend)
