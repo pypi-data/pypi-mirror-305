@@ -1,0 +1,11 @@
+mpi4py<4.0,>=2.0.0
+numpy
+pytest
+pytest-mock
+pytest-timeout
+scipy
+dill
+sympy
+scikit-learn
+smcpy
+pybind11[global]
