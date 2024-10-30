@@ -1,0 +1,9 @@
+wimsey/__init__.py,sha256=tLxkj_jIgdzkIFpdybl1P-pcfEnMsh7bHLHJ4Nunyis,77
+wimsey/config.py,sha256=8-D0yBaFeU7b_1P7vkvdW-c8NU_IcBr2uA1FZsf4adw,1833
+wimsey/dataframe.py,sha256=kHUlxoSZPV4QJpY6scIu3C1v2bhswXnwVFi5qpwTHnw,2140
+wimsey/execution.py,sha256=FMYOEFpBS4Hfo3MjAYDgInifmjqYZ_xRtJ4FL7I0IAk,2107
+wimsey/tests.py,sha256=1Omh0_qExUr5oS5Qk1uMcuGdD6dymgY5mwS5WtfQ-Ew,7959
+wimsey-0.2.0.dist-info/METADATA,sha256=SjNbv59kGPfFyhtob6RV8bzmFOI8WYubllDIhfCYmKc,3980
+wimsey-0.2.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+wimsey-0.2.0.dist-info/licenses/LICENSE,sha256=E2SZQ-S4Rzwhj-mjzNTsnEuuvFQl3McLN-TDTdAfzp0,1060
+wimsey-0.2.0.dist-info/RECORD,,
