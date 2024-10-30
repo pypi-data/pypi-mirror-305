@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+../python_module/pybind_wrapper.cpp
+../python_module/pybind_wrapper.cpp
+mxLogPy.egg-info/PKG-INFO
+mxLogPy.egg-info/SOURCES.txt
+mxLogPy.egg-info/dependency_links.txt
+mxLogPy.egg-info/top_level.txt
+mxLog_Package/__init__.py
+mxLog_Package/mxLogPy.cp311-win_amd64.pyd
+test/test.py
