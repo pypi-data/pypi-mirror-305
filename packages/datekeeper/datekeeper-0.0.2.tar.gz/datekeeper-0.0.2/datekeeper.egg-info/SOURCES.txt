@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+DateKeeper/__init__.py
+DateKeeper/check.py
+DateKeeper/edit.py
+datekeeper.egg-info/PKG-INFO
+datekeeper.egg-info/SOURCES.txt
+datekeeper.egg-info/dependency_links.txt
+datekeeper.egg-info/top_level.txt
