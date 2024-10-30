@@ -1,0 +1,6 @@
+include README.md
+include waxtion/*.py
+exclude .git
+exclude .gitignore
+global-exclude *.pyc
+global-exclude __pycache__
