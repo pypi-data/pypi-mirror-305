@@ -1,0 +1,2 @@
+[console_scripts]
+scad2cq = buildscad.__main__:main

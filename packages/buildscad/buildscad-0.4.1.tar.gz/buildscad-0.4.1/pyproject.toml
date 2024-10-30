@@ -1,0 +1,95 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools", "wheel", "setuptools-scm",]
+
+[project]
+classifiers = [
+	"Intended Audience :: Developers",
+	"Programming Language :: Python :: 3",
+	"License :: OSI Approved",
+	"Development Status :: 3 - Alpha",
+	]
+dependencies = [
+	"build123d",
+	"click",
+	"simple-eval",
+	]
+dynamic = [ "version",]
+keywords = [ "buildscad", "cadquery", "build123d"]
+requires-python = ">=3.10"
+name = "buildscad"
+description = "An interpreter for OpenSCAD that renders to build123d objects"
+readme = "README.md"
+[[project.authors]]
+email = "matthias@urlichs.de"
+name = "Matthias Urlichs"
+
+[project.scripts]
+scad2cq = "buildscad.__main__:main"
+
+[project.license]
+file = "LICENSE.txt"
+
+[project.urls]
+homepage = "https://github.org/smurfix/buildscad"
+repository = "https://github.com/smurfix/buildscad.git"
+
+[tool.flake8]
+max-line-length = 99
+ignore = [ "F841", "F401", "E731", "E502", "E402", "E127", "E123", "W503", "E231", "E203",]
+
+[tool.isort]
+line_length = 99
+multi_line_output = 3
+profile = "black"
+
+[tool.setuptools]
+[tool.setuptools.package-data]
+"*" = ["*.yaml"]
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = True
+envlist = py310,check
+"""
+
+[tool.pylint]
+[tool.pylint.messages_control]
+disable = "wrong-import-order,ungrouped-imports,too-many-nested-blocks,use-dict-literal,unspecified-encoding,too-many-statements,too-many-return-statements,too-many-locals,too-many-instance-attributes,too-many-branches,too-many-arguments,too-few-public-methods,superfluous-parens,no-else-return,no-else-continue,invalid-name,fixme,cyclic-import"
+
+[tool.black]
+line-length = 99
+
+[tool.ruff]
+select = ["ALL"]
+ignore = ["BLE001","ERA","N","FIX","TD","RET50","C","PLR","EM10","TRY003","FBT","T2","D4","D3","D2","PLW1514","RUF002","RUF001","S101","A003","PERF","PTH","ANN","D105","D107","TID252","INP001","RUF005","SIM118","B904","TRY300","S311","UP038","SIM108","B028","A001","A002"]
+
+line-length = 99
+preview = true
+explicit-preview-rules = true
+
+[tool.ruff.isort]
+no-lines-before = ["future"]
+required-imports = ["from __future__ import annotations"]
+section-order = ["future", "typing", "standard-library", "first-party", "upy", "moat", "local-folder", "third-party"]
+extra-standard-library = ["pytest", "anyio"]
+force-to-top = ["moat.util"]
+
+[tool.ruff.isort.sections]
+"moat" = ["moat"]
+"upy" = ["micropython", "machine", "esp"]
+"typing" = ["typing"]
+
+[tool.pytest.ini_options]
+log_cli_level = "DEBUG"
+
+[tool.ruff.flake8-comprehensions]
+allow-dict-calls-with-keyword-arguments = true
+
+[tool.ruff.flake8-builtins]
+builtins-ignorelist = ["help","id"]
