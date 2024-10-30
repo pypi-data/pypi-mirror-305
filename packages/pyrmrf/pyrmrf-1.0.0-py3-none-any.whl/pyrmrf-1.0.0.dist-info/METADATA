@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: pyrmrf
+Version: 1.0.0
+Summary: cross platform rm -rf
+Project-URL: Homepage, https://codeberg.org/avu/pyrmrf
+Project-URL: Issues, https://codeberg.org/avu/pyrmrf/issues
+Author-email: Jan Hülsbergen <jan@afoo.de>
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT No Attribution License (MIT-0)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Pyrmrf
+
+This is just a very simple wrapper around [shutil.rmtree](https://docs.python.org/3/library/shutil.html#shutil.rmtree) to be used in project scripts.
