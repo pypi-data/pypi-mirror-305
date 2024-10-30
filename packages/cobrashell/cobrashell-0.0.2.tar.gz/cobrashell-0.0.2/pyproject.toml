@@ -1,0 +1,43 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "cobrashell"
+version = "0.0.2"
+description = "Unix Shell written in Python3"
+license = "MIT"
+authors = [
+    "G000D1ESS <wherenodarkness@mail.ru>"
+]
+readme = "README.md"
+repository = "https://github.com/G000D1ESS/snakeshell.git"
+keywords = ["unix", "shell"]
+classifiers = [
+    "Topic :: System :: Shells",
+    "Development Status :: 1 - Planning",
+]
+packages = [
+    { include = "snakeshell" },
+]
+
+[tool.poetry.scripts]
+snk = "snakeshell.shell:run_shell"
+snake = "snakeshell.shell:run_shell"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+TatSu = "^5.12.1"
+
+[tool.poetry.group.dev.dependencies]
+codespell = "^2.3.0"
+pytest = "^8.1.2"
+pytest-cov = "^5.0.0"
+pre-commit = "^3.8.0"
+ruff = "^0.5.6"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "single"
