@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+chainollama/__init__.py
+chainollama.egg-info/PKG-INFO
+chainollama.egg-info/SOURCES.txt
+chainollama.egg-info/dependency_links.txt
+chainollama.egg-info/requires.txt
+chainollama.egg-info/top_level.txt
+chainollama/resources/chain_system_prompt.md
+chainollama/resources/old2_chain_system_prompt.md
+chainollama/resources/old3_chain_system_prompt.md
+chainollama/resources/old_chain_system_prompt.md
