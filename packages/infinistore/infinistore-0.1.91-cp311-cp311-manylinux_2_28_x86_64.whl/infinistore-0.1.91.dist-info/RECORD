@@ -1,0 +1,15 @@
+infinistore/test_infinistore.py,sha256=ecWlpbFfwmO2rXvwCiahYePcJ4r5B9NSCWhnPK2KJxk,5777
+infinistore/test.py,sha256=O4_gb1k7JabK2DdPXcjHu04ZlPSflN1P0SYH1ux9vvw,4023
+infinistore/__init__.py,sha256=ZD7BBcxwXlbJxXMil9WnGVnMBLnLdVJXMnjUNAqlm3A,358
+infinistore/bug.py,sha256=MCtwXjGYti5sDnfDuTUX-VJ7SEl62du_IdaOCIsUB1g,1943
+infinistore/_infinistore.cpython-311-x86_64-linux-gnu.so,sha256=AbYlqN7Z69yuL-UHzgEAwnVC7_F6AkAZYZlGj7S4DrA,38929609
+infinistore/benchmark.py,sha256=-hWQzLiG88jLbIDkQ1RmMuv3pwEwL8e-VylK4fnOKGg,3733
+infinistore/lib.py,sha256=s1xtf9gESA0008i7kcOCmh5Gp7JOUtdCtsA4doSexN4,14129
+infinistore/server.py,sha256=jr9jn3rqDojSoJyBKcVVzk6L2BJdaNz9How7dqMGrbw,2877
+infinistore.libs/libcudart-9335f6a2.so.12,sha256=5GZgo1RCkzBmb3fOzcXWvOxDQsCBwreIxqvumdG9s0o,695009
+infinistore.libs/libuv-671cb6af.so.1.0.0,sha256=b4RLpLgzRTfywZoBRWy6cC3VOhD9y75kH47Jf3iJ804,228945
+infinistore-0.1.91.dist-info/entry_points.txt,sha256=izYAAn4_ZhjO8FzEBQlbQfqyCp747kqBQYKG7odBBZ0,56
+infinistore-0.1.91.dist-info/RECORD,,
+infinistore-0.1.91.dist-info/METADATA,sha256=0zvEjt0wL5514iBF0_NGexrTY-Ep04atToD8J3sw_5o,1166
+infinistore-0.1.91.dist-info/top_level.txt,sha256=KpdfFfSfAf80vc2bq4AhEK7h8mIm3_ETdRcZAx-vZFA,12
+infinistore-0.1.91.dist-info/WHEEL,sha256=da47F2xkzJkkx2ePR6jDMXUaw3EJ8RiozHF-3rPa9qA,113
