@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+receipt_generator_cu.egg-info/PKG-INFO
+receipt_generator_cu.egg-info/SOURCES.txt
+receipt_generator_cu.egg-info/dependency_links.txt
+receipt_generator_cu.egg-info/requires.txt
+receipt_generator_cu.egg-info/top_level.txt
