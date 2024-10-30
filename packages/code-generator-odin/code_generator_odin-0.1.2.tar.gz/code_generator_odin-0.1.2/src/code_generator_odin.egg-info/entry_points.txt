@@ -1,0 +1,2 @@
+[console_scripts]
+generate-code = code_generator.cli:main
