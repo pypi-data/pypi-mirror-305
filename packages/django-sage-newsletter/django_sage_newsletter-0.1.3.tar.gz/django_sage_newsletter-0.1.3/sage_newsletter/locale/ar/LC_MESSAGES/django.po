@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-07 13:01+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+#: .\sage_newsletter\actions\newsletter.py:9
+msgid "Confirm selected subscriptions"
+msgstr ""
+
+#: .\sage_newsletter\actions\newsletter.py:15
+msgid "Deactivate selected subscriptions"
+msgstr ""
+
+#: .\sage_newsletter\admin.py:34
+msgid "Subscriber Information"
+msgstr ""
+
+#: .\sage_newsletter\admin.py:37
+msgid "Preferences"
+msgstr ""
+
+#: .\sage_newsletter\admin.py:39
+msgid "Subscription Status"
+msgstr ""
+
+#: .\sage_newsletter\apps.py:8
+msgid "Newsletter"
+msgstr ""
+
+#: .\sage_newsletter\helpers\text_choices.py:6
+msgid "News"
+msgstr ""
+
+#: .\sage_newsletter\helpers\text_choices.py:7
+msgid "Deals"
+msgstr ""
+
+#: .\sage_newsletter\helpers\text_choices.py:8
+msgid "Tips"
+msgstr ""
+
+#: .\sage_newsletter\helpers\text_choices.py:12
+msgid "Daily"
+msgstr ""
+
+#: .\sage_newsletter\helpers\text_choices.py:13
+msgid "Weekly"
+msgstr ""
+
+#: .\sage_newsletter\helpers\text_choices.py:14
+msgid "Monthly"
+msgstr ""
+
+#: .\sage_newsletter\helpers\text_choices.py:18
+msgid "English"
+msgstr ""
+
+#: .\sage_newsletter\helpers\text_choices.py:19
+msgid "Spanish"
+msgstr ""
+
+#: .\sage_newsletter\helpers\text_choices.py:20
+msgid "Arabic"
+msgstr ""
+
+#: .\sage_newsletter\models.py:16
+msgid "Email Address"
+msgstr ""
+
+#: .\sage_newsletter\models.py:22
+msgid "Date Subscribed"
+msgstr ""
+
+#: .\sage_newsletter\models.py:28
+msgid "Confirmed Subscription"
+msgstr ""
+
+#: .\sage_newsletter\models.py:36
+msgid "Unsubscribe Token"
+msgstr ""
+
+#: .\sage_newsletter\models.py:44
+msgid "Content Preferences"
+msgstr ""
+
+#: .\sage_newsletter\models.py:52
+msgid "Frequency Preferences"
+msgstr ""
+
+#: .\sage_newsletter\models.py:60
+msgid "Language Preference"
+msgstr ""
+
+#: .\sage_newsletter\models.py:66
+msgid "GDPR Consent"
+msgstr ""
+
+#: .\sage_newsletter\models.py:73
+msgid "Last Newsletter Sent"
+msgstr ""
+
+#: .\sage_newsletter\models.py:79
+msgid "Is Active"
+msgstr ""
+
+#: .\sage_newsletter\models.py:89
+msgid "Newsletter Subscriber"
+msgstr ""
+
+#: .\sage_newsletter\models.py:90
+msgid "Newsletter Subscribers"
+msgstr ""
+
+#: .\sage_newsletter\views.py:79
+msgid "We've reactivated your email address. Thanks for subscribing again!"
+msgstr ""
+
+#: .\sage_newsletter\views.py:84
+msgid "You have successfully subscribed to the newsletter."
+msgstr ""
