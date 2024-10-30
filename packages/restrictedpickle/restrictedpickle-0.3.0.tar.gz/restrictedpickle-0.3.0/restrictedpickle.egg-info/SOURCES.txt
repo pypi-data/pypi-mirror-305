@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+restrictedpickle/__init__.py
+restrictedpickle/classic.py
+restrictedpickle/sPickle.py
+restrictedpickle.egg-info/PKG-INFO
+restrictedpickle.egg-info/SOURCES.txt
+restrictedpickle.egg-info/dependency_links.txt
+restrictedpickle.egg-info/not-zip-safe
+restrictedpickle.egg-info/top_level.txt
