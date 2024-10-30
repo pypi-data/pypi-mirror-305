@@ -1,0 +1,17 @@
+.gitignore
+.pre-commit-config.yaml
+README.md
+pyproject.toml
+simplify_polyline/__init__.py
+simplify_polyline/helpers.py
+simplify_polyline/py.typed
+simplify_polyline/simplifiers.py
+simplify_polyline/type_hints.py
+simplify_polyline.egg-info/PKG-INFO
+simplify_polyline.egg-info/SOURCES.txt
+simplify_polyline.egg-info/dependency_links.txt
+simplify_polyline.egg-info/requires.txt
+simplify_polyline.egg-info/top_level.txt
+tests/conftest.py
+tests/test_lineseg_dist.py
+tests/test_vs.py
