@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/linux_capabilities/py_linux_capabilities.egg-info/PKG-INFO
+src/linux_capabilities/py_linux_capabilities.egg-info/SOURCES.txt
+src/linux_capabilities/py_linux_capabilities.egg-info/dependency_links.txt
+src/linux_capabilities/py_linux_capabilities.egg-info/top_level.txt
+tests/test_linux_capabilities.py
