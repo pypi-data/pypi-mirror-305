@@ -1,0 +1,268 @@
+<style>
+#stablebody tr {
+  background-color: #eee;
+}
+#stablebody td.valid:hover {
+  background-color: #dde;
+  cursor: pointer;
+}
+#stablebody td.valid.selected {
+  background-color: #bbe;
+  color: #000;
+}
+#stable td {
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+  width: 33.33%;
+}
+#stable th {
+}
+#stable {
+  font-size: 80%;
+  line-height: 1em;
+  user-select: none;
+}
+#stable_ctl {
+  font-size: 60%;
+}
+#stable_which {
+  margin-right: 1em;
+}
+</style>
+
+<!--
+<table "pure-table" id="stable">
+    <tbody id="stablebody">
+    </tbody>
+</table>
+-->
+
+<script type="text/javascript">
+
+// The id of the currently selected label (or NULL)
+var samples_table_ncol = 3;
+var samples_table_imgwidth = "100%";
+
+// The URL template
+var _samples_table_url_template = "{{url_for('dltrain.get_samples_for_label', task_id=task_id, slide_id=slide_id, label_id='999999')}}";
+
+// Global callbacks for the sample table
+var _sample_table_cb = {};
+
+// This object is used to set global callbacks for the samples table
+var set_sample_table_click_callback = function(f) {
+  _sample_table_cb['click'] = f;
+}
+
+// Create HTML for the table 
+var create_samples_table_html = function(container) {
+  $('<div id="stable_main" style="overflow-y: auto; display: block; height: 420px;">').append(
+      $('<table id="stable">').addClass("pure-table").append(
+        $('<tbody id="stablebody">'))).appendTo(container);
+}
+
+// Callback function for controls
+var cb_samples_table_control = function() {
+  Cookies.set('pref_samples_table_which', $("#stable_which").val(), { expires: 7, path: '/' });
+  Cookies.set('pref_samples_table_sort', $("#stable_sort").val(), { expires: 7, path: '/' });
+}
+
+// Create HTML for the table with controls
+var create_samples_table_withcontrols_html = function(container, fn_callback) {
+
+  // Create controls
+  var sel_which = $('<select id="stable_which">').append(
+      $('<option value="slide">').text('slide'),
+      $('<option value="block">').text('block'),
+      $('<option value="specimen">').text('specimen'),
+      $('<option value="all">').text('all')).change(function() {
+        cb_samples_table_control();
+        if(fn_callback) 
+          fn_callback()
+      });
+
+  var sel_sort = $('<select id="stable_sort">').append(
+      $('<option value="newest">').text('oldest'),
+      $('<option value="oldest">').text('newest'),
+      $('<option value="random">').text('random')).change(function() {
+        cb_samples_table_control();
+        if(fn_callback) 
+          fn_callback()
+      });
+
+  var btn_refresh = $('<button id="btn_reload" class="pure-button" style="margin-left: 10px;" type="button">Refresh</button>').click(function() {
+    load_samples_table_ajax(get_current_label_id());
+  });
+
+  // Initialize with cookies
+  var c_which = Cookies.get('pref_samples_table_which')
+  var c_sort = Cookies.get('pref_samples_table_sort')
+  if(c_which && c_sort) {
+    sel_which.val(c_which);
+    sel_sort.val(c_sort);
+  }
+
+  var cdiv = $('<div id="stable_ctl">').append(
+      $('<form id="stable_ctl_frm" class="pure-form">').append(
+        $('<span>').append(
+          $('<label for="stable_which">').text('Examples: '),
+          sel_which),
+        $('<span>').append(
+          $('<label for="stable_sort">').text('Sort: '),
+          sel_sort),
+        $('<span>').append(btn_refresh)));
+
+  cdiv.appendTo(container);
+  $('<div id="stable_main" style="overflow-y: auto; display: block; height: 420px;">').append(
+      $('<table id="stable">').addClass("pure-table").append(
+        $('<tbody id="stablebody">'))).appendTo(container);
+}
+
+// Get the preferences for listing samples
+var get_sample_tables_config = function() {
+  var v_which = $("#stable_which").val();
+  var v_sort = $("#stable_sort").val();
+  if(v_which && v_sort) {
+    return { which : v_which, sort : v_sort }
+  }
+  else return null;
+}
+
+// What are the currently loaded labels?
+var current_samples_table_label_id = -1;
+
+// Update the table when the current label id changes - for efficiency this 
+// clears the table if the label has changed, making the user refresh the
+// table by hand
+var reset_samples_table_on_label_change = function(label_id, callback_fn) {
+  if(label_id != current_samples_table_label_id) {
+    $('#stablebody').empty();
+    current_samples_table_label_id = -1;
+  }
+
+  // Call the callback function
+  if(callback_fn)
+    callback_fn();
+}
+
+// Load the samples for a specific label
+var load_samples_table_ajax = function(label_id, callback_fn) {
+  $.ajax({
+    url: _samples_table_url_template.replace('999999', label_id.toString()),
+    type: "POST",
+    data: get_sample_tables_config(),
+    success: function(response_text) {
+      var data = JSON.parse(response_text);
+      $('#stablebody').empty();
+
+      var tr = $('<tr>');
+      var row_size = 0;
+      $.each(data, function(i, item) {
+        var imgurl = "{{url_for('dltrain.get_sample_png', id=9999)}}".replace('9999', item['id']);
+
+        var box_w = Math.round(item['x1'] - item['x0']);
+        var box_h = Math.round(item['y1'] - item['y0']);
+
+        // Create a tooltip
+        var tt = 
+          `Sample ${item['id']}\n` +
+          `Specimen ${item['specimen_name']}, block ${item['block_name']}\n` + 
+          `Section ${item['section']}, slide ${item['slide']}, stain ${item['stain']}\n` +
+          `Created by ${item['creator']} on ${item['dt_create']}\n` + 
+          `Modified by ${item['editor']} on ${item['dt_edit']}\n` + 
+          `Dimensions: ${box_w} x ${box_h}`;
+
+        // Trick to prevent caching when samples are updated
+        var imgurl_full = (Number(item['have_patch']) > 0) ? 
+          imgurl + '?t_edit=' + item['t_edit'] :
+          "{{url_for('static', filename='icons/dummy_patch.png')}}";
+
+        // var imgurl_full = imgurl + '?t_edit=' + item['t_edit'];
+        var canvas_ctl = $('<canvas style="width:100%; max-width:512;">');
+        var canvas = canvas_ctl[0]; 
+        let ctx = canvas.getContext('2d');
+        let img = new Image();
+        let zoom_value = 1;
+        img.onload = () => {
+          let iw = img.width;
+          let ih = img.height;
+          console.log(`Canvas size: ${canvas.width}, ${canvas.height}, Image size: ${iw}, ${ih}`);
+          canvas.height = canvas.width;
+          // canvas.width  = iw;
+          // canvas.height = ih;
+          let sw = iw / zoom_value;
+          let sh = ih / zoom_value;
+          let sx = (iw - sw) / 2;
+          let sy = (iw - sw) / 2;
+          let bw = box_w * zoom_value;
+          let bh = box_h * zoom_value;
+          // ctx.drawImage(img, (iw - sw)/2, (ih - sh)/2, sw, sh, 0, 0, iw, ih);
+
+          // Draw the image filling the whole canvas
+          // ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
+
+          // Find size of the box in canvas units
+          wbc = canvas.width * box_w / sw;
+          hbc = canvas.height * box_h / sh;
+          ctx.beginPath();
+          ctx.lineWidth = "4";
+          ctx.strokeStyle = get_current_label_color();
+          ctx.rect(canvas.width/2-wbc/2, canvas.height/2-hbc/2, wbc, hbc);  
+          ctx.stroke();
+        }
+        img.src = imgurl_full;
+
+
+        // var img = $('<img>').attr('src', imgurl_full).attr('width', samples_table_imgwidth).attr('title', tt)
+        // var td = $('<td>').append(img).attr('sample-id', item['id']).addClass('valid');
+        var td = $('<td>').append(canvas).attr('sample-id', item['id']).addClass('valid');
+        td.attr('center-x', (item['x0'] + item['x1']) / 2.0);
+        td.attr('center-y', (item['y0'] + item['y1']) / 2.0);
+        td.attr('slide_id', item['slide_id']);
+        td.click(function() {
+          console.log($('#stablebody td'))
+          $('#stablebody td').removeClass("selected");
+          if($(this).attr('sample-id')) {
+            $(this).addClass("selected");
+            if(_sample_table_cb['click'])
+              _sample_table_cb['click']($(this).attr('sample-id'), $(this).attr('center-x'), 
+                  $(this).attr('center-y'), $(this).attr('slide_id'));
+          }
+        });
+        td.appendTo(tr);
+        row_size++;
+        if((i+1) % samples_table_ncol == 0) {
+          tr.appendTo('#stablebody')
+          tr = $('<tr>')
+          row_size=0;
+        }
+      }); 
+
+      if(row_size > 0) {
+        for(i = row_size; i < samples_table_ncol; i++)
+          tr.append($('<td>'))
+        tr.appendTo('#stablebody')
+      }
+      else {
+        tr.append($('<td>No examples have been created yet</td>'))
+        tr.appendTo('#stablebody')
+      }
+
+      // Store the current label id
+      current_samples_table_label_id = label_id;
+
+      // Call the callback function
+      if(callback_fn)
+        callback_fn();
+    }
+  });
+}
+
+// $(document).ready(function() {
+//  load_samples_table_ajax(1)
+// });
+
+</script>

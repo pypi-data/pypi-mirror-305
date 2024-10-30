@@ -1,0 +1,16 @@
+*~
+*.pyc
+.*.sw?
+.DS_Store
+libs/os_affine/build
+instance
+docs/build
+dist
+venv
+.venv
+.idea
+conf
+manifest
+deploy_dzi.sh
+/env.sh
+private

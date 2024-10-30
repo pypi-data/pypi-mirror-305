@@ -1,0 +1,14 @@
+{
+    "restrict-access": false, 
+    "name": "TDP43 DL Validation", 
+    "stains": [
+        "TDP43MP"
+    ], 
+    "dltrain": {
+        "labelset": "boxeval-tdp",
+        "min-size": 16,
+        "max-size": 4096
+    }, 
+    "mode": "dltrain", 
+    "desc": "Counting tangles withing ROIs"
+}

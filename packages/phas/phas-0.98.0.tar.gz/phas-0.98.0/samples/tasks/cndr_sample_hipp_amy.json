@@ -1,0 +1,9 @@
+{
+    "restrict-access": true, 
+    "name": "CNDR Sampling ROIs", 
+    "sampling": {
+        "labelset": "anat_sampling"
+    }, 
+    "mode": "sampling", 
+    "desc": "Sampling ROIs for CNDR histology slides"
+}

@@ -1,0 +1,14 @@
+{
+    "restrict-access": false, 
+    "name": "Tau DL Validation", 
+    "stains": [
+        "AT8"
+    ], 
+    "dltrain": {
+        "labelset": "boxeval-tau",
+        "min-size": 16,
+        "max-size": 4096
+    }, 
+    "mode": "dltrain", 
+    "desc": "Counting tangles withing ROIs"
+}

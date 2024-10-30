@@ -1,0 +1,315 @@
+{% extends 'base.html' %}
+
+{% block title %}
+PICSL Histology Annotation Server
+{% endblock %}
+
+{% block content %}
+
+<style>
+.topbutton {
+  position: relative;
+  right: 10px;
+  margin-top: 20px;
+  padding: 5px 10px 5px 10px;
+  font-size: 100%;
+}
+</style>
+
+<div class="pure-g">
+  <div class="pure-u-1 pure-u-md-7-24">
+    <h3 align="center">{{disp_name}} Label Sets</h3>
+    <button class="pure-button pure-button-primary topbutton" id="lsnew_button">New LabelSet</button>
+    <div id="d_labelset_table">
+      <table id="labelset" class="compact stripe hover" style="width:100%">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>#Labels</th>
+          <th>#Samples</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="pure-u-1 pure-u-md-1-24">
+  </div>
+  <div class="pure-u-1 pure-u-md-7-24" id="d_labels_table" style="display:none;">
+    <div style="display: flex; justify-content: center; position: relative;">
+      <h3 style="text-align: center;">Labels</h3>
+      <form method="post" id="form_lnew">
+        <button type="submit" class="pure-button pure-button-primary" id="lnew_button" class="topbutton">New Label</button>
+      </form>
+    </div>
+    <table id="labels" class="compact stripe hover" style="width:100%">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Label</th>
+        <th>#Samples</th>
+        <th>Description</th>
+        <th>Color</th>
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <div class="pure-u-1 pure-u-md-1-24">
+  </div>
+  <div class="pure-u-1 pure-u-md-7-24" id="d_label_editor" style="display:none;">
+    <h3 align="center">LABEL PROPERTIES</h3>
+    <form method="post" id="form_ledit" class="pure-form pure-form-stacked">
+      <fieldset>
+        <label for="ledit_name">Display Name:</label>
+        <input name="name" id="ledit_name" style="width:100%">
+
+        <label for="ledit_desc">Description:</label>
+        <input name="desc" id="ledit_desc" style="width:100%">
+
+        <label for="ledit_color">Color:</label>
+        <input type="color" name="color" id="ledit_color" style="width:100%">
+
+        <button type="submit" class="pure-button pure-button-primary" id="ledit_update">Update</button>
+        <button type="button" class="pure-button" id="ledit_delete">Delete</button>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+<div id="labelset-form" title="Create New Label Set">
+  <form>
+    <fieldset>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="new-labelset-name" value="New LabelSet" class="text ui-widget-content ui-corner-all">
+
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
+</div>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='DataTables/datatables.min.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='jquery-ui/jquery-ui.css') }}">
+<script type="text/javascript" charset="utf8" src="{{ url_for('static', filename='jquery-3.6.4.min.js') }}"></script>
+<script type="text/javascript" charset="utf8" src="{{ url_for('static', filename='jquery-ui/jquery-ui.js') }}"></script>
+<script type="text/javascript" charset="utf8" src="{{ url_for('static', filename='DataTables/datatables.min.js') }}"></script>
+
+
+<script type="text/javascript" charset="utf8">
+  $(document).ready(function() {
+
+    // AJAX url templates
+    let url_labelset="{{url_for('dltrain.get_project_labelset_listing', project=project)}}";
+    let url_labels="{{url_for('dltrain.get_labelset_label_listing', lset=999999, project=project)}}";
+    let url_label_update="{{url_for('dltrain.project_update_label', label_id=999999, project=project)}}";
+    let url_label_delete="{{url_for('dltrain.project_delete_label', label_id=999999, project=project)}}";
+    let url_label_new="{{url_for('dltrain.project_labelset_add_label', labelset_id=999999, project=project)}}";
+
+    // Column descriptions for different tables
+    let labelset_col_desc = [
+      { data: "id", visible: false },
+      { data: "name" },
+      { data: "n_labels" },
+      { data: "n_samples" }
+    ];
+
+    let labels_col_desc = [
+      { data: "id", visible: false },
+      { data: "name" },
+      { data: "n_samples" },
+      { data: "description", visible: false },
+      { data: "color", visible: false }
+    ];
+
+    let py2js = function(str) { return str=="None" ? null : str; }
+    var request_labelset=py2js("{{labelset}}");
+
+    // Labelset selected in the table
+    let selected_labelset = null;
+    let selected_label = null;
+
+    let t_labelset = $('#labelset').DataTable( {
+      "ajax": function(data, callback, settings) {
+        $.ajax({
+          url: url_labelset,
+          success: function(resp_text) {
+            resp_data = JSON.parse(resp_text);
+            callback({data: resp_data});
+            if(request_labelset) {
+              fn_select_row(t_labelset, 0, request_labelset);
+              request_prj=null;
+            }
+          }
+        });
+      },
+      columns: labelset_col_desc,
+      paging: false,
+      scrollY: "600px",
+      scrollCollapse: true,
+      info: false,
+      select: 'single',
+      rowId: 'id',
+      searching: false
+    } );
+
+    let t_labels = $('#labels').DataTable( {
+      "ajax": function(data, callback, settings) {
+        if(selected_labelset) {
+          $.ajax({
+            url: url_labels.replace('999999',selected_labelset),
+            success: function(resp_text) {
+              callback({data: JSON.parse(resp_text)});
+            }
+          });
+        }
+      },
+      columns: labels_col_desc,
+      scrollY: "600px",
+      scrollCollapse: true,
+      info: false,
+      select: 'single',
+      rowId: 'id',
+      searching: false,
+      scroller: true
+    } );
+
+    let fn_select_row = function(table, col, value) {
+      var indexes = table.rows().eq( 0 ).filter( function (rowIdx) {
+        return table.cell(rowIdx, col).data() === value;
+      } );
+      if(indexes.length === 1) {
+        table.row(indexes[0]).select();
+      }
+    };
+
+    t_labelset.on('select', function(e,dt,type,indexes) {
+      if(type === 'row') {
+        // Set the target url
+        selected_labelset = t_labelset.rows(indexes).data().pluck('id')[0];
+        t_labels.ajax.reload();
+        $('#d_labels_table').css('display','block');
+        $('#d_label_editor').css('display','none');
+      }
+    });
+
+    t_labelset.on('deselect', function(e,dt,type,indexes) {
+      selected_labelset = null;
+      $('#d_labels_table').css('display','none');
+      $('#d_label_editor').css('display','none');
+    });
+
+    t_labels.on('select', function(e,dt,type,indexes) {
+      if(type === 'row') {
+        let rdata = t_labels.rows(indexes).data();
+        selected_label = rdata.pluck('id')[0];
+
+        // Update values in the form
+        $('#ledit_name').val(rdata.pluck('name')[0]);
+        $('#ledit_desc').val(rdata.pluck('description')[0]);
+        $('#ledit_color').val(rdata.pluck('color')[0]);
+        $('#d_label_editor').css('display','block');
+      }
+    });
+
+    t_labels.on('deselect', function(e,dt,type,indexes) {
+      selected_label = null;
+      $('#d_label_editor').css('display','none');
+    });
+
+    let fn_reload_labelsets = function() {
+      t_labelset.ajax.reload(function(json) {
+        if(selected_labelset) {
+          console.log('Selecting id = ', selected_labelset);
+          t_labelset.row("#"+selected_labelset).select();
+        }
+      });
+    };
+
+    let fn_reload_labels = function() {
+      t_labels.ajax.reload(function(json) {
+        if(selected_label) {
+          console.log('Selecting id = ', selected_label);
+          t_labels.row("#"+selected_label).select();
+        }
+      });
+    };
+
+    $('#form_ledit').on('submit', function() {
+      $.post(
+              url_label_update.replace('999999',selected_label),
+              $('#form_ledit').serialize(),
+              fn_reload_labels);
+      return false;
+    });
+
+    var dlg_lsnew = $( "#labelset-form" ).dialog({
+      autoOpen: false,
+      height: 200,
+      width: 350,
+      modal: true,
+      buttons: {
+        "Create LabelSet": function() {
+          var ls_name=$("#new-labelset-name").val();
+          $.post(
+                  "{{url_for('dltrain.add_labelset', project=project)}}",
+                  $('#labelset-form').serialize(),
+                  function(result) {
+                    selected_labelset = JSON.parse(result).id;
+                    fn_reload_labelsets();
+                  });
+        },
+        Cancel: function() {
+          dlg_lsnew.dialog( "close" );
+        }
+      }
+    });
+
+    $('#lsnew_button').on('click', function() {
+      dlg_lsnew.dialog("open");
+      return false;
+    });
+
+    $('#form_lnew').on('submit', function() {
+      $.post(
+              url_label_new.replace('999999',selected_labelset),
+              $('#lnew_form').serialize(),
+              function(result) {
+                selected_label = JSON.parse(result).id;
+                fn_reload_labels();
+              });
+      return false;
+    });
+
+    $('#ledit_delete').click(function() {
+      $.post(
+              url_label_delete.replace('999999', selected_label),
+              null,
+              function(result) {
+                let data = JSON.parse(result);
+                if (data.status === "ok") {
+                  let cur_idx = t_labels.row("#" + selected_label).index();
+                  selected_label = null;
+                  if (cur_idx + 1 < t_labels.data().length)
+                    selected_label = t_labels.row(cur_idx + 1).id();
+                  else if (cur_idx > 0)
+                    selected_label = t_labels.row(0).id();
+                  fn_reload_labels();
+                }
+                else if(data.reason === "in_use") {
+                  alert('Label cannot be deleted because it is already in use');
+                }
+              });
+      return false;
+    });
+
+
+
+  } );
+</script>
+
+{% endblock %}
+
