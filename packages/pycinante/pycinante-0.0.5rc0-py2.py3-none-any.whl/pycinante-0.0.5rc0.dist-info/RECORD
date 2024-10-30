@@ -1,0 +1,9 @@
+pycinante/__init__.py,sha256=iaVpDiTCjnUZpQ7EZIsxKOTG0VsrJhCg-fACNJdwoec,1553
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_export.py,sha256=sM06AMz0Qo80QGseeX0XauSYirkt4P0DAcAm5UcSSq0,314
+pycinante-0.0.5rc0.dist-info/LICENSE,sha256=bQu6j8EkC5bLogkWae_96Ktfpes-VcXl9FgdH8MeEvc,1070
+pycinante-0.0.5rc0.dist-info/METADATA,sha256=RBKNqXzn4ZXj-sC2Zc444pD545l1H2c0_wx3AuuFGgg,1604
+pycinante-0.0.5rc0.dist-info/WHEEL,sha256=fS9sRbCBHs7VFcwJLnLXN1MZRR0_TVTxvXKzOnaSFs8,110
+pycinante-0.0.5rc0.dist-info/top_level.txt,sha256=81kWiM5MOSKr4A-N9eEveHOcsEQPas684MnOSTYa9V8,16
+pycinante-0.0.5rc0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pycinante-0.0.5rc0.dist-info/RECORD,,
