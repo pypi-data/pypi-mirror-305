@@ -1,0 +1,17 @@
+rag_assistant/.gitignore,sha256=XLj6EeceyQtDPyukfTL1keSmhAHtS_pfsBwSPwG_Wvs,21
+rag_assistant/RagAssistant.py,sha256=4X_QcS__TgvImCLVcju3M7qQTTmdXKKJAUhBV2I1gjk,11057
+rag_assistant/__init__.py,sha256=42wdPA92iGJiE3n-UoqOzDtE6gGBRgBvVbQSM75cGP4,664
+rag_assistant/config.json,sha256=JOeGWuv8glE3v7aAS-PgCkpZCE71XY0WMwm8Zq0WrRc,1334
+rag_assistant/config.yaml,sha256=FoaxMk5TUcjaE3zytZ8GP8SrkNePajDGYO8ACSzBKB0,814
+rag_assistant/favicon-32x32.png,sha256=YYVsf-GoBjby7cSdCnQreWk0N04HVIsxasXo5fiaKGo,1447
+rag_assistant/gradio_tabs/chat_tab.py,sha256=gBammdyasf4RKDfDv8BsnNwlLCzyRiP_sULO7PYgm8c,9627
+rag_assistant/gradio_tabs/document_edits_tab.py,sha256=69VfG0a0iOglTbg751R9tmH6Y-0OSLf4qYLvy9lFWPc,2604
+rag_assistant/gradio_tabs/document_tab.py,sha256=dXgN_Jsa-tAYbRtSsQ1RzESucXFSH6RbX6ey0h0RVdA,4184
+rag_assistant/gradio_ui.py,sha256=xbIExixrR3VghdsXeSB5CBUAq0jnNUNFNzxgWWR7UGk,3267
+rag_assistant/main.py,sha256=dYZvU0ND6vor4spS1ADJU9ko2z7YHZvx8GTYpGklRQg,2489
+rag_assistant/template/config_template.json,sha256=q3cKY0RPtfobfEaT8sG74wROKKmzxVUeew90HOTIVu4,1283
+rag_assistant/utils/configure.py,sha256=t4eCj1qM0pX9RY-HsLiSVK_D0Y8H4_gIi_LFDao-dAc,2968
+rag_assistant-0.2.5.dev1.dist-info/METADATA,sha256=cn0sU8svb5UuMezQmKahYHyYDohaRVGy_Rg-fOaDRSs,3049
+rag_assistant-0.2.5.dev1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+rag_assistant-0.2.5.dev1.dist-info/entry_points.txt,sha256=IM-GFpHcDood5AlAxmDCXiTkBqJChtBDZFgKxYWhJf0,57
+rag_assistant-0.2.5.dev1.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+rag_assistant=rag_assistant.main:main
+
