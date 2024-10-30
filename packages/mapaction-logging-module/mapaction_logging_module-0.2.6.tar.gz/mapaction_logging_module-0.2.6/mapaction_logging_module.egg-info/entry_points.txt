@@ -1,0 +1,3 @@
+[console_scripts]
+mapaction-logging-dashboard = mapaction_logging.dashboard.run_dashboard:main
+
