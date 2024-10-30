@@ -1,0 +1,10 @@
+changelog_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+changelog_manager/__main__.py,sha256=QCsAIFnfPfsRuoKLLD5ppwpyIMmYZBqVxe1afYRQSn4,2764
+changelog_manager/_version.py,sha256=8UhoYEXHs1Oai7BW_ExBmuwWnRI-yMG_u1fQAXMizHQ,22
+changelog_manager/utils.py,sha256=FWSXyWIq-nOHsTpmnLaF49lbpqR_zw19uB33mi2ICak,3376
+changelog_manager-1.4.0.dist-info/LICENSE,sha256=vaHuZwbb3j-ufPg7GLkiICxEQSUrvpfbbw6vWNs71Tw,1061
+changelog_manager-1.4.0.dist-info/METADATA,sha256=KFAceUaUqe-vDD9RMRY9wdE--aGy5ow3WoENCvtZ2MU,2170
+changelog_manager-1.4.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+changelog_manager-1.4.0.dist-info/entry_points.txt,sha256=CJidzUg0i7y12C-hFfqblSyOXcqoDyVKElKr_skUjxk,69
+changelog_manager-1.4.0.dist-info/top_level.txt,sha256=MsxlXwH-Bfoing9zVxDS439BLbf-GewfDFXxI5zXJ_c,18
+changelog_manager-1.4.0.dist-info/RECORD,,
