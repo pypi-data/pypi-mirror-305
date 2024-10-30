@@ -1,0 +1,12 @@
+aind_ophys_utils/__init__.py,sha256=7ymv8fv5ZC9HfTQHrb5xTWZhw2wqV4jfpT-_45AbdhE,41
+aind_ophys_utils/array_utils.py,sha256=XtNAHXvQRK-9j9AuKaupMuqWtuwQ5crk8EDvagS70Yw,17440
+aind_ophys_utils/dff.py,sha256=Ix8c1wPI06mRb5znWBm7dtuJES-e-YG9wxE6j1gCm1U,5454
+aind_ophys_utils/motion_border_utils.py,sha256=gKrEplKH8ZfGQ9Fyjyw2rBalw-xovUhgOiP0MQWFYv4,4784
+aind_ophys_utils/signal_utils.py,sha256=Rj2inQy2RW6mDF8waUIkfD29COgKpkLvr7oa4NOwDV4,9227
+aind_ophys_utils/summary_images.py,sha256=UxDLu6vQHQEsE10z6uvGXL-kks0VgS4rmh9-JCoZBxs,9610
+aind_ophys_utils/video_utils.py,sha256=U_--9ReilGT3-DmXWyTARHjsAyhRyfJDodha1jqSi2o,3218
+aind_ophys_utils-0.0.8.dist-info/LICENSE,sha256=U0Y7B3gZJHXpjJVLgTQjM8e_c8w4JJpLgGhIdsoFR1Y,1092
+aind_ophys_utils-0.0.8.dist-info/METADATA,sha256=Y4iyiqJ4Tx3yYv7W5jkO6OEOymVGsdK8cDXOBLYBJdM,5704
+aind_ophys_utils-0.0.8.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+aind_ophys_utils-0.0.8.dist-info/top_level.txt,sha256=nqGHceqecAD0OXKRPkEnRGLhDzttdIpZtuAf17FHQ7U,17
+aind_ophys_utils-0.0.8.dist-info/RECORD,,
