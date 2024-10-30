@@ -1,0 +1,14 @@
+dfols/__init__.py,sha256=19cgsqpElsxNRqwnyZbbQBw5vyZKUqHmu96PFM_rlvM,1605
+dfols/controller.py,sha256=Jffyao_z7wcQf1WEQtv2smnNew8HXGguWuUPLbgVuCc,52487
+dfols/diagnostic_info.py,sha256=kEcFCjD2rk39XRa90ocEaQvJWc0wj_ZPpQkOulVIM-k,6106
+dfols/hessian.py,sha256=sExx4J4KoGwHItbthX2odosB2ONbQFvLdlcod7PIh4k,4262
+dfols/model.py,sha256=1Npj3fJvMv66bKu_RIzLLI-2tyzPWOsKuyv-YUjcv2c,20711
+dfols/params.py,sha256=GzJGO0TByH1X3B0NbLOCOqmYG8dRiKPKjjX7or_fOqI,18342
+dfols/solver.py,sha256=NUzjOYxwTyabh1wxWnhpjmqgC4wppq8miLGtZ9PMeyA,64029
+dfols/trust_region.py,sha256=JbHLBDw7H88a3cIMuialh7kpMNGjL3Lp9JsjrBNpDWQ,28231
+dfols/util.py,sha256=efGVAKPb7YrHya1IOgyzacwa_h0u2jHHs5FhuxUlYDg,10282
+DFO_LS-1.5.3.dist-info/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+DFO_LS-1.5.3.dist-info/METADATA,sha256=dMHJW0Bv7rc0qoRGmaoTsorVaqgMVVOfqphFrBpO_mI,8069
+DFO_LS-1.5.3.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+DFO_LS-1.5.3.dist-info/top_level.txt,sha256=UfxRhaDN8HQx2_l17KbrDrERJ90OCN7VKkDMpYYbRLU,6
+DFO_LS-1.5.3.dist-info/RECORD,,
