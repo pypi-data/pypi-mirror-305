@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: hyojun-p
+Version: 0.1
+Summary: A simple example package for Hyojun
+Home-page: https://github.com/hyojun42/hyojun_package
+Author: Kim Hyojun
+Author-email: hyojun@example.com
+License: UNKNOWN
+Keywords: python package,pypi,hyojun_p
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+
+UNKNOWN
+
+
