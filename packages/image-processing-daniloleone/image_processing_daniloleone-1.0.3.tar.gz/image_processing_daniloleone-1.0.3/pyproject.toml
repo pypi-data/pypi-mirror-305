@@ -1,0 +1,22 @@
+[project]
+name = "image-processing_daniloleone"
+version = "1.0.3"
+authors = [
+  { name="Danilo Leone" },
+]
+description = "Image Processing Package using Skimage"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/daniloleonecarneiro/dio-python-image-processing-package"
+Issues = "https://github.com/daniloleonecarneiro/dio-python-image-processing-package/issues"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
