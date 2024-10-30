@@ -1,0 +1,4 @@
+include atomicspy/data/*.json
+include atomicspy/data/*.csv
+include atomicspy/data/*.tsv
+include atomicspy/generate.td
