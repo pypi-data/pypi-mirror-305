@@ -1,0 +1,274 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools>=61.2",
+    "setuptools_scm",
+]
+
+[project]
+authors = [{name = "Common Partial Wave Analysis", email = "compwa-admin@ep1.rub.de"}]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python",
+    "Topic :: Documentation",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = [
+    "Sphinx",
+    "attrs >=20.1.0", # on_setattr and https://www.attrs.org/en/stable/api.html#next-gen
+    "docutils",
+]
+description = "Sphinx role for linking to PDG reviews and listing"
+dynamic = ["version"]
+keywords = [
+    "particle data group",
+    "pdg",
+    "reference",
+    "sphinx",
+]
+license = {text = "BSD 3-Clause License"}
+maintainers = [{email = "compwa-admin@ep1.rub.de"}]
+name = "sphinx-hep-pdgref"
+requires-python = ">=3.9"
+
+[project.readme]
+content-type = "text/markdown"
+file = "README.md"
+
+[project.urls]
+Changelog = "https://github.com/ComPWA/sphinx-hep-pdgref/releases"
+Documentation = "https://github.com/ComPWA/sphinx-hep-pdgref/blob/main/README.md"
+Source = "https://github.com/ComPWA/sphinx-hep-pdgref"
+Tracker = "https://github.com/ComPWA/sphinx-hep-pdgref/issues"
+
+[dependency-groups]
+dev = [
+    "ruff",
+    {include-group = "style"},
+    {include-group = "test"},
+]
+style = [
+    "mypy",
+    {include-group = "types"},
+]
+test = [
+    "pyquery",
+    "pytest",
+    "pytest-cov",
+    "pytest-xdist",
+]
+types = [
+    "pytest",
+    "types-docutils",
+    "types-setuptools",
+]
+
+[tool.setuptools]
+include-package-data = true
+license-files = ["LICENSE"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[tool.setuptools.packages.find]
+namespaces = false
+where = ["src"]
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+version_scheme = "only-version"
+write_to = "src/version.py"
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+
+[tool.mypy]
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+files = [
+    "**/*.py",
+    "**/*.pyi",
+]
+show_error_codes = true
+warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+check_untyped_defs = true
+disallow_incomplete_defs = false
+disallow_untyped_defs = false
+module = ["tests.*"]
+
+[[tool.mypy.overrides]]
+ignore_errors = true
+module = ["typings.*"]
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = ["pyquery.*"]
+
+[tool.pyright]
+exclude = [
+    "**/.git",
+    "**/.ipynb_checkpoints",
+    "**/.mypy_cache",
+    "**/.pytest_cache",
+    "**/.tox",
+    "**/.venv/",
+    "**/__pycache__",
+    "**/_build",
+]
+reportGeneralTypeIssues = false
+reportMissingImports = false
+reportMissingParameterType = false
+reportMissingTypeArgument = false
+reportUnboundVariable = false
+reportUnknownArgumentType = false
+reportUnknownMemberType = false
+reportUnknownParameterType = false
+reportUnknownVariableType = false
+reportUntypedFunctionDecorator = false
+reportUnusedClass = true
+reportUnusedFunction = true
+reportUnusedImport = true
+reportUnusedVariable = true
+typeCheckingMode = "strict"
+venv = ".venv"
+venvPath = "."
+
+[tool.pytest.ini_options]
+addopts = [
+    "--color=yes",
+    "--doctest-continue-on-failure",
+    "--doctest-modules",
+    "--durations=3",
+]
+filterwarnings = [
+    "error",
+    "ignore:'imghdr' is deprecated and slated for removal in Python 3.13:DeprecationWarning",
+    "ignore:The distutils package is deprecated.*:DeprecationWarning",
+]
+markers = ["slow: marks tests as slow (deselect with '-m \"not slow\"')"]
+testpaths = [
+    "src",
+    "tests",
+]
+
+[tool.ruff]
+preview = true
+show-fixes = true
+src = [
+    "src",
+    "tests",
+]
+
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
+
+[tool.ruff.lint]
+ignore = [
+    "ANN401",
+    "ARG001",
+    "COM812",
+    "CPY001",
+    "D101",
+    "D102",
+    "D103",
+    "D105",
+    "D107",
+    "D203",
+    "D213",
+    "D407",
+    "D416",
+    "DOC",
+    "E501",
+    "FURB101",
+    "FURB103",
+    "FURB140",
+    "G004",
+    "ISC001",
+    "PLW1514",
+    "PT001",
+    "PTH",
+    "SIM108",
+    "UP036",
+]
+select = ["ALL"]
+task-tags = ["cspell"]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+[tool.ruff.lint.per-file-ignores]
+"setup.py" = ["D100"]
+"tests/*" = [
+    "ANN",
+    "D",
+    "FBT001",
+    "INP001",
+    "PGH001",
+    "PLC2701",
+    "PLR0913",
+    "PLR2004",
+    "PLR6301",
+    "S101",
+    "SLF001",
+    "T20",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.tomlsort]
+all = false
+ignore_case = true
+in_place = true
+sort_first = [
+    "build-system",
+    "project",
+    "tool.setuptools",
+    "tool.setuptools_scm",
+]
+spaces_indent_inline_array = 4
+trailing_comma_inline_array = true
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist =
+    py,
+    sty,
+skip_install = True
+skip_missing_interpreters = True
+skipsdist = True
+
+[testenv]
+allowlist_externals =
+    pytest
+commands =
+    pytest {posargs:src tests} \
+        --cov-fail-under=90 \
+        --cov-report=html \
+        --cov-report=xml \
+        --cov=sphinx_hep_pdgref
+description = Run all unit tests
+passenv = *
+
+[testenv:sty]
+allowlist_externals =
+    pre-commit
+commands =
+    pre-commit run --all-files {posargs}
+description = Perform all linting, formatting, and spelling checks
+"""
