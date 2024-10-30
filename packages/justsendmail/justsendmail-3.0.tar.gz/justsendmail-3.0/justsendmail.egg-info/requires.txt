@@ -1,0 +1,6 @@
+myl-discovery>=0.5.7
+
+[dev]
+black
+pyinstaller
+mypy
