@@ -1,0 +1,10 @@
+sfst_transduce.cpython-310-i386-linux-gnu.so,sha256=ysdo7C8BDQhCRuDasAW78Uxt_-D_VpelqYxWqMCOmIg,693937
+sfst_transduce-1.2.1.dist-info/top_level.txt,sha256=j4ZrgNBgPQ-ImEOznpEUsr-bay9S88rvdWXgV0xggrg,15
+sfst_transduce-1.2.1.dist-info/RECORD,,
+sfst_transduce-1.2.1.dist-info/LICENSE,sha256=ucr1ErXYP34WGrYr35yRX0dx47vJWiOGodJH-AoB_mc,15123
+sfst_transduce-1.2.1.dist-info/METADATA,sha256=DP6X5JgBSgxPDX5EpX9yyUkdLFbtfwSvTF0cK-UPNiA,4032
+sfst_transduce-1.2.1.dist-info/WHEEL,sha256=hXzi3fUaa64xXsOhKCJ9QqzIEDDySaeO3Uhlr98nVEw,110
+sfst_transduce/__init__.pyi,sha256=X608KO93EvUocMD5LRgx8JeofRV0UCL8UZOiZtKasgg,450
+sfst_transduce/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sfst_transduce.libs/libstdc++-d2a021ba.so.6.0.32,sha256=1zr_iwGwEBe95gyKdgiw7C4Y1RR9ijV40j66rk4elzg,3537349
+sfst_transduce.libs/libgcc_s-f3fb5a36.so.1,sha256=SrjjCCuY7RHj-T9JLrY9XFMgCCpYD9Qmezr4uoJGVEQ,168321
