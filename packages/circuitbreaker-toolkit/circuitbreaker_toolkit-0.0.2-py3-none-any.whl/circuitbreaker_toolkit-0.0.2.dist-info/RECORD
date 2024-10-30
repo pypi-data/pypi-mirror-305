@@ -1,0 +1,10 @@
+circuitbreaker_toolkit/__about__.py,sha256=95KVDReUoqNJW5RnIUCIUg_wx82wsAdFiAaR_g-MLJc,126
+circuitbreaker_toolkit/__init__.py,sha256=3ffMAtw8CdrY4Czutm4FNyKPj0MjvbxjF9JGSG_VMX0,104
+circuitbreaker_toolkit/breaker.py,sha256=Y4eREW4zIiCm8HpBPcZDZyUjL3Q64S9MIlKVMlCFPFQ,10940
+circuitbreaker_toolkit/defaults.py,sha256=6rVs5dY4RIiuIuoNGixNB4WKjKwC7R8blpt6zrEbivc,310
+circuitbreaker_toolkit/exceptions.py,sha256=zIVO421971nr5juDu7wnT9xkGWScBqxnnl-JVtYzdUg,1179
+circuitbreaker_toolkit/simple.py,sha256=7vNWVdOviuoa1BOL3cHmDwG2QLg2TI_Of492PT4dH-g,1825
+circuitbreaker_toolkit-0.0.2.dist-info/METADATA,sha256=06-_qBBeRgq77_D9SYUlCUspBnFI_EEbksULgIpvEk4,1548
+circuitbreaker_toolkit-0.0.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+circuitbreaker_toolkit-0.0.2.dist-info/licenses/LICENSE.txt,sha256=w4GBimZq2cCMxl_Mlic1uc_1sQ786zt6sRstK1747-M,1115
+circuitbreaker_toolkit-0.0.2.dist-info/RECORD,,
