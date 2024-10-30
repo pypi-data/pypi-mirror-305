@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: gitpt
+Version: 0.1.0
+Summary: An LLM based git commit message creator.
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1)
+Requires-Dist: langchain-ollama (>=0.2.0,<0.3.0)
+Requires-Dist: langchain-openai (>=0.2.4,<0.3.0)
+Description-Content-Type: text/markdown
+
+# hackathon-4
+
+Hackathon 4 - October 2024
+
+1. Download ollama from https://ollama.com/
+1. In the terminal run `ollama pull gemma2`
+   ( the model will be downloaded into `~/.ollama/models/blobs` on mac)
+1. Create virtual environment for python: `python -m venv venv`
+1. Activate virtual environemnt: `source venv/bin/activate`
+1. Install requirements: `pip install -r requirements.txt`
+1. CD into folder of project
+1. Install project into venv `pip install --editable .` Setup file will create keyword to utilize cli
+1. Type `gitpt` to interact with cli, `gitpt --help` to see available options to pass.
+

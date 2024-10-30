@@ -1,0 +1,12 @@
+gitpt/get_diffs.sh,sha256=QlSlrMnwHyCR-M7VrLFc514uQblaqD17HrOZIzblyTs,64
+gitpt/gitpt.py,sha256=qmGVu84aYY2_DefaaziYrXI5eeucqt-AYmRxvi9IwP8,4587
+gitpt/prompts/prompt_txt.md,sha256=fZ9ffUH3zA_RfMVNjQgR-xzL7mFfUuNaj6iWKCcoSl4,920
+gitpt/prompts/small_prompt.md,sha256=nTys-9jwUWA5eBwmgWFIR6rg46zURtjEN5V46D1zOao,646
+gitpt/prompts/verbose_prompt.md,sha256=0bQwVblZHb1PPKNadj0rs4wItja2NWkOS3S54lD85QQ,696
+gitpt/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitpt/utils/llm_helper.py,sha256=XYTfJvOpMzN_ihOqrsBJ_MP00a-ZOjB7Tau2tASBzTU,2736
+gitpt/utils/spinner.py,sha256=Mc-FVisrzLCOMKlhBq1JrSbc1dCoZ2TLrNtkRgH_uYY,611
+gitpt-0.1.0.dist-info/METADATA,sha256=dmUvfKmXEokWaJr_eRSNIz5wf4so04AHo8VwyFm1zQ8,1201
+gitpt-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+gitpt-0.1.0.dist-info/entry_points.txt,sha256=zLv73AGU_v9Khf7QNmVbkRgn9JHnK1NYWgvpZ5zuF_8,52
+gitpt-0.1.0.dist-info/RECORD,,
