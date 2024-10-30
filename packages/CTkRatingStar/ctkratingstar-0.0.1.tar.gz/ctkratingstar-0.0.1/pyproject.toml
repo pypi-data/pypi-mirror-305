@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CTkRatingStar"
+version = "0.0.1"
+authors = [
+  { name="ZachVFX", email="zachallrd@gmail.com" },
+]
+description = "A customizable star rating widget for CustomTkinter applications."
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["customtkinter", "star", "rating", "widget"]
+license = { text = "MIT License" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "customtkinter",
+  "pillow",
+]
+
+[project.urls]
+Homepage = "https://github.com/ZachVFXX/CtkRatingStar/tree/main"
+Issues = "https://github.com/ZachVFXX/CtkRatingStar/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]

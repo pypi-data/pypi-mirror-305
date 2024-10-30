@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/CTkRatingStar.egg-info/PKG-INFO
+src/CTkRatingStar.egg-info/SOURCES.txt
+src/CTkRatingStar.egg-info/dependency_links.txt
+src/CTkRatingStar.egg-info/requires.txt
+src/CTkRatingStar.egg-info/top_level.txt
+src/CTkStarRating/__init__.py
+src/CTkStarRating/ctk_star_rating.py
+src/CTkStarRating/assets/empty_star.png
+src/CTkStarRating/assets/full_star.png
+src/CTkStarRating/assets/full_star_hover.png
+src/CTkStarRating/assets/hover_star.png
