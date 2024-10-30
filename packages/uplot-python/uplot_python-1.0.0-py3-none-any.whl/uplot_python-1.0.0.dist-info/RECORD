@@ -1,0 +1,16 @@
+uplot/__init__.py,sha256=cNNmW1r6MVagQ85Otp-Ms55B63KoVTutayVYDDt4Q40,306
+uplot/color_picker.py,sha256=tBcc4t1gN2spSBqmy7gY827GvpzPE2u8N8-6xUMv-YY,962
+uplot/exceptions.py,sha256=iMQrMn8yzcU95-g0vL1Lg03M5FB8vo4ckJpZXEb0TyE,248
+uplot/generate_html.py,sha256=CiwaJZtIShSNAufidH74OCzdJB-7lrm9-f4MDi_AR60,3698
+uplot/plot.py,sha256=GugDtmx2nqcxmwZ20LEbaX06lX0Swvncb9-136tTXqM,654
+uplot/plot2.py,sha256=PmEsGyBEFD0vvvfvD5LYah-hV2Lp48saviqhkGqtWDE,4504
+uplot/utils.py,sha256=0cuQ8XWcDCm0hFvhtUHtt2OeLWf6ujwfSvKokTxuiCQ,775
+uplot/write_html_tempfile.py,sha256=gYbp-btAItW4CX1Wjt2ufhcptdlA0ckFK-xFXA92tGw,722
+uplot/static/__init__.py,sha256=1mykIjCDK2TC5EfbjCTNxfOtJx3P-hIFgbHQEtBfM_o,71
+uplot/static/uPlot.iife.js,sha256=ZVvIqjN4Hochxa9rWfFpnAPJvalRqnSmq1GKwgzEMm0,120184
+uplot/static/uPlot.min.css,sha256=PxIc1KmXtjTgeoh2WIUAGOR1wm8L3dh0EJqNOCwZ3oc,1839
+uplot/static/uPlot.mousewheel.js,sha256=p2CcCwxxafvNqXsxw-zrqUUogxZ1URZhxWK59B0-tgw,4543
+uplot_python-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+uplot_python-1.0.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+uplot_python-1.0.0.dist-info/METADATA,sha256=b9XQy0hZ17t7ks58s_wIYSOGBDqGwNJHGSIEHAOAh4g,2537
+uplot_python-1.0.0.dist-info/RECORD,,
