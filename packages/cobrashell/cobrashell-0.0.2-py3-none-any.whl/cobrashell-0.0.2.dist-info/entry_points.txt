@@ -1,0 +1,4 @@
+[console_scripts]
+snake=snakeshell.shell:run_shell
+snk=snakeshell.shell:run_shell
+

@@ -1,0 +1,16 @@
+snakeshell/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snakeshell/__main__.py,sha256=yOhSI2QSujzZMImPpj0MUOJDorAJhWG1vA1DTaPbWLY,84
+snakeshell/console/__init__.py,sha256=TB8pXf8XMw2ip8dinzPv28yeuJM1WnKKCmMgT2NXX2Y,196
+snakeshell/console/command_line.py,sha256=XM35c2WxZy3-uGoGqExdRtPz2Nyj2kq5av-eQfSB1nQ,4305
+snakeshell/console/cursor.py,sha256=uDyEeJ1-Q55hN1YDlqHAxfTpSOTD_6MfusVTKM7L4ms,633
+snakeshell/console/prompt.py,sha256=wKwmidWQwmIYpNopUEaF3si6Kdlikq0Vfs1kYs_cvkQ,1136
+snakeshell/console/stream.py,sha256=Mvcc2HfN1ikMZFhzDbv875ucVHS7i5Egn21_ZdA_l1M,820
+snakeshell/grammar.py,sha256=UZJC76J70cNEUXfQq5B182ctUV7_Ij2XjTsoMkJ9iAs,1333
+snakeshell/parser.py,sha256=wqi2agHPIOQ86w7Uk_znVMl11MY4QDQwNzyP0I1FOgY,2162
+snakeshell/shell.py,sha256=tzfLPv01DqCLcrnDzlFZOAtCDmj6PVCineaXPXcqeHY,1334
+snakeshell/tree.py,sha256=pjuXoe_hPldCfvOL2soVU6fLRM3z707aW6fz-0sXGHc,8219
+cobrashell-0.0.2.dist-info/LICENSE,sha256=hdQGeAlah0SMA00fV0oAkQx8ANcZJqiBd7-gzwxazDk,1069
+cobrashell-0.0.2.dist-info/METADATA,sha256=a2Hwrm3jtp-OkjH3WbI2aM_2XiZrD48uX3fmnwIUXJs,4018
+cobrashell-0.0.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+cobrashell-0.0.2.dist-info/entry_points.txt,sha256=hcU8pcRDgSgkUkck8Yf_25SvyQ9PiNRZTH5euloEZkU,83
+cobrashell-0.0.2.dist-info/RECORD,,
