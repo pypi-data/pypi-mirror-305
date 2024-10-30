@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+financial_report_cu.egg-info/PKG-INFO
+financial_report_cu.egg-info/SOURCES.txt
+financial_report_cu.egg-info/dependency_links.txt
+financial_report_cu.egg-info/requires.txt
+financial_report_cu.egg-info/top_level.txt
