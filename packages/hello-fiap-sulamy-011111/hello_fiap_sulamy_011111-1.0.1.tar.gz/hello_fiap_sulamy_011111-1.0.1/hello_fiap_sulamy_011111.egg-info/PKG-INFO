@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: hello-fiap-sulamy-011111
+Version: 1.0.1
+Summary: Uma biblioteca para demonstrar como subir no pypi
+Home-page: 
+Author: Sulamy morais
+Author-email: 
+License: MIT
+Description-Content-Type: text/markdown
+
+# Hello Fiap
+
+A simple example library.
+
+## Licença
+
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
