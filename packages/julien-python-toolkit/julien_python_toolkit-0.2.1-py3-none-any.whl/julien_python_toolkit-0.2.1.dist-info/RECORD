@@ -1,0 +1,11 @@
+julien_python_toolkit/__init__.py,sha256=mMFcy9ER3lPb7hkxRAwSh-myMVCYJ2oJHthvmqVudPo,214
+julien_python_toolkit/email_logger.py,sha256=fmCvR3Gm_sa0lz2Y2Oz2Z90ftOsRhxYnq5gekIKmDCs,1990
+julien_python_toolkit/email_sender.py,sha256=8zvBlOsCnzCzsu-Tq-_7dp8PuS8RVDobalC8denn4JU,3996
+julien_python_toolkit/file_utilities.py,sha256=uyGcFu-W2emJxqEA7ga_OjbkXOxwC1zL_iO4PU2IHl4,356
+julien_python_toolkit/google_services.py,sha256=fi7vAzKXgZPOLbcWMWgb-QZnwMWLGYpIFUbshDQ4ywQ,14982
+julien_python_toolkit/log_utilities.py,sha256=yukCf7cUiuMYmH_nhOX0USUYBQlZkRS6Kc4qP8PhK-w,3407
+julien_python_toolkit-0.2.1.dist-info/LICENSE.txt,sha256=r57bRR9Vw2Ofdh3_KZ9TmKCPg00boM3sHNe4gzdpHlI,720
+julien_python_toolkit-0.2.1.dist-info/METADATA,sha256=9dLfw23jpaV1VtgJNB39Fmm_R2eOpbnHSo2PyhyTOnA,859
+julien_python_toolkit-0.2.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+julien_python_toolkit-0.2.1.dist-info/top_level.txt,sha256=CJQtwdeqYA-xduhhpHSKXwINYvOlJ74LxIfi_Q7olDs,22
+julien_python_toolkit-0.2.1.dist-info/RECORD,,
