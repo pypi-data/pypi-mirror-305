@@ -1,0 +1,9 @@
+PyYAML
+pandas
+playwright
+colorama
+tabulate
+python-slugify
+click
+openpyxl
+pypandoc
