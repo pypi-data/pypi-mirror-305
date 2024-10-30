@@ -1,0 +1,5 @@
+[console_scripts]
+tetos = tetos.__main__:tts
+
+[gui_scripts]
+
