@@ -1,0 +1,273 @@
+botrun_app:
+  name: Perplexity Like Search
+  description: 有上網搜尋功能的 chatbot
+  mode: chatbot
+workflow:
+  nodes:
+  - type: start
+    id: b77c451a-dd38-46cf-b049-5d15c08ff767
+    title: Start
+    desc: ''
+    input_variables: []
+    output_variables:
+    - variable_name: user_input
+    print_start: false
+    print_stream: false
+    print_complete: false
+  - type: llm
+    id: a07779e3-6d5c-40d4-abff-6adc0d19dfd7
+    title: Generate Questions By LLM
+    desc: ''
+    input_variables: []
+    output_variables:
+    - variable_name: llm_output
+    print_start: false
+    print_stream: true
+    print_complete: false
+    model:
+      completion_params: {}
+      name: anthropic/claude-3-5-sonnet-20241022
+    prompt_template:
+    - role: user
+      content: "\n    你是一個專業的調查員，你會依據以下問題，去網路上搜尋相關資料，並且回答使用者。\n    當使用者輸入一個問題時，你會\n\
+        \    1. 理解查詢：理解用戶輸入的查詢。這不僅僅是簡單的關鍵字匹配，而是深入分析查詢的上下文和意圖，以便更準確地理解用戶需求。\n    2.\
+        \ 重構查詢：在理解查詢後，你會重構查詢以適應其搜索和分析模型。這包括將用戶的自然語言問題轉換為可以在網路上有效搜索的訊息格式，從而提高搜索效率和結果的相關性。\n\
+        \    3. 條列重構查詢：將重構後的查詢，條列成多個子問題，每個子問題都是一個可以在網路上搜尋到的具體問題。\n\n    以下是使用者輸入的問題:\n\
+        \    {{#b77c451a-dd38-46cf-b049-5d15c08ff767.user_input#}}\n\n  請使用以下 JSON\
+        \ 格式嚴格回應,只包含問題內容:\n  \n    \"第1個子問題\",\n    \"第2個子問題\",\n    ...\n    \"最後一個子問題\"\
+        \n    ]\n"
+    context: {}
+    vision: {}
+  - type: code
+    id: c5df820f-2d06-4777-844a-6e5d1764da11
+    title: Split Question List
+    desc: ''
+    input_variables:
+    - node_id: a07779e3-6d5c-40d4-abff-6adc0d19dfd7
+      variable_name: llm_output
+    output_variables:
+    - variable_name: question_list
+    print_start: false
+    print_stream: false
+    print_complete: false
+    code: "\nimport json\ndef main(llm_output):\n    question_list = json.loads(llm_output)\n\
+      \    return {\"question_list\": question_list}\n        "
+  - - type: iteration
+      id: 3edd6517-77d7-4bcb-a963-0519f2caae42
+      title: Iteration
+      desc: ''
+      input_variables: []
+      output_variables: []
+      print_start: false
+      print_stream: false
+      print_complete: false
+      input_selector:
+        node_id: c5df820f-2d06-4777-844a-6e5d1764da11
+        variable_name: question_list
+      output_selector:
+        node_id: 950c7705-5101-4a2e-afd5-32daaa9cc810
+        variable_name: results
+      is_async: true
+    - type: http-request
+      id: 291b6aad-2628-4415-8638-fc68efc5f65a
+      title: Google Search Question
+      desc: ''
+      input_variables: []
+      output_variables:
+      - variable_name: status_code
+      - variable_name: body
+      - variable_name: headers
+      print_start: true
+      print_stream: false
+      print_complete: true
+      authorization:
+        type: none
+        config: null
+      body:
+        type: json
+        data:
+          query: '{{#3edd6517-77d7-4bcb-a963-0519f2caae42.item#}}'
+          num: 5
+      headers: ''
+      method: post
+      params: ''
+      timeout:
+        total: 30.0
+      url: https://botrun-flow-lang-fastapi-dev-36186877499.asia-east1.run.app/api/search
+    - type: code
+      id: c443d6ee-7e1b-459f-9a3a-ea246d55a787
+      title: Generating question to links map {question1:[link1, link2, ...], question2:[link1,
+        link2, ...]}
+      desc: ''
+      input_variables:
+      - node_id: 3edd6517-77d7-4bcb-a963-0519f2caae42
+        variable_name: item
+      - node_id: 291b6aad-2628-4415-8638-fc68efc5f65a
+        variable_name: body
+      output_variables:
+      - variable_name: search_question
+      - variable_name: links
+      print_start: true
+      print_stream: false
+      print_complete: true
+      code: "\nimport json\nfrom urllib.parse import quote\ndef main(item, body):\n\
+        \    search_results = json.loads(body)\n    items = search_results.get(\"\
+        items\", [])\n    links = [item.get(\"link\") for item in items if item.get(\"\
+        link\")]\n    final_links = []\n    for link in links:\n        print(f\"\
+        link: {link}\")\n        final_links.append(quote(link, safe=':/'))\n    print(f\"\
+        final_links: {final_links}\")\n    return {\n        \"search_question\":\
+        \ item,\n        \"links\": final_links    \n    }\n        "
+    - - type: iteration
+        id: ae290387-5d71-4751-9e8b-94241ed42f3e
+        title: Iteration Get All Pages
+        desc: ''
+        input_variables: []
+        output_variables: []
+        print_start: false
+        print_stream: false
+        print_complete: false
+        input_selector:
+          node_id: c443d6ee-7e1b-459f-9a3a-ea246d55a787
+          variable_name: links
+        output_selector:
+          node_id: 76ea97af-5c6f-4b9b-be83-7fd42ec72198
+          variable_name: result
+        is_async: true
+      - type: http-request
+        id: c24960c9-adbf-4d71-aed1-e5e1e8a6755d
+        title: Scraping Web Page
+        desc: ''
+        input_variables: []
+        output_variables:
+        - variable_name: status_code
+        - variable_name: body
+        - variable_name: headers
+        print_start: true
+        print_stream: false
+        print_complete: true
+        authorization:
+          type: none
+          config: null
+        body:
+          type: none
+          data: null
+        headers: ''
+        method: get
+        params: 'url: {{#ae290387-5d71-4751-9e8b-94241ed42f3e.item#}}'
+        timeout:
+          total: 30.0
+        url: https://botrun-crawler-fastapi-prod-36186877499.asia-east1.run.app/scrape
+      - type: code
+        id: 76ea97af-5c6f-4b9b-be83-7fd42ec72198
+        title: Getting Scrape Result
+        desc: ''
+        input_variables:
+        - node_id: c24960c9-adbf-4d71-aed1-e5e1e8a6755d
+          variable_name: status_code
+        - node_id: c24960c9-adbf-4d71-aed1-e5e1e8a6755d
+          variable_name: body
+        - node_id: ae290387-5d71-4751-9e8b-94241ed42f3e
+          variable_name: item
+        output_variables:
+        - variable_name: result
+        print_start: true
+        print_stream: false
+        print_complete: true
+        code: "\nimport json\ndef main(status_code, body, item):\n    print(f\"url:\
+          \ {item}\")\n    print(f\"status_code: {status_code}\")\n    result={\"\
+          url\": item,}\n    if status_code == 200:\n        body = json.loads(body)\n\
+          \        print(f\"body: {body['data']['markdown']}\")\n        if body['data']['markdown'].find(\"\
+          Verify you are human by completing the action below.\") != -1:\n       \
+          \     result[\"content\"] = \"\"\n        elif body['data']['markdown'].find(\"\
+          \ ## Verifying you are human. This may take a few seconds.\") != -1:\n \
+          \           result[\"content\"] = \"\"\n        elif body['data']['markdown'].find(\"\
+          The requested URL was rejected. Please consult with your administrator\"\
+          ) != -1:\n            result[\"content\"] = \"\"\n        else:\n      \
+          \      result[\"content\"] = body['data']['markdown']\n    else:\n     \
+          \   result[\"content\"] = \"\"\n    return {\"result\": result}\n\n    \
+          \        "
+    - type: code
+      id: 950c7705-5101-4a2e-afd5-32daaa9cc810
+      title: Mapping Question To Scrape Result
+      desc: ''
+      input_variables:
+      - node_id: 3edd6517-77d7-4bcb-a963-0519f2caae42
+        variable_name: item
+      - node_id: ae290387-5d71-4751-9e8b-94241ed42f3e
+        variable_name: output
+      output_variables:
+      - variable_name: results
+      print_start: true
+      print_stream: false
+      print_complete: true
+      code: "\ndef main(item, output):\n    results=[]\n    for result in output:\n\
+        \        if result['content']:\n            result[\"question\"] = item\n\
+        \            results.append(result)\n    return {\"results\": results}\n"
+  - type: code
+    id: 12b598fe-07a6-43d4-87f3-6e43a805f5fb
+    title: Consolidating All Information
+    desc: ''
+    input_variables:
+    - node_id: b77c451a-dd38-46cf-b049-5d15c08ff767
+      variable_name: user_input
+    - node_id: 3edd6517-77d7-4bcb-a963-0519f2caae42
+      variable_name: output
+    output_variables:
+    - variable_name: all_info
+    print_start: true
+    print_stream: false
+    print_complete: true
+    code: "\nimport json\ndef main(user_input, output):\n    all_info=f\"使用者輸入的問題:\\\
+      n {user_input}\\n\\n\"\n    output_text=json.dumps(output, ensure_ascii=False,\
+      \ indent=2)\n    all_info+=f\"網路搜尋回來的資訊:\\n {output_text}\"\n    return {\"\
+      all_info\": all_info}\n"
+  - type: code
+    id: 1b75f887-f7c8-44d0-972d-9177a4ca2490
+    title: Getting Reference Links
+    desc: ''
+    input_variables:
+    - node_id: 950c7705-5101-4a2e-afd5-32daaa9cc810
+      variable_name: results
+    output_variables:
+    - variable_name: result
+    print_start: true
+    print_stream: false
+    print_complete: true
+    code: "\ndef main(results):\n    print(f\"[Getting Reference Links] results: length:\
+      \ {len(results)}\")\n    sources=[]\n    for result in results:\n        sources.append(result.get(\"\
+      url\"))\n    sources = list(set(sources))\n    text=\"參考資料:\\n\"\n    for source\
+      \ in sources:\n        text+=f\"- {source}\\n\"\n    if len(sources) > 0:\n\
+      \        return {\"result\": text}\n    else:\n        return {\"result\": \"\
+      \"}\n"
+  - type: llm
+    id: 0fabf660-c5f3-4b6e-b9c2-51a4ec9b938d
+    title: Final Answer By LLM
+    desc: ''
+    input_variables: []
+    output_variables:
+    - variable_name: llm_output
+    print_start: false
+    print_stream: true
+    print_complete: false
+    model:
+      completion_params: {}
+      name: gemini/gemini-1.5-pro
+    prompt_template:
+    - role: user
+      content: "\n    你是一個專業的資訊分析員，你會依據以下使用者的問題，以及網路搜尋到的資訊，統整出最完整的回答。\n\n    {{#12b598fe-07a6-43d4-87f3-6e43a805f5fb.all_info#}}\n\
+        \n    你在最後會得到一個參考資料的連結，請直接把這些連結，完全不要修改，你也不要加任何字，附在回答的最後面。\n    {{#1b75f887-f7c8-44d0-972d-9177a4ca2490.result#}}\n\
+        \    \n    "
+    context: {}
+    vision: {}
+  - type: answer
+    id: 80467d54-1bad-43cb-b822-76f0633cfc0d
+    title: Answer
+    desc: ''
+    input_variables:
+    - node_id: 0fabf660-c5f3-4b6e-b9c2-51a4ec9b938d
+      variable_name: llm_output
+    output_variables:
+    - variable_name: answer
+    print_start: false
+    print_stream: false
+    print_complete: false
