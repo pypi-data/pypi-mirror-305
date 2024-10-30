@@ -1,0 +1,17 @@
+extractous-0.1.5.dist-info/METADATA,sha256=IdJobnqsPTPCWy0EKpkIGE1uUtSYMPAERPLdCdrsZnM,1730
+extractous-0.1.5.dist-info/WHEEL,sha256=6U_Cb_MPDy3kODaD2JihKFpJ5S149SSTQAFts1XRf_o,94
+extractous/__init__.py,sha256=IF_NQoScLIfBdejbskpSsoi-K458JUVC_U12R0NaQYI,411
+extractous/awt.dll,sha256=PyC-fnhCvxnM2nEcjfs5eSSDpFtCMOcbGKEiD0bR_Ps,1474624
+extractous/fontmanager.dll,sha256=26dSMvgf3iVj0MUcEEY-eVi1m6akl6mZ9IGuUXEdTVc,864848
+extractous/freetype.dll,sha256=ly_tTPdIarGHLeqJVqwrgBSjYQOdU-COaJY3tSzClwA,547400
+extractous/java.dll,sha256=QGKHoWXsfnMCfCJpCyxv9tXTWNKfOX08bgUPSI8gHyk,10752
+extractous/javaaccessbridge.dll,sha256=vwrq7DquQDLMqqfRC0krjkfjtLi3Y49hgmIW6t5urXI,307288
+extractous/javajpeg.dll,sha256=bgnnsCBBH_VnF04a_cMz91wr5tl0RnVwE6_MWBCEv7c,181832
+extractous/jawt.dll,sha256=-QjgPYqTk9d4yIVTB-ZHt8Zbu73aC_b9xYdpKy-zkyg,21056
+extractous/jsound.dll,sha256=hpbKfwod8bQNIGuypslph_igMmK36msMi3b8QFQtxBk,61000
+extractous/jvm.dll,sha256=U-KFn4MEFm5287WLzFwr-MrVaiP9zkTOfK4D0MjOkQI,9728
+extractous/lcms.dll,sha256=THqnE0qVMbCjLzQY67vpWxGnOsNrt-3FvvXGgNgwthA,257088
+extractous/libtika_native.dll,sha256=r56O8P7TrOcvbqTXLUs2T0Q_-3gJ8Yuvbd-Z_ZAWWpk,103968768
+extractous/mlib_image.dll,sha256=PFPIucA-90diZVRDkD-oXSGGUzQQVl-x0A-ufo0zHow,525392
+extractous/_extractous.pyd,sha256=ZWXgE4qoyZBceYXh2OmTxKkkaXkSqEA5JAuLFNpeU7A,572928
+extractous-0.1.5.dist-info/RECORD,,
