@@ -1,0 +1,2 @@
+[console_scripts]
+downie = downie.cli.main:cli

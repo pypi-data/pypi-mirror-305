@@ -1,0 +1,140 @@
+Metadata-Version: 2.1
+Name: downie
+Version: 0.2.0
+Summary: Advanced video and subtitle downloader
+Author-email: Brett Yang <hello@brettyang.au>
+License: MIT License
+        
+        Copyright (c) 2024 Brett Yang
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/where-is-brett/downie
+Project-URL: Documentation, https://downie.readthedocs.io/
+Project-URL: Bug Tracker, https://github.com/where-is-brett/downie/issues
+Project-URL: Source Code, https://github.com/where-is-brett/downie
+Keywords: video,download,youtube,subtitles,ffmpeg
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: yt-dlp>=2023.11.16
+Requires-Dist: ffmpeg-python>=0.2.0
+Requires-Dist: pysrt>=1.1.2
+Requires-Dist: webvtt-py>=0.4.6
+Requires-Dist: chardet>=4.0.0
+Requires-Dist: schedule>=1.1.0
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: requests>=2.28.0
+Requires-Dist: click>=8.0.0
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: typing-extensions>=4.0.0
+Provides-Extra: dev
+Requires-Dist: black>=23.1.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: pre-commit>=3.0.0; extra == "dev"
+Requires-Dist: pytest>=7.3.1; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.10.0; extra == "dev"
+Requires-Dist: responses>=0.23.1; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs>=1.5.0; extra == "docs"
+Requires-Dist: mkdocs-material>=9.0.0; extra == "docs"
+Requires-Dist: mkdocstrings>=0.24.0; extra == "docs"
+Requires-Dist: mkdocstrings-python>=1.7.0; extra == "docs"
+Requires-Dist: pymdown-extensions>=10.0; extra == "docs"
+
+# Downie: Advanced Video and Subtitle Downloader
+
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Documentation Status](https://readthedocs.org/projects/downie/badge/?version=latest)](https://downie.readthedocs.io/en/latest/?badge=latest)
+
+Downie is a powerful, feature-rich video and subtitle downloader with advanced processing capabilities.
+
+## Features
+
+- Download videos from multiple platforms (YouTube, Vimeo, etc.)
+- Process videos (resize, crop, HDR to SDR conversion)
+- Download and process subtitles
+- Batch processing support
+- Configurable settings
+
+## Quick Start
+
+### Installation
+
+```bash
+# Install ffmpeg first
+# On macOS:
+brew install ffmpeg
+
+# On Ubuntu/Debian:
+sudo apt install ffmpeg
+
+# Install downie
+pip install downie
+```
+
+### Basic Usage
+
+```bash
+# Download video
+downie video download "https://youtube.com/watch?v=example"
+
+# Download with processing
+downie video download "https://youtube.com/watch?v=example" --process --resize 1080p
+
+# Download subtitles
+downie subtitle download "https://youtube.com/watch?v=example" -l en,es
+```
+
+## Documentation
+
+Full documentation is available at [downie.readthedocs.io](https://downie.readthedocs.io/), including:
+
+- [Installation Guide](https://downie.readthedocs.io/en/latest/guides/installation/)
+- [Quick Start Guide](https://downie.readthedocs.io/en/latest/guides/quickstart/)
+- [Advanced Usage](https://downie.readthedocs.io/en/latest/guides/advanced-usage/)
+- [API Reference](https://downie.readthedocs.io/en/latest/api/)
+- [Contributing Guide](https://downie.readthedocs.io/en/latest/contributing/)
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) for the core downloading functionality
+- [FFmpeg](https://ffmpeg.org/) for video processing capabilities
