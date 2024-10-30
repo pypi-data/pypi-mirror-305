@@ -1,0 +1,8 @@
+dist/
+.ruff_cache/
+.idea/
+__pypackages__/
+*.db
+*.json
+*.ndjson
+*.sqlite
