@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: cglbtest
+Version: 0.1.4
+Summary: cglbtest Framework
+Home-page: https://cesgenslab.cloud/
+Author: CesGensLaB
+Author-email: contact@cesgenlab.fr
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: coloredlogs (>=15.0.1,<16.0.0)
+Requires-Dist: jinja2 (>=3.1.4,<4.0.0)
+Requires-Dist: netcdf4 (>=1.7.2,<2.0.0)
+Requires-Dist: opencv-python (>=4.10.0.84,<5.0.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Description-Content-Type: text/markdown
+
+# cglbtest Framework
+
+cglbtest Framework
+
+## Usage
+
+### Install
+
+```
+pip install cglbtest
+```
+
+### Get started
+
+```
+cd path/to/test/folder
+cglb run .
+```
+
+### Dev
+
+## Install
+
+after install prerequisites poetry 
+
+poetry dependances + manually netCDF4 an cv2 for now + pytest
+
+```
+poetry install
+pip install netCDF4
+pip install opencv-python
+pip install pytest
+```
+
+
+### Tests
+
+```
+pytest tests/
+```
+
+```
+# only comparison errors
+pytest -s tests/unit_tests/01_errors/
+```
+
+### With docker
+
+Use the cglb poetry image
+```
+docker run -it --rm -v ./:/mnt -w /mnt cglbdev/cicd-python-packager:3-11 bash
+```
+
+In container example:
+
+Normally do following but for now not working because netCDF4 explore is not installed
+```
+# install dependances
+poetry install
+poetry run pytest
+```
+
+then manually
+
+```
+# install dependances
+poetry install
+
+# activate venv for manual actions
+poetry shell
+
+# for now manually => externalize in plugin
+pip install netCDF4
+
+# in cicd context pytest
+pip install pytest pytest-html pytest-xdist pytest-progress
+
+# run all tests
+pytest tests/
+
+# run 1 test
+pytest -s tests/unit_tests/01_errors/test_errors.py::TestErrors::test_01_equals
+```
+
+

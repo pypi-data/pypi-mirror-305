@@ -1,0 +1,530 @@
+{% set ns = namespace(statuses=['']) %}
+{% for file in data.files %}
+    {% set ns.statuses = ns.statuses + ['SKIPPED' if file.skipped else ('ERROR' if file.error else ('WARNING' if file.warnings_nb > 0 else 'SUCCESS'))] %}
+{% endfor %}
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">{{ meta.title }} {{ data.name }}</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/resemblejs@5.0.0/resemble.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.34.0.min.js" charset="utf-8"></script>
+
+<script>{% include 'utils_compare_report_dom.js' %}</script>
+<script>{% include 'utils_compare_report_palette.js' %}</script>
+<script>{% include 'utils_compare_report_chartlibs_plotly.js' %}</script>
+<script>{% include 'utils_compare_report_chartlibs_echarts.js' %}</script>
+<script>{% include 'utils_compare_report_curves.js' %}</script>
+<script>{% include 'utils_compare_report_anim.js' %}</script>
+<script>{% include 'utils_compare_report_framesseries.js' %}</script>
+<script>
+function load_animations(){
+  // console.log(global_animations)
+  for (i in global_animations.test) {
+    const data_test = global_animations.test[i]
+    const data_ref  = global_animations.reference[i]
+    // console.log(data_test)
+    const parent = dom.get("animations_"+(1+parseInt(i)))
+    if (data_test) {
+      for (j in data_test) {
+        dom.elt_p(parent,"h4",null,null,data_test.title)
+        const div = dom.elt_p(parent,"div")
+        Anim.create(div, data_test[j], data_ref[j])
+      }
+      // console.log(data_test)
+
+    }
+  }  
+}
+</script>
+<script>
+function load_framesseries(){
+  for (i in global_framesseries.test) {
+    const data_test = global_framesseries.test[i]
+    const data_ref  = global_framesseries.reference[i]
+    const parent = dom.get("framesseries_"+(1+parseInt(i)))
+    if (data_test) {
+      Framesseries.create(parent, data_test, data_ref)
+    }
+  }
+}
+</script>
+<script>
+  const NB_FILES = {{ data.files|length }};
+  const NB_SECTIONS = NB_FILES+1;
+  const actions = {
+    toogle: function(id) {
+      const x = dom.get(id);
+      x.style.display = (x.style.display === "none") ? "" : "none";
+    },
+    open_file: function(route) {
+      const arr = window.location.pathname.split('/');
+      arr.pop();arr.pop();
+      const root = arr.join('/');
+      const url = root + '/' +  route;
+      switch (dom.getRadio("parameters", "open_type")) {
+        case "browser": window.open(url, '_blank'); break;
+        case "vscode":  window.open('vscode://file' + url, '_blank'); break;
+      }
+    },
+    see_details: function(index) {
+      switch (dom.getRadio("parameters", "page")) {
+        case "onepage":
+          location.hash = "#section_" + index;
+          break;
+        case "tabs":
+          // tabs active
+          var children =  dom.get("tabs").children;
+          for (i = 0; i < children.length; i++) { children[i].className = children[i].className.replace(" active", "") }
+          children[parseInt(index)].className += " active";
+          // display section
+          for (i = 0; i < NB_SECTIONS; i++) { 
+            const section = dom.get("section_"+i);
+            if (section) section.style.display = "none"; 
+          }
+          dom.get("section_"+index).style.display = "";
+          break;
+      }
+    },
+    click_tab: function(event, index) {      
+      this.see_details(index)
+    },
+    render_page: function() {
+      switch (dom.getRadio("parameters", "page")) {
+        case "onepage":
+          dom.get("tabs").style.display = "none";
+          for (i = 0; i < NB_SECTIONS; i++) {
+            const section = dom.get("section_"+i);
+            console.log(section)
+            if (section) section.style.display = "";
+          }
+          window.scrollTo(0,0);
+          break;
+        case "tabs":
+          dom.get("tabs").style.display = "";
+          this.see_details(0);
+            window.scrollTo(0,0);
+            break;
+      }
+    },
+  }
+</script>
+<script>
+  // GEN
+  function load_curves() {
+    curvemgmt.load_group_curves()
+  }
+</script>
+<style type="text/css">
+  *:not(code):not(pre):not(td):not(th) {
+      font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+      font-family-monospace: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  }
+  h1, h2, h3 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  form { margin:0; padding:0;}
+  h4 {
+    margin-bottom: 0px;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  table, th, td {
+    border: 1px solid #aaa;
+    font-size:0.8rem;
+    padding:1px 4px;
+    font-family: monospace;
+    white-space: nowrap;
+  }
+
+  fieldset {
+    border-radius: 5px;
+    color:#999999;
+    font-size:0.9rem;
+    border: 1px #999999 solid;
+  }
+
+  #section_parameters {
+    border-style: inset;
+
+    border-width: 1px;
+    padding:15px;
+    
+    background-color: #fafafa;
+  }
+  
+
+  .ERROR    { background-color:#c52a0f20;color:#c52a0f; }
+  .WARNING  { background-color:#bcbc0620;color:#bcbc06; }
+  .SUCCESS  { background-color:#16840020;color:#168400; }
+  .test-bg-80 { background-color:#{{ meta.color_test }}80; }
+  .test-bg-50 { background-color:#{{ meta.color_test }}50; }
+  .test-bg-20 { background-color:#{{ meta.color_test }}20; }
+  .refe-bg-80 { background-color:#{{ meta.color_reference }}80; }
+  .refe-bg-50 { background-color:#{{ meta.color_reference }}50; }
+  .refe-bg-20 { background-color:#{{ meta.color_reference }}20; }
+  th {
+    background-color:#eee;color:#333;
+  }
+  .number {
+    text-align: right;
+  }
+  .center {
+    text-align: center;
+  }
+  a, a:link, a:visited, a:hover, a:active { color: #666; }
+  .footer {text-align: center; font-size: 0.9rem; color:#999; padding:40px;}
+
+  .img_reader {
+    max-width: 600px;
+    max-height: 400px;
+  }
+</style>
+<style type="text/css">
+.noselect {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+</style>
+<style type="text/css">
+.tabs {
+  display: table;
+  width: 100%;
+}
+.tabs .tab, .tabs .tabend {
+  display: table-cell;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #ccc;
+}
+.tabs .tab {
+  width: 1px;
+  padding:10px 15px;
+  border-radius: 8px 8px 0 0;
+  margin-left: 10px;
+  color: #777;
+}
+.tabs .tab:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+.tabs .tab.active {
+  border: 1px solid #ccc;
+  border-bottom: 1px solid transparent;
+  color: inherit;
+}
+</style>
+  </head>
+  <body>
+
+    <!--TITLE-->
+    <h1>
+      {% if meta.image %}<img height="40" src="{{ meta.image }}"/>{% endif %}
+      {{ meta.title }}
+      {{ data.name }}
+    </h1>
+
+    <!--PARAMETERS-->
+    <div>Preferences <button onclick="actions.toogle('section_parameters')">Show/Hide</button></div>
+    <div id="section_parameters">
+      <form name="parameters">
+        {% set parameters={
+          'page':         { 'label': 'Display',   'vals': ['onepage', 'tabs'] , 'action': 'actions.render_page()' },
+          'open_type':    { 'label': 'Open in',   'vals': ['browser', 'vscode'] },
+          'js_lib':       { 'label': 'Chart Lib', 'vals': ['plotly', 'echarts'] , 'action': 'load_curves()' },
+        } %}
+        {% for id, item in parameters.items() %}
+          <fieldset style="display: inline-block;">
+            <legend>{{ item.label }}</legend>
+            {% for value in item.vals %}
+              <div>
+                <input type="radio" id="{{ id }}_{{ value }}" name="{{ id }}" value="{{ value }}"  {% if loop.index == 1 %} checked {% endif %} {% if item.action %} onclick="{{ item.action }}" {% endif %}/>
+                <label for="{{ id }}_{{ value }}">{{ value }}</label>
+              </div>
+            {% endfor %}
+          </fieldset>
+        {% endfor %}
+      </form>
+    </div>
+
+
+    <!-- TABS -->
+    <div id="tabs" class="tabs noselect" style="display: none;">
+      <div class="tab active" onclick="actions.click_tab(event, 0)">Summary</div>
+      {% for file in data.files %}
+      {% if not file.skipped %}
+      <div class="tab {{ ns.statuses[loop.index] }}" onclick="actions.click_tab(event, {{ loop.index }})"><span class="">{{ file.name }}</span></div>
+      {% endif %}
+      {% endfor %}
+      <div class="tabend"></div>
+
+    </div>    
+    
+    <!--SUMMARY-->
+    <section id="section_0" style="display: none;">
+    <h2>Summary</h2>
+
+    <h3>Files <button onclick="actions.toogle('section_summary_files')">Show/Hide</button></h3>
+    <div id="section_summary_files">
+      <table>
+        <tr>
+          <th rowspan="2">#</th>
+          <th rowspan="2">Status</th>
+          <th rowspan="2">Name</th>
+          <th rowspan="2">Details</th>
+          <th rowspan="2" class="test-bg-50">Open test</th>
+          <th rowspan="2" class="refe-bg-50">Open Ref</th>
+          <th rowspan="2">Error nb</th>
+          <th rowspan="2">Warning nb</th>
+          <th rowspan="2">Information</th>
+          <th colspan="2">Nb Lines - Raw&nbsp;&nbsp;&nbsp;</th>
+          <th colspan="2">Nb Lines - Ignore</th>
+          <th colspan="2">Nb Lines - Number</th>
+          <th rowspan="2">Reader</th>
+        </tr>
+        <tr>
+          <th class="test-bg-50">Test</th>
+          <th class="refe-bg-50">Ref.</th>
+          <th class="test-bg-50">Test</th>
+          <th class="refe-bg-50">Ref.</th>
+          <th class="test-bg-50">Test</th>
+          <th class="refe-bg-50">Ref.</th>
+        </tr>
+        {% for file in data.files %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td class="{{ ns.statuses[loop.index] }}">{{ ns.statuses[loop.index] }}</td>
+          <td>{{ file.name }}</td>
+          <td class="center">{% if not file.skipped %}<button onclick="actions.see_details({{ loop.index }})">[...]</button>{% endif %}</td>
+          <td class="center test-bg-20"><button onclick="actions.open_file('test/{{ file.name }}')">[...]</button></td>
+          <td class="center refe-bg-20"><button onclick="actions.open_file('reference/{{ file.name }}')">[...]</button></td>
+          <td class="number">{{ file.errors_nb }}</td>
+          <td class="number">{{ file.warnings_nb }}</td>
+          <td>
+            {% if file.error %}<span>{{ file.error }}</span>{% endif %}
+          </td>
+          <td class="number test-bg-20">{{ file.file_1.raw_lines_number }}</td>
+          <td class="number refe-bg-20">{{ file.file_2.raw_lines_number }}</td>
+          <td class="number test-bg-20">{{ file.file_1.ignore_lines_number }}</td>
+          <td class="number refe-bg-20">{{ file.file_2.ignore_lines_number }}</td>
+          <td class="number test-bg-20">{{ file.file_1.floats_lines_number }}</td>
+          <td class="number refe-bg-20">{{ file.file_2.floats_lines_number }}</td>
+          <td class="">{{ file.file_1.reader }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    
+
+    <h3>Variables and Rules <button onclick="actions.toogle('section_variables_and_rules')">Show/Hide</button></h3>
+    <div id="section_variables_and_rules" style="display:none;">
+      <table>
+        <tr>
+          <th>Variable</th>
+          <th>Value</th>
+        </tr>
+        <tr><td>Threshold - Relative vs Absolute Error Min</td><td class="number">{{ data.thresholds.relative_vs_absolute_min }}</td></tr>
+        <tr><td>Threshold - Relative Error Min</td><td class="number">{{ data.thresholds.relative_error_min }}</td></tr>
+        <tr><td>Threshold - Relative Error Max</td><td class="number">{{ data.thresholds.relative_error_max }}</td></tr>
+        <tr><td>Threshold - Absolute Error Min</td><td class="number">{{ data.thresholds.absolute_error_min }}</td></tr>
+        <tr><td>Threshold - Absolute Error Max</td><td class="number">{{ data.thresholds.absolute_error_max }}</td></tr>
+      </table>
+    </div>
+
+    </section>
+
+    
+    {% for file in data.files %}
+    {% if not file.skipped %}
+
+    <section id="section_{{ loop.index }}" style="display: none;">
+
+      <h2>
+        {{ file.name }}
+        <span class="{{ ns.statuses[loop.index] }}">{{ ns.statuses[loop.index] }}</span>
+        <span style="font-size:0.9rem;color:#666;">(#{{ loop.index }})</span>
+        <button onclick="actions.toogle('file_content_{{ loop.index }}')">Show/Hide</button>
+        -
+        <button onclick="actions.open_file('test/{{ file.name }}')" >Open Test</button>
+        <button onclick="actions.open_file('reference/{{ file.name }}')" >Open Ref.</button>
+
+
+      </h2>
+
+      <div id="file_content_{{ loop.index }}" style="{% if not file.error and meta.report_success_collapse %} display:none;{% endif %}">
+      
+        <!--GENERAL ERROR-->
+        {% if file.error %}
+          <div>
+            <h3>Error</h3>
+            <span class="ERROR"><code>{{ file.error }}</code></span>
+          </div>
+        {% endif %}
+
+        <!--CURVES-->
+        {% if file.file_1.curves %}
+        <h3>Curves <button onclick="actions.toogle('curves_{{ loop.index }}')">Show/Hide</button></h3>
+        <div id="curves_{{ loop.index }}" style="display: flex;flex-wrap: wrap;"></div>
+        {% endif %}
+
+        <!--ANIMATIONS-->
+        {% if file.file_1.animations %}
+        <h3>Animations <button onclick="actions.toogle('animations_{{ loop.index }}')">Show/Hide</button></h3>
+        <div id="animations_{{ loop.index }}" ></div>
+        {% endif %}
+
+        <!--ANIMATIONS-->
+        {% if file.file_1.reader_category == "img" %}
+        
+        <img class="img_reader" src="{{ file.name }}">
+        <img class="img_reader" src="../reference/{{ file.name }}">
+        
+        {% endif %}
+        
+
+        <!--FRAMESSERIES-->
+        {% if file.file_1.framesseries %}
+        <h3>Frames Series <button onclick="actions.toogle('framesseries_{{ loop.index }}')">Show/Hide</button></h3>
+        <div id="framesseries_{{ loop.index }}" ></div>
+        {% endif %}
+
+        <!--ignore_lines-->
+        {% if file.file_1.ignore_lines or file.file_2.ignore_lines %}
+          <div>
+            <h3>Ignoring lines <button onclick="actions.toogle('ignore_{{ loop.index }}')">Show/Hide</button></h3>
+            <div id="ignore_{{ loop.index }}">
+              <table>
+                <tr>
+                  <th>File</th>
+                  <th>Patterns</th>
+                  <th>Nb</th>
+                  <th>Lines</th>
+                </tr>
+                <tr>
+                  <td class="test-bg-50">Test</td>
+                  <td class="test-bg-20">{{ file.file_1.ignore_patterns }}</td>
+                  <td class="test-bg-20 number">{{ file.file_1.ignore_lines_number }}</td>
+                  <td class="test-bg-20">{{ file.file_1.ignore_lines }}</td>
+                </tr>
+                <tr>
+                  <td class="refe-bg-50">Ref.</td>
+                  <td class="refe-bg-20">{{ file.file_2.ignore_patterns }}</td>
+                  <td class="refe-bg-20 number">{{ file.file_2.ignore_lines_number }}</td>
+                  <td class="refe-bg-20">{{ file.file_2.ignore_lines }}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        {% endif %}
+
+        <!--error_rule_patterns-->
+        {% if file.file_1.error_rule_patterns %}
+          <div>
+            <h3>Error on string pattern search <button onclick="actions.toogle('error_rule_patterns_{{ loop.index }}')">Show/Hide</button></h3>
+            <div id="error_rule_patterns_{{ loop.index }}" style="{% if not file.file_1.error_rule_patterns.found %} display:none;{% endif %}">
+              <table>
+                <tr>
+                  <th>Pattern</th>
+                  <th>Lines</th>
+                </tr>
+                {% for item in file.file_1.error_rule_patterns.data %}
+                <tr>
+                  <td>{{ item.pattern }}</td>
+                  <td>{{ item.lines }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+            </div>
+          </div>
+        {% endif %}
+
+
+        <!--Comparison Errors or Warnings-->
+        {% if  file.errors or file.warnings %}
+          <div>
+            <h3>Comparison Numbers Errors or Warnings</h3>
+            <table>
+              <tr>
+                <th rowspan="2">Type</th>
+                <th rowspan="2">Message</th>
+                <th colspan="2">Value</th>
+                <th colspan="2">Line Number</th>
+                <th rowspan="2">Error</th>
+                <th rowspan="2">Visu</th>
+                <th colspan="2">Line(s)</th>
+              </tr>
+              <tr>
+                <th class="test-bg-50">Test</th>
+                <th class="refe-bg-50">Ref.</th>
+                <th class="test-bg-50">Test</th>
+                <th class="refe-bg-50">Ref.</th>
+                <th class="test-bg-50">Test</th>
+                <th class="refe-bg-50">Ref.</th>
+              </tr>
+
+
+              {% for error_type in [{"data_key": "errors", "class": "ERROR"}, {"data_key": "warnings", "class": "WARNING"}] %}
+              {% for item in file[error_type.data_key] %}
+              <tr>
+                <td class="{{error_type.class}}">{{error_type.class}}</td>
+                <td>{{ item.message }}</td>
+                <td class="number test-bg-20">{{ item.test }}</td>
+                <td class="number refe-bg-20">{{ item.reference }}</td>
+                <td class="number test-bg-20">{{ item.line_nb_1 }}</td>
+                <td class="number refe-bg-20">{{ item.line_nb_1 }}</td>
+                <td class="number">
+                  {% if item.error_type == 'relative' %}{{ '%0.2f' % (item.error*100)|float}}%{% endif %}
+                  {% if item.error_type == 'absolute' %}{{ item.error }}{% endif %}
+                </td>
+              <td>
+                <div style="width:200px;height:20px">
+                  <div class="test-bg-80" style="width:{{100*(item.test|abs)/([(item.test|abs), (item.reference|abs)]|max)}}%;height:10px"></div>
+                  <div class="refe-bg-80" style="width:{{100*(item.reference|abs)/([(item.test|abs), (item.reference|abs)]|max)}}%; height:10px"></div>
+                </div>
+              </td>
+              <td class="test-bg-20"><pre>{{ item.line_1 }}</pre></td>
+              <td class="refe-bg-20"><pre>{{ item.line_2 }}</pre></td>
+              </tr>
+              {% endfor %}
+              {% endfor %}
+              
+            </table>
+          </div>
+        {% endif %}
+      </div>
+
+    </section>
+
+    {% endif %}
+    {% endfor %}
+
+    <!--FOOTER-->
+    <div class="footer">
+      Powered by <a href="https://cesgenslab.cloud" target="_blank">CesGensLaB</a>
+    </div>
+    <script type="text/javascript">
+      const global_curves = {
+        test :      [ {% for file in data.files %} {{ file.file_1.curves or 'null' }} , {% endfor %} ],
+        reference : [ {% for file in data.files %} {{ file.file_2.curves or 'null' }} , {% endfor %} ],
+      }
+      actions.render_page();
+      load_curves();
+    </script>
+    <script type="text/javascript">
+      const global_animations = {
+        test :      [ {% for file in data.files %} {{ file.file_1.animations or 'null' }} , {% endfor %} ],
+        reference : [ {% for file in data.files %} {{ file.file_2.animations or 'null' }} , {% endfor %} ],
+      };
+      load_animations();
+    </script>
+    <script type="text/javascript">
+      const global_framesseries = {
+        test :      [ {% for file in data.files %} {{ file.file_1.framesseries or 'null' }} , {% endfor %} ],
+        reference : [ {% for file in data.files %} {{ file.file_2.framesseries or 'null' }} , {% endfor %} ],
+      };
+      load_framesseries();
+    </script>
+  </body>
+</html>
