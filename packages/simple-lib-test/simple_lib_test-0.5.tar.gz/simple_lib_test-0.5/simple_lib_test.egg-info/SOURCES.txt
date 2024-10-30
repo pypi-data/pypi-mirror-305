@@ -1,0 +1,7 @@
+setup.py
+simple_lib_test/__init__.py
+simple_lib_test/simple_lib_test.py
+simple_lib_test.egg-info/PKG-INFO
+simple_lib_test.egg-info/SOURCES.txt
+simple_lib_test.egg-info/dependency_links.txt
+simple_lib_test.egg-info/top_level.txt
