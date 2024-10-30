@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+copkmeans-ht/__init__.py
+copkmeans-ht/cop_kmeans.py
+copkmeans-ht/run_ckm.py
+copkmeans_ht.egg-info/PKG-INFO
+copkmeans_ht.egg-info/SOURCES.txt
+copkmeans_ht.egg-info/dependency_links.txt
+copkmeans_ht.egg-info/not-zip-safe
+copkmeans_ht.egg-info/top_level.txt
