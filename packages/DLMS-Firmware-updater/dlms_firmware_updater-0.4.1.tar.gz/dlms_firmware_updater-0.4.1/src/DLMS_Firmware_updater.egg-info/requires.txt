@@ -1,0 +1,5 @@
+DLMS_SPODES_client==0.12.4
+DLMS-SPODES-communications>=1.4.8
+DLMS-SPODES>=0.80.1
+pyinstaller>=6.2
+build>=1.2.1

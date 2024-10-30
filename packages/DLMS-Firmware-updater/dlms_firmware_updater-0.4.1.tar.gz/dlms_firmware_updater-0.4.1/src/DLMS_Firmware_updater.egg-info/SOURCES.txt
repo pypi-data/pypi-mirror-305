@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/DLMSFirmwareUpdater/config.toml
+src/DLMSFirmwareUpdater/main.py
+src/DLMS_Firmware_updater.egg-info/PKG-INFO
+src/DLMS_Firmware_updater.egg-info/SOURCES.txt
+src/DLMS_Firmware_updater.egg-info/dependency_links.txt
+src/DLMS_Firmware_updater.egg-info/entry_points.txt
+src/DLMS_Firmware_updater.egg-info/requires.txt
+src/DLMS_Firmware_updater.egg-info/top_level.txt
+test/client_log.txt
+test/config.toml
+test/test_updater.py
+test/Firmwares/firmwares.dat
