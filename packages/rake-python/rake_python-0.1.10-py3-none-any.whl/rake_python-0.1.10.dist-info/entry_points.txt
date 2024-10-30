@@ -1,0 +1,2 @@
+[console_scripts]
+rakestart = rake.__main__:main
