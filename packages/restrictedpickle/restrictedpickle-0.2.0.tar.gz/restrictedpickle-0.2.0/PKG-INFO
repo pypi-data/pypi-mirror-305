@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: restrictedpickle
+Version: 0.2.0
+Summary: Python with braces
+Home-page: https://github.com/ershov/restrictedpickle
+Author: Yury Ershov
+License: GPL3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# restrictedpickle - Safe Pickle for Python
+
+This is a safe version of Python's pickle module. It will only pickle and unpickle safe tyes like int, float, str, list, dict, etc. It will not unpickle malicious code. It is safe to use `restrictedpickle` on untrusted data.
+
+This module is compatible standard pickle module. You can use `restrictedpickle` as a drop-in replacement for `pickle`.
+
+## Installation
+
+```bash
+pip install restrictedpickle
+```
