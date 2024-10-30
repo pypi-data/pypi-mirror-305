@@ -1,0 +1,2 @@
+[console_scripts]
+admindocs-cli = educabiz.__main__:cli
