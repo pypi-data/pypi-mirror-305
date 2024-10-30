@@ -1,0 +1,10 @@
+CodonTransformer/__init__.py,sha256=QIi2bv9AlgQPx-qnUURDPPnsyOfcmfp8hjTfaq0BWRs,32
+CodonTransformer/CodonData.py,sha256=A-1y0A69XPPl3DGh0zhJbzXe8YegxX3Rv1P4D2CsrXU,23075
+CodonTransformer/CodonEvaluation.py,sha256=Ylbc3r8M2N4R2wiwuWoRwEq3EuFe7-qpqbjQ_EOjLvw,8790
+CodonTransformer/CodonJupyter.py,sha256=u2xVfUXmKWhbremhDCD7sIEd9MtnXbae36QtY7r-TL4,9803
+CodonTransformer/CodonPrediction.py,sha256=HHdqyLHdcEu1bkbfVKmn4_fswB2nMdanNYC9CJVqAZ8,30353
+CodonTransformer/CodonUtils.py,sha256=r_nkWNpzCqE5WdiBW4zMYnVPP3fA9WqeZJWRFIpmbSM,23986
+codontransformer-1.6.5.dist-info/LICENSE,sha256=cb8V6fxzqQL8mgMMqnt-rWWhsgYOpblwU7HLRdRcQtg,11550
+codontransformer-1.6.5.dist-info/METADATA,sha256=sDUjtp1R3-X03KqzKXmxRnvQLR9_QUu03z_ZOL36KWA,30003
+codontransformer-1.6.5.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+codontransformer-1.6.5.dist-info/RECORD,,
