@@ -1,0 +1,11 @@
+yidong/__init__.py,sha256=GH8-gLajNPk-IOvO9BTu43ILvix3zThpdM09Pi15_h4,55
+yidong/client.py,sha256=Yf6aIlfshq1d5P63wymfuUnKqbLX9e0_SINuUGIUClA,10841
+yidong/config.py,sha256=LfA7y2UmX1GefzCBimEv4KbCZXDjIN1ENz1a41HkY2s,263
+yidong/exception.py,sha256=PG0sdnAYyZBtdv89GCTYiEv47ZEKuyUuWhypcIqhil4,269
+yidong/model.py,sha256=2DodYd4x7kqp-_kcI4Hy_L_84dHvLkZj-_Br5idknaQ,4417
+yidong/util.py,sha256=fo0tv8gnX5ZD-LTzFUkwsbTvx1DD6LrVHjmyoJy1xrc,1719
+yidong-0.0.3.dist-info/LICENSE,sha256=UsUtL0NWkJTFwOAEJY_jxQ0jNAOMS_v1QxifeKNtLTo,1052
+yidong-0.0.3.dist-info/METADATA,sha256=awtt_uVPSeTsS0R6Y1pbo1PhdhUww2Zxa7D4ueSQEXs,752
+yidong-0.0.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+yidong-0.0.3.dist-info/entry_points.txt,sha256=4hs7gYizP9QhfdLa8UH1k1xqPnXzZ7O2YMVP1zE0r_M,45
+yidong-0.0.3.dist-info/RECORD,,
