@@ -1,0 +1,16 @@
+dpongpy/__init__.py,sha256=VDLJ18WSWJuVbA5T5Xefgc4Lnw1L7xwoPw9B-aydjIs,2562
+dpongpy/__main__.py,sha256=PASZEIeMNUFylProfFwdNZwBtYBPhIF0pF19dr8RTQg,2991
+dpongpy/controller/__init__.py,sha256=3oYgsbTJvrOqL-yDcKgHWeP1wwm6gvJfLBi8FriMXuk,5406
+dpongpy/controller/local.py,sha256=DeUMQ_9qn0cWVKlic2YQjiCUkWfqQ2Zzz43sBdPPp-Y,3465
+dpongpy/log.py,sha256=pmSrZg6TQvrLzhDy85D9UA2w7gtIcKJWJlhX-HUnVzU,95
+dpongpy/model.py,sha256=yAVl3Q5kMM1eRg_ZkVAOVwoMg9XS1XGqIciQ87OeSSY,17589
+dpongpy/remote/__init__.py,sha256=hgXRmoa2OVAXrw9h_iBHLOTTXjgjsWWqKswinCQa8Lg,2224
+dpongpy/remote/centralised/__init__.py,sha256=kb20dbc97l1vh1w4BTgOth4mpiYVWDntyrLDVl_LMxg,7081
+dpongpy/remote/presentation.py,sha256=VoW2dcviuQ30SPwgJ4FR5Tq4npRv2VIqZlbvrO0qN3c,5554
+dpongpy/remote/udp.py,sha256=kE_wbsCHUECcHKr0n4lb0V86h8qpa18ZorzdjxNz5b0,5101
+dpongpy/view.py,sha256=wEkpVWnZZ1aNnYyqU5QQEaRBgmhckOzIu0dT-PVDTeM,2523
+dpongpy-1.1.0.dist-info/LICENSE,sha256=MRmB6LSd7VbEqJQXde0qfCV0rsgjXzrkYtCh-OrkJdw,11353
+dpongpy-1.1.0.dist-info/METADATA,sha256=ff2DPOoFQ_5yMixYQMnzriA_HkBS5T7-Mmmdsj8mPVc,5587
+dpongpy-1.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dpongpy-1.1.0.dist-info/entry_points.txt,sha256=RDpREfZ8nhPldqJ6z3-ssl9Mx9v9m3EDuKS204k4yis,40
+dpongpy-1.1.0.dist-info/RECORD,,
