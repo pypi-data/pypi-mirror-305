@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: snputils
+Version: 0.1.0
+Summary: SNP utils
+License: BSD 3-Clause License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy<2; python_version < "3.10"
+Requires-Dist: numpy; python_version >= "3.10"
+Requires-Dist: pandas
+Requires-Dist: pandas-stubs
+Requires-Dist: scikit-learn
+Requires-Dist: scikit-allel
+Requires-Dist: Pgenlib
+Requires-Dist: torch
+Requires-Dist: matplotlib
+Requires-Dist: joblib
+Requires-Dist: tqdm
+Requires-Dist: polars
+Provides-Extra: jupyter
+Requires-Dist: jupyterlab; extra == "jupyter"
+Provides-Extra: testing
+Requires-Dist: tox; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+Provides-Extra: docs
+Requires-Dist: pdoc; extra == "docs"
+
+[![License BSD-3](https://img.shields.io/pypi/l/snputils.svg?color=green)](https://github.com/ai-sandbox/snputils/raw/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/snputils.svg?color=green)](https://pypi.org/project/snputils)
+[![Python Version](https://img.shields.io/pypi/pyversions/snputils.svg?color=green)](https://python.org)
+[![tests](https://github.com/ai-sandbox/snputils/workflows/tests/badge.svg)](https://github.com/ai-sandbox/snputils/actions)
+
+# snputils
+
+## Installation
+
+We recommend creating a fresh Python `>= 3.8` conda environment. This package can be easily installed using `pip` after cloning the repository:
+
+```console
+(base) $ conda create -n snputils python=3.10
+(base) $ conda activate snputils
+(snputils) $ git clone https://github.com/AI-sandbox/snputils.git && cd snputils
+(snputils) $ pip install -e '.[testing,jupyter]'
+```
+
+Alternatively, you can install the package directly from the repository without cloning it:
+
+```console
+(base) $ pip install git+https://github.com/AI-sandbox/snputils.git
+```
+
+## Use snputils tools
+
+
+
+### PCA
+
+To directly run Principal Component Analysis (PCA) on SNP data, plotting the results, and saving the principal components on a `.npy` file, simply call `snputils pca` with the required arguments, see `snputils pca --help` for more information.
+
+An example of running PCA on a `.vcf` file, saving the plot in `fig.png` and the principal components in `pc.npy`:
+
+```bash
+> snputils pca --vcf_file /dataset/path/hapmap3.vcf --fig_path fig.png --npy_path pc.npy --backend sklearn
+```
