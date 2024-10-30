@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+start.py
+gHangman.egg-info/PKG-INFO
+gHangman.egg-info/SOURCES.txt
+gHangman.egg-info/dependency_links.txt
+gHangman.egg-info/entry_points.txt
+gHangman.egg-info/top_level.txt
