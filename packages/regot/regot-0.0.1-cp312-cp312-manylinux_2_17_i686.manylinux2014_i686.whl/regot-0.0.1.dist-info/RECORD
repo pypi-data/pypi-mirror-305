@@ -1,0 +1,8 @@
+regot/__init__.py,sha256=N1MCRFIz3OTQbZUheB56fhkHvfXNKmKesNrQBMRPqBs,26
+regot/_internal.cpython-312-i386-linux-gnu.so,sha256=_f8KYlzihKZvX6x8GnPd_Q7BjJsXfcV82cZkQGLWmiI,1247901
+regot.libs/libgomp-65f46eca.so.1.0.0,sha256=Zagab9rFQS08rPfVDR82oGJr9kuKwgrJok-GGlFBdCo,172293
+regot-0.0.1.dist-info/top_level.txt,sha256=8B1tcoH2s19C7yu7MBcwvOyyY1le6Og6ymoxLyqB4-c,6
+regot-0.0.1.dist-info/RECORD,,
+regot-0.0.1.dist-info/LICENSE,sha256=7KFDeFKql08fHJ0IlwVPUewCAmKHUqyBXmN2erAZKN4,1067
+regot-0.0.1.dist-info/METADATA,sha256=2E03CAyLfhL7hxAO2C799r3YZDyeMsYJqNO1sIjsgwQ,6401
+regot-0.0.1.dist-info/WHEEL,sha256=sSFCay5_yNGXh7rqvZsvJtV1sygA3kc0WLV4inTOnNQ,147
