@@ -1,0 +1,5 @@
+colorama
+FlightRadarAPI
+keyboard
+pytz
+setuptools
