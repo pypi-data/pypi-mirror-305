@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+easyPyDB/__init__.py
+easyPyDB/easyPythDB.py
+easypythdb.egg-info/PKG-INFO
+easypythdb.egg-info/SOURCES.txt
+easypythdb.egg-info/dependency_links.txt
+easypythdb.egg-info/top_level.txt
