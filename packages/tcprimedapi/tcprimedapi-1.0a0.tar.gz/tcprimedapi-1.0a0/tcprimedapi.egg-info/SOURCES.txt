@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+tcprimedapi/__init__.py
+tcprimedapi/api.py
+tcprimedapi.egg-info/PKG-INFO
+tcprimedapi.egg-info/SOURCES.txt
+tcprimedapi.egg-info/dependency_links.txt
+tcprimedapi.egg-info/requires.txt
+tcprimedapi.egg-info/top_level.txt
+tests/test_api.py
+tests/test_queries.py
