@@ -1,0 +1,15 @@
+README.md
+setup.py
+SimpleSerial/SimpleSerialMain.py
+SimpleSerial/__init__.py
+SimpleSerial/colourprint.py
+SimpleSerial/communication.py
+SimpleSerial/constants.py
+SimpleSerial/multiRead.py
+SimpleSerial.egg-info/PKG-INFO
+SimpleSerial.egg-info/SOURCES.txt
+SimpleSerial.egg-info/dependency_links.txt
+SimpleSerial.egg-info/requires.txt
+SimpleSerial.egg-info/top_level.txt
+test/test.py
+test/testlib.py
