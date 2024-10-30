@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: sdutilities
+Version: 1.3.2
+Summary: This package is intended to implement uniformity across                  SD Data Science projects.
+Author: Stephen Olsen, Taylor Ward, McKenna Magoffin, Jaffar Shaik, Evan Tucker, Chintan Dalal
+Author-email: taylorward@sociallydetermined.com,                   mckennamagoffin@sociallydetermined.com,                   chintandalal@sociallydetermined.com
+Maintainer: Chintan Dalal
+Maintainer-email: chintandalal@sociallydetermined.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools>=70.0.0
+Requires-Dist: zipp>=3.19.1
+Requires-Dist: requests>=2.32.2
+Requires-Dist: pandas>=1.2.3
+Requires-Dist: numpy<=1.23.5
+Requires-Dist: certifi>=2023.7.22
+Requires-Dist: sdcensus>=0.8.20
+Requires-Dist: us>=2.0.2
+Requires-Dist: sqlalchemy>=1.3.9
+Requires-Dist: matplotlib>=3.8.2
+Requires-Dist: Pillow>=10.0.1
+Requires-Dist: boto3>=1.17.43
+Requires-Dist: botocore>=1.19.52
+Requires-Dist: python-Levenshtein>=0.12.2
+Requires-Dist: fuzzywuzzy>=0.18.0
+Requires-Dist: fonttools>=4.47.2
+Requires-Dist: psycopg2>=2.9.9
+Requires-Dist: pytest-mock>=3.12.0
+Requires-Dist: httpx>=0.26.0
+
+# sdutilities
+
+This package is intended to implement uniformity across SD Data Science projects.
+
+Functions and Classes that are included in this package are those frequently used across a variety of projects.  We aim to make our code simplified and uniform by continuously updating both this package and the projects where the functions are applicable.
+
+## Note: The latest version of this package can be used only in Databricks and directly from Github.  To use this package in Databricks, follow the instructions below:
+1. Use the option of installing a wheel from S3
+2. Use the following uri: `s3://sdac-s3-use1-data-ocean/silver/internal/users/data_science/interim/tests/sdutilities-<version>-py3-none-any.whl` OR
+3. Always install on notebook scope as shown below, and if there any pip conflicts, please use the `--force-reinstall --no-deps` option:
+```
+# A full install
+!pip install "/dbfs/internal/users/data_science/dist/sdutilities-1.2.8.tar.gz"
+ 
+# To install only the log module
+!pip install "/dbfs/internal/users/data_science/dist/sdutilities_log-1.0.0.tar.gz"
+
+# if there are any conflicts, use the following option
+!pip install "/dbfs/internal/users/data_science/dist/sdutilities-1.2.8.tar.gz" --force-reinstall --no-deps
+```
