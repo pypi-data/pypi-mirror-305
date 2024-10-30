@@ -1,0 +1,17 @@
+linksiren/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linksiren/__main__.py,sha256=KRn8pp21gu0xDMSjwBFIAQONBoDV0GCIR_aOeBmhsmA,2205
+linksiren/arg_parser.py,sha256=nMpOY-7IwW-ckX5BQwoT20gsKJ5awyjkMU0nbEcaIB4,14154
+linksiren/impure_functions.py,sha256=sYXqEZ6uUm3Xd6HGEdTRO7p9snUGwCO71m6BxyqICVg,7796
+linksiren/mode_handlers.py,sha256=U__VQfmdsOJaF5uwXvQJc07iYE_s9DX2gHSRvDxAq_U,8325
+linksiren/pure_functions.py,sha256=qrxxuR2EF68eNdKHpUdsf19IsrH0wOu_ByqbTtmo3OM,8577
+linksiren/target.py,sha256=EX3yzfnDILReaFQ0eWH8j26Onloe7B9xRCN5_0xy_ck,15600
+linksiren/template.library-ms,sha256=5ITcBlBp3iyampvB74Rc65qhso-IweaYf-2QwiPlnXY,923
+linksiren/template.lnk,sha256=7d12Xy-NDDyA-UMdwUGooxhvenmO1xhaIe29NEoJ6Fg,2877
+linksiren/template.searchConnector-ms,sha256=PMokQFRezh_QlgR8YO_g8wcle5gSDWrAciir-c0CUpM,674
+linksiren/template.url,sha256=QyrT1RNpQyJNybbVcqN6Iv6z4nh1-5ma5QuwjRyRHUw,137
+linksiren-0.0.3.dist-info/LICENSE,sha256=G68FJo28paQhmWNlz73uD6cJqFFEXP6ykGw3v8pgGo8,1521
+linksiren-0.0.3.dist-info/METADATA,sha256=KKg45ZNxXRCTacfpy8CwnA6d5JylWVOjmnPMB9uUcsU,15849
+linksiren-0.0.3.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+linksiren-0.0.3.dist-info/entry_points.txt,sha256=aLz5ToAZfYej0pWJsNkx6sBhvsGAh24CXW7Q1f-DE58,54
+linksiren-0.0.3.dist-info/top_level.txt,sha256=ZCW61JJL29tJ-ThTHZf8OsliGOyy5OkVjX7YyauqLIo,10
+linksiren-0.0.3.dist-info/RECORD,,
