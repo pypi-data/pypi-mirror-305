@@ -1,0 +1,14 @@
+kafka_avro_helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kafka_avro_helper/consumer.py,sha256=s7X39Hkr1E6m0F5DhgRoZv_j8hsI3EuIKRi_ptvh9ME,4779
+kafka_avro_helper/producer.py,sha256=UQDisSDOWPRt6D0y394tDbYZ7HWbadvV16tzpffov_M,1981
+kafka_avro_helper/validate.py,sha256=gWGSJvCzr_IGE_GULY-Nswj9F_6OwWIfuNiHHme-qrU,2868
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/consumer.py,sha256=l7056OAqnXARM7BVnbsh68c4hgEw5xirAsJs5o1Catg,771
+tests/producer.py,sha256=4MLZNWeTsiri0NsxafzL_MTqkZQVJPxbYStaBdu8lGA,664
+tests/slow_qraphql_operation_detected.py,sha256=48Q3zPCQFzG4itjEXwBZiAdVAO3sXaJwsBBWLKe3EvI,423
+tests/user_feedback.py,sha256=NlIs1FZCSOOscEA91owMkW7hojyqsVWa18SO4DTJ6dI,386
+kafka_avro_helper-0.0.6.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kafka_avro_helper-0.0.6.dist-info/METADATA,sha256=u0QxEpxQNzFFvMVUjNFOByLEX-3jCh3NPV5iuCdnAI4,552
+kafka_avro_helper-0.0.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+kafka_avro_helper-0.0.6.dist-info/top_level.txt,sha256=jXMxg4BgwMKVDztLes2gntrtOSlBHrbY_636oK0SXGQ,24
+kafka_avro_helper-0.0.6.dist-info/RECORD,,
