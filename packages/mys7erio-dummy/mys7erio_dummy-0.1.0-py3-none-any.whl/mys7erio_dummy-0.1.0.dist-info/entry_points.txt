@@ -1,0 +1,3 @@
+[console_scripts]
+mys7erio_dummy=mys7erio_dummy.main:main
+
