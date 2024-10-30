@@ -1,0 +1,8 @@
+name: pydap_tests
+channels:
+- conda-forge
+dependencies:
+- numpy>=2.0
+- netCDF4
+- scipy
+- requests
