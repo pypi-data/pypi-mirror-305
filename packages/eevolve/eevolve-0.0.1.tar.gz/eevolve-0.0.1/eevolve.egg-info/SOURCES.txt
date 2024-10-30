@@ -1,0 +1,12 @@
+setup.py
+eevolve/__init__.py
+eevolve/agent.py
+eevolve/board.py
+eevolve/brain.py
+eevolve/game.py
+eevolve/task.py
+eevolve/utils.py
+eevolve.egg-info/PKG-INFO
+eevolve.egg-info/SOURCES.txt
+eevolve.egg-info/dependency_links.txt
+eevolve.egg-info/top_level.txt
