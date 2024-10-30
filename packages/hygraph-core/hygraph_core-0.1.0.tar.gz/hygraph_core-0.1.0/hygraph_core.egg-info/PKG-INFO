@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: hygraph-core
+Version: 0.1.0
+Summary: A package for managing and analyzing HyGraph data
+Home-page: https://github.com/yourusername/my_hygraph_package
+Author: Mouna
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# My HyGraph Package
+
+## Description
+This package provides tools for managing and analyzing HyGraph data.
+
+## Installation
+To install the package, use the following command:
+
+
+## Usage
+```python
+from my_hygraph_package.hygraph import HyGraph
+# Example usage here
+
+
