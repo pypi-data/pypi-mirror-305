@@ -1,0 +1,7 @@
+Change Log
+==========
+completly changed library architecture
+
+0.0.3 (29/10/2024)
+------------------
+- Third Release

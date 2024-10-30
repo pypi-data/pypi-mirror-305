@@ -1,0 +1,1 @@
+Hi to python community! This is a package for easier and faster creation of 2d shooters in pygame

@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyshooter2d
+Version: 0.0.4
+Summary: a package for faster and easier development of 2d shooters
+Author: Freddy Frolov
+Author-email: freddyfrolov383@gmail.com
+License: MIT
+Keywords: shooter engine
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+
+Hi to python community! This is a package for easier and faster creation of 2d shooters in pygame
+Change Log
+==========
+completly changed library architecture
+
+0.0.3 (29/10/2024)
+------------------
+- Third Release
