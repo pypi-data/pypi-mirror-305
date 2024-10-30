@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["simpledft*"]
+
+[project]
+name = "simpledft"
+version = "3.0"
+dependencies = ["numpy>=1.10"]
+requires-python = ">=3.5"
+authors = [{name = "Wanja Timm Schulze", email = "wangenau@protonmail.com"}]
+description = "A simple density functional theory code."
+readme = "README.md"
+classifiers = [
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Education",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved",
+        "License :: OSI Approved :: Apache Software License",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Topic :: Education",
+        "Topic :: Scientific/Engineering",
+        "Topic :: Scientific/Engineering :: Chemistry",
+        "Topic :: Scientific/Engineering :: Physics",
+        "Topic :: Software Development",
+]
+
+[project.urls]
+Documentation = "https://wangenau.gitlab.io/simpledft_pages"
+Issues = "https://gitlab.com/wangenau/simpledft/-/issues"
+
+[tool.ruff]
+line-length = 110
+respect-gitignore = true
+
+[tool.ruff.lint]
+ignore = [
+    "E743",  # Ambiguous function names
+]
