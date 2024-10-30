@@ -1,0 +1,9 @@
+mapaction_logging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mapaction_logging/database.py,sha256=_8QhO0Zc-vSfbxFceIOubvHchOIIHHms5-78S7xgrvA,1665
+mapaction_logging/logger.py,sha256=ct6XaMshpENuH2tVDBJISk4aR_9gTwM3_z9cYSs2Lyw,2362
+mapaction_logging/status_codes.py,sha256=htCrLBmFxkYV5FrkbkmlR2fXRhmGurE52L4VWtgqUag,290
+mapaction_logging_module-0.2.1.dist-info/LICENSE.txt,sha256=mrRN277Kj0_TpPk9o_JtAj2TD6PMnSslI8iv3Q19qTI,1065
+mapaction_logging_module-0.2.1.dist-info/METADATA,sha256=OYX00k_sCC-wSBptHVLrL6QT4ijuaZ3yBwVw2QNjS54,1786
+mapaction_logging_module-0.2.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+mapaction_logging_module-0.2.1.dist-info/top_level.txt,sha256=0EIcCVE__yA_cQ5L0Gdp-LLXLVhDkl404IYjgWncgFM,18
+mapaction_logging_module-0.2.1.dist-info/RECORD,,
