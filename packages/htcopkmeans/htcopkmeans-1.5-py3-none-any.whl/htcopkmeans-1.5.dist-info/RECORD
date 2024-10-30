@@ -1,0 +1,8 @@
+htcopkmeans/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+htcopkmeans/cop_kmeans.py,sha256=G8OquroYthOZ8aJPBOrwZIJkO_5gLaf9nJ30M4HtOoM,6342
+htcopkmeans/run_ckm.py,sha256=YIIdeamm9sJZxmbeXJy4op_Mu5s1XLh8HqFJ1zfAEd4,2768
+htcopkmeans-1.5.dist-info/LICENSE,sha256=KlDVuF33mgrYRGcLHJP7u_otJD4jEJqwTDsnOVDvoyk,1068
+htcopkmeans-1.5.dist-info/METADATA,sha256=hlzJy8ZwFsfCG_xSIp7KczB7Letjxs05bs_OmhAizZ8,5256
+htcopkmeans-1.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+htcopkmeans-1.5.dist-info/top_level.txt,sha256=7NCVZfJXp-au3hLIieRvfJ3wLIrT5fLHf30-jYXgBkw,12
+htcopkmeans-1.5.dist-info/RECORD,,
