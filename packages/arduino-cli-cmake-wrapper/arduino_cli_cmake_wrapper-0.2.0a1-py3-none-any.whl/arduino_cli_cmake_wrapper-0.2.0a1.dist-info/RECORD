@@ -1,0 +1,16 @@
+arduino_cli_cmake_wrapper/__init__.py,sha256=wMHrM81bVvP3ix7rvkYZAIR2RNPRDfVsd1lUN08FAwk,1223
+arduino_cli_cmake_wrapper/__main__.py,sha256=6TXSAd1G3xnUlLIUTiJQ1aOZDerQbIKio77Rluj5chA,166
+arduino_cli_cmake_wrapper/_version.py,sha256=qVfMMTbIzvvITObln0cwHV9kTsOW9bk3S4EqkDhDiwM,426
+arduino_cli_cmake_wrapper/builder.py,sha256=ZCc3jkIElXCfdSYg35M8pPQVYoGrJ10VoXu3O3yF-k8,4343
+arduino_cli_cmake_wrapper/cli.py,sha256=zDY-tLoOLm9Z_fswDkFgTWuf5Ty4kFmOppIgoBo0QQg,9890
+arduino_cli_cmake_wrapper/miner.py,sha256=lMBJNQahbFlvxH2rofpAuYzStPFr2n_qzpSPHClDP4Y,15688
+arduino_cli_cmake_wrapper/parser.py,sha256=WmdX7iCiwQm2_EMqTpjy99OHRj1qQCZGUD2P9Dxc7io,4633
+arduino_cli_cmake_wrapper/types.py,sha256=D17Cuc8UWd-A5YuZadEKo2GeCir15yLKiRPrFfpts8A,2495
+arduino_cli_cmake_wrapper/util.py,sha256=CwtLtiPpjhkdqiyrwekhOoy2vD0S-2k9vjSdnU34Mhc,2485
+arduino_cli_cmake_wrapper-0.2.0a1.dist-info/AUTHORS.rst,sha256=3ZhtvC8rYUS-ezwiNpKsa0q7QP6Ph56gBjyuSlVe-i4,121
+arduino_cli_cmake_wrapper-0.2.0a1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+arduino_cli_cmake_wrapper-0.2.0a1.dist-info/METADATA,sha256=qaPufEDovxvL1jRAfNmByj1rVPpW9vwlTpnmHbOrMxA,22038
+arduino_cli_cmake_wrapper-0.2.0a1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+arduino_cli_cmake_wrapper-0.2.0a1.dist-info/entry_points.txt,sha256=iJ25VnyxxuD2a5_TXEU_qfh3Gt-sVZtScWIVXBWF6pw,75
+arduino_cli_cmake_wrapper-0.2.0a1.dist-info/top_level.txt,sha256=aM5P639cM2tdADBSp5DzTneiyn0iYNli82ldVf0s28o,26
+arduino_cli_cmake_wrapper-0.2.0a1.dist-info/RECORD,,
