@@ -1,0 +1,16 @@
+predictionguard/__init__.py,sha256=7FPIQTEiGbDYGMON3AxesPwcaOWvGOBmsbsH5Bk5AP8,187
+predictionguard/client.py,sha256=sbOrewaNX6QEoCb1ms-6iof2QnpmxSOxNWqwBd6R-vg,4074
+predictionguard/version.py,sha256=eZi5jcQ5IX4v2jUDxHxq_EHp00C_uM0mYDoIqvY5ogk,52
+predictionguard/src/chat.py,sha256=GVtzGIOdTBefX9UdHzUIrrzNLUh-eTtj4oK245FWEOk,10437
+predictionguard/src/completions.py,sha256=IkJewDy1cAoq9dZHrxnLZw0ZZTONQt-drHVpEdhoaeo,3922
+predictionguard/src/embeddings.py,sha256=3zgB3Egh2wxAmBQlwjaaLmgdgvXleCoAdpHhYNckD3A,6442
+predictionguard/src/factuality.py,sha256=Vg9ZAOwZxuF_gKZE9wStPI14sTLQtLpyY1U9jL94Pek,2599
+predictionguard/src/injection.py,sha256=EEsV4ZpxbXyJ2DzM6CsYnCeJfdC8LcYymMc6NvnkoSw,2661
+predictionguard/src/pii.py,sha256=9yrpwIcpNF4I7l9_75G-vkjTzf9kiUuQH4l-YyWKLSM,2662
+predictionguard/src/tokenize.py,sha256=JIXeRItvAfr0Y0_6ciIbKJBTCy09vBZS_IR3jLq19qI,2760
+predictionguard/src/toxicity.py,sha256=itIy7gkgpgBJbN3_3Bem7vcwArVI6xhE3-0rVs5WLIo,2376
+predictionguard/src/translate.py,sha256=GCwAM6I6l2ZPm9xhlbhvne-zgOutpKLHI8v3mqsjb5Y,3255
+predictionguard-2.5.0.dist-info/LICENSE,sha256=zsMWb6Zjz6iP95kWyPkB4iEJMjybiI0G5_2nB0BNUE8,1083
+predictionguard-2.5.0.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+predictionguard-2.5.0.dist-info/METADATA,sha256=XVeqyBdPTCpFQlmVvyHHTfdTEajx3t6q4xI_ZZmr9wc,872
+predictionguard-2.5.0.dist-info/RECORD,,
