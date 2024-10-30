@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+CoAuthorNet/__init__.py
+CoAuthorNet/network_analysis.py
+CoAuthorNet/visualization.py
+CoAuthorNet.egg-info/PKG-INFO
+CoAuthorNet.egg-info/SOURCES.txt
+CoAuthorNet.egg-info/dependency_links.txt
+CoAuthorNet.egg-info/requires.txt
+CoAuthorNet.egg-info/top_level.txt
