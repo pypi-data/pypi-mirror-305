@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: atc_tracker
+Version: 0.1.0
+Summary: The Air traffic Control in your terminal
+Author: Luckyluka17
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama
+Requires-Dist: FlightRadarAPI
+Requires-Dist: keyboard
+Requires-Dist: pytz
+Requires-Dist: setuptools
+
