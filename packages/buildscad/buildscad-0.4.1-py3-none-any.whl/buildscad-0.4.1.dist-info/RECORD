@@ -1,0 +1,16 @@
+buildscad/__init__.py,sha256=OWfij0r3u3_Q29dDtXDkLryttj5zWns9WHfg_finEOw,554
+buildscad/__main__.py,sha256=mcjmitUTQQUqLT2kAyL-AGDpouJ_efc1uZy_13SsI14,1089
+buildscad/_test.py,sha256=wK70bDGgDhSRnkZ3GRbOpnBbAm83vJJIh6G0-LQ7u6U,3897
+buildscad/blocks.py,sha256=vOKAEoyOGb98n_WJKeQTl8H-AxEKGE8sLBJPtvnTHu0,3120
+buildscad/env.py,sha256=HFi5hI68cx4mzNTHvBMStnwZbS7BH6rVmpSPgzNVqEA,12048
+buildscad/globals.py,sha256=id9U2z0cfSSNKCP20kvi5FZbGDJHnwEvr7wRES7pu1E,15767
+buildscad/main.py,sha256=m2y86Ir1m95JPFxdK0g0SQL_N_tPHFOnTdplax3ODms,7732
+buildscad/openscad.peg,sha256=N2476F3BzzJUJ5vAKpFaWf-KhzEqUHMTjoGEy_SuVdk,5242
+buildscad/peg.py,sha256=X3mpoMcNNSULR36ed7yqB-RQ8XUTtLh0UUyDDfwsJxQ,3057
+buildscad/rules.py,sha256=UalrElJPdkS76AOgYidtCZFE9eJraJ17eMIYxaXH5Ss,19595
+buildscad-0.4.1.dist-info/LICENSE.txt,sha256=T9gBcPYAMBZCAswuVOZR6gVtulWYqmEXDesdSw9qKHw,340
+buildscad-0.4.1.dist-info/METADATA,sha256=UF3qS0qEjex9niKqkUyTBjgbPc3x_vNmGXtnQSANgJQ,6171
+buildscad-0.4.1.dist-info/WHEEL,sha256=cVxcB9AmuTcXqmwrtPhNK88dr7IR_b6qagTj0UvIEbY,91
+buildscad-0.4.1.dist-info/entry_points.txt,sha256=n1hQ_2rLgf5vrAPqSpjIPCMRyqYCEZYBKM5nLpLJbqM,52
+buildscad-0.4.1.dist-info/top_level.txt,sha256=0gtWtRArkEXxpopJcK9QpUdVxbprV2tFlr3hcsZZ8AA,10
+buildscad-0.4.1.dist-info/RECORD,,
