@@ -1,0 +1,2 @@
+[console_scripts]
+order_receipt_cu = order_receipt_cu.__main__:main

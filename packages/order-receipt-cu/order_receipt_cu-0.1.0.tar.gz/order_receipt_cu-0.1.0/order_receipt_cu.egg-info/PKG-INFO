@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: order_receipt_cu
+Version: 0.1.0
+Summary: Пакет для генерации чека на основе данных заказа
+Author: Egor
+Author-email: drobyazko_04@mail.ru

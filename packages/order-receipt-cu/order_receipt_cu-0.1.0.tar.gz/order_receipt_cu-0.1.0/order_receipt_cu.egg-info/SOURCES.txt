@@ -1,0 +1,8 @@
+setup.py
+order_receipt_cu/__init__.py
+order_receipt_cu/__main__.py
+order_receipt_cu.egg-info/PKG-INFO
+order_receipt_cu.egg-info/SOURCES.txt
+order_receipt_cu.egg-info/dependency_links.txt
+order_receipt_cu.egg-info/entry_points.txt
+order_receipt_cu.egg-info/top_level.txt
