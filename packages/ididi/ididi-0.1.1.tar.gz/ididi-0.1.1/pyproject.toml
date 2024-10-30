@@ -1,0 +1,76 @@
+[project]
+authors = [{name = "raceychan", email = "raceychan@gmail.com"}]
+description = "Add a short description here"
+dynamic = ["version"]
+name = "ididi"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "ididi/__init__.py"
+
+[tool.setuptools]
+py-modules = ["ididi"]
+
+[tool.pytest.ini_options]
+addopts = "-vx --strict-markers --capture=no"
+markers = [
+  "integration_test: marks tests as slow integration tests (deselect with '-m \"not integration_test\"')",
+]
+testpaths = ["tests"]
+
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.coverage.run]
+omit = [
+  # omit anything in a .local directory anywhere
+  "*/utils/*",
+]
+
+[tool.pyright]
+exclude = ["tests"]
+include = ["ididi/*.py"]
+python_version = "3.12"
+typeCheckingMode = "strict"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.environments]
+default = {solve-group = "default"}
+dev = {features = ["dev"], solve-group = "default"}
+publish = {features = ["publish"], solve-group = "default"}
+test = {features = ["test"], solve-group = "default"}
+
+[tool.pixi.pypi-dependencies]
+ididi = {path = ".", editable = true}
+
+[tool.pixi.dependencies]
+python = ">=3.12"
+
+[tool.pixi.feature.dev.dependencies]
+python-graphviz = ">=0.20.3,<0.21"
+
+[tool.pixi.feature.test.dependencies]
+pytest = ">=8.3.3"
+pytest-cov = ">=4.1.0"
+
+[tool.pixi.feature.publish.dependencies]
+hatch = ">=1.13.0,<2"
+twine = ">=5.1.1,<6"
+
+[tool.pixi.feature.publish.tasks]
+# Build into a wheel using hatch
+build = {cmd = "hatch build", inputs = ["didi/*"], outputs = ["dist/*"]}
+# Upload to custom GCP registry using twine
+check = {cmd = "twine check"}
+publish = {cmd = "twine upload --skip-existing dist/*", depends-on = [
+  "build",
+]}
+test-publish = {cmd = "twine upload --repository testpypi --skip-existing dist/"}
+
+patch = {cmd = "hatch version patch"}
