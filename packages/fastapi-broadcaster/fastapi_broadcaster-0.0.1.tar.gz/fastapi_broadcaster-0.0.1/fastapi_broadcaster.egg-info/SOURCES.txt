@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+fastapi_broadcaster.egg-info/PKG-INFO
+fastapi_broadcaster.egg-info/SOURCES.txt
+fastapi_broadcaster.egg-info/dependency_links.txt
+fastapi_broadcaster.egg-info/requires.txt
+fastapi_broadcaster.egg-info/top_level.txt
+fastapi_brocaster/__init__.py
+fastapi_brocaster/other.py
