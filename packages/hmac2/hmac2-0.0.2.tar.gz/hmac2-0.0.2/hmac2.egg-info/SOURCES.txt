@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+hmac2/__init__.py
+hmac2/hmac2.py
+hmac2.egg-info/PKG-INFO
+hmac2.egg-info/SOURCES.txt
+hmac2.egg-info/dependency_links.txt
+hmac2.egg-info/top_level.txt
