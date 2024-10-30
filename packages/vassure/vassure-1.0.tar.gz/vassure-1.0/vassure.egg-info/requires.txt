@@ -1,0 +1,14 @@
+pytest
+selenium
+pytest-xdist
+pytest-html
+pyyaml
+logger
+bson
+pymongo
+pycryptodome
+robotframework-pabot
+robotframework-seleniumlibrary
+pytz
+requests
+ratelimit

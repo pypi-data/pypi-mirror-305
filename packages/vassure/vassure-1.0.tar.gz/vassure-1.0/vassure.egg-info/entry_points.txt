@@ -1,0 +1,2 @@
+[console_scripts]
+pytest-selenium = pytest:main

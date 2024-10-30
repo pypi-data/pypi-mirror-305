@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: vassure
+Version: 1.0
+Requires-Dist: pytest
+Requires-Dist: selenium
+Requires-Dist: pytest-xdist
+Requires-Dist: pytest-html
+Requires-Dist: pyyaml
+Requires-Dist: logger
+Requires-Dist: bson
+Requires-Dist: pymongo
+Requires-Dist: pycryptodome
+Requires-Dist: robotframework-pabot
+Requires-Dist: robotframework-seleniumlibrary
+Requires-Dist: pytz
+Requires-Dist: requests
+Requires-Dist: ratelimit
