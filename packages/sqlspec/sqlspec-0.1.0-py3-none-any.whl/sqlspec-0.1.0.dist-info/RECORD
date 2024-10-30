@@ -1,0 +1,14 @@
+sqlspec/__init__.py,sha256=U4S_2y3zgLZVfMenHRaJFBW8yqh2mUBuI291LGQVOJ8,35
+sqlspec/__metadata__.py,sha256=IKK7ARcZFaxFXHrjAgeneCvbZDQi5a-6Es32B8nIkTc,496
+sqlspec/_serialization.py,sha256=p6CadqKxifALuKUQW_YCJQSzy4NIHj_NeKUTXY95r3s,835
+sqlspec/exceptions.py,sha256=wfOqLdCmOBpQEkDlMlIAUYItYgTwY5YDmWiHnrBDZBg,2290
+sqlspec/filters.py,sha256=1QeJkY8e4z6VPF0T9qn7xsiDKLKGWtZecg80iZZWdl0,3404
+sqlspec/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlspec/types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlspec/types/empty.py,sha256=5iijfAjHHzAVwWlkfea8woUWilHA6nJK_GN1MVedmS0,383
+sqlspec/types/protocols.py,sha256=skczeIQzjvFbgdpnHdGJR_iTTDYJj0M5sef2vJby_es,3093
+sqlspec/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlspec/utils/dataclass.py,sha256=swzzYjDgIS0OkmGH5z33P1HFkzvspyamvWGyI25oNGE,4129
+sqlspec-0.1.0.dist-info/METADATA,sha256=INa6CEObNsnM3zXee5nKmiD7FzZ8uIdFUzp8UOpgPGk,1045
+sqlspec-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+sqlspec-0.1.0.dist-info/RECORD,,
