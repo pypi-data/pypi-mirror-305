@@ -1,0 +1,10 @@
+torch_delaunay/_C.cp39-win_amd64.pyd,sha256=nQAB8oCg1cyhjiW-0N7Wpe6-ytCR7lffZQvdtT0CXX0,295936
+torch_delaunay/__init__.py,sha256=zOUAeDiTmVZrlWIdek1e3oLCsmKwsJo8upo1SNX_jW4,63
+torch_delaunay/functional.py,sha256=IRuW6GayqoGcKiOQl7i7d4SFyh3eFk4calHbMvoBk20,3416
+torch_delaunay/functional_test.py,sha256=OANfoCjH3q_JX5BqTUAKEXX6huY31bNT0zwCkdnvUVk,1706
+torch_delaunay/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torch_delaunay-1.1.0.dist-info/LICENSE,sha256=E752dH1M_AwQ6GLftLgPGMoZHdzn4ItwJaAyL3c99y8,35739
+torch_delaunay-1.1.0.dist-info/METADATA,sha256=LC01KA9LppA7H8nQg4kCj65K_BDxknpWnp46qBvABB0,4210
+torch_delaunay-1.1.0.dist-info/WHEEL,sha256=YorN2HPccIdfJm1vtDZTOGjQ579sMRaAowQ3R-HpNAE,100
+torch_delaunay-1.1.0.dist-info/top_level.txt,sha256=_G7i-lBLJDX2nRdQ5nFENgWIw7DyajsLZCYB4bzRdOU,15
+torch_delaunay-1.1.0.dist-info/RECORD,,
