@@ -1,0 +1,2 @@
+[console_scripts]
+create-quas-app = create_quas_app:create_quas_app

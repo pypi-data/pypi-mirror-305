@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: create-quas-app
+Version: 0.1
+Summary: A basic Quick API Setup using Flask, intended for rapid project initiation.
+Home-page: https://github.com/zeddyemy/QUAS
+Author: Emmanuel Esho
+Requires-Dist: Click
