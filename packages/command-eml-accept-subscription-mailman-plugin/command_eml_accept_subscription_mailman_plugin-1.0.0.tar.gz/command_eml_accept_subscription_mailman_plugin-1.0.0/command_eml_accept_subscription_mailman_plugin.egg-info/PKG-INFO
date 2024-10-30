@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: command-eml-accept-subscription-mailman-plugin
+Version: 1.0.0
+Summary: Plugin that add a command to accept a subscription request to mailing list by email
+Home-page: https://github.com/Tann-dev/command-eml-accept-subscription-mailman-plugin
+Author: Tann-dev
+Author-email: snakestone@myyahoo.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mailman
+Requires-Dist: atpublic
+
+# command-eml-accept-subscription-mailman-plugin
+
+This plugin provide a custom command to accept the subscription od a member by mail. To use this command, you just need to send an email to the address `list-request@domain.org` with the subject `accept email@address.subscriber`.
+In the body of the message, you should also provide the password of the mailing list, with the `Approved:` keywork. For example `Approved: password`.
+
+Carefull, the member need to ask to join the list to be accepted in the mailing list, if there's not pending subscription request, the member will not be added to the mailing list.
+
+## Install the plugin
+
+### Pip
+
+To install this package with pip you can use the command below :
+
+```
+python3 -m pip install command-eml-accept-subscription-mailman-plugin
+```
+
+### Docker
+
+If you want to use mailman with the docker image `maxking/mailman-core` [from this repository](https://github.com/maxking/docker-mailman), you can take the `Dockerfile` of this repo, and modify as you pleasure. You'll also need the `requirements-docker.txt`
+
+Or you can also use the docker image `tannndev/mailman-with-plugin`
+
+## Activate plugin in Mailman Core
+
+In order to activate the plugin in Mailman Core, add the following config to
+mailman.cfg:
+
+```
+# Plugin configuration.
+[plugin.command_eml_accept_subscription_mailman_plugin]
+class: command_eml_accept_subscription_mailman_plugin.CommmandEmlAddMemberPlugin
+enabled: yes
+```
