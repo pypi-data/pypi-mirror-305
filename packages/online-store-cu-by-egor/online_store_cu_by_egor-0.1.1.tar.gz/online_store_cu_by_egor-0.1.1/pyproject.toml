@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "online_store_cu_by_egor"
+version = "0.1.1"  # Обнови версию, чтобы отличаться от предыдущей
+description = "Python-пакет для управления учётными записями и заказами в онлайн-магазине"
+readme = "README.md"
+authors = [
+    { name="Egor", email="drobyazko_04@mail.ru" }
+]
+dependencies = []
+
+[project.scripts]
+online_store = "online_store.__main__:main"
