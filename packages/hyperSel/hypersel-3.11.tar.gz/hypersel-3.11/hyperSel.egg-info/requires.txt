@@ -1,0 +1,10 @@
+selenium
+beautifulsoup4
+webdriver-manager
+lxml
+requests
+nodriver
+psutil
+playwright
+undetected-playwright
+screeninfo
