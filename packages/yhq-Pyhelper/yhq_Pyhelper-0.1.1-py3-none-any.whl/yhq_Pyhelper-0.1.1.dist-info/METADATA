@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: yhq-Pyhelper
+Version: 0.1.1
+Summary: A brief description of the package.
+Home-page: https://github.com/HuiQingGit/yhq-Pyhelper.git
+Author: Yu HuiQing
+Author-email: yuhuiqing@aliyun.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pymysql ==1.1.0
+Requires-Dist: allure-pytest ==2.13.2
+Requires-Dist: requests ==2.31.0
+
+# yhq-Pyhelper
+自己用的一些工具
