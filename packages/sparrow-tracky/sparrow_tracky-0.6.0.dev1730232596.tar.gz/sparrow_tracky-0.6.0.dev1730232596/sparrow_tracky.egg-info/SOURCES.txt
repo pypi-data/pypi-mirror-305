@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+sparrow_tracky/__init__.py
+sparrow_tracky.egg-info/PKG-INFO
+sparrow_tracky.egg-info/SOURCES.txt
+sparrow_tracky.egg-info/dependency_links.txt
+sparrow_tracky.egg-info/requires.txt
+sparrow_tracky.egg-info/top_level.txt
