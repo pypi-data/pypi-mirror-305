@@ -1,0 +1,21 @@
+README.md
+setup.py
+sskie/__init__.py
+sskie/spatial_analysis.py
+sskie/spatial_operators.py
+sskie.egg-info/PKG-INFO
+sskie.egg-info/SOURCES.txt
+sskie.egg-info/dependency_links.txt
+sskie.egg-info/requires.txt
+sskie.egg-info/top_level.txt
+sskie/data/__init__.py
+sskie/data/building_seoul_5179.geojson
+sskie/data/mapo-gu.geojson
+sskie/data/subway_5179.geojson
+sskie/data/마포구_all_store.txt
+sskie/data/마포구_음식업_store.txt
+sskie/data/상위100_지하철역 출입구.csv
+sskie/data/실거래가_서울.txt
+sskie/data/전체_지하철역 출입구.csv
+sskie/data/지하철역 출입구_5179.geojson
+sskie/data/직방_서울_5179.geojson
