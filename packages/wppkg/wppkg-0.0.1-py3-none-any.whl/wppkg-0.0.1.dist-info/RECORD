@@ -1,0 +1,17 @@
+wppkg/__init__.py,sha256=VFGOg4tigJVQ3yk0pQ13Fp1rx_W2dQqDBW1uQVuibHs,16
+wppkg/dl/__init__.py,sha256=eIfbX56Skd52AVkg1AYPMf9xdEFZXRbBgNukQfRHUdg,169
+wppkg/dl/trainer.py,sha256=raRoStCCwKPTijkQiIiQe-BKAqHgagHRPP-TTV_flcc,20342
+wppkg/dl/utils.py,sha256=xS9k84KVysTs6d6H8ovJyS0sLtpvOXEoYynN_fHsO-I,4088
+wppkg/dl/metrics/accuracy/accuracy.py,sha256=E8gKS5d3riXO03f8H7dL4kNlP-Iz3ccROIw0kY9fY-Q,4203
+wppkg/dl/metrics/accuracy/app.py,sha256=6yE3ZvZCnsqTwe7eblfmpAql69JUa8pW8gqJuhSZrtM,130
+wppkg/dl/metrics/f1/app.py,sha256=v4tl_Xk_otKlxZRPO5gppmj2qVh-YrRo7fpiHJTaM90,124
+wppkg/dl/metrics/f1/f1.py,sha256=2ih5pMAYfLuiiQ8rIk90IRMBGrKgsbnGHo9ZpYN930c,6782
+wppkg/dl/metrics/precision/app.py,sha256=a9cGAIe_wZ_y2f2utC6jTZv_0SeNDxLQxJlajQX-mHE,131
+wppkg/dl/metrics/precision/precision.py,sha256=mSHAqAic90L0GCafKskdi2dbd1RKf4ec9kH5Y8WmmW0,7557
+wppkg/dl/metrics/recall/app.py,sha256=MLoa2QaoIaPeYf7fy0Pv8zo6amtdXFN80DG6nr7Y00k,128
+wppkg/dl/metrics/recall/recall.py,sha256=cGHNLM8xVa66vlHWqmNIyin-_I6ZyDZgRUTVYaiUOsg,7374
+wppkg-0.0.1.dist-info/LICENSE,sha256=yGyFT_KBoMNELhduMHzMATbEo5wjcXBffvQ1c3SzJ6Q,1061
+wppkg-0.0.1.dist-info/METADATA,sha256=0Z_tP4nDEeLnnPRwIJFqN1r5DiNm1WItTn2R1bzPqzI,2233
+wppkg-0.0.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+wppkg-0.0.1.dist-info/top_level.txt,sha256=fz1dzZ2BNGsuhrRBgT-6YEVW6ye1MbsOCMn6vqvxCkY,6
+wppkg-0.0.1.dist-info/RECORD,,

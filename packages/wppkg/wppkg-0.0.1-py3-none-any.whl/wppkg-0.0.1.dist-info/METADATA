@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: wppkg
+Version: 0.0.1
+Summary: This package involves some functions I often use in my work.
+Author-email: Pengpeng Wu <peg2_wu@163.com>
+Project-URL: Homepage, https://wppcv.readthedocs.io/en/latest/
+Keywords: wpp,wppkg
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch >=2.2.2
+Requires-Dist: tensorboard >=2.17.0
+Requires-Dist: matplotlib >=3.9.0
+Requires-Dist: transformers >=4.41.2
+Requires-Dist: accelerate >=1.0.0
+Requires-Dist: evaluate >=0.4.2
+Requires-Dist: datasets >=2.20.0
+Requires-Dist: safetensors >=0.4.3
+Requires-Dist: deepspeed >=0.15.2
+Requires-Dist: scikit-learn >=1.5.0
+Requires-Dist: scanpy >=1.10.2
+Requires-Dist: debugpy >=1.8.1
+
+# wppkg
+
+_Description: some useful functions I often use in my work.
+
+## 1. Structure
+
+```txt
+.
+└── wppkg
+    ├── dl
+    │   ├── __init__.py
+    │   ├── metrics
+    │   │   ├── accuracy
+    │   │   │   ├── accuracy.py
+    │   │   │   ├── app.py
+    │   │   │   ├── README.md
+    │   │   │   └── requirements.txt
+    │   │   ├── f1
+    │   │   │   ├── app.py
+    │   │   │   ├── f1.py
+    │   │   │   ├── README.md
+    │   │   │   └── requirements.txt
+    │   │   ├── precision
+    │   │   │   ├── app.py
+    │   │   │   ├── precision.py
+    │   │   │   ├── README.md
+    │   │   │   └── requirements.txt
+    │   │   └── recall
+    │   │       ├── app.py
+    │   │       ├── README.md
+    │   │       ├── recall.py
+    │   │       └── requirements.txt
+    │   ├── trainer.py
+    │   └── utils.py
+    └── __init__.py
+```
+
+## 2. Commit Message
+
+- Some training functions have been added, see ***trains***, ***trainm***, and ***trainllm*** in `trainer.py` for details.
