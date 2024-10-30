@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+htcopkmeans/__init__.py
+htcopkmeans/cop_kmeans.py
+htcopkmeans/run_ckm.py
+htcopkmeans.egg-info/PKG-INFO
+htcopkmeans.egg-info/SOURCES.txt
+htcopkmeans.egg-info/dependency_links.txt
+htcopkmeans.egg-info/not-zip-safe
+htcopkmeans.egg-info/top_level.txt
