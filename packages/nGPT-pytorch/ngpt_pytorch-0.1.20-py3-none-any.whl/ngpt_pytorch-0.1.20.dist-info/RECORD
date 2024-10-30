@@ -1,0 +1,8 @@
+nGPT_pytorch/__init__.py,sha256=k_mFFfFOBFPAXwsURdGxWxO8kmsK8T0wxKzTAlK_b5Y,180
+nGPT_pytorch/nGPT.py,sha256=JoXY0ipqCdAm5wb5yNFf6gqqJVLYW21hsLAbXDF2xwE,14719
+nGPT_pytorch/nGPTExperimental.py,sha256=q_BOFTiEyviErUmd0tx72_dmju1_SJ6MV89gOSObxmI,15091
+nGPT_pytorch/nTransformer.py,sha256=vTsvI4AkKRyq9dHzIZrv6eJiUuqsbeT_2naA_SwfinU,12681
+ngpt_pytorch-0.1.20.dist-info/METADATA,sha256=n5UlpFRUxFWDHyBTjZJcM3eEuqkJeukvPLRbKD5Ftkc,4150
+ngpt_pytorch-0.1.20.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+ngpt_pytorch-0.1.20.dist-info/licenses/LICENSE,sha256=E7RGS7kpJIStk5za_-4DVhWEAamf65EU0CNML25mq4c,1066
+ngpt_pytorch-0.1.20.dist-info/RECORD,,
