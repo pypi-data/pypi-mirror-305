@@ -1,0 +1,38 @@
+site_name: hatch-paulrein-template Docs
+
+theme: material
+
+plugins: 
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          docstring_section_style: list
+          show_inheritance_diagram: true
+          show_symbol_type_heading: true
+          show_signature_annotations: true
+          separate_signature: true
+          docstring_style: google
+          paths: [src]
+          import:
+            - file:///Users/paulrein/Development/hatch-paulrein-template/docs/external_docs/hatch/doc/_build/dirhtml/objects.inv
+  - print-site
+
+markdown_extensions:
+  - toc
+  - def_list
+  - footnotes
+  - sane_lists
+  - admonition
+  - markdown_sub_sup
+  - mkdocs-click 
+  - markdown_checklist.extension
+  - mdx_math
+
+nav:
+  - Home: 'index.md'
+  - tutorials.md
+  - how-to-guides.md
+  - reference.md
+  - explanation.md
+

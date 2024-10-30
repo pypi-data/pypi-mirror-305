@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface &#8212; Project name not set  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="hatch.env.internal" href="../hatch.env.internal/" />
+    <link rel="prev" title="hatch.env.collectors.plugin.interface" href="../hatch.env.collectors.plugin.interface/" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="hatch-env-collectors-plugin-interface-environmentcollectorinterface">
+<h1>hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface<a class="headerlink" href="#hatch-env-collectors-plugin-interface-environmentcollectorinterface" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hatch.env.collectors.plugin.interface.</span></span><span class="sig-name descname"><span class="pre">EnvironmentCollectorInterface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Example usage:</p>
+<dl>
+<dt><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>python tab=”plugin.py”</dt><dd><p>from hatch.env.collectors.plugin.interface import EnvironmentCollectorInterface</p>
+<dl class="simple">
+<dt>class SpecialEnvironmentCollector(EnvironmentCollectorInterface):</dt><dd><p>PLUGIN_NAME = ‘special’
+…</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<dl>
+<dt><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>python tab=”hooks.py”</dt><dd><p>from hatchling.plugin import hookimpl</p>
+<p>from .plugin import SpecialEnvironmentCollector</p>
+<p>&#64;hookimpl
+def hatch_register_environment_collector():</p>
+<blockquote>
+<div><p>return SpecialEnvironmentCollector</p>
+</div></blockquote>
+</dd>
+</dl>
+<p><a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.__init__" title="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(root, config)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.finalize_config" title="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.finalize_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">finalize_config</span></code></a>(config)</p></td>
+<td><p>Finalizes configuration for environments keyed by the environment or matrix name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.finalize_environments" title="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.finalize_environments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">finalize_environments</span></code></a>(config)</p></td>
+<td><p>Finalizes configuration for environments keyed by the environment name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.get_initial_config" title="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.get_initial_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_initial_config</span></code></a>()</p></td>
+<td><p>Returns configuration for environments keyed by the environment or matrix name.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.PLUGIN_NAME" title="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.PLUGIN_NAME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PLUGIN_NAME</span></code></a></p></td>
+<td><p>The name used for selection.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.config" title="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span> <span class="pre">[tool.hatch.env.collectors.&lt;PLUGIN_NAME&gt;]</span> <span class="pre">`</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.root" title="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">root</span></code></a></p></td>
+<td><p>The root of the project tree as a path-like object.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.PLUGIN_NAME">
+<span class="sig-name descname"><span class="pre">PLUGIN_NAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.PLUGIN_NAME" title="Link to this definition">¶</a></dt>
+<dd><p>The name used for selection.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.config">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.config" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span>
+<span class="pre">[tool.hatch.env.collectors.&lt;PLUGIN_NAME&gt;]</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.finalize_config">
+<span class="sig-name descname"><span class="pre">finalize_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.finalize_config" title="Link to this definition">¶</a></dt>
+<dd><p>Finalizes configuration for environments keyed by the environment or matrix name. This will override
+any user-defined settings and any collectors that ran before this call.</p>
+<p>This is called before matrices are turned into concrete environments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.finalize_environments">
+<span class="sig-name descname"><span class="pre">finalize_environments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.finalize_environments" title="Link to this definition">¶</a></dt>
+<dd><p>Finalizes configuration for environments keyed by the environment name. This will override
+any user-defined settings and any collectors that ran before this call.</p>
+<p>This is called after matrices are turned into concrete environments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.get_initial_config">
+<span class="sig-name descname"><span class="pre">get_initial_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.get_initial_config" title="Link to this definition">¶</a></dt>
+<dd><p>Returns configuration for environments keyed by the environment or matrix name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.root">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">root</span></span><a class="headerlink" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.root" title="Link to this definition">¶</a></dt>
+<dd><p>The root of the project tree as a path-like object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../">Project name not set</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../hatch/">hatch</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../hatch.config/">hatch.config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.dep/">hatch.dep</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../hatch.env/">hatch.env</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../hatch.env.collectors/">hatch.env.collectors</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../hatch.env.collectors.custom/">hatch.env.collectors.custom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hatch.env.collectors.default/">hatch.env.collectors.default</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../hatch.env.collectors.plugin/">hatch.env.collectors.plugin</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="../hatch.env.collectors.plugin.interface/">hatch.env.collectors.plugin.interface</a><ul class="current">
+<li class="toctree-l6 current"><a class="current reference internal" href="#">hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface"><code class="docutils literal notranslate"><span class="pre">EnvironmentCollectorInterface</span></code></a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.__init__"><code class="docutils literal notranslate"><span class="pre">EnvironmentCollectorInterface.__init__()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.PLUGIN_NAME"><code class="docutils literal notranslate"><span class="pre">EnvironmentCollectorInterface.PLUGIN_NAME</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.config"><code class="docutils literal notranslate"><span class="pre">EnvironmentCollectorInterface.config</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.finalize_config"><code class="docutils literal notranslate"><span class="pre">EnvironmentCollectorInterface.finalize_config()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.finalize_environments"><code class="docutils literal notranslate"><span class="pre">EnvironmentCollectorInterface.finalize_environments()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.get_initial_config"><code class="docutils literal notranslate"><span class="pre">EnvironmentCollectorInterface.get_initial_config()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.root"><code class="docutils literal notranslate"><span class="pre">EnvironmentCollectorInterface.root</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.env.internal/">hatch.env.internal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.env.plugin/">hatch.env.plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.env.system/">hatch.env.system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.env.utils/">hatch.env.utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.env.virtual/">hatch.env.virtual</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.errors/">hatch.errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.index/">hatch.index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.plugin/">hatch.plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.project/">hatch.project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.publish/">hatch.publish</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.python/">hatch.python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.template/">hatch.template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.utils/">hatch.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.venv/">hatch.venv</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../">Documentation overview</a><ul>
+  <li><a href="../hatch/">hatch</a><ul>
+  <li><a href="../hatch.env/">hatch.env</a><ul>
+  <li><a href="../hatch.env.collectors/">hatch.env.collectors</a><ul>
+  <li><a href="../hatch.env.collectors.plugin/">hatch.env.collectors.plugin</a><ul>
+  <li><a href="../hatch.env.collectors.plugin.interface/">hatch.env.collectors.plugin.interface</a><ul>
+      <li>Previous: <a href="../hatch.env.collectors.plugin.interface/" title="previous chapter">hatch.env.collectors.plugin.interface</a></li>
+      <li>Next: <a href="../hatch.env.internal/" title="next chapter">hatch.env.internal</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/_autosummary/hatch.env.collectors.plugin.interface.EnvironmentCollectorInterface.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

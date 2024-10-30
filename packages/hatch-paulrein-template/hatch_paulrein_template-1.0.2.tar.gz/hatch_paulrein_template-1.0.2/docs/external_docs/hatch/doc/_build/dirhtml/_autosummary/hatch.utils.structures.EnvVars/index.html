@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>hatch.utils.structures.EnvVars &#8212; Project name not set  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="hatch.utils.toml" href="../hatch.utils.toml/" />
+    <link rel="prev" title="hatch.utils.structures" href="../hatch.utils.structures/" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="hatch-utils-structures-envvars">
+<h1>hatch.utils.structures.EnvVars<a class="headerlink" href="#hatch-utils-structures-envvars" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hatch.utils.structures.</span></span><span class="sig-name descname"><span class="pre">EnvVars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.utils.structures.EnvVars" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#hatch.utils.structures.EnvVars.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.__init__" title="hatch.utils.structures.EnvVars.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([env_vars, include, exclude])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.clear" title="hatch.utils.structures.EnvVars.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.copy" title="hatch.utils.structures.EnvVars.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.fromkeys" title="hatch.utils.structures.EnvVars.fromkeys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromkeys</span></code></a>([value])</p></td>
+<td><p>Create a new dictionary with keys from iterable and values set to value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.get" title="hatch.utils.structures.EnvVars.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(key[, default])</p></td>
+<td><p>Return the value for key if key is in the dictionary, else default.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.items" title="hatch.utils.structures.EnvVars.items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">items</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.keys" title="hatch.utils.structures.EnvVars.keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.pop" title="hatch.utils.structures.EnvVars.pop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pop</span></code></a>(k[,d])</p></td>
+<td><p>If the key is not found, return the default if given; otherwise, raise a KeyError.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.popitem" title="hatch.utils.structures.EnvVars.popitem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">popitem</span></code></a>()</p></td>
+<td><p>Remove and return a (key, value) pair as a 2-tuple.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.setdefault" title="hatch.utils.structures.EnvVars.setdefault"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setdefault</span></code></a>(key[, default])</p></td>
+<td><p>Insert key with a value of default if key is not in the dictionary.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.update" title="hatch.utils.structures.EnvVars.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>([E, ]**F)</p></td>
+<td><p>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k] If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.utils.structures.EnvVars.values" title="hatch.utils.structures.EnvVars.values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None.</span>&#160; <span class="pre">Remove</span> <span class="pre">all</span> <span class="pre">items</span> <span class="pre">from</span> <span class="pre">D.</span></span></span><a class="headerlink" href="#hatch.utils.structures.EnvVars.clear" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">a</span> <span class="pre">shallow</span> <span class="pre">copy</span> <span class="pre">of</span> <span class="pre">D</span></span></span><a class="headerlink" href="#hatch.utils.structures.EnvVars.copy" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.fromkeys">
+<span class="sig-name descname"><span class="pre">fromkeys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.utils.structures.EnvVars.fromkeys" title="Link to this definition">¶</a></dt>
+<dd><p>Create a new dictionary with keys from iterable and values set to value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.utils.structures.EnvVars.get" title="Link to this definition">¶</a></dt>
+<dd><p>Return the value for key if key is in the dictionary, else default.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.items">
+<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">a</span> <span class="pre">set-like</span> <span class="pre">object</span> <span class="pre">providing</span> <span class="pre">a</span> <span class="pre">view</span> <span class="pre">on</span> <span class="pre">D's</span> <span class="pre">items</span></span></span><a class="headerlink" href="#hatch.utils.structures.EnvVars.items" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">a</span> <span class="pre">set-like</span> <span class="pre">object</span> <span class="pre">providing</span> <span class="pre">a</span> <span class="pre">view</span> <span class="pre">on</span> <span class="pre">D's</span> <span class="pre">keys</span></span></span><a class="headerlink" href="#hatch.utils.structures.EnvVars.keys" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">v,</span> <span class="pre">remove</span> <span class="pre">specified</span> <span class="pre">key</span> <span class="pre">and</span> <span class="pre">return</span> <span class="pre">the</span> <span class="pre">corresponding</span> <span class="pre">value.</span></span></span><a class="headerlink" href="#hatch.utils.structures.EnvVars.pop" title="Link to this definition">¶</a></dt>
+<dd><p>If the key is not found, return the default if given; otherwise,
+raise a KeyError.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.popitem">
+<span class="sig-name descname"><span class="pre">popitem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.utils.structures.EnvVars.popitem" title="Link to this definition">¶</a></dt>
+<dd><p>Remove and return a (key, value) pair as a 2-tuple.</p>
+<p>Pairs are returned in LIFO (last-in, first-out) order.
+Raises KeyError if the dict is empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.setdefault">
+<span class="sig-name descname"><span class="pre">setdefault</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.utils.structures.EnvVars.setdefault" title="Link to this definition">¶</a></dt>
+<dd><p>Insert key with a value of default if key is not in the dictionary.</p>
+<p>Return the value for key if key is in the dictionary, else default.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <span class="optional">]</span><em class="sig-param"><span class="n"><span class="pre">**F</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None.</span>&#160; <span class="pre">Update</span> <span class="pre">D</span> <span class="pre">from</span> <span class="pre">dict/iterable</span> <span class="pre">E</span> <span class="pre">and</span> <span class="pre">F.</span></span></span><a class="headerlink" href="#hatch.utils.structures.EnvVars.update" title="Link to this definition">¶</a></dt>
+<dd><p>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]
+If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v
+In either case, this is followed by: for k in F:  D[k] = F[k]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.utils.structures.EnvVars.values">
+<span class="sig-name descname"><span class="pre">values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">an</span> <span class="pre">object</span> <span class="pre">providing</span> <span class="pre">a</span> <span class="pre">view</span> <span class="pre">on</span> <span class="pre">D's</span> <span class="pre">values</span></span></span><a class="headerlink" href="#hatch.utils.structures.EnvVars.values" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../">Project name not set</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../hatch/">hatch</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../hatch.config/">hatch.config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.dep/">hatch.dep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.env/">hatch.env</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.errors/">hatch.errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.index/">hatch.index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.plugin/">hatch.plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.project/">hatch.project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.publish/">hatch.publish</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.python/">hatch.python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.template/">hatch.template</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../hatch.utils/">hatch.utils</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../hatch.utils.ci/">hatch.utils.ci</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.utils.env/">hatch.utils.env</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.utils.fs/">hatch.utils.fs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.utils.network/">hatch.utils.network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.utils.platform/">hatch.utils.platform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.utils.runner/">hatch.utils.runner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.utils.shells/">hatch.utils.shells</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../hatch.utils.structures/">hatch.utils.structures</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">hatch.utils.structures.EnvVars</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#hatch.utils.structures.EnvVars"><code class="docutils literal notranslate"><span class="pre">EnvVars</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.__init__"><code class="docutils literal notranslate"><span class="pre">EnvVars.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.clear"><code class="docutils literal notranslate"><span class="pre">EnvVars.clear()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.copy"><code class="docutils literal notranslate"><span class="pre">EnvVars.copy()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.fromkeys"><code class="docutils literal notranslate"><span class="pre">EnvVars.fromkeys()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.get"><code class="docutils literal notranslate"><span class="pre">EnvVars.get()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.items"><code class="docutils literal notranslate"><span class="pre">EnvVars.items()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.keys"><code class="docutils literal notranslate"><span class="pre">EnvVars.keys()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.pop"><code class="docutils literal notranslate"><span class="pre">EnvVars.pop()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.popitem"><code class="docutils literal notranslate"><span class="pre">EnvVars.popitem()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.setdefault"><code class="docutils literal notranslate"><span class="pre">EnvVars.setdefault()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.update"><code class="docutils literal notranslate"><span class="pre">EnvVars.update()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.utils.structures.EnvVars.values"><code class="docutils literal notranslate"><span class="pre">EnvVars.values()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.utils.toml/">hatch.utils.toml</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.venv/">hatch.venv</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../">Documentation overview</a><ul>
+  <li><a href="../hatch/">hatch</a><ul>
+  <li><a href="../hatch.utils/">hatch.utils</a><ul>
+  <li><a href="../hatch.utils.structures/">hatch.utils.structures</a><ul>
+      <li>Previous: <a href="../hatch.utils.structures/" title="previous chapter">hatch.utils.structures</a></li>
+      <li>Next: <a href="../hatch.utils.toml/" title="next chapter">hatch.utils.toml</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/_autosummary/hatch.utils.structures.EnvVars.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
