@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+chi2sim/__init__.py
+chi2sim/chi2_cont_sim.c
+chi2sim/chi2_cont_sim.pyx
+chi2sim.egg-info/PKG-INFO
+chi2sim.egg-info/SOURCES.txt
+chi2sim.egg-info/dependency_links.txt
+chi2sim.egg-info/requires.txt
+chi2sim.egg-info/top_level.txt
+chi2sim/src/chi_square_mc.c
+chi2sim/src/chi_square_mc.h
+chi2sim/src/chi_square_mc.c
+chi2sim/src/chi_square_mc.h
+tests/test_chi2sim.py
