@@ -1,0 +1,8 @@
+README.md
+setup.py
+pappardelle/__init__.py
+pappardelle/pappardelle.py
+pappardelle.egg-info/PKG-INFO
+pappardelle.egg-info/SOURCES.txt
+pappardelle.egg-info/dependency_links.txt
+pappardelle.egg-info/top_level.txt

@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pappardelle
+Version: 0.1
+Description-Content-Type: text/markdown
+
+# Pappardelle
+
+Pappardelle is a Python module to process lists - to diff, to merge (with lookup).
+
+## Author
+
+My name is Katkam Nitin Reddy. I am a former software developer living (mostly) in Dubai. I created this library for features that were missing in Python compared to other scripting languages.
+
+## Acknowledgement
+
+I would like to thank my mom, Katkam Nita Reddy, and my dad, Katkam Narsing Reddy, who have always motivated me to learn and contribute to the open-source community.
