@@ -1,0 +1,11 @@
+vidtoolz/__init__.py,sha256=CLHJmQQvkwRZJ1xIxO50Eesus1MqgpZ6xER2HG76RbE,64
+vidtoolz/__main__.py,sha256=MSmt_5Xg84uHqzTN38JwgseJK8rsJn_11A8WD99VtEo,61
+vidtoolz/cli.py,sha256=aZ65j4chUuHaF-GHL6TK2pse4PGybs-3eOEbfuh6T9k,1756
+vidtoolz/hookspecs.py,sha256=ezIAJ7I5AQY3q2gWoTW7AAHNTQTQJtmMeyAN7xeCVxw,302
+vidtoolz/plugins.py,sha256=0jmLaNUKBmm83pyIyg3eGxI6dj62xz-Yg_cQd76rQd4,1855
+vidtoolz-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+vidtoolz-0.0.1.dist-info/METADATA,sha256=4abfTjbdYZAYqUqokGY22PYmrTNRPja6dO5clka2Cxk,3326
+vidtoolz-0.0.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+vidtoolz-0.0.1.dist-info/entry_points.txt,sha256=aIjk9UTYDh0ovXS0EeTAvqQl_cX5Mo2MwdE3ArZE8HI,42
+vidtoolz-0.0.1.dist-info/top_level.txt,sha256=8MmClsFronPGtBvKE3Z5xzAo7Uylki8cNU9sH2RrIhE,9
+vidtoolz-0.0.1.dist-info/RECORD,,
