@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: fairground
+Version: 0.0.0a5
+Summary: Tools for statistical analysis and debiasing for applicant tracking systems.
+Author-email: Coefficient Systems <tagrain@gmail.com>
+Description-Content-Type: text/markdown
+
+Tools for statistical analysis and debiasing for applicant tracking systems.
+
