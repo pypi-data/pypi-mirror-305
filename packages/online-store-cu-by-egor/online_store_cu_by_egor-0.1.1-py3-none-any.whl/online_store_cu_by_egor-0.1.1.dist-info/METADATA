@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: online_store_cu_by_egor
+Version: 0.1.1
+Summary: Python-пакет для управления учётными записями и заказами в онлайн-магазине
+Author-email: Egor <drobyazko_04@mail.ru>
+Description-Content-Type: text/markdown
+
+Пакет "online-store".
+
+Модули:
+
+    OrderManager - команды:
+        .create_order(order_id, order_data)
+        .update_order(order_id, order_data)
+        .find_order(order_id)   
+        .cancel_order(order_id)
+
+    UserManager - команды:
+        .add_user(user_id, user_data)
+        .remove_user(user_id)
+        .update_user(user_id)
+        .find_user(user_id)
+
+        
