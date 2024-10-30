@@ -1,0 +1,2 @@
+[hatch]
+paulrein-template = hatch_paulrein_template.hooks
