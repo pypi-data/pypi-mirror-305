@@ -1,0 +1,10 @@
+cubicweb_counters/__init__.py,sha256=iJoZcTOAHQd6BbyXJLpOdUWiFV3BaMFWZhMEFS54QuE,71
+cubicweb_counters/__pkginfo__.py,sha256=dOIYDsEA28Th3CKYHp1lpMNvPktMQzPWkitXj33iTLc,637
+cubicweb_counters/entities.py,sha256=yWP2HWMttE9PX1GG_12b4MU9UM3h8-nEqYnP4nCr_lU,2794
+cubicweb_counters/hooks.py,sha256=ACKKARuROtekf-3M5Bd9QTnaXdtfqJAyMyzTpEqFv9A,1414
+cubicweb_counters/schema.py,sha256=f0NimqC6GM1_Y6CZlEzFBX3rPCrNt6hzPlyVadme7pc,1665
+cubicweb_counters-0.6.0.dist-info/METADATA,sha256=bMBpecBjwl8ciIsMM1A7mcrIuTJCGOV-RlpMsV_sMTI,472
+cubicweb_counters-0.6.0.dist-info/WHEEL,sha256=cVxcB9AmuTcXqmwrtPhNK88dr7IR_b6qagTj0UvIEbY,91
+cubicweb_counters-0.6.0.dist-info/entry_points.txt,sha256=0lM1DERccyhX2KDP_vfFQi3jfUPwkjILb0DyIaym_6k,46
+cubicweb_counters-0.6.0.dist-info/top_level.txt,sha256=rdt91iOvKsvyvC67I9lhZVsHb_zQZ7-18bh08JaheRM,18
+cubicweb_counters-0.6.0.dist-info/RECORD,,
