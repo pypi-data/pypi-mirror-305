@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+docs/Python.md
+src/__init__.py
+src/locusts.py
+src/test_locusts.py
+src/locusts_r_us.egg-info/PKG-INFO
+src/locusts_r_us.egg-info/SOURCES.txt
+src/locusts_r_us.egg-info/dependency_links.txt
+src/locusts_r_us.egg-info/top_level.txt
