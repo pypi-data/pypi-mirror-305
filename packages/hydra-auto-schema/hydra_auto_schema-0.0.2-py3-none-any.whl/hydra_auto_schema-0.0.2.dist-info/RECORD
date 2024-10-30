@@ -1,0 +1,17 @@
+hydra_auto_schema/__init__.py,sha256=b8YdjgRLtWpXjVH4pTmAMFQOzQ00P3GX7X8n4nXfOis,501
+hydra_auto_schema/__main__.py,sha256=vlphQ2sjILoNw-5PrrVjJjMSB8JqYAeEKnHMZD-SbyI,4430
+hydra_auto_schema/auto_schema.py,sha256=WL_4n1_cOKaOmAT6TTRNFk8AolCmbopZgGYv08jQHxs,32230
+hydra_auto_schema/auto_schema_test.py,sha256=qu2vEzblUvxH84u-VhXqiUN0iXcto2nJxW-Vqejy4I4,1649
+hydra_auto_schema/customize.py,sha256=FH5oJugql_Jvg79dB5vjBzIe4CTP8L_KGZTs_QPBYmE,1435
+hydra_auto_schema/filewatcher.py,sha256=dM_xnHGasWHZvy384MuVehhc0m2dZqvAdDgUx3xenx8,9123
+hydra_auto_schema/filewatcher_test.py,sha256=9xv7slgM1QgJwJpR74lnFhByXyMuCyxF_xbO_rVDncg,5421
+hydra_auto_schema/hydra_schema.py,sha256=BevgnqylM6CzdoBvHAh0NldUjSemk-FuKbG4BZ4MZzw,5373
+hydra_auto_schema/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydra_auto_schema/utils.py,sha256=pYqZ5Lc5XDbe293X_idLLCJtP8I8C2A2jcPcnAwE2Sc,199
+hydra_plugins/auto_schema/__init__.py,sha256=wWwUv_CQV0U0HEi92PtQMhAFbtBYlmvzwT5MXgmdZis,236
+hydra_plugins/auto_schema/auto_schema_plugin.py,sha256=ljfm9xhr2XBJM7J-S3_GyDto6kU_RWk96nMA-t4xzgo,3479
+hydra_auto_schema-0.0.2.dist-info/METADATA,sha256=BN4Pd3wrsZ75rvRdD2ZhWJAkb2xQZBZo66GIXOMifUg,2907
+hydra_auto_schema-0.0.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+hydra_auto_schema-0.0.2.dist-info/entry_points.txt,sha256=afNhxqKp1Qh2KthU8oaH7Rh-FT_PqlD6-DoSiKx6LAY,70
+hydra_auto_schema-0.0.2.dist-info/licenses/LICENSE,sha256=m7ZWWZEG_YW8CIHfkv-EbU3XTYv-yVKkYKzGlNum_F8,1074
+hydra_auto_schema-0.0.2.dist-info/RECORD,,
