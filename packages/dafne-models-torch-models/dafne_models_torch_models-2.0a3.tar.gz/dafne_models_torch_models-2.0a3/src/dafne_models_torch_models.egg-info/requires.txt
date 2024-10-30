@@ -1,0 +1,8 @@
+matplotlib
+ormir-pyvoxel
+dafne-dicomUtils
+dill
+dafne_dl-torch_models>=2.0a2
+
+[gui]
+PyQt5
