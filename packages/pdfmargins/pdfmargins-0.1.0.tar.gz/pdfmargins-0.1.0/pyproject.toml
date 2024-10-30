@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "pdfmargins"
+version = "0.1.0"
+description = ""
+authors = ["Tom Stadelmann <tom-010@web.de>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+tqdm = "^4.66.5"
+pypdf = "^5.1.0"
+
+
+[tool.poetry.group.app.dependencies]
+gradio = "^5.4.0"
+
+
+[tool.poetry.group.api.dependencies]
+fastapi = "^0.115.4"
+uvicorn = "^0.32.0" # this requires numpy, which requires ninja and gcc
+
+[tool.poetry.group.all.dependencies]
+fastapi = "^0.115.4"
+uvicorn = "^0.32.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pdfmargins = "pdfmargins.cli:cli"
