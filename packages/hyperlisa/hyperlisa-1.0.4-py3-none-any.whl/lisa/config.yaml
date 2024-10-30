@@ -1,0 +1,18 @@
+# combine_config.yaml
+
+# Include patterns (extensions or directories to include)
+includes:
+  - "*.py"  
+  - "*.md"
+  # Additional directories or extensions can be added here
+
+# Exclude patterns (directories or files to exclude)
+excludes:
+  - ".git"
+  - "__pycache__"
+  - "*.egg-info"
+  - "venv*"
+  - ".vscode"
+  - "agents*"
+  - "log"
+  - "scripts"
