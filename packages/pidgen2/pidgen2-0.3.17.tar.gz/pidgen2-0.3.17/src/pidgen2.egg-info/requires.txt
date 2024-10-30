@@ -1,0 +1,6 @@
+numpy<2
+scipy
+pandas
+matplotlib
+uproot<5.2
+xrootd==5.2
