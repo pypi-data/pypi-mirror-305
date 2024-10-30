@@ -1,0 +1,7366 @@
+# Translations template for PsychoPy.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PsychoPy project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PsychoPy 3.2.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-08-19 12:51+0100\n"
+"PO-Revision-Date: 2021-03-09 15:17+0000\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_CN\n"
+
+#: ../app/_psychopyApp.py:72 ../app/builder/builder.py:1462
+#: ../app/coder/coder.py:1576
+msgid "&View"
+msgstr "&视图"
+
+#: ../app/_psychopyApp.py:73
+#, fuzzy, python-format
+msgid "&Open Builder view\t%s"
+msgstr "•开放式建筑商视图%s"
+
+#: ../app/_psychopyApp.py:76
+#, fuzzy
+msgid "Open a new Builder view"
+msgstr "打开新的构建器视图"
+
+#: ../app/_psychopyApp.py:79 ../app/builder/builder.py:1466
+#, fuzzy, python-format
+msgid "&Open Coder view\t%s"
+msgstr "•打开编码器视图%s"
+
+#: ../app/_psychopyApp.py:82 ../app/builder/builder.py:1468
+#, fuzzy
+msgid "Open a new Coder view"
+msgstr "打开新的编码器视图"
+
+#: ../app/_psychopyApp.py:85 ../app/builder/builder.py:1404
+#: ../app/coder/coder.py:327 ../app/coder/coder.py:1428
+#: ../app/pavlovia_ui/_base.py:38
+#, fuzzy, python-format
+msgid "&Quit\t%s"
+msgstr "并退出%s"
+
+#: ../app/_psychopyApp.py:87 ../app/builder/builder.py:1405
+#: ../app/coder/coder.py:1429 ../app/pavlovia_ui/_base.py:39
+#, fuzzy
+msgid "Terminate the program"
+msgstr "终止程序"
+
+#: ../app/_psychopyApp.py:207
+#, fuzzy
+msgid "Loading libraries..."
+msgstr "加载库..."
+
+#: ../app/_psychopyApp.py:215
+#, fuzzy
+msgid "Loading PsychoPy3..."
+msgstr "加载心理心理3.。。"
+
+#: ../app/_psychopyApp.py:317
+#, fuzzy
+msgid "  Creating frames..."
+msgstr "创建帧..."
+
+#: ../app/_psychopyApp.py:335
+#, fuzzy
+msgid "Compatibility information"
+msgstr "兼容性信息"
+
+#: ../app/_psychopyApp.py:343
+#, fuzzy
+msgid "tips.txt"
+msgstr "提示.txt"
+
+#: ../app/_psychopyApp.py:406
+#, fuzzy
+msgid "Select .psydat file(s) to extract"
+msgstr "选择。psydat 文件以提取"
+
+#: ../app/_psychopyApp.py:691
+#, fuzzy
+msgid ""
+"For stimulus generation and experimental control in python.\n"
+"PsychoPy depends on your feedback. If something doesn't work\n"
+"then let us know at psychopy-users@googlegroups.com"
+msgstr ""
+"用于刺激生成和巨蛇实验控制。\n"
+"心理问题取决于你的反馈。如果有什么东西不工作\n"
+"然后让我们知道在psychopy-users@googlegroups.com"
+
+#: ../app/dialogs.py:38 ../gui/qtgui.py:597
+msgid "Warning"
+msgstr "警告"
+
+#: ../app/dialogs.py:39
+msgid "Info"
+msgstr "信息"
+
+#: ../app/connections/updates.py:239 ../app/dialogs.py:50
+msgid "Yes"
+msgstr "是"
+
+#: ../app/coder/coder.py:360 ../app/dialogs.py:53
+#: ../app/pavlovia_ui/project.py:98 ../app/pavlovia_ui/project.py:594
+#: ../app/preferencesDlg.py:212
+msgid "Cancel"
+msgstr "取消"
+
+#: ../app/dialogs.py:54
+#, fuzzy
+msgid "No"
+msgstr "否"
+
+#: ../app/dialogs.py:65 ../app/pavlovia_ui/project.py:592
+#: ../app/pavlovia_ui/user.py:71 ../app/preferencesDlg.py:205
+msgid "OK"
+msgstr "确定"
+
+#: ../app/preferencesDlg.py:28
+msgid "General"
+msgstr "常规"
+
+#: ../app/preferencesDlg.py:29
+msgid "App"
+msgstr "应用"
+
+#: ../app/preferencesDlg.py:32
+msgid "Hardware"
+msgstr "硬件"
+
+#: ../app/preferencesDlg.py:33
+msgid "Connections"
+msgstr "好友"
+
+#: ../app/preferencesDlg.py:34
+#, fuzzy
+msgid "Key bindings"
+msgstr "密钥绑定"
+
+#: ../app/preferencesDlg.py:36
+#, fuzzy
+msgid "window type"
+msgstr "窗口类型"
+
+#: ../app/preferencesDlg.py:37
+msgid "units"
+msgstr "单位"
+
+#: ../app/preferencesDlg.py:38 ../tools/wizard.py:37
+msgid "full-screen"
+msgstr "全屏"
+
+#: ../app/preferencesDlg.py:39
+#, fuzzy
+msgid "allow GUI"
+msgstr "允许桂"
+
+#: ../app/preferencesDlg.py:40
+#, fuzzy
+msgid "paths"
+msgstr "路径"
+
+#: ../app/preferencesDlg.py:41
+#, fuzzy
+msgid "audio library"
+msgstr "音频库"
+
+#: ../app/preferencesDlg.py:42
+#, fuzzy
+msgid "audio driver"
+msgstr "音频驱动程序"
+
+#: ../app/preferencesDlg.py:43
+#, fuzzy
+msgid "audio device"
+msgstr "音频设备"
+
+#: ../app/preferencesDlg.py:44
+#, fuzzy
+msgid "audio latency mode"
+msgstr "音频延迟模式"
+
+#: ../app/preferencesDlg.py:45
+#, fuzzy
+msgid "flac audio compression"
+msgstr "片状音频压缩"
+
+#: ../app/preferencesDlg.py:46
+#, fuzzy
+msgid "parallel ports"
+msgstr "平行端口"
+
+# Qmix is a brand of pump
+#: ../app/preferencesDlg.py:47
+#, fuzzy
+msgid "Qmix configuration"
+msgstr "Q混合配置"
+
+#: ../app/preferencesDlg.py:48
+#, fuzzy
+msgid "shutdown key"
+msgstr "关机键"
+
+#: ../app/preferencesDlg.py:49
+#, fuzzy
+msgid "shutdown key modifier keys"
+msgstr "关闭密钥修改器键"
+
+#: ../app/preferencesDlg.py:50
+#, fuzzy
+msgid "show start-up tips"
+msgstr "显示启动提示"
+
+#: ../app/preferencesDlg.py:51
+#, fuzzy
+msgid "large icons"
+msgstr "大图标"
+
+#: ../app/preferencesDlg.py:52
+#, fuzzy
+msgid "default view"
+msgstr "默认视图"
+
+#: ../app/preferencesDlg.py:53
+#, fuzzy
+msgid "reset preferences"
+msgstr "重置首选项"
+
+#: ../app/preferencesDlg.py:54
+#, fuzzy
+msgid "auto-save prefs"
+msgstr "自动保存预科"
+
+#: ../app/preferencesDlg.py:55
+#, fuzzy
+msgid "debug mode"
+msgstr "调试模式"
+
+#: ../app/preferencesDlg.py:56 ../tools/wizard.py:42
+msgid "locale"
+msgstr "zh_CN"
+
+#: ../app/preferencesDlg.py:57
+msgid "read-only"
+msgstr "只读"
+
+#: ../app/preferencesDlg.py:58
+#, fuzzy
+msgid "code font"
+msgstr "代码字体"
+
+#: ../app/preferencesDlg.py:59
+#, fuzzy
+msgid "comment font"
+msgstr "评论字体"
+
+#: ../app/preferencesDlg.py:60
+#, fuzzy
+msgid "output font"
+msgstr "输出字体"
+
+#: ../app/preferencesDlg.py:61
+#, fuzzy
+msgid "output font size"
+msgstr "输出字体大小"
+
+#: ../app/preferencesDlg.py:62
+#, fuzzy
+msgid "code font size"
+msgstr "代码字体大小"
+
+#: ../app/preferencesDlg.py:63
+#, fuzzy
+msgid "show source asst"
+msgstr "显示源作为"
+
+#: ../app/preferencesDlg.py:64
+#, fuzzy
+msgid "show output"
+msgstr "显示输出"
+
+#: ../app/preferencesDlg.py:65
+#, fuzzy
+msgid "reload previous files"
+msgstr "重新加载以前的文件"
+
+#: ../app/preferencesDlg.py:66
+#, fuzzy
+msgid "preferred shell"
+msgstr "首选外壳"
+
+#: ../app/preferencesDlg.py:67
+#, fuzzy
+msgid "reload previous exp"
+msgstr "重新加载以前的exp"
+
+#: ../app/preferencesDlg.py:68
+#, fuzzy
+msgid "uncluttered namespace"
+msgstr "整洁的命名空间"
+
+#: ../app/preferencesDlg.py:69
+#, fuzzy
+msgid "components folders"
+msgstr "组件文件夹"
+
+#: ../app/preferencesDlg.py:70
+#, fuzzy
+msgid "hidden components"
+msgstr "隐藏组件"
+
+#: ../app/preferencesDlg.py:71
+#, fuzzy
+msgid "unpacked demos dir"
+msgstr "未包装的演示迪尔"
+
+#: ../app/preferencesDlg.py:72
+#, fuzzy
+msgid "saved data folder"
+msgstr "保存的数据文件夹"
+
+#: ../app/preferencesDlg.py:73
+#, fuzzy
+msgid "Flow at top"
+msgstr "顶部流动"
+
+#: ../app/preferencesDlg.py:74
+#, fuzzy
+msgid "always show readme"
+msgstr "总是显示读我"
+
+#: ../app/preferencesDlg.py:75
+#, fuzzy
+msgid "max favorites"
+msgstr "最大收藏夹"
+
+#: ../app/preferencesDlg.py:76
+#, fuzzy
+msgid "proxy"
+msgstr "代理"
+
+#: ../app/preferencesDlg.py:77
+#, fuzzy
+msgid "auto-proxy"
+msgstr "自动代理"
+
+#: ../app/preferencesDlg.py:78
+#, fuzzy
+msgid "allow usage stats"
+msgstr "允许使用情况统计"
+
+#: ../app/preferencesDlg.py:79
+#, fuzzy
+msgid "check for updates"
+msgstr "检查更新"
+
+#: ../app/preferencesDlg.py:80
+msgid "timeout"
+msgstr "超时"
+
+#: ../app/preferencesDlg.py:81
+msgid "open"
+msgstr "打开"
+
+#: ../app/preferencesDlg.py:82
+#, fuzzy
+msgid "new"
+msgstr "新"
+
+#: ../app/preferencesDlg.py:83
+msgid "save"
+msgstr "保存"
+
+#: ../app/preferencesDlg.py:84
+#, fuzzy
+msgid "save as"
+msgstr "保存为"
+
+#: ../app/preferencesDlg.py:85
+msgid "print"
+msgstr "打印"
+
+#: ../app/preferencesDlg.py:86
+msgid "close"
+msgstr "关闭"
+
+#: ../app/preferencesDlg.py:87
+msgid "quit"
+msgstr "&退出"
+
+#: ../app/preferencesDlg.py:88
+#, fuzzy
+msgid "preferences"
+msgstr "偏好"
+
+#: ../app/preferencesDlg.py:89
+#, fuzzy
+msgid "export HTML"
+msgstr "导出HTML"
+
+#: ../app/preferencesDlg.py:90
+msgid "cut"
+msgstr "切"
+
+#: ../app/builder/builder.py:87 ../app/preferencesDlg.py:91
+msgid "copy"
+msgstr "复制"
+
+#: ../app/preferencesDlg.py:92
+msgid "paste"
+msgstr "粘贴"
+
+#: ../app/preferencesDlg.py:93
+msgid "duplicate"
+msgstr "重复"
+
+#: ../app/preferencesDlg.py:94
+msgid "indent"
+msgstr "缩进"
+
+#: ../app/preferencesDlg.py:95
+#, fuzzy
+msgid "dedent"
+msgstr "德登特"
+
+#: ../app/preferencesDlg.py:96
+#, fuzzy
+msgid "smart indent"
+msgstr "智能凹痕"
+
+#: ../app/preferencesDlg.py:97
+msgid "find"
+msgstr "找到"
+
+#: ../app/preferencesDlg.py:98
+#, fuzzy
+msgid "find again"
+msgstr "再次查找"
+
+#: ../app/preferencesDlg.py:99
+msgid "undo"
+msgstr "还原"
+
+#: ../app/preferencesDlg.py:100
+msgid "redo"
+msgstr "重做"
+
+#: ../app/preferencesDlg.py:101
+msgid "comment"
+msgstr "评论"
+
+#: ../app/preferencesDlg.py:102
+#, fuzzy
+msgid "uncomment"
+msgstr "未承诺"
+
+#: ../app/preferencesDlg.py:103
+#, fuzzy
+msgid "toggle comment"
+msgstr "切换评论"
+
+#: ../app/preferencesDlg.py:104
+msgid "fold"
+msgstr "折叠"
+
+#: ../app/preferencesDlg.py:105
+#, fuzzy
+msgid "enlarge Font"
+msgstr "放大缩小字体功能 放大缩小字体功能"
+
+#: ../app/preferencesDlg.py:106
+#, fuzzy
+msgid "shrink Font"
+msgstr "放大缩小字体功能 放大缩小字体功能"
+
+#: ../app/preferencesDlg.py:107
+#, fuzzy
+msgid "analyze code"
+msgstr "分析代码"
+
+#: ../app/preferencesDlg.py:108
+#, fuzzy
+msgid "compile script"
+msgstr "编译脚本"
+
+#: ../app/preferencesDlg.py:109
+#, fuzzy
+msgid "run script"
+msgstr "运行脚本"
+
+#: ../app/preferencesDlg.py:110
+msgid "stop script"
+msgstr "停止脚本"
+
+#: ../app/preferencesDlg.py:111
+#, fuzzy
+msgid "toggle whitespace"
+msgstr "切换空白"
+
+#: ../app/preferencesDlg.py:112
+#, fuzzy
+msgid "toggle EOLs"
+msgstr "切换EOL"
+
+#: ../app/preferencesDlg.py:113
+#, fuzzy
+msgid "toggle indent guides"
+msgstr "切换凹痕指南"
+
+#: ../app/preferencesDlg.py:114
+#, fuzzy
+msgid "new Routine"
+msgstr "新常规"
+
+#: ../app/preferencesDlg.py:115
+#, fuzzy
+msgid "copy Routine"
+msgstr "复制常规"
+
+#: ../app/preferencesDlg.py:116
+#, fuzzy
+msgid "paste Routine"
+msgstr "粘贴例程"
+
+#: ../app/preferencesDlg.py:117
+#, fuzzy
+msgid "paste Component"
+msgstr "粘贴组件"
+
+#: ../app/preferencesDlg.py:118
+#, fuzzy
+msgid "toggle output panel"
+msgstr "切换输出面板"
+
+#: ../app/preferencesDlg.py:119
+#, fuzzy
+msgid "rename Routine"
+msgstr "重命名常规"
+
+#: ../app/preferencesDlg.py:120
+#, fuzzy
+msgid "switch to Builder"
+msgstr "切换到构建器"
+
+#: ../app/preferencesDlg.py:121
+#, fuzzy
+msgid "switch to Coder"
+msgstr "切换到编码器"
+
+#: ../app/preferencesDlg.py:122
+#, fuzzy
+msgid "larger Flow"
+msgstr "更大的流量"
+
+#: ../app/preferencesDlg.py:123
+#, fuzzy
+msgid "smaller Flow"
+msgstr "较小的流"
+
+#: ../app/preferencesDlg.py:124
+#, fuzzy
+msgid "larger routine"
+msgstr "更大的例行公事"
+
+#: ../app/preferencesDlg.py:125
+#, fuzzy
+msgid "smaller routine"
+msgstr "较小的例行公事"
+
+#: ../app/preferencesDlg.py:126
+#, fuzzy
+msgid "toggle readme"
+msgstr "切换读取"
+
+#: ../app/preferencesDlg.py:127
+#, fuzzy
+msgid "login to projects"
+msgstr "登录项目"
+
+#: ../app/preferencesDlg.py:128
+#, fuzzy
+msgid "login to pavlovia"
+msgstr "登录到帕夫洛维亚"
+
+#: ../app/preferencesDlg.py:129
+#, fuzzy
+msgid "login to OSF"
+msgstr "登录到OSF"
+
+#: ../app/preferencesDlg.py:130
+#, fuzzy
+msgid "sync projects"
+msgstr "同步项目"
+
+#: ../app/preferencesDlg.py:131
+#, fuzzy
+msgid "find projects"
+msgstr "查找项目"
+
+#: ../app/preferencesDlg.py:132
+#, fuzzy
+msgid "open projects"
+msgstr "开放项目"
+
+#: ../app/preferencesDlg.py:133
+#, fuzzy
+msgid "new projects"
+msgstr "新项目"
+
+#: ../app/preferencesDlg.py:135
+#, fuzzy
+msgid "same as last session"
+msgstr "与上届相同"
+
+#: ../app/preferencesDlg.py:136
+#, fuzzy
+msgid "both Builder & Coder"
+msgstr "建设者和编码器"
+
+#: ../app/preferencesDlg.py:137
+#, fuzzy
+msgid "same as in the file"
+msgstr "与文件中相同"
+
+#: ../app/preferencesDlg.py:150
+#: ../experiment/components/settings/__init__.py:223
+#, fuzzy
+msgid "Latency not important"
+msgstr "延迟并不重要"
+
+#: ../app/preferencesDlg.py:151
+#: ../experiment/components/settings/__init__.py:224
+#, fuzzy
+msgid "Share low-latency driver"
+msgstr "共享低延迟驱动程序"
+
+#: ../app/preferencesDlg.py:152
+#: ../experiment/components/settings/__init__.py:225
+#, fuzzy
+msgid "Exclusive low-latency"
+msgstr "独家低延迟"
+
+#: ../app/preferencesDlg.py:153
+#: ../experiment/components/settings/__init__.py:226
+#, fuzzy
+msgid "Aggressive low-latency"
+msgstr "侵略性的低延迟"
+
+#: ../app/preferencesDlg.py:154
+#: ../experiment/components/settings/__init__.py:227
+#, fuzzy
+msgid "Latency critical"
+msgstr "延迟临界"
+
+#: ../app/preferencesDlg.py:163
+#, fuzzy
+msgid "PsychoPy Preferences"
+msgstr "心理偏好"
+
+#: ../app/preferencesDlg.py:206
+#, fuzzy
+msgid "Save prefs (in all sections) and close window"
+msgstr "保存预科（在所有部分）和关闭窗口"
+
+#: ../app/preferencesDlg.py:213
+#, fuzzy
+msgid "Cancel any changes (to any panel)"
+msgstr "取消任何更改（对任何面板）"
+
+#: ../app/preferencesDlg.py:217
+msgid "Help"
+msgstr "帮助"
+
+#: ../app/preferencesDlg.py:218
+#, fuzzy
+msgid "Get help on prefs"
+msgstr "获得前女友的帮助"
+
+#: ../app/preferencesDlg.py:349
+#, fuzzy, python-format
+msgid "Invalid value in \"%(pref)s\" (\"%(section)s\" Tab)"
+msgstr "\"百分比（前）\"（\"部分\"选项卡）中的无效值"
+
+#: ../app/builder/builder.py:873 ../app/preferencesDlg.py:352
+msgid "Error"
+msgstr "错误"
+
+#: ../app/stdOutRich.py:109
+#, fuzzy, python-format
+msgid "&Close output window\t%s"
+msgstr "•关闭输出窗口%s"
+
+#: ../app/stdOutRich.py:113
+#, fuzzy, python-format
+msgid "&Quit (PsychoPy)\t%s"
+msgstr "•退出（心理）%s"
+
+#: ../app/stdOutRich.py:115
+#, fuzzy
+msgid "Terminate the application"
+msgstr "终止申请"
+
+#: ../app/builder/builder.py:1352 ../app/builder/builder.py:2486
+#: ../app/coder/coder.py:1387 ../app/pavlovia_ui/_base.py:23
+#: ../app/stdOutRich.py:118 ../monitors/MonitorCenter.py:235
+msgid "&File"
+msgstr "&文件"
+
+#: ../app/builder/builder.py:75 ../app/builder/localizedStrings.py:79
+msgid "Field"
+msgstr "字段"
+
+#: ../app/builder/builder.py:76 ../app/builder/localizedStrings.py:80
+msgid "Default"
+msgstr "默认"
+
+#: ../app/builder/builder.py:77
+msgid "Favorites"
+msgstr "收藏夹"
+
+#: ../app/builder/builder.py:78
+#, fuzzy
+msgid "Stimuli"
+msgstr "刺激"
+
+#: ../app/builder/builder.py:79
+msgid "Responses"
+msgstr "响应"
+
+#: ../app/builder/builder.py:80 ../app/builder/dialogs/__init__.py:499
+msgid "Custom"
+msgstr "自定义"
+
+#: ../app/builder/builder.py:81
+#, fuzzy
+msgid "I/O"
+msgstr "I/O"
+
+#: ../app/builder/builder.py:82
+msgid "Add to favorites"
+msgstr "添加到收藏夹"
+
+#: ../app/builder/builder.py:83
+msgid "Remove from favorites"
+msgstr "从收藏夹删除"
+
+#: ../app/builder/builder.py:85
+msgid "edit"
+msgstr "编辑"
+
+#: ../app/builder/builder.py:86 ../app/builder/flow.py:97
+msgid "remove"
+msgstr "移除"
+
+#: ../app/builder/builder.py:88
+#, fuzzy
+msgid "move to top"
+msgstr "移动到顶部"
+
+#: ../app/builder/builder.py:89
+msgid "move up"
+msgstr "提升"
+
+#: ../app/builder/builder.py:90
+msgid "move down"
+msgstr "向下移动"
+
+#: ../app/builder/builder.py:91
+#, fuzzy
+msgid "move to bottom"
+msgstr "移动到底部"
+
+#: ../app/builder/builder.py:502 ../app/builder/builder.py:2221
+#, fuzzy, python-format
+msgid "New name for copy of \"%(copied)s\"?  [%(default)s]"
+msgstr "\"百分比（复制）\"副本的新名称？ [百分比（默认值）"
+
+#: ../app/builder/builder.py:506
+msgid "Paste Component"
+msgstr "粘贴组件"
+
+#: ../app/builder/builder.py:612
+#, fuzzy
+msgid "What is the name for the new Routine? (e.g. instr, trial, feedback)"
+msgstr "新例行公事的名称是什么？（例如，试验、反馈）"
+
+#: ../app/builder/builder.py:615
+#, fuzzy
+msgid "New Routine"
+msgstr "新常规"
+
+#: ../app/builder/builder.py:870
+#, fuzzy
+msgid "Create a routine (Experiment menu) before adding components"
+msgstr "在添加组件之前创建常规（实验菜单）"
+
+#: ../app/builder/builder.py:1181 ../app/builder/builder.py:1187
+#: ../app/coder/coder.py:1766
+#, fuzzy, python-format
+msgid "New [%s]"
+msgstr "新的 [%s]"
+
+#: ../app/builder/builder.py:1183 ../app/builder/builder.py:1188
+#, fuzzy
+msgid "Create new experiment file"
+msgstr "创建新的实验文件"
+
+#: ../app/builder/builder.py:1193 ../app/builder/builder.py:1199
+#: ../app/coder/coder.py:1779
+#, fuzzy, python-format
+msgid "Open [%s]"
+msgstr "打开 [%s]"
+
+#: ../app/builder/builder.py:1195 ../app/builder/builder.py:1200
+#, fuzzy
+msgid "Open an existing experiment file"
+msgstr "打开现有的实验文件"
+
+#: ../app/builder/builder.py:1206 ../app/builder/builder.py:1213
+#: ../app/coder/coder.py:1792
+#, fuzzy, python-format
+msgid "Save [%s]"
+msgstr "保存 [%s]"
+
+#: ../app/builder/builder.py:1208 ../app/builder/builder.py:1214
+#: ../app/builder/builder.py:1377
+#, fuzzy
+msgid "Save current experiment file"
+msgstr "保存当前实验文件"
+
+#: ../app/builder/builder.py:1221 ../app/builder/builder.py:1228
+#: ../app/coder/coder.py:1808
+#, fuzzy, python-format
+msgid "Save As... [%s]"
+msgstr "保存为...[%s]"
+
+#: ../app/builder/builder.py:1223 ../app/builder/builder.py:1229
+#: ../app/builder/builder.py:1381
+#, fuzzy
+msgid "Save current experiment file as..."
+msgstr "将当前实验文件保存为..."
+
+#: ../app/builder/builder.py:1235 ../app/builder/builder.py:1242
+#: ../app/coder/coder.py:1823
+#, fuzzy, python-format
+msgid "Undo [%s]"
+msgstr "撤消 [%s]"
+
+#: ../app/builder/builder.py:1237 ../app/builder/builder.py:1243
+#: ../app/builder/builder.py:1414 ../app/coder/coder.py:1502
+#: ../app/coder/coder.py:1829 ../app/coder/coder.py:1835
+msgid "Undo last action"
+msgstr "后退一步"
+
+#: ../app/builder/builder.py:1249 ../app/builder/builder.py:1256
+#: ../app/coder/coder.py:1838
+#, fuzzy, python-format
+msgid "Redo [%s]"
+msgstr "重做[%s]"
+
+#: ../app/builder/builder.py:1251 ../app/builder/builder.py:1257
+#: ../app/builder/builder.py:1419 ../app/coder/coder.py:1507
+#: ../app/coder/coder.py:1844 ../app/coder/coder.py:1850
+msgid "Redo last action"
+msgstr "重做最后一个动作"
+
+#: ../app/builder/builder.py:1265 ../app/builder/builder.py:1272
+#: ../app/builder/builder.py:1430 ../app/coder/coder.py:1530
+#: ../app/coder/coder.py:1858 ../app/coder/coder.py:1865
+#, fuzzy
+msgid "Monitor Center"
+msgstr "监视器中心"
+
+#: ../app/builder/builder.py:1267 ../app/builder/builder.py:1273
+#: ../app/coder/coder.py:1860 ../app/coder/coder.py:1866
+#, fuzzy
+msgid "Monitor settings and calibration"
+msgstr "监视器设置和校准"
+
+#: ../app/builder/builder.py:1279 ../app/builder/builder.py:1286
+#, fuzzy
+msgid "Experiment Settings"
+msgstr "实验设置"
+
+#: ../app/builder/builder.py:1281 ../app/builder/builder.py:1287
+#, fuzzy
+msgid "Experiment settings"
+msgstr "实验设置"
+
+#: ../app/builder/builder.py:1295 ../app/builder/builder.py:1302
+#, fuzzy, python-format
+msgid "Compile Script [%s]"
+msgstr "编译脚本 [%s]"
+
+#: ../app/builder/builder.py:1297 ../app/builder/builder.py:1303
+#, fuzzy
+msgid "Compile to script"
+msgstr "编译到脚本"
+
+#: ../app/builder/builder.py:1309 ../app/builder/builder.py:1316
+#: ../app/coder/coder.py:1885
+#, fuzzy, python-format
+msgid "Run [%s]"
+msgstr "运行 [%s]"
+
+#: ../app/builder/builder.py:1311 ../app/builder/builder.py:1317
+#, fuzzy
+msgid "Run experiment"
+msgstr "运行实验"
+
+#: ../app/builder/builder.py:1323 ../app/builder/builder.py:1330
+#: ../app/coder/coder.py:1900
+#, fuzzy, python-format
+msgid "Stop [%s]"
+msgstr "停止 [%s]"
+
+#: ../app/builder/builder.py:1325 ../app/builder/builder.py:1331
+#, fuzzy
+msgid "Stop experiment"
+msgstr "停止实验"
+
+#: ../app/builder/builder.py:1367 ../app/coder/coder.py:1401
+#, fuzzy, python-format
+msgid "&New\t%s"
+msgstr "•新%s"
+
+#: ../app/builder/builder.py:1370 ../app/coder/coder.py:1402
+#, fuzzy, python-format
+msgid "&Open...\t%s"
+msgstr "打开...\t%s"
+
+#: ../app/builder/builder.py:1373 ../app/coder/coder.py:1403
+msgid "Open &Recent"
+msgstr "打开最近"
+
+#: ../app/builder/builder.py:1376 ../app/builder/builder.py:2489
+#: ../app/coder/coder.py:1405
+#, fuzzy, python-format
+msgid "&Save\t%s"
+msgstr "并保存%s"
+
+#: ../app/builder/builder.py:1380 ../app/coder/coder.py:1408
+#, fuzzy, python-format
+msgid "Save &as...\t%s"
+msgstr "保存为。。。\t%s"
+
+#: ../app/builder/builder.py:1384
+#, fuzzy, python-format
+msgid "Export HTML...\t%s"
+msgstr "导出HTML.\t%s"
+
+#: ../app/builder/builder.py:1385
+#, fuzzy
+msgid "Export experiment to html/javascript file"
+msgstr "出口实验到html/爪哇脚本文件"
+
+#: ../app/builder/builder.py:1388 ../app/coder/coder.py:1411
+#, fuzzy, python-format
+msgid "&Close file\t%s"
+msgstr "•关闭文件%s"
+
+#: ../app/builder/builder.py:1389
+#, fuzzy
+msgid "Close current experiment"
+msgstr "关闭当前实验"
+
+#: ../app/builder/builder.py:1399 ../app/coder/coder.py:1421
+#, fuzzy, python-format
+msgid "&Preferences\t%s"
+msgstr "•偏好%s"
+
+#: ../app/builder/builder.py:1410 ../app/coder/coder.py:1435
+#: ../monitors/MonitorCenter.py:243
+msgid "&Edit"
+msgstr "&编辑"
+
+#: ../app/builder/builder.py:1413 ../app/builder/builder.py:2045
+#: ../app/coder/coder.py:1501
+#, fuzzy, python-format
+msgid "Undo\t%s"
+msgstr "撤消%s"
+
+#: ../app/builder/builder.py:1418 ../app/builder/builder.py:2059
+#: ../app/coder/coder.py:1506
+#, fuzzy, python-format
+msgid "Redo\t%s"
+msgstr "重%s"
+
+#: ../app/builder/builder.py:1422 ../app/coder/coder.py:1440
+#, fuzzy, python-format
+msgid "&Paste\t%s"
+msgstr "•粘贴%s"
+
+#: ../app/builder/builder.py:1427 ../app/coder/coder.py:1528
+msgid "&Tools"
+msgstr "&工具"
+
+#: ../app/builder/builder.py:1431 ../app/coder/coder.py:1531
+#, fuzzy
+msgid "To set information about your monitor"
+msgstr "设置有关显示器的信息"
+
+#: ../app/builder/builder.py:1435
+#, fuzzy, python-format
+msgid "Compile\t%s"
+msgstr "编译%s"
+
+#: ../app/builder/builder.py:1436
+#, fuzzy
+msgid "Compile the exp to a script"
+msgstr "将exp编译为脚本"
+
+#: ../app/builder/builder.py:1439 ../app/coder/coder.py:1545
+#, fuzzy, python-format
+msgid "Run\t%s"
+msgstr "跑%s"
+
+#: ../app/builder/builder.py:1440 ../app/coder/coder.py:1546
+#, fuzzy
+msgid "Run the current script"
+msgstr "运行当前脚本"
+
+#: ../app/builder/builder.py:1443 ../app/coder/coder.py:1549
+#, fuzzy, python-format
+msgid "Stop\t%s"
+msgstr "停止%s"
+
+#: ../app/builder/builder.py:1444
+#, fuzzy
+msgid "Abort the current script"
+msgstr "中止当前脚本"
+
+#: ../app/builder/builder.py:1449 ../app/coder/coder.py:1555
+#, fuzzy
+msgid "PsychoPy updates..."
+msgstr "心理更新。。。"
+
+#: ../app/builder/builder.py:1450 ../app/coder/coder.py:1556
+#, fuzzy
+msgid "Update PsychoPy to the latest, or a specific, version"
+msgstr "将心理内容更新到最新版本或特定版本"
+
+#: ../app/builder/builder.py:1455 ../app/coder/coder.py:1559
+#, fuzzy
+msgid "Benchmark wizard"
+msgstr "基准向导"
+
+#: ../app/builder/builder.py:1456 ../app/coder/coder.py:1560
+#, fuzzy
+msgid "Check software & hardware, generate report"
+msgstr "检查软件和硬件，生成报告"
+
+#: ../app/builder/builder.py:1471 ../app/builder/builder.py:2493
+#, fuzzy, python-format
+msgid "&Toggle readme\t%s"
+msgstr "•切换读取%s"
+
+#: ../app/builder/builder.py:1473 ../app/builder/builder.py:2495
+#, fuzzy
+msgid "Toggle Readme"
+msgstr "切换读取"
+
+#: ../app/builder/builder.py:1476
+#, fuzzy, python-format
+msgid "&Flow Larger\t%s"
+msgstr "•流量较大的%s"
+
+#: ../app/builder/builder.py:1478
+#, fuzzy
+msgid "Larger flow items"
+msgstr "较大的流量项目"
+
+#: ../app/builder/builder.py:1481
+#, fuzzy, python-format
+msgid "&Flow Smaller\t%s"
+msgstr "•流量较小的%s"
+
+#: ../app/builder/builder.py:1483
+#, fuzzy
+msgid "Smaller flow items"
+msgstr "较小的流量项目"
+
+#: ../app/builder/builder.py:1486
+#, fuzzy, python-format
+msgid "&Routine Larger\t%s"
+msgstr "•常规较大的%s"
+
+#: ../app/builder/builder.py:1488
+#, fuzzy
+msgid "Larger routine items"
+msgstr "较大的常规项目"
+
+#: ../app/builder/builder.py:1491
+#, fuzzy, python-format
+msgid "&Routine Smaller\t%s"
+msgstr "•常规小%s"
+
+#: ../app/builder/builder.py:1493
+#, fuzzy
+msgid "Smaller routine items"
+msgstr "较小的常规项目"
+
+#: ../app/builder/builder.py:1498
+#, fuzzy
+msgid "&Experiment"
+msgstr "•实验"
+
+#: ../app/builder/builder.py:1501
+#, fuzzy, python-format
+msgid "&New Routine\t%s"
+msgstr "•新常规%s"
+
+#: ../app/builder/builder.py:1502
+#, fuzzy
+msgid "Create a new routine (e.g. the trial definition)"
+msgstr "创建新的常规（例如试用定义）"
+
+#: ../app/builder/builder.py:1506
+#, fuzzy, python-format
+msgid "&Copy Routine\t%s"
+msgstr "•复制常规%s"
+
+#: ../app/builder/builder.py:1508
+#, fuzzy
+msgid "Copy the current routine so it can be used in another exp"
+msgstr "复制当前的常规程序，以便它可以在另一个exp中使用"
+
+#: ../app/builder/builder.py:1513
+#, fuzzy, python-format
+msgid "&Paste Routine\t%s"
+msgstr "•粘贴常规%s"
+
+#: ../app/builder/builder.py:1515
+#, fuzzy
+msgid "Paste the Routine into the current experiment"
+msgstr "将常规粘贴到当前实验中"
+
+#: ../app/builder/builder.py:1520
+#, fuzzy, python-format
+msgid "&Rename Routine\t%s"
+msgstr "•重命名常规%s"
+
+#: ../app/builder/builder.py:1522
+#, fuzzy
+msgid "Change the name of this routine"
+msgstr "更改此例程的名称"
+
+#: ../app/builder/builder.py:1525
+#, fuzzy, python-format
+msgid "Paste Component\t%s"
+msgstr "粘贴组件%s"
+
+#: ../app/builder/builder.py:1527
+#, fuzzy
+msgid "Paste the Component at bottom of the current Routine"
+msgstr "将组件粘贴在当前常规的底部"
+
+#: ../app/builder/builder.py:1535
+#, fuzzy
+msgid "Insert Routine in Flow"
+msgstr "在流中插入常规"
+
+#: ../app/builder/builder.py:1536
+#, fuzzy
+msgid "Select one of your routines to be inserted into the experiment flow"
+msgstr "选择要插入到实验流中的一个例程"
+
+#: ../app/builder/builder.py:1541
+#, fuzzy
+msgid "Insert Loop in Flow"
+msgstr "在流中插入循环"
+
+#: ../app/builder/builder.py:1542
+#, fuzzy
+msgid "Create a new loop in your flow window"
+msgstr "在流窗口中创建一个新循环"
+
+#: ../app/builder/builder.py:1553
+#, fuzzy
+msgid "&Unpack Demos..."
+msgstr "和拆包演示。。。"
+
+#: ../app/builder/builder.py:1554
+#, fuzzy
+msgid "Unpack demos to a writable location (so that they can be run)"
+msgstr "将演示拆包到可令状位置（以便运行它们）"
+
+#: ../app/builder/builder.py:1561 ../app/coder/coder.py:1644
+#, fuzzy
+msgid "&Demos"
+msgstr "•演示"
+
+#: ../app/builder/builder.py:1565 ../app/coder/coder.py:1694
+#, fuzzy
+msgid "Pavlovia.org"
+msgstr "Pavlovia.org"
+
+#: ../app/builder/builder.py:1569 ../app/coder/coder.py:1698
+msgid "&Help"
+msgstr "&帮助"
+
+#: ../app/builder/builder.py:1573 ../app/coder/coder.py:1700
+#, fuzzy
+msgid "&PsychoPy Homepage"
+msgstr "•心理心理主页"
+
+#: ../app/builder/builder.py:1574 ../app/coder/coder.py:1701
+#, fuzzy
+msgid "Go to the PsychoPy homepage"
+msgstr "转到心理内容主页"
+
+#: ../app/builder/builder.py:1578
+#, fuzzy
+msgid "&PsychoPy Builder Help"
+msgstr "•心理构建器帮助"
+
+#: ../app/builder/builder.py:1579
+#, fuzzy
+msgid "Go to the online documentation for PsychoPy Builder"
+msgstr "转到心理构建器的在线文档"
+
+#: ../app/builder/builder.py:1586 ../app/coder/coder.py:1717
+msgid "&About..."
+msgstr "&关于..."
+
+#: ../app/builder/builder.py:1587 ../app/coder/coder.py:1718
+#, fuzzy
+msgid "About PsychoPy"
+msgstr "关于心理心理"
+
+#: ../app/builder/builder.py:1593 ../app/coder/coder.py:1722
+#, fuzzy
+msgid "&News..."
+msgstr "新闻..."
+
+#: ../app/builder/builder.py:1594 ../app/coder/coder.py:1723
+msgid "News"
+msgstr "新闻"
+
+#: ../app/builder/builder.py:1665 ../app/builder/dialogs/__init__.py:1559
+#: ../app/coder/coder.py:2262
+#, fuzzy
+msgid "Open file ..."
+msgstr "打开文件..."
+
+#: ../app/builder/builder.py:1744 ../app/coder/coder.py:2396
+#, fuzzy
+msgid "Save file as ..."
+msgstr "将文件保存为..."
+
+#: ../app/builder/builder.py:1780
+#, fuzzy
+msgid "Export HTML file"
+msgstr "导出 HTML 文件"
+
+#: ../app/builder/builder.py:1857
+#, fuzzy, python-format
+msgid "Experiment %s has changed. Save before quitting?"
+msgstr "实验%s已经改变了。退出前保存？"
+
+#: ../app/builder/builder.py:2049
+#, fuzzy, python-format
+msgid "Undo %(action)s\t%(key)s"
+msgstr "撤消百分比（行动）百分比（键）"
+
+#: ../app/builder/builder.py:2063
+#, fuzzy, python-format
+msgid "Redo %(action)s\t%(key)s"
+msgstr "重多百分比（行动）s百分比（键）s"
+
+#: ../app/builder/builder.py:2075
+#, fuzzy
+msgid "Location to unpack demos"
+msgstr "拆包演示的位置"
+
+#: ../app/builder/builder.py:2225
+#, fuzzy
+msgid "Paste Routine"
+msgstr "粘贴例程"
+
+#: ../app/builder/builder.py:2293
+#, fuzzy
+msgid "What is the new name for the Routine?"
+msgstr "例行公事的新名称是什么？"
+
+#: ../app/builder/builder.py:2295
+msgid "Rename"
+msgstr "重命名"
+
+#: ../app/builder/builder.py:2491
+#, fuzzy, python-format
+msgid "&Close readme\t%s"
+msgstr "•关闭读取%s"
+
+#: ../app/builder/builder.py:2565
+#, fuzzy
+msgid ""
+"Warning, HTML outputs are very new.\n"
+"Treat with caution (CHECK YOUR EXPERIMENT)!"
+msgstr ""
+"警告，HTML 输出非常新。\n"
+"谨慎对待（检查您的实验）！"
+
+#: ../app/builder/builder.py:2573
+#, fuzzy
+msgid "Filepath:"
+msgstr "文件路径："
+
+#: ../app/builder/builder.py:2585
+#, fuzzy
+msgid ""
+"Select 'manually' to receive this alert when exporting HTML.\n"
+"Click 'OK' to export HTML, or click 'Cancel' to return."
+msgstr ""
+"在导出HTML时，选择\"手动\"接收此警报。\n"
+"单击\"确定\"以导出HTML，或单击\"取消\"以返回。"
+
+#: ../app/builder/flow.py:98
+msgid "rename"
+msgstr "重命名"
+
+#: ../app/builder/flow.py:110
+#, fuzzy
+msgid "Insert Routine "
+msgstr "插入常规"
+
+#: ../app/builder/flow.py:111
+#, fuzzy
+msgid "Insert Loop     "
+msgstr "插入循环"
+
+#: ../app/builder/flow.py:157
+#, fuzzy
+msgid "Insert Routine"
+msgstr "插入常规"
+
+#: ../app/builder/flow.py:158
+#, fuzzy
+msgid "Insert Loop"
+msgstr "插入循环"
+
+#: ../app/builder/flow.py:187
+#, fuzzy
+msgid "Select a Routine to insert (Esc to exit)"
+msgstr "选择要插入的例程（Esc 退出）"
+
+#: ../app/builder/flow.py:223
+#, fuzzy
+msgid "CANCEL Insert"
+msgstr "取消插入"
+
+#: ../app/builder/flow.py:225
+#, fuzzy
+msgid "Click where you want to insert the Routine, or CANCEL insert."
+msgstr "单击要插入\"常规\"或\"取消\"插入的位置。"
+
+#: ../app/builder/flow.py:255
+#, fuzzy
+msgid "CANCEL insert"
+msgstr "取消插入"
+
+#: ../app/builder/flow.py:258
+#, fuzzy
+msgid "Click where you want the loop to start/end, or CANCEL insert."
+msgstr "单击要开始/结束循环的位置，或 CANCEL 插入。"
+
+#: ../app/builder/flow.py:267
+#, fuzzy
+msgid "Click the other end for the loop"
+msgstr "单击循环的另一端"
+
+#: ../app/builder/flow.py:496
+#, fuzzy, python-format
+msgid ""
+"The \"%s\" Loop is about to be deleted as well (by collapsing). OK to "
+"proceed?"
+msgstr "\"%s\"循环也即将被删除（通过崩溃）。可以继续吗？"
+
+#: ../app/builder/flow.py:498
+#, fuzzy
+msgid "Impending Loop collapse"
+msgstr "即将发生的循环崩溃"
+
+#: ../app/builder/localizedStrings.py:24
+msgid "linear"
+msgstr "线性"
+
+#: ../app/builder/localizedStrings.py:25
+#, fuzzy
+msgid "nearest"
+msgstr "最近"
+
+#: ../app/builder/localizedStrings.py:28
+#, fuzzy
+msgid "last key"
+msgstr "最后一个关键"
+
+#: ../app/builder/localizedStrings.py:29
+#, fuzzy
+msgid "first key"
+msgstr "第一个键"
+
+#: ../app/builder/localizedStrings.py:30
+#, fuzzy
+msgid "all keys"
+msgstr "所有密钥"
+
+#: ../app/builder/localizedStrings.py:31
+msgid "nothing"
+msgstr "没有"
+
+#: ../app/builder/localizedStrings.py:32
+#, fuzzy
+msgid "last button"
+msgstr "最后一个按钮"
+
+#: ../app/builder/localizedStrings.py:33
+#, fuzzy
+msgid "first button"
+msgstr "第一个按钮"
+
+#: ../app/builder/localizedStrings.py:34
+#, fuzzy
+msgid "all buttons"
+msgstr "所有按钮"
+
+#: ../app/builder/localizedStrings.py:35
+#, fuzzy
+msgid "final"
+msgstr "最后"
+
+#: ../app/builder/localizedStrings.py:36
+msgid "on click"
+msgstr "点击事件"
+
+#: ../app/builder/localizedStrings.py:37
+#, fuzzy
+msgid "every frame"
+msgstr "每一帧"
+
+#: ../app/builder/localizedStrings.py:38
+msgid "never"
+msgstr "从不"
+
+#: ../app/builder/localizedStrings.py:39
+#, fuzzy
+msgid "from exp settings"
+msgstr "从exp设置"
+
+#: ../app/builder/localizedStrings.py:40
+#, fuzzy
+msgid "from preferences"
+msgstr "从首选项"
+
+#: ../app/builder/localizedStrings.py:41
+msgid "circle"
+msgstr "圆圈"
+
+#: ../app/builder/localizedStrings.py:42
+msgid "square"
+msgstr "平方"
+
+#: ../app/builder/localizedStrings.py:44
+msgid "direction"
+msgstr "方向"
+
+#: ../app/builder/localizedStrings.py:45
+msgid "position"
+msgstr "位置"
+
+#: ../app/builder/localizedStrings.py:46
+#, fuzzy
+msgid "walk"
+msgstr "走"
+
+#: ../app/builder/localizedStrings.py:48
+#, fuzzy
+msgid "same"
+msgstr "相同"
+
+#: ../app/builder/localizedStrings.py:49
+msgid "different"
+msgstr "不同"
+
+#: ../app/builder/localizedStrings.py:50
+msgid "Experiment"
+msgstr "实验"
+
+#: ../app/builder/localizedStrings.py:52
+#, fuzzy
+msgid "time (s)"
+msgstr "时间（s）"
+
+#: ../app/builder/localizedStrings.py:53
+#, fuzzy
+msgid "frame N"
+msgstr "帧N"
+
+#: ../app/builder/localizedStrings.py:54
+msgid "condition"
+msgstr "条件"
+
+#: ../app/builder/localizedStrings.py:55
+#, fuzzy
+msgid "duration (s)"
+msgstr "持续时间（s）"
+
+#: ../app/builder/localizedStrings.py:56
+#, fuzzy
+msgid "duration (frames)"
+msgstr "持续时间（帧）"
+
+#: ../app/builder/localizedStrings.py:64
+#, fuzzy
+msgid "constant"
+msgstr "不断"
+
+#: ../app/builder/localizedStrings.py:65
+#, fuzzy
+msgid "set every repeat"
+msgstr "设置每一个重复"
+
+#: ../app/builder/localizedStrings.py:66
+#, fuzzy
+msgid "set every frame"
+msgstr "设置每个帧"
+
+#: ../app/builder/localizedStrings.py:68
+msgid "add"
+msgstr "添加"
+
+#: ../app/builder/localizedStrings.py:69 ../app/builder/localizedStrings.py:97
+msgid "average"
+msgstr "平均"
+
+#: ../app/builder/localizedStrings.py:70
+#, fuzzy
+msgid "use preferences"
+msgstr "使用首选项"
+
+#: ../app/builder/localizedStrings.py:72
+msgid "debug"
+msgstr "调试"
+
+#: ../app/builder/localizedStrings.py:73
+msgid "info"
+msgstr "信息"
+
+#: ../app/builder/localizedStrings.py:74
+msgid "exp"
+msgstr "exp"
+
+#: ../app/builder/localizedStrings.py:75
+msgid "data"
+msgstr "数据"
+
+#: ../app/builder/localizedStrings.py:76
+msgid "warning"
+msgstr "警告"
+
+#: ../app/builder/localizedStrings.py:77
+msgid "error"
+msgstr "错误"
+
+#: ../app/builder/localizedStrings.py:82
+#, fuzzy
+msgid "any click"
+msgstr "任何点击"
+
+#: ../app/builder/localizedStrings.py:83
+#, fuzzy
+msgid "valid click"
+msgstr "有效单击"
+
+#: ../app/builder/localizedStrings.py:84
+#, fuzzy
+msgid "mouse onset"
+msgstr "鼠标发作"
+
+#: ../app/builder/localizedStrings.py:85
+msgid "Routine"
+msgstr "常规"
+
+#: ../app/builder/localizedStrings.py:87
+msgid "line"
+msgstr "线路"
+
+#: ../app/builder/localizedStrings.py:88
+msgid "triangle"
+msgstr "三角形"
+
+#: ../app/builder/localizedStrings.py:89
+msgid "rectangle"
+msgstr "矩形"
+
+#: ../app/builder/localizedStrings.py:90
+msgid "cross"
+msgstr "交叉"
+
+#: ../app/builder/localizedStrings.py:91
+msgid "star"
+msgstr "星"
+
+#: ../app/builder/localizedStrings.py:92
+#, fuzzy
+msgid "regular polygon..."
+msgstr "常规多边形。。。"
+
+#: ../app/builder/localizedStrings.py:94
+msgid "first"
+msgstr "首先"
+
+#: ../app/builder/localizedStrings.py:95
+msgid "last"
+msgstr "最后一个"
+
+#: ../app/builder/localizedStrings.py:96
+msgid "all"
+msgstr "所有"
+
+#: ../app/builder/dialogs/__init__.py:1090 ../app/builder/validators.py:100
+msgid "Missing name"
+msgstr "缺少名字"
+
+#: ../app/builder/validators.py:107
+#, fuzzy, python-format
+msgid "That name is in use (by %s). Try another name."
+msgstr "该名称正在使用（%s）。尝试另一个名称。"
+
+#: ../app/builder/dialogs/__init__.py:1100
+#: ../app/builder/dialogs/dlgsConditions.py:303
+#: ../app/builder/dialogs/dlgsConditions.py:578
+#: ../app/builder/validators.py:110
+#, fuzzy
+msgid "Name must be alpha-numeric or _, no spaces"
+msgstr "名称必须是阿尔法数字或_，没有空格"
+
+#: ../app/builder/validators.py:198
+#, fuzzy
+msgid ""
+"It looks like your 'Correct answer' contains a variable - prepend variables "
+"with '$' e.g. ${val}"
+msgstr "看起来您的\"正确答案\"包含一个变量 - 预录的变量与\"$\"，例如${val}"
+
+#: ../app/builder/validators.py:210
+#, fuzzy
+msgid "Python syntax error in field `{}`:  {}"
+msgstr "字段中的 Python 语法错误\"{}\"：{}"
+
+#: ../app/builder/validators.py:221
+#, fuzzy
+msgid ""
+"Looks like your variable '{code}' in '{displayName}' should be set to update."
+msgstr "看起来\"{displayName}\"中的变量\"{code}\"应该设置为更新。"
+
+#: ../app/builder/validators.py:236
+#, fuzzy
+msgid "Python var `{}` in `{}` is same as Name"
+msgstr "Python 瓦尔 \"{\"在 \"{\"中与名称相同"
+
+#: ../app/builder/dialogs/__init__.py:246
+#, fuzzy
+msgid "set during: "
+msgstr "设置期间："
+
+#: ../app/builder/dialogs/__init__.py:264 ../app/pavlovia_ui/project.py:77
+#: ../app/pavlovia_ui/project.py:197
+msgid "Browse..."
+msgstr "浏览..."
+
+#: ../app/builder/dialogs/__init__.py:413
+#: ../app/builder/dialogs/__init__.py:1128
+#: ../app/builder/dialogs/dlgsCode.py:39
+msgid " Properties"
+msgstr " 属性"
+
+#: ../app/builder/dialogs/__init__.py:493
+msgid "Basic"
+msgstr "基本"
+
+#: ../app/builder/dialogs/__init__.py:494
+msgid "Data"
+msgstr "数据"
+
+#: ../app/builder/dialogs/__init__.py:495
+#: ../experiment/components/settings/__init__.py:47
+msgid "Screen"
+msgstr "屏幕"
+
+#: ../app/builder/dialogs/__init__.py:496
+msgid "Dots"
+msgstr "点"
+
+#: ../app/builder/dialogs/__init__.py:497
+#, fuzzy
+msgid "Grating"
+msgstr "光栅"
+
+#: ../app/builder/dialogs/__init__.py:498
+msgid "Advanced"
+msgstr "高级"
+
+#: ../app/builder/dialogs/__init__.py:500
+msgid "Carrier"
+msgstr "运送人"
+
+#: ../app/builder/dialogs/__init__.py:501
+msgid "Envelope"
+msgstr "信封"
+
+#: ../app/builder/dialogs/__init__.py:502
+msgid "Appearance"
+msgstr "外观"
+
+#: ../app/builder/dialogs/__init__.py:503 ../monitors/MonitorCenter.py:267
+msgid "Save"
+msgstr "保存"
+
+#: ../app/builder/dialogs/__init__.py:504
+msgid "Online"
+msgstr "在线"
+
+#: ../app/builder/dialogs/__init__.py:505
+msgid "Testing"
+msgstr "测试"
+
+#: ../app/builder/dialogs/__init__.py:642 ../localization/__init__.py:160
+msgid "Start"
+msgstr "开始"
+
+#: ../app/builder/dialogs/__init__.py:645 ../localization/__init__.py:162
+#, fuzzy
+msgid "Expected start (s)"
+msgstr "预期开始（s）"
+
+#: ../app/builder/dialogs/__init__.py:687 ../localization/__init__.py:161
+msgid "Stop"
+msgstr "停止"
+
+#: ../app/builder/dialogs/__init__.py:690 ../localization/__init__.py:163
+#, fuzzy
+msgid "Expected duration (s)"
+msgstr "预期持续时间（s）"
+
+#: ../app/builder/dialogs/__init__.py:842
+#: ../app/builder/dialogs/__init__.py:1863
+#: ../app/builder/dialogs/dlgsCode.py:116
+#: ../app/builder/dialogs/dlgsConditions.py:516
+#, fuzzy
+msgid " Help "
+msgstr "帮助"
+
+#: ../app/builder/dialogs/__init__.py:843
+#: ../app/builder/dialogs/dlgsCode.py:117
+#, fuzzy
+msgid "Go to online help about this component"
+msgstr "转到有关此组件的在线帮助"
+
+#: ../app/builder/dialogs/__init__.py:848
+#: ../app/builder/dialogs/__init__.py:1867
+#: ../app/builder/dialogs/dlgsCode.py:119
+#: ../app/builder/dialogs/dlgsConditions.py:521 ../gui/qtgui.py:95
+#: ../gui/wxgui.py:71 ../monitors/MonitorCenter.py:1113
+#: ../monitors/MonitorCenter.py:1220
+#, fuzzy
+msgid " OK "
+msgstr "还行"
+
+#: ../app/builder/dialogs/__init__.py:856
+#: ../app/builder/dialogs/__init__.py:1870
+#: ../app/builder/dialogs/dlgsCode.py:122
+#: ../app/builder/dialogs/dlgsConditions.py:529 ../gui/qtgui.py:96
+#: ../gui/wxgui.py:72 ../monitors/MonitorCenter.py:1115
+#: ../monitors/MonitorCenter.py:1223
+msgid " Cancel "
+msgstr " 取消 "
+
+#: ../app/builder/dialogs/__init__.py:1096
+#, fuzzy, python-format
+msgid "That name is in use (it's a %s). Try another name."
+msgstr "这个名字正在使用（这是一个%s）。尝试另一个名称。"
+
+#: ../app/builder/dialogs/__init__.py:1324
+#: ../app/builder/dialogs/__init__.py:1484
+#, fuzzy
+msgid "No parameters set"
+msgstr "未设置参数"
+
+#: ../app/builder/dialogs/__init__.py:1400
+#, fuzzy
+msgid "No parameters set (select a file above)"
+msgstr "未设置参数（选择上面的文件）"
+
+#: ../app/builder/dialogs/__init__.py:1473
+#, fuzzy, python-format
+msgid ""
+"%(nCondition)i conditions, with %(nParam)i parameters\n"
+"%(paramStr)s"
+msgstr ""
+"%（不条件）i 条件，带百分比（nParam）i 参数\n"
+"百分比（参数）"
+
+#: ../app/builder/dialogs/__init__.py:1482
+#: ../app/builder/dialogs/__init__.py:1730
+#, fuzzy
+msgid "No parameters set (conditionsFile not found)"
+msgstr "未设置参数（未找到条件文件）"
+
+#: ../app/builder/dialogs/__init__.py:1580
+#, fuzzy
+msgid "Could not read conditions from:\n"
+msgstr "无法从：\n"
+
+#: ../app/builder/dialogs/__init__.py:1600
+#, fuzzy
+msgid "Configuration error in conditions file"
+msgstr "条件文件中的配置错误"
+
+#: ../app/builder/dialogs/__init__.py:1605
+#, fuzzy
+msgid "Bad condition name(s) in file:\n"
+msgstr "文件中的不良状态名称：\n"
+
+#: ../app/builder/dialogs/__init__.py:1621
+#, fuzzy
+msgid "Builder variable(s) ({}) in file:{}"
+msgstr "文件中的构建器变量：{}"
+
+#: ../app/builder/dialogs/__init__.py:1718
+#, fuzzy
+msgid "Badly formed condition name(s) in file:\n"
+msgstr "文件中形成的不良状态名称：\n"
+
+#: ../app/builder/dialogs/__init__.py:1720
+#, fuzzy
+msgid ""
+".\n"
+"Need to be legal as var name; edit file, try again."
+msgstr ""
+".\n"
+"需要是合法的作为瓦尔名称：编辑文件，请重试。"
+
+#: ../app/builder/dialogs/__init__.py:1864
+#, fuzzy
+msgid "Get help about this component"
+msgstr "获取有关此组件的帮助"
+
+#: ../app/builder/dialogs/dlgsConditions.py:87
+#, fuzzy
+msgid "New (no file)"
+msgstr "新（无文件）"
+
+#: ../app/builder/dialogs/dlgsConditions.py:95
+#, fuzzy
+msgid "Conditions data (no file)"
+msgstr "条件数据（无文件）"
+
+#: ../app/builder/dialogs/dlgsConditions.py:168
+#, fuzzy
+msgid "Params:"
+msgstr "Params："
+
+#: ../app/builder/dialogs/dlgsConditions.py:177
+#, fuzzy
+msgid "type:"
+msgstr "类型："
+
+#: ../app/builder/dialogs/dlgsConditions.py:233
+#, fuzzy, python-format
+msgid "cond %s:"
+msgstr "康德%s："
+
+#: ../app/builder/dialogs/dlgsConditions.py:269
+#, fuzzy
+msgid "Should be legal as a variable name (alphanumeric)"
+msgstr "应是合法的可变名称（字母数）"
+
+#: ../app/builder/dialogs/dlgsConditions.py:281
+#, fuzzy
+msgid "extra white-space"
+msgstr "额外的空白"
+
+#: ../app/builder/dialogs/dlgsConditions.py:447
+msgid "PREVIEW"
+msgstr "预览"
+
+#: ../app/builder/dialogs/dlgsConditions.py:484
+#, fuzzy
+msgid "+cond."
+msgstr "+康德。"
+
+#: ../app/builder/dialogs/dlgsConditions.py:485
+#, fuzzy
+msgid "Add a condition (row); to delete a condition, delete all of its values."
+msgstr "添加条件（行）：要删除条件，请删除其所有值。"
+
+#: ../app/builder/dialogs/dlgsConditions.py:491
+#, fuzzy
+msgid "+param"
+msgstr "+参数"
+
+#: ../app/builder/dialogs/dlgsConditions.py:492
+#, fuzzy
+msgid ""
+"Add a parameter (column); to delete a param, set its type to None, or delete "
+"all of its values."
+msgstr "添加参数（列）：删除参数，将其类型设置为\"无\"，或将其所有值删除。"
+
+#: ../app/builder/dialogs/dlgsConditions.py:498
+msgid "Preview"
+msgstr "预览"
+
+#: ../app/builder/dialogs/dlgsConditions.py:499
+#, fuzzy
+msgid ""
+"Show all values as they would appear after saving to a file, without "
+"actually saving anything."
+msgstr "显示所有值，因为它们在保存到文件后会显示，而实际上并没有保存任何东西。"
+
+#: ../app/builder/dialogs/dlgsConditions.py:505
+msgid "Save as"
+msgstr "另存为"
+
+#: ../app/builder/dialogs/dlgsConditions.py:517
+#, fuzzy
+msgid "Go to online help"
+msgstr "转到在线帮助"
+
+#: ../app/builder/dialogs/dlgsConditions.py:523
+#, fuzzy
+msgid "Save and exit"
+msgstr "保存和退出"
+
+#: ../app/builder/dialogs/dlgsConditions.py:531
+#, fuzzy
+msgid "Exit, discard any edits"
+msgstr "退出，丢弃任何编辑"
+
+#: ../app/builder/dialogs/dlgsConditions.py:591
+#, fuzzy
+msgid "Param name(s) adjusted to be legal. Look ok?"
+msgstr "参数名称调整为合法。看好吗？"
+
+#: ../app/coder/coder.py:63
+msgid "basic"
+msgstr "基本的 "
+
+#: ../app/coder/coder.py:64
+msgid "input"
+msgstr "输入"
+
+#: ../app/coder/coder.py:65
+#, fuzzy
+msgid "stimuli"
+msgstr "刺激"
+
+#: ../app/coder/coder.py:66
+#, fuzzy
+msgid "exp control"
+msgstr "博览会控制"
+
+#: ../app/coder/coder.py:68
+#, fuzzy
+msgid "hardware"
+msgstr "硬件"
+
+#: ../app/coder/coder.py:69
+msgid "timing"
+msgstr "计时器"
+
+#: ../app/coder/coder.py:70
+msgid "misc"
+msgstr "杂项"
+
+#: ../app/coder/coder.py:271
+#, fuzzy
+msgid "PsychoPy unit testing"
+msgstr "心理测试单元测试"
+
+#: ../app/coder/coder.py:304
+#, fuzzy
+msgid "&Tests"
+msgstr "•测试"
+
+#: ../app/coder/coder.py:307
+#, fuzzy, python-format
+msgid "&Run tests\t%s"
+msgstr "•运行测试%s"
+
+#: ../app/coder/coder.py:311
+#, fuzzy, python-format
+msgid "&Cancel running test\t%s"
+msgstr "•取消运行测试%s"
+
+#: ../app/coder/coder.py:312
+#, fuzzy
+msgid "Quit a test in progress"
+msgstr "退出正在进行的测试"
+
+#: ../app/coder/coder.py:315
+#, fuzzy, python-format
+msgid "&Close tests panel\t%s"
+msgstr "•关闭测试面板%s"
+
+#: ../app/coder/coder.py:320
+#, fuzzy, python-format
+msgid "Go to &Coder view\t%s"
+msgstr "转到和编码器视图%s"
+
+#: ../app/coder/coder.py:321
+#, fuzzy
+msgid "Go to the Coder view"
+msgstr "转到编码器视图"
+
+#: ../app/coder/coder.py:328
+#, fuzzy
+msgid "Terminate PsychoPy"
+msgstr "终止心理心理"
+
+#: ../app/coder/coder.py:331
+msgid "&Preferences"
+msgstr "&首选项"
+
+#: ../app/coder/coder.py:350
+#, fuzzy
+msgid ""
+"Select the test(s) to run, from:\n"
+"psychopy/tests/test*"
+msgstr ""
+"选择要运行的测试，从：\n"
+"心理/测试/测试*"
+
+#: ../app/coder/coder.py:358
+msgid "Run tests"
+msgstr "运行测试"
+
+#: ../app/coder/coder.py:366
+#, fuzzy
+msgid "Coverage Report"
+msgstr "覆盖报告"
+
+#: ../app/coder/coder.py:367
+#, fuzzy
+msgid "Include coverage report (requires coverage module)"
+msgstr "包括覆盖报告（需要覆盖模块）"
+
+#: ../app/coder/coder.py:371
+#, fuzzy
+msgid "ALL stdout"
+msgstr "所有刺痛"
+
+#: ../app/coder/coder.py:372
+#, fuzzy
+msgid "Report all printed output & show any new rms-test images"
+msgstr "报告所有打印输出并显示任何新的 rms 测试图像"
+
+#: ../app/coder/coder.py:1127
+#, fuzzy, python-format
+msgid "Unable to find \"%s\""
+msgstr "找不到\"%s\""
+
+#: ../app/coder/coder.py:1233 ../app/coder/coder.py:1335
+msgid "Editor"
+msgstr "编辑"
+
+#: ../app/coder/coder.py:1265 ../app/coder/coder.py:1332
+msgid "Shelf"
+msgstr "货架"
+
+#: ../app/coder/coder.py:1279 ../tools/wizard.py:517
+#, fuzzy
+msgid "Welcome to PsychoPy3!"
+msgstr "欢迎来到心理3！"
+
+#: ../app/coder/coder.py:1283
+msgid "Output"
+msgstr "输出"
+
+#: ../app/coder/coder.py:1298
+#, fuzzy
+msgid "IPython failed as shell, using pyshell (IPython v0.12 can fail on wx)"
+msgstr "IPython作为外壳失败，使用胶壳（IPython v0.12可以在wx上失败）"
+
+#: ../app/coder/coder.py:1303
+#, fuzzy
+msgid "PyShell in PsychoPy - type some commands!"
+msgstr "心理心理中的皮壳-键入一些命令！"
+
+#: ../app/coder/coder.py:1306
+msgid "Shell"
+msgstr "命令"
+
+#: ../app/coder/coder.py:1316 ../app/coder/coder.py:1334
+#, fuzzy
+msgid "Source Assistant"
+msgstr "来源助理"
+
+#: ../app/coder/coder.py:1406 ../app/coder/coder.py:1798
+#: ../app/coder/coder.py:1804
+#, fuzzy
+msgid "Save current file"
+msgstr "保存当前文件"
+
+#: ../app/coder/coder.py:1409 ../app/coder/coder.py:1814
+#: ../app/coder/coder.py:1820
+#, fuzzy
+msgid "Save current python file as..."
+msgstr "将当前的巨蛇文件保存为。。。"
+
+#: ../app/coder/coder.py:1412
+#, fuzzy
+msgid "Close current python file"
+msgstr "关闭当前的巨蛇文件"
+
+#: ../app/coder/coder.py:1419
+#, fuzzy, python-format
+msgid "Print\t%s"
+msgstr "打印%s"
+
+#: ../app/coder/coder.py:1436
+#, fuzzy, python-format
+msgid "Cu&t\t%s"
+msgstr "库特%s"
+
+#: ../app/coder/coder.py:1438
+#, fuzzy, python-format
+msgid "&Copy\t%s"
+msgstr "•复制%s"
+
+#: ../app/coder/coder.py:1442
+#, fuzzy
+msgid "Duplicate the current line (or current selection)"
+msgstr "复制当前行（或当前选择）"
+
+#: ../app/coder/coder.py:1444
+#, fuzzy, python-format
+msgid "&Duplicate\t%s"
+msgstr "•重复%s"
+
+#: ../app/coder/coder.py:1450
+#, fuzzy, python-format
+msgid "&Find\t%s"
+msgstr "并找到%s"
+
+#: ../app/coder/coder.py:1453
+#, fuzzy, python-format
+msgid "Find &Next\t%s"
+msgstr "查找 » 下一个%s"
+
+#: ../app/coder/coder.py:1458
+#, fuzzy, python-format
+msgid "Comment\t%s"
+msgstr "评论%s"
+
+#: ../app/coder/coder.py:1459
+#, fuzzy
+msgid "Comment selected lines"
+msgstr "评论选定的行"
+
+#: ../app/coder/coder.py:1463
+#, fuzzy, python-format
+msgid "Uncomment\t%s"
+msgstr "不承诺%s"
+
+#: ../app/coder/coder.py:1464
+#, fuzzy
+msgid "Un-comment selected lines"
+msgstr "未注释选定的行"
+
+#: ../app/coder/coder.py:1469
+#, fuzzy, python-format
+msgid "Toggle comment\t%s"
+msgstr "切换评论%s"
+
+#: ../app/coder/coder.py:1470
+#, fuzzy
+msgid "Toggle commenting of selected lines"
+msgstr "切换所选行的注释"
+
+#: ../app/coder/coder.py:1475
+#, fuzzy, python-format
+msgid "Toggle fold\t%s"
+msgstr "切换折叠%s"
+
+#: ../app/coder/coder.py:1476
+#, fuzzy
+msgid "Toggle folding of top level"
+msgstr "顶部的切换折叠"
+
+#: ../app/coder/coder.py:1482
+#, fuzzy, python-format
+msgid "Indent selection\t%s"
+msgstr "凹痕选择%s"
+
+#: ../app/coder/coder.py:1483
+#, fuzzy
+msgid "Increase indentation of current line"
+msgstr "增加当前线的凹痕"
+
+#: ../app/coder/coder.py:1487
+#, fuzzy, python-format
+msgid "Dedent selection\t%s"
+msgstr "德登特选择%s"
+
+#: ../app/coder/coder.py:1488
+#, fuzzy
+msgid "Decrease indentation of current line"
+msgstr "减少当前行的凹痕"
+
+#: ../app/coder/coder.py:1491
+#, fuzzy
+msgid "Try to indent to the correct position w.r.t. last line"
+msgstr "尝试凹痕到正确的位置w.r.t.最后一行"
+
+#: ../app/coder/coder.py:1494
+#, fuzzy, python-format
+msgid "SmartIndent\t%s"
+msgstr "智能凹痕%s"
+
+#: ../app/coder/coder.py:1513
+#, fuzzy, python-format
+msgid "Enlarge font\t%s"
+msgstr "放大缩小字体功能 放大缩小%s"
+
+#: ../app/coder/coder.py:1514
+msgid "Increase font size"
+msgstr "增加字体大小"
+
+#: ../app/coder/coder.py:1518
+#, fuzzy, python-format
+msgid "Shrink font\t%s"
+msgstr "放大缩小字体功能 放大缩小%s"
+
+#: ../app/coder/coder.py:1519
+#, fuzzy
+msgid "Decrease font size"
+msgstr "减少字体大小"
+
+#: ../app/coder/coder.py:1550
+#, fuzzy
+msgid "Stop the current script"
+msgstr "停止当前脚本"
+
+#: ../app/coder/coder.py:1563
+#, fuzzy
+msgid "csv from psydat"
+msgstr "来自精神病的csv"
+
+#: ../app/coder/coder.py:1564
+#, fuzzy
+msgid "Create a .csv file from an existing .psydat file"
+msgstr "从现有的。psydat文件创建一个.csv文件"
+
+#: ../app/coder/coder.py:1569
+#, fuzzy
+msgid "Unit &testing...\tCtrl-T"
+msgstr "单位和测试...\t克特尔 - 特"
+
+#: ../app/coder/coder.py:1570
+#, fuzzy
+msgid "Show dialog to run unit tests"
+msgstr "显示对话以运行单元测试"
+
+#: ../app/coder/coder.py:1580
+#, fuzzy
+msgid "Shows guides in the editor for your indentation level"
+msgstr "显示编辑器中的指南，以显示您的凹痕级别"
+
+#: ../app/coder/coder.py:1583
+#, fuzzy, python-format
+msgid "&Indentation guides\t%s"
+msgstr "•%s的凹痕指南"
+
+#: ../app/coder/coder.py:1589
+#, fuzzy
+msgid "Show whitespace characters in the code"
+msgstr "在代码中显示空白字符"
+
+#: ../app/coder/coder.py:1591
+#, fuzzy, python-format
+msgid "&Whitespace\t%s"
+msgstr "•白空间%s"
+
+#: ../app/coder/coder.py:1597
+#, fuzzy
+msgid "Show End Of Line markers in the code"
+msgstr "在代码中显示行尾标记"
+
+#: ../app/coder/coder.py:1600
+#, fuzzy, python-format
+msgid "Show &EOLs\t%s"
+msgstr "显示和%s"
+
+#: ../app/coder/coder.py:1608
+#, fuzzy
+msgid "Shows the output and shell panes (and starts capturing stdout)"
+msgstr "显示输出和壳窗格（并开始捕获支架）"
+
+#: ../app/coder/coder.py:1611
+#, fuzzy, python-format
+msgid "Show &Output/Shell\t%s"
+msgstr "显示和输出/壳%s"
+
+#: ../app/coder/coder.py:1616
+#, fuzzy
+msgid "Provides help functions and attributes of classes in your script"
+msgstr "在脚本中提供类的帮助功能和属性"
+
+#: ../app/coder/coder.py:1619
+#, fuzzy
+msgid "&Source Assistant"
+msgstr "•来源助理"
+
+#: ../app/coder/coder.py:1629
+#, fuzzy, python-format
+msgid "Go to &Builder view\t%s"
+msgstr "转到构建器视图%s"
+
+#: ../app/coder/coder.py:1630
+#, fuzzy
+msgid "Go to the Builder view"
+msgstr "转到构建器视图"
+
+#: ../app/coder/coder.py:1705
+#, fuzzy
+msgid "&PsychoPy Coder Tutorial"
+msgstr "•心理皮编码器教程"
+
+#: ../app/coder/coder.py:1706
+#, fuzzy
+msgid "Go to the online PsychoPy tutorial"
+msgstr "转到在线心理内容教程"
+
+#: ../app/coder/coder.py:1710
+#, fuzzy
+msgid "&PsychoPy API (reference)"
+msgstr "•心理心理API（参考）"
+
+#: ../app/coder/coder.py:1711
+#, fuzzy
+msgid "Go to the online PsychoPy reference manual"
+msgstr "转到在线心理咨询参考手册"
+
+#: ../app/coder/coder.py:1771 ../app/coder/coder.py:1776
+#, fuzzy
+msgid "Create new python file"
+msgstr "创建新的巨蛇文件"
+
+#: ../app/coder/coder.py:1784 ../app/coder/coder.py:1789
+msgid "Open an existing file"
+msgstr "打开一个存在的文件"
+
+#: ../app/coder/coder.py:1872 ../app/coder/coder.py:1874
+#: ../app/coder/coder.py:1879 ../app/coder/coder.py:1880
+#, fuzzy
+msgid "Color Picker -> clipboard"
+msgstr "颜色拾取器 - >剪贴板"
+
+#: ../app/coder/coder.py:1891 ../app/coder/coder.py:1897
+#, fuzzy
+msgid "Run current script"
+msgstr "运行当前脚本"
+
+#: ../app/coder/coder.py:1906 ../app/coder/coder.py:1912
+#, fuzzy
+msgid "Stop current script"
+msgstr "停止当前脚本"
+
+#: ../app/coder/coder.py:1948 ../app/coder/coder.py:1973
+#, fuzzy, python-format
+msgid ""
+"'%s' was modified outside of PsychoPy:\n"
+"\n"
+"Reload (without saving)?"
+msgstr ""
+"\"%s\"在心理心理之外进行了修改：\n"
+"\n"
+"重新加载（无需保存）？"
+
+#: ../app/coder/coder.py:1952 ../app/coder/coder.py:1977
+#, fuzzy
+msgid "Reloading file"
+msgstr "重新加载文件"
+
+#: ../app/coder/coder.py:2062 ../app/coder/coder.py:2426
+#, fuzzy, python-format
+msgid "Save changes to %s before quitting?"
+msgstr "在退出之前保存更改到%s？"
+
+#: ../app/coder/coder.py:2195
+#, fuzzy
+msgid "Failed to open {}. Make sure that encoding of the file is utf-8."
+msgstr "未打开{}。确保文件的编码为 utf-8。"
+
+#: ../app/coder/coder.py:2246 ../app/coder/coder.py:2726
+#, fuzzy
+msgid "Analyzing code"
+msgstr "分析代码"
+
+#: ../app/coder/coder.py:2268
+msgid "Loading file"
+msgstr "载入文件"
+
+#: ../app/coder/coder.py:2321
+#, fuzzy, python-format
+msgid ""
+"File appears to have been modified outside of PsychoPy:\n"
+"   %s\n"
+"OK to overwrite?"
+msgstr ""
+"文件似乎已被修改以外的心理心理：\n"
+"   %s\n"
+"可以覆盖吗？"
+
+#: ../app/coder/coder.py:2333
+#, fuzzy, python-format
+msgid ""
+"File '%s' lacks write-permission:\n"
+"Will try save-as instead."
+msgstr ""
+"文件\"%s\"缺乏书面权限：\n"
+"将尝试保存为代替。"
+
+#: ../app/coder/coder.py:2347
+msgid "Saving file"
+msgstr "保存文件"
+
+#: ../app/coder/coder.py:2359
+#, fuzzy
+msgid "Analyzing current source code"
+msgstr "分析当前源代码"
+
+#: ../app/coder/coder.py:2389
+#, fuzzy
+msgid "Python scripts (*.py)|*.py|Text file (*.txt)|*.txt|Any file (*.*)|*.*"
+msgstr ""
+"Python 脚本 （*.py） |*.py|文本文件（*.txt）|*.txt|任何文件（*。*）|*。"
+
+#: ../app/coder/coder.py:2392
+#, fuzzy
+msgid "Python scripts (*.py)|*.py|Text file (*.txt)|*.txt|Any file (*.*)|*"
+msgstr "Python 脚本 （*.py） |*.py|文本文件（*.txt）|*.txt|任何文件（*。*）|*"
+
+#: ../app/coder/coder.py:2527
+#, fuzzy, python-format
+msgid "Save changes to %s before running?"
+msgstr "在运行前保存更改到%s？"
+
+#: ../app/coder/coder.py:2734
+msgid "ready"
+msgstr "就绪 "
+
+#: ../app/connections/updates.py:99
+#, fuzzy
+msgid "Couldn't connect to psychopy.org to check for updates. \n"
+msgstr "无法连接到psychopy.org以检查更新。"
+
+#: ../app/connections/updates.py:101
+#, fuzzy
+msgid "Check internet settings (and proxy setting in PsychoPy Preferences)."
+msgstr "检查互联网设置（以及心理偏好中的代理设置）。"
+
+#: ../app/connections/updates.py:105 ../app/connections/updates.py:154
+#: ../app/connections/updates.py:173
+#, fuzzy
+msgid "PsychoPy updates"
+msgstr "心理内容更新"
+
+#: ../app/connections/updates.py:144
+#, fuzzy, python-format
+msgid ""
+"PsychoPy v%(latest)s is available (you are running %(running)s).\n"
+"\n"
+msgstr ""
+"心理购买v%（最新）是可用的（您正在运行百分比（运行）。\n"
+"\n"
+
+#: ../app/connections/updates.py:148
+#, fuzzy
+msgid "This version is too big an update to be handled automatically.\n"
+msgstr "此版本的更新太大，无法自动处理。\n"
+
+#: ../app/connections/updates.py:150
+#, fuzzy
+msgid ""
+"Please fetch the latest version from www.psychopy.org and install manually."
+msgstr "请从www.psychopy.org获取最新版本，并手动安装。"
+
+#: ../app/connections/updates.py:155
+#, fuzzy
+msgid "Go to downloads"
+msgstr "转到下载"
+
+#: ../app/connections/updates.py:157
+#, fuzzy
+msgid "Go to changelog"
+msgstr "转到更改日志"
+
+#: ../app/connections/updates.py:158
+msgid "Later"
+msgstr "稍后"
+
+#: ../app/connections/updates.py:168
+#, fuzzy, python-format
+msgid "You are running the latest version of PsychoPy (%s). "
+msgstr "您正在运行最新版本的心理心理（%s）。"
+
+#: ../app/connections/updates.py:195
+#, fuzzy, python-format
+msgid ""
+"PsychoPy v%(latest)s is available (you are running %(running)s).\n"
+"\n"
+"(To disable this check, see Preferences > connections > checkForUpdates)"
+msgstr ""
+"心理购买v%（最新）是可用的（您正在运行百分比（运行）。\n"
+"\n"
+"（要禁用此检查，请参阅首选项>连接>检查更新）"
+
+#: ../app/connections/updates.py:202
+#, fuzzy
+msgid ""
+"This version MAY require you to modify your\n"
+"scripts/exps slightly. Read the changelog carefully."
+msgstr ""
+"此版本可能需要您修改您的\n"
+"脚本/略带兴奋。仔细阅读更改日志。"
+
+#: ../app/connections/updates.py:208
+#, fuzzy
+msgid ""
+"There are no known compatibility\n"
+"issues with your current version."
+msgstr ""
+"没有已知的兼容性\n"
+"与您当前版本的问题。"
+
+#: ../app/connections/updates.py:212
+#, fuzzy
+msgid "View complete Changelog"
+msgstr "查看完整的更改日志"
+
+#: ../app/connections/updates.py:216
+#, fuzzy
+msgid "You can update PsychoPy with your package manager"
+msgstr "您可以与您的包经理更新心理"
+
+#: ../app/connections/updates.py:220
+#, fuzzy
+msgid "Should PsychoPy update itself?"
+msgstr "心理治疗应该更新自己吗？"
+
+#: ../app/connections/updates.py:234
+#, fuzzy
+msgid "Keep warning me"
+msgstr "继续警告我"
+
+#: ../app/connections/updates.py:237
+#, fuzzy
+msgid "Stop warning me"
+msgstr "别再警告我了"
+
+#: ../app/connections/updates.py:242
+msgid "Not now"
+msgstr "不是现在"
+
+#: ../app/connections/updates.py:244
+#, fuzzy
+msgid "Skip this version"
+msgstr "跳过此版本"
+
+#: ../app/connections/updates.py:281
+#, fuzzy
+msgid "PsychoPy Updates"
+msgstr "心理更新"
+
+#: ../app/connections/updates.py:290
+#, fuzzy
+msgid " Auto-update (will fetch latest version)"
+msgstr "自动更新（将获取最新版本）"
+
+#: ../app/connections/updates.py:299
+#, fuzzy
+msgid " Use zip file below (download a PsychoPy release file ending .zip)"
+msgstr "使用下面的拉链文件（下载心理视频发布文件结束.zip）"
+
+#: ../app/connections/updates.py:310
+msgid "Install"
+msgstr "安装"
+
+#: ../app/connections/updates.py:313
+#, fuzzy
+msgid "Close"
+msgstr "关闭"
+
+#: ../app/connections/updates.py:332
+#, fuzzy, python-format
+msgid ""
+"You are running PsychoPy v%s.\n"
+" "
+msgstr ""
+"你正在运行心理视频%s。\n"
+" "
+
+#: ../app/connections/updates.py:334
+#, fuzzy
+msgid ""
+"PsychoPy could not connect to the \n"
+" internet to check for more recent versions.\n"
+msgstr ""
+"心理间谍无法连接到\n"
+" 互联网检查较新的版本。\n"
+
+#: ../app/connections/updates.py:336
+#, fuzzy
+msgid "Check proxy settings in preferences."
+msgstr "检查首选项中的代理设置。"
+
+#: ../app/connections/updates.py:339
+#, fuzzy, python-format
+msgid ""
+"You are running PsychoPy (%(running)s), which is ahead of the latest "
+"official version (%(latest)s)"
+msgstr ""
+"您正在运行心理视频（百分比（运行）），这比最新的官方版本（%（最新）要早"
+
+#: ../app/connections/updates.py:344
+#, fuzzy, python-format
+msgid ""
+"You are running the latest version of PsychoPy (%s)\n"
+" "
+msgstr ""
+"您正在运行最新版本的心理心理（%s）\n"
+" "
+
+#: ../app/connections/updates.py:346
+#, fuzzy
+msgid ""
+"You can revert to a previous version by selecting a specific .zip source "
+"installation file"
+msgstr "您可以通过选择特定的.zip源安装文件恢复到以前的版本"
+
+#: ../app/connections/updates.py:349
+#, fuzzy, python-format
+msgid ""
+"PsychoPy v%(latest)s is available\n"
+"You are running v%(running)s"
+msgstr ""
+"心理视频百分比（最新）是可用的\n"
+"您正在运行v%（正在运行）"
+
+#: ../app/connections/updates.py:355
+#, fuzzy
+msgid ""
+"\n"
+"You can update to the latest version automatically"
+msgstr ""
+"\n"
+"您可以自动更新到最新版本"
+
+#: ../app/connections/updates.py:357
+#, fuzzy
+msgid ""
+"\n"
+"You cannot update to the latest version automatically.\n"
+"Please fetch the latest Standalone package from www.psychopy.org"
+msgstr ""
+"\n"
+"您不能自动更新到最新版本。\n"
+"请从www.psychopy.org获取最新的独立套餐"
+
+#: ../app/connections/updates.py:408
+#, fuzzy, python-format
+msgid "Attempting to fetch PsychoPy %s..."
+msgstr "试图获取心理%s。。。"
+
+#: ../app/connections/updates.py:428
+#, fuzzy, python-format
+msgid "Fetched %(done)i of %(total)i kb of PsychoPy-%(version)s.zip"
+msgstr "取取%（完成）i的百分比（总）i kb的心理皮%（版本）s.zip"
+
+#: ../app/connections/updates.py:434
+#, fuzzy, python-format
+msgid "Successfully downloaded PsychoPy-%s.zip"
+msgstr "成功下载心理%s.zip"
+
+#: ../app/connections/updates.py:484
+#, fuzzy
+msgid ""
+"To upgrade you need to restart the app as admin (Right-click the app and "
+"'Run as admin')"
+msgstr ""
+"要升级，您需要以管理员身份重新启动应用（右键单击应用和\"作为管理员运行\"）"
+
+#: ../app/connections/updates.py:488
+#, fuzzy
+msgid "Could not move existing PsychoPy installation (permissions error?)"
+msgstr "无法移动现有的心理安装（权限错误？）"
+
+#: ../app/connections/updates.py:516
+#, fuzzy, python-format
+msgid ""
+"Right-click the app and 'Run as admin'):\n"
+"%s"
+msgstr ""
+"右键单击应用程序和\"作为管理员运行\"）：\n"
+"%s"
+
+#: ../app/connections/updates.py:519
+#, fuzzy, python-format
+msgid ""
+"Failed to create directory for new version (permissions error?):\n"
+"%s"
+msgstr ""
+"未能为新版本创建目录（权限错误？）：\n"
+"%s"
+
+#: ../app/connections/updates.py:544
+#, fuzzy
+msgid ""
+"Success. \n"
+"Changes to PsychoPy will be completed when the application is next run"
+msgstr ""
+"成功。\n"
+"下次运行时将完成对心理 Py 的更改"
+
+#: ../app/connections/updates.py:553
+#, fuzzy, python-format
+msgid "Downloading PsychoPy v%s"
+msgstr "下载心理视频%s"
+
+#: ../app/connections/updates.py:558
+#, fuzzy
+msgid ""
+"Failed to fetch PsychoPy release.\n"
+"Check proxy setting in preferences"
+msgstr ""
+"未能获取心理间谍版本。\n"
+"检查首选项中的代理设置"
+
+#: ../app/pavlovia_ui/_base.py:32
+#, fuzzy, python-format
+msgid "&Close View\t%s"
+msgstr "•关闭视图%s"
+
+#: ../app/pavlovia_ui/_base.py:33
+#, fuzzy
+msgid "Close current window"
+msgstr "关闭当前窗口"
+
+#: ../app/pavlovia_ui/_base.py:177
+#, fuzzy
+msgid "Title summarizing the changes you're making in these files"
+msgstr "标题总结您在这些文件中做出的更改"
+
+#: ../app/pavlovia_ui/_base.py:180
+#, fuzzy
+msgid "Optional details about the changes you're making in these files"
+msgstr "有关您在这些文件中进行更改的可选详细信息"
+
+#: ../app/pavlovia_ui/functions.py:44
+#, fuzzy
+msgid "Choose/create the root location for the synced project"
+msgstr "为同步项目选择/创建根位置"
+
+#: ../app/pavlovia_ui/functions.py:130
+#, fuzzy
+msgid "You need to install git to use Pavlovia projects"
+msgstr "您需要安装git才能使用帕夫洛维亚项目"
+
+#: ../app/pavlovia_ui/menu.py:53
+#, fuzzy
+msgid "Log in to Pavlovia...\t{}"
+msgstr "登录到帕夫洛维亚。。。\t{}"
+
+#: ../app/pavlovia_ui/menu.py:56
+msgid "User"
+msgstr "用户"
+
+#: ../app/pavlovia_ui/menu.py:60
+#, fuzzy
+msgid "Search Pavlovia\t{}"
+msgstr "搜索帕夫洛维亚{}"
+
+#: ../app/pavlovia_ui/menu.py:66
+#, fuzzy
+msgid "New...\t{}"
+msgstr "新增功能。。。\t{}"
+
+#: ../app/pavlovia_ui/menu.py:70
+#, fuzzy
+msgid "Sync\t{}"
+msgstr "同步{}"
+
+#: ../app/pavlovia_ui/menu.py:124
+#, fuzzy
+msgid "You need to log in to create a project"
+msgstr "您需要登录才能创建项目"
+
+#: ../app/pavlovia_ui/project.py:53
+msgid "Name:"
+msgstr "名称："
+
+#: ../app/pavlovia_ui/project.py:66
+#, fuzzy
+msgid "Group/owner:"
+msgstr "组/所有者："
+
+#: ../app/pavlovia_ui/project.py:70
+msgid "Description:"
+msgstr "描述："
+
+#: ../app/pavlovia_ui/project.py:74
+msgid "Local folder:"
+msgstr "本地文件夹："
+
+#: ../app/pavlovia_ui/project.py:84
+msgid "Tags (comma separated):"
+msgstr "标签（逗号分隔）："
+
+#: ../app/pavlovia_ui/project.py:88
+#, fuzzy
+msgid "Public:"
+msgstr "公共："
+
+#: ../app/pavlovia_ui/project.py:93
+#, fuzzy
+msgid "Create project on Pavlovia"
+msgstr "在帕夫洛维亚创建项目"
+
+#: ../app/pavlovia_ui/project.py:95
+#, fuzzy
+msgid "Submit changes to Pavlovia"
+msgstr "向帕夫洛维亚提交更改"
+
+#: ../app/pavlovia_ui/project.py:195
+#, fuzzy
+msgid "Local root: "
+msgstr "本地根："
+
+#: ../app/pavlovia_ui/project.py:206
+#, fuzzy
+msgid "Select a project for details"
+msgstr "选择项目了解详细信息"
+
+#: ../app/pavlovia_ui/project.py:213 ../app/pavlovia_ui/project.py:302
+msgid "Sync..."
+msgstr "同步。。。"
+
+#: ../app/pavlovia_ui/project.py:248
+#, fuzzy
+msgid "Ready to sync"
+msgstr "准备同步"
+
+#: ../app/pavlovia_ui/project.py:251
+#, fuzzy
+msgid "This file doesn't belong to a project yet"
+msgstr "此文件还不属于项目"
+
+#: ../app/pavlovia_ui/project.py:280
+#, fuzzy
+msgid "User not logged in!"
+msgstr "用户未登录！"
+
+#: ../app/pavlovia_ui/project.py:285
+#, fuzzy
+msgid "Visibility: {}"
+msgstr "可见性：{}"
+
+#: ../app/pavlovia_ui/project.py:290
+#, fuzzy
+msgid "<not yet synced>"
+msgstr "<not yet synced>"
+
+#: ../app/pavlovia_ui/project.py:291 ../app/pavlovia_ui/project.py:358
+#: ../app/pavlovia_ui/project.py:371
+#, fuzzy
+msgid "Local root: {}"
+msgstr "本地根：{}"
+
+#: ../app/pavlovia_ui/project.py:298
+#, fuzzy
+msgid "Log in to sync..."
+msgstr "登录以同步。。。"
+
+#: ../app/pavlovia_ui/project.py:300
+#, fuzzy
+msgid "Fork + sync..."
+msgstr "叉+同步。。。"
+
+#: ../app/pavlovia_ui/project.py:307
+msgid "Tags:"
+msgstr "标签："
+
+#: ../app/pavlovia_ui/project.py:363
+msgid "Synchronizing..."
+msgstr "同步中..."
+
+#: ../app/pavlovia_ui/project.py:388
+msgid "Project info"
+msgstr "项目信息"
+
+#: ../app/pavlovia_ui/project.py:436
+#, fuzzy
+msgid "This file doesn't belong to any existing project."
+msgstr "此文件不属于任何现有项目。"
+
+#: ../app/pavlovia_ui/project.py:439
+#, fuzzy
+msgid "Create a project"
+msgstr "创建项目"
+
+#: ../app/pavlovia_ui/project.py:578
+#, fuzzy
+msgid "points to a remote that doesn't exist (deleted?)."
+msgstr "指向不存在的遥控器（已删除？"
+
+#: ../app/pavlovia_ui/project.py:579
+#, fuzzy
+msgid "What shall we do?"
+msgstr "我们该怎么办？"
+
+#: ../app/pavlovia_ui/project.py:581
+#, fuzzy
+msgid "(Re)create a project"
+msgstr "（重新创建项目）"
+
+#: ../app/pavlovia_ui/project.py:582
+#, fuzzy
+msgid "Point to an different location"
+msgstr "指向不同的位置"
+
+#: ../app/pavlovia_ui/project.py:583
+#, fuzzy
+msgid "not yet supported"
+msgstr "尚未支持"
+
+#: ../app/pavlovia_ui/project.py:584
+#, fuzzy
+msgid "Forget the local git repository (deletes history keeps files)"
+msgstr "忘记本地git存储库（删除历史记录保留文件）"
+
+#: ../app/pavlovia_ui/search.py:36
+#, fuzzy
+msgid "Search for projects online"
+msgstr "在线搜索项目"
+
+#: ../app/pavlovia_ui/search.py:51
+msgid "Search:"
+msgstr "搜索："
+
+#: ../app/pavlovia_ui/search.py:54
+msgid "Search"
+msgstr "搜索"
+
+#: ../app/pavlovia_ui/toolbar.py:27
+#, fuzzy
+msgid "Run online"
+msgstr "在线运行"
+
+#: ../app/pavlovia_ui/toolbar.py:28
+#, fuzzy
+msgid "Run the study online (with pavlovia.org)"
+msgstr "在线运行研究（pavlovia.org）"
+
+#: ../app/pavlovia_ui/toolbar.py:32
+#, fuzzy
+msgid "Sync online"
+msgstr "在线同步"
+
+#: ../app/pavlovia_ui/toolbar.py:33
+#, fuzzy
+msgid "Sync with web project (at pavlovia.org)"
+msgstr "与 Web 项目同步（pavlovia.org）"
+
+#: ../app/pavlovia_ui/toolbar.py:37
+#, fuzzy
+msgid "Search Pavlovia.org"
+msgstr "搜索Pavlovia.org"
+
+#: ../app/pavlovia_ui/toolbar.py:38
+#, fuzzy
+msgid "Find existing studies online (at pavlovia.org)"
+msgstr "在线查找现有研究（pavlovia.org）"
+
+#: ../app/pavlovia_ui/toolbar.py:42
+#, fuzzy
+msgid "Log in to Pavlovia"
+msgstr "登录到帕夫洛维亚"
+
+#: ../app/pavlovia_ui/toolbar.py:43
+#, fuzzy
+msgid "Log in to (or create user at) Pavlovia.org"
+msgstr "登录（或创建用户）Pavlovia.org"
+
+#: ../app/pavlovia_ui/toolbar.py:47
+msgid "View project"
+msgstr "查看项目"
+
+#: ../app/pavlovia_ui/toolbar.py:48
+#, fuzzy
+msgid "View details of this project"
+msgstr "查看此项目的详细信息"
+
+#: ../app/pavlovia_ui/user.py:50
+#, fuzzy
+msgid "Full name:"
+msgstr "全名："
+
+#: ../app/pavlovia_ui/user.py:63
+msgid "Organization:"
+msgstr "机构："
+
+#: ../app/pavlovia_ui/user.py:67
+#, fuzzy
+msgid "Bio (250 chrs):"
+msgstr "生物（250千里）"
+
+#: ../experiment/_experiment.py:452
+#, fuzzy
+msgid ""
+"Name of the folder in which to save data and log files (blank defaults to "
+"the builder pref)"
+msgstr "保存数据和日志文件的文件夹的名称（构建者pref的空白默认值）"
+
+#: ../experiment/_experiment.py:492
+#, fuzzy
+msgid ""
+"This parameter is not known by this version of PsychoPy. It might be worth "
+"upgrading"
+msgstr "此参数不为本版本的心理问题所知。可能值得升级"
+
+#: ../experiment/_experiment.py:499
+#, fuzzy, python-format
+msgid ""
+"Parameter %r is not known to this version of PsychoPy but has come from your "
+"experiment file (saved by a future version of PsychoPy?). This experiment "
+"may not run correctly in the current version."
+msgstr ""
+"参数%r不知道这个版本的心理皮，但来自您的实验文件（保存由未来版本的心理？此实"
+"验可能在当前版本中运行不正确。"
+
+#: ../experiment/loops.py:60 ../experiment/loops.py:339
+#: ../experiment/loops.py:484
+#, fuzzy
+msgid "Name of this loop"
+msgstr "此循环的名称"
+
+#: ../experiment/loops.py:64
+#, fuzzy
+msgid "Number of repeats (for each condition)"
+msgstr "重复次数（针对每个条件）"
+
+#: ../experiment/loops.py:69
+#, fuzzy
+msgid "A list of dictionaries describing the parameters in each condition"
+msgstr "描述每个条件参数的字典列表"
+
+#: ../experiment/loops.py:74
+#, fuzzy
+msgid ""
+"Name of a file specifying the parameters for each condition (.csv, .xlsx, "
+"or .pkl). Browse to select a file. Right-click to preview file contents, or "
+"create a new file."
+msgstr ""
+"指定每个条件参数的文件的名称（.csv、.xlsx或 。pkl）。浏览以选择文件。右键单击"
+"以预览文件内容或创建新文件。"
+
+#: ../experiment/loops.py:81
+#, fuzzy
+msgid "The start and end of the loop (see flow timeline)"
+msgstr "循环的开始和结束（请参阅流时间表）"
+
+#: ../experiment/loops.py:87
+#, fuzzy
+msgid ""
+"Select just a subset of rows from your condition file (the first is 0 not "
+"1!). Examples: 0, 0:5, 5:-1"
+msgstr ""
+"仅从您的条件文件中选择一组行（第一个是 0 而不是 1！示例： 0， 0：5， 5：1"
+
+#: ../experiment/loops.py:96
+#, fuzzy
+msgid "How should the next condition value(s) be chosen?"
+msgstr "应如何选择下一个条件值？"
+
+#: ../experiment/loops.py:101
+#, fuzzy
+msgid ""
+"To have a fixed random sequence provide an integer of your choosing here. "
+"Leave blank to have a new random sequence on each run of the experiment."
+msgstr ""
+"要有一个固定的随机序列，请在此处提供您选择的整数。留空，在实验的每个运行中都"
+"有一个新的随机序列。"
+
+#: ../experiment/loops.py:108 ../experiment/loops.py:400
+#: ../experiment/loops.py:526
+#, fuzzy
+msgid ""
+"Indicates that this loop generates TRIALS, rather than BLOCKS of trials or "
+"stimuli within a trial. It alters how data files are output"
+msgstr ""
+"表示此循环生成试验，而不是试验中的试验或刺激块。它改变了数据文件的输出方式"
+
+#: ../experiment/loops.py:344
+#, fuzzy
+msgid "(Minimum) number of trials in the staircase"
+msgstr "（最低）楼梯上的试验次数"
+
+#: ../experiment/loops.py:348
+#, fuzzy
+msgid "The initial value of the parameter"
+msgstr "参数的初始值"
+
+#: ../experiment/loops.py:352
+#, fuzzy
+msgid "The maximum value the parameter can take"
+msgstr "参数可以采取的最大值"
+
+#: ../experiment/loops.py:356
+#, fuzzy
+msgid "The minimum value the parameter can take"
+msgstr "参数可以采取的最小值"
+
+#: ../experiment/loops.py:360
+#, fuzzy
+msgid "The size of the jump at each step (can change on each 'reversal')"
+msgstr "每个步骤的跳跃大小（每个\"反转\"上都可以更改）"
+
+#: ../experiment/loops.py:365
+#, fuzzy
+msgid ""
+"The units of the step size (e.g. 'linear' will add/subtract that value each "
+"step, whereas 'log' will ad that many log units)"
+msgstr ""
+"步数大小的单位（例如\"线性\"将添加/减去该值每个步骤，而\"日志\"将广告许多日志"
+"单位）"
+
+#: ../experiment/loops.py:371
+#, fuzzy
+msgid "The number of 'incorrect' answers before the value goes up"
+msgstr "值上升之前的\"不正确\"答案数量"
+
+#: ../experiment/loops.py:376
+#, fuzzy
+msgid "The number of 'correct' answers before the value goes down"
+msgstr "值下降前的\"正确\"答案数量"
+
+#: ../experiment/loops.py:381
+#, fuzzy
+msgid ""
+"Minimum number of times the staircase must change direction before ending"
+msgstr "楼梯在结束前必须改变方向的最小次数"
+
+#: ../experiment/loops.py:390 ../experiment/loops.py:506
+#, fuzzy
+msgid "How should the next trial value(s) be chosen?"
+msgstr "应如何选择下一个试用值？"
+
+#: ../experiment/loops.py:395 ../experiment/loops.py:510
+#, fuzzy
+msgid "Where to loop from and to (see values currently shown in the flow view)"
+msgstr "从哪里循环（请参阅流视图中当前显示的值）"
+
+#: ../experiment/loops.py:488
+#, fuzzy
+msgid "(Minimum) number of trials in *each* staircase"
+msgstr "（最低）每个楼梯的试用次数"
+
+#: ../experiment/loops.py:493 ../experiment/loops.py:498
+#, fuzzy
+msgid "How to select the next staircase to run"
+msgstr "如何选择下一个楼梯运行"
+
+#: ../experiment/loops.py:516
+#, fuzzy
+msgid ""
+"A list of dictionaries describing the differences between each staircase"
+msgstr "描述每个楼梯之间差异的字典列表"
+
+#: ../experiment/loops.py:521
+#, fuzzy
+msgid "An xlsx or csv file specifying the parameters for each condition"
+msgstr "指定每个条件参数的 xlsx 或 csv 文件"
+
+#: ../experiment/components/_base.py:49
+#: ../experiment/components/eyetracker/__init__.py:40
+#: ../experiment/components/unknown/__init__.py:36
+#, fuzzy
+msgid "Name of this component (alpha-numeric or _, no spaces)"
+msgstr "此组件的名称（阿尔法数字或_，无空格）"
+
+#: ../experiment/components/_base.py:56
+#: ../experiment/components/eyetracker/__init__.py:50
+#: ../experiment/components/eyetracker/__init__.py:82
+#: ../experiment/components/static/__init__.py:50
+#, fuzzy
+msgid "How do you want to define your start point?"
+msgstr "您想如何定义起点？"
+
+#: ../experiment/components/_base.py:63
+#: ../experiment/components/eyetracker/__init__.py:56
+#: ../experiment/components/static/__init__.py:54
+#, fuzzy
+msgid "How do you want to define your end point?"
+msgstr "您想如何定义您的终点？"
+
+#: ../experiment/components/_base.py:73
+#: ../experiment/components/eyetracker/__init__.py:60
+#: ../experiment/components/static/__init__.py:59
+#, fuzzy
+msgid "When does the component start?"
+msgstr "组件何时开始？"
+
+#: ../experiment/components/_base.py:79
+#: ../experiment/components/eyetracker/__init__.py:65
+#: ../experiment/components/static/__init__.py:63
+#, fuzzy
+msgid "When does the component end? (blank is endless)"
+msgstr "组件何时结束？（空白是无穷无尽的）"
+
+#: ../experiment/components/_base.py:82
+#: ../experiment/components/eyetracker/__init__.py:67
+#: ../experiment/components/static/__init__.py:68
+#, fuzzy
+msgid "(Optional) expected start (s), purely for representing in the timeline"
+msgstr "（可选） 预期开始 （s）， 纯粹代表在时间表中"
+
+#: ../experiment/components/_base.py:89
+#: ../experiment/components/eyetracker/__init__.py:73
+#: ../experiment/components/static/__init__.py:73
+#, fuzzy
+msgid ""
+"(Optional) expected duration (s), purely for representing in the timeline"
+msgstr "（可选） 预期持续时间（s），纯粹用于在时间线中表示"
+
+#: ../experiment/components/_base.py:96
+#, fuzzy
+msgid ""
+"Store the onset/offset times in the data file (as well as in the log file)."
+msgstr "将发病/偏移时间存储在数据文件（以及日志文件中）中。"
+
+#: ../experiment/components/_base.py:101
+#, fuzzy
+msgid "Save onset/offset times"
+msgstr "节省发病/偏移时间"
+
+#: ../experiment/components/_base.py:103
+#, fuzzy
+msgid ""
+"Synchronize times with screen refresh (good for visual stimuli and responses "
+"based on them)"
+msgstr "将时间与屏幕刷新同步（适合视觉刺激和基于屏幕响应的响应）"
+
+#: ../experiment/components/_base.py:108
+#, fuzzy
+msgid "Sync timing with screen refresh"
+msgstr "与屏幕刷新同步计时"
+
+#: ../experiment/components/_base.py:110
+#, fuzzy
+msgid "Disable this component"
+msgstr "禁用此组件"
+
+#: ../experiment/components/_base.py:114
+#, fuzzy
+msgid "Disable component"
+msgstr "禁用组件"
+
+#: ../experiment/components/_base.py:540
+#, fuzzy
+msgid "Units of dimensions for this stimulus"
+msgstr "此刺激的尺寸单位"
+
+#: ../experiment/components/_base.py:548
+#, fuzzy
+msgid ""
+"Color of this stimulus (e.g. $[1,1,0], red ); Right-click to bring up a "
+"color-picker (rgb only)"
+msgstr ""
+"这种刺激的颜色（如1，1，0美元，红色）：右键单击以提起选色器（仅限 rgb）"
+
+#: ../experiment/components/_base.py:557
+#, fuzzy
+msgid ""
+"Opacity of the stimulus (1=opaque, 0=fully transparent, 0.5=translucent)"
+msgstr "刺激的不透明性（1=不透明，0=完全透明，0.5=半透明）"
+
+#: ../experiment/components/_base.py:566
+#, fuzzy
+msgid "Choice of color space for the color (rgb, dkl, lms, hsv)"
+msgstr "颜色空间的选择（rgb、dkl、lms、hsv）"
+
+#: ../experiment/components/_base.py:575
+#, fuzzy
+msgid "Position of this stimulus (e.g. [1,2] )"
+msgstr "此刺激措施的位置 （例如 [1，2]"
+
+#: ../experiment/components/_base.py:583
+#, fuzzy
+msgid ""
+"Size of this stimulus (either a single value or x,y pair, e.g. 2.5, [1,2] "
+msgstr "此刺激的大小（单个值或 x，y 对，例如 2.5、[1，2]"
+
+#: ../experiment/components/_base.py:596
+#: ../experiment/components/envelopegrating/__init__.py:71
+#: ../experiment/components/noise/__init__.py:94
+#, fuzzy
+msgid "Orientation of this stimulus (in deg)"
+msgstr "这种刺激的方向（在德格）"
+
+#: ../experiment/components/aperture/__init__.py:21
+#, fuzzy
+msgid "Aperture: restrict the drawing of stimuli to a given region"
+msgstr "光圈：将刺激的绘制限制在给定区域"
+
+#: ../experiment/components/aperture/__init__.py:48
+#, fuzzy
+msgid "How big is the aperture? (a single number for diameter)"
+msgstr "光圈有多大？（直径单个数字）"
+
+#: ../experiment/components/aperture/__init__.py:52
+#: ../experiment/components/form/__init__.py:23
+#: ../experiment/components/ratingScale/__init__.py:34
+#: ../experiment/components/slider/__init__.py:30
+msgid "Size"
+msgstr "大小"
+
+#: ../experiment/components/aperture/__init__.py:53
+#, fuzzy
+msgid "Where is the aperture centred?"
+msgstr "孔径的中心在哪里？"
+
+#: ../experiment/components/brush/__init__.py:18
+#, fuzzy
+msgid "Brush: a drawing tool"
+msgstr "画笔：绘图工具"
+
+#: ../experiment/components/brush/__init__.py:21
+#: ../experiment/components/polygon/__init__.py:25
+#, fuzzy
+msgid "Line color-space"
+msgstr "线色空间"
+
+#: ../experiment/components/brush/__init__.py:22
+#: ../experiment/components/polygon/__init__.py:26
+msgid "Line color"
+msgstr "线条颜色"
+
+#: ../experiment/components/brush/__init__.py:23
+#: ../experiment/components/polygon/__init__.py:27
+msgid "Line width"
+msgstr "线宽"
+
+#: ../experiment/components/brush/__init__.py:24
+#: ../localization/__init__.py:169
+#, fuzzy
+msgid "Opacity"
+msgstr "不透明度"
+
+#: ../experiment/components/brush/__init__.py:58
+#, fuzzy
+msgid ""
+"Line color of this brush; Right-click to bring up a color-picker (rgb only)"
+msgstr "此刷子的线条颜色;右键单击以提起选色器（仅限 rgb）"
+
+#: ../experiment/components/brush/__init__.py:67
+#, fuzzy
+msgid ""
+"Width of the brush's line (always in pixels and limited to 10px max width)"
+msgstr "刷线的宽度（始终为像素，最大宽度限制为 10px）"
+
+#: ../experiment/components/brush/__init__.py:75
+#: ../experiment/components/polygon/__init__.py:86
+#: ../experiment/components/polygon/__init__.py:104
+#, fuzzy
+msgid "Choice of color space for the fill color (rgb, dkl, lms, hsv)"
+msgstr "填充颜色空间的选择（rgb、dkl、lms、hsv）"
+
+#: ../experiment/components/brush/__init__.py:84
+#, fuzzy
+msgid "The line opacity"
+msgstr "线路不透明"
+
+#: ../experiment/components/cedrusBox/__init__.py:23
+#, fuzzy
+msgid ""
+"Cedrus Button Box: Cedrus response boxes, using the pyxid library provided "
+"by Cedrus"
+msgstr "塞德鲁斯按钮盒： 塞德鲁斯响应盒， 使用塞德鲁斯提供的 pyxid 库"
+
+#: ../experiment/components/cedrusBox/__init__.py:27
+#: ../experiment/components/joyButtons/__init__.py:30
+#: ../experiment/components/joystick/__init__.py:27
+#, fuzzy
+msgid "Device number"
+msgstr "设备编号"
+
+#: ../experiment/components/cedrusBox/__init__.py:28
+#, fuzzy
+msgid "Use box timer"
+msgstr "使用盒式分时器"
+
+#: ../experiment/components/cedrusBox/__init__.py:67
+#, fuzzy
+msgid ""
+"What is the 'correct' response? NB, buttons are labelled 0 to 6 on a 7-"
+"button box. Enter 'None' (no quotes) if withholding a response is correct. "
+"Might be helpful to add a correctAns column and use $correctAns to compare "
+"to the key press."
+msgstr ""
+"什么是\"正确\"响应？NB，按钮在7按钮框上标记为0到6。如果预扣响应正确，则输入"
+"\"无\"（无报价）。添加正确的Ans列并使用$correctAns与关键新闻进行比较可能会有"
+"所帮助。"
+
+#: ../experiment/components/cedrusBox/__init__.py:75
+#, fuzzy
+msgid "Keys to be read (blank for any) or key numbers separated by commas"
+msgstr "要读取的密钥（任何密钥为空白）或按逗号分离的关键数字"
+
+#: ../experiment/components/cedrusBox/__init__.py:79
+#: ../experiment/components/joyButtons/__init__.py:119
+#: ../experiment/components/joystick/__init__.py:113
+#, fuzzy
+msgid ""
+"Device number, if you have multiple devices which one do you want (0, 1, "
+"2...)"
+msgstr "设备号，如果你有多个设备，你想要哪一个（0，1，2.。。）"
+
+#: ../experiment/components/cedrusBox/__init__.py:94
+#, fuzzy
+msgid ""
+"According to Cedrus the response box timer has a drift - use with caution!"
+msgstr "根据塞德鲁斯的响应框计时器有一个漂移-谨慎使用！"
+
+#: ../experiment/components/code/__init__.py:17
+#, fuzzy
+msgid "Code: insert python commands into an experiment"
+msgstr "代码：将巨蛇命令插入实验"
+
+#: ../experiment/components/code/__init__.py:18
+#, fuzzy
+msgid "Code Type"
+msgstr "代码类型"
+
+#: ../experiment/components/code/__init__.py:19
+#, fuzzy
+msgid "Begin Experiment"
+msgstr "开始实验"
+
+#: ../experiment/components/code/__init__.py:20
+#, fuzzy
+msgid "Begin Routine"
+msgstr "开始例行公事"
+
+#: ../experiment/components/code/__init__.py:21
+#, fuzzy
+msgid "Each Frame"
+msgstr "每个帧"
+
+#: ../experiment/components/code/__init__.py:22
+#, fuzzy
+msgid "End Routine"
+msgstr "结束例程"
+
+#: ../experiment/components/code/__init__.py:23
+#, fuzzy
+msgid "End Experiment"
+msgstr "结束实验"
+
+#: ../experiment/components/code/__init__.py:24
+#, fuzzy
+msgid "Begin JS Experiment"
+msgstr "开始 JS 实验"
+
+#: ../experiment/components/code/__init__.py:25
+#, fuzzy
+msgid "Begin JS Routine"
+msgstr "开始JS常规"
+
+#: ../experiment/components/code/__init__.py:26
+#, fuzzy
+msgid "Each JS Frame"
+msgstr "每个JS框架"
+
+#: ../experiment/components/code/__init__.py:27
+#, fuzzy
+msgid "End JS Routine"
+msgstr "结束JS常规"
+
+#: ../experiment/components/code/__init__.py:28
+#, fuzzy
+msgid "End JS Experiment"
+msgstr "结束JS实验"
+
+#: ../experiment/components/code/__init__.py:59
+#: ../experiment/components/code/__init__.py:103
+#, fuzzy
+msgid ""
+"Code at the start of the experiment (initialization); right-click checks "
+"syntax"
+msgstr "实验开始时代码（初始化）：右键单击检查语法"
+
+#: ../experiment/components/code/__init__.py:67
+#: ../experiment/components/code/__init__.py:111
+#, fuzzy
+msgid ""
+"Code to be run at the start of each repeat of the Routine (e.g. each trial); "
+"right-click checks syntax"
+msgstr "将在常规的每次重复开始时运行代码（例如每次试用）;右键单击检查语法"
+
+#: ../experiment/components/code/__init__.py:76
+#: ../experiment/components/code/__init__.py:120
+#, fuzzy
+msgid ""
+"Code to be run on every video frame during for the duration of this Routine; "
+"right-click checks syntax"
+msgstr "在此例程期间，将在每个视频帧上运行代码：右键单击检查语法"
+
+#: ../experiment/components/code/__init__.py:85
+#: ../experiment/components/code/__init__.py:129
+#, fuzzy
+msgid ""
+"Code at the end of this repeat of the Routine (e.g. getting/storing "
+"responses); right-click checks syntax"
+msgstr "例行公事重复结束时的代码（例如获取/存储响应）：右键单击检查语法"
+
+#: ../experiment/components/code/__init__.py:94
+#: ../experiment/components/code/__init__.py:138
+#, fuzzy
+msgid ""
+"Code at the end of the entire experiment (e.g. saving files, resetting "
+"computer); right-click checks syntax"
+msgstr "整个实验结束时的代码（例如保存文件、重置计算机）;右键单击检查语法"
+
+#: ../experiment/components/dots/__init__.py:16
+#, fuzzy
+msgid "Dots: Random Dot Kinematogram"
+msgstr "点：随机点基内马图"
+
+#: ../experiment/components/dots/__init__.py:18
+#, fuzzy
+msgid "Number of dots"
+msgstr "点数"
+
+#: ../experiment/components/dots/__init__.py:19
+msgid "Direction"
+msgstr "方向"
+
+#: ../experiment/components/dots/__init__.py:20
+msgid "Speed"
+msgstr "速度"
+
+#: ../experiment/components/dots/__init__.py:21
+#, fuzzy
+msgid "Coherence"
+msgstr "相干"
+
+#: ../experiment/components/dots/__init__.py:22
+#, fuzzy
+msgid "Dot size"
+msgstr "点大小"
+
+#: ../experiment/components/dots/__init__.py:23
+#, fuzzy
+msgid "Dot life-time"
+msgstr "点生命时间"
+
+#: ../experiment/components/dots/__init__.py:24
+#, fuzzy
+msgid "Signal dots"
+msgstr "信号点"
+
+#: ../experiment/components/dots/__init__.py:25
+#, fuzzy
+msgid "Noise dots"
+msgstr "噪音点"
+
+#: ../experiment/components/dots/__init__.py:26
+#, fuzzy
+msgid "Field shape"
+msgstr "字段形状"
+
+#: ../experiment/components/dots/__init__.py:27
+msgid "Field size"
+msgstr "字段大小"
+
+#: ../experiment/components/dots/__init__.py:28
+msgid "Field position"
+msgstr "现场位置"
+
+#: ../experiment/components/dots/__init__.py:29
+#, fuzzy
+msgid "Dot refresh rule"
+msgstr "点刷新规则"
+
+#: ../experiment/components/dots/__init__.py:58
+#, fuzzy
+msgid ""
+"Number of dots in the field (for circular fields this will be average number "
+"of dots)"
+msgstr "字段中的点数（对于圆形字段，这将是平均点数）"
+
+#: ../experiment/components/dots/__init__.py:66
+#, fuzzy
+msgid "Direction of motion for the signal dots (degrees)"
+msgstr "信号点的运动方向（度）"
+
+#: ../experiment/components/dots/__init__.py:74
+#, fuzzy
+msgid "Speed of the dots (displacement per frame in the specified units)"
+msgstr "点的速度（指定单位中每帧的位移）"
+
+#: ../experiment/components/dots/__init__.py:83
+#, fuzzy
+msgid ""
+"Coherence of the dots (fraction moving in the signal direction on any one "
+"frame)"
+msgstr "点的一致性（在任何一帧的信号方向上移动的分数）"
+
+#: ../experiment/components/dots/__init__.py:92
+#, fuzzy
+msgid "Size of the dots IN PIXELS regardless of the set units"
+msgstr "无论设置的单位如何，像素中的点的大小"
+
+#: ../experiment/components/dots/__init__.py:101
+#, fuzzy
+msgid ""
+"Number of frames before each dot is killed and randomly assigned a new "
+"position"
+msgstr "每个点被杀死之前的帧数，并随机分配一个新位置"
+
+#: ../experiment/components/dots/__init__.py:108
+#, fuzzy
+msgid ""
+"On each frame are the signals dots remaining the same or changing? See Scase "
+"et al."
+msgstr "每个帧上的信号点是否保持不变或正在变化？请参阅斯卡塞等人。"
+
+#: ../experiment/components/dots/__init__.py:115
+#, fuzzy
+msgid "When should the whole sample of dots be refreshed"
+msgstr "何时应刷新整个点样本"
+
+#: ../experiment/components/dots/__init__.py:123
+#, fuzzy
+msgid "What governs the behaviour of the noise dots? See Scase et al."
+msgstr "什么支配着噪声点的行为？请参阅斯卡塞等人。"
+
+#: ../experiment/components/dots/__init__.py:135
+#, fuzzy
+msgid "What is the shape of the field?"
+msgstr "字段的形状是什么？"
+
+#: ../experiment/components/dots/__init__.py:138
+#, fuzzy
+msgid "What is the size of the field (in the specified units)?"
+msgstr "字段的大小（在指定的单位中）是多少？"
+
+#: ../experiment/components/dots/__init__.py:147
+#, fuzzy
+msgid "Where is the field centred (in the specified units)?"
+msgstr "字段的中心位置（在指定的单位中）？"
+
+#: ../experiment/components/envelopegrating/__init__.py:17
+#, fuzzy
+msgid ""
+"Envelope Grating: present cyclic textures including 2nd order envelope "
+"stimuli, prebuilt or from a file"
+msgstr "信封光栅：目前的循环纹理，包括二阶信封刺激，预制或从文件"
+
+#: ../experiment/components/envelopegrating/__init__.py:21
+#, fuzzy
+msgid "Carrier texture"
+msgstr "承运人纹理"
+
+#: ../experiment/components/envelopegrating/__init__.py:22
+#, fuzzy
+msgid "Carrier Orientation"
+msgstr "承运人方向"
+
+#: ../experiment/components/envelopegrating/__init__.py:23
+#: ../experiment/components/grating/__init__.py:22
+#: ../experiment/components/image/__init__.py:21
+#: ../experiment/components/noise/__init__.py:22
+#: ../experiment/components/patch/__init__.py:21
+msgid "Mask"
+msgstr "遮罩"
+
+#: ../experiment/components/envelopegrating/__init__.py:24
+#, fuzzy
+msgid "Carrier spatial frequency"
+msgstr "承运人空间频率"
+
+#: ../experiment/components/envelopegrating/__init__.py:25
+#, fuzzy
+msgid "Carrier phase (in cycles)"
+msgstr "承运人阶段（循环）"
+
+#: ../experiment/components/envelopegrating/__init__.py:26
+#, fuzzy
+msgid "Carrier contrast"
+msgstr "承运人对比度"
+
+#: ../experiment/components/envelopegrating/__init__.py:27
+#: ../experiment/components/grating/__init__.py:25
+#: ../experiment/components/image/__init__.py:22
+#: ../experiment/components/noise/__init__.py:26
+#: ../experiment/components/patch/__init__.py:24
+#, fuzzy
+msgid "Texture resolution"
+msgstr "纹理分辨率"
+
+#: ../experiment/components/envelopegrating/__init__.py:28
+#: ../experiment/components/grating/__init__.py:27
+#: ../experiment/components/image/__init__.py:25
+#: ../experiment/components/noise/__init__.py:27
+#: ../experiment/components/patch/__init__.py:25
+#: ../experiment/components/polygon/__init__.py:28
+msgid "Interpolate"
+msgstr "插值"
+
+#: ../experiment/components/envelopegrating/__init__.py:29
+#, fuzzy
+msgid "Envelope texture"
+msgstr "信封纹理"
+
+#: ../experiment/components/envelopegrating/__init__.py:30
+#, fuzzy
+msgid "Envelope spatial frequency"
+msgstr "信封空间频率"
+
+#: ../experiment/components/envelopegrating/__init__.py:31
+#, fuzzy
+msgid "Envelope orientation"
+msgstr "信封取向"
+
+#: ../experiment/components/envelopegrating/__init__.py:32
+#, fuzzy
+msgid "Envelope phase"
+msgstr "信封阶段"
+
+#: ../experiment/components/envelopegrating/__init__.py:33
+#, fuzzy
+msgid "Envelope modulation depth"
+msgstr "信封调制深度"
+
+#: ../experiment/components/envelopegrating/__init__.py:34
+#, fuzzy
+msgid "Power to which envelope is raised"
+msgstr "提高信封的功率"
+
+#: ../experiment/components/envelopegrating/__init__.py:35
+#, fuzzy
+msgid "Is modulation a beat"
+msgstr "调制是一个节拍"
+
+#: ../experiment/components/envelopegrating/__init__.py:36
+#: ../experiment/components/grating/__init__.py:26
+#: ../experiment/components/noise/__init__.py:43
+#, fuzzy
+msgid "OpenGL blend mode"
+msgstr "开放式混合模式"
+
+#: ../experiment/components/envelopegrating/__init__.py:74
+#, fuzzy
+msgid ""
+"The (2D) texture of the background - can be sin, sqr, sinXsin... or a "
+"filename (including path)"
+msgstr "背景的（2D）纹理-可以是罪，方格，辛辛。。。或文件名（包括路径）"
+
+#: ../experiment/components/envelopegrating/__init__.py:83
+#: ../experiment/components/grating/__init__.py:62
+#: ../experiment/components/noise/__init__.py:97
+#: ../experiment/components/patch/__init__.py:61
+#, fuzzy
+msgid ""
+"An image to define the alpha mask (ie shape)- gauss, circle... or a filename "
+"(including path)"
+msgstr "定义阿尔法面具（即形状）的图像-高斯，圆圈。。。或文件名（包括路径）"
+
+#: ../experiment/components/envelopegrating/__init__.py:92
+#, fuzzy
+msgid "Contrast of background carrier"
+msgstr "背景载体的对比"
+
+#: ../experiment/components/envelopegrating/__init__.py:100
+#, fuzzy
+msgid ""
+"Spatial frequency of background carrier repeats across the grating in 1 or 2 "
+"dimensions, e.g. 4 or [2,3]"
+msgstr "背景载体的空间频率在光栅上以 1 或 2 维重复，例如 4 或 [2，3]"
+
+#: ../experiment/components/envelopegrating/__init__.py:109
+#, fuzzy
+msgid "Spatial positioning of the background carrier (wraps in range 0-1.0)"
+msgstr "背景载体的空间定位（包在0-1.0范围内）"
+
+#: ../experiment/components/envelopegrating/__init__.py:118
+#: ../experiment/components/grating/__init__.py:89
+#: ../experiment/components/noise/__init__.py:136
+#: ../experiment/components/patch/__init__.py:88
+#, fuzzy
+msgid ""
+"Resolution of the texture for standard ones such as sin, sqr etc. For most "
+"cases a value of 256 pixels will suffice"
+msgstr ""
+"标准纹理的分辨率，如罪，平方米等。对于大多数情况下，256 像素的值就足够了"
+
+#: ../experiment/components/envelopegrating/__init__.py:128
+#: ../experiment/components/grating/__init__.py:99
+#: ../experiment/components/image/__init__.py:83
+#: ../experiment/components/noise/__init__.py:146
+#: ../experiment/components/patch/__init__.py:98
+#: ../experiment/components/polygon/__init__.py:131
+#, fuzzy
+msgid "How should the image be interpolated if/when rescaled"
+msgstr "如果/重新缩放时应如何插话图像"
+
+#: ../experiment/components/envelopegrating/__init__.py:137
+#, fuzzy
+msgid ""
+"The (2D) texture of the envelope - can be sin, sqr, sinXsin... or a filename "
+"(including path)"
+msgstr "信封的（2D）纹理-可以是罪，平方米，辛辛。。。或文件名（包括路径）"
+
+#: ../experiment/components/envelopegrating/__init__.py:146
+#, fuzzy
+msgid ""
+"Spatial frequency of the modulation envelope repeats across the grating in 1 "
+"or 2 dimensions, e.g. 4 or [2,3]"
+msgstr "调制信封的空间频率在光栅上以 1 或 2 维重复，例如 4 或 [2，3]"
+
+#: ../experiment/components/envelopegrating/__init__.py:155
+#, fuzzy
+msgid "Spatial positioning of the modulation envelope(wraps in range 0-1.0)"
+msgstr "调节信封的空间定位（包装范围为 0-1.0）"
+
+#: ../experiment/components/envelopegrating/__init__.py:164
+#, fuzzy
+msgid "Orientation of the modulation envelope(wraps in range 0-360)"
+msgstr "调制信封的方向（包装范围为 0-360）"
+
+#: ../experiment/components/envelopegrating/__init__.py:173
+#, fuzzy
+msgid "Modulation depth of modulation envelope"
+msgstr "调节信封的调节深度"
+
+#: ../experiment/components/envelopegrating/__init__.py:181
+#, fuzzy
+msgid ""
+"Power of modulation envelope. The modulator will be raised to this power "
+"according to the equation S=cC*(1+mM)^power, where C is the carrier and M is "
+"the modulator. and c and m are there respective contrast and modulation "
+"depth. Only works with AM envelopes (hence +1) in equation. Power is ignored "
+"if a beat is requested. This is used to obtain the square root of the "
+"modulator (power = 0.5) which is useful if combining two envelope gratings "
+"with different carriers and a 180 degree phase shift as the resulting "
+"combined signal will not have any reduction in local contrast at any point "
+"in the image. This is similar - but not identical to - the method used by "
+"Landy and Oruc, Vis Res 2002. Note overall contrast (apparent carrier "
+"contrast) will be altered."
+msgstr ""
+"调制信封的功率。调制器将根据方程 S=cC*（1+mM）+功率提高到此功率，其中 C 是载"
+"体，M 是调制器。和c和m有各自的对比度和调制深度。仅适用于AM信封（因此+1）等"
+"式。如果请求节拍，则忽略电源。这用于获取调制器的平方根（功率 = 0.5），如果将"
+"两个信封光栅与不同的载体和 180 度相移相结合，则这很有用，因为由此产生的组合信"
+"号在图像的任何一点上不会减少局部对比度。这与兰迪和奥鲁克（Vis Res 2002）使用"
+"的方法相似，但并不相同。注意整体对比度（明显的载体对比度）将更改。"
+
+#: ../experiment/components/envelopegrating/__init__.py:203
+#, fuzzy
+msgid ""
+"Do you want a 'beat'? [beat = carrier*envelope, no beat = "
+"carrier*(1+envelope), True/False, Y/N]"
+msgstr ""
+"你想要一个\"节拍\"吗？[节拍]承运人*信封，无节拍=承运人*（1+信封），真/假，Y/"
+"N]"
+
+#: ../experiment/components/envelopegrating/__init__.py:212
+#, fuzzy
+msgid ""
+"OpenGL Blendmode. Avg is most common mode in PsychoPy, add is useful if "
+"combining a beat with the carrier image or numpy array at point of display"
+msgstr ""
+"开放式混合模。Avg是心理Py中最常见的模式，如果在显示点将节拍与载体图像或麻木阵"
+"列组合在一起，则添加是有用的"
+
+#: ../experiment/components/eyetracker/__init__.py:17
+#, fuzzy
+msgid "Eyetracker: use one of several eyetrackers to follow gaze"
+msgstr "眼动器：使用几个眼动器之一跟随目光"
+
+#: ../experiment/components/eyetracker/__init__.py:84
+#, fuzzy
+msgid ""
+"How often should the eyetracker state (x,y,pupilsize...) be stored? On every "
+"video frame, every click or just at the end of the Routine?"
+msgstr ""
+"眼动器状态（x，y，瞳孔化。。。）应该多久存储一次？在每一个视频帧上，每次点击"
+"或只是在常规结束？"
+
+#: ../experiment/components/form/__init__.py:18
+#, fuzzy
+msgid "Form: a Psychopy survey tool"
+msgstr "表格：心理调查工具"
+
+#: ../experiment/components/form/__init__.py:21
+msgid "Items"
+msgstr "项目"
+
+#: ../experiment/components/form/__init__.py:22
+#, fuzzy
+msgid "Text Height"
+msgstr "文本高度"
+
+#: ../experiment/components/form/__init__.py:24
+msgid "Pos"
+msgstr "位置  Pos"
+
+#: ../experiment/components/form/__init__.py:25
+msgid "Item Padding"
+msgstr "项目填充"
+
+#: ../experiment/components/form/__init__.py:26
+msgid "Data Format"
+msgstr "数据格式"
+
+#: ../experiment/components/form/__init__.py:27
+msgid "Randomize"
+msgstr "随机"
+
+#: ../experiment/components/form/__init__.py:73
+#, fuzzy
+msgid "The csv filename containing the items for your survey."
+msgstr "包含用于调查的项目的csv文件名。"
+
+#: ../experiment/components/form/__init__.py:79
+#, fuzzy
+msgid ""
+"Size of the Form on screen in 'height' units. e.g. (1, .7) height units for "
+"horizontal,and vertical, respectively"
+msgstr "屏幕上\"高度\"单位的表单大小。例如（1、。7）水平和垂直高度单位"
+
+#: ../experiment/components/form/__init__.py:87
+#, fuzzy
+msgid "x,y position of the form on screen"
+msgstr "x，格式在屏幕上的位置"
+
+#: ../experiment/components/form/__init__.py:93
+#, fuzzy
+msgid "The size of the item text for Form"
+msgstr "表单项目文本的大小"
+
+#: ../experiment/components/form/__init__.py:99
+#, fuzzy
+msgid "Do you want to randomize the order of your questions?"
+msgstr "是否要随机化问题顺序？"
+
+#: ../experiment/components/form/__init__.py:105
+#, fuzzy
+msgid "The padding or space between items."
+msgstr "项目之间的填充或空间。"
+
+#: ../experiment/components/form/__init__.py:112
+#, fuzzy
+msgid "Store item data by columns, or rows"
+msgstr "按列或行存储项目数据"
+
+#: ../experiment/components/grating/__init__.py:17
+#, fuzzy
+msgid "Grating: present cyclic textures, prebuilt or from a file"
+msgstr "光栅：当前循环纹理，预制或从文件"
+
+#: ../experiment/components/grating/__init__.py:21
+msgid "Texture"
+msgstr "纹理"
+
+#: ../experiment/components/grating/__init__.py:23
+#: ../experiment/components/patch/__init__.py:22
+#, fuzzy
+msgid "Spatial frequency"
+msgstr "空间频率"
+
+#: ../experiment/components/grating/__init__.py:24
+#: ../experiment/components/noise/__init__.py:24
+#: ../experiment/components/patch/__init__.py:23
+#, fuzzy
+msgid "Phase (in cycles)"
+msgstr "阶段（周期）"
+
+#: ../experiment/components/grating/__init__.py:53
+#, fuzzy
+msgid ""
+"The (2D) texture of the grating - can be sin, sqr, sinXsin... or a filename "
+"(including path)"
+msgstr "光栅的（2D）纹理-可以是罪，平方米，辛辛。。。或文件名（包括路径）"
+
+#: ../experiment/components/grating/__init__.py:71
+#, fuzzy
+msgid ""
+"Spatial frequency of image repeats across the grating in 1 or 2 dimensions, "
+"e.g. 4 or [2,3]"
+msgstr "图像的空间频率在光栅上以 1 或 2 维重复，例如 4 或 [2，3]"
+
+#: ../experiment/components/grating/__init__.py:80
+#, fuzzy
+msgid "Spatial positioning of the image on the grating (wraps in range 0-1.0)"
+msgstr "光栅上图像的空间定位（包装范围为 0-1.0）"
+
+#: ../experiment/components/grating/__init__.py:107
+#, fuzzy
+msgid ""
+"OpenGL Blendmode: avg gives traditional transparency, add is important to "
+"combine gratings)]"
+msgstr "OpenGL混合模组：avg赋予传统透明度，添加是重要的结合光栅）]"
+
+#: ../experiment/components/image/__init__.py:17
+#, fuzzy
+msgid "Image: present images (bmp, jpg, tif...)"
+msgstr "图片：当前图像（大麻，jpg，提夫。。。）"
+
+#: ../experiment/components/image/__init__.py:20
+#, fuzzy
+msgid "Image"
+msgstr "图片"
+
+#: ../experiment/components/image/__init__.py:23
+#, fuzzy
+msgid "Flip vertically"
+msgstr "垂直翻转"
+
+#: ../experiment/components/image/__init__.py:24
+msgid "Flip horizontally"
+msgstr "水平翻转"
+
+#: ../experiment/components/image/__init__.py:56
+#, fuzzy
+msgid "The image to be displayed - a filename, including path"
+msgstr "要显示的图像 - 文件名称，包括路径"
+
+#: ../experiment/components/image/__init__.py:65
+#, fuzzy
+msgid ""
+"An image to define the alpha mask through which the image is seen - gauss, "
+"circle, None or a filename (including path)"
+msgstr "定义图像的阿尔法面膜的图像 - 高斯、圆圈、无或文件名（包括路径）"
+
+#: ../experiment/components/image/__init__.py:75
+#, fuzzy
+msgid "Resolution of the mask if one is used."
+msgstr "如果使用面具，则解析。"
+
+#: ../experiment/components/image/__init__.py:91
+#, fuzzy
+msgid "Should the image be flipped vertically (top to bottom)?"
+msgstr "图像应该垂直翻转（从上到下）吗？"
+
+#: ../experiment/components/image/__init__.py:99
+#, fuzzy
+msgid "Should the image be flipped horizontally (left to right)?"
+msgstr "图像应该水平翻转（从左到右）吗？"
+
+#: ../experiment/components/ioLabs/__init__.py:21
+#, fuzzy
+msgid ""
+"ioLabs ButtonBox: check and record response buttons on ioLab Systems "
+"ButtonBox"
+msgstr "ioLabs 按钮盒：检查并记录 ioLab 系统按钮盒上的响应按钮"
+
+#: ../experiment/components/ioLabs/__init__.py:25
+msgid "Active buttons"
+msgstr "活动按钮"
+
+#: ../experiment/components/ioLabs/__init__.py:26
+msgid "Lights"
+msgstr "灯光"
+
+#: ../experiment/components/ioLabs/__init__.py:27
+#, fuzzy
+msgid "Lights off"
+msgstr "熄灯"
+
+#: ../experiment/components/ioLabs/__init__.py:68
+#, fuzzy
+msgid ""
+"What is the 'correct' response? NB, buttons are labelled 0 to 7 on a 8-"
+"button box. Enter 'None' (no quotes) if withholding a response is correct. "
+"Might be helpful to add a correctAns column and use $correctAns to compare "
+"to the key press."
+msgstr ""
+"什么是\"正确\"响应？NB，按钮在8按钮框上标记为0到7。如果预扣响应正确，则输入"
+"\"无\"（无报价）。添加正确的Ans列并使用$correctAns与关键新闻进行比较可能会有"
+"所帮助。"
+
+#: ../experiment/components/ioLabs/__init__.py:78
+#, fuzzy
+msgid "Choose which (if any) responses to store at end of a trial"
+msgstr "选择在试用结束时存储哪些（如果有）响应"
+
+#: ../experiment/components/ioLabs/__init__.py:82
+#, fuzzy
+msgid "Active buttons, such as '1,6', '(1,2,5,6)' or '0' (without quotes)"
+msgstr "活动按钮，如\"1，6\"，\"（1，2，5，6）\"或\"0\"（无报价）"
+
+#: ../experiment/components/ioLabs/__init__.py:94
+#, fuzzy
+msgid "Turn ON the lights for the active buttons?"
+msgstr "打开活动按钮的灯？"
+
+#: ../experiment/components/ioLabs/__init__.py:100
+#, fuzzy
+msgid "Turn OFF all lights at the end of each routine?"
+msgstr "每次例行公事结束时关闭所有灯？"
+
+#: ../experiment/components/joyButtons/__init__.py:22
+#, fuzzy
+msgid "JoyButtons: check and record joystick/gamepad button presses"
+msgstr "操纵按钮：检查并记录操纵杆/游戏板按钮按下"
+
+#: ../experiment/components/joyButtons/__init__.py:25
+#, fuzzy
+msgid "Allowed buttons"
+msgstr "允许的按钮"
+
+#: ../experiment/components/joyButtons/__init__.py:26
+#: ../experiment/components/keyboard/__init__.py:33
+msgid "Store"
+msgstr "商店"
+
+#: ../experiment/components/joyButtons/__init__.py:27
+#: ../experiment/components/keyboard/__init__.py:34
+#: ../experiment/components/movie/__init__.py:21
+#: ../experiment/components/ratingScale/__init__.py:38
+#: ../experiment/components/slider/__init__.py:32
+#, fuzzy
+msgid "Force end of Routine"
+msgstr "常规的强制结束"
+
+#: ../experiment/components/joyButtons/__init__.py:28
+#: ../experiment/components/keyboard/__init__.py:35
+#, fuzzy
+msgid "Store correct"
+msgstr "正确存储"
+
+#: ../experiment/components/joyButtons/__init__.py:29
+#: ../experiment/components/keyboard/__init__.py:36
+msgid "Correct answer"
+msgstr "正确答案"
+
+#: ../experiment/components/joyButtons/__init__.py:31
+#: ../experiment/components/sound/__init__.py:25
+#, fuzzy
+msgid "sync RT with screen"
+msgstr "将RT与屏幕同步"
+
+#: ../experiment/components/joyButtons/__init__.py:65
+#, fuzzy
+msgid "A comma-separated list of button numbers, such as 0,1,2,3,4"
+msgstr "按钮编号的逗号分离列表，如 0，1，2，3，4"
+
+#: ../experiment/components/joyButtons/__init__.py:75
+#: ../experiment/components/keyboard/__init__.py:90
+#, fuzzy
+msgid "Choose which (if any) responses to store at the end of a trial"
+msgstr "选择在试用结束时存储哪些（如果有）响应"
+
+#: ../experiment/components/joyButtons/__init__.py:84
+#: ../experiment/components/keyboard/__init__.py:99
+#, fuzzy
+msgid "Should a response force the end of the Routine (e.g end the trial)?"
+msgstr "响应应强制常规结束（例如结束试用）吗？"
+
+#: ../experiment/components/joyButtons/__init__.py:92
+#: ../experiment/components/keyboard/__init__.py:107
+#, fuzzy
+msgid "Do you want to save the response as correct/incorrect?"
+msgstr "是否要将响应保存为正确/不正确？"
+
+#: ../experiment/components/joyButtons/__init__.py:100
+#: ../experiment/components/keyboard/__init__.py:115
+#, fuzzy
+msgid ""
+"What is the 'correct' key? Might be helpful to add a correctAns column and "
+"use $correctAns to compare to the key press."
+msgstr ""
+"什么是\"正确\"键？添加正确的Ans列并使用$correctAns与关键新闻进行比较可能会有"
+"所帮助。"
+
+#: ../experiment/components/joyButtons/__init__.py:110
+#: ../experiment/components/keyboard/__init__.py:125
+#, fuzzy
+msgid ""
+"A reaction time to a visual stimulus should be based on when the screen "
+"flipped"
+msgstr "对视觉刺激的反应时间应该基于屏幕翻转的时间"
+
+#: ../experiment/components/joystick/__init__.py:19
+#, fuzzy
+msgid "Joystick: query joystick position and buttons"
+msgstr "操纵杆：查询操纵杆位置和按钮"
+
+#: ../experiment/components/joystick/__init__.py:22
+#, fuzzy
+msgid "Save joystick state"
+msgstr "保存操纵杆状态"
+
+#: ../experiment/components/joystick/__init__.py:23
+#: ../experiment/components/mouse/__init__.py:22
+#, fuzzy
+msgid "End Routine on press"
+msgstr "按下结束常规"
+
+#: ../experiment/components/joystick/__init__.py:24
+#: ../experiment/components/mouse/__init__.py:23
+#, fuzzy
+msgid "Time relative to"
+msgstr "相对时间相对"
+
+#: ../experiment/components/joystick/__init__.py:25
+#: ../experiment/components/mouse/__init__.py:24
+#, fuzzy
+msgid "Clickable stimuli"
+msgstr "可点击刺激"
+
+#: ../experiment/components/joystick/__init__.py:26
+#: ../experiment/components/mouse/__init__.py:25
+#, fuzzy
+msgid "Store params for clicked"
+msgstr "用于单击的商店参数"
+
+#: ../experiment/components/joystick/__init__.py:28
+#, fuzzy
+msgid "Allowed Buttons"
+msgstr "允许按钮"
+
+#: ../experiment/components/joystick/__init__.py:60
+#, fuzzy
+msgid ""
+"How often should the joystick state (x,y,buttons) be stored? On every video "
+"frame, every click or just at the end of the Routine?"
+msgstr ""
+"操纵杆状态（x，y，按钮）应多久存储一次？在每一个视频帧上，每次点击或只是在常"
+"规结束？"
+
+#: ../experiment/components/joystick/__init__.py:70
+#: ../experiment/components/mouse/__init__.py:69
+#, fuzzy
+msgid "Should a button press force the end of the routine (e.g end the trial)?"
+msgstr "按下按钮是否应强制常规结束（例如结束试用）？"
+
+#: ../experiment/components/joystick/__init__.py:83
+#, fuzzy
+msgid "What should the values of joystick.time should be relative to?"
+msgstr "操纵杆的价值应该是什么。时间应该相对于什么？"
+
+#: ../experiment/components/joystick/__init__.py:92
+#: ../experiment/components/mouse/__init__.py:101
+#, fuzzy
+msgid ""
+"A comma-separated list of your stimulus names that can be \"clicked\" by the "
+"participant. e.g. target, foil"
+msgstr "刺激计划名称的逗号分离列表，可由参与者\"单击\"。例如目标，铝箔"
+
+#: ../experiment/components/joystick/__init__.py:102
+#, fuzzy
+msgid ""
+"The params (e.g. name, text), for which you want to store the current value, "
+"for the stimulus that was\"clicked\" by the joystick. Make sure that all the "
+"clickable objects have all these params."
+msgstr ""
+"要存储当前值的参数（例如名称、文本），用于操纵杆\"单击\"的刺激。确保所有可点"
+"击的对象都有所有这些参数。"
+
+#: ../experiment/components/joystick/__init__.py:122
+#, fuzzy
+msgid "Buttons to be read (blank for any) numbers separated by commas"
+msgstr "按逗号分离的要读取的按钮（任何数字为空白）"
+
+#: ../experiment/components/keyboard/__init__.py:28
+#, fuzzy
+msgid "Keyboard: check and record keypresses"
+msgstr "键盘：检查并记录按键"
+
+#: ../experiment/components/keyboard/__init__.py:31
+#, fuzzy
+msgid "Allowed keys"
+msgstr "允许的密钥"
+
+#: ../experiment/components/keyboard/__init__.py:32
+#, fuzzy
+msgid "Discard previous"
+msgstr "丢弃之前"
+
+#: ../experiment/components/keyboard/__init__.py:37
+#, fuzzy
+msgid "Sync timing with screen"
+msgstr "与屏幕同步计时"
+
+#: ../experiment/components/keyboard/__init__.py:70
+#, fuzzy
+msgid ""
+"A comma-separated list of keys (with quotes), such as "
+"'q','right','space','left'"
+msgstr "逗号分离的密钥列表（带引号），如\"q\"，\"右\"，\"空间\"，\"左\""
+
+#: ../experiment/components/keyboard/__init__.py:82
+#, fuzzy
+msgid ""
+"Do you want to discard all responses occuring before the onset of this "
+"component?"
+msgstr "是否要丢弃此组件启动前发生的所有响应？"
+
+#: ../experiment/components/microphone/__init__.py:19
+#, fuzzy
+msgid ""
+"Microphone: basic sound capture (fixed onset & duration), okay for spoken "
+"words"
+msgstr "麦克风：基本声音捕捉（固定发病和持续时间），适合口语"
+
+#: ../experiment/components/microphone/__init__.py:22
+msgid "Stereo"
+msgstr "立体声"
+
+#: ../experiment/components/microphone/__init__.py:22
+msgid "Channel"
+msgstr "频道"
+
+#: ../experiment/components/microphone/__init__.py:44
+#, fuzzy
+msgid "Record two channels (stereo) or one (mono, smaller file)"
+msgstr "录制两个通道（立体声）或一个通道（单个较小的文件）"
+
+#: ../experiment/components/microphone/__init__.py:53
+#, fuzzy
+msgid "The duration of the recording in seconds; blank = 0 sec"
+msgstr "记录的持续时间在几秒钟内;空白=0秒"
+
+#: ../experiment/components/microphone/__init__.py:57
+#, fuzzy
+msgid ""
+"Enter a channel number. Default value is 0. If unsure, run 'sound.backend."
+"get_input_devices()' to locate the system's selected device/channel."
+msgstr ""
+"输入通道编号。默认值为 0。如果不确定，请运行\"sound.backend."
+"get_input_devices（）\"以定位系统所选设备/通道。"
+
+#: ../experiment/components/mouse/__init__.py:18
+#, fuzzy
+msgid "Mouse: query mouse position and buttons"
+msgstr "鼠标：查询鼠标位置和按钮"
+
+#: ../experiment/components/mouse/__init__.py:21
+#, fuzzy
+msgid "Save mouse state"
+msgstr "保存鼠标状态"
+
+#: ../experiment/components/mouse/__init__.py:26
+#, fuzzy
+msgid "New clicks only"
+msgstr "仅限新单击"
+
+#: ../experiment/components/mouse/__init__.py:59
+#, fuzzy
+msgid ""
+"How often should the mouse state (x,y,buttons) be stored? On every video "
+"frame, every click or just at the end of the Routine?"
+msgstr ""
+"鼠标状态（x，y，按钮）应多久存储一次？在每一个视频帧上，每次点击或只是在常规"
+"结束？"
+
+#: ../experiment/components/mouse/__init__.py:82
+#, fuzzy
+msgid "What should the values of mouse.time should be relative to?"
+msgstr "鼠标的值应该是什么。时间应该相对于什么？"
+
+#: ../experiment/components/mouse/__init__.py:92
+#, fuzzy
+msgid ""
+"If the mouse button is already down when we start checking then wait for it "
+"to be released before recording as a new click."
+msgstr ""
+"如果我们开始检查时鼠标按钮已经关闭，则等待它发布，然后再录制为新的单击。"
+
+#: ../experiment/components/mouse/__init__.py:111
+#, fuzzy
+msgid ""
+"The params (e.g. name, text), for which you want to store the current value, "
+"for the stimulus that was\"clicked\" by the mouse. Make sure that all the "
+"clickable objects have all these params."
+msgstr ""
+"要存储当前值的参数（例如名称、文本），用于鼠标\"单击\"的刺激。确保所有可点击"
+"的对象都有所有这些参数。"
+
+#: ../experiment/components/movie/__init__.py:17
+#, fuzzy
+msgid "Movie: play movie files"
+msgstr "电影：播放电影文件"
+
+#: ../experiment/components/movie/__init__.py:20
+msgid "Movie file"
+msgstr "影片文件  Movie file"
+
+#: ../experiment/components/movie/__init__.py:22
+#, fuzzy
+msgid "backend"
+msgstr "后台"
+
+#: ../experiment/components/movie/__init__.py:23
+msgid "No audio"
+msgstr "无音频"
+
+#: ../experiment/components/movie/__init__.py:54
+#: ../experiment/components/sound/__init__.py:51
+#, fuzzy
+msgid "When does the component end? (blank to use the duration of the media)"
+msgstr "组件何时结束？（空白使用媒体的持续时间）"
+
+#: ../experiment/components/movie/__init__.py:58
+#, fuzzy
+msgid "A filename for the movie (including path)"
+msgstr "电影的文件名（包括路径）"
+
+#: ../experiment/components/movie/__init__.py:65
+#, fuzzy
+msgid "What underlying lib to use for loading movies"
+msgstr "用于加载电影的基本lib"
+
+#: ../experiment/components/movie/__init__.py:73
+#, fuzzy
+msgid ""
+"Prevent the audio stream from being loaded/processed (moviepy and opencv "
+"only)"
+msgstr "防止音频流被加载/处理（仅限电影和开片）"
+
+#: ../experiment/components/movie/__init__.py:80
+#, fuzzy
+msgid "Should the end of the movie cause the end of the routine (e.g. trial)?"
+msgstr "电影的结尾应该导致例行公事的结束（例如试用）吗？"
+
+#: ../experiment/components/movie/__init__.py:88
+#, fuzzy
+msgid "Whether the movie should loop back to the beginning on completion."
+msgstr "电影是否应该循环回到完成的开始。"
+
+#: ../experiment/components/movie/__init__.py:93
+#, fuzzy
+msgid "Loop playback"
+msgstr "循环播放"
+
+#: ../experiment/components/noise/__init__.py:17
+#, fuzzy
+msgid ""
+"Noise stimuli: generates a range of different types of random visual patterns"
+msgstr "噪音刺激：生成一系列不同类型的随机视觉模式"
+
+#: ../experiment/components/noise/__init__.py:20
+#, fuzzy
+msgid "Image from which to derive noise spectrum"
+msgstr "从中获取噪声频谱的图像"
+
+#: ../experiment/components/noise/__init__.py:21
+#: ../localization/__init__.py:171
+msgid "Orientation"
+msgstr "方向"
+
+#: ../experiment/components/noise/__init__.py:23
+#, fuzzy
+msgid "Final spatial frequency"
+msgstr "最终空间频率"
+
+#: ../experiment/components/noise/__init__.py:25
+msgid "Contrast"
+msgstr "对比"
+
+#: ../experiment/components/noise/__init__.py:28
+#, fuzzy
+msgid "Type of noise"
+msgstr "噪音类型"
+
+#: ../experiment/components/noise/__init__.py:29
+#, fuzzy
+msgid "Noise element size for pixelated noise"
+msgstr "像素化噪声的噪声元件大小"
+
+#: ../experiment/components/noise/__init__.py:30
+#, fuzzy
+msgid "Skew in frequency spectrum"
+msgstr "频谱偏斜"
+
+#: ../experiment/components/noise/__init__.py:31
+#, fuzzy
+msgid "Base spatial frequency"
+msgstr "基本空间频率"
+
+#: ../experiment/components/noise/__init__.py:32
+#, fuzzy
+msgid "Spatial frequency bandwidth"
+msgstr "空间频率带宽"
+
+#: ../experiment/components/noise/__init__.py:33
+#, fuzzy
+msgid "Orientation bandwidth for Gabor noise"
+msgstr "加博尔噪声的方向带宽"
+
+#: ../experiment/components/noise/__init__.py:34
+#, fuzzy
+msgid "Orientation for Gabor filter"
+msgstr "加博尔过滤器的方向"
+
+#: ../experiment/components/noise/__init__.py:35
+#, fuzzy
+msgid "Order of filter"
+msgstr "过滤顺序"
+
+#: ../experiment/components/noise/__init__.py:36
+#, fuzzy
+msgid "Upper cut off frequency"
+msgstr "上切断频率"
+
+#: ../experiment/components/noise/__init__.py:37
+#, fuzzy
+msgid "Lower cut off frequency"
+msgstr "较低的切断频率"
+
+#: ../experiment/components/noise/__init__.py:38
+#, fuzzy
+msgid "Number of standard deviations at which to clip noise"
+msgstr "夹噪声的标准偏差数"
+
+#: ../experiment/components/noise/__init__.py:39
+#, fuzzy
+msgid "Apply filter to noise sample"
+msgstr "将过滤器应用于噪声样本"
+
+#: ../experiment/components/noise/__init__.py:40
+#, fuzzy
+msgid "Radomize image component"
+msgstr "拉多米化图像组件"
+
+#: ../experiment/components/noise/__init__.py:41
+#, fuzzy
+msgid "How to update noise sample"
+msgstr "如何更新噪声样本"
+
+#: ../experiment/components/noise/__init__.py:42
+#, fuzzy
+msgid "When to update noise sample"
+msgstr "何时更新噪声样本"
+
+#: ../experiment/components/noise/__init__.py:82
+#, fuzzy
+msgid ""
+"An image from which to derive the frequency spectrum for the noise. Give "
+"filename (including path)"
+msgstr "从中推导噪声频谱的图像。提供文件名（包括路径）"
+
+#: ../experiment/components/noise/__init__.py:106
+#, fuzzy
+msgid "Michaelson contrast of the image"
+msgstr "迈克尔森图像的对比"
+
+#: ../experiment/components/noise/__init__.py:114
+#, fuzzy
+msgid ""
+"Final spatial frequency of image in 1 or 2 dimensions, e.g. 4 or [2,3]. Use "
+"None to set to 1 copy of noise per unit length of image or 1 copy of noise "
+"per image if units=pix. Set to 1/size (or [1/size,1/size]) where size is a "
+"number (or variable) equal to the size of the stimulus to get one copy of "
+"noise per image regardless of the units."
+msgstr ""
+"图像的最终空间频率为 1 或 2 维，例如 4 或 [2，3]。如果单位=pix，则使用\"无"
+"\"设置为每个图像单位长度的噪声副本或每个图像的噪声副本 1 个副本。设置为 1/大"
+"小（或 [1/大小，1/大小]），其中大小是等于刺激大小的数字（或变量），无论单位如"
+"何，每个图像都会获得一个噪声副本。"
+
+#: ../experiment/components/noise/__init__.py:127
+#, fuzzy
+msgid ""
+"Spatial positioning of the noise within the stimulus (wraps in range 0-1.0)"
+msgstr "刺激内噪声的空间定位（包装范围为 0-1.0）"
+
+#: ../experiment/components/noise/__init__.py:154
+#, fuzzy
+msgid ""
+"Type of noise (Binary, Normal, Gabor, Isotropic, White, Coloured, Filtered, "
+"Image)"
+msgstr "噪音类型（二进制、正常、加博尔、异位、白色、彩色、过滤、图像）"
+
+#: ../experiment/components/noise/__init__.py:162
+#, fuzzy
+msgid ""
+"Apply filter to noise sample? [Butterworth, Gabor, Isoptopic]. A filter with "
+"parameters taken from the either the Filtered (Butterworth) or Gabor/"
+"Isotropic tab will be applied to OTHER noise types. [NOTE: if noise of the "
+"same type as the filter is requested the filter is applied, once only, to a "
+"white noise sample.]"
+msgstr ""
+"将过滤器应用于噪声样本？[巴特沃斯，加博尔，同位素]。具有从过滤 （巴特沃斯） "
+"或 Gabor/Isotropic 选项卡中获取参数的过滤器将应用于其他噪声类型。[注意：如果"
+"要求与过滤器具有相同类型的噪声，则仅对白噪声样本应用一次过滤器。"
+
+#: ../experiment/components/noise/__init__.py:174
+#, fuzzy
+msgid ""
+"Which image component should be randomised? [Amplitude,Phase]. Randomizing "
+"amplitude will keep the phase spectrum of the image but set the amplitude "
+"spectrum to random values [0...1]. This keeps spatial structure in tact. "
+"Randoming the phase spectrum will keep the amplitude spectrum of the image  "
+"but set the phase spectrum to random values [-pi...pi] in radians. This "
+"makes a noise sample with no obvious structure. "
+msgstr ""
+"哪些图像组件应随机化？[振幅，相位]。随机振幅将保持图像的相谱，但将振幅光谱设"
+"置为随机值 [0...1]。这使空间结构保持机智。随机相谱将保持图像的振幅光谱，但将"
+"相谱设置为随机值[-pi.。。皮]在拉迪安。这使得噪声样本没有明显的结构。"
+
+#: ../experiment/components/noise/__init__.py:186
+#, fuzzy
+msgid ""
+"(Binary, Normal and Uniform only) Size of noise elements in the stimulus "
+"units."
+msgstr "（仅限二进制、普通版和均匀版）刺激单元中噪声元素的大小。"
+
+#: ../experiment/components/noise/__init__.py:194
+#, fuzzy
+msgid ""
+"Base spatial frequency in cycles per unit length If units = pix this value "
+"should be < 0.5."
+msgstr "按单位长度循环的基本空间频率 如果单位 = pix 此值应< 0.5。"
+
+#: ../experiment/components/noise/__init__.py:203
+#, fuzzy
+msgid "Spatial frequency bandwidth in octaves - Full width half height"
+msgstr "八度空间频率带宽 - 全宽半高"
+
+#: ../experiment/components/noise/__init__.py:211
+#, fuzzy
+msgid "Orientation bandwidth in degrees (Gabor only) - Full width half height"
+msgstr "度方向带宽（仅限加博尔） - 全宽半高"
+
+#: ../experiment/components/noise/__init__.py:219
+#, fuzzy
+msgid ""
+"Orientation of Gabor filter in degrees. Used to set the orienation of a "
+"Gabor filter to be applied to another noise sample with a different overall "
+"orientation. The best way to set the orientation of a Gabor noise sample is "
+"to leave this as 0 degree and use the overall orientation on the Advanced "
+"tab to vary the dominant orientation of the noise. If using this setting for "
+"orientation it is strongly recomended to set the interpolation method to "
+"'linear' on the Advanced tab to avoid pixelization."
+msgstr ""
+"加博尔过滤器在度的方向。用于设置 Gabor 过滤器的定向，以应用于具有不同整体方向"
+"的另一个噪声样本。设置 Gabor 噪声样本方向的最佳方式是将此定位为 0 度，并使用"
+"高级选项卡上的整体方向来更改噪声的主导方向。如果将此设置用于定位，则强烈建议"
+"将插点方法设置为高级选项卡上的\"线性\"，以避免像素化。"
+
+#: ../experiment/components/noise/__init__.py:234
+#, fuzzy
+msgid ""
+"Exponent for the slope of the filter's amplitude spectrum (A=f^Exponent). 0 "
+"= flat, -1 = slope of 1/f. When used on its own the 'filtered' noise type "
+"applies the filter to white noise so the resulting noise samples have the "
+"spectral properties of the filter.  When filtering a noise sample of another "
+"type this term takes the original spectrum and multiplies it by a ramp in "
+"frequency space with values set by the exponent. It does not force the "
+"spectrum to a specific slope. "
+msgstr ""
+"过滤器振幅光谱斜率的指数（A=f^指数）。0 = 平，-1 = 1/f 的坡度。当自行使用"
+"时，\"过滤\"噪声类型将过滤器应用于白噪声，因此产生的噪声样本具有过滤器的光谱"
+"特性。 当过滤另一种类型的噪声样本时，此术语采用原始频谱，并将其乘以频率空间中"
+"的坡道，并具有指数设置的值。它不会将频谱强制到特定的斜坡。"
+
+#: ../experiment/components/noise/__init__.py:247
+#, fuzzy
+msgid "Order of filter - higher = steeper fall off, zero = no filter"
+msgstr "过滤顺序-更高=更陡峭的脱落，零=无过滤器"
+
+#: ../experiment/components/noise/__init__.py:255
+#, fuzzy
+msgid ""
+"Upper cutoff frequency in cycles per unit length. Set very high to avoid an "
+"upper cutoff and make a high pass filter."
+msgstr ""
+"按单位长度循环的上部截止频率。设置非常高，以避免上部截止，并使高通过滤器。"
+
+#: ../experiment/components/noise/__init__.py:264
+#, fuzzy
+msgid ""
+"Lower cutoff frequency in cycles per unit length. Set to zero to avoid a "
+"lower cuttoff and make a low pass filter."
+msgstr ""
+"每个单位长度的周期中较低的截止频率。设置为零，以避免较低的截止时间，并制作一"
+"个低通滤镜。"
+
+#: ../experiment/components/noise/__init__.py:273
+#, fuzzy
+msgid ""
+"Truncate high and low values beyond stated standard deviations from mean and "
+"rescale greyscale range. This is not used at all for 'binary' or 'uniform' "
+"noise and scales rather than clips 'normal' noise). The higher this is the "
+"lower the final RMS contrast. If very low noise may appear binarised. NOTE: "
+"If a filter is used clipping and rescaling are applied after the filter, "
+"regardless of the noise type."
+msgstr ""
+"将高值和低值与明文标准偏离均值和重度灰度范围分开。这根本不用于\"二进制\"或"
+"\"均匀\"噪声和天平，而非剪辑\"正常\"噪声）。这是越高的最终 RMS 对比度越低。如"
+"果噪音非常低，可能会出现二进制。注意：如果使用滤镜，则在过滤器后应用剪报和重"
+"新缩放，无论噪音类型如何。"
+
+#: ../experiment/components/noise/__init__.py:284
+#, fuzzy
+msgid ""
+"How to update noise if not otherwise required by other changes (none, "
+"repeat, N-frames, Seconds)"
+msgstr "如何更新噪声，如果没有其他更改（无，重复，N帧，秒）"
+
+#: ../experiment/components/noise/__init__.py:292
+#, fuzzy
+msgid ""
+"How often to update noise (in frames or seconds) - can be a variable, "
+"ignored if any noise characteristic is updating on every frame"
+msgstr ""
+"更新噪声的频率（在帧或秒内） - 如果每个帧上更新任何噪声特征，则可以是一个变"
+"量，忽略"
+
+#: ../experiment/components/noise/__init__.py:300
+#, fuzzy
+msgid ""
+"OpenGL Blendmode [avg, add (avg is most common mode in PsychoPy, add is used "
+"if you want to generate the sum of two components)]"
+msgstr ""
+"OpenGL混合模式[avg，添加（avg是心理心理中最常见的模式，如果您想要生成两个组件"
+"的总和，则使用添加）]"
+
+#: ../experiment/components/parallelOut/__init__.py:18
+#, fuzzy
+msgid "Parallel out: send signals from the parallel port"
+msgstr "并行：从平行端口发送信号"
+
+#: ../experiment/components/parallelOut/__init__.py:21
+#, fuzzy
+msgid "Port address"
+msgstr "端口地址"
+
+#: ../experiment/components/parallelOut/__init__.py:22
+#, fuzzy
+msgid "Start data"
+msgstr "启动数据"
+
+#: ../experiment/components/parallelOut/__init__.py:23
+#, fuzzy
+msgid "Stop data"
+msgstr "停止数据"
+
+#: ../experiment/components/parallelOut/__init__.py:24
+#: ../experiment/components/pump/__init__.py:27
+#, fuzzy
+msgid "Sync to screen"
+msgstr "同步到屏幕"
+
+#: ../experiment/components/parallelOut/__init__.py:56
+#, fuzzy
+msgid ""
+"Parallel port to be used (you can change these options in "
+"preferences>general)"
+msgstr "要使用的平行端口（您可以更改这些选项的首选项>一般）"
+
+#: ../experiment/components/parallelOut/__init__.py:65
+#, fuzzy
+msgid "Data to be sent at 'start'"
+msgstr "将在\"开始\"时发送的数据"
+
+#: ../experiment/components/parallelOut/__init__.py:70
+#, fuzzy
+msgid "Data to be sent at 'end'"
+msgstr "将在\"端\"发送的数据"
+
+#: ../experiment/components/parallelOut/__init__.py:73
+#, fuzzy
+msgid ""
+"If the parallel port data relates to visual stimuli then sync its pulse to "
+"the screen refresh"
+msgstr "如果并行端口数据与视觉刺激相关，则将其脉冲同步到屏幕刷新"
+
+#: ../experiment/components/patch/__init__.py:16
+#, fuzzy
+msgid "Patch: present images (bmp, jpg, tif...) or textures like gratings"
+msgstr "修补程序：当前图像（bmp、jpg、tif.。。）或纹理（如光栅）"
+
+#: ../experiment/components/patch/__init__.py:20
+#, fuzzy
+msgid "Image/tex"
+msgstr "图像/特克斯"
+
+#: ../experiment/components/patch/__init__.py:52
+#, fuzzy
+msgid ""
+"The image to be displayed - 'sin','sqr'... or a filename (including path)"
+msgstr "要显示的图像 - \"罪\"， \"sqr\"...或文件名（包括路径）"
+
+#: ../experiment/components/patch/__init__.py:70
+#, fuzzy
+msgid "Spatial frequency of image repeats across the patch, e.g. 4 or [2,3]"
+msgstr "图像的空间频率在修补程序中重复，例如 4 或 [2，3]"
+
+#: ../experiment/components/patch/__init__.py:79
+#, fuzzy
+msgid "Spatial positioning of the image on the patch (in range 0-1.0)"
+msgstr "补丁上图像的空间定位（范围为 0-1.0）"
+
+#: ../experiment/components/polygon/__init__.py:18
+#, fuzzy
+msgid "Polygon: any regular polygon (line, triangle, square...circle)"
+msgstr "多边形：任何常规多边形（线，三角形，方形。。。圆圈）"
+
+#: ../experiment/components/polygon/__init__.py:22
+#, fuzzy
+msgid "Num. vertices"
+msgstr "数. 眩晕"
+
+#: ../experiment/components/polygon/__init__.py:23
+#, fuzzy
+msgid "Fill color-space"
+msgstr "填充色彩空间"
+
+#: ../experiment/components/polygon/__init__.py:24
+msgid "Fill color"
+msgstr "充填颜色"
+
+#: ../experiment/components/polygon/__init__.py:29
+#: ../localization/__init__.py:172
+#, fuzzy
+msgid "Size [w,h]"
+msgstr "大小 [w，h]"
+
+#: ../experiment/components/polygon/__init__.py:30
+msgid "Shape"
+msgstr "形状"
+
+#: ../experiment/components/polygon/__init__.py:67
+#, fuzzy
+msgid "How many vertices in your regular polygon?"
+msgstr "常规多边形中有多少个眩晕？"
+
+#: ../experiment/components/polygon/__init__.py:75
+#, fuzzy
+msgid ""
+"What shape is this? With 'regular polygon...' you can set number of vertices"
+msgstr "这是什么形状的？使用\"常规多边形。。。\"您可以设置眩晕数"
+
+#: ../experiment/components/polygon/__init__.py:95
+#, fuzzy
+msgid ""
+"Fill color of this shape; Right-click to bring up a color-picker (rgb only)"
+msgstr "填充此形状的颜色：右键单击以提起选色器（仅限 rgb）"
+
+#: ../experiment/components/polygon/__init__.py:113
+#, fuzzy
+msgid ""
+"Line color of this shape; Right-click to bring up a color-picker (rgb only)"
+msgstr "此形状的线条颜色;右键单击以提起选色器（仅限 rgb）"
+
+#: ../experiment/components/polygon/__init__.py:122
+#, fuzzy
+msgid ""
+"Width of the shape's line (always in pixels - this does NOT use 'units')"
+msgstr "形状线的宽度（始终为像素 - 这不使用\"单位\"）"
+
+#: ../experiment/components/polygon/__init__.py:139
+#, fuzzy
+msgid ""
+"Size of this stimulus [w,h]. Note that for a line only the first value is "
+"used, for triangle and rect the [w,h] is as expected,\n"
+" but for higher-order polygons it represents the [w,h] of the ellipse that "
+"the polygon sits on!! "
+msgstr ""
+"这种刺激的规模[w，h]。请注意，对于仅使用第一个值的行，对于三角形和纠正[w，h]"
+"是如预期的那样，\n"
+" 但对于更高阶的多边形，它代表多边形所坐的椭圆的[w，h]！！"
+
+#: ../experiment/components/pump/__init__.py:19
+#, fuzzy
+msgid "Pump: deliver liquid stimuli via a Cetoni neMESYS syringe pump"
+msgstr "泵：通过塞托尼内梅斯注射器泵提供液体刺激"
+
+#: ../experiment/components/pump/__init__.py:21
+#, fuzzy
+msgid "Pump index"
+msgstr "泵索引"
+
+#: ../experiment/components/pump/__init__.py:22
+#, fuzzy
+msgid "Syringe type"
+msgstr "注射器类型"
+
+#: ../experiment/components/pump/__init__.py:23
+#, fuzzy
+msgid "Pump action"
+msgstr "泵操作"
+
+#: ../experiment/components/pump/__init__.py:24
+msgid "Flow rate"
+msgstr "流量"
+
+#: ../experiment/components/pump/__init__.py:25
+#, fuzzy
+msgid "Flow rate unit"
+msgstr "流速单位"
+
+#: ../experiment/components/pump/__init__.py:26
+#, fuzzy
+msgid "Switch valve after dosing"
+msgstr "剂后切换阀门"
+
+#: ../experiment/components/pump/__init__.py:75
+#, fuzzy
+msgid "The index of the pump(s) (first pump is 0)."
+msgstr "泵的索引（第一泵为 0）。"
+
+#: ../experiment/components/pump/__init__.py:82
+#, fuzzy
+msgid "Syringe type and dimensions"
+msgstr "注射器类型和尺寸"
+
+#: ../experiment/components/pump/__init__.py:89
+#, fuzzy
+msgid "Whether the syringe should be filled (aspirate) or emptied (dispense"
+msgstr "注射器是应填充（吸附）还是清空（分配）"
+
+#: ../experiment/components/pump/__init__.py:109
+#, fuzzy
+msgid "Switch the valve after pump operation"
+msgstr "泵操作后切换阀门"
+
+#: ../experiment/components/pump/__init__.py:115
+#, fuzzy
+msgid "Sync pump onset to the screen refresh"
+msgstr "同步泵启动到屏幕刷新"
+
+#: ../experiment/components/ratingScale/__init__.py:22
+#, fuzzy
+msgid "Rating scale: obtain numerical or categorical responses"
+msgstr "评分等级：获得数字或分类响应"
+
+#: ../experiment/components/ratingScale/__init__.py:26
+#, fuzzy
+msgid "Visual analog scale"
+msgstr "视觉模拟刻度"
+
+#: ../experiment/components/ratingScale/__init__.py:27
+#: ../experiment/components/slider/__init__.py:27
+#, fuzzy
+msgid "Category choices"
+msgstr "类别选择"
+
+#: ../experiment/components/ratingScale/__init__.py:28
+#, fuzzy
+msgid "Scale description"
+msgstr "缩放描述"
+
+#: ../experiment/components/ratingScale/__init__.py:29
+#, fuzzy
+msgid "Lowest value"
+msgstr "最低值"
+
+#: ../experiment/components/ratingScale/__init__.py:30
+#, fuzzy
+msgid "Highest value"
+msgstr "最高值"
+
+#: ../experiment/components/ratingScale/__init__.py:31
+#: ../experiment/components/slider/__init__.py:28
+msgid "Labels"
+msgstr "标签"
+
+#: ../experiment/components/ratingScale/__init__.py:32
+msgid "Marker type"
+msgstr "标记类型"
+
+#: ../experiment/components/ratingScale/__init__.py:33
+#, fuzzy
+msgid "Marker start"
+msgstr "标记启动"
+
+#: ../experiment/components/ratingScale/__init__.py:35
+#: ../experiment/components/slider/__init__.py:31
+#: ../localization/__init__.py:170
+#, fuzzy
+msgid "Position [x,y]"
+msgstr "位置 [x，y]"
+
+#: ../experiment/components/ratingScale/__init__.py:36
+#, fuzzy
+msgid "Tick height"
+msgstr "滴答声高度"
+
+#: ../experiment/components/ratingScale/__init__.py:37
+msgid "Disappear"
+msgstr "消失"
+
+#: ../experiment/components/ratingScale/__init__.py:39
+#, fuzzy
+msgid "Show accept"
+msgstr "显示接受"
+
+#: ../experiment/components/ratingScale/__init__.py:40
+#, fuzzy
+msgid "Single click"
+msgstr "单击"
+
+#: ../experiment/components/ratingScale/__init__.py:41
+#: ../experiment/components/slider/__init__.py:33
+#, fuzzy
+msgid "Store history"
+msgstr "存储历史记录"
+
+#: ../experiment/components/ratingScale/__init__.py:42
+#: ../experiment/components/slider/__init__.py:34
+#, fuzzy
+msgid "Store rating"
+msgstr "商店评级"
+
+#: ../experiment/components/ratingScale/__init__.py:43
+#: ../experiment/components/slider/__init__.py:35
+#, fuzzy
+msgid "Store rating time"
+msgstr "商店评级时间"
+
+#: ../experiment/components/ratingScale/__init__.py:44
+#, fuzzy
+msgid "Customize everything :"
+msgstr "自定义所有内容："
+
+#: ../experiment/components/ratingScale/__init__.py:92
+#, fuzzy
+msgid ""
+"Show a continuous visual analog scale; returns 0.00 to 1.00; takes "
+"precedence over numeric scale or categorical choices"
+msgstr "显示连续的视觉模拟刻度：返回0.00至1.00：优先于数字尺度或分类选择"
+
+#: ../experiment/components/ratingScale/__init__.py:99
+#, fuzzy
+msgid ""
+"A list of categories (non-numeric alternatives) to present, space or comma-"
+"separated; these take precedence over a numeric scale"
+msgstr "呈现、空间或逗号分离的类别（非数字替代方案）列表;这些优先于数字尺度"
+
+#: ../experiment/components/ratingScale/__init__.py:106
+#, fuzzy
+msgid ""
+"Brief instructions, such as a description of the scale numbers as seen by "
+"the subject."
+msgstr "简要说明，例如主题所示的尺度数的描述。"
+
+#: ../experiment/components/ratingScale/__init__.py:112
+#, fuzzy
+msgid "Lowest rating (low end of the scale); not used for categories."
+msgstr "最低评级（评分表的低端）;不用于类别。"
+
+#: ../experiment/components/ratingScale/__init__.py:118
+#, fuzzy
+msgid "Highest rating (top end of the scale); not used for categories."
+msgstr "最高评级（评分表的高端）;不用于类别。"
+
+#: ../experiment/components/ratingScale/__init__.py:124
+#, fuzzy
+msgid "Labels for the ends of the scale, separated by commas"
+msgstr "刻度末端的标签，由逗号隔开"
+
+#: ../experiment/components/ratingScale/__init__.py:130
+#, fuzzy
+msgid "Style for the marker: triangle, circle, glow, slider, hover"
+msgstr "标记样式：三角形、圆形、发光、滑块、悬停"
+
+#: ../experiment/components/ratingScale/__init__.py:136
+#, fuzzy
+msgid "initial position for the marker"
+msgstr "标记的初始位置"
+
+#: ../experiment/components/ratingScale/__init__.py:143
+#, fuzzy
+msgid ""
+"Should clicking the line accept that rating (without needing to confirm via "
+"'accept')?"
+msgstr "单击该行是否应接受该评级（无需通过\"接受\"进行确认）？"
+
+#: ../experiment/components/ratingScale/__init__.py:149
+#, fuzzy
+msgid ""
+"Hide the scale when a rating has been accepted; False to remain on-screen"
+msgstr "接受评级时隐藏刻度;假保留在屏幕上"
+
+#: ../experiment/components/ratingScale/__init__.py:155
+#, fuzzy
+msgid "Should the accept button by visible?"
+msgstr "接受按钮应该可见吗？"
+
+#: ../experiment/components/ratingScale/__init__.py:160
+#: ../experiment/components/slider/__init__.py:179
+#, fuzzy
+msgid "store the rating"
+msgstr "存储评级"
+
+#: ../experiment/components/ratingScale/__init__.py:165
+#, fuzzy
+msgid "store the time taken to make the choice (in seconds)"
+msgstr "存储做出选择所占用的时间（在几秒钟内）"
+
+#: ../experiment/components/ratingScale/__init__.py:171
+#: ../experiment/components/slider/__init__.py:192
+#, fuzzy
+msgid "store the history of (selection, time)"
+msgstr "存储历史（选择，时间）"
+
+#: ../experiment/components/ratingScale/__init__.py:176
+#, fuzzy
+msgid "Should accepting a rating cause the end of the routine (e.g. trial)?"
+msgstr "接受评级是否应导致常规的结束（例如试用）？"
+
+#: ../experiment/components/ratingScale/__init__.py:182
+#, fuzzy
+msgid ""
+"Relative size on the screen; size > 1 is larger than default; size < 1 is "
+"smaller"
+msgstr "屏幕上的相对大小;大小>1大于默认值：大小<1较小"
+
+#: ../experiment/components/ratingScale/__init__.py:188
+#, fuzzy
+msgid "height of tick marks (1 is upward, 0 is hidden, -1 is downward)"
+msgstr "滴答声标记的高度（1是向上的，0是隐藏的，-1是向下的）"
+
+#: ../experiment/components/ratingScale/__init__.py:194
+#: ../experiment/components/slider/__init__.py:126
+#, fuzzy
+msgid "x,y position on the screen"
+msgstr "x，y屏幕上的位置"
+
+#: ../experiment/components/ratingScale/__init__.py:201
+#, fuzzy
+msgid ""
+"Use this text to create the rating scale as you would in a code component; "
+"overrides all dialog settings except time parameters, forceEndRoutine, "
+"storeRatingTime, storeRating"
+msgstr ""
+"使用此文本创建评级比例，就像在代码组件中一样：覆盖除时间参数、强制端路、存储"
+"评估时间、存储评级以外的所有对话设置"
+
+#: ../experiment/components/settings/__init__.py:40
+#, fuzzy
+msgid "Experiment name"
+msgstr "实验名称"
+
+#: ../experiment/components/settings/__init__.py:41
+#, fuzzy
+msgid "Show info dialog"
+msgstr "显示信息对话"
+
+#: ../experiment/components/settings/__init__.py:42
+#, fuzzy
+msgid "Enable Escape key"
+msgstr "启用逃生键"
+
+#: ../experiment/components/settings/__init__.py:43
+#, fuzzy
+msgid "Experiment info"
+msgstr "实验信息"
+
+#: ../experiment/components/settings/__init__.py:44
+#, fuzzy
+msgid "Data filename"
+msgstr "数据文件名"
+
+#: ../experiment/components/settings/__init__.py:45
+#, fuzzy
+msgid "Full-screen window"
+msgstr "全屏窗口"
+
+#: ../experiment/components/settings/__init__.py:46
+#, fuzzy
+msgid "Window size (pixels)"
+msgstr "窗口大小（像素）"
+
+#: ../experiment/components/settings/__init__.py:48
+msgid "Monitor"
+msgstr "监测"
+
+#: ../experiment/components/settings/__init__.py:49
+#: ../experiment/components/slider/__init__.py:156
+#: ../localization/__init__.py:167
+msgid "Color"
+msgstr "颜色"
+
+#: ../experiment/components/settings/__init__.py:50
+#: ../localization/__init__.py:168
+msgid "Color space"
+msgstr "颜色空间"
+
+#: ../experiment/components/settings/__init__.py:51
+#: ../localization/__init__.py:166
+msgid "Units"
+msgstr "单位"
+
+#: ../experiment/components/settings/__init__.py:52
+msgid "Blend mode"
+msgstr "混合模式"
+
+#: ../experiment/components/settings/__init__.py:53
+#, fuzzy
+msgid "Show mouse"
+msgstr "显示鼠标"
+
+#: ../experiment/components/settings/__init__.py:54
+#, fuzzy
+msgid "Save log file"
+msgstr "保存日志文件"
+
+#: ../experiment/components/settings/__init__.py:56
+#, fuzzy
+msgid "Save csv file (trial-by-trial)"
+msgstr "保存csv文件（逐审）"
+
+#: ../experiment/components/settings/__init__.py:57
+#, fuzzy
+msgid "Save csv file (summaries)"
+msgstr "保存csv文件（摘要）"
+
+#: ../experiment/components/settings/__init__.py:58
+#, fuzzy
+msgid "Save excel file"
+msgstr "保存卓越文件"
+
+#: ../experiment/components/settings/__init__.py:59
+#, fuzzy
+msgid "Save psydat file"
+msgstr "保存心理文件"
+
+#: ../experiment/components/settings/__init__.py:60
+msgid "Logging level"
+msgstr "日志级别"
+
+#: ../experiment/components/settings/__init__.py:61
+#, fuzzy
+msgid "Use PsychoPy version"
+msgstr "使用心理视频版本"
+
+#: ../experiment/components/settings/__init__.py:62
+#, fuzzy
+msgid "Completed URL"
+msgstr "已完成的网址"
+
+#: ../experiment/components/settings/__init__.py:63
+#, fuzzy
+msgid "Incomplete URL"
+msgstr "不完整的网址"
+
+#: ../experiment/components/settings/__init__.py:64
+#, fuzzy
+msgid "Output path"
+msgstr "输出路径"
+
+#: ../experiment/components/settings/__init__.py:65
+#, fuzzy
+msgid "JS libs"
+msgstr "JS库"
+
+#: ../experiment/components/settings/__init__.py:66
+#, fuzzy
+msgid "Force stereo"
+msgstr "力立体声"
+
+#: ../experiment/components/settings/__init__.py:67
+#, fuzzy
+msgid "Export HTML"
+msgstr "导出HTML"
+
+#: ../experiment/components/settings/__init__.py:133
+#, fuzzy
+msgid ""
+"Name of the entire experiment (taken by default from the filename on save)"
+msgstr "整个实验的名称（默认情况下从保存时的文件名中获取）"
+
+#: ../experiment/components/settings/__init__.py:138
+#, fuzzy
+msgid ""
+"Start the experiment with a dialog to set info (e.g.participant or condition)"
+msgstr "使用对话器开始实验以设置信息（例如参与者或条件）"
+
+#: ../experiment/components/settings/__init__.py:143
+#, fuzzy
+msgid ""
+"Enable the <esc> key, to allow subjects to quit / break out of the experiment"
+msgstr "启用 <esc> 密钥，让受试者退出/脱离实验</esc>"
+
+#: ../experiment/components/settings/__init__.py:148
+#, fuzzy
+msgid ""
+"The info to present in a dialog box. Right-click to check syntax and preview "
+"the dialog box."
+msgstr "在对话框中呈现的信息。右键单击以检查语法并预览对话框。"
+
+#: ../experiment/components/settings/__init__.py:157
+#, fuzzy
+msgid "The version of PsychoPy to use when running the experiment."
+msgstr "运行实验时要使用的心理应用版本。"
+
+#: ../experiment/components/settings/__init__.py:162
+#, fuzzy
+msgid "Force audio to stereo (2-channel) output"
+msgstr "强制音频到立体声（2通道）输出"
+
+#: ../experiment/components/settings/__init__.py:168
+#, fuzzy
+msgid "Run the experiment full-screen (recommended)"
+msgstr "全屏运行实验（推荐）"
+
+#: ../experiment/components/settings/__init__.py:172
+#, fuzzy
+msgid "Size of window (if not fullscreen)"
+msgstr "窗口大小（如果不是全屏）"
+
+#: ../experiment/components/settings/__init__.py:176
+#, fuzzy
+msgid "Which physical screen to run on (1 or 2)"
+msgstr "运行哪个物理屏幕 （1 或 2）"
+
+#: ../experiment/components/settings/__init__.py:180
+#, fuzzy
+msgid ""
+"Name of the monitor (from Monitor Center). Right-click to go there, then "
+"copy & paste a monitor name here."
+msgstr ""
+"显示器的名称（来自监视器中心）。右键单击以转到此处，然后在此处复制并粘贴显示"
+"器名称。"
+
+#: ../experiment/components/settings/__init__.py:186
+#, fuzzy
+msgid ""
+"Color of the screen (e.g. black, $[1.0,1.0,1.0], $variable. Right-click to "
+"bring up a color-picker.)"
+msgstr ""
+"屏幕颜色（例如黑色，1.0，1.0，1.0美元），$variable。右键单击以提出选色器。"
+
+#: ../experiment/components/settings/__init__.py:192
+#, fuzzy
+msgid ""
+"Needed if color is defined numerically (see PsychoPy documentation on color "
+"spaces)"
+msgstr "需要，如果颜色被定义为数字（请参阅有关颜色空间的心理心理文件）"
+
+#: ../experiment/components/settings/__init__.py:200
+#, fuzzy
+msgid "Units to use for window/stimulus coordinates (e.g. cm, pix, deg)"
+msgstr "用于窗口/刺激坐标的单位（如厘米、像素、deg）"
+
+#: ../experiment/components/settings/__init__.py:206
+#, fuzzy
+msgid ""
+"Should new stimuli be added or averaged with the stimuli that have been "
+"drawn already"
+msgstr "如果新的刺激被添加或平均与已经绘制的刺激"
+
+#: ../experiment/components/settings/__init__.py:211
+#, fuzzy
+msgid "Should the mouse be visible on screen?"
+msgstr "鼠标应该在屏幕上可见吗？"
+
+#: ../experiment/components/settings/__init__.py:218
+#, fuzzy
+msgid "Which Python sound engine do you want to play your sounds?"
+msgstr "你想播放你的声音的哪个Python声音引擎？"
+
+#: ../experiment/components/settings/__init__.py:219
+#, fuzzy
+msgid "Audio library"
+msgstr "音频库"
+
+#: ../experiment/components/settings/__init__.py:222
+#, fuzzy
+msgid "Use prefs"
+msgstr "使用前奏"
+
+#: ../experiment/components/settings/__init__.py:233
+#, fuzzy
+msgid ""
+"How important is audio latency for you? If essential then you may need to "
+"get all your sounds in correct formats."
+msgstr ""
+"音频延迟对您有多重要？如果必要的话，你可能需要得到所有的声音在正确的格式。"
+
+#: ../experiment/components/settings/__init__.py:234
+#, fuzzy
+msgid "Audio latency priority"
+msgstr "音频延迟优先级"
+
+#: ../experiment/components/settings/__init__.py:239
+#, fuzzy
+msgid ""
+"Code to create your custom file name base. Don't give a file extension - "
+"this will be added."
+msgstr "创建自定义文件名称基础的代码。不要提供文件扩展 - 这将被添加。"
+
+#: ../experiment/components/settings/__init__.py:244
+#, fuzzy
+msgid ""
+"Save a detailed log (more detailed than the excel/csv files) of the entire "
+"experiment"
+msgstr "保存整个实验的详细日志（比 Excel/csv 文件更详细）"
+
+#: ../experiment/components/settings/__init__.py:249
+#: ../experiment/components/settings/__init__.py:254
+#, fuzzy
+msgid ""
+"Save data from loops in comma-separated-value (.csv) format for maximum "
+"portability"
+msgstr "以逗号分离值 （.csv） 格式从循环中保存数据，以最大限度地便携性"
+
+#: ../experiment/components/settings/__init__.py:259
+#, fuzzy
+msgid "Save data from loops in Excel (.xlsx) format"
+msgstr "以 Excel （.xlsx） 格式从循环中保存数据"
+
+#: ../experiment/components/settings/__init__.py:263
+#, fuzzy
+msgid ""
+"Save data from loops in psydat format. This is useful for python programmers "
+"to generate analysis scripts."
+msgstr "以 psydat 格式从循环中保存数据。这对巨蛇程序员生成分析脚本很有用。"
+
+#: ../experiment/components/settings/__init__.py:270
+#, fuzzy
+msgid ""
+"How much output do you want in the log files? ('error' is fewest messages, "
+"'debug' is most)"
+msgstr "您希望在日志文件中输出多少？（\"错误\"是最少的消息，\"解试\"是最少的）"
+
+#: ../experiment/components/settings/__init__.py:281
+#, fuzzy
+msgid "Place the HTML files will be saved locally "
+msgstr "将HTML文件放在本地保存"
+
+#: ../experiment/components/settings/__init__.py:285
+#, fuzzy
+msgid ""
+"Should we package a copy of the JS libs or useremote copies (http:/www."
+"psychopy.org/js)?"
+msgstr ""
+"我们应该打包 JS libs 副本还是用户表情符号副本（http：/www.心理网站/js）？"
+
+#: ../experiment/components/settings/__init__.py:290
+#, fuzzy
+msgid ""
+"Where should participants be redirected after the experiment on completion\n"
+" INSERT COMPLETION URL E.G.?"
+msgstr ""
+"实验完成后应将参与者重定向到何处\n"
+" 插入完成网址， 例如？"
+
+#: ../experiment/components/settings/__init__.py:295
+#, fuzzy
+msgid ""
+"Where participants are redirected if they do not complete the task\n"
+" INSERT INCOMPLETION URL E.G.?"
+msgstr ""
+"如果参与者未完成任务，则重定向\n"
+" 插入未完成的网址，例如？"
+
+#: ../experiment/components/settings/__init__.py:303
+#, fuzzy
+msgid "When to export experiment to the HTML folder."
+msgstr "何时向 HTML 文件夹导出实验。"
+
+#: ../experiment/components/slider/__init__.py:23
+#, fuzzy
+msgid "Slider: A simple, flexible object for getting ratings"
+msgstr "滑块：获得评级的简单、灵活的对象"
+
+#: ../experiment/components/slider/__init__.py:29
+msgid "Ticks"
+msgstr "每Tick"
+
+#: ../experiment/components/slider/__init__.py:97
+#, fuzzy
+msgid "Tick positions (numerical) on the scale, separated by commas"
+msgstr "按逗号分离的刻度位置（数字）"
+
+#: ../experiment/components/slider/__init__.py:104
+#, fuzzy
+msgid "Labels for the tick marks on the scale, separated by commas"
+msgstr "刻度上的刻度标记标签，由逗号隔开"
+
+#: ../experiment/components/slider/__init__.py:111
+#, fuzzy
+msgid ""
+"Specifies the minimum step size (0 for a continuous scale, 1 for integer "
+"rating scale)"
+msgstr "指定最小步数大小（连续刻度为 0，整数等级刻度为 1）"
+
+#: ../experiment/components/slider/__init__.py:114
+#, fuzzy
+msgid "Granularity"
+msgstr "粒 度"
+
+#: ../experiment/components/slider/__init__.py:118
+#, fuzzy
+msgid ""
+"Should setting a rating (releasing the mouse) cause the end of the routine "
+"(e.g. trial)?"
+msgstr "设置评级（释放鼠标）应导致常规结束（例如试用）吗？"
+
+#: ../experiment/components/slider/__init__.py:133
+#, fuzzy
+msgid ""
+"Size on screen. e.g. (500,10) pix for horizontal,(10,500) pix for vertical"
+msgstr "屏幕上的大小。例如（500，10）水平像素，（10，500）像素用于垂直"
+
+#: ../experiment/components/slider/__init__.py:142
+#, fuzzy
+msgid ""
+"By default the labels will be on the bottom or left of the scale, but this "
+"can be flipped to the other side."
+msgstr "默认情况下，标签将在刻度底部或左侧，但可以翻转到另一侧。"
+
+#: ../experiment/components/slider/__init__.py:146
+msgid "Flip"
+msgstr "翻转"
+
+#: ../experiment/components/slider/__init__.py:153
+#, fuzzy
+msgid "Color of the lines and labels (might beoverridden by the style setting)"
+msgstr "线条和标签的颜色（可能因样式设置而覆盖）"
+
+#: ../experiment/components/slider/__init__.py:162
+#, fuzzy
+msgid "Font for the labels"
+msgstr "标签的字体"
+
+#: ../experiment/components/slider/__init__.py:164
+#: ../experiment/components/text/__init__.py:20
+msgid "Font"
+msgstr "字体"
+
+#: ../experiment/components/slider/__init__.py:170
+#, fuzzy
+msgid "Styles determine the appearance of the slider"
+msgstr "样式决定滑块的外观"
+
+#: ../experiment/components/slider/__init__.py:172
+msgid "Styles"
+msgstr "样式"
+
+#: ../experiment/components/slider/__init__.py:185
+#, fuzzy
+msgid "Store the time taken to make the choice (in seconds)"
+msgstr "存储做出选择所占用的时间（在几秒钟内）"
+
+#: ../experiment/components/sound/__init__.py:20
+#, fuzzy
+msgid "Sound: play recorded files or generated sounds"
+msgstr "声音：播放录制的文件或生成的声音"
+
+#: ../experiment/components/sound/__init__.py:23
+msgid "Sound"
+msgstr "声音"
+
+#: ../experiment/components/sound/__init__.py:24
+msgid "Volume"
+msgstr "体积"
+
+#: ../experiment/components/sound/__init__.py:49
+#, fuzzy
+msgid "The maximum duration of a sound in seconds"
+msgstr "声音在几秒钟内的最大持续时间"
+
+#: ../experiment/components/sound/__init__.py:55
+#, fuzzy
+msgid ""
+"A sound can be a note name (e.g. A or Bf), a number to specify Hz (e.g. 440) "
+"or a filename"
+msgstr "声音可以是注释名称（例如 A 或 Bf），指明 Hz（例如 440） 或文件名的编号"
+
+#: ../experiment/components/sound/__init__.py:66
+#, fuzzy
+msgid "The volume (in range 0 to 1)"
+msgstr "音量（范围为 0 到 1）"
+
+#: ../experiment/components/sound/__init__.py:68
+#, fuzzy
+msgid ""
+"A reaction time to a sound stimulus should be based on when the screen "
+"flipped"
+msgstr "对声音刺激的反应时间应基于屏幕翻转时"
+
+#: ../experiment/components/sound/__init__.py:80
+#, fuzzy
+msgid "Hamming window"
+msgstr "哈明窗口"
+
+#: ../experiment/components/static/__init__.py:21
+#, fuzzy
+msgid ""
+"Static: Static screen period (e.g. an ISI). Useful for pre-loading stimuli."
+msgstr "静态：静态屏幕周期（例如 ISI）。可用于预加载刺激。"
+
+#: ../experiment/components/static/__init__.py:23
+msgid "Custom code"
+msgstr "自定义代码"
+
+#: ../experiment/components/static/__init__.py:43
+#, fuzzy
+msgid "Custom code to be run during the static period (after updates)"
+msgstr "将在静态期间（更新后）运行自定义代码"
+
+#: ../experiment/components/text/__init__.py:16
+#, fuzzy
+msgid "Text: present text stimuli"
+msgstr "文字：现文刺激"
+
+#: ../experiment/components/text/__init__.py:19
+msgid "Text"
+msgstr "文本"
+
+#: ../experiment/components/text/__init__.py:21
+#, fuzzy
+msgid "Letter height"
+msgstr "字母高度"
+
+#: ../experiment/components/text/__init__.py:22
+#, fuzzy
+msgid "Wrap width"
+msgstr "包装宽度"
+
+#: ../experiment/components/text/__init__.py:23
+#, fuzzy
+msgid "Flip (mirror)"
+msgstr "翻转（镜像）"
+
+#: ../experiment/components/text/__init__.py:24
+#, fuzzy
+msgid "Language style"
+msgstr "语言风格"
+
+#: ../experiment/components/text/__init__.py:34
+#, fuzzy
+msgid ""
+"Any text\n"
+"\n"
+"including line breaks"
+msgstr ""
+"任何文本\n"
+"\n"
+"包括断线"
+
+#: ../experiment/components/text/__init__.py:62
+#, fuzzy
+msgid "The text to be displayed"
+msgstr "要显示的文本"
+
+#: ../experiment/components/text/__init__.py:67
+#, fuzzy
+msgid "The font name (e.g. Comic Sans)"
+msgstr "字体名称（例如漫画桑斯）"
+
+#: ../experiment/components/text/__init__.py:73
+#, fuzzy
+msgid ""
+"Specifies the height of the letter (the width is then determined by the font)"
+msgstr "指定字母的高度（宽度由字体决定）"
+
+#: ../experiment/components/text/__init__.py:80
+#, fuzzy
+msgid "How wide should the text get when it wraps? (in the specified units)"
+msgstr "文本包装时应有多宽？（在指定单位中）"
+
+#: ../experiment/components/text/__init__.py:86
+#, fuzzy
+msgid "horiz = left-right reversed; vert = up-down reversed; $var = variable"
+msgstr "霍里兹=左右颠倒;顶点=向上向下倒转：$var=可变"
+
+#: ../experiment/components/text/__init__.py:92
+#, fuzzy
+msgid "Handle right-to-left (RTL) languages and Arabic reshaping"
+msgstr "处理从右到左 （RTL） 语言和阿拉伯语重塑"
+
+#: ../experiment/components/unknown/__init__.py:14
+#, fuzzy
+msgid ""
+"Unknown: A component that is not known by the current installed version of "
+"PsychoPy\n"
+"(most likely from the future)"
+msgstr ""
+"未知： 当前安装的心理 P 版本不知道的组件\n"
+"（很可能来自未来）"
+
+#: ../experiment/components/unknown/__init__.py:19
+#: ../experiment/components/variable/__init__.py:23
+#: ../localization/__init__.py:157 ../localization/__init__.py:175
+msgid "Name"
+msgstr "名称"
+
+#: ../experiment/components/variable/__init__.py:20
+#, fuzzy
+msgid "Variable: create a new variable"
+msgstr "变量：创建新变量"
+
+#: ../experiment/components/variable/__init__.py:24
+#, fuzzy
+msgid "Experiment start value"
+msgstr "实验启动值"
+
+#: ../experiment/components/variable/__init__.py:25
+#, fuzzy
+msgid "Routine start value"
+msgstr "常规启动值"
+
+#: ../experiment/components/variable/__init__.py:26
+#, fuzzy
+msgid "Frame start value"
+msgstr "框架启动值"
+
+#: ../experiment/components/variable/__init__.py:27
+#, fuzzy
+msgid "Save exp start value"
+msgstr "保存exp启动值"
+
+#: ../experiment/components/variable/__init__.py:28
+#, fuzzy
+msgid "Save routine start value"
+msgstr "保存常规启动值"
+
+#: ../experiment/components/variable/__init__.py:29
+#, fuzzy
+msgid "Save frame value"
+msgstr "保存帧值"
+
+#: ../experiment/components/variable/__init__.py:30
+#, fuzzy
+msgid "Save routine end value"
+msgstr "保存常规最终值"
+
+#: ../experiment/components/variable/__init__.py:31
+#, fuzzy
+msgid "Save exp end value"
+msgstr "保存exp最终值"
+
+#: ../experiment/components/variable/__init__.py:51
+#, fuzzy
+msgid "The start value. A variable can be set to any value."
+msgstr "起始值。可变量可以设置为任何值。"
+
+#: ../experiment/components/variable/__init__.py:56
+#, fuzzy
+msgid "Set the value for the beginning of each routine."
+msgstr "设置每个例程开头的值。"
+
+#: ../experiment/components/variable/__init__.py:61
+#, fuzzy
+msgid "Set the value for the beginning of every screen refresh."
+msgstr "设置每次屏幕刷新开头的值。"
+
+#: ../experiment/components/variable/__init__.py:67
+#, fuzzy
+msgid "Save the experiment start value in data file."
+msgstr "保存数据文件中的实验启动值。"
+
+#: ../experiment/components/variable/__init__.py:74
+#, fuzzy
+msgid "Save the experiment end value in data file."
+msgstr "在数据文件中保存实验端值。"
+
+#: ../experiment/components/variable/__init__.py:81
+#, fuzzy
+msgid "Save the routine start value in data file."
+msgstr "保存数据文件中的常规启动值。"
+
+#: ../experiment/components/variable/__init__.py:88
+#, fuzzy
+msgid "Save the routine end value in data file."
+msgstr "保存数据文件中的常规最终值。"
+
+#: ../experiment/components/variable/__init__.py:95
+#, fuzzy
+msgid "Save choice of frame value in data file."
+msgstr "保存数据文件中帧值的选择。"
+
+#: ../gui/qtgui.py:93
+#, fuzzy
+msgid "PsychoPy Dialog"
+msgstr "心理视频对话"
+
+#: ../gui/qtgui.py:496 ../gui/wxgui.py:334
+#, fuzzy
+msgid "Select file to save"
+msgstr "选择要保存的文件"
+
+#: ../gui/qtgui.py:541
+#, fuzzy
+msgid "Select file to open"
+msgstr "选择要打开的文件"
+
+#: ../gui/qtgui.py:591
+msgid "Information"
+msgstr "信息"
+
+#: ../gui/qtgui.py:593 ../gui/qtgui.py:599 ../gui/qtgui.py:605
+#: ../gui/qtgui.py:611
+#, fuzzy
+msgid "No details provided. ('prompt' value not set)."
+msgstr "未提供详细信息。（\"提示\"值未设置）。"
+
+#: ../gui/qtgui.py:603
+msgid "Critical"
+msgstr "危急"
+
+#: ../gui/qtgui.py:609
+#, fuzzy
+msgid "About Experiment"
+msgstr "关于实验"
+
+#: ../gui/wxgui.py:68
+#, fuzzy
+msgid "PsychoPy dialogue"
+msgstr "心理心理对话"
+
+#: ../gui/wxgui.py:385
+#, fuzzy
+msgid "Select file(s) to open"
+msgstr "选择要打开的文件"
+
+#: ../localization/__init__.py:158
+#, fuzzy
+msgid "start type"
+msgstr "开始类型"
+
+#: ../localization/__init__.py:159
+#, fuzzy
+msgid "stop type"
+msgstr "停止类型"
+
+#: ../localization/__init__.py:176
+#, fuzzy
+msgid "nReps"
+msgstr "n雷普斯"
+
+#: ../localization/__init__.py:177
+msgid "Conditions"
+msgstr "条件"
+
+#: ../localization/__init__.py:178
+#, fuzzy
+msgid "endPoints"
+msgstr "端点"
+
+#: ../localization/__init__.py:179
+#, fuzzy
+msgid "Selected rows"
+msgstr "选定的行"
+
+#: ../localization/__init__.py:180
+#, fuzzy
+msgid "loopType"
+msgstr "循环类型"
+
+#: ../localization/__init__.py:181
+#, fuzzy
+msgid "random seed"
+msgstr "随机种子"
+
+#: ../localization/__init__.py:182
+#, fuzzy
+msgid "Is trials"
+msgstr "是试验"
+
+#: ../localization/__init__.py:183
+#, fuzzy
+msgid "min value"
+msgstr "最小值"
+
+#: ../localization/__init__.py:184
+#, fuzzy
+msgid "N reversals"
+msgstr "N 反转"
+
+#: ../localization/__init__.py:185
+#, fuzzy
+msgid "start value"
+msgstr "起始值"
+
+#: ../localization/__init__.py:186
+#, fuzzy
+msgid "N up"
+msgstr "N向上"
+
+#: ../localization/__init__.py:187
+#, fuzzy
+msgid "max value"
+msgstr "最大值"
+
+#: ../localization/__init__.py:188
+#, fuzzy
+msgid "N down"
+msgstr "N向下"
+
+#: ../localization/__init__.py:189
+#, fuzzy
+msgid "step type"
+msgstr "步骤类型"
+
+#: ../localization/__init__.py:190
+#, fuzzy
+msgid "step sizes"
+msgstr "步幅大小"
+
+#: ../localization/__init__.py:191
+#, fuzzy
+msgid "stairType"
+msgstr "楼梯类型"
+
+#: ../localization/__init__.py:192
+#, fuzzy
+msgid "switchMethod"
+msgstr "开关梅索德"
+
+#: ../monitors/MonitorCenter.py:174 ../monitors/MonitorCenter.py:312
+#, fuzzy
+msgid "Monitor Info"
+msgstr "监视器信息"
+
+#: ../monitors/MonitorCenter.py:183 ../monitors/MonitorCenter.py:378
+msgid "Calibration"
+msgstr "校准"
+
+#: ../monitors/MonitorCenter.py:226
+#, fuzzy
+msgid "Save\tCtrl+S"
+msgstr "保存网卡"
+
+#: ../monitors/MonitorCenter.py:227
+#, fuzzy
+msgid "Save the current monitor"
+msgstr "保存当前显示器"
+
+#: ../monitors/MonitorCenter.py:229
+#, fuzzy
+msgid "Close Monitor Center (but not other PsychoPy windows)"
+msgstr "关闭监视器中心（但不是其他心理监视窗口）"
+
+#: ../monitors/MonitorCenter.py:232
+#, fuzzy
+msgid "Close Monitor Center\tCtrl+W"
+msgstr "关闭监视器中心 Ctrl+W"
+
+#: ../monitors/MonitorCenter.py:240
+#, fuzzy
+msgid "Copy the current monitor's name to clipboard"
+msgstr "将当前显示器的名称复制到剪贴板"
+
+#: ../monitors/MonitorCenter.py:241
+msgid "Copy\tCtrl+C"
+msgstr "复制\tCtrl+C"
+
+#: ../monitors/MonitorCenter.py:249
+#, fuzzy
+msgid "Choose Monitor"
+msgstr "选择监视器"
+
+#: ../monitors/MonitorCenter.py:261
+msgid "New..."
+msgstr "新建..."
+
+#: ../monitors/MonitorCenter.py:265
+#, fuzzy
+msgid "Create a new monitor"
+msgstr "创建新显示器"
+
+#: ../monitors/MonitorCenter.py:270
+#, fuzzy
+msgid "Save all calibrations for this monitor"
+msgstr "为此监视器保存所有校准"
+
+#: ../monitors/MonitorCenter.py:274 ../monitors/MonitorCenter.py:295
+msgid "Delete"
+msgstr "删除"
+
+#: ../monitors/MonitorCenter.py:277
+#, fuzzy
+msgid "Delete this monitor entirely"
+msgstr "完全删除此监视器"
+
+#: ../monitors/MonitorCenter.py:288
+msgid "Copy..."
+msgstr "复制..."
+
+#: ../monitors/MonitorCenter.py:291
+#, fuzzy
+msgid "Creates a new calibration entry for this monitor"
+msgstr "为此监视器创建新的校准条目"
+
+#: ../monitors/MonitorCenter.py:298
+#, fuzzy
+msgid "Remove this calibration entry (finalized when monitor is saved)"
+msgstr "删除此校准条目（在保存监视器时完成）"
+
+#: ../monitors/MonitorCenter.py:318
+#, fuzzy
+msgid "Screen Distance (cm):"
+msgstr "屏幕距离（厘米）："
+
+#: ../monitors/MonitorCenter.py:325
+#, fuzzy
+msgid "Screen Width (cm):"
+msgstr "屏幕宽度（厘米）："
+
+#: ../monitors/MonitorCenter.py:331
+#, fuzzy
+msgid "Size (pixels; Horiz,Vert):"
+msgstr "大小（像素：霍里兹， 维特）："
+
+#: ../monitors/MonitorCenter.py:343
+#, fuzzy
+msgid "Calibration Date:"
+msgstr "校准日期："
+
+#: ../monitors/MonitorCenter.py:350
+msgid "Notes:"
+msgstr "备注："
+
+#: ../monitors/MonitorCenter.py:358 ../monitors/MonitorCenter.py:1193
+#, fuzzy
+msgid "Use Bits++"
+msgstr "使用位+"
+
+#: ../monitors/MonitorCenter.py:392
+#, fuzzy
+msgid "Scan all ports"
+msgstr "扫描所有端口"
+
+#: ../monitors/MonitorCenter.py:401
+#, fuzzy
+msgid "Get Photometer"
+msgstr "获取光度计"
+
+#: ../monitors/MonitorCenter.py:407
+#, fuzzy
+msgid "Gamma Calibration..."
+msgstr "伽玛校准。。。"
+
+#: ../monitors/MonitorCenter.py:411
+#, fuzzy
+msgid "Gamma Test..."
+msgstr "伽玛测试..."
+
+#: ../monitors/MonitorCenter.py:418
+#, fuzzy
+msgid "Chromatic Calibration..."
+msgstr "色度校准。。。"
+
+#: ../monitors/MonitorCenter.py:423
+#, fuzzy
+msgid "Plot gamma"
+msgstr "绘图伽玛"
+
+#: ../monitors/MonitorCenter.py:427
+#, fuzzy
+msgid "Plot spectra"
+msgstr "绘图光谱"
+
+#: ../monitors/MonitorCenter.py:439
+#, fuzzy
+msgid "Linearization"
+msgstr "线性"
+
+#: ../monitors/MonitorCenter.py:540
+#, fuzzy
+msgid "Save changes to monitor settings before quitting?"
+msgstr "在退出之前保存更改以监控设置？"
+
+#: ../monitors/MonitorCenter.py:562
+#, fuzzy
+msgid "Save changes to monitor?"
+msgstr "保存更改以进行监视？"
+
+#: ../monitors/MonitorCenter.py:655
+#, fuzzy, python-format
+msgid "Name of this calibration (for monitor \"%(name)s\") will be:)"
+msgstr "此校准的名称（用于监视器\"%（名称）\"）将是：）"
+
+#: ../monitors/MonitorCenter.py:660 ../monitors/MonitorCenter.py:675
+msgid "Input text"
+msgstr "输入文本"
+
+#: ../monitors/MonitorCenter.py:674
+#, fuzzy
+msgid "New monitor name:"
+msgstr "新显示器名称："
+
+#: ../monitors/MonitorCenter.py:689
+#, fuzzy, python-format
+msgid "Are you sure you want to delete all details for %s? (cannot be undone)"
+msgstr "您是否确定要删除%s的所有详细信息？（无法撤消）"
+
+#: ../monitors/MonitorCenter.py:713
+#, fuzzy
+msgid "Are you sure you want to delete this calibration? (cannot be undone)"
+msgstr "您确定要删除此校准吗？（无法撤消）"
+
+#: ../monitors/MonitorCenter.py:969
+#, fuzzy
+msgid "Scanning ports..."
+msgstr "扫描端口..."
+
+#: ../monitors/MonitorCenter.py:978
+#, fuzzy, python-format
+msgid "%(photomType)s found on %(photomPort)s"
+msgstr "%（照片类型）在%（光端口）上找到"
+
+#: ../monitors/MonitorCenter.py:983
+#, fuzzy
+msgid "No photometers found"
+msgstr "未找到光度计"
+
+#: ../monitors/MonitorCenter.py:991 ../monitors/MonitorCenter.py:997
+#, fuzzy
+msgid "Dark calibration of ColorCAL"
+msgstr "颜色卡的暗校准"
+
+#: ../monitors/MonitorCenter.py:993
+#, fuzzy
+msgid ""
+"Your ColorCAL needs to be calibrated first. Please block all light from "
+"getting into the lens and press OK."
+msgstr "您的颜色需要首先校准。请阻止所有光线进入镜头并按确定。"
+
+#: ../monitors/MonitorCenter.py:1010
+#, fuzzy
+msgid "Try again. Cover the lens fully and press OK"
+msgstr "再试一次。完全盖住镜头并按确定"
+
+#: ../monitors/MonitorCenter.py:1014
+#, fuzzy, python-format
+msgid "%(monName)s %(calibName)s Gamma Functions"
+msgstr "%（月名）s%（标称）的伽玛函数"
+
+#: ../monitors/MonitorCenter.py:1079
+#, fuzzy, python-format
+msgid "%(monName)s %(calibName)s Spectra"
+msgstr "%（月名）s %（标称）的光谱"
+
+#: ../monitors/MonitorCenter.py:1104
+#, fuzzy
+msgid "Recorded luminance values"
+msgstr "记录的亮度值"
+
+#: ../monitors/MonitorCenter.py:1130
+#, fuzzy
+msgid "Luminance Values"
+msgstr "发光值"
+
+#: ../monitors/MonitorCenter.py:1183
+#, fuzzy
+msgid "Gamma Calibration"
+msgstr "伽玛校准"
+
+#: ../monitors/MonitorCenter.py:1196
+#, fuzzy
+msgid "Number of calibration points:"
+msgstr "校准点数："
+
+#: ../monitors/MonitorCenter.py:1200
+#, fuzzy
+msgid "Screen number (primary is 1)"
+msgstr "屏幕编号（主屏幕号为 1）"
+
+#: ../monitors/MonitorCenter.py:1204
+#, fuzzy
+msgid "Patch size (fraction of screen):"
+msgstr "补丁大小（屏幕的分数）："
+
+#: ../monitors/MonitorCenter.py:1238
+#, fuzzy
+msgid "PsychoPy Monitor Center"
+msgstr "心理监测中心"
+
+#: ../preferences/hints.py:13
+#, fuzzy
+msgid "which system to use as a backend for drawing"
+msgstr "用作绘图后端的系统"
+
+#: ../preferences/hints.py:16
+#, fuzzy
+msgid "the default units for windows and visual stimuli"
+msgstr "窗口和视觉刺激的默认单位"
+
+#: ../preferences/hints.py:19
+#, fuzzy
+msgid "full screen is best for accurate timing"
+msgstr "全屏最适合准确计时"
+
+#: ../preferences/hints.py:22
+#, fuzzy
+msgid "enable subjects to use the mouse and GUIs during experiments"
+msgstr "使受试者在实验中能够使用鼠标和GUI"
+
+#: ../preferences/hints.py:25
+#, fuzzy
+msgid "'version' is for internal usage, not for the user"
+msgstr "\"版本\"是用于内部使用，而不是用于用户"
+
+#: ../preferences/hints.py:28
+#, fuzzy
+msgid "Add paths here to your custom Python modules"
+msgstr "在此处添加路径到您的自定义 Python 模块"
+
+#: ../preferences/hints.py:31
+#, fuzzy
+msgid "path to flac (lossless audio compression) on this operating system"
+msgstr "此操作系统上的松弛路径（无损音频压缩）"
+
+#: ../preferences/hints.py:34
+#, fuzzy
+msgid "Shutdown keys, following the pyglet naming scheme."
+msgstr "按照俾格莱特命名方案关闭密钥。"
+
+#: ../preferences/hints.py:37
+#, fuzzy
+msgid "Modifier keys for shutdown keys"
+msgstr "关机密钥的修改器密钥"
+
+#: ../preferences/hints.py:40
+#, fuzzy
+msgid "display tips when starting PsychoPy"
+msgstr "启动心理提示时显示提示"
+
+#: ../preferences/hints.py:43
+#, fuzzy
+msgid "size of icons in the Coder and Builder toolbars (top of window)"
+msgstr "编码器和构建器工具栏中的图标大小（窗口顶部）"
+
+#: ../preferences/hints.py:46
+#, fuzzy
+msgid "what windows to display when PsychoPy starts"
+msgstr "当心理治疗开始时要显示什么窗口"
+
+#: ../preferences/hints.py:49
+#, fuzzy
+msgid "reset preferences to defaults on next restart of PsychoPy"
+msgstr "在下一次重新启动心理应用时将首选项重置为默认值"
+
+#: ../preferences/hints.py:52
+#, fuzzy
+msgid "save any unsaved preferences before closing the window"
+msgstr "关闭窗口之前保存任何未保存的首选项"
+
+#: ../preferences/hints.py:55
+#, fuzzy
+msgid "enable features for debugging PsychoPy itself, including unit-tests"
+msgstr "启用调试心理测试本身的功能，包括单位测试"
+
+#: ../preferences/hints.py:58
+#, fuzzy
+msgid ""
+"language to use in menus etc; not all translations are available. Select a "
+"value, then restart the app."
+msgstr ""
+"在菜单中使用的语言等：并非所有翻译都可用。选择一个值，然后重新启动应用程序。"
+
+#: ../preferences/hints.py:61
+#, fuzzy
+msgid ""
+"open Coder files as read-only (allows running without accidental changes)"
+msgstr "将编码器文件打开为仅读式文件（允许运行而无意外更改）"
+
+#: ../preferences/hints.py:65
+#, fuzzy
+msgid "a list of font names; the first one found on the system will be used"
+msgstr "字体名称列表;在系统上找到的第一个将被使用"
+
+#: ../preferences/hints.py:68
+#, fuzzy
+msgid "Font size (in pts) takes an integer between 6 and 24"
+msgstr "字体大小（以分表示点）需要 6 到 24 之间的整数"
+
+#: ../preferences/hints.py:71
+#, fuzzy
+msgid "activate the source assistant panel"
+msgstr "激活源助理面板"
+
+#: ../preferences/hints.py:74
+#, fuzzy
+msgid "activate the output and shell panels"
+msgstr "激活输出和外壳面板"
+
+#: ../preferences/hints.py:77
+#, fuzzy
+msgid "reload previously opened files after start"
+msgstr "启动后重新加载以前打开的文件"
+
+#: ../preferences/hints.py:80
+#, fuzzy
+msgid "for coder shell window, which shell to use"
+msgstr "对于编码器壳窗口，使用哪个外壳"
+
+#: ../preferences/hints.py:83
+#, fuzzy
+msgid "whether to automatically reload a previously open experiment"
+msgstr "是否自动重新加载以前打开的实验"
+
+#: ../preferences/hints.py:86
+#, fuzzy
+msgid ""
+"if False will create scripts with an 'easier' but more cluttered namespace"
+msgstr "如果错误将创建脚本与\"更容易\"，但更杂乱的命名空间"
+
+#: ../preferences/hints.py:90
+#, fuzzy
+msgid "folder names for custom components; expects a comma-separated list"
+msgstr "自定义组件的文件夹名称;预期逗号分离列表"
+
+#: ../preferences/hints.py:93
+#, fuzzy
+msgid "a list of components to hide (eg, because you never use them)"
+msgstr "要隐藏的组件列表（例如，因为你从不使用它们）"
+
+#: ../preferences/hints.py:96
+#, fuzzy
+msgid "where the Builder demos are located on this computer (after unpacking)"
+msgstr "构建器演示位于此计算机上的位置（拆包后）"
+
+#: ../preferences/hints.py:99
+#, fuzzy
+msgid ""
+"name of the folder where subject data should be saved (relative to the "
+"script)"
+msgstr "应保存主题数据的文件夹的名称（相对于脚本）"
+
+#: ../preferences/hints.py:103
+#, fuzzy
+msgid "Panels arrangement: topFlow = Flow on top, Components on left"
+msgstr "面板排列：顶部流=顶部流，左侧组件"
+
+#: ../preferences/hints.py:106
+#, fuzzy
+msgid "Display text in a floating window that describes the experiment"
+msgstr "在描述实验的浮动窗口中显示文本"
+
+#: ../preferences/hints.py:109
+#, fuzzy
+msgid "choice of audio library"
+msgstr "音频库的选择"
+
+#: ../preferences/hints.py:112
+#, fuzzy
+msgid ""
+"latency mode for PsychToolbox audio (3 is good for most applications. See"
+msgstr "心理机箱音频的延迟模式（3对大多数应用程序都有好处） 。看到"
+
+#: ../preferences/hints.py:116
+#, fuzzy
+msgid "audio driver to use"
+msgstr "要使用的音频驱动程序"
+
+#: ../preferences/hints.py:119
+#, fuzzy
+msgid "audio device to use (if audioLib allows control)"
+msgstr "要使用的音频设备（如果音频Lib允许控制）"
+
+#: ../preferences/hints.py:122
+#, fuzzy
+msgid "a list of parallel ports"
+msgstr "并行端口列表"
+
+#: ../preferences/hints.py:125
+#, fuzzy
+msgid "The name of the Qmix pump configuration to use"
+msgstr "要使用的 Qmix 泵配置的名称"
+
+#: ../preferences/hints.py:128
+#, fuzzy
+msgid "the http proxy for usage stats and auto-updating; format is host: port"
+msgstr "用于使用统计和自动更新的http代理;格式为主机：端口"
+
+#: ../preferences/hints.py:131
+#, fuzzy
+msgid ""
+"override the above proxy settings with values found in the environment (if "
+"possible)"
+msgstr "将上述代理设置覆盖在环境中找到的值（如果可能）"
+
+#: ../preferences/hints.py:135
+#, fuzzy
+msgid ""
+"allow PsychoPy to send anonymous usage stats; please allow if possible, it "
+"helps PsychoPy's development"
+msgstr ""
+"允许心理应用发送匿名使用统计数据;如果可能的话，请允许，它有助于心理皮的发展"
+
+#: ../preferences/hints.py:138
+#, fuzzy
+msgid "allow PsychoPy to check for new features and bug fixes"
+msgstr "允许心理修复检查新功能和错误修复"
+
+#: ../preferences/hints.py:141
+#, fuzzy
+msgid "max time to wait for a connection response"
+msgstr "等待连接响应的最大时间"
+
+#: ../preferences/hints.py:144
+#, fuzzy
+msgid "open an existing file"
+msgstr "打开现有文件"
+
+#: ../preferences/hints.py:147
+#, fuzzy
+msgid "start a new experiment or script"
+msgstr "开始一个新的实验或脚本"
+
+#: ../preferences/hints.py:150
+#, fuzzy
+msgid "save a Builder or Coder file"
+msgstr "保存构建器或编码器文件"
+
+#: ../preferences/hints.py:153
+#, fuzzy
+msgid "save a Builder or Coder file under a new name"
+msgstr "以新名称保存构建器或编码器文件"
+
+#: ../preferences/hints.py:156
+#, fuzzy
+msgid "Coder: print the file"
+msgstr "编码器：打印文件"
+
+#: ../preferences/hints.py:159
+#, fuzzy
+msgid "close the Builder or Coder window"
+msgstr "关闭构建器或编码器窗口"
+
+#: ../preferences/hints.py:162
+#, fuzzy
+msgid "end the application (PsychoPy)"
+msgstr "结束申请（心理）"
+
+#: ../preferences/hints.py:165
+#, fuzzy
+msgid "open the preferences dialog"
+msgstr "打开首选项对话"
+
+#: ../preferences/hints.py:168
+#, fuzzy
+msgid "export Builder experiment to HTML"
+msgstr "将建设者实验导出到HTML"
+
+#: ../preferences/hints.py:171
+#, fuzzy
+msgid "Coder: cut"
+msgstr "编码器：切割"
+
+#: ../preferences/hints.py:174
+#, fuzzy
+msgid "Coder: copy"
+msgstr "编码器：复制"
+
+#: ../preferences/hints.py:177
+#, fuzzy
+msgid "Coder: paste"
+msgstr "编码器：粘贴"
+
+#: ../preferences/hints.py:180
+#, fuzzy
+msgid "Coder: duplicate"
+msgstr "编码器：重复"
+
+#: ../preferences/hints.py:183
+#, fuzzy
+msgid "Coder: indent code by one level (4 spaces)"
+msgstr "编码器：按一个级别（4个空格）的凹痕代码"
+
+#: ../preferences/hints.py:186
+#, fuzzy
+msgid "Coder: reduce indentation by one level (4 spaces)"
+msgstr "编码器：将凹痕减少一个级别（4 个空间）"
+
+#: ../preferences/hints.py:189
+#, fuzzy
+msgid "Coder: indent to fit python syntax"
+msgstr "编码器：凹痕以适应巨蛇语法"
+
+#: ../preferences/hints.py:192
+#, fuzzy
+msgid "Coder: find"
+msgstr "编码器：查找"
+
+#: ../preferences/hints.py:195
+#, fuzzy
+msgid "Coder: find again"
+msgstr "编码器：再次查找"
+
+#: ../preferences/hints.py:198
+#, fuzzy
+msgid "Coder: undo"
+msgstr "编码器：撤消"
+
+#: ../preferences/hints.py:201
+#, fuzzy
+msgid "Coder: redo"
+msgstr "编码器： 重多"
+
+#: ../preferences/hints.py:204
+#, fuzzy
+msgid "Coder: add a # to the start of the line(s)"
+msgstr "编码器：在行的开头添加一个#）"
+
+#: ../preferences/hints.py:207
+#, fuzzy
+msgid "Coder: remove # from start of line(s)"
+msgstr "编码器：从行的开头删除#"
+
+#: ../preferences/hints.py:210
+#, fuzzy
+msgid "Coder: add or remove # from start of line(s)"
+msgstr "编码器：从行的开头添加或删除#"
+
+#: ../preferences/hints.py:213
+#, fuzzy
+msgid "Coder: fold this block of code"
+msgstr "编码器：折叠此代码块"
+
+#: ../preferences/hints.py:216
+#, fuzzy
+msgid "Coder: increase font size this block of code"
+msgstr "编码器：增加字体大小此代码块"
+
+#: ../preferences/hints.py:219
+#, fuzzy
+msgid "Coder: decrease font size this block of code"
+msgstr "编码器：缩小字体大小此代码块"
+
+#: ../preferences/hints.py:222
+#, fuzzy
+msgid "Coder: check for basic syntax errors"
+msgstr "编码器：检查基本语法错误"
+
+#: ../preferences/hints.py:225
+#, fuzzy
+msgid ""
+"convert a Builder .psyexp script into a python script and open it in the "
+"Coder"
+msgstr "将构建器。psyexp脚本转换为蟒蛇脚本并在编码器中打开它"
+
+#: ../preferences/hints.py:229
+#, fuzzy
+msgid "launch a script, Builder or Coder, or run unit-tests"
+msgstr "启动脚本、构建器或编码器，或运行单元测试"
+
+#: ../preferences/hints.py:232
+#, fuzzy
+msgid "attempt to interrupt and halt a running script"
+msgstr "尝试中断和停止运行脚本"
+
+#: ../preferences/hints.py:235
+#, fuzzy
+msgid "Coder: show / hide white-space dots"
+msgstr "编码器：显示/隐藏空白点"
+
+#: ../preferences/hints.py:238
+#, fuzzy
+msgid "Coder: show / hide end of line characters"
+msgstr "编码器：显示/隐藏行字符的末端"
+
+#: ../preferences/hints.py:241
+#, fuzzy
+msgid "Coder: show / hide indentation level lines"
+msgstr "编码器：显示/隐藏凹痕水平线"
+
+#: ../preferences/hints.py:244
+#, fuzzy
+msgid "Builder: create a new routine"
+msgstr "构建者：创建新的常规"
+
+#: ../preferences/hints.py:247
+#, fuzzy
+msgid "Builder: copy an existing routine"
+msgstr "构建者：复制现有常规"
+
+#: ../preferences/hints.py:250
+#, fuzzy
+msgid "Builder: paste the copied routine"
+msgstr "构建器：粘贴复制的常规"
+
+#: ../preferences/hints.py:253
+#, fuzzy
+msgid "Builder: paste the copied component"
+msgstr "构建器：粘贴复制的组件"
+
+#: ../preferences/hints.py:256
+#, fuzzy
+msgid "Coder: show / hide the output panel"
+msgstr "编码器：显示/隐藏输出面板"
+
+#: ../preferences/hints.py:259
+#, fuzzy
+msgid "Builder: rename an existing routine"
+msgstr "构建者：重命名现有常规"
+
+#: ../preferences/hints.py:262
+#, fuzzy
+msgid "switch to Builder window from Coder"
+msgstr "从编码器切换到构建器窗口"
+
+#: ../preferences/hints.py:265
+#, fuzzy
+msgid "switch to Coder window from Builder"
+msgstr "从构建器切换到编码窗口"
+
+#: ../preferences/hints.py:268
+#, fuzzy
+msgid "increase display size in Flow"
+msgstr "增加流中的显示大小"
+
+#: ../preferences/hints.py:271
+#, fuzzy
+msgid "decrease display size in Flow"
+msgstr "减少流中的显示大小"
+
+#: ../preferences/hints.py:274
+#, fuzzy
+msgid "increase display size of Routines"
+msgstr "增加常规显示大小"
+
+#: ../preferences/hints.py:277
+#, fuzzy
+msgid "decrease display size of Routines"
+msgstr "减少常规显示大小"
+
+#: ../preferences/hints.py:280
+#, fuzzy
+msgid "show or hide the readme (info) for this experiment if possible"
+msgstr "显示或隐藏此实验的读物（信息），如果可能的话"
+
+#: ../preferences/hints.py:283
+#, fuzzy
+msgid "Projects: Log in to pavlovia"
+msgstr "项目：登录帕夫洛维亚"
+
+#: ../preferences/hints.py:286
+#, fuzzy
+msgid "Projects: Log in to OSF"
+msgstr "项目：登录 OSF"
+
+#: ../preferences/hints.py:289
+#, fuzzy
+msgid "Projects: Sync project"
+msgstr "项目：同步项目"
+
+#: ../preferences/hints.py:292
+#, fuzzy
+msgid "Projects: Find projects"
+msgstr "项目：查找项目"
+
+#: ../preferences/hints.py:295
+#, fuzzy
+msgid "Projects: Open project"
+msgstr "项目：开放项目"
+
+#: ../preferences/hints.py:298
+#, fuzzy
+msgid "Projects: Create new project"
+msgstr "项目：创建新项目"
+
+#: ../preferences/hints.py:301
+msgid "priority"
+msgstr "优先"
+
+#: ../projects/pavlovia.py:1101
+#, fuzzy
+msgid ""
+"We found a repository pointing to {} but no project was found there "
+"(deleted?)"
+msgstr "我们发现了一个指向{}的存储库，但没有发现任何项目（已删除？"
+
+#: ../projects/pavlovia.py:1105
+#, fuzzy
+msgid ""
+"We found a repository pointing to {} but no user is logged in for us to "
+"check it"
+msgstr "我们发现了一个指向{}的存储库，但没有用户登录供我们检查"
+
+#: ../tools/versionchooser.py:73
+#, fuzzy
+msgid ""
+"Please request a version before importing any PsychoPy modules. (Found: {})"
+msgstr "请在导入任何心理视频模块之前请求一个版本。（已找到：{}）"
+
+#: ../tools/versionchooser.py:82
+#, fuzzy
+msgid "Unknown version `{}`"
+msgstr "未知版本\"{}\""
+
+#: ../tools/versionchooser.py:94
+#, fuzzy
+msgid ""
+"Please request a version of PsychoPy that is compatible with Python 3. You "
+"can choose from the following versions: {}. Alternatively, run a Python 2 "
+"installation of PsychoPy < v1.9.0.\n"
+msgstr ""
+"请请求与 Python 3 兼容的心理 Py 版本。您可以从以下版本中进行选择：{}。或者，"
+"运行Python 2安装心理<v1.9.0。\n"
+
+#: ../tools/versionchooser.py:103
+#, fuzzy
+msgid "Please install git; needed by useVersion()"
+msgstr "请安装git：需要使用版本（）"
+
+#: ../tools/versionchooser.py:128
+#, fuzzy
+msgid "Required minimal version `{}` not met ({})."
+msgstr "所需的最小版本\"{}\"未满足（{}）。"
+
+#: ../tools/versionchooser.py:164
+#, fuzzy
+msgid "'{}' is not a valid PsychoPy version."
+msgstr "\"{}\"不是一个有效的心理视频版本。"
+
+#: ../tools/versionchooser.py:247
+#, fuzzy
+msgid "Filtering versions of PsychoPy only compatible with Python 3."
+msgstr "仅与 Python 3 兼容的心理 Py 过滤版本。"
+
+#: ../tools/versionchooser.py:255
+#, fuzzy
+msgid ""
+"wx version: {}. Filtering versions of PsychoPy only compatible with wx >= "
+"version {}"
+msgstr "wx版本：{}。仅与wx>®版本兼容的心理视频过滤版本{}"
+
+#: ../tools/versionchooser.py:321
+#, fuzzy
+msgid "Couldn't find version {} locally. Trying github..."
+msgstr "无法在本地找到版本{}试试吉图布。。。"
+
+#: ../tools/versionchooser.py:328
+#, fuzzy
+msgid "{} is not currently available."
+msgstr "{}当前不可用。"
+
+#: ../tools/versionchooser.py:347
+#, fuzzy
+msgid "Downloading the PsychoPy Library from Github (may take a while)"
+msgstr "从吉图布下载心理图片库（可能需要一段时间）"
+
+#: ../tools/wizard.py:35
+msgid "Benchmark"
+msgstr "性能测试"
+
+#: ../tools/wizard.py:36
+#, fuzzy
+msgid "benchmark version"
+msgstr "基准版本"
+
+#: ../tools/wizard.py:38
+#, fuzzy
+msgid "dots_circle"
+msgstr "dots_circle"
+
+#: ../tools/wizard.py:39
+#, fuzzy
+msgid "dots_square"
+msgstr "dots_square"
+
+#: ../tools/wizard.py:40
+#, fuzzy
+msgid "available memory"
+msgstr "可用内存"
+
+#: ../tools/wizard.py:41
+#, fuzzy
+msgid "python version"
+msgstr "蟒蛇版本"
+
+#: ../tools/wizard.py:43
+msgid "Visual"
+msgstr "视觉"
+
+#: ../tools/wizard.py:44
+#, fuzzy
+msgid "openGL version"
+msgstr "开放GL版本"
+
+#: ../tools/wizard.py:45
+#, fuzzy
+msgid "openGL vendor"
+msgstr "开放GL供应商"
+
+#: ../tools/wizard.py:46
+#, fuzzy
+msgid "screen size"
+msgstr "屏幕大小"
+
+#: ../tools/wizard.py:47
+#, fuzzy
+msgid "have shaders"
+msgstr "有着色器"
+
+#: ../tools/wizard.py:48
+#, fuzzy
+msgid "refresh stability (SD)"
+msgstr "刷新稳定性 （SD）"
+
+#: ../tools/wizard.py:49
+#, fuzzy
+msgid "no dropped frames"
+msgstr "无掉落帧"
+
+#: ../tools/wizard.py:50
+#, fuzzy
+msgid "pyglet avbin"
+msgstr "俾格莱特·阿夫宾"
+
+#: ../tools/wizard.py:51
+msgid "Audio"
+msgstr "音频"
+
+#: ../tools/wizard.py:52
+#, fuzzy
+msgid "microphone latency"
+msgstr "麦克风延迟"
+
+#: ../tools/wizard.py:53
+msgid "microphone"
+msgstr "麦克风"
+
+#: ../tools/wizard.py:54
+#, fuzzy
+msgid "speakers latency"
+msgstr "扬声器延迟"
+
+#: ../tools/wizard.py:55
+#, fuzzy
+msgid "speakers"
+msgstr "扬声器"
+
+#: ../tools/wizard.py:56
+msgid "Numeric"
+msgstr "数值"
+
+#: ../tools/wizard.py:57
+msgid "System"
+msgstr "系统"
+
+#: ../tools/wizard.py:58
+msgid "platform"
+msgstr "平台运行"
+
+#: ../tools/wizard.py:59
+#, fuzzy
+msgid "internet access"
+msgstr "上网"
+
+#: ../tools/wizard.py:60
+#, fuzzy
+msgid "auto proxy"
+msgstr "自动代理"
+
+#: ../tools/wizard.py:61
+#, fuzzy
+msgid "proxy setting"
+msgstr "代理设置"
+
+#: ../tools/wizard.py:62
+#, fuzzy
+msgid "background processes"
+msgstr "背景流程"
+
+#: ../tools/wizard.py:63
+#, fuzzy
+msgid "CPU speed test"
+msgstr "CPU 速度测试"
+
+#: ../tools/wizard.py:64
+#, fuzzy
+msgid "visual sync (refresh)"
+msgstr "视觉同步（刷新）"
+
+#: ../tools/wizard.py:97
+#, fuzzy, python-format
+msgid "could not assess available physical RAM; total %s"
+msgstr "无法评估可用的物理 RAM;总%s"
+
+#: ../tools/wizard.py:102
+#, fuzzy, python-format
+msgid "physical RAM available for configuration test (of %.1fG total)"
+msgstr "可用于配置测试的物理 RAM（总计%.1fG）"
+
+#: ../tools/wizard.py:107
+#, fuzzy, python-format
+msgid ""
+"Warning: low available physical RAM for configuration test (of %.1fG total)"
+msgstr "警告：用于配置测试的可用物理内存较低（总%.1fG）"
+
+#: ../tools/wizard.py:119
+#, fuzzy
+msgid "avoid upgrading during an experiment"
+msgstr "避免在实验期间升级"
+
+#: ../tools/wizard.py:121
+#, fuzzy
+msgid ""
+"can be set in <a href=\"http://www.psychopy.org/general/prefs."
+"html#application-settings-app\">Preferences -> App</a>"
+msgstr ""
+"可以设置在 <a href=\"http://www.psychopy.org/general/prefs.html#application-"
+"settings-app\">首选项->应用程序</a>"
+
+#: ../tools/wizard.py:130
+#, fuzzy
+msgid ""
+"Warning: python 2.7 or 3.6 are recommended; 2.6 and 3.5 might work. Others "
+"probably won't."
+msgstr "警告：建议使用巨蛇2.7或3.6：2.6和3.5可能工作。其他人可能不会。"
+
+#: ../tools/wizard.py:148
+#, fuzzy
+msgid "Warning: wx 2.8.10 or higher required"
+msgstr "警告： wx 2.8.10 或更高要求"
+
+#: ../tools/wizard.py:154
+#, fuzzy
+msgid "for high-priority threads"
+msgstr "用于高优先级线程"
+
+#: ../tools/wizard.py:162
+#, fuzzy
+msgid ""
+"Warning: <a href=\"http://www.psychopy.org/general/timing/reducingFrameDrops."
+"html?highlight=OpenGL+2.0\">OpenGL 2.0 or higher is ideal</a>."
+msgstr ""
+"警告： <a href=\"http://www.psychopy.org/general/timing/reducingFrameDrops."
+"html?highlight=OpenGL+2.0\">开放GL 2.0或更高是理想的</a>。"
+
+#: ../tools/wizard.py:177
+#, fuzzy
+msgid ""
+"Warning: <a href=\"http://www.psychopy.org/general/timing/reducingFrameDrops."
+"html?highlight=shader\">Rendering of complex stimuli will be slow</a>."
+msgstr ""
+"警告： <a href=\"http://www.psychopy.org/general/timing/reducingFrameDrops."
+"html?highlight=shader\">复杂刺激的渲染速度会很慢</a>。"
+
+#: ../tools/wizard.py:186
+#, fuzzy
+msgid ""
+"during the drifting <a href=\"http://www.psychopy.org/api/visual/gratingstim."
+"html\">GratingStim</a>"
+msgstr ""
+"在漂流 <a href=\"http://www.psychopy.org/api/visual/gratingstim.html\">格栅刺"
+"期间</a>"
+
+#: ../tools/wizard.py:190
+#, fuzzy
+msgid ""
+"Warning: too fast? visual sync'ing with the monitor seems unlikely at 300+ Hz"
+msgstr "警告：太快了？视觉同步'与显示器似乎不太可能在300+Hz"
+
+#: ../tools/wizard.py:196
+#, fuzzy
+msgid "SD &lt; 0.5 ms is ideal (want low variability)"
+msgstr "SD &lt;0.5毫秒是理想的（希望变化性低）"
+
+#: ../tools/wizard.py:199
+#, fuzzy
+msgid ""
+"Warning: the refresh rate has high frame-to-frame variability (SD &gt; 0.5 "
+"ms)"
+msgstr "警告：刷新率具有较高的帧对帧变异性（SD &gt;0.5 毫秒）"
+
+#: ../tools/wizard.py:218
+#, fuzzy
+msgid ""
+"during <a href=\"http://www.psychopy.org/api/visual/dotstim.html\">DotStim</"
+"a> with 100 random dots"
+msgstr ""
+"在 <a href=\"http://www.psychopy.org/api/visual/dotstim.html\">点位与</a> 100"
+"个随机点"
+
+#: ../tools/wizard.py:226
+#, fuzzy
+msgid ""
+"Warning: could not keep up during <a href=\"http://www.psychopy.org/api/"
+"visual/dotstim.html\">DotStim</a> with 100 random dots."
+msgstr ""
+"警告：在 <a href=\"http://www.psychopy.org/api/visual/dotstim.html\">点位期间"
+"</a> 无法跟上100个随机点。"
+
+#: ../tools/wizard.py:254
+#, fuzzy
+msgid "Warning: pyo is needed for sound and microphone."
+msgstr "警告：声音和麦克风需要 pyo。"
+
+#: ../tools/wizard.py:257
+msgid "(missing)"
+msgstr "(缺失)"
+
+#: ../tools/wizard.py:267
+#, fuzzy
+msgid "vector-based (fast) calculations"
+msgstr "基于矢量（快速）计算"
+
+#: ../tools/wizard.py:269
+#, fuzzy
+msgid "scientific / numerical"
+msgstr "科学/数字"
+
+#: ../tools/wizard.py:271
+#, fuzzy
+msgid "plotting; fast contains(), overlaps()"
+msgstr "绘图;快速包含（），重叠（）"
+
+#: ../tools/wizard.py:277
+#, fuzzy
+msgid "for online help, usage statistics, software updates, and google-speech"
+msgstr "在线帮助、使用统计、软件更新和谷歌语音"
+
+#: ../tools/wizard.py:282
+#, fuzzy
+msgid "Warning: could not connect (no proxy attempted)"
+msgstr "警告：无法连接（未尝试代理）"
+
+#: ../tools/wizard.py:290
+#, fuzzy
+msgid ""
+"try to auto-detect a proxy if needed; see <a href=\"http://www.psychopy.org/"
+"general/prefs.html#connection-settings-connections\">Preferences -> "
+"Connections</a>"
+msgstr ""
+"如果需要，请尝试自动检测代理：请参阅 <a href=\"http://www.psychopy.org/"
+"general/prefs.html#connection-settings-connections\">首选项->连接</a>"
+
+#: ../tools/wizard.py:300
+#, fuzzy
+msgid ""
+"current manual proxy setting from <a href=\"http://www.psychopy.org/general/"
+"prefs.html#connection-settings-connections\">Preferences -> Connections</a>"
+msgstr ""
+"当前从首选项手动代理设置 <a href=\"http://www.psychopy.org/general/prefs."
+"html#connection-settings-connections\">->连接</a>"
+
+#: ../tools/wizard.py:307
+#, fuzzy
+msgid "numpy.std() of 1,000,000 data points"
+msgstr "1，000，000 个数据点的麻木。"
+
+#: ../tools/wizard.py:315
+#, fuzzy
+msgid "Python packages"
+msgstr "Python 包"
+
+#: ../tools/wizard.py:351
+#, fuzzy, python-format
+msgid "could not import package %s"
+msgstr "无法导入包装%s"
+
+#: ../tools/wizard.py:369
+#, fuzzy
+msgid "video card drivers"
+msgstr "视频卡驱动程序"
+
+#: ../tools/wizard.py:400
+#, fuzzy, python-format
+msgid "This page was auto-generated by the PsychoPy configuration wizard on %s"
+msgstr "此页面由%s上的心理心理配置向导自动生成"
+
+#: ../tools/wizard.py:410
+#, fuzzy
+msgid "Configuration problem"
+msgstr "配置问题"
+
+#: ../tools/wizard.py:413
+#, fuzzy
+msgid "Critical issue"
+msgstr "关键问题"
+
+#: ../tools/wizard.py:418
+#, fuzzy
+msgid "Configuration report"
+msgstr "配置报告"
+
+#: ../tools/wizard.py:421
+#, fuzzy
+msgid ""
+"<p>All values seem reasonable (no warnings, but there might still be room "
+"for improvement).</p>\n"
+msgstr "<p>所有值似乎都是合理的（没有警告，但可能仍有改进的余地）。</p>\n"
+
+#: ../tools/wizard.py:425
+#, fuzzy, python-format
+msgid "1 suboptimal value was detected</font>, see details below (%s).</p>\n"
+msgstr "检测到 1 个次优值，请参阅下面的详细信息 %s （）。</p>\n"
+
+#: ../tools/wizard.py:430
+#, fuzzy, python-format
+msgid ""
+"%(num)i suboptimal values were detected</font>, see details below (%(warn)s)."
+"</p>\n"
+msgstr ""
+"已检测到 %（数字）i 次优值，请参阅下面的详细信息（百分比（警告）。</p>\n"
+
+#: ../tools/wizard.py:452
+#, fuzzy
+msgid "Only show suboptimal values"
+msgstr "仅显示次优值"
+
+#: ../tools/wizard.py:455
+#, fuzzy
+msgid "Show all information"
+msgstr "显示所有信息"
+
+#: ../tools/wizard.py:456
+#, fuzzy
+msgid ""
+"<p>Resources:\n"
+"                | <a href=\"http://www.psychopy.org/documentation.html\">On-"
+"line documentation</a>\n"
+"                | Download <a href=\"http://www.psychopy.org/PsychoPyManual."
+"pdf\">PDF manual</a>\n"
+"                | <a href=\"http://groups.google.com/group/psychopy-users"
+"\">Search the user-group archives</a>\n"
+"                </p>"
+msgstr ""
+"<p>资源：\n"
+"                | <a href=\"http://www.psychopy.org/documentation.html\">在线"
+"文档</a>\n"
+"                |下载 <a href=\"http://www.psychopy.org/PsychoPyManual.pdf"
+"\">PDF 手册</a>\n"
+"                | <a href=\"http://groups.google.com/group/psychopy-users\">"
+"搜索用户组存档</a>\n"
+"                </p>"
+
+#: ../tools/wizard.py:463
+#, fuzzy
+msgid "Configuration test</strong> or setting"
+msgstr "配置测试或设置"
+
+#: ../tools/wizard.py:464
+#, fuzzy
+msgid "Version or value"
+msgstr "版本或值"
+
+#: ../tools/wizard.py:466
+msgid "Notes"
+msgstr "备注"
+
+#: ../tools/wizard.py:506
+#, fuzzy
+msgid " Configuration Wizard"
+msgstr "配置向导"
+
+#: ../tools/wizard.py:519
+#, fuzzy
+msgid "It looks like you are running PsychoPy for the first time."
+msgstr "看起来你是第一次运行心理间谍。"
+
+#: ../tools/wizard.py:521
+#, fuzzy
+msgid "This wizard will help you get started quickly and smoothly."
+msgstr "此向导将帮助您快速、顺利地开始。"
+
+#: ../tools/wizard.py:524
+#, fuzzy
+msgid "Welcome to the configuration wizard."
+msgstr "欢迎来到配置向导。"
+
+#: ../tools/wizard.py:531
+#, fuzzy
+msgid "The first configuration check is your video card's drivers. The current"
+msgstr "第一个配置检查是您的视频卡的驱动程序。电流"
+
+#: ../tools/wizard.py:534
+#, fuzzy
+msgid "drivers cannot support PsychoPy, so you'll need to update the drivers."
+msgstr "驱动程序无法支持心理测试，因此您需要更新驱动程序。"
+
+#: ../tools/wizard.py:537
+#, fuzzy, python-format
+msgid ""
+"<p>Critical issue:\n"
+"</p><p>Your video card (%(card)s) has drivers\n"
+"                that cannot support the high-performance features that "
+"PsychoPy depends on.\n"
+"                Fortunately, it's typically free and straightforward to get "
+"new drivers\n"
+"                directly from the manufacturer.</p>\n"
+"                <p><strong>To update the drivers:</strong>\n"
+"                <li> You'll need administrator privileges.\n"
+"                <li> On Windows, don't use the windows option to check for "
+"updates\n"
+"                  - it can report that there are no updates available.\n"
+"                <li> If your card is made by NVIDIA, go to\n"
+"                  <a href=\"http://www.nvidia.com/Drivers\">the NVIDIA "
+"website</a>\n"
+"                  and use the 'auto detect' option. Try here for\n"
+"                  <a href=\"http://support.amd.com/\">ATI / Radeon drivers</"
+"a>. Or try\n"
+"                  <a href=\"http://www.google.com/search?q=download+drivers+"
+"%(card2)s\">\n"
+"                  this google search</a> [google.com].\n"
+"                <li> Download and install the driver.\n"
+"                <li> Reboot the computer.\n"
+"                <li> Restart PsychoPy.</p>\n"
+"                <p>If you updated the drivers and still get this message, "
+"you'll\n"
+"                  need a different video card to use PsychoPy. Click\n"
+"                <a href=\"http://www.psychopy.org/installation."
+"html#recommended-hardware\">here\n"
+"                for more information</a> [psychopy.org].</p>\n"
+"            "
+msgstr ""
+"<p>关键问题：</p><p>您的视频卡（%（卡）有驱动程序\n"
+"                无法支持心理心理依赖的高性能功能。\n"
+"                幸运的是，获得新的驱动程序通常是免费的和直接的\n"
+"                直接从制造商。</p>\n"
+"                <p><strong>要更新驱动程序：</strong>\n"
+"                <li> 您需要管理员特权。                <li> 在 Windows 上，不"
+"要使用窗口选项检查更新\n"
+"                  -它可以报告没有可用的更新。                <li> 如果您的卡"
+"是由NVIDIA制作的，请转到\n"
+"                  <a href=\"http://www.nvidia.com/Drivers\">恩维迪亚网站</"
+"a>\n"
+"                  并使用\"自动检测\"选项。请在此处尝试\n"
+"                  <a href=\"http://support.amd.com/\">ATI /雷登司机</a>。或尝"
+"试\n"
+"                  <a href=\"http://www.google.com/search?q=download+drivers+"
+"%(card2)s\">\n"
+"                  这个谷歌搜索</a> [google.com]。                <li> 下载并"
+"安装驱动程序。                <li> 重新启动计算机。                <li> 重新"
+"启动心理间谍。</p>\n"
+"                <p>如果您更新了驱动程序，但仍会收到此消息，您将\n"
+"                  需要一个不同的视频卡来使用心理心理。点击\n"
+"                <a href=\"http://www.psychopy.org/installation."
+"html#recommended-hardware\">在这里\n"
+"                有关更多信息</a> [psychopy.org]。</p>\n"
+"            </li></li></li></li></li></li>"
+
+#: ../tools/wizard.py:562
+#, fuzzy
+msgid ""
+"<p>Critical issue:\n"
+"</p>"
+msgstr "<p>关键问题：</p>"
+
+#: ../tools/wizard.py:568
+#, fuzzy
+msgid "We'll go through a series of configuration checks in about 10 seconds. "
+msgstr "我们将在大约 10 秒内完成一系列配置检查。"
+
+#: ../tools/wizard.py:572
+#, fuzzy
+msgid "Note: The display will switch to full-screen mode and will "
+msgstr "注意：显示屏将切换到全屏模式，并将"
+
+#: ../tools/wizard.py:574
+#, fuzzy
+msgid "then switch back. You don't need to do anything."
+msgstr "然后切换回来。你不需要做任何事情。"
+
+#: ../tools/wizard.py:576
+#, fuzzy
+msgid ""
+"Optional: For best results, please quit all email programs, web-browsers, "
+msgstr "可选：要获得最佳效果，请退出所有电子邮件程序、Web 浏览器、"
+
+#: ../tools/wizard.py:578
+#, fuzzy
+msgid "Dropbox, backup or sync services, and others."
+msgstr "下拉框、备份或同步服务以及其他服务。"
+
+#: ../tools/wizard.py:581
+#, fuzzy
+msgid "Click OK to start, or Cancel to skip."
+msgstr "单击\"确定\"以开始，或\"取消\"以跳过。"
+
+#: ../tools/wizard.py:583
+#, fuzzy
+msgid "Full details"
+msgstr "完整详情"
+
+#: ../tools/wizard.py:587
+#, fuzzy
+msgid "Click OK for more information, or Cancel to skip."
+msgstr "单击\"确定\"以获取更多信息，或取消跳过。"
+
+#: ../tools/wizard.py:617
+#, fuzzy
+msgid "Configuration testing complete!"
+msgstr "配置测试完成！"
+
+#: ../tools/wizard.py:621
+#, fuzzy
+msgid "All values seem reasonable (no warnings)."
+msgstr "所有值看起来都是合理的（没有警告）。"
+
+#: ../tools/wizard.py:623
+#, fuzzy, python-format
+msgid "1 suboptimal value was detected (%s)"
+msgstr "检测到 1 个次优值（%s）"
+
+#: ../tools/wizard.py:626
+#, fuzzy, python-format
+msgid "%(num)i suboptimal values were detected (%(warn)s, ...)"
+msgstr "已检测到百分比（数字）i 次优值（百分比（警告），...）"
+
+#: ../tools/wizard.py:634
+#, fuzzy
+msgid "Click OK for full details (will open in a web-browser),"
+msgstr "点击确定了解完整详细信息（将在 Web 浏览器中打开），"
+
+#: ../tools/wizard.py:636
+#, fuzzy
+msgid "or Cancel to stay in PsychoPy."
+msgstr "或取消留在心理皮。"
+
+#: ../tools/wizard.py:655
+#, fuzzy
+msgid " Benchmark Wizard"
+msgstr "基准向导"
+
+#: ../tools/wizard.py:659
+#, fuzzy
+msgid "Benchmarking takes ~20-30 seconds to gather"
+msgstr "基准采集需要 20-30 秒"
+
+#: ../tools/wizard.py:660
+#, fuzzy
+msgid "configuration and performance data. Begin?"
+msgstr "配置和性能数据。开始？"
+
+#: ../tools/wizard.py:681
+#, fuzzy
+msgid "dots &amp; configuration"
+msgstr "点和配置"
+
+#: ../tools/wizard.py:684
+#, fuzzy
+msgid "visual window for drawing"
+msgstr "用于绘图的视觉窗口"
+
+#: ../tools/wizard.py:710
+#, fuzzy
+msgid "Benchmark complete! (See the Coder output window.)"
+msgstr "基准完成！（请参阅编码器输出窗口。"
+
+#: ../tools/wizard.py:719
+#, fuzzy
+msgid "Click OK to view full configuration and benchmark data."
+msgstr "单击\"确定\"查看完整配置和基准数据。"
+
+#: ../tools/wizard.py:721
+#, fuzzy
+msgid "Click Cancel to stay in PsychoPy."
+msgstr "单击\"取消\"以留在心理状态。"
