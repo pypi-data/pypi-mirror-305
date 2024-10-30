@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.py
+julien_python_toolkit/__init__.py
+julien_python_toolkit/email_logger.py
+julien_python_toolkit/email_sender.py
+julien_python_toolkit/file_utilities.py
+julien_python_toolkit/google_services.py
+julien_python_toolkit/log_utilities.py
+julien_python_toolkit.egg-info/PKG-INFO
+julien_python_toolkit.egg-info/SOURCES.txt
+julien_python_toolkit.egg-info/dependency_links.txt
+julien_python_toolkit.egg-info/requires.txt
+julien_python_toolkit.egg-info/top_level.txt
