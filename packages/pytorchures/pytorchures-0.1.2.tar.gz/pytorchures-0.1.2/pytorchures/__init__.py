@@ -1,0 +1,1 @@
+from .timing import TimedModule

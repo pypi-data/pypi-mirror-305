@@ -1,0 +1,13 @@
+torch<3,>=2
+torchvision<1,>=0.18
+
+[dev]
+black
+isort
+pytest
+flake8
+mypy
+
+[publish]
+build
+twine
