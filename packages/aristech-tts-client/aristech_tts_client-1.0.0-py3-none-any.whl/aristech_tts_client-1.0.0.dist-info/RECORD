@@ -1,0 +1,13 @@
+aristech_tts_client/__init__.py,sha256=HxxA7jGeApgwpA6cEC8PjKSXblCBZF-XlGO9cFxy4tU,235
+aristech_tts_client/client.py,sha256=zInoTLl4SMgB7rWH-JUPy-nKfumXHgvwkfr_NhHvqEY,5598
+aristech_tts_client/proto/TTSServices_pb2.py,sha256=5lyZ7UmXnpQGioB5wIs8MmlYTWQ7RmMOc2CMNFXlpvU,5386
+aristech_tts_client/proto/TTSServices_pb2.pyi,sha256=vzWC4_sc10-F5Cw4OK3gIHUlRfFLw_WPEVf31VwNvKE,11452
+aristech_tts_client/proto/TTSServices_pb2_grpc.py,sha256=k6eeeloosCOYoBnzoLIotST78oQ26y4WD4hLFgPKRgQ,13202
+aristech_tts_client/proto/TTSTypes_pb2.py,sha256=bY7sxQ84sFSxUPfKPDN3HizQ0ptQfnK8ZPiDh7vt4pU,4010
+aristech_tts_client/proto/TTSTypes_pb2.pyi,sha256=BF8F9kZR5-sv_6Vlov3h6VepkRSn40uBSzrJBzDS07s,10350
+aristech_tts_client/proto/TTSTypes_pb2_grpc.py,sha256=zWwNCsWuhpX_Y9Mz9KsIieVmLYrbzQw7jcJ1AA4gZ7I,889
+aristech_tts_client/proto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aristech_tts_client-1.0.0.dist-info/METADATA,sha256=TFwO6qC-RIOcIArLejRQTLRzRrXYMJ-lJBaZUaDpq0E,2258
+aristech_tts_client-1.0.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+aristech_tts_client-1.0.0.dist-info/top_level.txt,sha256=-vXbTH9i7oRxiyB1xyJyStXyr4agXzhcTXc8Pc0WENo,20
+aristech_tts_client-1.0.0.dist-info/RECORD,,
