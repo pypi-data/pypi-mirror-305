@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: scriptblocks
+Version: 0.0.1
+Summary: Package used by ScriptBlocks IDE to make apps with Python
+Home-page: https://github.com/ScriptBlocks/ScriptBlocks.py
+Author: OmgRod
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ScriptBlocks.py
+
+ScriptBlocks.py is a Python package for the brand new ScriptBlocks IDE. To find out how to use it, access the documentation [here](https://scriptblocks.github.io/docs)
