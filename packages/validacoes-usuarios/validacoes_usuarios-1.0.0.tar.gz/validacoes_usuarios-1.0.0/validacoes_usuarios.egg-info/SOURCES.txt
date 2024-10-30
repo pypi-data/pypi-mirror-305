@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+test/test_validacoes.py
+validacoes_usuarios/__init__.py
+validacoes_usuarios/config.py
+validacoes_usuarios/validacoes.py
+validacoes_usuarios.egg-info/PKG-INFO
+validacoes_usuarios.egg-info/SOURCES.txt
+validacoes_usuarios.egg-info/dependency_links.txt
+validacoes_usuarios.egg-info/requires.txt
+validacoes_usuarios.egg-info/top_level.txt

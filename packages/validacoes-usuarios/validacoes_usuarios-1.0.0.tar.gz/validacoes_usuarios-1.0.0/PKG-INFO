@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: validacoes_usuarios
+Version: 1.0.0
+Summary: Biblioteca para validação de senha e e-mail para segurança de dados dos usuários.
+Home-page: https://github.com/AlaiSeide/validacoes_usuarios.git
+Author: Seu Nome
+Author-email: seuemail@example.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: wtforms
+Requires-Dist: dnspython
+
+## Licença
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+# Validações de Usuários
+
+**`validacoes_usuarios`** é uma biblioteca Python projetada para facilitar a validação de senhas e e-mails com critérios de segurança. Ela ajuda a garantir que as senhas sejam seguras e evita o uso de e-mails temporários e domínios não confiáveis.
+
+## Índice
+
+1. [Instalação](#instalação)
+2. [Como Usar](#como-usar)
+3. [Funções Principais](#funções-principais)
+4. [Exemplo Completo de Uso](#exemplo-completo-de-uso)
+5. [Testes](#testes)
+6. [Contribuição](#contribuição)
+7. [Licença](#licença)
+
+---
+
+## Instalação
+
+Para instalar o pacote, você pode usar o pip. No terminal, execute:
+
+```bash
+pip install validacoes_usuarios
