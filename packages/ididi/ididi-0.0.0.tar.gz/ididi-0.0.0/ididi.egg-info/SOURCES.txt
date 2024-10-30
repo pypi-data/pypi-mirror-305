@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+ididi.egg-info/PKG-INFO
+ididi.egg-info/SOURCES.txt
+ididi.egg-info/dependency_links.txt
+ididi.egg-info/top_level.txt
+tests/test_autodt.py
+tests/test_forwardref.py
+tests/test_graph.py
+tests/test_node.py
