@@ -1,0 +1,35 @@
+collections:
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/brazos-maps_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"Catalogs 1962-2018"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"Catalogs: General, Undergraduate, Graduate, and Summer Sessions"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"College of Dentistry Catalogs as part of Baylor College of Dentistry, 1905-1999"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"College of Medicine Catalogs 1988-1998"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"Course Catalogs"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"Geologic Atlas of the United States"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"Health Science Center Catalogs 1999-2014"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"Historic Maps of Cuba"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/time_of_resolve_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/a6/f0/55/01/a6f05501-9312-4fd5-a167-f7ce2fa28ca6/com_class_rosters_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/4a/7d/ff/c4/4a7dffc4-04ec-4e1f-8f9e-ac661b9f328d/cvm-batch-1_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/4a/7d/ff/c4/4a7dffc4-04ec-4e1f-8f9e-ac661b9f328d/cvm-batch-2_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/4a/7d/ff/c4/4a7dffc4-04ec-4e1f-8f9e-ac661b9f328d/cvm-batch-3_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/berger_cloonan_batch_3_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/berger_cloonan_batch_4_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/fb/00/6c/bc/fb006cbc-d2e5-4fcb-9321-62b6385720d0/berger_cloonan_batch_5_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/fb/00/6c/bc/fb006cbc-d2e5-4fcb-9321-62b6385720d0/berger_cloonan_batch_6_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/fb/00/6c/bc/fb006cbc-d2e5-4fcb-9321-62b6385720d0/berger_cloonan_batch_7_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/fb/00/6c/bc/fb006cbc-d2e5-4fcb-9321-62b6385720d0/berger_cloonan_batch_8_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/berger_cloonan_batch_a_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/berger_cloonan_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"World War I Postcards"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/apfelbaum-ww1_objects"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"School of Law Catalogs as part of Texas Wesleyan University, 1989-2013"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:"Stephen Powys Marks London Collection"&wt=json&fl=manifest,id&rows=10000
+  - https://api.library.tamu.edu/solr/spotlight-core/select?indent=on&q=spotlight_exhibit_slugs_ssim:"alice-in-wonderland"&wt=json&fl=iiif_manifest_url_ssi,id&rows=10000
+  - https://api.library.tamu.edu/solr/spotlight-core/select?indent=on&q=spotlight_exhibit_slugs_ssim:"london-collection"&wt=json&fl=iiif_manifest_url_ssi,id&rows=10000
+  - https://api.library.tamu.edu/solr/spotlight-core/select?indent=on&q=spotlight_exhibit_slugs_ssim:"austin-map"&wt=json&fl=iiif_manifest_url_ssi,id&rows=10000
+  - https://api.library.tamu.edu/solr/spotlight-core/select?indent=on&q=spotlight_exhibit_slugs_ssim:"bryan-150-exhibit"&wt=json&fl=iiif_manifest_url_ssi,id&rows=10000
+  - https://api.library.tamu.edu/solr/spotlight-core/select?indent=on&q=spotlight_exhibit_slugs_ssim:"charting-texas"&wt=json&fl=iiif_manifest_url_ssi,id&rows=10000
+  - https://api.library.tamu.edu/solr/spotlight-core/select?indent=on&q=spotlight_exhibit_slugs_ssim:"scifi-exhibit-2021"&wt=json&fl=iiif_manifest_url_ssi,id&rows=10000
+  - https://api.library.tamu.edu/solr/spotlight-core/select?indent=on&q=spotlight_exhibit_slugs_ssim:"london-maps-batch-2"&wt=json&fl=iiif_manifest_url_ssi,id&rows=10000
+  - https://api.library.tamu.edu/solr/sage-core/select?indent=on&q=collection:%22https://api.library.tamu.edu/fcrepo/rest/3b/6f/c3/25/3b6fc325-f6ca-41d8-b91e-8c5db3be8c13/BasbanesEternalPassion_objects%22&wt=json&fl=manifest,id&rows=10000
