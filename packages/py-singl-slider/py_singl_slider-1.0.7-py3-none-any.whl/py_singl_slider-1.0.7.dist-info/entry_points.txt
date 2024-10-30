@@ -1,0 +1,3 @@
+[console_scripts]
+py_singl_slider = py_singl_slider.main:main
+
