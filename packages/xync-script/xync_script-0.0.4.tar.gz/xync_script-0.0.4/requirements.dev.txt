@@ -1,0 +1,6 @@
+pytest-asyncio
+pg-channels-gen
+git+ssh://git@gitlab.com/xync/back/schema.git
+git+ssh://git@gitlab.com/xync/back/ex-clients.git
+git+ssh://git@github.com/mixartemev/http-client.git
+git+ssh://git@github.com/mixartemev/tortoise-api-model.git
