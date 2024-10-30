@@ -1,0 +1,13 @@
+vip_client/__init__.py,sha256=TiRmSA_pCuXHYFPx1R3E1HSfFWMEwXK-6wX-2Zp-6M8,443
+vip_client/classes/VipCI.py,sha256=B_gF-G68hKhZ34hXCskUjB3-89rpiprBAyvU7kwKJ_k,29717
+vip_client/classes/VipClient.py,sha256=vwFqExguymtfcnXVoVJpR8MF4w9q1VeulTd_W_GQKgY,14077
+vip_client/classes/VipLauncher.py,sha256=ibBgnoe_VJH4sEnBJPFxATdBUVSHjok07UgzpzpNxuI,84592
+vip_client/classes/VipLoader.py,sha256=pTG_J6KPii4GYf9IURcLJzH7g5cAUwgiUDjRbzAsCwk,17012
+vip_client/classes/VipSession.py,sha256=SvR7UkMrAqa0XFjrVf47D6uE8lhG7LwwqZHxp2DjD4k,54487
+vip_client/classes/__init__.py,sha256=mX5Od5vON4eieodIKnqv2al31nRzmUNWHV8s9zpXXXU,711
+vip_client/utils/__init__.py,sha256=WCJb7LSCbxvJID3EwNaw3H0NAsxLb7ZfjfWv_2fBEbQ,91
+vip_client/utils/vip.py,sha256=TcCS8sEL9CCqCEZ2_I9vSTSNBhDEjT4lx-VjjfLNPS8,16751
+vip_client-0.1.6.dist-info/METADATA,sha256=2ImC8cFde2dH-HLPAfmToHolBfDmgZzr6X-7NBtvdsc,2919
+vip_client-0.1.6.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+vip_client-0.1.6.dist-info/licenses/LICENSE.txt,sha256=wQNLjLcwPTHOQWEOeWvzZvmhy5MWLotWpzIa5_-YQ74,1813
+vip_client-0.1.6.dist-info/RECORD,,
