@@ -1,0 +1,13 @@
+RealtimeSTT/__init__.py,sha256=4gY4x_4ILUqXzku1uBGVoimKFW09yK0FsvmTx_9UXmo,109
+RealtimeSTT/audio_recorder.py,sha256=wAoY0d1tsjCgFQKrvXcTTnTAMDu_PafacUIeJ4z-lp0,116856
+RealtimeSTT/audio_recorder_client.py,sha256=9VTbHhxsGR3ursx0vBb4O5wN7Ygw6AThrxP5xsPVZNU,32288
+RealtimeSTT_server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+RealtimeSTT_server/install_packages.py,sha256=uKexXlzQELzXWAoxXx1nqe_EdQBvF1DTMbAjqGcQ8Co,4558
+RealtimeSTT_server/stt_cli_client.py,sha256=KAxWCrZBMq_yhcktf38gUOFJy2JcivH8KvvyvruSAWE,21430
+RealtimeSTT_server/stt_server.py,sha256=m7q1jr6nzC4yU9nhjbMJAXb8lIlXBHi-8aB4Ha-_BnM,36171
+RealtimeSTT-0.3.5.dist-info/LICENSE,sha256=BZo2O4lOSCIKSqehC75Kt-fSd0e13qHSneo_I8DWPec,1090
+RealtimeSTT-0.3.5.dist-info/METADATA,sha256=f2VopQvhA8t0KF7d7ih-2Mg2J-oLGq6luD2mJ8aLna8,28655
+RealtimeSTT-0.3.5.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+RealtimeSTT-0.3.5.dist-info/entry_points.txt,sha256=VNXufFNKGxoXnSceb8kZ3Z9g_3NmZoHpg2ZqiOdm4qs,111
+RealtimeSTT-0.3.5.dist-info/top_level.txt,sha256=8Kb05Uk7tRrXzR3HNl8JQFiu5B47WTdWQmhodmnmhMg,31
+RealtimeSTT-0.3.5.dist-info/RECORD,,
