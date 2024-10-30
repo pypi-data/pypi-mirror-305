@@ -1,0 +1,53 @@
+Metadata-Version: 2.3
+Name: abnf-to-plantuml
+Version: 2.0.0
+Summary: A tool to transform ABNF-grammars into the subset of EBNF that PlantUML recognizes.
+Project-URL: Documentation, https://github.com/Paul Reinerfelt/abnf-to-plantuml#readme
+Project-URL: Issues, https://github.com/Paul Reinerfelt/abnf-to-plantuml/issues
+Project-URL: Source, https://github.com/Paul Reinerfelt/abnf-to-plantuml
+Author-email: Paul Reinerfelt <Paul.Reinerfelt@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: File Formats
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Text Processing
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Requires-Dist: abnf
+Requires-Dist: click
+Requires-Dist: click-logging
+Requires-Dist: click-spinner
+Description-Content-Type: text/markdown
+
+# abnf_to_plantuml
+
+[![PyPI - Version](https://img.shields.io/pypi/v/abnf-to-plantuml.svg)](https://pypi.org/project/abnf-to-plantuml)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/abnf-to-plantuml.svg)](https://pypi.org/project/abnf-to-plantuml)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install abnf-to-plantuml
+```
+
+## License
+
+`abnf-to-plantuml` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
