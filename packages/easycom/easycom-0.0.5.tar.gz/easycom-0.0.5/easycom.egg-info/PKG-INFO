@@ -1,0 +1,149 @@
+Metadata-Version: 2.1
+Name: easycom
+Version: 0.0.5
+Summary: A simple library for asynchronous serial communication
+Author-email: Acemetrics Technologies <vishnu@acemetrics.com>
+License: MIT License
+Project-URL: Documentation, https://gitlab.com/acemetrics-technologies/easycom#README
+Project-URL: Source, https://gitlab.com/acemetrics-technologies/easycom
+Project-URL: Tracker, https://gitlab.com/acemetrics-technologies/easycom/-/issues
+Keywords: serial,communication,arduino,pico,teensy,embedded
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyserial
+
+# EasyCom
+
+**EasyCom** is a Python library for **asynchronous serial communication** with USB UART devices. It supports hardware like **Arduino, ESP32, Raspberry Pi Pico, Teensy**, and others. EasyCom offers **non-blocking communication** with an easy-to-use API and allows you to **dynamically register new devices** at runtime.
+
+---
+
+## Features
+
+- **Asynchronous Communication** using threads for non-blocking operations.
+- **Pre-configured and Dynamically Registered Devices** support.
+- **Automatic Port Detection** via PID/VID pairs.
+- **Thread-safe Writes** using queue-based management.
+- **Customizable Data Handlers** for processing incoming data.
+
+---
+
+## Installation
+
+Install EasyCom and its dependencies via pip:
+
+```bash
+pip install easycom pyserial
+```
+
+---
+
+## Usage
+
+### Example: Arduino Communication
+
+This example demonstrates sending and receiving data using an **Arduino device** with a callback function:
+
+```python
+from easycom.devices import Arduino
+
+# Callback function to handle received data
+def handle_data(data):
+    print(f"Received: {data}")
+
+# Initialize the Arduino with the callback function
+arduino = Arduino(port="/dev/ttyUSB0", data_handler=handle_data)
+
+# Send data to the Arduino
+arduino.write(b"Hello, Arduino!")
+
+# Keep the program running to receive data
+input("Press Enter to disconnect...")
+
+# Disconnect the Arduino
+arduino.disconnect()
+```
+
+---
+
+### Registering a New Device at Runtime
+
+You can dynamically register a new device using the `register_device` function:
+
+```python
+from easycom.devices import register_device
+
+# Register a new device class named "MyDevice"
+MyDevice = register_device(
+    name="MyDevice",
+    pidvids=["1234:5678"],
+    default_baudrate=115200,
+    default_timeout=3
+)
+
+# Use the registered device
+device = MyDevice(port="/dev/ttyUSB0")
+device.write(b"Hello, MyDevice!")
+device.disconnect()
+```
+
+---
+
+## Supported Devices
+
+Here are some devices supported by EasyCom:
+
+| **Device**    | **PID/VIDs**                    | **Default Baudrate** | **Default Timeout** |
+|---------------|----------------------------------|----------------------|---------------------|
+| Arduino       | 2341:0043, 2341:0010, 0403:6001 | 9600                 | 2                   |
+| Pico          | 2E8A:0005                       | 115200               | 2                   |
+| Teensy        | 16C0:0483, 16C0:0487            | 9600                 | 2                   |
+| ESP32         | 10C4:EA60, 1A86:7523            | 115200               | 3                   |
+| FTDI          | 0403:6001, 0403:6015            | 9600                 | 2                   |
+| CH340         | 1A86:7523                       | 9600                 | 3                   |
+
+---
+
+## Logging
+
+Enable detailed logging for debugging:
+
+```python
+import logging
+logging.basicConfig(level=logging.DEBUG)
+```
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## Contributing
+
+We welcome contributions! Please open an issue or submit a pull request if you encounter any problems or have suggestions.
+
+---
+
+## Links
+
+- **Source Code**: [GitLab Repository](https://gitlab.com/acemetrics-technologies/easycom)  
+- **Issue Tracker**: [Report Issues](https://gitlab.com/acemetrics-technologies/easycom/-/issues)
+
+---
+
+## Authors
+
+- **Acemetrics Technologies**  
+  Email: [vishnu@acemetrics.com](mailto:vishnu@acemetrics.com)
+
+---
+
+## Conclusion
+
+With **EasyCom**, working with USB UART devices is simple and efficient. Whether you're using pre-configured devices or dynamically registering new ones, EasyCom ensures reliable, non-blocking serial communication for your projects.
