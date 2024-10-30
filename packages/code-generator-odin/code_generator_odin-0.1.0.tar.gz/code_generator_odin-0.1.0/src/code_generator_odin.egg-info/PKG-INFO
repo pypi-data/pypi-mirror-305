@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: code-generator-odin
+Version: 0.1.0
+Summary: A flexible source code generator with fixed structure templates
+Home-page: https://github.com/odin-hoang/code-generator
+Author: Khai Hoang
+Author-email: khaihq@gfigroup.io
+Keywords: code generator,template,python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
