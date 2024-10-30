@@ -1,0 +1,8 @@
+fastlmmclib-0.0.7a1.dist-info/RECORD,,
+fastlmmclib-0.0.7a1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fastlmmclib-0.0.7a1.dist-info/WHEEL,sha256=GiH5pdVU4nw_yL23jemzmSJOfgJgasReMUGTVBeMnco,110
+fastlmmclib-0.0.7a1.dist-info/top_level.txt,sha256=GT5TPoOkLcj8jORExOr0YiNBKOYqhZ6G-VkK_hZlpc4,62
+fastlmmclib-0.0.7a1.dist-info/METADATA,sha256=4cw1dt9Iv5C-r9WjTvRgfStZbnzwM0JkDqypOkLdQk0,859
+fastlmmclib/quadform/__init__.py,sha256=KlRfJLiXWwMiHjd1CPuvSaST08rwkv5e-IVlBziaCIw,756
+fastlmmclib/quadform/qfc_src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastlmmclib/quadform/qfc_src/wrap_qfc.cpython-310-darwin.so,sha256=ZoWQGiRogcS4Tk4L6fEW7eXrgOrX0rZ17z1tz8P5C8g,87168
