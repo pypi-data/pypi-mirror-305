@@ -1,0 +1,8 @@
+README.md
+setup.py
+cyj_test/__init__.py
+cyj_test.egg-info/PKG-INFO
+cyj_test.egg-info/SOURCES.txt
+cyj_test.egg-info/dependency_links.txt
+cyj_test.egg-info/top_level.txt
+cyj_test/python39/_pyxgdb.cpython-39-x86_64-linux-gnu.so
