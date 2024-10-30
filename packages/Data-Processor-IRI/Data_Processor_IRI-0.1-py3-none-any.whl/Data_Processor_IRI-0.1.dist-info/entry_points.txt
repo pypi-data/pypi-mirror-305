@@ -1,0 +1,2 @@
+[console_scripts]
+data_processor = data_processor.main:run
