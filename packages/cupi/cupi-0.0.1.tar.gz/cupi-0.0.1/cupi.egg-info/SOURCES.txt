@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+cupi/main.py
+cupi.egg-info/PKG-INFO
+cupi.egg-info/SOURCES.txt
+cupi.egg-info/dependency_links.txt
+cupi.egg-info/entry_points.txt
+cupi.egg-info/requires.txt
+cupi.egg-info/top_level.txt
