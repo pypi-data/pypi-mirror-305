@@ -1,0 +1,39 @@
+[project]
+name = "pyrmrf"
+version = "1.0.0"
+description = "cross platform rm -rf"
+authors = [
+    { name="Jan Hülsbergen", email="jan@afoo.de" },
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT No Attribution License (MIT-0)",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/avu/pyrmrf"
+Issues = "https://codeberg.org/avu/pyrmrf/issues"
+
+[project.scripts]
+pyrmrf = "pyrmrf:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pyrmrf"]
+
+[dependency-groups]
+dev = [
+    "twine>=5.1.1",
+]
