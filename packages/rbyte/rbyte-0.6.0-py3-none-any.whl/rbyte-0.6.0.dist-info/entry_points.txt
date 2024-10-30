@@ -1,0 +1,4 @@
+[console_scripts]
+rbyte-build-table = rbyte.scripts.build_table:main
+rbyte-read-frames = rbyte.scripts.read_frames:main
+rbyte-visualize = rbyte.scripts.visualize:main
