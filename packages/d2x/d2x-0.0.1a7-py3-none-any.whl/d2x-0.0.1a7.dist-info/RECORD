@@ -1,0 +1,15 @@
+d2x/__init__.py,sha256=-XD6KxwjFu5jqv6dt0s5ai_EBx15wNnWlgrYFnoCG88,10
+d2x/api/__init__.py,sha256=LlB_x80l7TSaBJOb22yHx_eqlzVUO36m9F9WdC28vpo,14
+d2x/auth/__init__.py,sha256=tXG5t1MdSX6V8GnZ0hRpGGh5zE9a7AWVAB26pjW_J10,15
+d2x/auth/sf/auth_url/__init__.py,sha256=Lb6slu_bXTJ8U8m08ETBCbkMHyldVcJAUkzvYxoBwmg,12705
+d2x/gen/__init__.py,sha256=FHT0oKbLIYD4e4m3iXf7fsPeWsMUCDNnhIy45mbLfUA,14
+d2x/gen/sf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+d2x/gen/sf/login_url/__init__.py,sha256=0TdrhFxUdUT73gQz1HgyByM8F_nNvUqUXqKN9-w-HQc,3128
+d2x/parse/sf/__init__.py,sha256=L1v7Av3jjaljbsEgoj8q1nwjNjsvxLQSB-LMVkipwK0,19
+d2x/parse/sf/auth_url/__init__.py,sha256=SSWLcZXOU1CV-B_ES85vcme6U_sPn4vPY9Oe_ggmUxo,7084
+d2x/ux/cci/__init__.py,sha256=serF8jiWcTPmguyKz4j2ZzIPQlOS2Hd97X6BcFuWJ48,17
+d2x/ux/gh/actions/__init__.py,sha256=J6n1PIJIq33gODA9uP5P_Qhze5anodcQjjGPUDXkiFQ,450
+d2x-0.0.1a7.dist-info/LICENSE,sha256=eeT4uHFZ19dp-_PgiD84XCGBGUc899lIIb9taREuhqI,1482
+d2x-0.0.1a7.dist-info/METADATA,sha256=BY1qeu46Zm_VE1yYofwHfuGAuM2m_M-mQKvmxnmmBtM,1446
+d2x-0.0.1a7.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+d2x-0.0.1a7.dist-info/RECORD,,
