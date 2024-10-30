@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: mmdlp
+Version: 0.0.1
+Summary: Deep Learning Projects base on OpenMMLab.
+Author-email: Felix Fu <alanmathisonturing@163.com>
+Maintainer-email: Felix Fu <alanmathisonturing@163.com>
+License: AGPL-3.0
+Project-URL: Homepage, https://github.com/FelixFu520/mmdlp
+Project-URL: Bug Tracker, https://github.com/FelixFu520/mmdlp/issues
+Keywords: machine-learning,deep-learning,computer-vision,ML,DL,AI,YOLO,YOLOv3,YOLOv5,YOLOv8,YOLOv9,YOLOv10,YOLO11,HUB,Ultralytics
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Deep learning library based on openmmlab
+```
+python -m build
+twine upload dist/*
+pypi-AgEIcHlwaS5vcmcCJDkxOWY1ZTA3LWU1MTgtNGYxMS1iMmJmLWRlYTYzNjZkMzcwMAACKlszLCIyMzFmY2FiNi0zNDhlLTQ2ZGEtYmMxMC0wOWQ0ZDc0Y2Y3ODAiXQAABiDbR9LmnHBG5OazaeMY5R4-xvHAIcTuBgfF3gCTblmrRg
+```
