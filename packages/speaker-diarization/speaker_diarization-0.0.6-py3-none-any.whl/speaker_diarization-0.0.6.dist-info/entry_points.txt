@@ -1,0 +1,2 @@
+[console_scripts]
+diarize = speaker_diarization.cli:main
