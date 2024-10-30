@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/valclient/__init__.py
+src/valclient/auth.py
+src/valclient/client.py
+src/valclient/exceptions.py
+src/valclient/resources.py
+src/valclient_remake.egg-info/PKG-INFO
+src/valclient_remake.egg-info/SOURCES.txt
+src/valclient_remake.egg-info/dependency_links.txt
+src/valclient_remake.egg-info/top_level.txt
