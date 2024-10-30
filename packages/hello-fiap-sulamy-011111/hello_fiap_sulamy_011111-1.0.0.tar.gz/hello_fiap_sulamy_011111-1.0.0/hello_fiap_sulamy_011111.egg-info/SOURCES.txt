@@ -1,0 +1,9 @@
+README.md
+setup.py
+hello_fiap_sulamy_011111.egg-info/PKG-INFO
+hello_fiap_sulamy_011111.egg-info/SOURCES.txt
+hello_fiap_sulamy_011111.egg-info/dependency_links.txt
+hello_fiap_sulamy_011111.egg-info/top_level.txt
+nome-do-seu-pacote/__init__.py
+nome-do-seu-pacote/core.py
+tests/test_core.py
