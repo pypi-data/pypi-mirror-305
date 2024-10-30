@@ -1,0 +1,7 @@
+kombu_pyamqp_threadsafe/__init__.py,sha256=18uvei_qkj0bPHqfL39JCCUGQZ7a6cAUcjX1kaM4EH0,21637
+kombu_pyamqp_threadsafe/producer.py,sha256=exLy9FqjdYFToFEqcij_lUbRzvDlSwH3JiYsJtwcVBI,724
+kombu_pyamqp_threadsafe/simple.py,sha256=VXTxn4WuHOg-hDMkMLcb3zdMg3S66X6wkCBk1Et0CRI,740
+kombu_pyamqp_threadsafe-0.5.0.dist-info/LICENSE,sha256=85bXOslZm4TYOb7iBNTbmgUtv58IDavT92AveWF0Viw,1063
+kombu_pyamqp_threadsafe-0.5.0.dist-info/METADATA,sha256=x8LwiXjHnbDE0sHFxrAlM_L8PYt2WjyySsBOoOdJtlU,4862
+kombu_pyamqp_threadsafe-0.5.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+kombu_pyamqp_threadsafe-0.5.0.dist-info/RECORD,,
