@@ -1,0 +1,9 @@
+README.md
+setup.py
+SFvdriftPy/__init__.py
+SFvdriftPy/model.py
+SFvdriftPy.egg-info/PKG-INFO
+SFvdriftPy.egg-info/SOURCES.txt
+SFvdriftPy.egg-info/dependency_links.txt
+SFvdriftPy.egg-info/requires.txt
+SFvdriftPy.egg-info/top_level.txt
