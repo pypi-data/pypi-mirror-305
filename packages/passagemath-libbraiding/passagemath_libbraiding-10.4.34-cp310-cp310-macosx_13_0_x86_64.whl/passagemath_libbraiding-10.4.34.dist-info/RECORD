@@ -1,0 +1,8 @@
+passagemath_libbraiding.dylibs/libbraiding.0.0.0.dylib,sha256=XUOkWe5zKz-OPRBVCcP34TkwkjqyWPrAt_6LcCaD79w,363840
+sage/all__sagemath_libbraiding.py,sha256=HzvyH9JZ1Fjh65Qx_jwx_UD5XSJg2iOTg7L5ajVVYvs,50
+sage/libs/all__sagemath_libbraiding.py,sha256=HzvyH9JZ1Fjh65Qx_jwx_UD5XSJg2iOTg7L5ajVVYvs,50
+sage/libs/braiding.cpython-310-darwin.so,sha256=74RHkFCEwIaMR_6CVc4H_3HNz8FJwDWWlp-ixIeME1s,171376
+passagemath_libbraiding-10.4.34.dist-info/RECORD,,
+passagemath_libbraiding-10.4.34.dist-info/WHEEL,sha256=2pz3B5pMEiYOwkKyV82bVfOCvs-faq8cPMEVwhebxEE,110
+passagemath_libbraiding-10.4.34.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_libbraiding-10.4.34.dist-info/METADATA,sha256=oDY3VmKS45qvWQ5a6zUX4bsm7xMRZ6LupAgIa2ntlaM,2451
