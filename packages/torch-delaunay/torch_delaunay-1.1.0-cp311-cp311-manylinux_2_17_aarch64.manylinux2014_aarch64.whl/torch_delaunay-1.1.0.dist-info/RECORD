@@ -1,0 +1,10 @@
+torch_delaunay/functional_test.py,sha256=zAjI2-Bdh2_tvbgaRkvuQMnl9WhIOsL6b8PwJDKX95A,1662
+torch_delaunay/_C.cpython-311-aarch64-linux-gnu.so,sha256=nWK0Y7MSYuyILWv6p77MdO8qt2y-Nonuaqpl8XxDUyg,25115184
+torch_delaunay/functional.py,sha256=peVVtUK0MA33VmMlCbelo6m0VtJ9WoEiJxodibYsqjM,3324
+torch_delaunay/__init__.py,sha256=0o5Lnb5ZcEIRNY9AljwW1ESEmQid79rcbBsDBoMT8aM,60
+torch_delaunay/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torch_delaunay-1.1.0.dist-info/top_level.txt,sha256=_G7i-lBLJDX2nRdQ5nFENgWIw7DyajsLZCYB4bzRdOU,15
+torch_delaunay-1.1.0.dist-info/RECORD,,
+torch_delaunay-1.1.0.dist-info/LICENSE,sha256=3xbNanDsCvT8184ICtSiD057BT_u0Coof5KUl8eeysw,35066
+torch_delaunay-1.1.0.dist-info/METADATA,sha256=jfkyzoSAm5q8k35jIJ5CB7EXxMV0LRje_exmb-qUmUA,4114
+torch_delaunay-1.1.0.dist-info/WHEEL,sha256=GG4OgPmr4wzR6DR9C05yHdxygRJRIpYkqGoQ5EARuwg,154
