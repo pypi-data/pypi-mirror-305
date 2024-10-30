@@ -1,0 +1,10 @@
+numpy
+tifffile
+scikit-image
+numpy2ometiff
+csbdeep
+scikit-image
+keras
+pillow
+SimpleITK
+lxml
