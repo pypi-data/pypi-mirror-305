@@ -1,0 +1,8 @@
+funalone/__init__.py,sha256=gL4Cozkf_8LOTLw7TxmPMStzdxiWWIWbKSx2ILhb42c,240
+funalone/mock_context.py,sha256=Mg8uaWKgjUSD-QWScvSAWe7HQ100mN1iYaQjWicJdMM,6729
+funalone/namespaced_function.py,sha256=zlUkSsHP2KwdAjSLXsBHjPMv3JLamlx76NyecN393Us,1053
+funalone/test.py,sha256=AJnup_jrFHxfO8Qu-iaUyu449jqhfIrWNt2v-092Zzc,9829
+funalone-0.5.0.dist-info/LICENSE,sha256=zZWbR2ZvlEuv5egMLUEGpFh-2oY6UsMRc2TVivhI934,1072
+funalone-0.5.0.dist-info/METADATA,sha256=ElzAyC35c0gSuhEseiZXLnLj33a5_XxUknq1IptXl5g,1408
+funalone-0.5.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+funalone-0.5.0.dist-info/RECORD,,
