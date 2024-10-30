@@ -1,0 +1,9 @@
+README.md
+setup.py
+mi_plugin_de_fechas.egg-info/PKG-INFO
+mi_plugin_de_fechas.egg-info/SOURCES.txt
+mi_plugin_de_fechas.egg-info/dependency_links.txt
+mi_plugin_de_fechas.egg-info/requires.txt
+mi_plugin_de_fechas.egg-info/top_level.txt
+pluginFecha/__init__.py
+pluginFecha/conversion.py
