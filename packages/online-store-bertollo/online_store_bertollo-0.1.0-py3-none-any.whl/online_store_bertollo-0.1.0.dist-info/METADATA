@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: online-store-bertollo
+Version: 0.1.0
+Summary: Исполняемый пакет для управления пользователями и заказами в онлайн-магазине
+Author-email: Victor Bertollo <victor@bertollo.ru>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
