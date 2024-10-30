@@ -1,0 +1,24 @@
+from __future__ import absolute_import
+
+# flake8: noqa
+
+# import apis into api package
+from statuspage.api.component_groups_api import ComponentGroupsApi
+from statuspage.api.components_api import ComponentsApi
+from statuspage.api.incident_postmortem_api import IncidentPostmortemApi
+from statuspage.api.incident_subscribers_api import IncidentSubscribersApi
+from statuspage.api.incident_updates_api import IncidentUpdatesApi
+from statuspage.api.incidents_api import IncidentsApi
+from statuspage.api.metric_providers_api import MetricProvidersApi
+from statuspage.api.metrics_api import MetricsApi
+from statuspage.api.page_access_group_components_api import PageAccessGroupComponentsApi
+from statuspage.api.page_access_groups_api import PageAccessGroupsApi
+from statuspage.api.page_access_user_components_api import PageAccessUserComponentsApi
+from statuspage.api.page_access_user_metrics_api import PageAccessUserMetricsApi
+from statuspage.api.page_access_users_api import PageAccessUsersApi
+from statuspage.api.pages_api import PagesApi
+from statuspage.api.permissions_api import PermissionsApi
+from statuspage.api.status_embed_config_api import StatusEmbedConfigApi
+from statuspage.api.subscribers_api import SubscribersApi
+from statuspage.api.templates_api import TemplatesApi
+from statuspage.api.users_api import UsersApi
