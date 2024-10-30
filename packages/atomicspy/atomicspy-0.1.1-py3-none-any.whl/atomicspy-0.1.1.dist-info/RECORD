@@ -1,0 +1,11 @@
+atomicspy/__init__.py,sha256=3N-jZCPTP_8CbAjLfOAAJSOL_2Bb8iZCHXeCx8GmPWQ,770
+atomicspy/data/data.json,sha256=bxbPz3g0b-pQv8m5FShB_rRGuG7usCKAbq8rfM90tuE,109061
+atomicspy/data/elements.csv,sha256=iUoZ3qKhcgQ44TzXot9WsyT_sRIHWuWKRyI5L09hFAg,12059
+atomicspy/data/f.csv,sha256=9Mn7HZ1SL-4kMAW_bdF-ERObq323gSxFB0kvEzsz9WU,64293
+atomicspy/data/iso.csv,sha256=2ZKyc2bWMxwD801NCHhP-Bz-rZ2yqX0CQrpMmrcUW6Q,3246
+atomicspy/data/molecules.csv,sha256=_truOUfEY6detXuwvbKcab9iJtxMwuha3gwfdjdpCoo,85710
+atomicspy/data/t.tsv,sha256=0DVeqJwW-0GKfiuaseABuU65IMX2zBOZQe15OKYFH4U,33961
+atomicspy-0.1.1.dist-info/METADATA,sha256=_XC-gF-u4NBi-1BRODrmV33u_RqtGPxBxe1N1jlT4Wk,2705
+atomicspy-0.1.1.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+atomicspy-0.1.1.dist-info/top_level.txt,sha256=rzWJRkP_uMD1gsTBVhdFUO5MZDNVzdPk9OZKzkSupqY,10
+atomicspy-0.1.1.dist-info/RECORD,,
