@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+D2J.egg-info/PKG-INFO
+D2J.egg-info/SOURCES.txt
+D2J.egg-info/dependency_links.txt
+D2J.egg-info/top_level.txt
+d2j/__init__.py
+d2j/converter.py
