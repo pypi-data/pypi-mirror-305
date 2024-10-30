@@ -1,0 +1,9 @@
+drift_monitor/VERSION,sha256=dEj8KrFke0LnS0oaAsirXMHgTLLcLZS-xELsN8s-KUg,5
+drift_monitor/__init__.py,sha256=sOSF3TeOVb_JT3Vp_Km2JkdtQh9fqij5fmXWedZVmFk,4746
+drift_monitor/config.py,sha256=VbMDdjbWQ_WGjIo6LlweLQ6W4nu-ELc_NGWKl6SvFfQ,1563
+drift_monitor/utils.py,sha256=RtiDFOG8gBmW4L8o0hV4JZFHYfDDgEBr2EqlDabf9Ec,3324
+drift_monitor-0.0.3.dist-info/LICENSE,sha256=UgSDl1hmnX96BuNOB5viQrF7J9ITz9QhMc_7Cup2CJQ,1123
+drift_monitor-0.0.3.dist-info/METADATA,sha256=saOSc9cySXSBWqz4wZgY7gECDll_ZSAxho2fpVlt5fc,3232
+drift_monitor-0.0.3.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+drift_monitor-0.0.3.dist-info/top_level.txt,sha256=rQ3gwD6u9rYscrkLzWP8Z-ye_BPn5cjpfJYDs7eaf-w,14
+drift_monitor-0.0.3.dist-info/RECORD,,
