@@ -1,0 +1,29 @@
+pandas
+pandas-stubs
+scikit-learn
+scikit-allel
+Pgenlib
+matplotlib
+joblib
+tqdm
+polars
+
+[:python_version < "3.10"]
+numpy<2
+
+[:python_version >= "3.10"]
+numpy
+
+[docs]
+pdoc
+
+[gpu]
+torch
+
+[jupyter]
+jupyterlab
+
+[testing]
+tox
+pytest
+pytest-cov

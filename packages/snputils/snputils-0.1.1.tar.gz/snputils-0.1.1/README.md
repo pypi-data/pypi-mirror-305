@@ -1,0 +1,58 @@
+[![License BSD-3](https://img.shields.io/pypi/l/snputils.svg?color=green)](https://github.com/ai-sandbox/snputils/raw/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/snputils.svg?color=green)](https://pypi.org/project/snputils)
+[![Python Version](https://img.shields.io/pypi/pyversions/snputils.svg?color=green)](https://python.org)
+[![tests](https://github.com/ai-sandbox/snputils/workflows/tests/badge.svg)](https://github.com/ai-sandbox/snputils/actions)
+
+# snputils
+
+## Installation
+
+We recommend creating a fresh Python `>= 3.8` conda environment. This package can be easily installed using `pip` after cloning the repository:
+
+```console
+(base) $ conda create -n snputils python=3.10
+(base) $ conda activate snputils
+(snputils) $ git clone https://github.com/AI-sandbox/snputils.git && cd snputils
+(snputils) $ pip install -e '.[testing,jupyter]'
+```
+
+Alternatively, you can install the package directly from the repository without cloning it:
+
+```console
+(base) $ pip install git+https://github.com/AI-sandbox/snputils.git
+```
+
+### Optional Dependencies
+
+By default, `torch` is not installed when you install `snputils` using `pip install snputils`. This is because `torch` is only required for certain PCA functionalities within `snputils`.
+
+If you wish to use the optimized PCA implementation for GPU using the PyTorch backend, you can install the extra dependencies using:
+
+```bash
+pip install snputils[gpu]
+```
+
+This will install `torch` along with `snputils`.
+
+Alternatively, you can install `torch` manually if you prefer:
+
+```bash
+pip install torch
+```
+
+Please note that installing `torch` might also install additional NVIDIA packages if CUDA support is enabled.
+
+
+## Use snputils tools
+
+
+
+### PCA
+
+To directly run Principal Component Analysis (PCA) on SNP data, plotting the results, and saving the principal components on a `.npy` file, simply call `snputils pca` with the required arguments, see `snputils pca --help` for more information.
+
+An example of running PCA on a `.vcf` file, saving the plot in `fig.png` and the principal components in `pc.npy`:
+
+```bash
+> snputils pca --vcf_file /dataset/path/hapmap3.vcf --fig_path fig.png --npy_path pc.npy --backend sklearn
+```
