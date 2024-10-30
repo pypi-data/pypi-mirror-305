@@ -1,0 +1,233 @@
+# **EasyCom**
+
+EasyCom is a Python library that simplifies serial communication with devices like **Arduino**, **Raspberry Pi Pico**, and **Teensy**. It offers an easy-to-use, non-blocking interface with automatic device detection and supports manual port specification if needed.  
+
+---
+
+## **Features**
+- **Auto-detect devices** using PID/VID.
+- **Manually specify COM ports** for greater control.
+- **Non-blocking communication** using threads.
+- **Simple API** for sending and receiving data.
+- **Customizable callbacks** for handling incoming data.
+
+---
+
+## **Installation**
+Install EasyCom using pip:
+
+```bash
+pip install pyserial  # Dependency for serial communication
+```
+
+---
+
+## **Usage Examples**
+
+### **Auto-Detect Device Example**
+
+This example shows how to initialize an **Arduino** device and receive data from it using a callback function.
+
+```python
+from easycom.devices import Arduino
+import struct
+
+def handle_data(data):
+    """Callback function to handle incoming data."""
+    value = struct.unpack("<B", data)[0]  # Unpack 1 byte of data
+    print(f"Received: {value}")
+
+# Initialize an Arduino (auto-detect via PID/VID)
+arduino = Arduino(read_size=1, data_handler=handle_data)
+
+# Send data to the device
+arduino.write(b'Hello')
+
+try:
+    while True:
+        pass  # Keep the main thread alive
+except KeyboardInterrupt:
+    arduino.disconnect()  # Gracefully disconnect on exit
+```
+
+### **Manually Specify COM Port**
+
+If auto-detection doesn’t work or you prefer to specify the port manually, you can do so:
+
+```python
+from easycom.devices import Arduino
+
+def handle_data(data):
+    print(f"Received: {data}")
+
+# Manually specify the COM port
+arduino = Arduino(port="COM3", read_size=1, data_handler=handle_data)
+
+arduino.write(b'Hello')
+
+try:
+    while True:
+        pass
+except KeyboardInterrupt:
+    arduino.disconnect()
+```
+
+### **Example with Raspberry Pi Pico**
+
+```python
+from easycom.devices import Pico
+
+def handle_data(data):
+    print(f"Received from Pico: {data}")
+
+pico = Pico(read_size=1, data_handler=handle_data)
+
+try:
+    while True:
+        pass
+except KeyboardInterrupt:
+    pico.disconnect()
+```
+
+---
+
+## **Supported Devices**
+
+The following devices are supported with pre-configured **PID/VID** values for automatic detection:
+
+| Device              | PID/VID               |
+|---------------------|-----------------------|
+| Arduino Uno         | `2341:0043`           |
+| Arduino Mega        | `2341:0010`           |
+| Arduino Nano        | `0403:6001`           |
+| Raspberry Pi Pico   | `2E8A:0005`           |
+| Teensy 3.2          | `16C0:0483`           |
+| Teensy LC           | `16C0:0487`           |
+
+---
+
+## **API Reference**
+
+### **Device Classes**
+- **Arduino**
+- **Pico**
+- **Teensy**
+
+These classes inherit from the `SerialDevice` base class.
+
+### **Methods**
+
+#### **`__init__`**
+Initialize a device.
+
+```python
+device = Arduino(port=None, baudrate=9600, timeout=2, read_size=1, data_handler=None)
+```
+
+- **`port`**: (Optional) Specify the COM port (e.g., `"COM3"` or `"/dev/ttyUSB0"`).
+- **`baudrate`**: Baud rate for communication (default is 9600).
+- **`timeout`**: Timeout for read operations in seconds.
+- **`read_size`**: Number of bytes to read at a time.
+- **`data_handler`**: Callback function for handling incoming data.
+
+#### **`write(data: bytes)`**
+Send data to the device.
+
+```python
+device.write(b'Hello')
+```
+
+#### **`disconnect()`**
+Stop the device communication and disconnect gracefully.
+
+```python
+device.disconnect()
+```
+
+---
+
+## **How it Works**
+
+1. **Auto-detection**: If no port is provided, EasyCom searches for matching devices using their **PID/VID** values.
+2. **Manual Ports**: If you specify a COM port, auto-detection is skipped.
+3. **Background Communication**: All communication happens in a **separate thread**, keeping your main program responsive.
+4. **Callbacks for Data**: Incoming data is passed to your provided **callback function** for easy handling.
+
+---
+
+## **Utils: Port Detection**
+
+You can also use EasyCom’s utility function to detect available ports manually.
+
+```python
+from easycom.utils import detect_ports
+
+# Detect all available ports matching Arduino PID/VIDs
+ports = detect_ports(['2341:0043', '2341:0010'])
+print("Available ports:", ports)
+```
+
+---
+
+## **Project Structure**
+
+```
+easycom/
+├── __init__.py
+├── devices.py           # Arduino, Pico, Teensy classes
+├── serial_device.py     # Base SerialDevice class
+├── utils.py             # Utility functions for port detection
+└── examples/
+    └── main.py          # Example usage script
+```
+
+---
+
+## **Logging**
+
+To enable logging in your project, add the following to your main script:
+
+```python
+import logging
+
+logging.basicConfig(level=logging.INFO)
+```
+
+---
+
+## **Troubleshooting**
+
+- **Device not found**: If your device isn’t detected, try **manually specifying the COM port**.
+- **Permission errors on Linux**: Make sure your user has permission to access the serial port. You may need to add your user to the `dialout` group:
+
+  ```bash
+  sudo usermod -a -G dialout $USER
+  ```
+
+---
+
+## **Contributing**
+
+Contributions are welcome! If you find bugs or want to add support for new devices, feel free to submit a **pull request** or open an **issue** on GitHub.
+
+---
+
+## **License**
+
+This project is licensed under the **MIT License**.
+
+---
+
+## **Author**
+
+Developed with ❤️ by [Your Name].
+
+---
+
+## **Conclusion**
+
+EasyCom makes serial communication with embedded devices simple and efficient. Whether you’re working with Arduino, Raspberry Pi Pico, or Teensy, EasyCom gives you the tools to get started quickly and keep your communication reliable.
+
+---
+
+This **README.md** provides a comprehensive overview of EasyCom, along with examples, usage instructions, and troubleshooting tips. Let me know if you need any further changes!
