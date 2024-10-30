@@ -1,0 +1,11 @@
+snowflow/__init__.py,sha256=GNlMpH2G6v4iXXBNawtP7OpLJKMl8uN5AlPX53rbJPM,98
+snowflow/commands.py,sha256=woh19f-CCq5vz2mq5Gmz961W1aYvqBS81Maladb9nIA,12622
+snowflow/runner.py,sha256=H--34WwFfwmXgLk2xQZBGx_ufOmPYTPFEnONhdJYHAA,9507
+snowflow/scripts.py,sha256=5Xo9LFD2KuIIvnZdeBTQLeNDec2KNAeg57VmtdpOA6M,25660
+snowflow/snowflow.py,sha256=CMN3BnbEkFe4oQ-_miDiiS4PkQduy5lxFhDo9U6p55w,3457
+snowflow-0.0.1.dist-info/LICENSE,sha256=S1pyeLeyW8XSp2To86hT3Xm01rsywhyTP23s3oBAAuQ,1526
+snowflow-0.0.1.dist-info/METADATA,sha256=y1TQU50_TfkvWwo8lqOPFIyxvOctTE8Woer8LR2Ym_g,10975
+snowflow-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+snowflow-0.0.1.dist-info/entry_points.txt,sha256=ZVpdqEh0_oVW2-dCCKEFNmic4psMag-ski3KdKpJXwY,52
+snowflow-0.0.1.dist-info/top_level.txt,sha256=mnoWD6FSLteJDt3FKkZze_ZxPooLelR7OTDpZsTuupY,9
+snowflow-0.0.1.dist-info/RECORD,,
