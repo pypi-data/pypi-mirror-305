@@ -1,0 +1,7 @@
+trulens/providers/huggingface/__init__.py,sha256=BT_O3upTpw3TTvMyUe1DcoGN5md6LcY7mU_Fbn7Sqcs,655
+trulens/providers/huggingface/endpoint.py,sha256=dQjRAKRMd1ZkqQy4g0Mlns6NIjdXkgELdWhKInLc4NQ,3874
+trulens/providers/huggingface/provider.py,sha256=cYkPE0uqFz4xPqSn-a8xyfNGYOGFHnCcvTRh2efs2RU,28089
+trulens/providers/huggingface/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trulens_providers_huggingface-1.2.1.dist-info/METADATA,sha256=a2jzDBlMgYEEQcckn9YZY7OLftm795DUxAh-943e5ik,1223
+trulens_providers_huggingface-1.2.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+trulens_providers_huggingface-1.2.1.dist-info/RECORD,,
