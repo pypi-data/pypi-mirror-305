@@ -1,0 +1,8 @@
+myl-discovery>=0.5.7
+rich<14.0.0,>=13.0.0
+rich-argparse<2.0.0,>=1.5.0
+
+[dev]
+black
+pyinstaller
+mypy
