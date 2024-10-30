@@ -1,0 +1,16 @@
+gosdt-1.0.0.dist-info/RECORD,,
+gosdt-1.0.0.dist-info/WHEEL,sha256=gKRJtQEqBAO8FhVydHmhFAe_5BuVQBqAWrrX0qfnswI,115
+gosdt-1.0.0.dist-info/METADATA,sha256=C6wK9QN4Vi4doC2M7ZTyUU4hLzcjfWO6oiJjDnfZ_qw,19928
+gosdt-1.0.0.dist-info/licenses/LICENSE,sha256=vPMXi8uirFXrM4KmCrYHhIeIbGOzpEyJFGM89T6h2Z4,1651
+gosdt/_version.pyi,sha256=_SugKVz29ikQt78dC8LktA84k9YIaRkFpHD8jGUHMTE,149
+gosdt/_version.py,sha256=DGJ4pj32xs3_DRJhSzQwCiRNnAQrMgo09USYpyMZsKc,411
+gosdt/_classifier.py,sha256=l3nVQn-WP42Eh7gU_2UOeM5uZkl5YIOMnE-xwS4_0o0,22697
+gosdt/_libgosdt.cpython-310-darwin.so,sha256=UmE_QxU6pCheXdoWjYfdaYYk7royVg7eq0WiDuj5Wxc,913552
+gosdt/__init__.py,sha256=ugjbKFJoq-gPZhuu3waE9pEsu0QZUvbqnQoQL2nn_xU,540
+gosdt/_threshold_guessing.py,sha256=u6SOf87NIHnVTTVSEAd7yGyuIw6Ir9llyca039Hbcjw,13892
+gosdt/_binarizer.py,sha256=EW4CvtSAnqcmQhdz4-6L3YpJwUo_09NAZ2G3ty52kK4,15267
+gosdt/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gosdt/_tree.py,sha256=8Q-zumBsz81UsfboFMIfwbI2K2qOLNuHy70M5sMjLSQ,2853
+gosdt/.dylibs/libtbbmalloc.2.13.dylib,sha256=we7u8vKRmWcxLXVGk7Owxa-1x16aRMhNVOCUrJSJfGI,169728
+gosdt/.dylibs/libtbb.12.13.dylib,sha256=vmn-IdemBNl9K7DcR5jFI_DcZYnlY1BZO9-qLWls9mQ,393584
+gosdt/.dylibs/libgmp.10.dylib,sha256=m8enRAEhhHE99e1IpXdHDvOnNThO35TEnW9yiSrrPKI,486272
