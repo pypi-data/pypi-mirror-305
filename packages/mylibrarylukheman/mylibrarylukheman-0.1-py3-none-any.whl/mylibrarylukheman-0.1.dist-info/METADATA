@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: mylibrarylukheman
+Version: 0.1
+Summary: Library sederhana untuk menyapa orang
+Home-page: https://github.com/lukheman/mylibrary
+Author: Lukheman
+Author-email: akmal@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# MyLibrary
+
+Library sederhana untuk menyapa orang
+
+## Instalasi
+
+```
+pip install mylibrary
+```
+
+## Penggunaan
+
+```python
+from mylibrary import say_hello
+
+print(say_hello("Akmal"))
