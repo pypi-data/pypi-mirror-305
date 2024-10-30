@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: image-processing-daniel
+Version: 0.0.1
+Summary: NTT DATA bootcamp
+Home-page: https://github.com/daniel-neves-dev/image-processing-package.git
+Author: Daniel
+Author-email: danielnevesoliveira052@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# image_processing
+
+Description. 
+The package package_name is used to:
+	- 
+	-
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install package_name
+```
+
+## Author
+daniel_oliveira
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
