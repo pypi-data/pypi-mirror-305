@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "v": {"type": "string"},
+        "style": {"type": "string", "enum": ["Monolithic", "Microservices", "Serverless", "Hybrid"]},
+        "components": {
+            "type": "array",
+            "items": {"type": "string"}
+        }
+    },
+    "required": ["v", "style", "components"]
+}
