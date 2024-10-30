@@ -1,0 +1,8 @@
+Version: $next_version
+
+Date: $current_date
+
+Commit Messages:
+```
+$commit_messages
+```
