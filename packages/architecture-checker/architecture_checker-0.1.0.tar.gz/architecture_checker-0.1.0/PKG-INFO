@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: architecture_checker
+Version: 0.1.0
+Summary: A tool to enforce architectural patterns in Django projects
+Home-page: https://github.com/vashkatsi/architecture_checker
+Author: Your Name
+Author-email: armiworker@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/vashkatsi/architecture_checker/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Architecture Checker
+
+A tool to enforce architectural patterns in Django projects.
+
+## Installation
+
+```bash
+pip install architecture_checker
+
