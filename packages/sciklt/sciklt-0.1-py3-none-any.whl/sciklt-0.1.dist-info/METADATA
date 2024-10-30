@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sciklt
+Version: 0.1
+Summary: Dependency for ML based modules
+Author: Anonymus
+Description-Content-Type: text/markdown
+Requires-Dist: networkx
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+
+<p>Dependency for many Artificial Intelligence and machine learning based modules</p>
