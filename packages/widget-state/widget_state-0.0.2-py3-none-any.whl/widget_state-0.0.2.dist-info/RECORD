@@ -1,0 +1,13 @@
+widget_state/__init__.py,sha256=8Q1kRYXZdHL7PvVI93vwrH8DeWdch1FuGo8mZHig_44,725
+widget_state/basic_state.py,sha256=O2M49I0OjpG2dSWjFS4U0MDb_gJFyJMyG3dcPahYg6A,6343
+widget_state/dict_state.py,sha256=k_88j7dmU97GB327GupA9HrqHSXyrZCtcIBETm1qIN8,1778
+widget_state/higher_order_state.py,sha256=gVYnuGDEOezNJxOdB0-cgdnqotfhCUN2Vc7mHs6yXQk,3684
+widget_state/list_state.py,sha256=Stxii1dCD3ldL2nseSL0oikk__RdI_c7sz7SbTqwk98,5910
+widget_state/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+widget_state/state.py,sha256=842ueQ6aLAGaeIy3iHAM0CJZvHlg483oL-Seoohuy-w,3308
+widget_state/types.py,sha256=YI73N9Wmk0HxQ3siAUMNuWsBu_Rfd8XeZnc2diJQV7Y,198
+widget_state/util.py,sha256=8Z12Yjw-EDSR45sMN4ryexM8aoTLk4-LnegLxyNR-t0,1871
+widget_state-0.0.2.dist-info/METADATA,sha256=fjkslpC0I3BnqEnNVa41jBrTjkA-AYvqoh848j9PE1o,745
+widget_state-0.0.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+widget_state-0.0.2.dist-info/licenses/LICENSE,sha256=ETLItrgG0wS5crwT4X5709Bk0ghPREoKHDrDgE82hBk,1070
+widget_state-0.0.2.dist-info/RECORD,,
