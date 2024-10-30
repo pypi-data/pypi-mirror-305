@@ -1,0 +1,158 @@
+Metadata-Version: 2.1
+Name: zinaripay-sdk
+Version: 0.2.9
+Summary: Python SDK for ZinariPay OpenAPI
+Home-page: https://github.com/Ramseyxlil/zinari-sdk
+Author: Abdulrafiu Izuafa
+Author-email: abdulrafiu@techoptimum.org
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# Zinaripay SDK  
+  
+Zinaripay SDK is a Python client library designed to simplify integration with the **ZinariPay OpenAPI**. This SDK allows developers to interact seamlessly with various payment functionalities provided by ZinariPay, such as creating payment links, handling transactions, managing wallets, and more.  
+  
+## Table of Contents  
+- [Features](#features)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+  - [Initialization](#initialization)  
+  - [Creating a Payment Link](#creating-a-payment-link)  
+  - [Creating a Transaction](#creating-a-transaction)  
+  - [Retrieving Transaction Status](#retrieving-transaction-status)  
+  - [Listing Transactions](#listing-transactions)  
+  - [Managing Wallets](#managing-wallets)  
+  - [Withdrawing from Wallet](#withdrawing-from-wallet)  
+  - [Getting Exchange Rates](#getting-exchange-rates)  
+- [Error Handling](#error-handling)  
+- [Contributing](#contributing)  
+- [License](#license)  
+  
+## Features  
+- Create payment links with custom parameters.  
+- Initiate cryptocurrency transactions.  
+- Retrieve transaction details by ID.  
+- List all transactions.  
+- Manage wallet operations.  
+- Withdraw funds from wallets.  
+- Fetch real-time exchange rates between currencies.  
+  
+## Installation  
+To install the Zinaripay SDK, you need to have Python 3.6 or higher installed. You can install the SDK using pip:  
+```bash  
+pip install zinaripay-sdk  
+```  
+  
+Alternatively, you can clone the repository and install it locally:  
+```bash  
+git clone https://github.com/Ramseyxlil/zinaripay-sdk.git  
+cd zinaripay-sdk  
+pip install .  
+```  
+  
+## Usage  
+  
+### Initialization  
+To start using the SDK, you need to initialize it with your API key, which you can obtain from your ZinariPay account.  
+```python  
+from zinaripay_sdk import ZinariPaySDK  
+  
+# Initialize with your API key  
+api_key = "your_api_key"  
+zinari = ZinariPaySDK(api_key)  
+```  
+  
+### Creating a Payment Link  
+To create a payment link, you can use the `get_payment_link` method. This method requires the fiat amount and the notification email.  
+```python  
+payment_link = zinari.get_payment_link(  
+    fiat_amount=80000,  
+    notification_email="example@example.com",  
+    details={"userId": "2445323", "productId": "PR45346t"},  
+    success_redirect_uri="http://localhost:3001",  
+    failure_redirect_uri="http://localhost:3001"  
+)  
+print(payment_link)  
+```  
+  
+### Creating a Transaction  
+To initiate a cryptocurrency transaction, use the `create_transaction` method. Provide the cryptocurrency type, fiat amount, and notification email.  
+```python  
+transaction = zinari.create_transaction(  
+    cryptocurrency="USDT",  
+    fiat_amount=15000,  
+    notification_email="user@example.com",  
+    details={"userId": "lmnopq"}  
+)  
+print(transaction)  
+```  
+  
+### Retrieving Transaction Status  
+You can retrieve the status of a transaction by its ID using the `get_transaction_by_id` method.  
+```python  
+transaction_id = "YOUR_TRANSACTION_ID"  
+transaction_status = zinari.get_transaction_by_id(transaction_id)  
+print(transaction_status)  
+```  
+  
+### Listing Transactions  
+To list transactions, use the `list_transactions` method. You can specify whether to list production or development transactions.  
+```python  
+# List production transactions  
+transactions = zinari.list_transactions(mode="prod")  
+print(transactions)  
+  
+# List development transactions  
+dev_transactions = zinari.list_transactions(mode="dev")  
+print(dev_transactions)  
+```  
+  
+## Managing Wallets  
+You can retrieve all wallets associated with your account using the `get_wallets` method.  
+```python  
+wallets = zinari.get_wallets()  
+print(wallets)  
+```  
+  
+To get details about a specific wallet, use the `get_wallet_by_id` method:  
+```python  
+wallet_id = "YOUR_WALLET_ID"  
+wallet_details = zinari.get_wallet_by_id(wallet_id)  
+print(wallet_details)  
+```  
+  
+### Withdrawing from Wallet  
+To withdraw funds from a wallet, use the `withdraw_from_wallet` method. Provide the wallet ID, amount to withdraw, and destination address.  
+```python  
+withdrawal = zinari.withdraw_from_wallet(wallet_id="YOUR_WALLET_ID", amount=100, address="YOUR_CRYPTO_ADDRESS")  
+print(withdrawal)  
+```  
+  
+### Getting Exchange Rates  
+To fetch the exchange rate between two currencies, use the `get_exchange_rate` method.  
+```python  
+exchange_rate = zinari.get_exchange_rate(from_currency="USD", to_currency="EUR")  
+print(exchange_rate)  
+```  
+  
+## Error Handling  
+The SDK methods return JSON responses that may contain error messages. Ensure to handle exceptions or check for errors in the response.  
+  
+Example of error checking:  
+```python  
+response = zinari.create_transaction(...)  
+if 'error' in response:  
+    print(f"Error: {response['error']}")  
+```  
+  
+## Contributing  
+Contributions are welcome! If you would like to contribute, please fork the repository and submit a pull request.  
+  
+## License  
+This project is licensed under the MIT License. See the LICENSE file for details.  
+  
