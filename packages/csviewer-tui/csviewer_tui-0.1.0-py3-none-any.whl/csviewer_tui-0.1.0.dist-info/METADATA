@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: csviewer-tui
+Version: 0.1.0
+Summary: CSViewer-TUI (cvit)
+Author-email: sou-san <sou887867@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.13
+Requires-Dist: click>=8.1.7
+Requires-Dist: textual-fastdatatable>=0.9.0
+Requires-Dist: textual>=0.85.1
+Description-Content-Type: text/markdown
+
+# CSViewer-TUI (cvit)
+
+CSV Viewer in TUI using Textual and textual-fastdatatable.
+It can also be used in the Linux console.
