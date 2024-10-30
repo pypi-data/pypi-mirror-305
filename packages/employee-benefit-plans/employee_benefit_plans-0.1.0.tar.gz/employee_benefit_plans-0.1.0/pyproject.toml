@@ -1,0 +1,17 @@
+[project]
+name = "employee-benefit-plans"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "lunelson-deloitte", email = "lunelson@deloitte.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "attrs>=24.2.0",
+    "pydantic>=2.9.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
