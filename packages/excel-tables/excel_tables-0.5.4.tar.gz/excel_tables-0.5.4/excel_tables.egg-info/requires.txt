@@ -1,0 +1,14 @@
+pandas
+pydantic
+openpyxl
+rich
+babel
+webcolors
+
+[:sys_platform == "win32"]
+pywin32
+
+[tests]
+pytest
+click
+icecream
