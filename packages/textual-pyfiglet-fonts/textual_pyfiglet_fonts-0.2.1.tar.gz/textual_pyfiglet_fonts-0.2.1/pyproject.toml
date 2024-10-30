@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "textual-pyfiglet-fonts"
+version = "0.2.1"
+description = "The full extended fonts collection packaged as an optional dependency for textual-pyfiglet"
+authors = ["edward-jazzhands <ed.jazzhands@gmail.com>", "Hundreds of contributors who made the fonts"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
