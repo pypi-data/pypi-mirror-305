@@ -1,0 +1,11 @@
+stabiliser_tools-1.0.3.data/purelib/stab_tools/__init__.py,sha256=ji8WU96b3_SRZnHX7R48-z8UA_bl0OhcHf6MAy276XA,2946
+stabiliser_tools-1.0.3.data/purelib/stab_tools/_stab_tools.cp38-win_amd64.pyd,sha256=0LXCwde64BcXpX3QkDZQalvUA9DhiWxEKVUzMIGRv4s,227840
+stabiliser_tools-1.0.3.data/purelib/stab_tools/_stab_tools.exp,sha256=yLYD9Usw5yMn-j8KBUFgfTq2RDA824urEtLrRgCpfOQ,737
+stabiliser_tools-1.0.3.data/purelib/stab_tools/_stab_tools.lib,sha256=Ui_-hxXZjnRwI8dKm-oajjGy0Gn68zyiyvlOfAH9wro,2072
+stabiliser_tools-1.0.3.data/purelib/stab_tools/fast_stabiliser.dll,sha256=i8-bQXZA9bcfyY_xBxrdFnKy8W9bMndLYl8zE57pt8o,104448
+stabiliser_tools-1.0.3.data/purelib/stab_tools/fast_stabiliser.exp,sha256=M2h7vD7G38b7JL38Gewt0Tybdrpax2866HQCQALMMKg,59638
+stabiliser_tools-1.0.3.data/purelib/stab_tools/fast_stabiliser.lib,sha256=8XKtt-54v_WXFeDlcPDGoAfKNbXZuFpPY4hrO-onSp8,100294
+stabiliser_tools-1.0.3.dist-info/METADATA,sha256=_7NKtQsabXCSXt-Aw49qE3VHJG0KwCn9zOxZNeZAULQ,4190
+stabiliser_tools-1.0.3.dist-info/WHEEL,sha256=w_c9dOpAAZpnfYJ_Ft-xCBPW5yPIXAfuDRSG7Fs5oPg,100
+stabiliser_tools-1.0.3.dist-info/top_level.txt,sha256=7RDu_wYhoV5VfIV2Em61aNljzDvR1dT9lUB0Ex64HdA,11
+stabiliser_tools-1.0.3.dist-info/RECORD,,
