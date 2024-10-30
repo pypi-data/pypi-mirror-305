@@ -1,0 +1,16 @@
+gosdt-1.0.0.dist-info/RECORD,,
+gosdt-1.0.0.dist-info/METADATA,sha256=C6wK9QN4Vi4doC2M7ZTyUU4hLzcjfWO6oiJjDnfZ_qw,19928
+gosdt-1.0.0.dist-info/WHEEL,sha256=kTiiq_ty6YfCgVTXDxMfzvIhNXkmkVPizZllzkx1WUM,152
+gosdt-1.0.0.dist-info/licenses/LICENSE,sha256=vPMXi8uirFXrM4KmCrYHhIeIbGOzpEyJFGM89T6h2Z4,1651
+gosdt/_threshold_guessing.py,sha256=u6SOf87NIHnVTTVSEAd7yGyuIw6Ir9llyca039Hbcjw,13892
+gosdt/_classifier.py,sha256=l3nVQn-WP42Eh7gU_2UOeM5uZkl5YIOMnE-xwS4_0o0,22697
+gosdt/_binarizer.py,sha256=EW4CvtSAnqcmQhdz4-6L3YpJwUo_09NAZ2G3ty52kK4,15267
+gosdt/__init__.py,sha256=ugjbKFJoq-gPZhuu3waE9pEsu0QZUvbqnQoQL2nn_xU,540
+gosdt/_libgosdt.cpython-39-x86_64-linux-gnu.so,sha256=Z7xWqpU_4yMo0jaxyukK4prVpQ9djC9CncKBqTjxeL0,1209345
+gosdt/_version.py,sha256=DGJ4pj32xs3_DRJhSzQwCiRNnAQrMgo09USYpyMZsKc,411
+gosdt/_version.pyi,sha256=_SugKVz29ikQt78dC8LktA84k9YIaRkFpHD8jGUHMTE,149
+gosdt/_tree.py,sha256=8Q-zumBsz81UsfboFMIfwbI2K2qOLNuHy70M5sMjLSQ,2853
+gosdt/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gosdt.libs/libtbbmalloc-bec2fa48.so.2.14,sha256=k9WPUiWtBioDCA6mnzRGkUo9bVUnB-tOe8mEKGqPIp0,1464137
+gosdt.libs/libtbb-18a14d63.so.12.14,sha256=0gM42b1o0R1v2q6Kc2vWcpYDzEJ_ayCNoXOzcb1WiAM,5855913
+gosdt.libs/libgmp-af761e89.so.10.5.0,sha256=PG3F0Iq9eIemQjK6NfVt189OI7l7ZhDMI2TrJEyf0YA,564985
