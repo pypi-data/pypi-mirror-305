@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+src/nextgen/__init__.py
+src/nextgen/connector/__init__.py
+src/nextgen/connector/bingapi.py
+src/nextgen_framework_alpha.egg-info/PKG-INFO
+src/nextgen_framework_alpha.egg-info/SOURCES.txt
+src/nextgen_framework_alpha.egg-info/dependency_links.txt
+src/nextgen_framework_alpha.egg-info/top_level.txt

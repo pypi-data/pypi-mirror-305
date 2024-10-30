@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nextgen-framework-alpha
+Version: 0.0.1
+Summary: A Python library for the NextGen framework
+Home-page: https://github.com/yourusername/nextgen-framework
+Author: Your Name
+Author-email: NextGen Team <nextgen@example.com>
+Project-URL: Homepage, https://github.com/yourusername/nextgen-framework
+Project-URL: Documentation, https://github.com/yourusername/nextgen-framework/docs
+Project-URL: Source, https://github.com/yourusername/nextgen-framework
+Project-URL: Tracker, https://github.com/yourusername/nextgen-framework/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

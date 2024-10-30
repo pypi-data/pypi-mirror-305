@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nextgen-framework-alpha"
+version = "0.0.1"
+description = "A Python library for the NextGen framework"
+authors = [
+    { name="NextGen Team", email="nextgen@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/nextgen-framework"
+Documentation = "https://github.com/yourusername/nextgen-framework/docs"
+Source = "https://github.com/yourusername/nextgen-framework"
+Tracker = "https://github.com/yourusername/nextgen-framework/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
