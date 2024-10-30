@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: csa-common-lib
+Version: 2.0.0
+Summary: csa_common_lib is a shared library designed to provide utility modules, class definitions, enumerations, and helper functions for the CSA Prediction Engine Python client. It standardizes and simplifies complex operations across different parts of the CSA Prediction Engine.
+Author: Cambridge Sports Analytics
+Author-email: prediction@csanalytics.io
