@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pandashift
+Version: 1.0.1
+Summary: Module for quick and easy access to redshift using pandas
+Author-email: Maksim Linichenko <maksim.linichenko@yahoo.com>
+Project-URL: Homepage, https://github.com/tumax7/pandashift
+Project-URL: Issues, https://github.com/tumax7/pandashift/issues
+Keywords: redshift,pandas,analytics,amazon
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg
+Requires-Dist: pandas
+
+# pandashift
+Wrapper for working with Amazon Redshift using pandas

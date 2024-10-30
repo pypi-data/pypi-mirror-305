@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/pandashift/__init__.py
+src/pandashift/functions.py
+src/pandashift.egg-info/PKG-INFO
+src/pandashift.egg-info/SOURCES.txt
+src/pandashift.egg-info/dependency_links.txt
+src/pandashift.egg-info/requires.txt
+src/pandashift.egg-info/top_level.txt
