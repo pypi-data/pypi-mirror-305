@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: ragnosis
+Version: 0.1.1
+Summary: LLM-retrieval based knowledge grounding
+Home-page: https://github.com/gkreder/ragnosis
+Author: Gabriel Reder
+Author-email: gkreder <gk@reder.io>
+License: MIT License
+        
+        Copyright (c) 2024 Gabe Reder
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/gkreder/ragnosis
+Project-URL: Source Code, https://github.com/gkreder/ragnosis
+Project-URL: Bug Tracker, https://github.com/gkreder/ragnosis/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: openai<2,>=1.48.0
+Requires-Dist: langchain<0.4,>=0.3.0
+Requires-Dist: streamlit==1.37
+Requires-Dist: beautifulsoup4<5,>=4.12.3
+Requires-Dist: rdflib==7.0.0
+Requires-Dist: langchain-community<0.4,>=0.3.0
+Requires-Dist: langchain-ollama<0.3,>=0.2.0
+Requires-Dist: fastembed<0.4,>=0.3.6
+Requires-Dist: faiss-cpu<2,>=1.8.0.post1
+Requires-Dist: langchain-openai<0.3,>=0.2.0
+Requires-Dist: pymupdf<2,>=1.24.10
+Requires-Dist: sentence-transformers<4,>=3.1.1
+Requires-Dist: langchain-huggingface<0.2,>=0.1.0
+Requires-Dist: langgraph<0.3,>=0.2.34
+Requires-Dist: markdown<4,>=3.7
+Requires-Dist: pdfkit<2,>=1.0.0
+
+# LLM-retrieval based knowledge grounding
+
+# Installation
+
+This project relies on [langchain-rdf](https://github.com/vemonet/langchain-rdf) developed by [Vincent Emonet](https://github.com/vemonet/)
+
+To install langchain-rdf run:
+
+```bash
+pip install git+https://github.com/vemonet/langchain-rdf.git
+```
+
+`ragnosis` can be installed using pip:
+
+```bash
+pip install ragnosis
+```
