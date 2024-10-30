@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: img2webp
+Version: 0.1.0
+Summary: A tool to convert images to WebP format with both GUI and CLI interfaces
+Author-email: "Bert Rico, ByteWise Analytics" <support@bytewise.app>
+License: MIT License
+        
+        Copyright (c) 2024 Bert Rico
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: homepage, https://github.com/bytewise-analytics/img2webp
+Project-URL: issues, https://github.com/bytewise-analytics/img2webp/issues
+Keywords: image,converter,webp,gui,cli
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow>=9.0.0
+Requires-Dist: setuptools>=45
+
+# img2webp
+
+A tool to convert images to WebP format with both GUI and CLI interfaces.
+
+## Features
+
+- Convert multiple images to WebP format
+- Support for HEIC, JPG, JPEG, and PNG formats
+- Adjustable compression/quality level
+- Both GUI and CLI interfaces
+- Progress tracking
+- Batch processing support
+
+## Installation
+
+```bash
+pip install img2webp
+```
+
+## Usage
+
+### Graphical Interface
+
+Run the GUI converter by executing:
+
+```bash
+img2webp
+```
+
+Or in Python:
+
+```python
+from img2webp.gui import main
+main()
+```
+
+### Command Line Interface
+
+The CLI version provides various options for converting images:
+
+```bash
+# Convert a single file
+img2webp-cli input.jpg -o output_dir
+
+# Convert multiple files
+img2webp-cli input1.jpg input2.png -o output_dir
+
+# Set quality level (1-100)
+img2webp-cli input.jpg -o output_dir -q 90
+
+# Convert all supported images in a directory
+img2webp-cli directory/*.jpg -o output_dir
+
+# Enable verbose output
+img2webp-cli input.jpg -o output_dir -v
+```
+
+### Python API
+
+You can also use the package programmatically:
+
+```python
+from img2webp import convert_image, process_files
+
+# Convert a single image
+convert_image("input.jpg", "output.webp", quality=80)
+
+# Convert multiple images
+successful, failed = process_files(
+    ["input1.jpg", "input2.png"],
+    "output_directory",
+    quality=80
+)
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
