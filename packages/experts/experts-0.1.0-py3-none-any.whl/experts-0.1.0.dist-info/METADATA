@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: experts
+Version: 0.1.0
+Summary: Mixture of experts.
+License: MIT
+Author: Matthew Henderson
+Author-email: matthew.james.henderson@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=2.1.2,<3.0.0)
+Description-Content-Type: text/markdown
+
+# experts
+
+Code from the paper:
+[Mixture of Vector Experts](https://link.springer.com/chapter/10.1007/11564089_30) by Henderson, Shawe-Taylor and Žerovnik
+
+
