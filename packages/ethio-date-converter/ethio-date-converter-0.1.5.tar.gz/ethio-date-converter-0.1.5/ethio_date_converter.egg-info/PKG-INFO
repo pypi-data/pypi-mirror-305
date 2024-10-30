@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ethio-date-converter
+Version: 0.1.5
+Summary: Ethiopian date converter.
+Home-page: https://github.com/Yasusync/ethiopian_date_converter
+License: GNU General Public License (GPL), Version 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3
+Provides: ethiopian_date
+Description-Content-Type: text/markdown
+Requires-Dist: six>=1.11.0
+
+# Ethiopian Date Converter
+
+A simple Python package to convert Ethiopian dates to Gregorian dates and vice versa.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install ethio-date-converter
