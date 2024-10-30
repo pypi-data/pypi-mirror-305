@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: image-processing_daniloleone
+Version: 1.0.1
+Summary: Image Processing Package using Skimage
+Author: Danilo Leone
+Project-URL: Homepage, https://github.com/daniloleonecarneiro/dio-python-image-processing-package
+Project-URL: Issues, https://github.com/daniloleonecarneiro/dio-python-image-processing-package/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Image Processing
+
+Description. 
+The package image_processing is used to:
+	Processing:
+		- Histogram Matching
+		- Structural Similarity
+		- Resize Image
+	Utils
+		- Read Image
+		- Save Image
+		- Plot Image
+		- Plot Result
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install image-processing_daniloleone
+```
+
+## Author
+Danilo Leone
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
