@@ -1,0 +1,2 @@
+[console_scripts]
+changelog-manager = changelog_manager.__main__:cli
