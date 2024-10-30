@@ -1,0 +1,44 @@
+---
+# Controlled vocabularies for standardizing the naming of assets.
+gender:
+  male:
+    alt_names:
+      - m
+      - Male
+      - MALE
+  female:
+    alt_names:
+      - f
+      - Female
+      - FEMALE
+pipeline_name:
+  gene-aware:
+    alt_names:
+      - GA
+      - gav4
+      - gav5
+variant_type:
+  CNV:
+    alt_names:
+      - copy number variations
+  SNV:
+    alt_names:
+      - single nucleotide variant
+zygosity:
+  heterozygous:
+    alt_names:
+      - HET
+      - het
+  homozygous:
+    alt_names:
+      - HOM
+      - hom
+  mosaic:
+    alt_names:
+      - MOS
+      - mos
+  hemizygous:
+    alt_names:
+      - HEM
+      - hem
+
