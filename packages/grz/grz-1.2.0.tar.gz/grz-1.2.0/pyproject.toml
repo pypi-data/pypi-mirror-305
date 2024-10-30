@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]  # 构建项目所需依赖
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grz"               # 项目名称
+version = "1.2.0"                         # 项目版本
+description = "This is a widget designed for openGauss Database inspection Tool!"  # 简要描述
+readme = "README.md"                      # 项目的说明文件
+requires-python = ">=3.6"                 # Python版本要求
+license = {text = "License: GPL version 3, excluding DRM provisions"}                  # 许可证
+authors = [{name = "RuiXu", email = "ruixu@std.uestc.edu.cn"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+]
+
+dependencies = [
+    # 示例依赖，如 'requests'
+]
+
+
+[tool.setuptools]
+packages = ["grz", "grz.CommandCollector", "grz.CommandParser", "grz.ErrorHandler"]
+
+[project.scripts]                         # 定义命令行入口
+grz = "grz.grz:main"
+
