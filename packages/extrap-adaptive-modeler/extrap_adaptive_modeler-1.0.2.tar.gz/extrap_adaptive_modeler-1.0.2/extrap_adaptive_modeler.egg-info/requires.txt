@@ -1,0 +1,9 @@
+extrap~=4.2
+importlib-resources>=6.1.1
+
+[:python_version < "3.9"]
+tensorflow~=2.9
+
+[:python_version >= "3.9"]
+tensorflow~=2.14
+tf_keras~=2.14
