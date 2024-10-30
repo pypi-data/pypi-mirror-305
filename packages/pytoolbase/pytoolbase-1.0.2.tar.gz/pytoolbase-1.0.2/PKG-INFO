@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pytoolbase
+Version: 1.0.2
+Summary: Python Utility Collection
+Keywords: utilities,decorator,retry,synchronize
+Author: Michael Minichino
+Author-email: info@unix.us.com
+Requires-Python: >=3.8,<4
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Project-URL: Homepage, https://github.com/mminichino/pytoolbase
+Description-Content-Type: text/markdown
+
+# pytoolbase 1.0.2
+
+## Installing
+```
+$ pip install pytoolbase
+```
+
