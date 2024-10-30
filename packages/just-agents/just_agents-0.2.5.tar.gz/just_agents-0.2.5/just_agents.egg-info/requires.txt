@@ -1,0 +1,10 @@
+litellm>=1.51.0
+numpydoc
+requests
+typer>=0.12.5
+
+[coding]
+llm-sandbox>=0.1.2
+
+[tools]
+semanticscholar>=0.8.4
