@@ -1,0 +1,9 @@
+.devcontainer
+.github
+.venv
+.vscode
+htmlcov
+logs
+coverage.xml
+notebooks
+
