@@ -1,0 +1,7 @@
+README.md
+setup.py
+bp_event_publisher.egg-info/PKG-INFO
+bp_event_publisher.egg-info/SOURCES.txt
+bp_event_publisher.egg-info/dependency_links.txt
+bp_event_publisher.egg-info/top_level.txt
+confussion/__init__.py
