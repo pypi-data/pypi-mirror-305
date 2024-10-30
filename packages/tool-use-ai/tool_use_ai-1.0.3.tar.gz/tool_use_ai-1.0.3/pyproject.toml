@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "tool-use-ai"
+version = "1.0.3"
+description = "Tools to simplify life with AI"
+authors = ["Ty Fiero <tyfierodev@gmail.com>", "Mike Bird <tooluseai@gmail.com>"]
+readme = "README.md"
+packages = [{include = "tool_use", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+feedparser = "^6.0.11"
+rich = "^13.9.2"
+prompt-toolkit = "^3.0.48"
+inquirer = "^3.4.0"
+anthropic = "^0.21.0"
+ollama = "^0.1.6"
+groq = "0.11.0"
+tomli = "^2.0.2"
+tomli-w = "^1.1.0"
+sounddevice = "^0.5.1"
+soundfile = "^0.12.1"
+google-auth-oauthlib = "^1.0.0"
+pynput = "^1.7.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/ToolUse/tool-use-ai"
+"Bug Tracker" = "https://github.com/ToolUse/tool-use-ai/issues"
+
+[tool.poetry.scripts]
+ai = "tool_use.cli:main"
+tooluse = "tool_use.tooluse.cli:main"
