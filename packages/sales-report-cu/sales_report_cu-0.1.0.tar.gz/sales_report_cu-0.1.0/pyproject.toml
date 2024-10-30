@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sales_report_cu"
+version = "0.1.0"
+description = "Пакет для генерации отчета о продажах по категориям"
+authors = [
+    { name="Egor", email="drobyazko_04@mail.ru" }
+]
+dependencies = ["pandas"]
