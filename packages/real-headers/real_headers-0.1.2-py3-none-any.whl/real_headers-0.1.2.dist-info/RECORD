@@ -1,0 +1,10 @@
+real_headers/__init__.py,sha256=6doQ_RGvOhJMsrg_MO2HFSbu4Q6MBIXYHJopJR-ZFxQ,714
+real_headers/cli.py,sha256=rop5rkM8n-nnfVlAO1LdGZO4WxUaqlUh6sYR2bMvRmQ,288
+real_headers/headers.py,sha256=eJ4PFT092BTXGO7GspmK6TH4yYvyFTusXt2o8TmyMmM,1823
+real_headers/user_agents.py,sha256=c088o71G_u0BnHlJI9xQRs6fz_MEPjVbNPoYR1zFt8k,526889
+real_headers-0.1.2.dist-info/LICENSE,sha256=ygyE0t8XbgtIriyHUYuKP9-f0p3TmJeXtT5CNYf--ZI,1071
+real_headers-0.1.2.dist-info/METADATA,sha256=MgFjGm1xJUOZjmWvhqm0-aWKBAZOocuo_FK61B3MctY,3563
+real_headers-0.1.2.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+real_headers-0.1.2.dist-info/entry_points.txt,sha256=GqlkiiSkw8uk0Pk-oPKAdf2VrnxT0jYMObpIl7joIPY,210
+real_headers-0.1.2.dist-info/top_level.txt,sha256=5XO8dOoJc5L0aPBjTQOKfaf6we_H1xg-ZogNj_QRvr0,13
+real_headers-0.1.2.dist-info/RECORD,,
