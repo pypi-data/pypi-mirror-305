@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>hatch.env.virtual.VirtualEnvironment &#8212; Project name not set  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="hatch.errors" href="../hatch.errors/" />
+    <link rel="prev" title="hatch.env.virtual" href="../hatch.env.virtual/" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="hatch-env-virtual-virtualenvironment">
+<h1>hatch.env.virtual.VirtualEnvironment<a class="headerlink" href="#hatch-env-virtual-virtualenvironment" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hatch.env.virtual.</span></span><span class="sig-name descname"><span class="pre">VirtualEnvironment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../hatch.env.plugin.interface.EnvironmentInterface/#hatch.env.plugin.interface.EnvironmentInterface" title="hatch.env.plugin.interface.EnvironmentInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnvironmentInterface</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.__init__" title="hatch.env.virtual.VirtualEnvironment.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*args, **kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.activate" title="hatch.env.virtual.VirtualEnvironment.activate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">activate</span></code></a>()</p></td>
+<td><p>A convenience method called when using the environment as a context manager:</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_creation" title="hatch.env.virtual.VirtualEnvironment.app_status_creation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app_status_creation</span></code></a>()</p></td>
+<td><p>See the [life cycle of environments](reference.md#life-cycle).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_dependency_installation_check" title="hatch.env.virtual.VirtualEnvironment.app_status_dependency_installation_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app_status_dependency_installation_check</span></code></a>()</p></td>
+<td><p>See the [life cycle of environments](reference.md#life-cycle).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_dependency_state_check" title="hatch.env.virtual.VirtualEnvironment.app_status_dependency_state_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app_status_dependency_state_check</span></code></a>()</p></td>
+<td><p>See the [life cycle of environments](reference.md#life-cycle).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_dependency_synchronization" title="hatch.env.virtual.VirtualEnvironment.app_status_dependency_synchronization"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app_status_dependency_synchronization</span></code></a>()</p></td>
+<td><p>See the [life cycle of environments](reference.md#life-cycle).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_post_installation" title="hatch.env.virtual.VirtualEnvironment.app_status_post_installation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app_status_post_installation</span></code></a>()</p></td>
+<td><p>See the [life cycle of environments](reference.md#life-cycle).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_pre_installation" title="hatch.env.virtual.VirtualEnvironment.app_status_pre_installation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app_status_pre_installation</span></code></a>()</p></td>
+<td><p>See the [life cycle of environments](reference.md#life-cycle).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_project_installation" title="hatch.env.virtual.VirtualEnvironment.app_status_project_installation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app_status_project_installation</span></code></a>()</p></td>
+<td><p>See the [life cycle of environments](reference.md#life-cycle).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_context</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.apply_features" title="hatch.env.virtual.VirtualEnvironment.apply_features"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_features</span></code></a>(requirement)</p></td>
+<td><p>A convenience method that applies any user defined [features](../../config/environment/overview.md#features) to the given requirement.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.check_compatibility" title="hatch.env.virtual.VirtualEnvironment.check_compatibility"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_compatibility</span></code></a>()</p></td>
+<td><p>This raises an exception if the environment is not compatible with the user's setup.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.command_context" title="hatch.env.virtual.VirtualEnvironment.command_context"><code class="xref py py-obj docutils literal notranslate"><span class="pre">command_context</span></code></a>()</p></td>
+<td><p>A context manager that when active should make executed shell commands reflect any [environment variables](reference.md#hatch.env.plugin.interface.EnvironmentInterface.get_env_vars) the user defined either currently or at the time of [creation](reference.md#hatch.env.plugin.interface.EnvironmentInterface.create).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.construct_pip_install_command" title="hatch.env.virtual.VirtualEnvironment.construct_pip_install_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_pip_install_command</span></code></a>(args)</p></td>
+<td><p>A convenience method for constructing a [<cite>pip install</cite>](<a class="reference external" href="https://pip.pypa.io/en/stable/cli/pip_install/">https://pip.pypa.io/en/stable/cli/pip_install/</a>) command with the given verbosity.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.create" title="hatch.env.virtual.VirtualEnvironment.create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.deactivate" title="hatch.env.virtual.VirtualEnvironment.deactivate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deactivate</span></code></a>()</p></td>
+<td><p>A convenience method called after using the environment as a context manager:</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.dependencies_in_sync" title="hatch.env.virtual.VirtualEnvironment.dependencies_in_sync"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dependencies_in_sync</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.dependency_hash" title="hatch.env.virtual.VirtualEnvironment.dependency_hash"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dependency_hash</span></code></a>()</p></td>
+<td><p>This should return a hash of the environment's [dependencies](reference.md#hatch.env.plugin.interface.EnvironmentInterface.dependencies) and any other data that is handled by the [sync_dependencies](reference.md#hatch.env.plugin.interface.EnvironmentInterface.sync_dependencies) and [dependencies_in_sync](reference.md#hatch.env.plugin.interface.EnvironmentInterface.dependencies_in_sync) methods.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.enter_shell" title="hatch.env.virtual.VirtualEnvironment.enter_shell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enter_shell</span></code></a>(name, path, args)</p></td>
+<td><p>Spawn a [shell](../../config/hatch.md#shell) within the environment.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.exists" title="hatch.env.virtual.VirtualEnvironment.exists"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exists</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">expand_command</span></code>(command)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">expose_uv</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.find" title="hatch.env.virtual.VirtualEnvironment.find"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.fs_context" title="hatch.env.virtual.VirtualEnvironment.fs_context"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fs_context</span></code></a>()</p></td>
+<td><p>A context manager that must yield a subclass of [FileSystemContext](../utilities.md#hatch.env.plugin.interface.FileSystemContext).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.get_context" title="hatch.env.virtual.VirtualEnvironment.get_context"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_context</span></code></a>()</p></td>
+<td><p>Returns a subclass of [EnvironmentContextFormatter](../utilities.md#hatch.env.context.EnvironmentContextFormatter).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.get_env_var_option" title="hatch.env.virtual.VirtualEnvironment.get_env_var_option"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_env_var_option</span></code></a>(option)</p></td>
+<td><p>Returns the value of the upper-cased environment variable <cite>HATCH_ENV_TYPE_&lt;PLUGIN_NAME&gt;_&lt;option&gt;</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.get_env_vars" title="hatch.env.virtual.VirtualEnvironment.get_env_vars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_env_vars</span></code></a>()</p></td>
+<td><p>Returns a mapping of environment variables that should be available to the environment.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_interpreter_resolver_env</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.get_option_types" title="hatch.env.virtual.VirtualEnvironment.get_option_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_option_types</span></code></a>()</p></td>
+<td><p>Returns a mapping of supported options to their respective types so that they can be used by [overrides](../../config/environment/advanced.md#option-overrides).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.install_project" title="hatch.env.virtual.VirtualEnvironment.install_project"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_project</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.install_project_dev_mode" title="hatch.env.virtual.VirtualEnvironment.install_project_dev_mode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_project_dev_mode</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.join_command_args" title="hatch.env.virtual.VirtualEnvironment.join_command_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">join_command_args</span></code></a>(args)</p></td>
+<td><p>This is used by the [<cite>run</cite>](../../cli/reference.md#hatch-run) command to construct the root command string from the received arguments.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.remove" title="hatch.env.virtual.VirtualEnvironment.remove"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.resolve_commands" title="hatch.env.virtual.VirtualEnvironment.resolve_commands"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_commands</span></code></a>(commands)</p></td>
+<td><p>This expands each command into one or more commands based on any [scripts](../../config/environment/overview.md#scripts) that the user defined.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.run_shell_command" title="hatch.env.virtual.VirtualEnvironment.run_shell_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_shell_command</span></code></a>(command, **kwargs)</p></td>
+<td><p>This should return the standard library's [subprocess.CompletedProcess](<a class="reference external" href="https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess">https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess</a>) and will always be called when the [command_context](reference.md#hatch.env.plugin.interface.EnvironmentInterface.command_context) is active, with the expectation of providing the same guarantee.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">safe_activation</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.sync_dependencies" title="hatch.env.virtual.VirtualEnvironment.sync_dependencies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sync_dependencies</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">upgrade_possible_internal_python</span></code>(python_path)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.PLUGIN_NAME" title="hatch.env.virtual.VirtualEnvironment.PLUGIN_NAME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PLUGIN_NAME</span></code></a></p></td>
+<td><p>The name used for selection.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app" title="hatch.env.virtual.VirtualEnvironment.app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app</span></code></a></p></td>
+<td><p>An instance of [Application](../utilities.md#hatchling.bridge.app.Application).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.builder" title="hatch.env.virtual.VirtualEnvironment.builder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">builder</span></code></a></p></td>
+<td><p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>toml config-example [tool.hatch.envs.&lt;ENV_NAME&gt;] builder = .</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.config" title="hatch.env.virtual.VirtualEnvironment.config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span> <span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;]</span> <span class="pre">`</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">context</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.data_directory" title="hatch.env.virtual.VirtualEnvironment.data_directory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data_directory</span></code></a></p></td>
+<td><p>The [directory](../../config/hatch.md#environments) this plugin should use for storage as a path-like object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.dependencies" title="hatch.env.virtual.VirtualEnvironment.dependencies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dependencies</span></code></a></p></td>
+<td><p>The list of all [project dependencies](../../config/metadata.md#dependencies) (if [installed](../../config/environment/overview.md#skip-install) and in [dev mode](../../config/environment/overview.md#dev-mode)), selected [optional dependencies](../../config/environment/overview.md#features), and [environment dependencies](../../config/environment/overview.md#dependencies).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dependencies_complex</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.description" title="hatch.env.virtual.VirtualEnvironment.description"><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></a></p></td>
+<td><p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a>toml config-example [tool.hatch.envs.&lt;ENV_NAME&gt;] description = .</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.dev_mode" title="hatch.env.virtual.VirtualEnvironment.dev_mode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dev_mode</span></code></a></p></td>
+<td><p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>toml config-example [tool.hatch.envs.&lt;ENV_NAME&gt;] dev-mode = .</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.env_exclude" title="hatch.env.virtual.VirtualEnvironment.env_exclude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">env_exclude</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span> <span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;]</span> <span class="pre">env-exclude</span> <span class="pre">=</span> <span class="pre">[...]</span> <span class="pre">`</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.env_include" title="hatch.env.virtual.VirtualEnvironment.env_include"><code class="xref py py-obj docutils literal notranslate"><span class="pre">env_include</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span> <span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;]</span> <span class="pre">env-include</span> <span class="pre">=</span> <span class="pre">[...]</span> <span class="pre">`</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.env_vars" title="hatch.env.virtual.VirtualEnvironment.env_vars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">env_vars</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span> <span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;.env-vars]</span> <span class="pre">`</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.environment_dependencies" title="hatch.env.virtual.VirtualEnvironment.environment_dependencies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">environment_dependencies</span></code></a></p></td>
+<td><p>The list of all [environment dependencies](../../config/environment/overview.md#dependencies).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">environment_dependencies_complex</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">explicit_uv_path</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">features</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">installer</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.isolated_data_directory" title="hatch.env.virtual.VirtualEnvironment.isolated_data_directory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isolated_data_directory</span></code></a></p></td>
+<td><p>The default [directory](../../config/hatch.md#environments) reserved exclusively for this plugin as a path-like object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">matrix_variables</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">metadata</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.name" title="hatch.env.virtual.VirtualEnvironment.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p>The name of the environment.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent_python</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.pathsep" title="hatch.env.virtual.VirtualEnvironment.pathsep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathsep</span></code></a></p></td>
+<td><p>The character used to separate paths.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.platform" title="hatch.env.virtual.VirtualEnvironment.platform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">platform</span></code></a></p></td>
+<td><p>An instance of [Platform](../utilities.md#hatch.utils.platform.Platform).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.platforms" title="hatch.env.virtual.VirtualEnvironment.platforms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">platforms</span></code></a></p></td>
+<td><p>All names are stored as their lower-cased version.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">post_install_commands</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pre_install_commands</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.project_root" title="hatch.env.virtual.VirtualEnvironment.project_root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_root</span></code></a></p></td>
+<td><p>The root of the project tree as a string.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">python_manager</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.root" title="hatch.env.virtual.VirtualEnvironment.root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">root</span></code></a></p></td>
+<td><p>The root of the local project tree as a path-like object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scripts</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.sep" title="hatch.env.virtual.VirtualEnvironment.sep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sep</span></code></a></p></td>
+<td><p>The character used to separate directories in paths.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.skip_install" title="hatch.env.virtual.VirtualEnvironment.skip_install"><code class="xref py py-obj docutils literal notranslate"><span class="pre">skip_install</span></code></a></p></td>
+<td><p><a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a>toml config-example [tool.hatch.envs.&lt;ENV_NAME&gt;] skip-install = .</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">system_python</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">use_uv</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">uv_path</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">verbosity</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">virtual_env_cls</span></code></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.PLUGIN_NAME">
+<span class="sig-name descname"><span class="pre">PLUGIN_NAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'virtual'</span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.PLUGIN_NAME" title="Link to this definition">¶</a></dt>
+<dd><p>The name used for selection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.activate">
+<span class="sig-name descname"><span class="pre">activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.activate" title="Link to this definition">¶</a></dt>
+<dd><p>A convenience method called when using the environment as a context manager:</p>
+<p><a href="#id17"><span class="problematic" id="id18">``</span></a><a href="#id19"><span class="problematic" id="id20">`</span></a>python
+with environment:</p>
+<blockquote>
+<div><p>…</p>
+</div></blockquote>
+<p><a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.app">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">app</span></span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.app" title="Link to this definition">¶</a></dt>
+<dd><p>An instance of [Application](../utilities.md#hatchling.bridge.app.Application).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.app_status_creation">
+<span class="sig-name descname"><span class="pre">app_status_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.app_status_creation" title="Link to this definition">¶</a></dt>
+<dd><p>See the [life cycle of environments](reference.md#life-cycle).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.app_status_dependency_installation_check">
+<span class="sig-name descname"><span class="pre">app_status_dependency_installation_check</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.app_status_dependency_installation_check" title="Link to this definition">¶</a></dt>
+<dd><p>See the [life cycle of environments](reference.md#life-cycle).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.app_status_dependency_state_check">
+<span class="sig-name descname"><span class="pre">app_status_dependency_state_check</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.app_status_dependency_state_check" title="Link to this definition">¶</a></dt>
+<dd><p>See the [life cycle of environments](reference.md#life-cycle).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.app_status_dependency_synchronization">
+<span class="sig-name descname"><span class="pre">app_status_dependency_synchronization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.app_status_dependency_synchronization" title="Link to this definition">¶</a></dt>
+<dd><p>See the [life cycle of environments](reference.md#life-cycle).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.app_status_post_installation">
+<span class="sig-name descname"><span class="pre">app_status_post_installation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.app_status_post_installation" title="Link to this definition">¶</a></dt>
+<dd><p>See the [life cycle of environments](reference.md#life-cycle).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.app_status_pre_installation">
+<span class="sig-name descname"><span class="pre">app_status_pre_installation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.app_status_pre_installation" title="Link to this definition">¶</a></dt>
+<dd><p>See the [life cycle of environments](reference.md#life-cycle).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.app_status_project_installation">
+<span class="sig-name descname"><span class="pre">app_status_project_installation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.app_status_project_installation" title="Link to this definition">¶</a></dt>
+<dd><p>See the [life cycle of environments](reference.md#life-cycle).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.apply_features">
+<span class="sig-name descname"><span class="pre">apply_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">requirement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.apply_features" title="Link to this definition">¶</a></dt>
+<dd><p>A convenience method that applies any user defined [features](../../config/environment/overview.md#features)
+to the given requirement.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.builder">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">builder</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.builder" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span>
+<span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;]</span>
+<span class="pre">builder</span> <span class="pre">=</span> <span class="pre">...</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.check_compatibility">
+<span class="sig-name descname"><span class="pre">check_compatibility</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.check_compatibility" title="Link to this definition">¶</a></dt>
+<dd><p>This raises an exception if the environment is not compatible with the user’s setup. The default behavior
+checks for [platform compatibility](../../config/environment/overview.md#supported-platforms)
+and any method override should keep this check.</p>
+<p>This check is never performed if the environment has been
+[created](reference.md#hatch.env.plugin.interface.EnvironmentInterface.create).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.command_context">
+<span class="sig-name descname"><span class="pre">command_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.command_context" title="Link to this definition">¶</a></dt>
+<dd><p>A context manager that when active should make executed shell commands reflect any
+[environment variables](reference.md#hatch.env.plugin.interface.EnvironmentInterface.get_env_vars)
+the user defined either currently or at the time of
+[creation](reference.md#hatch.env.plugin.interface.EnvironmentInterface.create).</p>
+<p>For an example, open the default implementation below:</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.config">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.config" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span>
+<span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;]</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.construct_pip_install_command">
+<span class="sig-name descname"><span class="pre">construct_pip_install_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.construct_pip_install_command" title="Link to this definition">¶</a></dt>
+<dd><p>A convenience method for constructing a [<cite>pip install</cite>](<a class="reference external" href="https://pip.pypa.io/en/stable/cli/pip_install/">https://pip.pypa.io/en/stable/cli/pip_install/</a>)
+command with the given verbosity. The default verbosity is set to one less than Hatch’s verbosity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.create" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Material-align-horizontal-left<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>REQUIRED</strong> :material-align-horizontal-right:</p>
+</dd>
+</dl>
+<p>This should perform the necessary steps to set up the environment.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.data_directory">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data_directory</span></span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.data_directory" title="Link to this definition">¶</a></dt>
+<dd><p>The [directory](../../config/hatch.md#environments) this plugin should use for storage as a path-like object.
+If the user has not configured one then this will be the same as the
+[isolated data directory](reference.md#hatch.env.plugin.interface.EnvironmentInterface.isolated_data_directory).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.deactivate">
+<span class="sig-name descname"><span class="pre">deactivate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.deactivate" title="Link to this definition">¶</a></dt>
+<dd><p>A convenience method called after using the environment as a context manager:</p>
+<p><a href="#id25"><span class="problematic" id="id26">``</span></a><a href="#id27"><span class="problematic" id="id28">`</span></a>python
+with environment:</p>
+<blockquote>
+<div><p>…</p>
+</div></blockquote>
+<p><a href="#id29"><span class="problematic" id="id30">``</span></a><a href="#id31"><span class="problematic" id="id32">`</span></a></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.dependencies">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.dependencies" title="Link to this definition">¶</a></dt>
+<dd><p>The list of all [project dependencies](../../config/metadata.md#dependencies) (if
+[installed](../../config/environment/overview.md#skip-install) and in
+[dev mode](../../config/environment/overview.md#dev-mode)), selected
+[optional dependencies](../../config/environment/overview.md#features), and
+[environment dependencies](../../config/environment/overview.md#dependencies).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.dependencies_in_sync">
+<span class="sig-name descname"><span class="pre">dependencies_in_sync</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.dependencies_in_sync" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Material-align-horizontal-left<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>REQUIRED</strong> :material-align-horizontal-right:</p>
+</dd>
+</dl>
+<p>This should indicate whether or not the environment is compatible with the current
+[dependencies](reference.md#hatch.env.plugin.interface.EnvironmentInterface.dependencies).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.dependency_hash">
+<span class="sig-name descname"><span class="pre">dependency_hash</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.dependency_hash" title="Link to this definition">¶</a></dt>
+<dd><p>This should return a hash of the environment’s
+[dependencies](reference.md#hatch.env.plugin.interface.EnvironmentInterface.dependencies)
+and any other data that is handled by the
+[sync_dependencies](reference.md#hatch.env.plugin.interface.EnvironmentInterface.sync_dependencies)
+and
+[dependencies_in_sync](reference.md#hatch.env.plugin.interface.EnvironmentInterface.dependencies_in_sync)
+methods.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.description">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.description" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span>
+<span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;]</span>
+<span class="pre">description</span> <span class="pre">=</span> <span class="pre">...</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.dev_mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dev_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.dev_mode" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span>
+<span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;]</span>
+<span class="pre">dev-mode</span> <span class="pre">=</span> <span class="pre">...</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.enter_shell">
+<span class="sig-name descname"><span class="pre">enter_shell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.enter_shell" title="Link to this definition">¶</a></dt>
+<dd><p>Spawn a [shell](../../config/hatch.md#shell) within the environment.</p>
+<p>This should either use
+[command_context](reference.md#hatch.env.plugin.interface.EnvironmentInterface.command_context)
+directly or provide the same guarantee.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.env_exclude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">env_exclude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.env_exclude" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span>
+<span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;]</span>
+<span class="pre">env-exclude</span> <span class="pre">=</span> <span class="pre">[...]</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.env_include">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">env_include</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.env_include" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span>
+<span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;]</span>
+<span class="pre">env-include</span> <span class="pre">=</span> <span class="pre">[...]</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.env_vars">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">env_vars</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.env_vars" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span>
+<span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;.env-vars]</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.environment_dependencies">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">environment_dependencies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.environment_dependencies" title="Link to this definition">¶</a></dt>
+<dd><p>The list of all [environment dependencies](../../config/environment/overview.md#dependencies).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.exists">
+<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.exists" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Material-align-horizontal-left<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>REQUIRED</strong> :material-align-horizontal-right:</p>
+</dd>
+</dl>
+<p>This should indicate whether or not the environment has already been created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.find">
+<span class="sig-name descname"><span class="pre">find</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.find" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Material-align-horizontal-left<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>REQUIRED</strong> :material-align-horizontal-right:</p>
+</dd>
+</dl>
+<p>This should return information about how to locate the environment or represent its ID in
+some way. Additionally, this is expected to return something even if the environment is
+[incompatible](reference.md#hatch.env.plugin.interface.EnvironmentInterface.check_compatibility).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.fs_context">
+<span class="sig-name descname"><span class="pre">fs_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Generator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../hatch.env.plugin.interface.FileSystemContext/#hatch.env.plugin.interface.FileSystemContext" title="hatch.env.plugin.interface.FileSystemContext"><span class="pre">FileSystemContext</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.fs_context" title="Link to this definition">¶</a></dt>
+<dd><p>A context manager that must yield a subclass of
+[FileSystemContext](../utilities.md#hatch.env.plugin.interface.FileSystemContext).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.get_context">
+<span class="sig-name descname"><span class="pre">get_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.get_context" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a subclass of
+[EnvironmentContextFormatter](../utilities.md#hatch.env.context.EnvironmentContextFormatter).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.get_env_var_option">
+<span class="sig-name descname"><span class="pre">get_env_var_option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.get_env_var_option" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the value of the upper-cased environment variable <cite>HATCH_ENV_TYPE_&lt;PLUGIN_NAME&gt;_&lt;option&gt;</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.get_env_vars">
+<span class="sig-name descname"><span class="pre">get_env_vars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../hatch.utils.structures.EnvVars/#hatch.utils.structures.EnvVars" title="hatch.utils.structures.EnvVars"><span class="pre">EnvVars</span></a></span></span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.get_env_vars" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a mapping of environment variables that should be available to the environment. The object can
+be used as a context manager to temporarily apply the environment variables to the current process.</p>
+<dl class="simple">
+<dt>!!! note</dt><dd><p>The environment variable <cite>HATCH_ENV_ACTIVE</cite> will always be set to the name of the environment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.get_option_types">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_option_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.get_option_types" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a mapping of supported options to their respective types so that they can be used by
+[overrides](../../config/environment/advanced.md#option-overrides).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.install_project">
+<span class="sig-name descname"><span class="pre">install_project</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.install_project" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Material-align-horizontal-left<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>REQUIRED</strong> :material-align-horizontal-right:</p>
+</dd>
+</dl>
+<p>This should install the project in the environment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.install_project_dev_mode">
+<span class="sig-name descname"><span class="pre">install_project_dev_mode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.install_project_dev_mode" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Material-align-horizontal-left<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>REQUIRED</strong> :material-align-horizontal-right:</p>
+</dd>
+</dl>
+<p>This should install the project in the environment such that the environment
+always reflects the current state of the project.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.isolated_data_directory">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isolated_data_directory</span></span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.isolated_data_directory" title="Link to this definition">¶</a></dt>
+<dd><p>The default [directory](../../config/hatch.md#environments) reserved exclusively for this plugin as a path-like
+object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.join_command_args">
+<span class="sig-name descname"><span class="pre">join_command_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.join_command_args" title="Link to this definition">¶</a></dt>
+<dd><p>This is used by the [<cite>run</cite>](../../cli/reference.md#hatch-run) command to construct the root command string
+from the received arguments.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.name" title="Link to this definition">¶</a></dt>
+<dd><p>The name of the environment.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.pathsep">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pathsep</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.pathsep" title="Link to this definition">¶</a></dt>
+<dd><p>The character used to separate paths. By default, this is <cite>;</cite> on Windows and <cite>:</cite> otherwise.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.platform">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.platform" title="Link to this definition">¶</a></dt>
+<dd><p>An instance of [Platform](../utilities.md#hatch.utils.platform.Platform).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.platforms">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">platforms</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.platforms" title="Link to this definition">¶</a></dt>
+<dd><p>All names are stored as their lower-cased version.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span>
+<span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;]</span>
+<span class="pre">platforms</span> <span class="pre">=</span> <span class="pre">[...]</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.project_root">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">project_root</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.project_root" title="Link to this definition">¶</a></dt>
+<dd><p>The root of the project tree as a string. If the environment is not running locally,
+this should be the remote path to the project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.remove" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Material-align-horizontal-left<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>REQUIRED</strong> :material-align-horizontal-right:</p>
+</dd>
+</dl>
+<p>This should perform the necessary steps to completely remove the environment from the system and will only
+be triggered manually by users with the [<cite>env remove</cite>](../../cli/reference.md#hatch-env-remove) or
+[<cite>env prune</cite>](../../cli/reference.md#hatch-env-prune) commands.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.resolve_commands">
+<span class="sig-name descname"><span class="pre">resolve_commands</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.resolve_commands" title="Link to this definition">¶</a></dt>
+<dd><p>This expands each command into one or more commands based on any
+[scripts](../../config/environment/overview.md#scripts) that the user defined.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.root">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">root</span></span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.root" title="Link to this definition">¶</a></dt>
+<dd><p>The root of the local project tree as a path-like object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.run_shell_command">
+<span class="sig-name descname"><span class="pre">run_shell_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.run_shell_command" title="Link to this definition">¶</a></dt>
+<dd><p>This should return the standard library’s
+[subprocess.CompletedProcess](<a class="reference external" href="https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess">https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess</a>)
+and will always be called when the
+[command_context](reference.md#hatch.env.plugin.interface.EnvironmentInterface.command_context)
+is active, with the expectation of providing the same guarantee.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.sep">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sep</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.sep" title="Link to this definition">¶</a></dt>
+<dd><p>The character used to separate directories in paths. By default, this is <cite>` on Windows and `/</cite> otherwise.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.skip_install">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">skip_install</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.skip_install" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">`toml</span> <span class="pre">config-example</span>
+<span class="pre">[tool.hatch.envs.&lt;ENV_NAME&gt;]</span>
+<span class="pre">skip-install</span> <span class="pre">=</span> <span class="pre">...</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hatch.env.virtual.VirtualEnvironment.sync_dependencies">
+<span class="sig-name descname"><span class="pre">sync_dependencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hatch.env.virtual.VirtualEnvironment.sync_dependencies" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Material-align-horizontal-left<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>REQUIRED</strong> :material-align-horizontal-right:</p>
+</dd>
+</dl>
+<p>This should install the
+[dependencies](reference.md#hatch.env.plugin.interface.EnvironmentInterface.dependencies)
+in the environment.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../">Project name not set</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../hatch/">hatch</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../hatch.config/">hatch.config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.dep/">hatch.dep</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../hatch.env/">hatch.env</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../hatch.env.collectors/">hatch.env.collectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.env.internal/">hatch.env.internal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.env.plugin/">hatch.env.plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.env.system/">hatch.env.system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hatch.env.utils/">hatch.env.utils</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../hatch.env.virtual/">hatch.env.virtual</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">hatch.env.virtual.VirtualEnvironment</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.__init__"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.PLUGIN_NAME"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.PLUGIN_NAME</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.activate"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.activate()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.app</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_creation"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.app_status_creation()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_dependency_installation_check"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.app_status_dependency_installation_check()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_dependency_state_check"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.app_status_dependency_state_check()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_dependency_synchronization"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.app_status_dependency_synchronization()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_post_installation"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.app_status_post_installation()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_pre_installation"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.app_status_pre_installation()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.app_status_project_installation"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.app_status_project_installation()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.apply_features"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.apply_features()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.builder"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.builder</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.check_compatibility"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.check_compatibility()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.command_context"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.command_context()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.config"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.config</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.construct_pip_install_command"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.construct_pip_install_command()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.create"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.create()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.data_directory"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.data_directory</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.deactivate"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.deactivate()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.dependencies"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.dependencies</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.dependencies_in_sync"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.dependencies_in_sync()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.dependency_hash"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.dependency_hash()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.description"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.description</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.dev_mode"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.dev_mode</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.enter_shell"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.enter_shell()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.env_exclude"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.env_exclude</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.env_include"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.env_include</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.env_vars"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.env_vars</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.environment_dependencies"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.environment_dependencies</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.exists"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.exists()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.find"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.find()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.fs_context"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.fs_context()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.get_context"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.get_context()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.get_env_var_option"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.get_env_var_option()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.get_env_vars"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.get_env_vars()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.get_option_types"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.get_option_types()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.install_project"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.install_project()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.install_project_dev_mode"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.install_project_dev_mode()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.isolated_data_directory"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.isolated_data_directory</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.join_command_args"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.join_command_args()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.name"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.name</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.pathsep"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.pathsep</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.platform"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.platform</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.platforms"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.platforms</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.project_root"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.project_root</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.remove"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.remove()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.resolve_commands"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.resolve_commands()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.root"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.root</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.run_shell_command"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.run_shell_command()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.sep"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.sep</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.skip_install"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.skip_install</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hatch.env.virtual.VirtualEnvironment.sync_dependencies"><code class="docutils literal notranslate"><span class="pre">VirtualEnvironment.sync_dependencies()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.errors/">hatch.errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.index/">hatch.index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.plugin/">hatch.plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.project/">hatch.project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.publish/">hatch.publish</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.python/">hatch.python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.template/">hatch.template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.utils/">hatch.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hatch.venv/">hatch.venv</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../">Documentation overview</a><ul>
+  <li><a href="../hatch/">hatch</a><ul>
+  <li><a href="../hatch.env/">hatch.env</a><ul>
+  <li><a href="../hatch.env.virtual/">hatch.env.virtual</a><ul>
+      <li>Previous: <a href="../hatch.env.virtual/" title="previous chapter">hatch.env.virtual</a></li>
+      <li>Next: <a href="../hatch.errors/" title="next chapter">hatch.errors</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/_autosummary/hatch.env.virtual.VirtualEnvironment.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
