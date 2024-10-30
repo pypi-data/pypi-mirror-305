@@ -1,0 +1,4 @@
+# pyproject.toml 파일 예시
+[build-system]
+requires = ["setuptools", "wheel", "maturin"]
+build-backend = "setuptools.build_meta"
