@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: client_analysis_cu
+Version: 0.1.0
+Summary: Пакет для анализа данных о клиентах
+Author-email: Egor <drobyazko_04@mail.ru>
+Requires-Dist: pandas
+
