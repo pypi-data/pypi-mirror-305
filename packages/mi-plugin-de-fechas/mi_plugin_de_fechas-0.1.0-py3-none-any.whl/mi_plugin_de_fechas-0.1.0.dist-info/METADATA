@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: mi-plugin-de-fechas
+Version: 0.1.0
+Summary: Un plugin para convertir fechas según código postal
+Home-page: https://github.com/tuusuario/mi_plugin_de_fechas
+Author: Pedro Saldana
+Author-email: psaldana@businessdebtadjusters.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pytz>=2024.1
+
+# mi_plugin_de_fechas
+
+Este es un plugin de Python para convertir fechas basadas en cÃ³digos postales a la zona horaria correspondiente.
+
+## InstalaciÃ³n
+
+Puedes instalar este paquete usando `pip`:
+
+```bash
+pip install pluginFecha
