@@ -1,0 +1,7 @@
+ast_grep_py-0.29.0.dist-info/METADATA,sha256=GQR2r7MbmUBj_hbA0ymXbL6N_IDIP_bCCH3d-FSm9o4,2732
+ast_grep_py-0.29.0.dist-info/WHEEL,sha256=IQ-G-ye1g_mDemVbtoyEXvcGWYyUO86u9CzWCchWqDI,104
+ast_grep_py/__init__.py,sha256=oyiOZ0mSg3x9NySSBfuvldxHFMbm8wjjbGGx2hCyOko,1893
+ast_grep_py/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ast_grep_py/ast_grep_py.pyi,sha256=GBYLgtxcaqMRF2tsFs2ZMYNAlMn8GVl_5Kbfhi4J2lg,2209
+ast_grep_py/ast_grep_py.cpython-310-darwin.so,sha256=OxSmlUc8ZTUyLr5PnOjzzh3u4jF0Bko1BU-N5lsQkxE,41181064
+ast_grep_py-0.29.0.dist-info/RECORD,,
