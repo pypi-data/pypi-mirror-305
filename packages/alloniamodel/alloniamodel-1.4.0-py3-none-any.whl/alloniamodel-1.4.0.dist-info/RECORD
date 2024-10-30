@@ -1,0 +1,11 @@
+alloniamodel/__init__.py,sha256=T_TB_4q8oQr3P395s-iyWxpNeh8LVszJTJPmxzs3H8Q,389
+alloniamodel/checker.py,sha256=DaH1_Qo3X-xfTjWEVahbOylpG5FYZKE1DT_pcv8qNd8,3291
+alloniamodel/decorator.py,sha256=VMbYTPH5lPkjlOmjuHwSrftexM9_CgAOWCauHA5XCUM,8228
+alloniamodel/enums.py,sha256=G0lJStGRiBtwI64e76ijIsryHgAxB2DeBRXpdw0v1Yk,1408
+alloniamodel/errors.py,sha256=mbgwhAvykw8nc7gMHda5SrEY7rgIjnwpEmM62YZFx1s,6507
+alloniamodel/model.py,sha256=rmszbgiB1qKv-u-YkvmxcPq1sO3ITgjseABC62Kkfq4,107758
+alloniamodel/utils.py,sha256=hmkm-VqCPMnNFgxIE6O9lVUhI4Gqy4SDfHENciUTXjI,70595
+alloniamodel/variables.py,sha256=UjhYnZxpzNuaUmzLOmJ2f8LfJDyEAus99S-sDWbXYdI,8245
+alloniamodel-1.4.0.dist-info/METADATA,sha256=G0sro5n3bPF4NlTFOg-4FPQxsW-_GXHURmRdPRre4Dk,7702
+alloniamodel-1.4.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+alloniamodel-1.4.0.dist-info/RECORD,,
