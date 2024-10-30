@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: atomicspy
+Version: 0.1.1
+Summary: A Python library for chemical compounds and elements.
+Home-page: https://github.com/IHEfty/atomic-py
+Author: IHEfty
+Author-email: asifthegambler@gmail.com
+License: UNKNOWN
+Description: # AtomicsPy
+        
+        **AtomicsPy** is a Python library that offers versatile tools for working with chemical data and compounds. As a Python port of the [Atomic project](https://github.com/mahdin-hc/atomic), AtomicsPy aims to simplify chemical data manipulation and analysis for researchers, educators, and students.
+        
+        ## Features
+        
+        - Load and manipulate chemical compounds from CSV and JSON files.
+        - Generate molecular data and perform a variety of chemical calculations.
+        - User-friendly interface for accessing chemical properties and structures.
+        
+        ## Installation
+        
+        To install `atomicspy`, use `pip` in your terminal or command prompt:
+        
+        ```bash
+        pip install atomicspy
+        ```
+        
+        ### Requirements
+        
+        - Python 3.6 or higher
+        - Dependencies: Ensure you have all required packages specified in `requirements.txt`.
+        
+        ## Usage
+        
+        After installation, you can start using AtomicsPy in your Python scripts. For convenience, you can import it with an alias:
+        
+        ```python
+        import atomicspy as atomic
+        ```
+        
+        ### Example
+        
+        ```python
+        import atomicspy as atomic
+        
+        # Load chemical data
+        data = atomic.load_data()
+        
+        # Access a specific compound
+        compound_name = "H2O"
+        compound_info = data.get(compound_name)
+        
+        if compound_info:
+            print(f"{compound_name}: {compound_info}")
+        else:
+            print(f"Compound {compound_name} not found.")
+        
+        # Display help information
+        atomic.help()
+        ```
+        
+        ### Key Functions
+        
+        - `hello_atomicspy()`: Prints a welcome message.
+        - `load_data()`: Loads chemical data from CSV and JSON files.
+        - `help()`: Provides help information, listing available functions and repository links.
+        
+        ## Documentation
+        
+        For more details, refer to the [AtomicPy Documentation](https://github.com/IHEfty/atomicpy).
+        
+        ## Contributing
+        
+        Contributions are encouraged! To contribute, please fork the repository and submit a pull request.
+        
+        ### Reporting Issues
+        
+        If you encounter any issues, report them on the [Issues page](https://github.com/IHEfty/atomicpy/issues).
+        
+        ## License
+        
+        This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+        
+        ## Acknowledgments
+        
+        This library is inspired by the original [Atomic project](https://github.com/mahdin-hc/atomic) by Mahdin H.C.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+atomicspy/__init__.py
+atomicspy.egg-info/PKG-INFO
+atomicspy.egg-info/SOURCES.txt
+atomicspy.egg-info/dependency_links.txt
+atomicspy.egg-info/top_level.txt
+atomicspy/data/data.json
+atomicspy/data/elements.csv
+atomicspy/data/f.csv
+atomicspy/data/iso.csv
+atomicspy/data/molecules.csv
+atomicspy/data/t.tsv
