@@ -1,0 +1,14 @@
+cloudflare_ddns_updater/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudflare_ddns_updater/constants.py,sha256=-9ZqSmG-I1EJDHiA6rv5BWCszoc52I-hYQj72IA372M,738
+cloudflare_ddns_updater/initializer.py,sha256=WWL38aHT3EnMAXv2-Bg75xfpG4EieyP1fsds2GZrzWc,12059
+cloudflare_ddns_updater/ip_updater.py,sha256=2crJ8SyW89TNAWh-d-A3rYJiBH2s-MX4XXbQCU4u80o,3060
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/previous_initializer.py,sha256=26aOiKWr9bJeuGU0Hqf2TTNvOIW3XV_WHjaRnwvZAic,9908
+tests/test.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test1.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudflare_ddns_updater-0.1.41.dist-info/LICENCE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudflare_ddns_updater-0.1.41.dist-info/METADATA,sha256=dk99fZEHiRkReS8sdL4P0tbabKyIeLxdgNRO3bMdx4I,3966
+cloudflare_ddns_updater-0.1.41.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+cloudflare_ddns_updater-0.1.41.dist-info/entry_points.txt,sha256=mMQPWOY6GGxKKjnDFxUFMvObgf7i8mkMjSm8ajN6_ws,138
+cloudflare_ddns_updater-0.1.41.dist-info/top_level.txt,sha256=oUhcxjvi8Z8D1DjFB_lKiOkX_hrfClVA4lZrlJRWzww,30
+cloudflare_ddns_updater-0.1.41.dist-info/RECORD,,
