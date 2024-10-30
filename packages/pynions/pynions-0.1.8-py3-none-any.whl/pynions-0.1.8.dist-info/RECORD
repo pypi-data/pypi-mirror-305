@@ -1,0 +1,9 @@
+pynions/templates/project/.gitignore,sha256=oM3CRTWdLSsYsq5kEoicw39ikbvKagguSm6v73OVUNI,105
+pynions/templates/project/README.md,sha256=NW057uVGGI0sAqTDv3YAg_26JGTVI8yqXGuu9-Bl1G4,506
+pynions/templates/project/requirements.txt,sha256=lq0qaH2IkAL9llWuQx3Pw99Jt_5Wh2W6lA-HeBDSeFQ,36
+pynions/templates/project/workflows/example.py,sha256=SP1bgdDeLhQO6ifdN1hJPQ9sd-F4taMbtMkQZhOZxSc,339
+pynions-0.1.8.dist-info/METADATA,sha256=8-6T95y6zx73f7DqN-c_yatq5kpJ2dt_yiRi3ULp-fo,10810
+pynions-0.1.8.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pynions-0.1.8.dist-info/entry_points.txt,sha256=QnjIenvVGj-NST-0GKDQlhdkH8yx7Wqs0-slbdaJYFU,45
+pynions-0.1.8.dist-info/licenses/LICENSE,sha256=OuoS6VvhvTmFN-r3lyZ5EHoFxS6UdCGm9qJab2SyOTk,1076
+pynions-0.1.8.dist-info/RECORD,,
