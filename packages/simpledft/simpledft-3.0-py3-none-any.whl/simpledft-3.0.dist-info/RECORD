@@ -1,0 +1,15 @@
+simpledft/__init__.py,sha256=gf8yLbLmkTSLjBaD4CiH6JNi9smsUa6gRPPuNiVo8n4,94
+simpledft/atoms.py,sha256=Kj4dDzKm_PvcJxOnpVfyj7_G3a8StwNEfPqVl41aMRs,2225
+simpledft/dft.py,sha256=sJCPp5FinA2e-OADUi1sYCYVHDqXbJhBdGvT6tmtglM,1620
+simpledft/energies.py,sha256=z-7HvBDo947DUbNbGexqYluZ3BRBp3LyOy5jChOLQBg,2788
+simpledft/minimizer.py,sha256=SvORogS9tjMjZSDBn8d00rXiyx3x_42DitWi2Grnu9Q,1010
+simpledft/operators.py,sha256=oU6AP2YcIzXH9m4YpfIeqnQDEpRnwmQUPk3vXPo6R88,2838
+simpledft/potentials.py,sha256=xQLosDtcGsS1eJWQ3-aC1llHmXSu9QFa4DWdphLEz_Q,299
+simpledft/scf.py,sha256=v7Dgix5Xt-Lepfs8Szwxt4G7QtCEqPE8QFXLHINWLgQ,847
+simpledft/utils.py,sha256=xhTzsKNzaHG3Lfh7b_MWVYuMaLVzjwnJasz-939qBtQ,536
+simpledft/xc.py,sha256=jbSuHj1ZDA09L4vov13txoeugpNWEuaDV2Rll9EfHrc,1363
+simpledft-3.0.dist-info/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+simpledft-3.0.dist-info/METADATA,sha256=1-HMHUJfV42wWpm1tY6qMJknLRIMCuE8CGuwOa0QAbk,3922
+simpledft-3.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+simpledft-3.0.dist-info/top_level.txt,sha256=1s3LtbNES812pKSIdZzXYnseV6NgaeeOWytYT0mvF6M,10
+simpledft-3.0.dist-info/RECORD,,

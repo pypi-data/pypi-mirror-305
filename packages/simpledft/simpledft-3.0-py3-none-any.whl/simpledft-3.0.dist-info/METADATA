@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: simpledft
+Version: 3.0
+Summary: A simple density functional theory code.
+Author-email: Wanja Timm Schulze <wangenau@protonmail.com>
+Project-URL: Documentation, https://wangenau.gitlab.io/simpledft_pages
+Project-URL: Issues, https://gitlab.com/wangenau/simpledft/-/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy >=1.10
+
+![simpledft logo](https://gitlab.com/wangenau/simpledft/-/raw/main/logo/simpledft_logo.png)
+
+# SimpleDFT
+[![Version](https://img.shields.io/pypi/v/simpledft?color=b5123e&logo=python&logoColor=ed5168&label=Version)](https://pypi.org/project/simpledft)
+[![Python](https://img.shields.io/pypi/pyversions/simpledft?color=b5123e&logo=python&logoColor=ed5168&label=Python)](https://www.python.org)
+[![License](https://img.shields.io/badge/license-Apache2.0-b5123e?logo=python&logoColor=ed5168&label=License)](https://gitlab.com/wangenau/simpledft/-/blob/main/LICENSE)
+
+SimpleDFT is a simple plane wave density functional theory (DFT) code.
+It is a Python implementation of the [DFT++](https://arxiv.org/abs/cond-mat/9909130) pragmas proposed by Thomas Arias et al.
+Also, it serves as the minimalistic prototype for the [eminus](https://gitlab.com/wangenau/eminus) code,
+which was introduced in the [master thesis](https://www.researchgate.net/publication/356537762_Domain-averaged_Fermi_holes_A_self-interaction_correction_perspective) of Wanja Timm Schulze to explain theory and software development compactly.
+There is also a version written in Julia, called [SimpleDFT.jl](https://gitlab.com/wangenau/simpledft.jl).
+
+**Note: From version 2.0 on, the implementation will slightly deviate from the master thesis to be in line with eminus.**
+
+| SimpleDFT | Description |
+| --------- | ----------- |
+| Language | Python 3 |
+| License | Apache 2.0 |
+| Dependencies | Only NumPy |
+| Basis set| Plane waves (PW) |
+| DFT | Restricted Kohn-Sham (RKS) |
+
+## Installation
+The package and all necessary dependencies can be installed using pip
+
+```terminal
+pip install simpledft
+```
+
+## Examples
+Example calculations, i.e., the H atom, He atom, and H2 molecule can be executed with
+
+```terminal
+python examples.py
+```
+
+## Simplifications
+This code is about implementing plane wave DFT as simple as possible, while still being general.
+To classify the shortcomings from a fully-fletched DFT code, the most important simplifications are listed below
+* Restricted Kohn-Sham DFT only, no open-shell systems
+* LDA only, no functionals using gradients
+* All-electron Coulomb potential, no pseudopotentials to only treat valence electrons
+* Gamma-point only, no band paths
+* Steepest descent only, no sophisticated minimizations
+* Random starting guess only, no calculated guess of the density
+
+## Citation
+
+A supplementary paper for [eminus](https://gitlab.com/wangenau/eminus) is available on [arXiv](https://arxiv.org/abs/2410.19438). The following BibTeX key can be used
+
+```terminal
+@Misc{Schulze2021,
+  author    = {Schulze, Wanja T. and Schwalbe, Sebastian and Trepte, Kai and Gr{\"a}fe, Stefanie},
+  title     = {eminus -- Pythonic electronic structure theory},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2410.19438},
+  publisher = {arXiv},
+}
+```
