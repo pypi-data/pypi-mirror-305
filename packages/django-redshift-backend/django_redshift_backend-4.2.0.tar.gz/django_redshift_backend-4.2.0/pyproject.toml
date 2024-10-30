@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-redshift-backend"
+dynamic = ["version"]
+description = "Redshift database backend for Django"
+readme = "README.rst"
+license = {file = "LICENSE"}
+requires-python = ">=3.8, <4"
+authors = [
+    { name = "shimizukawa", email = "shimizukawa@gmail.com" },
+]
+keywords = [
+    "django",
+    "redshift",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Plugins",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "django<5.2",
+    "backports.zoneinfo;python_version<'3.9'",
+]
+
+[project.optional-dependencies]
+psycopg2 = [
+    "psycopg2",
+]
+psycopg2-binary = [
+    "psycopg2-binary",
+]
+
+[project.urls]
+Documentation = "https://django-redshift-backend.readthedocs.io/"
+Homepage = "https://github.com/jazzband/django-redshift-backend"
+"Release notes" = "https://django-redshift-backend.readthedocs.io/en/master/changes.html"
+Source = "https://github.com/jazzband/django-redshift-backend"
+Tracker = "https://github.com/jazzband/django-redshift-backend/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools_scm]
+# this empty section means: use_scm_version=True
+version_scheme = "guess-next-dev"
+local_scheme = "no-local-version"
+
+[tool.ruff]
+exclude = ["django_redshift_backend/_vendor"]
+
+[tool.uv]
+dev-dependencies = [
+    "setuptools>=73.0.1",
+    "wheel>=0.44.0",
+    "setuptools-scm>=8.1.0",
+    "tox-uv>=1.11.2",
+    "build>=1.2.1",
+    "twine>=5.1.1",
+    "django-redshift-backend",
+    "ruff>=0.6.2",
+    "tox-gh-actions>=3.2.0",
+]
+
+[tool.uv.sources]
+django-redshift-backend = { workspace = true }
