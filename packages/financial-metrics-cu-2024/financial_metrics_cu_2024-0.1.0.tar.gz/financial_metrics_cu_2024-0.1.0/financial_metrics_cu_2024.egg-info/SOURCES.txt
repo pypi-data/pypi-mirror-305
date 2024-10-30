@@ -1,0 +1,7 @@
+README.md
+setup.py
+financial_metrics_cu_2024.egg-info/PKG-INFO
+financial_metrics_cu_2024.egg-info/SOURCES.txt
+financial_metrics_cu_2024.egg-info/dependency_links.txt
+financial_metrics_cu_2024.egg-info/entry_points.txt
+financial_metrics_cu_2024.egg-info/top_level.txt
