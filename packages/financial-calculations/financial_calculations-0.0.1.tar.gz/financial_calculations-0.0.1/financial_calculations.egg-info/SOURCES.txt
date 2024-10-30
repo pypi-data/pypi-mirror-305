@@ -1,0 +1,7 @@
+README.md
+setup.py
+financial_calculations.egg-info/PKG-INFO
+financial_calculations.egg-info/SOURCES.txt
+financial_calculations.egg-info/dependency_links.txt
+financial_calculations.egg-info/entry_points.txt
+financial_calculations.egg-info/top_level.txt
