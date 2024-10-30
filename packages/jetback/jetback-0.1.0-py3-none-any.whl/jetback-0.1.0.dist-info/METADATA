@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: jetback
+Version: 0.1.0
+Summary: JetBack.Dev Deployment utilities for Python web frameworks
+Author: Jetback
+Author-email: amine@jetback.dev
+Project-URL: Homepage, https://jetback.dev
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Framework :: FastAPI
+Classifier: Framework :: Flask
+Classifier: License :: Other/Proprietary License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: functions-framework==3.8.1
+Requires-Dist: python-dotenv==1.0.1
+Provides-Extra: django
+Requires-Dist: django==5.1.2; extra == "django"
+Provides-Extra: fastapi
+Requires-Dist: fastapi==0.115.2; extra == "fastapi"
+Provides-Extra: flask
+Requires-Dist: Flask==3.0.3; extra == "flask"
+
+# JetBack.Dev Deployment Utilities
+
+JetBack.Dev Deployment utilities for Python web frameworks including Flask, FastAPI and Django.
+
+## Installation
+
+```bash
+pip install jetback  # Basic installation
+pip install jetback[flask]  # With Flask support
+pip install jetback[fastapi]  # With FastAPI support
+pip install jetback[django]  # With Django support
+```
