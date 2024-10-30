@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: robosuite_models
+Version: 1.0.0
+Summary: A collection of robot models for robosuite simulation.
+Home-page: https://github.com/ARISE-Initiative/robosuite_models
+Author: Yifeng Zhu
+Author-email: robosuite core team members <yifeng.zhu@utexas.edu>
+Project-URL: Homepage, https://github.com/ARISE-Initiative/robosuite_models
+Project-URL: Issues, https://github.com/ARISE-Initiative/robosuite_models/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# robosuite_models
+A collection of robot models tailored to robosuite. 
+
+
+
+
+## Example
+
+To load a robot model to see what it looks like, you can use the following command:
+```python
+python examples/load_compositional_robot_example.py --robots UR5eOmron  --composite-controller BASE
+```
