@@ -1,0 +1,7 @@
+setup.py
+HelloProject/Hello.py
+HelloProject/__init__.py
+MbaliHelloPkg.egg-info/PKG-INFO
+MbaliHelloPkg.egg-info/SOURCES.txt
+MbaliHelloPkg.egg-info/dependency_links.txt
+MbaliHelloPkg.egg-info/top_level.txt
