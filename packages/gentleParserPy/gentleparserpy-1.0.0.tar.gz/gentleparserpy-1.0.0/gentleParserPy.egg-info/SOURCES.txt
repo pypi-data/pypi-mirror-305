@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+gentleParserPy.egg-info/PKG-INFO
+gentleParserPy.egg-info/SOURCES.txt
+gentleParserPy.egg-info/dependency_links.txt
+gentleParserPy.egg-info/top_level.txt
