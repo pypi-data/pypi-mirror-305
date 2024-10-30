@@ -1,0 +1,14 @@
+architecture_checker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+architecture_checker/base_rule.py,sha256=HJDgeB2R656EwTRz1Mt2H3qjOuN_lAga4ICK_g1ns84,311
+architecture_checker/main.py,sha256=YzN5ajb3J_0FArZs9DjTdUZP2cjY3UBmDavAgPCB6cw,974
+architecture_checker/reporter.py,sha256=dkylGv1nfBlPWyUUfhn8-8LzN5zQ7HYOdwQVRl7uhLI,1048
+architecture_checker/rule_loader.py,sha256=i9eZ6CHPkxjHPmqq8kWFmAF1d0kdjLibL6Xiliyp3sU,882
+architecture_checker/utils.py,sha256=GYUE1_8_98SPi3tNSjBFYBnzCRmi_n5a93KqZKRAaJI,1425
+architecture_checker/rules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+architecture_checker/rules/no_cross_app_model_usage_rule.py,sha256=Lw1YaFPlHGItdOk2rCYcG2KMfVEpRXEfvFKFIRB7Z6Q,2786
+architecture_checker-0.1.0.dist-info/LICENSE,sha256=bVLuZzbcVnSRRlbO6G8kmv7sN4vLJPrhVvTHSc4LUYI,1493
+architecture_checker-0.1.0.dist-info/METADATA,sha256=CrxuPe9mNAtkX4YSi6a15ONbJKC8r2oM2DIAhX3SupQ,721
+architecture_checker-0.1.0.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+architecture_checker-0.1.0.dist-info/entry_points.txt,sha256=7wiVfLHaN_IIVqkHCv0Le-GRQ8AFQ9WzBIRbKOq96LI,73
+architecture_checker-0.1.0.dist-info/top_level.txt,sha256=2yf5mGFdHwAdTn-1QbXAWNjJPxiAqMGNjQ45Q2jT_AE,21
+architecture_checker-0.1.0.dist-info/RECORD,,
