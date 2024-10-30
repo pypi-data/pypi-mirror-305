@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+keepyourdate/__init__.py
+keepyourdate/check.py
+keepyourdate/edit.py
+keepyourdate.egg-info/PKG-INFO
+keepyourdate.egg-info/SOURCES.txt
+keepyourdate.egg-info/dependency_links.txt
+keepyourdate.egg-info/top_level.txt
