@@ -1,0 +1,3 @@
+[console_scripts]
+gpt-scraper = gpt_scraper.cli:main
+
