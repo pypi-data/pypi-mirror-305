@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+agecrypt/__init__.py
+agecrypt/agecrypt.py
+agecrypt.egg-info/PKG-INFO
+agecrypt.egg-info/SOURCES.txt
+agecrypt.egg-info/dependency_links.txt
+agecrypt.egg-info/entry_points.txt
+agecrypt.egg-info/requires.txt
+agecrypt.egg-info/top_level.txt
+agecrypt/assets/icon.icns
+agecrypt/assets/icon.png
