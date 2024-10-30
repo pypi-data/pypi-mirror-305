@@ -1,0 +1,6 @@
+astor<0.9.0,>=0.8.1
+libcst<2.0.0,>=1.4.0
+openai<2.0.0,>=1.52.1
+azure-identity<2.0.0,>=1.7.0
+azure-keyvault-secrets<5.0.0,>=4.2.0
+azure-storage-blob<13.0.0,>=12.8.0
