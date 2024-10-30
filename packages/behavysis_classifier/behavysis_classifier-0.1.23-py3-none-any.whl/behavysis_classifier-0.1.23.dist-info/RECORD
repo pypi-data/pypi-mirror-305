@@ -1,0 +1,16 @@
+behavysis_classifier/__init__.py,sha256=yHiPtvFV3fEVJ1hPXJevoCvHPZnQLjYb2bw8rAjXrD0,836
+behavysis_classifier/behav_classifier.py,sha256=oVE70E0IAGE_8xu37w0A0SpboZAhLyGsCLN0N_hFpvA,28306
+behavysis_classifier/clf_models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+behavysis_classifier/clf_models/base_torch_model.py,sha256=VZ6W2ws4BMQcYvGQg7AH0AFqwArL9VMc6dyoLqKI5ls,9645
+behavysis_classifier/clf_models/clf_templates.py,sha256=2Dmq3ckWTp8iqdglMloj9DjkLJ0Rg2pqcL9xYbFn2ZQ,7448
+behavysis_classifier/pydantic_models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+behavysis_classifier/pydantic_models/behav_classifier_configs.py,sha256=BRy3ob2ZLVKV-YTNXutxxaglhiOwwELNMy_WyQ7HAfA,533
+behavysis_classifier/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+behavysis_classifier/scripts/classifier_gui.py,sha256=uGt7eU3AJmvPRncqsXSZ_Ae8HGbVrvafgTFw4MMWqFg,10988
+behavysis_classifier/scripts/make_classifier.py,sha256=AIWA2kQvEUQB6TnEcFbVcFKCI9A9Us3V0LgBg2qQ0O4,901
+behavysis_classifier/templates/train_behav_classifier.py,sha256=c_gR9QEMdthxZP3RFAh4n6j-c3u6EpU2WLdEmwemGUs,2251
+behavysis_classifier-0.1.23.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+behavysis_classifier-0.1.23.dist-info/METADATA,sha256=Wdykxm0PYqzHW4Pn9ZnISocLzQejgkR09ql1iJyBcxo,973
+behavysis_classifier-0.1.23.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+behavysis_classifier-0.1.23.dist-info/entry_points.txt,sha256=uQI31TmhtKiywgkXei3vk_nybx46oMs6xtSii8TNbSo,175
+behavysis_classifier-0.1.23.dist-info/RECORD,,
