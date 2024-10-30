@@ -1,0 +1,9 @@
+algosto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+algosto/main.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+algosto/solvers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+algosto/solvers/optimization/KieferWolfowitz.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+algosto/solvers/optimization/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+algosto-0.0.9.dist-info/METADATA,sha256=PHbY-19NRh4uSBPM8aPLdbdFZ_c9xTml7nxykODC6z0,479
+algosto-0.0.9.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+algosto-0.0.9.dist-info/top_level.txt,sha256=33oQ7NVRxfKHgLOJujAwMtSVE4v9k0Ed-Baqrgoyt54,8
+algosto-0.0.9.dist-info/RECORD,,
