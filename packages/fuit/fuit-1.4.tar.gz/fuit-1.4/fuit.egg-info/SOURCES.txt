@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+fuit/__init__.py
+fuit.egg-info/PKG-INFO
+fuit.egg-info/SOURCES.txt
+fuit.egg-info/dependency_links.txt
+fuit.egg-info/requires.txt
+fuit.egg-info/top_level.txt
+fuit/codes/LoadCode.py
+fuit/codes/__init__.py
