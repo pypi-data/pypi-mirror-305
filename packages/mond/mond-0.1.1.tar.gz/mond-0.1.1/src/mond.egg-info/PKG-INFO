@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: mond
+Version: 0.1.1
+Summary: Monte Carlo Simulation to dissolve a molecule in a mixture of other molecules
+Author-email: "Julian M. Kleber" <julian.m.kleber@gmail.com>
+Project-URL: Homepage, https://www.codeberg.org/cap_jmk/monte_dissolver.git
+Project-URL: Bug Tracker, https://www.codeberg.org/cap_jmk/monte_dissolver.git/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: cryptography
+
+# monte-solver
+
+Monte Carlo dissolver
+
+## OpenMM 
+
+Installing OpenMM from PyPi is nice to avoid conda, but you need to have numpy<2 installed. In case
+of errors, you may run: 
+
+```bash
+pip install "numpy<2"
+```
