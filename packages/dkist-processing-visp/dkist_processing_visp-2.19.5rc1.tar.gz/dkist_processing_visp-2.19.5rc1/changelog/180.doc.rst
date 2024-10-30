@@ -1,0 +1,1 @@
+Change ViSP task methods from private to public so they appear in the documentation
