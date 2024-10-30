@@ -1,0 +1,2 @@
+[console_scripts]
+watchpylint = ktpanda.watchpylint:main
