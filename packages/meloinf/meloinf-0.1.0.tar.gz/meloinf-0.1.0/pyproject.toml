@@ -1,0 +1,49 @@
+[project]
+name = "meloinf"
+version = "0.1.0"
+description = "A cross platform bot base on melobot."
+authors = [
+    { name = "aicorein", email = "aicorein@meloland.org" },
+]
+dependencies = [
+    "melobot[onebot]>=3.0.0rc14",
+    "uvloop>=0.21.0; sys_platform != 'win32'",
+    "pillow>=11.0.0",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+
+[project.license]
+text = "AGPL3"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.mypy]
+follow_imports = "normal"
+ignore_missing_imports = true
+show_column_numbers = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+warn_return_any = true
+warn_redundant_casts = true
+disallow_untyped_calls = true
+strict_equality = true
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ipython>=8.29.0",
+]
