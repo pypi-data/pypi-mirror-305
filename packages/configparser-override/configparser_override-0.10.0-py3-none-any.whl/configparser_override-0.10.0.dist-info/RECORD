@@ -1,0 +1,14 @@
+configparser_override/__init__.py,sha256=Lnrm9iesTcHs9lfvI6Qwoz17CYyN71UtaHYgU8puFK4,423
+configparser_override/_override_strategy.py,sha256=YMl17gj0hN2IYuzjexG_p7PlRqL93DkEXF4U-Xx7ODA,11476
+configparser_override/_strategy_factory.py,sha256=bZ3p4-c5A0g2ogx5-0Qs1HByeXq6J4eHjzKBipMuNEw,3121
+configparser_override/configparser_override.py,sha256=gapfsX40d2E6qb1TdJl5a_fkdeoAsk8DrObFg7OvldA,12057
+configparser_override/convert.py,sha256=993_WnkWK7jBc82fRrzKxV1HOCDy__M63MaMBuwLhZQ,13270
+configparser_override/exceptions.py,sha256=0FjzH6KhgC_SwaOD9jiLeS8UDe8pweQnRoNYuvmVEx0,1253
+configparser_override/file_collector.py,sha256=o37vffRafpJi0Rw7ltKMLBB4etvi3YCZujCXdPwMehg,6295
+configparser_override/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+configparser_override/types.py,sha256=L4TXyHSYbW2zGYpItj8MY5ffvXk8cfmSBzkdlxKKepk,1386
+configparser_override-0.10.0.dist-info/LICENSE,sha256=me4YQSSmlsvbfBGePEOAmTKGZPB-8-aaNl_KtuDwrDs,1076
+configparser_override-0.10.0.dist-info/METADATA,sha256=LFlZNfinuVWWpIxc0KA-UEe00aMbhtSarEPS5UBGPs8,9828
+configparser_override-0.10.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+configparser_override-0.10.0.dist-info/top_level.txt,sha256=n-p0GiUSnEmxp1v7LEtuJIPgQjA83Wkjx3v--GxCmE0,22
+configparser_override-0.10.0.dist-info/RECORD,,
