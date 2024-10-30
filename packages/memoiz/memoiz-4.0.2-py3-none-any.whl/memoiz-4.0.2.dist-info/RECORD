@@ -1,0 +1,9 @@
+memoiz/__about__.py,sha256=1UD6TKg1K_f5rIzHLYHv3Su3o2nPpbEj1lo55M4pjtM,22
+memoiz/__init__.py,sha256=94OZZoOTkfXHdQAdTnB7Z6c2aIn6b3qpBe-tUKVJWXE,138
+memoiz/cache_exception.py,sha256=JVJtSGjQBoRjUa6yD-lhqulPyJG_hz6tAQBKqEpFh_I,116
+memoiz/circular_reference.py,sha256=ySeuxKqjw4FY9sBRmidVMUw8PmMnyhYLi5rDwdOYVXg,88
+memoiz/memoiz.py,sha256=wX_RMJUSvETWNiAxvYI02UK6-pifXIpgAFB5ZxkJMV8,4518
+memoiz-4.0.2.dist-info/METADATA,sha256=6kTcM7dyx5NWWN602hRAapi7LwwXmbaA2wvO5P_9oqs,8846
+memoiz-4.0.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+memoiz-4.0.2.dist-info/licenses/LICENSE,sha256=Q0-hWj-CI2Hh54I8ps2yjlQnAXyBryjwYxsbECuN2Fk,1067
+memoiz-4.0.2.dist-info/RECORD,,
