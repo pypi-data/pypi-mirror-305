@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+fucker_zju/__init__.py
+fucker_zju/wp.py
+fucker_zju.egg-info/PKG-INFO
+fucker_zju.egg-info/SOURCES.txt
+fucker_zju.egg-info/dependency_links.txt
+fucker_zju.egg-info/requires.txt
+fucker_zju.egg-info/top_level.txt
