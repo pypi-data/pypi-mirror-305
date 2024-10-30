@@ -1,0 +1,13 @@
+monumenten/__init__.py,sha256=RsPjyAQJ3mi43ICefZQUEnqqWrwXk9xQXIq_VxnQwKk,149
+monumenten/_processing.py,sha256=mSionFmOoIbQxmcASiDjRmCeOD_aib1EefDSwkFCsYg,5292
+monumenten/_version.py,sha256=G4wnMI8RU6k3gVoN8m-BWLWI4oA2lH61gZIWjCPmNZw,413
+monumenten/client.py,sha256=vPt_6ZygolYZltrEssB1XCkJJBpPyG3UjTfOV34QzA0,3524
+monumenten/logging.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+monumenten/_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+monumenten/_api/_cultureel_erfgoed.py,sha256=34Q0801qGU5Cu8LsI4gXSfT91djbCkxgZ8N3VvJuS6k,6046
+monumenten/_api/_kadaster.py,sha256=8aBJ4Et2QDpJuxq-CX2wX4z10MYsLhHhZHq5J2no6Sw,2808
+monumenten-0.1.0a1.dist-info/LICENSE,sha256=XHXrWnYTM8HAM7azt1zAhsP6aD-sM-2DPoUAfoYx57Y,1075
+monumenten-0.1.0a1.dist-info/METADATA,sha256=ULbTWO2KfBKtloNgz4x-TiRQWFsSnFpMuBJmi1jzaSs,6605
+monumenten-0.1.0a1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+monumenten-0.1.0a1.dist-info/top_level.txt,sha256=evniMq34R8O_etXp8lHeRW7ESy32fbZvjUmDtMrLg2s,11
+monumenten-0.1.0a1.dist-info/RECORD,,
