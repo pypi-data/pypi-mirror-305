@@ -1,0 +1,11 @@
+numpy
+scipy
+jax
+pymanopt
+
+[examples]
+pandas
+soundfile
+seaborn
+seaborn_qqplot
+matplotlib
