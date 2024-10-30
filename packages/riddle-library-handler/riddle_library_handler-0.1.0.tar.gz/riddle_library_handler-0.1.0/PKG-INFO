@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: riddle-library-handler
+Version: 0.1.0
+Summary: A Python package for managing and interacting with a JSON-based riddle library.
+Author-email: code crafters <bw2176@nyu.edu>
+License: MIT
+Keywords: riddle,library,JSON,file handling
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest
+
+# Python Package Exercise
+
+An exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
