@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/kube1s/__init__.py
+src/kube1s.egg-info/PKG-INFO
+src/kube1s.egg-info/SOURCES.txt
+src/kube1s.egg-info/dependency_links.txt
+src/kube1s.egg-info/top_level.txt
