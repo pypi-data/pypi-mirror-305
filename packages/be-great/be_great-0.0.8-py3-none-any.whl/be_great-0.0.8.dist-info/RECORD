@@ -1,0 +1,11 @@
+be_great/__init__.py,sha256=ZfCTw6DBeN0YcpaiE9-4UxzbOXZbydiqxkKx0WaOX_c,25
+be_great/great.py,sha256=h__rsVQEaE-KfCa4OGVHYWbKqo8TC8529PMV74WB1j4,23338
+be_great/great_dataset.py,sha256=uJycugjEIt_x-l3ci7AePBwppSPFTa1P5puLsebNgJg,2134
+be_great/great_start.py,sha256=6i9PFm_K_Ii0TXyqo26meHmhJB7vfATGT1669lYK5cw,5414
+be_great/great_trainer.py,sha256=tnr7BzHHFhhTOQ4Eafyf-ZHNZhlcHODbbinvD3133uw,1416
+be_great/great_utils.py,sha256=PT0zATirHHFJ6rv5ouSN4BtICbZ3ehwyrOIUXdIRXBo,5148
+be_great-0.0.8.dist-info/LICENSE,sha256=1RwbUpenZ_Fhk-UsfwTDru8rEYaWCnqRwgA80FELKUo,1090
+be_great-0.0.8.dist-info/METADATA,sha256=mtRNGUwBJQ1-ohq8syn7Q9JysB8osN_Lh1pZKFDYIgk,5692
+be_great-0.0.8.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+be_great-0.0.8.dist-info/top_level.txt,sha256=5X-s-klTSu25eZenGZ5StDpX7_yHlhZlm2W1h-jzrlw,9
+be_great-0.0.8.dist-info/RECORD,,
