@@ -1,0 +1,9 @@
+boto3
+ipfs_faiss_py
+ipfs_kit_py
+ipfs_model_manager_py
+numpy
+orbitdb_kit_py
+requests
+transformers
+urllib3
