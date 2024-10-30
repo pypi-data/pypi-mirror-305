@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: uplot-python
+Version: 0.0.1
+Summary: Plot Python iterables with µPlot.
+Keywords: json,time,series,plot
+Author-email: Stéphane Caron <stephane.caron@normalesup.org>
+Maintainer-email: Stéphane Caron <stephane.caron@normalesup.org>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Dist: ipython >=8.0.1
+Requires-Dist: msgpack >=1.0.4
+Requires-Dist: numpy >=1.15.4
+Project-URL: Changelog, https://github.com/stephane-caron/uplot-python/blob/master/CHANGELOG.md
+Project-URL: Homepage, https://github.com/stephane-caron/uplot-python
+Project-URL: Source, https://github.com/stephane-caron/uplot-python
+Project-URL: Tracker, https://github.com/stephane-caron/uplot-python/issues
+
+# uplot-python
+
+Python wrapper for [μPlot](https://github.com/leeoniya/uPlot) 📈
+

@@ -1,0 +1,14 @@
+uplot/__init__.py,sha256=ltGGn3R24SRcO2DqcSLi8SQRCRDpO11k4h_FAzmeBWg,257
+uplot/color_picker.py,sha256=tBcc4t1gN2spSBqmy7gY827GvpzPE2u8N8-6xUMv-YY,962
+uplot/exceptions.py,sha256=iMQrMn8yzcU95-g0vL1Lg03M5FB8vo4ckJpZXEb0TyE,248
+uplot/generate_html.py,sha256=WJRV592DDT38VfghO03wLslptYko7brYm4_bZnoR7iM,7182
+uplot/plot.py,sha256=Fw2iIcH5QB_56WBJxUvef5cA4tI5MDTwir1lphlLrdw,771
+uplot/write_tmpfile.py,sha256=6M-GiNyHAV2vVD1H7SHjFITVFrRtwFgHGwcDRkxeeCA,714
+uplot/uplot/__init__.py,sha256=1mykIjCDK2TC5EfbjCTNxfOtJx3P-hIFgbHQEtBfM_o,71
+uplot/uplot/uPlot.iife.js,sha256=ZVvIqjN4Hochxa9rWfFpnAPJvalRqnSmq1GKwgzEMm0,120184
+uplot/uplot/uPlot.min.css,sha256=PxIc1KmXtjTgeoh2WIUAGOR1wm8L3dh0EJqNOCwZ3oc,1839
+uplot/uplot/uPlot.mousewheel.js,sha256=p2CcCwxxafvNqXsxw-zrqUUogxZ1URZhxWK59B0-tgw,4543
+uplot_python-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+uplot_python-0.0.1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+uplot_python-0.0.1.dist-info/METADATA,sha256=haZ0NwZTVvTdz6_2rXO91WJhb3irB-iAfqy29MK_oBQ,1342
+uplot_python-0.0.1.dist-info/RECORD,,
