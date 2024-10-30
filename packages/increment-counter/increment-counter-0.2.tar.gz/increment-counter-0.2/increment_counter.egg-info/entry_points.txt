@@ -1,0 +1,2 @@
+[console_scripts]
+start-counter = increment_counter.app:main
