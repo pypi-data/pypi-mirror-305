@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/cracknuts/__init__.py
+src/cracknuts/__main__.py
+src/cracknuts/logger.py
+src/cracknuts.egg-info/PKG-INFO
+src/cracknuts.egg-info/SOURCES.txt
+src/cracknuts.egg-info/dependency_links.txt
+src/cracknuts.egg-info/entry_points.txt
+src/cracknuts.egg-info/requires.txt
+src/cracknuts.egg-info/top_level.txt
