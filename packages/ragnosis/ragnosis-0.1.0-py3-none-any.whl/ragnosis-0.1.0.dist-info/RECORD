@@ -1,0 +1,9 @@
+ragnosis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ragnosis/aux.py,sha256=XI0FRBEfXojGu-biBOfbS8oVd_Tda_wjy2PnF1d3XHU,7359
+ragnosis/grounding.py,sha256=_PAe-MTRPeY5cTjEACLd4Er1DlsB0RbHW7YNCobXdps,18842
+ragnosis/models.py,sha256=ffKXjSWM8wWs9tDGTVqiLsz5PRiSupc7dTu1lz4vQDU,3181
+ragnosis-0.1.0.dist-info/LICENSE,sha256=d0HPzzsJi4PN6ykXUecpVi_UdfIOOkQba_ZwPpNuMI4,1067
+ragnosis-0.1.0.dist-info/METADATA,sha256=0euEgCKMQki8i3N37J1WKQP_tyQXh0aV8kbItY3rOD8,3015
+ragnosis-0.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+ragnosis-0.1.0.dist-info/top_level.txt,sha256=yyOAl-oU0Co1WleFNPUYZ8yUO2M4ODNNSaB6G5Ovqb0,9
+ragnosis-0.1.0.dist-info/RECORD,,
