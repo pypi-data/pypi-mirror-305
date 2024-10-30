@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: bbo-egl
+Version: 1.0.0
+Summary: A package of black-box optimization (BBO) algorithms.
+Author: Yedidya Kfir
+Author-email: yedidyakfir@gmail.com
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: tqdm
+Provides-Extra: cma
+Requires-Dist: cma ; extra == 'cma'
+Requires-Dist: numpy ; extra == 'cma'
+
