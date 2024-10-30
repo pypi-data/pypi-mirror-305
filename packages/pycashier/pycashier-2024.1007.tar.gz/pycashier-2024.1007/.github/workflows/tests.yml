@@ -1,0 +1,36 @@
+name: Test
+
+on:
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+# cancel workflow if newer commits
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Test Pycashier
+    runs-on: "ubuntu-latest"
+    strategy:
+      fail-fast: false
+      matrix:
+        environment:
+          - "test39"
+          - "test310"
+          - "test311"
+          - "test312"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          pixi-version: v0.34.0
+          cache: true
+          manifest-path: pyproject.toml
+          environments: ${{ matrix.environment }}
+
+      - name: Run tests
+        run: pixi run -e ${{ matrix.environment }} pytest
