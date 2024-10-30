@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: hmac2
+Version: 0.0.2rc0
+Summary: A small test package for hmac2.
+Home-page: https://github.com/pypa/sampleproject
+Author: Jiage
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# HMAC2 Documentation
+
+## Overview
+The `HMAC` class implements an HMAC (Hash-based Message Authentication Code) using a specified hash function. It provides a simple interface to generate HMAC values using a key and a hash algorithm like SHA256, MD5, etc.
+
+## Usage
+
+### Creating an HMAC Instance
+```python
+from hmac2 import HMAC
+
+# Define a key and a message
+key = b'secret_key'
+message = b'my message'
+
+# Create a new HMAC instance with the key, message, and hash algorithm
+h = HMAC(key, message, digestmod='sha256')
+```
+
+### Updating with More Data
+If you need to add more data to the existing HMAC computation:
+```python
+h.update(b' additional message')
+```
+
+### Getting the Final HMAC Value
+```python
+# Get the HMAC value in hexadecimal format
+print(h.hexdigest())
+
+# Alternatively, get the raw binary value
+print(h.digest())
+```
+
+## Methods
+
+- **`__init__(self, key, msg=None, digestmod='sha256')`**  
+  Initializes an HMAC instance with a given key, an optional message, and a digest algorithm. The default digest algorithm is `'sha256'`.
+
+- **`update(self, msg)`**  
+  Updates the HMAC object with more message bytes. You can call this method multiple times with different parts of the message.
+
+- **`digest(self)`**  
+  Returns the raw HMAC value as a byte sequence.
+
+- **`hexdigest(self)`**  
+  Returns the HMAC value as a hexadecimal string.
+
+## Alternative Usage with `new` Function
+You can also use the `new` function for a more concise syntax:
+
+```python
+import hmac2
+
+# Define a key and a message
+key = b'secret_key'
+message = b'my message'
+
+# Create a new HMAC and get the result in hex format
+hmac_value = hmac2.new(key, message, 'sha256').hexdigest()
+print("HMAC: ", hmac_value)
+```
