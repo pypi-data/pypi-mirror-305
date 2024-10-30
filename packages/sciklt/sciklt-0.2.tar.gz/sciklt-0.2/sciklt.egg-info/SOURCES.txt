@@ -1,0 +1,114 @@
+setup.py
+sciklt/README.md
+sciklt/__init__.py
+sciklt/aids.py
+sciklt/cn.py
+sciklt/licence.txt
+sciklt/main.py
+sciklt.egg-info/PKG-INFO
+sciklt.egg-info/SOURCES.txt
+sciklt.egg-info/dependency_links.txt
+sciklt.egg-info/not-zip-safe
+sciklt.egg-info/requires.txt
+sciklt.egg-info/top_level.txt
+sciklt/data/AIDS CN NLP/Ubuntu CN Lab.iso
+sciklt/data/AIDS CN NLP/AIDS/1. Implement Basic Search Strategies/(A) Breadth First Search.ipynb
+sciklt/data/AIDS CN NLP/AIDS/1. Implement Basic Search Strategies/(B) Depth First Search.ipynb
+sciklt/data/AIDS CN NLP/AIDS/1. Implement Basic Search Strategies/(C) Uniform Cost Search.ipynb
+sciklt/data/AIDS CN NLP/AIDS/1. Implement Basic Search Strategies/(D) Depth Limites Search.ipynb
+sciklt/data/AIDS CN NLP/AIDS/1. Implement Basic Search Strategies/(E) Iterative Deepening DFS.ipynb
+sciklt/data/AIDS CN NLP/AIDS/10. ANOVA/ANOVA Test.ipynb
+sciklt/data/AIDS CN NLP/AIDS/10. ANOVA/sample_data.csv
+sciklt/data/AIDS CN NLP/AIDS/11. Linear Regression/Linear Regression New- sklearn.ipynb
+sciklt/data/AIDS CN NLP/AIDS/11. Linear Regression/Linear Regression.ipynb
+sciklt/data/AIDS CN NLP/AIDS/11. Linear Regression/house_rate.csv
+sciklt/data/AIDS CN NLP/AIDS/12. Logistic Regression/Logistic Regression New- sklearn.ipynb
+sciklt/data/AIDS CN NLP/AIDS/12. Logistic Regression/Logistic Regression.ipynb
+sciklt/data/AIDS CN NLP/AIDS/12. Logistic Regression/default.csv
+sciklt/data/AIDS CN NLP/AIDS/12. Logistic Regression/hours_scores_records.csv
+sciklt/data/AIDS CN NLP/AIDS/2. Implement A Star And MA Star/(A) Astar.ipynb
+sciklt/data/AIDS CN NLP/AIDS/2. Implement A Star And MA Star/(B) IDAstar.ipynb
+sciklt/data/AIDS CN NLP/AIDS/2. Implement A Star And MA Star/(C) SMAstar.ipynb
+sciklt/data/AIDS CN NLP/AIDS/3. Genetic Algorithm/Genetic.ipynb
+sciklt/data/AIDS CN NLP/AIDS/4. Simulated Annealing/Simulated Annealing.ipynb
+sciklt/data/AIDS CN NLP/AIDS/4. Simulated Annealing/Sudoku Simulated Annealing.ipynb
+sciklt/data/AIDS CN NLP/AIDS/5. Alpha Beta Pruning/AlphaBetaPruning.ipynb
+sciklt/data/AIDS CN NLP/AIDS/6. Consraint Satisfaction Problems (CSP)/(A) CSP House Allocation.ipynb
+sciklt/data/AIDS CN NLP/AIDS/6. Consraint Satisfaction Problems (CSP)/(B) CSP Map Coloring.ipynb
+sciklt/data/AIDS CN NLP/AIDS/7. Random Sampling/Random Sampling.ipynb
+sciklt/data/AIDS CN NLP/AIDS/7. Random Sampling/height_weight_bmi.csv
+sciklt/data/AIDS CN NLP/AIDS/8. Z Test/Z Test Hash Function.ipynb
+sciklt/data/AIDS CN NLP/AIDS/8. Z Test/Z Test.ipynb
+sciklt/data/AIDS CN NLP/AIDS/8. Z Test/height_weight_bmi.csv
+sciklt/data/AIDS CN NLP/AIDS/9. T Test/T Test Hash Function.ipynb
+sciklt/data/AIDS CN NLP/AIDS/9. T Test/T Test.ipynb
+sciklt/data/AIDS CN NLP/AIDS/9. T Test/height_weight_bmi.csv
+sciklt/data/AIDS CN NLP/CN/1. Chat Application/chat.java
+sciklt/data/AIDS CN NLP/CN/1. Chat Application/output.png
+sciklt/data/AIDS CN NLP/CN/1. Chat Application/procedure.png
+sciklt/data/AIDS CN NLP/CN/10. Ethernet LAN IEEE 802.3/LAN.tcl
+sciklt/data/AIDS CN NLP/CN/10. Ethernet LAN IEEE 802.3/analysis.awk
+sciklt/data/AIDS CN NLP/CN/10. Ethernet LAN IEEE 802.3/output.png
+sciklt/data/AIDS CN NLP/CN/10. Ethernet LAN IEEE 802.3/procedure.png
+sciklt/data/AIDS CN NLP/CN/11. Wireless LAN IEEE 802.11/complexdcf.tcl
+sciklt/data/AIDS CN NLP/CN/11. Wireless LAN IEEE 802.11/output.png
+sciklt/data/AIDS CN NLP/CN/11. Wireless LAN IEEE 802.11/procedure.png
+sciklt/data/AIDS CN NLP/CN/2. File Transfer/file_to_send.txt
+sciklt/data/AIDS CN NLP/CN/2. File Transfer/filetransfer.java
+sciklt/data/AIDS CN NLP/CN/2. File Transfer/output.png
+sciklt/data/AIDS CN NLP/CN/2. File Transfer/procedure.png
+sciklt/data/AIDS CN NLP/CN/3. RMI (Remote Method Invocation)/output.png
+sciklt/data/AIDS CN NLP/CN/3. RMI (Remote Method Invocation)/procedure.png
+sciklt/data/AIDS CN NLP/CN/3. RMI (Remote Method Invocation)/rmi.java
+sciklt/data/AIDS CN NLP/CN/4. Wired Network/output.png
+sciklt/data/AIDS CN NLP/CN/4. Wired Network/procedure.png
+sciklt/data/AIDS CN NLP/CN/4. Wired Network/wired.awk
+sciklt/data/AIDS CN NLP/CN/4. Wired Network/wired.tcl
+sciklt/data/AIDS CN NLP/CN/5. Wireless Network/output.png
+sciklt/data/AIDS CN NLP/CN/5. Wireless Network/procedure.png
+sciklt/data/AIDS CN NLP/CN/5. Wireless Network/wireless.awk
+sciklt/data/AIDS CN NLP/CN/5. Wireless Network/wireless.tcl
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/procedure.png
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/TCP Congestion Control/Sack And Vegas/analysis.awk
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/TCP Congestion Control/Sack And Vegas/output.png
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/TCP Congestion Control/Sack And Vegas/sack.tcl
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/TCP Congestion Control/Sack And Vegas/vegas.tcl
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/TCP Congestion Control/Tahoe And Reno/analysis.awk
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/TCP Congestion Control/Tahoe And Reno/output.png
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/TCP Congestion Control/Tahoe And Reno/reno.tcl
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/TCP Congestion Control/Tahoe And Reno/tahoe.tcl
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/TCP Flow Control/analysis.awk
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/TCP Flow Control/flow.tcl
+sciklt/data/AIDS CN NLP/CN/6. TCP Flow And Congestion Control/TCP Flow Control/output.png
+sciklt/data/AIDS CN NLP/CN/7. Link State And Distance Vector Routing/DV.tcl
+sciklt/data/AIDS CN NLP/CN/7. Link State And Distance Vector Routing/LS.tcl
+sciklt/data/AIDS CN NLP/CN/7. Link State And Distance Vector Routing/analysis.awk
+sciklt/data/AIDS CN NLP/CN/7. Link State And Distance Vector Routing/output.png
+sciklt/data/AIDS CN NLP/CN/7. Link State And Distance Vector Routing/procedure.png
+sciklt/data/AIDS CN NLP/CN/8. Multicast And Broadcast Routing/analysis.awk
+sciklt/data/AIDS CN NLP/CN/8. Multicast And Broadcast Routing/broadcast.tcl
+sciklt/data/AIDS CN NLP/CN/8. Multicast And Broadcast Routing/multicast.tcl
+sciklt/data/AIDS CN NLP/CN/8. Multicast And Broadcast Routing/output.png
+sciklt/data/AIDS CN NLP/CN/8. Multicast And Broadcast Routing/procedure.png
+sciklt/data/AIDS CN NLP/CN/9. DHCP/DHCP.java
+sciklt/data/AIDS CN NLP/CN/9. DHCP/output.png
+sciklt/data/AIDS CN NLP/CN/9. DHCP/procedure.png
+sciklt/data/AIDS CN NLP/NLP/1-prereqs.py
+sciklt/data/AIDS CN NLP/NLP/2-Chi2test.py
+sciklt/data/AIDS CN NLP/NLP/2-T-test.py
+sciklt/data/AIDS CN NLP/NLP/3-WSD-nb.py
+sciklt/data/AIDS CN NLP/NLP/4-Hindle-Rooth.py
+sciklt/data/AIDS CN NLP/NLP/5-HMM-Trellis.py
+sciklt/data/AIDS CN NLP/NLP/6-HMM-Viterbi.py
+sciklt/data/AIDS CN NLP/NLP/7-PCFG-parsetree.py
+sciklt/data/AIDS CN NLP/NLP/Lab 10 - Text generator using LSTM.ipynb
+sciklt/data/AIDS CN NLP/NLP/Lab 11 NMT.ipynb
+sciklt/data/AIDS CN NLP/NLP/PCFG.ipynb
+sciklt/data/AIDS CN NLP/NLP/TFIDF BOW.ipynb
+sciklt/data/AIDS CN NLP/NLP/Word2Vec.ipynb
+sciklt/data/AIDS CN NLP/NLP/chi2test.ipynb
+sciklt/data/AIDS CN NLP/NLP/hindle-rooth.ipynb
+sciklt/data/AIDS CN NLP/NLP/prereqs.ipynb
+sciklt/data/AIDS CN NLP/NLP/trellis.ipynb
+sciklt/data/AIDS CN NLP/NLP/ttest.ipynb
+sciklt/data/AIDS CN NLP/NLP/wsd.ipynb
