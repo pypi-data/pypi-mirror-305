@@ -1,0 +1,100 @@
+[tool.poetry]
+name = "monitor-tool"
+version = "0.1.0rc2"
+description = "Monitor is a library for monitoring the performance of your application."
+authors = ["haonv <haonnguyen@prepedu.com>"]
+license = "MIT"  # Replace with your actual license
+readme = "README.md"  # Ensure this matches your project's README file
+packages = [
+    { include = "monitor" }
+]
+
+#[tool.poetry.scripts]
+#flamingo = "flamingo.run_cli:entry_point"
+
+[tool.poetry.dependencies]
+# Support python greater than 3.9
+python = "^3.9"
+sentry-sdk = "^2.17.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.2.2"
+mypy = "^1.10.0"
+pylint = "3.2.7"
+ipykernel = "^6.29.4"
+types-pyyaml = "^6.0.12.20240311"
+types-toml = "^0.10.8.20240310"
+types-requests = "^2.32.0.20240712"
+types-pytz = "^2024.1.0.20240417"
+no-implicit-optional = "^1.4"
+types-beautifulsoup4 = "^4.12.0.20240504"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 150
+output-format = "concise"
+show-fixes = true
+unsafe-fixes = false
+preview = true
+
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle
+    "F", # pyflakes
+    "B", # flake8-bugbear
+    "UP", # pyupgrade,
+    "I", # isort,
+    "Q", # quote
+    "W", # warning
+]
+ignore = ["B008"]
+unfixable = ["B"]
+
+[tool.ruff.format]
+docstring-code-format = true
+quote-style = "double"
+
+[tool.pylint]
+disable = [
+    "too-many-instance-attributes",
+    "too-few-public-methods",
+    "too-many-return-statements",
+    "too-many-locals",
+    "too-many-arguments",
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "import-outside-toplevel",
+    "cyclic-import",
+    "redefined-builtin",
+    "broad-exception-caught",
+    "broad-exception-raised",
+    "super-init-not-called",
+    "duplicate-code",
+    "fixme",
+    "logging-fstring-interpolation",
+    "too-many-positional-arguments"
+]
+reports = false
+max-branches = 20
+output-format = "colorized"
+max-line-length = 150
+class-const-naming-style = "PascalCase"
+
+
+[tool.mypy]
+no_implicit_optional = false
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_return_any = true
+warn_no_return = false
+warn_unreachable = true
+strict = true
+strict_optional = true
+plugins = ["pydantic.mypy"]
