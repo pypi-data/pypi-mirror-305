@@ -1,0 +1,5 @@
+[console_scripts]
+pyqulator_create_shortcut = pyqulator.create_shortcut:main
+
+[gui_scripts]
+pyqulator = pyqulator.main:main
