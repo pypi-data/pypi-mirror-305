@@ -1,0 +1,13 @@
+compas<3.0,>=2.0
+cwapi3d>=30.498.0
+
+[dev]
+attrs>=17.4
+black
+bump-my-version
+compas_invocations2
+invoke>=0.14
+sphinx_compas2_theme
+twine
+wheel
+ruff
