@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+jpprint.py
+pyproject.toml
+setup.py
+jpprint.egg-info/PKG-INFO
+jpprint.egg-info/SOURCES.txt
+jpprint.egg-info/dependency_links.txt
+jpprint.egg-info/requires.txt
+jpprint.egg-info/top_level.txt
