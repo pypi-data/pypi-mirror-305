@@ -1,0 +1,6 @@
+README.md
+setup.py
+cyj_test.egg-info/PKG-INFO
+cyj_test.egg-info/SOURCES.txt
+cyj_test.egg-info/dependency_links.txt
+cyj_test.egg-info/top_level.txt
