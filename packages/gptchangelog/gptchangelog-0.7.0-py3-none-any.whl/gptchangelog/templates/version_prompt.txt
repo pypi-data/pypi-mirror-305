@@ -1,0 +1,6 @@
+Current Version: $latest_version (format: MAJOR.MINOR.PATCH)
+
+Commit Messages:
+```
+$commit_messages
+```
