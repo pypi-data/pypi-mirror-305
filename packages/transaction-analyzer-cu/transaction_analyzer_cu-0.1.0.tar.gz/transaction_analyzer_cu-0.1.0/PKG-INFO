@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: transaction_analyzer_cu
+Version: 0.1.0
+Summary: Исполняемый пакет, позволяющий легко вычислять чистую прибыль и рентабельность инвестиций (ROI)
+Home-page: https://github.com/your-username/transaction_analyzer
+Author: Anastasia
+Author-email: Anastasia <a.opushneva@edu.centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.19.2
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2.1; extra == "dev"
+Requires-Dist: flake8>=3.8.4; extra == "dev"
+
+# transaction_analyzer_cu
+
+## Описание
+
+Это простой Python-пакет, который анализирует данные о транзакциях из CSV-файла и генерирует отчет с суммами по категориям (доходы и расходы).
+
+
+## Установка и использование
+
+```bash
+pip install transaction_analyzer_cu
