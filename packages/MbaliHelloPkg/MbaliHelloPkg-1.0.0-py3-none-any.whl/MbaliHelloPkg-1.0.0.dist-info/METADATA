@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: MbaliHelloPkg
+Version: 1.0.0
+Summary: A sample of python Hello world
+Author: Mbali Python
+Author-email: mbaliphama8@gmail.com
+
+Testing the packaging process
