@@ -1,0 +1,12 @@
+normalkl/__init__.py,sha256=HKLWbuCuwKrstQkwPh9szPJ_oiEbKvTH6hip-wipsZE,88
+normalkl/auto_kl.py,sha256=-sZVcgTnOqrczbBVX6tnls744qfHH3Z8hswlFri9SHQ,8898
+normalkl/kl.py,sha256=axM6G-i8RiyhlruplrP-rz_szP9pukCPEQurSRmyzao,3568
+normalkl/logdet.py,sha256=A1n8yiirIUyaJj_xEk64RjIqqqYQMuvnPOltM-RzLwU,3090
+normalkl/optimal.py,sha256=IItQUO-qsOmdmj-GTZctegfagH3UThIk5PMC6Z5uwkw,20222
+normalkl/quadratic.py,sha256=DUJw0oE5go3gXZFQaX1jOn_B4HZOM_oEawGtqGwfgFY,4721
+normalkl/trace.py,sha256=M-4wpESk0o72RgVi-ZDGqwBIcyim6QH3qRc2iO0hQEs,12975
+normalkl/util.py,sha256=armo0liNYUMND0WqQIkFf5oZqANexzeGCnTsLIBhPIw,1061
+normalkl-0.1.13.dist-info/METADATA,sha256=Upsj-JTg_cnbX3fUgp-chRb_t1FO4jP4vGTCEQGk5mI,9919
+normalkl-0.1.13.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+normalkl-0.1.13.dist-info/top_level.txt,sha256=b95pRys1Ug1YZwIF1rYIn61ElV3oquFyxEf2TkcNDbg,9
+normalkl-0.1.13.dist-info/RECORD,,
