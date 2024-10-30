@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ragnosis/__init__.py
+ragnosis/aux.py
+ragnosis/grounding.py
+ragnosis/models.py
+ragnosis.egg-info/PKG-INFO
+ragnosis.egg-info/SOURCES.txt
+ragnosis.egg-info/dependency_links.txt
+ragnosis.egg-info/requires.txt
+ragnosis.egg-info/top_level.txt
