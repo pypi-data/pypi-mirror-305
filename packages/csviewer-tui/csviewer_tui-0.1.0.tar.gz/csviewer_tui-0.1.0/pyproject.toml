@@ -1,0 +1,48 @@
+[project]
+name = "csviewer-tui"
+version = "0.1.0"
+description = "CSViewer-TUI (cvit)"
+readme = "README.md"
+authors = [
+    { name = "sou-san", email = "sou887867@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.1.7",
+    "textual>=0.85.1",
+    "textual-fastdatatable>=0.9.0",
+]
+
+[project.scripts]
+cvit = "csviewer_tui.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.13.0",
+    "ruff>=0.7.1",
+    "textual-dev>=1.6.1",
+]
+
+[tool.ruff]
+line-length = 90
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "F", # Pyflakes
+    "B", # flake8-bugbear
+    "I", # isort
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "N", # pep8-naming
+    "C901", # mccabe linter (複雑度チェック)
+]
+
+ignore = [
+    "D103", # docstring が無い関数やクラスを許す
+    "E501", # 行あたりの文字数制限を無視する
+]
