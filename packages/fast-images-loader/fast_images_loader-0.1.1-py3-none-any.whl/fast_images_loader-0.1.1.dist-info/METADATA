@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: fast_images_loader
+Version: 0.1.1
+Summary: A fast and asynchronous image loader
+Home-page: https://github.com/vaskers5/fast_images_loader
+Author: kazanplova
+Author-email: danil.krokodil@mail.ru
+Project-URL: Bug Tracker, https://github.com/vaskers5/fast_images_loader/issues
+Project-URL: Documentation, https://github.com/vaskers5/fast_images_loader#readme
+Project-URL: Source Code, https://github.com/vaskers5/fast_images_loader
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: tqdm
+Requires-Dist: loguru
+Requires-Dist: nest-asyncio
+
+# Fast Images Loader
+
+Fast Images Loader — это асинхронный инструмент для загрузки изображений из интернета и сохранения их в указанной папке. Он использует библиотеку `aiohttp` для асинхронных HTTP-запросов и `tqdm` для отображения прогресса загрузки.
+
+## Установка
+
+Вы можете установить пакет с помощью pip:
+
+```bash
+pip install fast_images_loader
+```
+
+## Использование
+
+Fast Images Loader можно использовать как команду в командной строке:
+
+```bash
+fast_images_loader [photo_urls] [data_folder]
+```
+
+- `photo_urls`: Список URL-адресов фотографий для загрузки.
+- `data_folder`: Папка, в которую будут сохранены загруженные фотографии.
+
+### Пример
+
+```bash
+fast_images_loader https://example.com/photo1.jpg https://example.com/photo2.jpg ./downloads
+```
+
+Это загрузит фотографии с указанных URL и сохранит их в папке `./downloads`.
+
+## Зависимости
+
+- `aiohttp`
+- `tqdm`
+- `loguru`
+- `nest_asyncio`
+
+## Разработка
+
+Если вы хотите внести изменения в проект, склонируйте репозиторий и установите зависимости:
+
+```bash
+git clone https://github.com/ваш-профиль/fast_images_loader.git
+cd fast_images_loader
+pip install -r requirements.txt
+```
+
+## Тестирование
+
+Тесты находятся в папке `tests`. Используйте `pytest` для запуска тестов:
+
+```bash
+pytest
+```
