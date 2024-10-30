@@ -1,0 +1,10 @@
+llmconf/__init__.py,sha256=PaWW5ExaMgW3E0nl7N3HB5jdtIZ18FrPkoJzF-uML7U,243
+llmconf/confs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llmconf/confs/base_conf.py,sha256=aiS2zQ6fqa3QRv0CHUw_FLpYNTbanQLGfoDHR1RedtE,1465
+llmconf/confs/openai_conf.py,sha256=9MWBxhQkPmvFwbn22qbSxu1k9KziOeSslacp_W2rDAo,2549
+llmconf/confs/transf_conf.py,sha256=wqQIaqKMSZgmclcFnPM_gqX7gh1ha41NoDW4LGVxY7g,7545
+llmconf/main.py,sha256=59Sog5zKYT7A-iwdsC1RmjhLoWdOVamMVo3ayyZwXYw,1371
+llmconf-0.3.3.dist-info/LICENSE,sha256=ftIn2YLv8WZu8Egf_F-Q7RzarhsGiHIl2pgk5wMNbFk,1069
+llmconf-0.3.3.dist-info/METADATA,sha256=7tMbhXCNuyaNIdFmcNIaJv6osLWoSgDnvf2FohEf59g,1382
+llmconf-0.3.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+llmconf-0.3.3.dist-info/RECORD,,
