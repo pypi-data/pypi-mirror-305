@@ -1,0 +1,3 @@
+[console_scripts]
+img2webp = img2webp.gui:main
+img2webp-cli = img2webp.cli:main

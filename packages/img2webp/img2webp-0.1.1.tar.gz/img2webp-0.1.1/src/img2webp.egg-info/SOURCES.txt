@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/img2webp/__init__.py
+src/img2webp/cli.py
+src/img2webp/gui.py
+src/img2webp.egg-info/PKG-INFO
+src/img2webp.egg-info/SOURCES.txt
+src/img2webp.egg-info/dependency_links.txt
+src/img2webp.egg-info/entry_points.txt
+src/img2webp.egg-info/requires.txt
+src/img2webp.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_gui.py
