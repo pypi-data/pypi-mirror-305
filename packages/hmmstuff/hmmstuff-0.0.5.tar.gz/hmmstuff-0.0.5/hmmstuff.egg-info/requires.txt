@@ -1,0 +1,4 @@
+pomegranate==0.14.0
+numpy
+scikit-learn
+Bio
