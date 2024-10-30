@@ -1,0 +1,10 @@
+biosimulators_masspy/__init__.py,sha256=2Xv9VGatW0CcAatqlhRGuRGp3GMNY-ZP4I3T8y2fnw0,479
+biosimulators_masspy/__main__.py,sha256=axZ5l5AnuwcPays4apGcYewfbUmt84YEGg6mWCIQmNw,660
+biosimulators_masspy/_version.py,sha256=ls1camlIoMxEZz9gSkZ1OJo-MXqHWwKPtdPbZJmwp7E,22
+biosimulators_masspy/core.py,sha256=9pbtt0YjeP5oVsTdMF02RnJst4qUZH92KYkE-PleRYI,21670
+biosimulators_masspy/data_model.py,sha256=gtdzTx0U6txU1Jf4KFNV8YMzva8VCyXa4rm2YCu6OlE,4266
+biosimulators_masspy-0.1.1.dist-info/LICENSE,sha256=TXS9OfZfmF1dUckyYqUnvGbeWNrUcrD4aSzR0v4Kp8o,1110
+biosimulators_masspy-0.1.1.dist-info/METADATA,sha256=tRUDpNTkI11Im-yDy6aYLVkYQfmt3b8HZuUlTAY35Qg,5051
+biosimulators_masspy-0.1.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+biosimulators_masspy-0.1.1.dist-info/entry_points.txt,sha256=rM9LuBwpv_qm2ddKCrtRGwQDGVWpe2lV4xIkjLh305M,75
+biosimulators_masspy-0.1.1.dist-info/RECORD,,
