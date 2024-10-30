@@ -1,0 +1,22 @@
+preview = true
+
+lint.select = [
+    "ALL",
+]
+
+lint.extend-ignore = [
+    # Later...
+    "A005",
+    "ANN",
+    "COM812", # Missing trailing comma
+    "CPY",
+    "D",
+    "DOC",
+    "E501", # Line too long
+    "ERA001", # commented-out code
+    "N802", # function name should be lowercase
+    "S101",
+    "TCH001", # Move import into a type-checking block
+    "TCH003", # Move import into a type-checking block
+    "PLR6301", # Method could be a function, class method, or static method
+]
