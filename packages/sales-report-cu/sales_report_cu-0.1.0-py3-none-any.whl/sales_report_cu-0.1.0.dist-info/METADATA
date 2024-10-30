@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: sales_report_cu
+Version: 0.1.0
+Summary: Пакет для генерации отчета о продажах по категориям
+Author-email: Egor <drobyazko_04@mail.ru>
+Requires-Dist: pandas
+
