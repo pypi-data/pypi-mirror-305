@@ -1,0 +1,202 @@
+Metadata-Version: 2.1
+Name: grz
+Version: 1.2.0
+Summary: This is a widget designed for openGauss Database inspection Tool!
+Author: RuiXu
+Author-email: RuiXu <ruixu@std.uestc.edu.cn>
+License: License: GPL version 3, excluding DRM provisions
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.html
+
+# Grz - openGauss 自动巡检工具
+
+## 项目概述
+
+        **Grz** 是专为 openGauss 数据库开发的自动巡检工具，旨在简化和优化数据库的监控与管理操作。该工具参考了 Oracle 的 Orz 工具和达梦数据库的 Drz 工具，帮助用户通过简单的命令获取数据库的健康状况和性能指标。 
+
+        Grz 工具能够将用户输入的简单命令自动转换为底层复杂操作，如通过输入 `grz status` 获取数据库状态。此外，Grz 支持生成 HTML 格式的巡检报告，便于管理员对数据库状态和性能指标进行综合分析。
+
+## 功能模块
+
+Grz 工具采用模块化设计，包含以下主要模块：
+
+- **命令采集模块**：收集并验证用户输入的指令。
+
+- **命令解析模块**：将简单命令映射为底层复杂操作。 
+
+- **命令执行模块**：使用 `subprocess` 模块执行解析后的复杂命令。 
+
+- **错误处理模块**：确保在执行过程中捕获并记录所有错误信息。
+
+## 安装指南
+
+### 环境要求
+
+- Python 3.6+
+- openGauss 企业版数据库环境
+- 必需的 Python 库：`argparse`, `subprocess`, `logging`
+
+### 安装步骤
+
+1. 确保openGauss 企业版数据库环境正确
+
+2. 克隆或下载本项目代码：
+
+```bash
+git clone https://gitee.com/cndba/orz
+or
+pip install grz
+```
+
+## 使用方法
+
+### 1. 常见命令操作
+
+| 命令                                    | 描述                  |
+| ------------------------------------- | ------------------- |
+| `grz help`                            | 显示所有命令的帮助信息         |
+| `grz start`                           | 启动 openGauss        |
+| `grz stop`                            | 停止 openGauss        |
+| `grz restart`                         | 重启 openGauss        |
+| `grz status`                          | 查看 openGauss 状态     |
+| `grz generateconf`                    | 生成配置文件              |
+| `grz check`                           | 检查 openGauss 整体健康状态 |
+| `grz checkos <optional>`              | 检查操作系统参数            |
+| `grz checkperf`                       | 检查数据库性能             |
+| `grz wdr <file_path>`                 | 生成 WDR 报告           |
+| `grz collect <start_time> <end_time>` | 收集数据库运行日志           |
+
+### 2. 使用示例
+
+以下为一些常用操作命令示例：
+
+1. **启动 openGauss**：
+   
+   ```bash
+   grz start
+   ```
+
+2. **查看数据库状态**：
+   
+   ```bash
+   grz status
+   ```
+
+3. **生成 WDR 报告**：
+   
+   ```bash
+   grz wdr /file_path
+   ```
+
+4. **收集运行日志**：
+   
+   ```bash
+   grz collect "20240818 01:01" "20240818 23:59"
+   ```
+
+### 3. 帮助信息
+
+可以`help` 参数查看帮助信息：
+
+```bash
+grz help
+```
+
+输出：
+
+```bash
+❯ grz help
+
+Available commands:
+
+    start        - Start the openGauss database
+
+    stop         - Stop the openGauss database
+
+    restart      - Restart the openGauss database
+
+    ----------------------------------------------------------------------------
+
+    status       - Show detailed status of the database cluster
+
+    generateconf - Generate and distribute configuration files
+
+    check        - Check cluster state with specified option
+
+    checkos      - Check operating system compatibility
+
+    checkperf    - Check system performance 
+
+    ----------------------------------------------------------------------------
+
+    wdr          - Generate WDR performance report (requires --file_path)
+
+    collect      - Collect diagnostic logs (requires --start_time, --end_time)
+
+    help         - Show this help message
+```
+
+## 代码结构
+
+```
+grz
+├── LICENSE.html
+├── README.md
+├── dist
+│   ├── grz-1.3.0-py3-none-any.whl
+│   └── grz-1.3.0.tar.gz
+├── pyproject.toml
+├── setup.py
+├── src
+│   ├── grz
+│   │   ├── CommandCollector
+│   │   │   ├── Collector.py
+│   │   │   ├── __init__.py
+│   │   │   └── __pycache__
+│   │   │       ├── Collector.cpython-310.pyc
+│   │   │       └── __init__.cpython-310.pyc
+│   │   ├── CommandParser
+│   │   │   ├── Parser.py
+│   │   │   ├── __init__.py
+│   │   │   └── __pycache__
+│   │   │       ├── Parser.cpython-310.pyc
+│   │   │       └── __init__.cpython-310.pyc
+│   │   ├── ErrorHandler
+│   │   │   ├── Handler.py
+│   │   │   ├── __init__.py
+│   │   │   └── __pycache__
+│   │   │       ├── Handler.cpython-310.pyc
+│   │   │       └── __init__.cpython-310.pyc
+│   │   └── grz.py
+│   └── grz.egg-info
+│       ├── PKG-INFO
+│       ├── SOURCES.txt
+│       ├── dependency_links.txt
+│       ├── entry_points.txt
+│       └── top_level.txt
+└── tests
+12 directories, 24 files
+```
+
+## 错误处理
+
+Grz 工具内置错误处理模块，能够在执行过程中捕获并记录所有错误信息，包括缺失参数、无效命令等。日志文件保存在项目根目录下，便于用户进行后续的审计和问题排查。
+
+## 未来开发
+
+Grz 工具后续计划包括：
+
+- **增加命令支持**：涵盖更多数据库监控、备份和恢复功能。
+- **增强错误处理**：增加自动恢复机制，减少手动干预。
+- **性能优化**：优化工具执行效率，降低资源消耗。
+
+## 贡献
+
+如果您有任何建议或改进意见，欢迎提交 Issue 或 Pull Request。您的贡献将帮助 Grz 工具更好地服务 openGauss 社区。
+
+## 许可证
+
+本项目使用 Mulan PSL v2 许可证 - 有关详细信息，请参见 `LICENSE` 文件。
