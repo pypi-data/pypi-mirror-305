@@ -1,0 +1,12 @@
+# Ignore the distribution folder
+dist/
+
+# Ignore build metadata
+*.egg-info/
+*.eggs/
+
+# Ignore Python cache and temporary files
+__pycache__/
+*.py[cod]
+*.pyo
+o

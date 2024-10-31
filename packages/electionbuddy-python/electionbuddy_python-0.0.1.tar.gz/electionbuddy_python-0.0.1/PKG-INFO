@@ -1,0 +1,43 @@
+Metadata-Version: 2.3
+Name: electionbuddy-python
+Version: 0.0.1
+Summary: Python SDK for the ElectionBuddy API.
+Project-URL: Documentation, https://github.com/electionbuddy/electionbuddy-python#readme
+Project-URL: Issues, https://github.com/electionbuddy/electionbuddy-python/issues
+Project-URL: Source, https://github.com/electionbuddy/electionbuddy-python
+Author-email: Alberto Rocha <albertor@electionbuddy.com>, Henrique Lavezzo <henriquel@electionbuddy.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# electionbuddy-python
+
+[![PyPI - Version](https://img.shields.io/pypi/v/electionbuddy-python.svg)](https://pypi.org/project/electionbuddy-python)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/electionbuddy-python.svg)](https://pypi.org/project/electionbuddy-python)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install electionbuddy-python
+```
+
+## License
+
+`electionbuddy-python` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
