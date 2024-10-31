@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: sales_analyzer123
+Version: 0.1.0
+Summary: Это Python-пакет, который помогает быстро и легко анализировать данные о продажах, полученные из CSV-файла.
+Home-page: https://github.com/your-username/sales_analyzer
+Author: Sofia
+Author-email: Sofia <s.a.karpova@edu.centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.19.2
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2.1; extra == "dev"
+Requires-Dist: flake8>=3.8.4; extra == "dev"
+
+# sales_analyzer123
+
+## Описание
+
+Это Python-пакет, который помогает быстро и легко анализировать данные о продажах, полученные из CSV-файла.
+
+## Установка и использование
+
+```bash
+pip install sales_analyzer123
