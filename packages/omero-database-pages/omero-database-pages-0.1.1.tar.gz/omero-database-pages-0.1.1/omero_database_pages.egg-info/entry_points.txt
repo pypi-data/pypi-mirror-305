@@ -1,0 +1,3 @@
+[console_scripts]
+omero-database-pages-setup = database_pages.setup_integration:main
+
