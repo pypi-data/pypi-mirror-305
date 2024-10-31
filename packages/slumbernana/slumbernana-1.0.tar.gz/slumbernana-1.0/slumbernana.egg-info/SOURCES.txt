@@ -1,0 +1,8 @@
+README.md
+setup.py
+slumbernana/__init__.py
+slumbernana/monkey.py
+slumbernana.egg-info/PKG-INFO
+slumbernana.egg-info/SOURCES.txt
+slumbernana.egg-info/dependency_links.txt
+slumbernana.egg-info/top_level.txt
