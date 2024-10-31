@@ -1,0 +1,13 @@
+cgrad/__init__.py,sha256=9tigx5FnWaIc2pD8QSBTNs6vulRzo7zwP3ByksVOYE0,134
+cgrad/autograd/calcgrad.cpython-312-darwin.so,sha256=rioYmts43s4Zk2KNw-euJ0p-lvRhuYuLGEOSnR7PgMM,117408
+cgrad/randoms/__init__.py,sha256=2qDX47pd0xDzYhCoje67Cl_IDrVhcW-f7qdjj4-DAJQ,73
+cgrad/randoms/random_methods.cpython-312-darwin.so,sha256=p81Zvc_dirPOKC69yW4YE1uqdTHEqWLNr3WC19eUIVA,120216
+cgrad/randoms/random_methods.pyi,sha256=5TEfXrGJim1wXzuKE2KbB5FMd2wWO14KwK3rATQzLhM,300
+cgrad/tensor/Tensorwrapper.cpython-312-darwin.so,sha256=8keCbaXh15bji_7vqPSeGYbV0IffM45KHS7P0YUyxDc,221776
+cgrad/tensor/Tensorwrapper.pyi,sha256=4en-X3UU9Qo9qmM0gmrEFsI6Hhz08foJzq2qrKLSdBg,3928
+cgrad/tensor/__init__.py,sha256=fIbQptoqLLaXACrYKUWGa-jaj1NjUN48jbZ7mn_DFPc,54
+cgrad-0.0.2.dist-info/LICENSE,sha256=2qmrfILd1kidXpqYjPA4iNiFYmCqO6NT4gj5rJUVvGc,1083
+cgrad-0.0.2.dist-info/METADATA,sha256=CrD8NzhKg5zI_AceIVJMiooC2sCCX5VIw0eocFvg1CY,4378
+cgrad-0.0.2.dist-info/WHEEL,sha256=Vo9YTsjXxZ5SWdH4n69oS5jU3YTIi3eHk0n-aUcTtlw,110
+cgrad-0.0.2.dist-info/top_level.txt,sha256=h3ZMLdwarTEibWMRBGmZ831oJrcgegVCKIrpizVifRA,6
+cgrad-0.0.2.dist-info/RECORD,,
