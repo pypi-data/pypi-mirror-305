@@ -1,0 +1,7 @@
+pod_on_shutdown/__init__.py,sha256=5bnShVf-lWR75WJqmB1lT4afsZRH5xF5STYvnbzkamQ,27
+pod_on_shutdown/extension.py,sha256=ehU5-yKKG0s8UUJUHRiBey8cyPct3yp1trffSa2hKAU,449
+localstack_extension_pod_on_shutdown-0.1.1.dist-info/METADATA,sha256=3HgoVSA_9sCKEi4OT8GjMhWiQT6tdFfZVmgt2M5ZUT0,1317
+localstack_extension_pod_on_shutdown-0.1.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+localstack_extension_pod_on_shutdown-0.1.1.dist-info/entry_points.txt,sha256=ZmcO6Btm9KEYtKP1amT_N_yQcFHTXFbTBDjuiGC1-WA,82
+localstack_extension_pod_on_shutdown-0.1.1.dist-info/top_level.txt,sha256=zlbhKPgpYOkBItoRcYjiQ1zTMWLJXTcAMcuijN5TPr8,16
+localstack_extension_pod_on_shutdown-0.1.1.dist-info/RECORD,,
