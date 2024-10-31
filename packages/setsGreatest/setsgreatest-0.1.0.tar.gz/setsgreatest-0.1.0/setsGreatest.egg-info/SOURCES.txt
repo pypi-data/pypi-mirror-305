@@ -1,0 +1,8 @@
+README.md
+setup.py
+setsGreatest/__init__.py
+setsGreatest/greatest.py
+setsGreatest.egg-info/PKG-INFO
+setsGreatest.egg-info/SOURCES.txt
+setsGreatest.egg-info/dependency_links.txt
+setsGreatest.egg-info/top_level.txt
