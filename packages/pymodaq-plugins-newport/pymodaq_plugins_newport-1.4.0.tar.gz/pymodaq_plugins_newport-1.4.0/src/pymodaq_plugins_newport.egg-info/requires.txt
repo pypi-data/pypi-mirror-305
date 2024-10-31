@@ -1,0 +1,5 @@
+toml
+pyvisa
+pymodaq>=4.3.0
+pythonnet
+pylablib
