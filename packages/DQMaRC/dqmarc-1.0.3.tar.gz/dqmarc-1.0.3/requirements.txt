@@ -1,0 +1,11 @@
+ipydatagrid
+ipywidgets
+numpy
+pandas
+plotly
+shiny
+shinywidgets
+Sphinx
+nbconvert
+nbformat
+jupyterlab
