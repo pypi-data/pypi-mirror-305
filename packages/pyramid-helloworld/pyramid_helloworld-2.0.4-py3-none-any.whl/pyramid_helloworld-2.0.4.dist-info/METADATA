@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pyramid-helloworld
+Version: 2.0.4
+Summary: Hello World web app using pyramid.
+Author-Email: Guillaume Gauvrit <guillaume@gauvr.it>
+License: BSD-Derived
+Requires-Python: >=3.9
+Requires-Dist: plaster-yaml>=2.0.1
+Requires-Dist: pyramid<3,>=1.10
+Requires-Dist: waitress<3,>=2.0.0
+Description-Content-Type: text/markdown
+
+# An hello world app in pyramid
+
+This App is a demo of the plaster-yaml package.
+
+
+Run the app using yaml configuration
+
+
+```
+poetry install
+poetry run pserve development.yaml
+```
+
+
+Run the app using json configuration
+
+```
+poetry install
+poetry run pserve development.json
+```
+
+
+See: https://github.com/mardiros/plaster-yaml
