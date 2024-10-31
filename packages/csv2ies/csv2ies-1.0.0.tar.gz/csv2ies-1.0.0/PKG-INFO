@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: csv2ies
+Version: 1.0.0
+Summary: Import users from a CSV file into IES
+Author-email: Jan Arman Parpin <parpin@sitepark.com>
+Project-URL: Homepage, https://gitlab.sitepark.com/internal/csv2ies
+Project-URL: Bug Tracker, https://gitlab.sitepark.com/internal/csv2ies/-/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# csv2ies
+
+Let's import users from a CSV file into an IES instance via it's REST API.
+
+## Installation
+
+`pip install csv2ies`
+
+## Usage
+
+- Needed user pools need to be created in user management beforehand.
+- Open your folder with your CSV File in the terminal.
+- Create an empty config via `csv2ies config`
+- Edit the created config.json file accordingly to your needs
+- Add Aliases to match user pool names to anchors
+- Run the import: `csv2ies run`
