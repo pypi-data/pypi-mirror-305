@@ -1,0 +1,4 @@
+include LICENSE, CHANGELOG.md
+include code2flowdiagram/get_ast.js
+include code2flowdiagram/get_ast.php
+include code2flowdiagram/graphviz/*
