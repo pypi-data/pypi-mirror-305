@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mlflow-custom-headers-plugin
+Version: 1.0.0
+Summary: MLFlow plugin that allows adding extra headers to requests to MLFlow in order to enable authentication and other use-cases.
+Author: Yakko Majuri
+Author-email: yakko.majuri@protonmail.com
+License: MIT
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: mlflow>=2.8.0
+
