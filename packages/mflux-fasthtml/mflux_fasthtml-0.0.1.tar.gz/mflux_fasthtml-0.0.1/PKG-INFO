@@ -1,0 +1,43 @@
+Metadata-Version: 2.3
+Name: mflux-fasthtml
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/anthonywu/mflux-fasthtml#readme
+Project-URL: Issues, https://github.com/anthonywu/mflux-fasthtml/issues
+Project-URL: Source, https://github.com/anthonywu/mflux-fasthtml
+Author-email: Anthony Wu <462072+anthonywu@users.noreply.github.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.10
+Requires-Dist: click
+Requires-Dist: mflux<1.0,>=0.4.1
+Description-Content-Type: text/markdown
+
+# mflux-fasthtml
+
+A web app gui for [mflux](https://pypi.org/project/mflux/) python library implemented with [FastHTML](https://docs.fastht.ml)
+
+[![PyPI - Version](https://img.shields.io/pypi/v/mflux-fasthtml.svg)](https://pypi.org/project/mflux-fasthtml)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mflux-fasthtml.svg)](https://pypi.org/project/mflux-fasthtml)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install mflux-fasthtml
+```
+
+## License
+
+`mflux-fasthtml` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
