@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+dirmapper_core/__init__.py
+dirmapper_core.egg-info/PKG-INFO
+dirmapper_core.egg-info/SOURCES.txt
+dirmapper_core.egg-info/dependency_links.txt
+dirmapper_core.egg-info/requires.txt
+dirmapper_core.egg-info/top_level.txt
+tests/test_cli_utils.py
+tests/test_directory_structure_generator.py
+tests/test_ignore_list_reader.py
+tests/test_main.py
+tests/test_path_ignorer.py
