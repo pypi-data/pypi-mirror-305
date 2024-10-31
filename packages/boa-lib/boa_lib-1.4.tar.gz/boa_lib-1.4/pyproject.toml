@@ -1,0 +1,30 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "boa_lib"
+version = "1.4"
+authors = [
+  "Vincent Raulin <vincent.raulin.n7@gmail.com>",
+]
+description = "A Python library with advanced system tools."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+repository = "https://github.com/MrVoustache/Boa"
+packages = [
+  { include = "./Boa/**/*.py", format = ["sdist", "wheel"] }
+]
+
+include = [
+    { path = "./Boa.pth", format = ["sdist", "wheel"] }
+]
+
+[tool.poetry.dependencies]
+viper_lib = "^1.3"
