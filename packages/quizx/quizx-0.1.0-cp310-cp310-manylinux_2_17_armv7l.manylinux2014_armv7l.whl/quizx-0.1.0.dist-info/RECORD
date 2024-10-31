@@ -1,0 +1,13 @@
+quizx-0.1.0.dist-info/METADATA,sha256=DEH5C_obVZqg79gGLAxhRpdtTa77jVpeE_GLPrNGlao,2925
+quizx-0.1.0.dist-info/WHEEL,sha256=YAJh5Amp42j7AizUs6dQQ2Q88INX_pb0XMnRW_vqJOI,129
+quizx-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+quizx/scalar.py,sha256=Kwjkdvby20C2m848r12eZxHmoQn8Ssy02pJhvHLIRNg,473
+quizx/simplify.py,sha256=pJpLmB1kBiq03cabRQRJfDNZ7fZWK0m0vYdMP47hZoo,196
+quizx/__init__.py,sha256=MAA_-PijLBQfnlSalPBt7Qt2ooUcKtde2S-0MRqyV4E,248
+quizx/_quizx.pyi,sha256=tcfiFBLaCr5i__zZl85WQev1D1kBbBLAqd50TbJS2YM,4099
+quizx/graph.py,sha256=6O9WK4YheE-2t9UOgSqHYehFtYBKg77QI2TDGE-gT94,10170
+quizx/decompose.py,sha256=jIR8Iuo4xGXpwcsZxpaW1qWHfFLAE-CGw7EO2UbYL74,1508
+quizx/circuit.py,sha256=-2mos7P-FZSMOmYDDHV-n7NhR4MRCfj_SyLshWHvbzQ,821
+quizx/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quizx/_quizx.cpython-310-arm-linux-gnueabihf.so,sha256=rr2q5lpcS7TqVTuTsD794Qlo_xSP2fogyDHTuahRsKU,1859244
+quizx-0.1.0.dist-info/RECORD,,
