@@ -1,0 +1,2 @@
+[console_scripts]
+cltrain = clarena.main:cltrain
