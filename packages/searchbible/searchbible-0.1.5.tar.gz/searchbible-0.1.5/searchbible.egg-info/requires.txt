@@ -1,0 +1,12 @@
+Pygments
+apsw
+argparse
+chromadb>=0.5.3
+google-cloud-aiplatform==1.70.0
+openai==1.52.2
+prompt_toolkit
+pyperclip
+python-vlc
+requests
+sentence-transformers==3.2.1
+tiktoken==0.8.0
