@@ -1,0 +1,10 @@
+passagemath_tdlib-10.4.37.dist-info/RECORD,,
+passagemath_tdlib-10.4.37.dist-info/WHEEL,sha256=5kdgZxwCUH5HOn0fvto5jnz1I_y6KXPGSCjI-Cj024k,109
+passagemath_tdlib-10.4.37.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_tdlib-10.4.37.dist-info/METADATA,sha256=o5u80XkuiJ_54z7qojOhzyZZnpkVssfr3upMjjyoW3I,2367
+passagemath_tdlib.dylibs/libpari-gmp-tls.dylib,sha256=lyK-zB4UIXpZfrluEPdrqiWYVIQjj_O_KC28mHxPgKI,9820768
+passagemath_tdlib.dylibs/libgmp.10.dylib,sha256=K9KG2D9XyGC6ubr2G_zpg3rGJXFaLqV5CgAToHfEqmY,606176
+sage/all__sagemath_tdlib.py,sha256=xwEAp-3HSleZKAjcgudzEBoWekMyMSx7mY9lzHCETcU,44
+sage/graphs/all__sagemath_tdlib.py,sha256=xwEAp-3HSleZKAjcgudzEBoWekMyMSx7mY9lzHCETcU,44
+sage/graphs/graph_decompositions/all__sagemath_tdlib.py,sha256=xwEAp-3HSleZKAjcgudzEBoWekMyMSx7mY9lzHCETcU,44
+sage/graphs/graph_decompositions/tdlib.cpython-311-darwin.so,sha256=IU5Fhz_NFNd0lCT7V1-yELa5paxLfqRnj8tGBWBfYd4,346816
