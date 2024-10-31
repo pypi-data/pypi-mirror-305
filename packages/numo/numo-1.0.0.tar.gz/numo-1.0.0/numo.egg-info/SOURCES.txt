@@ -1,0 +1,8 @@
+README.md
+setup.py
+numo/__init__.py
+numo.egg-info/PKG-INFO
+numo.egg-info/SOURCES.txt
+numo.egg-info/dependency_links.txt
+numo.egg-info/not-zip-safe
+numo.egg-info/top_level.txt
