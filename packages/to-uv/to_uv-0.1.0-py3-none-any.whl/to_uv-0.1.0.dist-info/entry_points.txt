@@ -1,0 +1,2 @@
+[console_scripts]
+to-uv = to_uv.main:main
