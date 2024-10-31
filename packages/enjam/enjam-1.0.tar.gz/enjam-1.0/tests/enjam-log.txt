@@ -1,0 +1,85 @@
+22:07:45 Found 4 files
+22:07:45 /home/z/pproj/enjam/tests/empty-two.gif 'int' object is not subscriptable
+22:07:45 /home/z/pproj/enjam/tests/empty-one.gif 'int' object is not subscriptable
+22:07:45 /home/z/pproj/enjam/tests/empty-two.gif [in#0 @ 0x55e6a7525500] Error opening input: End of file
+22:07:45 /home/z/pproj/enjam/tests/empty-two.gif Error opening input file /home/z/pproj/enjam/tests/empty-two.gif.
+22:07:45 /home/z/pproj/enjam/tests/empty-two.gif Error opening input files: End of file
+22:07:45 /home/z/pproj/enjam/tests/empty-one.gif [in#0 @ 0x555c7f755500] Error opening input: End of file
+22:07:45 /home/z/pproj/enjam/tests/empty-one.gif Error opening input file /home/z/pproj/enjam/tests/empty-one.gif.
+22:07:45 /home/z/pproj/enjam/tests/empty-one.gif Error opening input files: End of file
+22:07:45 /home/z/pproj/enjam/tests/empty-two.gif FFmpegError('Error opening input files: End of file')
+22:07:45 /home/z/pproj/enjam/tests/empty-one.gif FFmpegError('Error opening input files: End of file')
+22:07:45 /home/z/pproj/enjam/tests/64pix.gif Error opening output file /home/z/pproj/enjam/tests/64pix.mp4.
+22:07:45 /home/z/pproj/enjam/tests/64pix.gif Error opening output files: Function not implemented
+22:07:45 /home/z/pproj/enjam/tests/1pix.gif Error opening output file /home/z/pproj/enjam/tests/1pix.mp4.
+22:07:45 /home/z/pproj/enjam/tests/1pix.gif Error opening output files: Function not implemented
+22:07:45 /home/z/pproj/enjam/tests/64pix.gif FFmpegError('Error opening output files: Function not implemented')
+22:07:45 /home/z/pproj/enjam/tests/1pix.gif FFmpegError('Error opening output files: Function not implemented')
+22:07:45 All finished in 0:00:00.295530
+22:07:45 Successfully processed 0 files
+22:07:45 Failed to process 4 files
+22:12:33 Found 1 files
+22:12:34 Average compression ratio: 0.2
+22:12:34 All finished in 0:00:00.316689
+22:12:34 Successfully processed 1 files
+22:12:54 Found 1 files
+22:12:55 Average compression ratio: 0.2
+22:12:55 All finished in 0:00:00.400273
+22:12:55 Successfully processed 1 files
+22:13:09 Found 1 files
+22:13:09 Average compression ratio: 0.2
+22:13:09 All finished in 0:00:00.329382
+22:13:09 Successfully processed 1 files
+22:13:23 Found 1 files
+22:13:23 /home/z/pproj/enjam/tests/64pix.gif x265 [error]: Valid quality based range: -qpBDOffsetY to 51
+22:13:23 /home/z/pproj/enjam/tests/64pix.gif [vost#0:0/libx265 @ 0x5585de574280] Error while opening encoder - maybe incorrect parameters such as bit_rate, rate, width or height.
+22:13:23 /home/z/pproj/enjam/tests/64pix.gif [vf#0:0 @ 0x5585de575000] Error sending frames to consumers: Invalid data found when processing input
+22:13:24 /home/z/pproj/enjam/tests/64pix.gif Conversion failed!
+22:13:24 /home/z/pproj/enjam/tests/64pix.gif FFmpegError('Conversion failed!')
+22:13:24 All finished in 0:00:00.777974
+22:13:24 Successfully processed 0 files
+22:13:24 Failed to process 1 files
+22:13:39 sys.argv: /home/u1/.local/bin/enjam --vcodec libx265 --crf 60 --pattern 64pix.gif --verbose
+22:13:39 {'srcdir': PosixPath('/home/z/pproj/enjam/tests'), 'dstdir': PosixPath('/home/z/pproj/enjam/tests'), 'exclude_dstdir': True, 'jobs': 4, 'acodec': 'copy', 'vcodec': <VCodecs.libx265: 'libx265'>, 'vbitrate': None, 'abitrate': '38k', 'crf': 60, 'speed': <SpeedPresets.7: '7'>, 'fprefix': None, 'gop': 200, 'grain': 0, 'write_log': True, 'verbose': True, 'skip_errors': True, 'pattern': '64pix.gif', 'stdout_filter': <function main.<locals>.stdout_filter at 0x7f19efe2c360>, 'formatter': <function main.<locals>.formatter at 0x7f19f0721b20>}
+22:13:39 Found 1 files
+22:13:39 /home/z/pproj/enjam/tests/64pix.gif Resolution 4096 crf 60 bitrate None
+22:13:39 /home/z/pproj/enjam/tests/64pix.gif FFMPEG command: ffmpeg -y -hide_banner -nostdin -i "/home/z/pproj/enjam/tests/64pix.gif" -codec:a copy -b:a 38k -codec:v libx265 -preset 7 -tune ssim -crf 60 -vf scale=trunc(iw/2)*2:trunc(ih/2)*2 -g 200 -pix_fmt yuv420p10le "/home/z/pproj/enjam/tests/64pix.mp4"
+22:13:40 /home/z/pproj/enjam/tests/64pix.gif x265 [error]: Valid quality based range: -qpBDOffsetY to 51
+22:13:40 /home/z/pproj/enjam/tests/64pix.gif [vost#0:0/libx265 @ 0x563234402280] Error while opening encoder - maybe incorrect parameters such as bit_rate, rate, width or height.
+22:13:40 /home/z/pproj/enjam/tests/64pix.gif [vf#0:0 @ 0x563234403000] Error sending frames to consumers: Invalid data found when processing input
+22:13:40 /home/z/pproj/enjam/tests/64pix.gif Conversion failed!
+22:13:40 /home/z/pproj/enjam/tests/64pix.gif FFmpegError('Conversion failed!')
+22:13:40 All finished in 0:00:00.803459
+22:13:40 Successfully processed 0 files
+22:13:40 Failed to process 1 files
+22:14:07 sys.argv: /home/u1/.local/bin/enjam --vcodec libx265 --crf 51 --pattern 64pix.gif --verbose
+22:14:07 {'srcdir': PosixPath('/home/z/pproj/enjam/tests'), 'dstdir': PosixPath('/home/z/pproj/enjam/tests'), 'exclude_dstdir': True, 'jobs': 4, 'acodec': 'copy', 'vcodec': <VCodecs.libx265: 'libx265'>, 'vbitrate': None, 'abitrate': '38k', 'crf': 51, 'speed': <SpeedPresets.7: '7'>, 'fprefix': None, 'gop': 200, 'grain': 0, 'write_log': True, 'verbose': True, 'skip_errors': True, 'pattern': '64pix.gif', 'stdout_filter': <function main.<locals>.stdout_filter at 0x7fb3c4ff0360>, 'formatter': <function main.<locals>.formatter at 0x7fb3c5921b20>}
+22:14:07 Found 1 files
+22:14:07 /home/z/pproj/enjam/tests/64pix.gif Resolution 4096 crf 51 bitrate None
+22:14:07 /home/z/pproj/enjam/tests/64pix.gif FFMPEG command: ffmpeg -y -hide_banner -nostdin -i "/home/z/pproj/enjam/tests/64pix.gif" -codec:a copy -b:a 38k -codec:v libx265 -preset 7 -tune ssim -crf 51 -vf scale=trunc(iw/2)*2:trunc(ih/2)*2 -g 200 -pix_fmt yuv420p10le "/home/z/pproj/enjam/tests/64pix.mp4"
+22:14:07 /home/z/pproj/enjam/tests/64pix.gif Written 3.7K, comression ratio 0.1; took 0.387s /home/z/pproj/enjam/tests/64pix.mp4
+22:14:07 Average compression ratio: 0.1
+22:14:07 All finished in 0:00:00.394165
+22:14:07 Successfully processed 1 files
+22:14:18 sys.argv: /home/u1/.local/bin/enjam --vcodec libx264 --crf 51 --pattern 64pix.gif --verbose
+22:14:18 {'srcdir': PosixPath('/home/z/pproj/enjam/tests'), 'dstdir': PosixPath('/home/z/pproj/enjam/tests'), 'exclude_dstdir': True, 'jobs': 4, 'acodec': 'copy', 'vcodec': <VCodecs.libx264: 'libx264'>, 'vbitrate': None, 'abitrate': '38k', 'crf': 51, 'speed': <SpeedPresets.7: '7'>, 'fprefix': None, 'gop': 200, 'grain': 0, 'write_log': True, 'verbose': True, 'skip_errors': True, 'pattern': '64pix.gif', 'stdout_filter': <function main.<locals>.stdout_filter at 0x7f4a1b674360>, 'formatter': <function main.<locals>.formatter at 0x7f4a1c185b20>}
+22:14:18 Found 1 files
+22:14:18 /home/z/pproj/enjam/tests/64pix.gif Resolution 4096 crf 51 bitrate None
+22:14:18 /home/z/pproj/enjam/tests/64pix.gif FFMPEG command: ffmpeg -y -hide_banner -nostdin -i "/home/z/pproj/enjam/tests/64pix.gif" -codec:a copy -b:a 38k -codec:v libx264 -preset 7 -tune ssim -crf 51 -vf scale=trunc(iw/2)*2:trunc(ih/2)*2 -g 200 -pix_fmt yuv420p10le "/home/z/pproj/enjam/tests/64pix.mp4"
+22:14:18 /home/z/pproj/enjam/tests/64pix.gif Written 2.0K, comression ratio 0.1; took 0.296s /home/z/pproj/enjam/tests/64pix.mp4
+22:14:18 Average compression ratio: 0.1
+22:14:18 All finished in 0:00:00.302390
+22:14:18 Successfully processed 1 files
+22:15:01 Found 1 files
+22:15:02 Average compression ratio: 0.3
+22:15:02 All finished in 0:00:00.427768
+22:15:02 Successfully processed 1 files
+22:15:55 Found 1 files
+22:15:55 /home/z/pproj/enjam/tests/64pix.mkv ValueError('Will not overwrite 64pix.mkv, choose another destinaton dir, or  set --fprefix.')
+22:15:55 All finished in 0:00:00.010236
+22:15:55 Successfully processed 0 files
+22:15:55 Failed to process 1 files
+22:16:04 Found 1 files
+22:16:05 Average compression ratio: 1.0
+22:16:05 All finished in 0:00:00.304222
+22:16:05 Successfully processed 1 files
