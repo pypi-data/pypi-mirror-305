@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+nmass.egg-info/PKG-INFO
+nmass.egg-info/SOURCES.txt
+nmass.egg-info/dependency_links.txt
+nmass.egg-info/requires.txt
+nmass.egg-info/top_level.txt
