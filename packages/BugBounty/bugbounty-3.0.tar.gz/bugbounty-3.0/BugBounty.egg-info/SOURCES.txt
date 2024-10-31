@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+BugBounty/BugBounty.py
+BugBounty/__init__.py
+BugBounty.egg-info/PKG-INFO
+BugBounty.egg-info/SOURCES.txt
+BugBounty.egg-info/dependency_links.txt
+BugBounty.egg-info/entry_points.txt
+BugBounty.egg-info/top_level.txt
