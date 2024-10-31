@@ -1,0 +1,1 @@
+def plugin_function():print('This is a plugin function from plugin_package.')
