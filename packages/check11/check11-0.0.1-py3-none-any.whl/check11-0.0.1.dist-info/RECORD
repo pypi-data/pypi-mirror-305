@@ -1,0 +1,12 @@
+check11/__init__.py,sha256=3IQC178QNAoA6AqCXgOyCsLh14hakBpyGd7gzjWn8eA,10910
+check11/base_test.py,sha256=LwXBBYWDkbjjELrVK3VPiQbDMttHAXwVbXW2QReOaM4,19282
+check11/nerdy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+check11/nerdy/about.py,sha256=wCCszYQnVInRZccUscOGzYbzekHBlPBjC4wmf9-z7so,82
+check11/nerdy/test_nerdy.py,sha256=JD8RTVYnI-xYCXobDmj_rU8usXeM0puCbT1zzOqQWiw,2686
+check11/nerdy/test_other_nerdy.py,sha256=7UIFRL5uNhr905lMzFcuweN1GoVpWl-FjrlB6BjiugM,631
+check11-0.0.1.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+check11-0.0.1.dist-info/METADATA,sha256=-gwc6HQgu0hgV9ar-VgY1B2Gqvto3YDZqNJIIpoIQbQ,2696
+check11-0.0.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+check11-0.0.1.dist-info/entry_points.txt,sha256=q5ngtlSRySvqaTESlTklvYN14VisCSjpHRn8MnoJytI,40
+check11-0.0.1.dist-info/top_level.txt,sha256=fG1RQAfkS-HvaSFW6_vM-OqCa4niDYAbuOoNe4yKw9U,8
+check11-0.0.1.dist-info/RECORD,,
