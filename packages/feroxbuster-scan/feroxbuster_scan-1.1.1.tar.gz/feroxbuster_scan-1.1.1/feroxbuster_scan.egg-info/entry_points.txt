@@ -1,0 +1,2 @@
+[console_scripts]
+feroxbuster-scan = feroxbuster_scan.feroxbuster_scan:main
