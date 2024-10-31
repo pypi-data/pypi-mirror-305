@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-07 13:01+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: .\sage_newsletter\actions\newsletter.py:9
+msgid "Confirm selected subscriptions"
+msgstr "تأیید اشتراک‌های انتخاب شده"
+
+#: .\sage_newsletter\actions\newsletter.py:15
+msgid "Deactivate selected subscriptions"
+msgstr "غیرفعال‌سازی اشتراک‌های انتخاب شده"
+
+#: .\sage_newsletter\admin.py:34
+msgid "Subscriber Information"
+msgstr "اطلاعات مشترک"
+
+#: .\sage_newsletter\admin.py:37
+msgid "Preferences"
+msgstr "ترجیحات"
+
+#: .\sage_newsletter\admin.py:39
+msgid "Subscription Status"
+msgstr "وضعیت اشتراک"
+
+#: .\sage_newsletter\apps.py:8
+msgid "Newsletter"
+msgstr "خبرنامه"
+
+#: .\sage_newsletter\helpers\text_choices.py:6
+msgid "News"
+msgstr "اخبار"
+
+#: .\sage_newsletter\helpers\text_choices.py:7
+msgid "Deals"
+msgstr "تخفیفات"
+
+#: .\sage_newsletter\helpers\text_choices.py:8
+msgid "Tips"
+msgstr "نکات"
+
+#: .\sage_newsletter\helpers\text_choices.py:12
+msgid "Daily"
+msgstr "روزانه"
+
+#: .\sage_newsletter\helpers\text_choices.py:13
+msgid "Weekly"
+msgstr "هفتگی"
+
+#: .\sage_newsletter\helpers\text_choices.py:14
+msgid "Monthly"
+msgstr "ماهانه"
+
+#: .\sage_newsletter\helpers\text_choices.py:18
+msgid "English"
+msgstr "انگلیسی"
+
+#: .\sage_newsletter\helpers\text_choices.py:19
+msgid "Spanish"
+msgstr "اسپانیایی"
+
+#: .\sage_newsletter\helpers\text_choices.py:20
+msgid "Arabic"
+msgstr "عربی"
+
+#: .\sage_newsletter\models.py:16
+msgid "Email Address"
+msgstr "آدرس ایمیل"
+
+#: .\sage_newsletter\models.py:22
+msgid "Date Subscribed"
+msgstr "تاریخ اشتراک"
+
+#: .\sage_newsletter\models.py:28
+msgid "Confirmed Subscription"
+msgstr "اشتراک تأیید شده"
+
+#: .\sage_newsletter\models.py:36
+msgid "Unsubscribe Token"
+msgstr "توکن لغو اشتراک"
+
+#: .\sage_newsletter\models.py:44
+msgid "Content Preferences"
+msgstr "ترجیحات محتوا"
+
+#: .\sage_newsletter\models.py:52
+msgid "Frequency Preferences"
+msgstr "ترجیحات فرکانس"
+
+#: .\sage_newsletter\models.py:60
+msgid "Language Preference"
+msgstr "ترجیح زبان"
+
+#: .\sage_newsletter\models.py:66
+msgid "GDPR Consent"
+msgstr "رضایت مقررات عمومی حفاظت از داده‌ها"
+
+#: .\sage_newsletter\models.py:73
+msgid "Last Newsletter Sent"
+msgstr "آخرین خبرنامه ارسال شده"
+
+#: .\sage_newsletter\models.py:79
+msgid "Is Active"
+msgstr "فعال است"
+
+#: .\sage_newsletter\models.py:89
+msgid "Newsletter Subscriber"
+msgstr "مشترک خبرنامه"
+
+#: .\sage_newsletter\models.py:90
+msgid "Newsletter Subscribers"
+msgstr "مشترکان خبرنامه"
+
+#: .\sage_newsletter\views.py:79
+msgid "We've reactivated your email address. Thanks for subscribing again!"
+msgstr "آدرس ایمیل شما را دوباره فعال کرده‌ایم. از اشتراک مجدد شما سپاسگزاریم!"
+
+#: .\sage_newsletter\views.py:84
+msgid "You have successfully subscribed to the newsletter."
+msgstr "شما با موفقیت به خبرنامه اشتراک پیدا کردید."
