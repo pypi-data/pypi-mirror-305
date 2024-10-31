@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Simple_Dropbox
+Version: 1.5.0
+Summary: Un accès plus simple mais moins complet à Dropbox
+Home-page: https://github.com/Grivy16/Dropbox_module/wiki
+Author: Grivy16
+Author-email: grivy16publix@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: dropbox
+Requires-Dist: clipboard
+Requires-Dist: customtkinter
+
