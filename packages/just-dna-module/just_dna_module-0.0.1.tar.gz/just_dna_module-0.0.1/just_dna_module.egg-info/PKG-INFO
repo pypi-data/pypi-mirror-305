@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: just-dna-module
+Version: 0.0.1
+Summary: Just DNA Module
+Author: Anton Kulaga
+Author-email: antonkulaga@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: oakvar
+
+
+# just-module
+Basic classes for Just-DNA-Seq modules
+
+## Installation
+
+You can use conda or micromamba to install the environment.
+
+```bash
+micromamba env create -f environment.yaml
+```
+
+Activate the environment:
+```bash
+micromamba activate just-dna-module
+```
+
+The library do not have executables but is just used inside Just-DNA-Seq module providing base classes for modules and their utils.
