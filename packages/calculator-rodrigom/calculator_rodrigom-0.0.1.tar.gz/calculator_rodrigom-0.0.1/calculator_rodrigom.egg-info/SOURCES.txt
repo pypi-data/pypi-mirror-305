@@ -1,0 +1,8 @@
+README.md
+setup.py
+calculator_rodrigom.egg-info/PKG-INFO
+calculator_rodrigom.egg-info/SOURCES.txt
+calculator_rodrigom.egg-info/dependency_links.txt
+calculator_rodrigom.egg-info/top_level.txt
+subtraction/__init__.py
+sum/__init__.py
