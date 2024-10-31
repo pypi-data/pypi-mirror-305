@@ -1,0 +1,8 @@
+dictionary/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dictionary/dictionary_loader.py,sha256=ux4zim1VI5noT0l587O9b5-gzobiRnNyJtgme6sg81w,8767
+parsers/__init__.py,sha256=LrUDKx1WzDyl82iTg1DC_GsGkXMa1uGtW0nW6Tn3O50,82
+parsers/location_parser.py,sha256=plV4kdnw_EaHzCjn_dWF2DXkOwpLJYNrglc88j_J7_o,22113
+location_parse_lzx-0.0.1.dist-info/METADATA,sha256=_omRQNiRWDmKIRcI9wgRVddTQBCjamPvf4PvCURdW5Y,234
+location_parse_lzx-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+location_parse_lzx-0.0.1.dist-info/top_level.txt,sha256=0B9L15w9HNfDdy228RsCVMgjXkd6y2nqNYbvDEwAwZ0,19
+location_parse_lzx-0.0.1.dist-info/RECORD,,
