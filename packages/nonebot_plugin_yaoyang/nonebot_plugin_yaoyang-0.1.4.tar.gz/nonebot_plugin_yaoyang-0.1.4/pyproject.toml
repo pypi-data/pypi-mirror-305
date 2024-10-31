@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "nonebot_plugin_yaoyang"
+version = "0.1.4"
+description = "发送耀阳语音"
+authors = ["Endless-Path <rk.chensiyu@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+nonebot2 = "^2.2.0"
+nonebot-adapter-onebot = "^2.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
