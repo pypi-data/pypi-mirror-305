@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+torczon.py
+torczon.egg-info/PKG-INFO
+torczon.egg-info/SOURCES.txt
+torczon.egg-info/dependency_links.txt
+torczon.egg-info/top_level.txt

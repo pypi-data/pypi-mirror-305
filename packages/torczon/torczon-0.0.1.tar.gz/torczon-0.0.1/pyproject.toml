@@ -1,0 +1,20 @@
+[project]
+name = "torczon"
+version = "0.0.1"
+authors = [
+    {name="Mazen Alamir", email="mazen.alamir@grenoble-inp.fr"},
+]
+description = "A NLP derivative-free solver using a modified version of the torczon algorithm"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+keywords = ["Nonlinear Programming", "optimization", "derivative free", "constrained optimization"]
+
+[project.urls]
+Homepage = "https://github.com/mazenalamir/torczon"
+Issues = "https://github.com/mazenalamir/torczon/issues"
