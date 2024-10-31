@@ -1,0 +1,12 @@
+*__pycache__ 
+build/
+dist/
+tmp*
+.idea/
+env/
+venv/
+.python-version
+*.log
+*.dist
+*.build
+*/i18n/develop/*(translations).zip
