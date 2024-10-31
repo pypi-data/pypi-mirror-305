@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+cliborg/__init__.py
+cliborg/cliborg.py
+cliborg.egg-info/PKG-INFO
+cliborg.egg-info/SOURCES.txt
+cliborg.egg-info/dependency_links.txt
+cliborg.egg-info/entry_points.txt
+cliborg.egg-info/requires.txt
+cliborg.egg-info/top_level.txt
