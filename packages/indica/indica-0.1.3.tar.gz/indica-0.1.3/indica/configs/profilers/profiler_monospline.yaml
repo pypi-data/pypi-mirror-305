@@ -1,0 +1,39 @@
+
+electron_density:
+    y0: 5.0e+19
+    y1: 5.0e+18
+    yend: 2.0e+18
+
+
+impurity_density:
+  y0: 1.0e+17
+  y1: 1.0e+15
+  yend: 1.0e+15
+
+neutral_density:
+    y0: 1.0e+13
+    y1: 1.0e+15
+    yend: 1.0e+15
+
+
+electron_temperature:
+    y0: 3.0e+3
+    y1: 50
+    yend: 5
+
+
+ion_temperature:
+    xknots: [0.05, 0.2, 0.35, 0.5, 1.0, 1.05]
+    y0: 5.0e+3
+    y1: 4.5e+3
+    y2: 2.0e+3
+    y3: 1.0e+3
+    y4: 50
+    yend: 20
+
+
+toroidal_rotation:
+    y0: 500.0e+3
+    y1: 10.0e+3
+    yend: 1000.0
+

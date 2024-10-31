@@ -1,0 +1,19 @@
+[2024-09-18 14:12:24,735][__main__][INFO] - Beginning BDA for pulse 11560
+[2024-09-18 14:12:24,736][__main__][INFO] - Will write to 43000000.RUN01
+[2024-09-18 14:12:24,736][__main__][INFO] - Initialising plasma
+[2024-09-18 14:12:26,676][__main__][INFO] - Initialising plasma_profiler
+[2024-09-18 14:12:26,714][__main__][INFO] - PPTS reading
+[2024-09-18 14:12:26,982][__main__][INFO] - Setting profiles from PPTS
+[2024-09-18 14:12:27,184][__main__][INFO] - R shift being used
+[2024-09-18 14:12:27,184][__main__][INFO] - Reading equilibrium
+[2024-09-18 14:12:28,121][__main__][INFO] - Using default reader
+[2024-09-18 14:12:29,772][__main__][INFO] - Applying error to opt_data
+[2024-09-18 14:12:29,779][__main__][INFO] - Initialising ModelCoordinator
+[2024-09-18 14:12:31,457][__main__][INFO] - initialising PriorManager
+[2024-09-18 14:12:31,477][__main__][INFO] - Initialising BO Optimiser Context
+[2024-09-18 14:12:31,481][__main__][INFO] - Running BDA
+[2024-09-18 14:12:31,492][__main__][INFO] - Time: 0.05
+[2024-09-18 14:13:06,433][root][INFO] - kde posterior estimating
+[2024-09-18 14:13:19,281][__main__][INFO] - Time: 0.06
+[2024-09-18 14:13:52,769][root][INFO] - kde posterior estimating
+[2024-09-18 14:14:04,161][__main__][INFO] - Time: 0.07
