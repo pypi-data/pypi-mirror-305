@@ -1,0 +1,12 @@
+jptranscription/__init__.py,sha256=JdfXP1tut-nydVbNB_yPZZgfvKlC624Jml4OW1EPVFE,132
+jptranscription/phonetics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jptranscription/phonetics/phonetizer.py,sha256=neyDbVR77mdh71jSVQElCrQMYxFLC_nQiBauyfNzBqE,2967
+jptranscription/phonetics/wikitionary_processor.py,sha256=R-bivnAiyxKcWzD3VBcwkXyusjIF3VYLwslUgtA9mZU,3844
+jptranscription/transcription/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jptranscription/transcription/ipakatamapping.py,sha256=bdSbb6ynAG8w_eN4p-Hd74fHNJoQmw8NYO2POEgrOeM,22944
+jptranscription/transcription/katakanizer.py,sha256=eTwxLrHTSqU4KKwF6j2Lcp6qgOTt9iFWgaWE24tz52M,1309
+jptranscription-0.1.5.dist-info/LICENSE,sha256=0MmguGOvj_nrm2vt-p2En0pEp-Xilv5x20TKsO-riO0,1090
+jptranscription-0.1.5.dist-info/METADATA,sha256=xfsDnuqZmFRrbofwFsIT765BvZwHH1W5QcMV16Oi0ng,204
+jptranscription-0.1.5.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+jptranscription-0.1.5.dist-info/top_level.txt,sha256=UdSexILdbupMaZIT333Ifzwsq33ws-g1HxJ_TBqRfEU,16
+jptranscription-0.1.5.dist-info/RECORD,,
