@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "prevcurrnext"
+version = "0.1.0"
+description = "Iteration utils for \"prev\", \"curr\", and \"next\"-style for-loops."
+authors = ["J.I. Cruz <hello@jicruz.com>"]
+license = "MIT"
+readme = "README.md"
+
+include = ["prevcurrnext/**/*.pyi", "prevcurrnext/py.typed"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.7.1"
+mypy = "^1.13.0"
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
