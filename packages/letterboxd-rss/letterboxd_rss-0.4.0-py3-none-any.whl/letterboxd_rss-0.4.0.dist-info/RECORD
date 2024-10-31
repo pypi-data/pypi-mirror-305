@@ -1,0 +1,13 @@
+letterboxd_rss/__init__.py,sha256=kLxKbLHqE9zRSRd9BprCw4chqpNEnbC5-xP_zBDNfqg,23
+letterboxd_rss/base.py,sha256=y2TFl7xQPRkpvQardJum7ADpcyjhqUfaJYQ7-pGMmZ4,1834
+letterboxd_rss/cli.py,sha256=fUy1vDpM8IiogFuUWZscFlosH0sAm0GuYGjaImuDwvc,944
+letterboxd_rss/constants.py,sha256=0Qde1LXCKIyRZjmrrASJl1o_MsBsGiSMd4ejZUPT58I,210
+letterboxd_rss/feed.py,sha256=Ph3V-skf8K_YNBdrpVForYRSbANoZdhPDBpOSrnRumg,537
+letterboxd_rss/parsing.py,sha256=fovn1kUmrrif8maJclvXNPjnrGuRmq9tan3N0XZdBGg,2270
+letterboxd_rss/session.py,sha256=JiwR8vDlQlc0e0G4XeipO88qZyh9jdOy12QNDoCnyOE,1124
+letterboxd_rss/utils.py,sha256=x2fa_3fnDZgoMHNo3o7H7BhENyuRm_jZvDARH8JUscc,311
+letterboxd_rss-0.4.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+letterboxd_rss-0.4.0.dist-info/METADATA,sha256=8oqgzspTE3hd63I0rQ-Hwww9akdwH75CXVVS57EO0eU,3560
+letterboxd_rss-0.4.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+letterboxd_rss-0.4.0.dist-info/entry_points.txt,sha256=A6USrzyK-MISg0_2FmcaF47ia0R7XokVHhjgrATHbPk,58
+letterboxd_rss-0.4.0.dist-info/RECORD,,
