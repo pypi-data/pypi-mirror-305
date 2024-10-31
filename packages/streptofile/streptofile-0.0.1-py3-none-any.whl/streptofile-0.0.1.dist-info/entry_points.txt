@@ -1,0 +1,7 @@
+[console_scripts]
+GAS_typer = streptofile.Spyogenes_typer:cli
+Spyogenes_typer = streptofile.Spyogenes_typer:cli
+core_hello_world = streptofile.core:cli
+
+[nbdev]
+streptofile = streptofile._modidx:d

@@ -1,0 +1,16 @@
+streptofile/Spyogenes_typer.py,sha256=g2ysWmSAi4CG3BkJPXKFBHFL1rDbRiMZGw5GTOO03pQ,17235
+streptofile/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+streptofile/_modidx.py,sha256=g6U1ody5vKfchpGQrm4_4hL-eTu9Ft9OV_Nf8VrzOxU,21997
+streptofile/analysis_utility.py,sha256=-AxApQUHRM-w_GpytK4eQoD-2HsDEnp1cVdJ79y3JNE,35073
+streptofile/convert_external_genome.py,sha256=dFL2sa5XmZb7fz9kkLEwFeVHsK8-G3wWmoC7YJQHA8k,21000
+streptofile/core.py,sha256=kT8fjcH_C2yuIsKhkQmDt89bT6OsTbxNWlCYwuk0EQQ,8330
+streptofile/hello_world.py,sha256=2CIdc1ZVmUuT8Wh9WE2PU8kDCibtqf_oCEwCcAperBo,1917
+streptofile/sample_manager.py,sha256=N-rBhfSxZi71aToSyTksqH_z67Hsu5CDkzi_7DLcl58,14204
+streptofile/config/config.default.env,sha256=KmL4ZmjuxBXKt7m6sOUntkB5APvFsdHECQ7w3PYzLi8,1326
+streptofile/config/config.default.yaml,sha256=O9lUV9hAEDb-09PmMgalOLRTH9Con-WUfT0BCuHJnWE,4136
+streptofile-0.0.1.dist-info/LICENSE,sha256=p6aTb6QIfqyZ2Uux2VjV4F2zthdUSHZOjB4mfwGc7fo,1094
+streptofile-0.0.1.dist-info/METADATA,sha256=mknsthK4lU-Bppd7PhHMAR3BvpX09l3QizxS12vZx64,1235
+streptofile-0.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+streptofile-0.0.1.dist-info/entry_points.txt,sha256=9DazTF-pgjSjjlgiaoikNhepG3yedbrNos6GcVJgwXY,197
+streptofile-0.0.1.dist-info/top_level.txt,sha256=fI35s1aO1ta9u0MeLCQNru1dzC8Jz2wQBcbkX6r_6gs,104
+streptofile-0.0.1.dist-info/RECORD,,
