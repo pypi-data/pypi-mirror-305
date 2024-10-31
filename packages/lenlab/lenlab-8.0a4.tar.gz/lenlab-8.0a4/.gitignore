@@ -1,0 +1,10 @@
+.idea/
+.venv/
+uv.lock
+*.log
+
+.theia/
+.clangd
+.settings/
+Debug/
+targetConfigs/
