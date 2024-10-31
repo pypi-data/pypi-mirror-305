@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+brand_model2name.egg-info/PKG-INFO
+brand_model2name.egg-info/SOURCES.txt
+brand_model2name.egg-info/dependency_links.txt
+brand_model2name.egg-info/top_level.txt
+model2name/__init__.py
+model2name/brand_map.py
+model2name/handle_data.py
+model2name/model2name.py
