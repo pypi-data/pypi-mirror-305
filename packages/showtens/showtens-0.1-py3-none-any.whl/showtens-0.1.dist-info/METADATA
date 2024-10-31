@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: showtens
+Version: 0.1
+Summary: Visualize torch tensors EASILY.
+Author-email: Vassilis Papadopoulos <vassilis.physics@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/frotaur/showtens
+Project-URL: Bug Tracker, https://github.com/frotaur/showtens/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+
+# ShowTens : visualize torch tensors EASILY
+
+ShowTens is a simple pytorch package that allows painless and flexible visualizations of image and video tensors.
+
+\<ADD VISUALIZATION VIDEO HERE\>
+
+## Installation
+
+`pip install showtens`
+
+Make sure `torch`and `torchvision` are installed, as the package depends on them.
+
+## Usage
+```python
+import torch
+from showTens import showImage
+
+image1 = torch.rand((3,100,100)) # (C,H,W) image
+showImage(image1) # Displays the image using matplotlib
+image2 = torch.rand((4,4,3,100,100)) # (B1,B2,C,H,W), two batch dimensions
+showImage(image2,colums=4) # Will display as a 4*4 grid
+
+from showTens import saveImage
+saveImage(tensor=image1,folder='saved_images',name='imagetensor')
+
+from showTens import saveVideo
+video1 = torch.rand((60,3,200,200))
+saveVideo(tensor=video1,folder='save_videos',name='videotensor',fps=30)
+video2 = torch.rand((4,3,200,200)) # (B,T,C,H,W), batch of videos
+saveVideo(tensor=video2,folder='save_videos',name='videobatch',fps=30,columns=2) # 2*2 video grid
+```
