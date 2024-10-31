@@ -1,0 +1,16 @@
+mypy_boto3_geo_maps/__init__.py,sha256=nVuszhDEKskV_5g_qhDoQj33tCwI2QlbOjuB-n1w80M,447
+mypy_boto3_geo_maps/__init__.pyi,sha256=HuQpgga4kwIcFDkhgW-O5G-rpvofzZOnjMJbpLBsV6I,446
+mypy_boto3_geo_maps/__main__.py,sha256=goSG6_Wfgil1UEyZQLf3FoyU5gjRrSy_877ASxzqsEA,948
+mypy_boto3_geo_maps/client.py,sha256=2pZg3ZBsYW18EWdEBYKDGV3gj-sn7ObeIpdk9ZwZdT4,6120
+mypy_boto3_geo_maps/client.pyi,sha256=SskSRzKleM5ahb6CjswpE8JGQEWnFICMPDiZ_hNnn5M,6116
+mypy_boto3_geo_maps/literals.py,sha256=qvz55Hqq0wtX4syGlCTyL5yEsiACBL6i5dLN1XAdBVQ,8812
+mypy_boto3_geo_maps/literals.pyi,sha256=0D3pMXmYIKm2FHIkCEy0lpdVJst8yN8tfdZnXeeODMo,8810
+mypy_boto3_geo_maps/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_geo_maps/type_defs.py,sha256=SfbxxsAZB21QrY3X9SXJUTdvVzDQ7FEfU3oQOr30ePo,4114
+mypy_boto3_geo_maps/type_defs.pyi,sha256=iHOtxeLYk50KVLH7ntFKeqApbczZJb55FLLsel5rDUc,4113
+mypy_boto3_geo_maps/version.py,sha256=QzJ4mtQBMuwtVt4oxK9BXOs3Cp_Bhmdl52imBjh1t7c,62
+mypy_boto3_geo_maps-1.35.52.dist-info/LICENSE,sha256=eQDadZQZ3vRCiNF510ZT4yJV2zgo4000AOBoDRZyvKg,1070
+mypy_boto3_geo_maps-1.35.52.dist-info/METADATA,sha256=2_j9TJws7o4PRqEGyjLjyF1J1Yj16hVccRvlJJEEiuk,12201
+mypy_boto3_geo_maps-1.35.52.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+mypy_boto3_geo_maps-1.35.52.dist-info/top_level.txt,sha256=WPnOzE1pGsGrccApXhu7_fYvJZ5YU49SEXjApxqprW0,20
+mypy_boto3_geo_maps-1.35.52.dist-info/RECORD,,
