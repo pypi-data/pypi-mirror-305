@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+semantic_components/__init__.py
+semantic_components/cluster_pipeline.py
+semantic_components/decomposition.py
+semantic_components/evaluation.py
+semantic_components/representation.py
+semantic_components/sca.py
+semantic_components/translate_gpt.py
+semantic_components.egg-info/PKG-INFO
+semantic_components.egg-info/SOURCES.txt
+semantic_components.egg-info/dependency_links.txt
+semantic_components.egg-info/requires.txt
+semantic_components.egg-info/top_level.txt
+test/test_decomposition.py
+test/test_sca.py
