@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: financial_metrics123
+Version: 0.1.0
+Summary: Этот Python-пакет автоматически рассчитывает чистую прибыль и рентабельность инвестиций, помогая вам быстро и легко анализировать финансовые показатели вашего бизнеса.
+Home-page: https://github.com/your-username/financial_metrics
+Author: Sofia
+Author-email: Sofia <s.a.karpova@edu.centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.19.2
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2.1; extra == "dev"
+Requires-Dist: flake8>=3.8.4; extra == "dev"
+
+# financial_metrics123
+
+## Описание
+
+Этот Python-пакет автоматически рассчитывает чистую прибыль и рентабельность инвестиций, помогая вам быстро и легко анализировать финансовые показатели вашего бизнеса.
+
+## Установка и использование
+
+```bash
+pip install financial_metrics123

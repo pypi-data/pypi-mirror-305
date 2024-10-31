@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+financial_metrics123.egg-info/PKG-INFO
+financial_metrics123.egg-info/SOURCES.txt
+financial_metrics123.egg-info/dependency_links.txt
+financial_metrics123.egg-info/requires.txt
+financial_metrics123.egg-info/top_level.txt

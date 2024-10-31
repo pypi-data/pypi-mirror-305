@@ -1,0 +1,21 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'financial_metrics123'
+version = '0.1.0'
+description = 'Этот Python-пакет автоматически рассчитывает чистую прибыль и рентабельность инвестиций, помогая вам быстро и легко анализировать финансовые показатели вашего бизнеса.'
+authors = [
+    {name = 'Sofia', email = 's.a.karpova@edu.centraluniversity.ru'}
+]
+readme = 'README.md'
+license = {text = 'MIT'}
+requires-python = '>=3.8'
+dependencies = [
+    'requests>=2.25.1',
+    'numpy>=1.19.2'
+]
+
+[project.optional-dependencies]
+dev = ['pytest>=6.2.1', 'flake8>=3.8.4']
