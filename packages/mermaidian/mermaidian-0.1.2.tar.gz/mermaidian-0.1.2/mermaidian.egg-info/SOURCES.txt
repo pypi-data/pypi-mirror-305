@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+mermaidian/__init__.py
+mermaidian/mermaidian.py
+mermaidian.egg-info/PKG-INFO
+mermaidian.egg-info/SOURCES.txt
+mermaidian.egg-info/dependency_links.txt
+mermaidian.egg-info/requires.txt
+mermaidian.egg-info/top_level.txt
