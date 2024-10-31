@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3cd43602-6567-4ee7-bf25-3a373c7e1ff1" name="Changes" comment="Fix tests">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;martin97x&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/martin97x/profanity-filter.git&quot;,
+    &quot;accountId&quot;: &quot;9aacfad0-1ee0-42e9-8360-fedd07131459&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2nv88OKd0q5s2oiJ6iQTVsMmI3y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_profanity_filter.TestProfanityFilter.executor": "Run",
+    "Python tests.Python tests for test_profanity_filter.TestProfanityFilter.test_check_text_all_features_off.executor": "Run",
+    "Python tests.Python tests for test_profanity_filter.TestProfanityFilter.test_check_text_allowed.executor": "Run",
+    "Python tests.Python tests for test_profanity_filter.TestProfanityFilter.test_check_text_with_all_features_on.executor": "Run",
+    "Python tests.Python tests for test_profanity_filter.TestProfanityFilter.test_initialization.executor": "Run",
+    "Python tests.Python tests for test_profanity_filter.TestProfanitySanitizer.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/pythonProjects/input_cleaner",
+    "settings.editor.selected.configurable": "com.jetbrains.python.black.configuration.BlackFormatterConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\pythonProjects\profanity-filter\src" />
+      <recent name="D:\pythonProjects\profanity-filter\profanity_filter" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for tests.test_profanity_sanitizer.TestProfanitySanitizer">
+    <configuration name="Python tests for tests.test_profanity_sanitizer.TestProfanitySanitizer" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="profanity-filter" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_profanity_sanitizer.TestProfanitySanitizer&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_profanity_sanitizer.TestProfanitySanitizer" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="profanity-filter" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_profanity_sanitizer.TestProfanitySanitizer&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_profanity_sanitizer.TestProfanitySanitizer.test_check_text_all_features_off" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="profanity-filter" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_profanity_sanitizer.TestProfanitySanitizer.test_check_text_all_features_off&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_profanity_sanitizer.TestProfanitySanitizer.test_check_text_allowed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="profanity-filter" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_profanity_sanitizer.TestProfanitySanitizer.test_check_text_allowed&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_profanity_sanitizer.TestProfanitySanitizer.test_check_text_with_all_features_on" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="profanity-filter" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_profanity_sanitizer.TestProfanitySanitizer.test_check_text_with_all_features_on&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for tests.test_profanity_sanitizer.TestProfanitySanitizer" />
+        <item itemvalue="Python tests.Python tests for tests.test_profanity_sanitizer.TestProfanitySanitizer.test_check_text_all_features_off" />
+        <item itemvalue="Python tests.Python tests for tests.test_profanity_sanitizer.TestProfanitySanitizer" />
+        <item itemvalue="Python tests.Python tests for tests.test_profanity_sanitizer.TestProfanitySanitizer.test_check_text_allowed" />
+        <item itemvalue="Python tests.Python tests for tests.test_profanity_sanitizer.TestProfanitySanitizer.test_check_text_with_all_features_on" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3cd43602-6567-4ee7-bf25-3a373c7e1ff1" name="Changes" comment="" />
+      <created>1729842029011</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729842029011</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Created project">
+      <option name="closed" value="true" />
+      <created>1729860205249</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729860205249</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created project">
+      <option name="closed" value="true" />
+      <created>1729860449393</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729860449393</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added more banned words and replacements and did README.md draft">
+      <option name="closed" value="true" />
+      <created>1729865248895</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729865248895</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed the installations of spacy model">
+      <option name="closed" value="true" />
+      <created>1730213794131</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730213794131</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix lint">
+      <option name="closed" value="true" />
+      <created>1730214054806</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730214054806</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed init">
+      <option name="closed" value="true" />
+      <created>1730215480195</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730215480195</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Multiple fixes for pypi package to work">
+      <option name="closed" value="true" />
+      <created>1730292822755</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730292822755</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix lint">
+      <option name="closed" value="true" />
+      <created>1730293198424</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730293198424</updated>
+    </task>
+    <task id="LOCAL-00009" summary="updated README.md">
+      <option name="closed" value="true" />
+      <created>1730299326434</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730299326434</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Renamed project..">
+      <option name="closed" value="true" />
+      <created>1730300452841</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730300452841</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fix tests">
+      <option name="closed" value="true" />
+      <created>1730300678846</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730300678846</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Created project" />
+    <MESSAGE value="Added more banned words and replacements and did README.md draft" />
+    <MESSAGE value="Fixed the installations of spacy model" />
+    <MESSAGE value="Fixed init" />
+    <MESSAGE value="Multiple fixes for pypi package to work" />
+    <MESSAGE value="Fix lint" />
+    <MESSAGE value="updated README.md" />
+    <MESSAGE value="Renamed project.." />
+    <MESSAGE value="Fix tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix tests" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+</project>

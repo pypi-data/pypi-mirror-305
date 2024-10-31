@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "profanity-sanitizer"
+version = "0.1.4"
+description = "A profanity sanitizer with fuzzy matching, semantic similarity, and AI-based toxicity detection"
+authors = [
+    { name = "Martin Dostalik" },
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.26.0,<2.0.0",
+    "tensorflow==2.17.0",
+    "spacy==3.7.2",
+    "fuzzywuzzy==0.18.0",
+    "transformers==4.38.0",
+    "python-levenshtein",
+    "tf-keras"
+
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/profanity_sanitizer"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+
+[project.scripts]
+profanity-filter = "src.profanity_sanitizer.profanity_sanitizer:main"
