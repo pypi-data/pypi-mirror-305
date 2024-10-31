@@ -1,0 +1,2 @@
+[console_scripts]
+scriptblocks = scriptblocks.cli:main
