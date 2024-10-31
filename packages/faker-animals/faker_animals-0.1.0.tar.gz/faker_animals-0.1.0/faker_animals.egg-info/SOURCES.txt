@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+faker_animals/__init__.py
+faker_animals/animals.py
+faker_animals/constants.py
+faker_animals.egg-info/PKG-INFO
+faker_animals.egg-info/SOURCES.txt
+faker_animals.egg-info/dependency_links.txt
+faker_animals.egg-info/requires.txt
+faker_animals.egg-info/top_level.txt
+faker_animals/tests/__init__.py
+faker_animals/tests/test_animals.py
