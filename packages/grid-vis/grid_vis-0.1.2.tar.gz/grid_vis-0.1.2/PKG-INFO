@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: grid_vis
+Version: 0.1.2
+Summary: A Panda3D wrapper to visualise 2D grids.
+Author-email: Hal Kolb <hal@kolb.com>
+License: MIT License
+Project-URL: homepage, https://github.com/hal609/grid_vis
+Project-URL: repository, https://github.com/hal609/grid_vis
+Project-URL: bug-tracker, https://github.com/hal609/grid_vis/issues
+Keywords: numpy,grid,array,Panda3D,3D,python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# 3D Grid Visualisation
+
+A wrapper for Panda3D to visualise 2D grids 
+
+## Installation
+
+```
+pip install grid_vis
+```
+
+
+## Usage
+
+```python
+from gird_vis import run_grid
+
+def update(grid):
+    return [
+    [1, 1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1]
+]
+
+grid = [
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0]
+]
+
+run_grid(grid, update_func=update, tick_rate=1)
+```
