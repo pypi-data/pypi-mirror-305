@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: backupdirsm
+Version: 0.0.3
+Summary: 
+Home-page: https://github.com/ludenus/backupdirsm
+License: MIT
+Keywords: backup,aws,secrets,secrets-manager,restore
+Author: Andrey Andreyev
+Author-email: x0153362@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: boto3 (>=1.35.18,<2.0.0)
+Project-URL: Documentation, https://github.com/ludenus/backupdirsm
+Project-URL: Repository, https://github.com/ludenus/backupdirsm
+Description-Content-Type: text/markdown
+
+# backupdirsm
