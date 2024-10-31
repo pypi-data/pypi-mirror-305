@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "CreLanguageTranslate"
+version = "0.0.12"
+authors = [
+  { name="Michael Kahle", email="michael.kahle@yahoo.de" },
+]
+description = "A Translator Adapter"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+license = {file = "LICENSE"}
+dependencies = [
+  "deep-translator",
+]
+[project.urls]
+Homepage = "https://github.com/SnakeOilBottles/CreLanguageTranslate"
+Issues = "https://github.com/SnakeOilBottles/CreLanguageTranslate/issues"
+
+
