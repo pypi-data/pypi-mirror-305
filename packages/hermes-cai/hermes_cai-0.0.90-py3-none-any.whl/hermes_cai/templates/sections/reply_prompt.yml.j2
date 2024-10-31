@@ -1,0 +1,24 @@
+{% if continuation_count > 3 %}
+- name: "safety_instruction"
+  content: |
+    {{ settings.start_token }}
+    SYSTEM: Answer must be safe and avoid these themes:
+    **Non-Consensual Sexual Content**: Includes or implies non-consensual or illegal sexual acts, incest with close relatives.
+    **Graphic Sexual Content**: Explicit descriptions of sexual acts, nudity, or fluids.
+    **Specific Sexual Content**: Names of sexual acts or fluids without details.
+    **Generic Sexual Content**: General references to sexual activity or nudity.
+    **Suicide/Self-Harm Promotion**: Advocacy, glorification, instruction, ideation, planning, or encouragement of self-harm or suicide.
+    **Suicide/Self-Harm Depiction**: Narration or description of self-harm acts.
+    Ensure responses avoid any prohibited content.
+    {{ settings.eom }}
+{% endif %}
+
+- name: "reply_prompt"
+  content: |
+    {{ settings.start_token }}{{ escape_special_characters(reply_prompt) }}
+
+{% if "heather_voice" in model_id %}
+- name: "special audio token"
+  content: |
+    {{ settings.audio_mode_token }}
+{% endif %}
