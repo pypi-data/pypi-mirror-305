@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name="botrun_litellm"
+version = "0.1.0"
+description = "A wrapper for litellm with TAIDE configuration support"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "litellm>=1.43.1",
+    "python-dotenv",
+]
+
+[tool.hatch.build.targets.wheel]
+include = [
+    "botrun_litellm/**/*.py",
+    "README.md",
+    "requirements.txt",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "botrun_litellm/**/*.py",
+    "README.md",
+    "requirements.txt",
+]

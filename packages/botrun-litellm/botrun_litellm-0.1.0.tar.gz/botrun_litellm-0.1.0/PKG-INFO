@@ -1,0 +1,42 @@
+Metadata-Version: 2.3
+Name: botrun_litellm
+Version: 0.1.0
+Summary: A wrapper for litellm with TAIDE configuration support
+Requires-Python: >=3.7
+Requires-Dist: litellm>=1.43.1
+Requires-Dist: python-dotenv
+Description-Content-Type: text/markdown
+
+# README.md
+# botrun_litellm
+
+A wrapper for litellm with TAIDE configuration support.
+
+## Installation
+
+```bash
+pip install botrun_litellm
+```
+
+## Usage
+
+```python
+from botrun_litellm import botrun_litellm_completion
+
+response = botrun_litellm_completion(
+    messages=[{"role": "user", "content": "Hello!"}],
+    model="openai/gpt-4"
+)
+```
+
+## Environment Variables
+
+The following environment variables are required:
+
+- `TAIDE_BASE_URL`: Base URL for TAIDE API
+- `TAIDE_API_KEY`: API key for TAIDE
+- `DEFAULT_MODEL`: (Optional) Default model to use
+
+## License
+
+MIT License
