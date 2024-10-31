@@ -1,0 +1,10 @@
+multiversity/__init__.py,sha256=Nqnn8clbgv-5l0PgxcTOldg8mkMKrFn4TvPL-rYUUGg,1
+multiversity/multi_labeler.py,sha256=TeA_d7Dx5zmd_kFnwFXot9czRB1Cr-0xOi6P-eUb7bo,17489
+multiversity/multicare_creator.py,sha256=r7qoZH1H2oAaDU3Ff0hiXdo3mMgJAs9akM-QbMWOQbs,97782
+multiversity/multicare_dataset.py,sha256=T_wjMAf7EpOJqkPdamyEY1XU1Fq5KrbiTWjRP7iO4pE,31364
+multiversity/multiplex_classification.py,sha256=ZmQMkACpQYK_fwIHrULznNWUPJEDyQqwmyRItjmS7WI,36814
+multiversity-1.0.0.dist-info/LICENSE.txt,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+multiversity-1.0.0.dist-info/METADATA,sha256=_mYKS3IJPWAsDs8UGhZfEXwnG0FLbaGVKfyriB2LEFI,790
+multiversity-1.0.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+multiversity-1.0.0.dist-info/top_level.txt,sha256=Y1kKZLjWtv5KwO_3lK_5-9qmlWqok-kCosW30Rfk0zM,13
+multiversity-1.0.0.dist-info/RECORD,,
