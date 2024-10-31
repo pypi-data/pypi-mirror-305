@@ -1,0 +1,6 @@
+##### f. **MANIFEST.in**
+This file ensures additional files (e.g., README) are included in the package:
+
+```plaintext
+include README.md
+include requirements.txt
