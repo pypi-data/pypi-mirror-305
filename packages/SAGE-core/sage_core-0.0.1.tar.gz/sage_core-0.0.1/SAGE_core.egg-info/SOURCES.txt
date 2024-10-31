@@ -1,0 +1,9 @@
+setup.py
+SAGE_core.egg-info/PKG-INFO
+SAGE_core.egg-info/SOURCES.txt
+SAGE_core.egg-info/dependency_links.txt
+SAGE_core.egg-info/top_level.txt
+sage/__init__.py
+sage/core.py
+sage/plugins/__init__.py
+sage/plugins/example_plugin.py
