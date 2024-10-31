@@ -1,0 +1,15 @@
+numpy
+
+[face_recognition]
+Pillow
+deepface
+tf-keras
+
+[lm]
+openai
+pydantic
+
+[sr]
+webrtcvad
+groq
+pydub
