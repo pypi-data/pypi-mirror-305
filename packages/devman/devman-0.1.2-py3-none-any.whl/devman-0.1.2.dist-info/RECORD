@@ -1,0 +1,10 @@
+devman/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+devman/__main__.py,sha256=bKVFP5uZXLhMb-FeFJ6K_Fee5fmfbPLJaRiNmK8MNGA,268
+devman/cli.py,sha256=rRMm4yHYwDJXAn0gFcJNsR_5vhltZIm3r_FZgcqqMRg,3937
+devman/config.py,sha256=2mSDif0nYVGyk4ONJqFuNTD-UuD-m46j1MhqAU-3j5M,2201
+devman/podman.py,sha256=Erpva0ir_Jeupf-SOS3a3VOVYwhNMGuF6sVsixkUZX8,3638
+devman-0.1.2.dist-info/METADATA,sha256=FGsCTjysJay8P4BxRcpCzcskPx2oDKsAGYYWcw6P12E,517
+devman-0.1.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+devman-0.1.2.dist-info/entry_points.txt,sha256=J-0nUkxGMz9n14u44Pe1EZEQfETInZ4cngbD9Yp6msc,48
+devman-0.1.2.dist-info/licenses/LICENSE,sha256=N8jK6hIaAULWvbKbGPBx6uQX4A1kDxg665IgRkOVWlA,1073
+devman-0.1.2.dist-info/RECORD,,

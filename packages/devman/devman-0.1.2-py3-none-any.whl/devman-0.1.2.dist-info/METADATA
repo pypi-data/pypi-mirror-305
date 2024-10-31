@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: devman
+Version: 0.1.2
+Summary: Manager for Development Containers with podman
+Maintainer-email: Stefan Tatschner <stefan@rumpelsepp.org>
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Requires-Dist: argcomplete>=3.5.1
+Requires-Dist: platformdirs>=4.3.6
+Description-Content-Type: text/markdown
+
+# devman
+
+A tool for **dev**elopment using pod**man**.
