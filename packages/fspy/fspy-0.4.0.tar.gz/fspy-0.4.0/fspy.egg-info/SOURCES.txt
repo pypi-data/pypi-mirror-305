@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+.github/workflows/python-publish.yml
+fspy/__init__.py
+fspy/response_models.py
+fspy/solver.py
+fspy/solver_exceptions.py
+fspy.egg-info/PKG-INFO
+fspy.egg-info/SOURCES.txt
+fspy.egg-info/dependency_links.txt
+fspy.egg-info/requires.txt
+fspy.egg-info/top_level.txt
