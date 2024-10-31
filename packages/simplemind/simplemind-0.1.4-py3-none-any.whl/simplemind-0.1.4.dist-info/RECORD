@@ -1,0 +1,15 @@
+simplemind/__init__.py,sha256=8nbCZSjYMVE8r5Oo8ebm-sM7_U_VZszMHYIx_8TgcM0,3234
+simplemind/models.py,sha256=DpQ3rKzevsjzyqe3GflgaafzCh0C5zmQhsRsRFuAITQ,5105
+simplemind/settings.py,sha256=akBLrdwGsPl3cGo0Vu0WFfMS5W2sFtTzePMb_WbmkEM,1642
+simplemind/utils.py,sha256=x-SZLSpSszIHyFCOu5Ln7lw3c9htgvbysOIcyTGaxbk,1105
+simplemind/providers/__init__.py,sha256=fs82ves_Wu2yyHexHJDyI2oJIciPonp_-6yY-GdO36Y,272
+simplemind/providers/_base.py,sha256=SW2m3abuopZFKAWwTqKoPJ1QL6O1FUj_HBXa3vUM_8k,995
+simplemind/providers/anthropic.py,sha256=zgiibfU2cNEOmy4WgFEgsFfbdlRZzVy3ItlbZLOHuas,2381
+simplemind/providers/groq.py,sha256=45t0hk-q2ubdRJejEGXBaL41NcjJLKehOuaQjzjfi3E,2505
+simplemind/providers/ollama.py,sha256=u0zJ8ghqCMoZ05mdwHt7wYnAKPzPxMTC_BdOWdLsf1g,2447
+simplemind/providers/openai.py,sha256=_bxR0E1qJVEvJUlV012sZctaTS2IeuHeZwgjOhTrY2s,2427
+simplemind/providers/xai.py,sha256=fFbS09hRByWufig7A91xP0QY641RHkYE3_sR-uTGcbc,2275
+simplemind-0.1.4.dist-info/METADATA,sha256=kuBXjS0GHCEp3S0fJtoOZ3RFNyRc116ZoE8vvfs7ObI,11013
+simplemind-0.1.4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+simplemind-0.1.4.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+simplemind-0.1.4.dist-info/RECORD,,
