@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "abbr": {
+            "type": "object",
+            "properties": {
+                "auth": {
+                    "type": "string",
+                    "description": "Authentication"
+                },
+                "authz": {
+                    "type": "string",
+                    "description": "Authorization"
+                },
+                "ms": {
+                    "type": "string",
+                    "description": "Microservices"
+                },
+                "perf": {
+                    "type": "string",
+                    "description": "Performance"
+                },
+                "svc": {
+                    "type": "string",
+                    "description": "Service"
+                },
+                "arch": {
+                    "type": "string",
+                    "description": "Architecture"
+                }
+            },
+            "required": []
+        }
+    },
+    "required": []
+}
