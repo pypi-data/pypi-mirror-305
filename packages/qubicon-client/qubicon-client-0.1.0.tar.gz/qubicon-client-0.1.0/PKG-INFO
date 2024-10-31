@@ -1,0 +1,164 @@
+Metadata-Version: 2.1
+Name: qubicon-client
+Version: 0.1.0
+Summary: CLI for interacting with the Qubicon platform
+Home-page: https://git.qub-lab.io/qub-client/models-client
+Author: Stephan Karas
+Author-email: stephan.karas@qubicon-ag.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas==2.2.3
+Requires-Dist: rapidfuzz==3.9.6
+Requires-Dist: requests==2.32.3
+Requires-Dist: rich==13.9.3
+Requires-Dist: tabulate==0.9.0
+
+# Qubicon Models Client
+
+This command-line interface (CLI) allows interaction with the Qubicon platform to perform various operations related to models, including creating, listing, viewing, importing, updating, and deleting models. The client supports both interactive and batch modes, allowing users to work through a guided experience or automate processes using command-line arguments.
+
+## Features
+
+- **Authentication:** Secure login and logout with token-based authentication. Tokens are saved locally for reuse.
+- **Model Operations:** List, create, import, update, and delete models.
+- **Physical Quantities Handling:** Automatically manage physical quantities and units during model imports, including fuzzy matching to prevent duplicates.
+- **Interactive Mode:** A user-friendly menu-based interface.
+- **Batch Mode:** Direct execution with command-line arguments for automation, including server specification.
+- **Logging:** Comprehensive logging of actions and errors for easy troubleshooting.
+
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://git.qub-lab.io/qub-client/models-client
+    ```
+
+2. Install the required dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+### Authentication
+
+#### Login
+
+To log in and save your session token locally in batch mode, you must include the `--server` argument:
+
+```bash
+python client.py --login --username <username> --password <password> --server <server-url>
+```
+
+Example test credentials:
+
+```bash
+python client.py --login --username qubiconClient --password qubiconClient1! --server https://master.qub-lab.io/
+```
+
+#### Logout
+
+To log out and remove the saved session token:
+
+```bash
+python client.py --logout
+```
+
+### Model Operations
+
+#### List Models
+
+To list all available models:
+
+```bash
+python client.py --list-models
+```
+
+#### View Model Details
+
+To view details of a specific model by its ID:
+
+```bash
+python client.py --model-id <model-id>
+```
+
+#### Import Model
+
+To import a model from a JSON file:
+
+```bash
+python client.py --import-model --import-model-path <path-to-file>
+```
+
+#### View Physical Quantities
+
+To view all physical quantities in the system:
+
+```bash
+python client.py --view-physical-quantities
+```
+
+### Process Operations
+
+#### List Processes
+
+To list all available processes:
+
+```bash
+python client.py --list-processes
+```
+
+#### List Channels for a Process
+
+To list all channels associated with a specific Process ID:
+
+```bash
+python client.py --process-id <process-id> --list-channels
+```
+
+#### Extract Process Data
+
+To extract data for a specific process, including specific channels:
+
+```bash
+python client.py --process-id <process-id> --extract-process-data --channel-ids <channel-id1> <channel-id2> --granularity <milliseconds> --output-format <json/csv> --output-file <file-path>
+```
+
+- **`--channel-ids`**: List of channel IDs to extract data from.
+- **`--granularity`**: Specify the granularity in milliseconds for data extraction (optional).
+- **`--output-format`**: Choose the output format (`json` or `csv`).
+- **`--output-file`**: Path to save the extracted data.
+
+### Batch Mode Example
+
+Batch mode allows you to perform multiple actions without interactive prompts. Ensure that the `--server` argument is used with `--login` if you are not already authenticated:
+
+```bash
+python client.py --login --username qubiconClient --password qubiconClient1! --server https://master.qub-lab.io/
+python client.py --list-models
+python client.py --import-model --import-model-path test_model.json
+python client.py --process-id 1234 --list-channels
+python client.py --process-id 1234 --extract-process-data --channel-ids 101 102 103 --granularity 500 --output-format csv --output-file extracted_data.csv
+```
+
+## Configuration
+
+- Tokens are saved in a configuration file located at `~/.qubicon/credentials`. 
+- You donâ€™t need to log in again once your token is saved, unless the token expires or you log out manually.
+
+## Error Handling
+
+- All requests and errors are logged for easy troubleshooting.
+- Detailed logs are available in the `import_model.log` file.
+- Error messages and responses are displayed directly in the console.
+
+## Future Features
+
+- **Extended CRUD Operations:** Additional support for datasets, users, and other resources.
+- **Export Model Functionality:** Add support for exporting models.
+- **GitLab Integration:** Enable importing models from GitLab repositories.
+- **Improved Interactive Prompts:** Streamlined prompts for creating, updating, and importing models.
