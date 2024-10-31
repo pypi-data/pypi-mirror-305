@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: combina-o_fotos
+Version: 0.0.1
+Summary: A criação de pacotes em Python permite combinar duas imagens, utilizando uma delas como base para a paisagem e a outra para as cores, gerando uma nova imagem que mescla elementos de ambas, resultando em uma composição única e criativa.
+Home-page: 
+Author: Nanda
+Author-email: fernandacrosa57@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# package_name
+
+Description. 
+The package package_name is used to:
+	- 
+	-
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install package_name
+```
+
+## Usage
+
+```python
+from package_name import file1_name
+file1_name.my_function()
+```
+
+## Author
+My_name
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
