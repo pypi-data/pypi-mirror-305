@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/sempai/__init__.py
+src/sempai/config.py
+src/sempai/nn.py
+src/sempai.egg-info/PKG-INFO
+src/sempai.egg-info/SOURCES.txt
+src/sempai.egg-info/dependency_links.txt
+src/sempai.egg-info/not-zip-safe
+src/sempai.egg-info/top_level.txt
