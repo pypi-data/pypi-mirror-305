@@ -1,0 +1,7 @@
+README.md
+setup.py
+nepbots.egg-info/PKG-INFO
+nepbots.egg-info/SOURCES.txt
+nepbots.egg-info/dependency_links.txt
+nepbots.egg-info/requires.txt
+nepbots.egg-info/top_level.txt
