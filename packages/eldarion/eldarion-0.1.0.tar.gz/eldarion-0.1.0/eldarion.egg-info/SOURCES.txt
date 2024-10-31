@@ -1,0 +1,8 @@
+README.md
+hello.py
+pyproject.toml
+eldarion.egg-info/PKG-INFO
+eldarion.egg-info/SOURCES.txt
+eldarion.egg-info/dependency_links.txt
+eldarion.egg-info/requires.txt
+eldarion.egg-info/top_level.txt
