@@ -1,0 +1,10 @@
+scons_msvc_env/__init__.py,sha256=09I2-SjHDT2A1uMf6goIgT2c01MW38hpo89d7VHuZcM,1319
+scons_msvc_env/implib_from_dll.py,sha256=B0UCqgzttFbk9ozXF5x798c6_TQkB86ySuLLOfgYv1I,11604
+scons_msvc_env/msvc_env.py,sha256=7-rONij6lEhmUOJzcvQ3jyZRnMOje12OrvaAd06kMF0,25967
+scons_msvc_env/msvc_tools.py,sha256=X3iBSl9OS55WkpV-e9ZGDdXFO-MgWSqPbj2Pp9QwbkI,8176
+scons_msvc_env/roma.stub,sha256=x_8KEVzNBoo2YGrUe2Fc2xvpx4w9fqX60ej2856lp1U,64
+scons_msvc_env-0.2.0.dist-info/LICENSE,sha256=0xZ0xdJGTgUwtU6E5CviGw6Qk6dLHr1l1kTmZhhkAEE,1057
+scons_msvc_env-0.2.0.dist-info/METADATA,sha256=qIvaD43yW0uYeWUm7aOcUc73bwTy5H_3CPpWXbMtkc8,1396
+scons_msvc_env-0.2.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+scons_msvc_env-0.2.0.dist-info/top_level.txt,sha256=BsNrQ_f-ustIgCn6-otM9Naz2Ff45J1kC5z-I9Inxkg,15
+scons_msvc_env-0.2.0.dist-info/RECORD,,
