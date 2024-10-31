@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: HelloLinker
+Version: 1.1
+Summary: A Python Library For Kamibot
+Home-page: 
+Download-URL: 
+Author: devdio
+Author-email: kei.devdio@gmail.com
+Keywords: Kamibot,KamiblockAI,Robot,KamiLink
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9, <=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: uuid
+Requires-Dist: python-engineio==3.14.2
+Requires-Dist: python-socketio==4.6.0
+Requires-Dist: requests==2.27.1
+Requires-Dist: pynput==1.7.6
+
+# HelloLinker
+
+python library for KamibotPi's Network
