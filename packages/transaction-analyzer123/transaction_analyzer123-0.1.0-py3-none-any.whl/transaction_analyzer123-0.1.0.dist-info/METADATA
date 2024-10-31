@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: transaction_analyzer123
+Version: 0.1.0
+Summary: Это простой Python-пакет, который анализирует данные о транзакциях из CSV-файла и генерирует отчет с суммами по категориям.
+Home-page: https://github.com/your-username/transaction_analyzer
+Author: Sofia
+Author-email: Sofia <s.a.karpova@edu.centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.19.2
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2.1; extra == "dev"
+Requires-Dist: flake8>=3.8.4; extra == "dev"
+
+# transaction_analyzer123
+
+## Описание
+
+Это простой Python-пакет, который анализирует данные о транзакциях из CSV-файла и генерирует отчет с суммами по категориям
+
+## Установка и использование
+
+```bash
+pip install transaction_analyzer123
