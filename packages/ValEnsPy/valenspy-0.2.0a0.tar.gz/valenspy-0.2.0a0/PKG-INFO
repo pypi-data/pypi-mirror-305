@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: ValEnsPy
+Version: 0.2.0a0
+Summary: A Python package to validate gridded model data.
+License: GPL-3.0
+Keywords: validation,ensemble,climate,meteorology,model,data
+Author: Kobe Vandelanotte
+Author-email: kobe.vandelanotte@meteo.be
+Maintainer: Kobe Vandelanotte
+Maintainer-email: kobe.vandelanotte@meteo.be
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Requires-Dist: cartopy (>=0.23.0,<0.24.0)
+Requires-Dist: cdo (>=1.6.1,<2.0.0)
+Requires-Dist: cf-xarray (>=0.9.4,<0.10.0)
+Requires-Dist: dask (>=2024.3.1,<2025.0.0)
+Requires-Dist: geopandas (>=1.0.1,<2.0.0)
+Requires-Dist: matplotlib (>=3.8.3,<4.0.0)
+Requires-Dist: nc-time-axis (>=1.4.1,<2.0.0)
+Requires-Dist: netCDF4 (>=1.6.5,<2.0.0)
+Requires-Dist: pandas (>=2.2.1,<3.0.0)
+Requires-Dist: pooch (>=1.8.1,<2.0.0)
+Requires-Dist: regionmask (>=0.12.1,<0.13.0)
+Requires-Dist: scipy (>=1.13.0,<2.0.0)
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Requires-Dist: shapely (>=2.0.3,<3.0.0)
+Requires-Dist: xarray (>2024.2.0,<2024.10)
+Requires-Dist: xarray-datatree (>=0.0.14,<0.0.15)
+Description-Content-Type: text/markdown
+
+# ValEnsPy
+A Python package to validate gridded model data.
+
+## Installation
+
+Currently, the package is in development and not yet available on [PyPI](https://pypi.org/).
+
+To install the package locally, follow the instructions in
+- [General install guide](docs/contribution_pages/INSTALL.md) or
+- [VSC specific install guide](docs/contribution_pages/INSTALL_VSC.md)
+
+Interested in contributing? Take a look at [CONTRIBUTING.md](docs/contribution_pages/CONTRIBUTING.md) file to see how you can help.
+
+For additional developer guidelines see the Notes for developers page in the Contributing section of the documentation.
+
+## Documentation
+As ValEnsPy is a private repository, the documentation is only available locally.
+To access the documentation, clone the repository,
+```bash
+git clone git@github.com:CORDEX-be2/ValEnsPy.git
+```
+and open the [ValEnsPy/docs/_build/index.html](docs/_build/index.html) file in your favourite web browser.
+
+## Package structure
+
+The package is structured as follows:
+
+![Package structure](docs/package_structure.png) 
+
