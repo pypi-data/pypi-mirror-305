@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/fiscus.egg-info/PKG-INFO
+src/fiscus.egg-info/SOURCES.txt
+src/fiscus.egg-info/dependency_links.txt
+src/fiscus.egg-info/not-zip-safe
+src/fiscus.egg-info/requires.txt
+src/fiscus.egg-info/top_level.txt
+tests/test_fiscus_sdk.py
