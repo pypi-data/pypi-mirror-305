@@ -1,0 +1,10 @@
+shy_sh/agent/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shy_sh/agent/agent.py,sha256=u12R5lVsMmL-xafgiTp7rwtm6ag_hG46tZ4Xb0iOMXo,10936
+shy_sh/agent/tools.py,sha256=kwskW54b-Iph4SUYHOVbIc_WLL8D71RXzWKpNGaDAoI,807
+shy_sh/chat_models.py,sha256=Q-cbYQVs123Ngc2pOhH9rTTs4bIOO0RqK1Dk0VqTOOY,2224
+shy_sh/main.py,sha256=NyVibGJSt8nzehKoT5XhZ1_TMqTuq0Eh_YTHEZ65Mus,1466
+shy_sh/settings.py,sha256=wEP0oADK99J1BWl2gzIr2nK2ozS41CEcxwicswN3EOQ,2590
+shy_sh-1.0.0.dist-info/METADATA,sha256=pm3dH9pl_2D2HIuPwU_gOoKJktIKGf-VZCXdBfmz0Oc,2273
+shy_sh-1.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+shy_sh-1.0.0.dist-info/entry_points.txt,sha256=P7E4FQ9hV39w77_Muz4yxT1u5x5Ww2zkNH9LRG4CaX4,40
+shy_sh-1.0.0.dist-info/RECORD,,
