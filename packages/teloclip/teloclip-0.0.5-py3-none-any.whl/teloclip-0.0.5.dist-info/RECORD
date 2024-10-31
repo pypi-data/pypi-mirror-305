@@ -1,0 +1,14 @@
+teloclip/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+teloclip/_version.py,sha256=EJB7__SNK9kQS_SWZB_U4DHJ3P8ftF6etZEihTYnuXE,411
+teloclip/app.py,sha256=NU94dwJ_NKmObbRXoslo2UpGm-ANXHWyuGlJu-m7aRQ,5065
+teloclip/app_extract.py,sha256=12VHZJJnwMKjPpJUBA2cwfeYWfhpaYDkga6Jxk9ciZQ,6951
+teloclip/logs.py,sha256=aKq-UDoUNDzVPKtpbmPKXwqFWARWiAYrIkuLzOF1esU,1430
+teloclip/motifs.py,sha256=NIqvzoWhkdhaI_MLnMlfcsnch-VvFDyN9m7ZfjwIfsI,4478
+teloclip/samops.py,sha256=_DKyfNjndOPFV7IK-dSiWE4cAq-OWIUuplFOVMYMQ_I,10618
+teloclip/seqops.py,sha256=VjE8fwPweu04JSVodI86btbxNh00OlTyeQEj6Tl7pBk,4564
+teloclip/utils.py,sha256=eCcmF0rHDejpHjx4Q3Fo_WqA1loB9h08i4jMerooAYI,395
+teloclip-0.0.5.dist-info/METADATA,sha256=sqaPNel_z6DGZeDdUDrizrZh6uv6BdEKrEkzTLhU8AY,16233
+teloclip-0.0.5.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+teloclip-0.0.5.dist-info/entry_points.txt,sha256=jURno8RxuQ9hHuKFiN21XQpYJl5Rs7LGg1YkqHeDJJM,92
+teloclip-0.0.5.dist-info/licenses/LICENSE,sha256=7NUKjH9Mm2DyjWVDv1tsE6wh7vhBXlIzRCWLZQUesIU,1901
+teloclip-0.0.5.dist-info/RECORD,,
