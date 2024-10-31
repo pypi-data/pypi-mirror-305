@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ectrans4py
+Version: 1.2.50
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: numpy
+Requires-Dist: ctypesforfortran (==1.1.3)
+
+UNKNOWN
+
