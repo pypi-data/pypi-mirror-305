@@ -1,0 +1,9 @@
+ml_adapter/torch/__init__.py,sha256=Gj2m3U6DqoG97fNYFNr0NcS_Tp3T3jgws_157wdk-Nc,298
+ml_adapter/torch/adapter.py,sha256=d2xxuOgjPtn48YArlxf6b1go7HzsVF0iDloRJS2ztXk,3981
+ml_adapter/torch/marshall.py,sha256=yKaAjfixIL2SZe3tLCtCSFmZdMqe6sn3BIohTYSD2gQ,1479
+ml_adapter/torch/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+waylay_ml_adapter_torch-0.0.7.dist-info/LICENCE.txt,sha256=ZIsIQXmgmBnk8f55yJonBveQ7ByZ9eyyzjbEgNocfpc,746
+waylay_ml_adapter_torch-0.0.7.dist-info/METADATA,sha256=zPot2Spxq7vu6Hl1Czbk3OGSCUOtUZk-q5tHOmSoVOg,4784
+waylay_ml_adapter_torch-0.0.7.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+waylay_ml_adapter_torch-0.0.7.dist-info/top_level.txt,sha256=3WkkE3yhxG7TqlWKnkHRQb1IAk4cS0ikRBDJ-cTOHY4,11
+waylay_ml_adapter_torch-0.0.7.dist-info/RECORD,,
