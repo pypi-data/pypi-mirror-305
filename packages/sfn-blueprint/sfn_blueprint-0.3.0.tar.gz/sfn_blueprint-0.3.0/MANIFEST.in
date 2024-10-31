@@ -1,0 +1,2 @@
+include config/prompts_config.json
+include config/config.json
