@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: esther_scale_out
+Version: 0.1.1
+Summary: Default template for PDM package
+Author-email: EstherCho-7 <dkgkqm777@gmail.com>
+License: MIT
+Requires-Python: ==3.11.*
+Description-Content-Type: text/markdown
+Requires-Dist: psutil>=6.1.0
+
+# esther_scale_out
