@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+auto_highlighter_py.egg-info/PKG-INFO
+auto_highlighter_py.egg-info/SOURCES.txt
+auto_highlighter_py.egg-info/dependency_links.txt
+auto_highlighter_py.egg-info/requires.txt
+auto_highlighter_py.egg-info/top_level.txt
+highlighter/__init__.py
+highlighter/__main__.py
+highlighter/analyzer.py
+highlighter/common.py
+highlighter/processor.py
