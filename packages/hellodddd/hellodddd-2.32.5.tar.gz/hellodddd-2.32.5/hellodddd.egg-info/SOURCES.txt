@@ -1,0 +1,6 @@
+setup.py
+hellodddd.egg-info/PKG-INFO
+hellodddd.egg-info/SOURCES.txt
+hellodddd.egg-info/dependency_links.txt
+hellodddd.egg-info/top_level.txt
+package/__init__.py
