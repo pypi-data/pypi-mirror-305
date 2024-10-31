@@ -1,0 +1,17 @@
+newswatch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+newswatch/cli.py,sha256=3Ovhid0ITHTlfqmqlSr7FZs92lyPDAKwIz4l2-5MDsc,1133
+newswatch/main.py,sha256=6cndfN2_MEV8qLYoc7mg2Rdm7_XT7TcZlrMH3ogDDWg,2490
+newswatch/scrapers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+newswatch/scrapers/basescraper.py,sha256=fGPflbAef2ICOmIpS6z2qn3JV7ae1ZFbQuGKznlH5KY,1667
+newswatch/scrapers/bisnisindonesia.py,sha256=8vJcmsAJwnZviftR006iddwbfOx0x7gFP333FC4whS8,2935
+newswatch/scrapers/cnbc.py,sha256=4uWyVRXNHyesKtNkCVoORbk59AaIgLVXvJDLIYqXuE0,3194
+newswatch/scrapers/detik.py,sha256=j9DE1uT2GwejrNoxrEmP6T--ALAIn9gIntwCX0suzhA,3377
+newswatch/scrapers/kontan.py,sha256=1-UAXgbYe-iW8lmfq9WCsgw7Bw_r6g5SfJ2wNuoIR0M,4099
+newswatch/scrapers/utils.py,sha256=A0HEbM_l2NLHexnPxFdH7d-pzrW3WUGmKgGJgIjkUVg,1971
+newswatch/scrapers/viva.py,sha256=iV0LH1lITeKmZK6rKFm49yttOLWGxBr6ZlCGKRQKC0A,3094
+news_watch-0.1.1.dist-info/LICENSE,sha256=33ReAw9RowRApxcQG7STsnexcnxGTodMT4hl2-C1UR8,35062
+news_watch-0.1.1.dist-info/METADATA,sha256=gwjVlKfaHn2IK6wVn4iVGgjCHBHkBbaDGuTKIXV1IH4,2210
+news_watch-0.1.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+news_watch-0.1.1.dist-info/entry_points.txt,sha256=14BHUoHW_Rzw6QwOQ1Zq1Yja5_4LO4Ma3ZKip8ozMNU,48
+news_watch-0.1.1.dist-info/top_level.txt,sha256=ei5c_AtCSLofQTZCCdJ-NU1iA8VTnr3A1J6KxygXvuY,10
+news_watch-0.1.1.dist-info/RECORD,,
