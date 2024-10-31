@@ -1,0 +1,17 @@
+requests
+tqdm
+argparse
+shutil
+psutil
+streamlit
+anthropic
+openai
+pillow
+httpx
+fire
+playwright
+bs4
+click
+pytest
+pydantic
+httpx
