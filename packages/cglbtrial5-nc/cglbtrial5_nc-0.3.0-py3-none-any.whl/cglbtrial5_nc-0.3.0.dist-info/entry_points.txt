@@ -1,0 +1,3 @@
+[cglbtrial5.reader_plugins]
+plugin_func=cglbtrial5_nc.plugin:reader_plugins
+
