@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: twse
+Version: 0.1.2
+Author-email: narumi <toucans-cutouts0f@icloud.com>
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: httpx>=0.27.2
+Requires-Dist: loguru>=0.7.2
+Requires-Dist: pydantic>=2.9.2
+Description-Content-Type: text/markdown
+
+# twse
