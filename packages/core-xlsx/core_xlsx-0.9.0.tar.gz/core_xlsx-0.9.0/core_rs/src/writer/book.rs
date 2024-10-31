@@ -1,0 +1,48 @@
+use std::sync::{Arc, Mutex};
+
+use super::{sheet::XLSXSheet, DEFAULT_COL, DEFAULT_ROW};
+
+#[derive(Clone, Debug, Default)]
+pub struct XLSXBook {
+    // todo
+    pub sheets: Vec<Arc<Mutex<XLSXSheet>>>,
+}
+
+impl XLSXBook {
+    pub fn new() -> Self {
+        Self { sheets: vec![] }
+    }
+
+    pub fn add_sheet(
+        &mut self,
+        name: String,
+        rows: Option<u32>,
+        cols: Option<u16>,
+    ) -> Arc<Mutex<XLSXSheet>> {
+        let book = Arc::new(Mutex::new(self.clone()));
+
+        let rows = rows.unwrap_or(DEFAULT_ROW);
+        let cols = cols.unwrap_or(DEFAULT_COL);
+
+        let idx = self.sheets.len() as i32;
+        let sheet = XLSXSheet::new(book, name, idx, rows, cols);
+
+        self.sheets.push(Arc::clone(&sheet));
+
+        sheet
+    }
+
+    pub fn get_sheet_index(&self, idx: i32) -> Option<Arc<Mutex<XLSXSheet>>> {
+        self.sheets
+            .iter()
+            .find(|sheet| sheet.lock().unwrap().index == idx)
+            .map(Arc::clone)
+    }
+
+    pub fn get_sheet_name(&self, name: String) -> Option<Arc<Mutex<XLSXSheet>>> {
+        self.sheets
+            .iter()
+            .find(|sheet| sheet.lock().unwrap().name == name)
+            .map(Arc::clone)
+    }
+}
