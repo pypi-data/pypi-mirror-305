@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pybounds
+Version: 0.0.1
+Summary: Bounding Observability for Uncertain Nonlinear Dynamics Systems (BOUNDS)
+Home-page: https://github.com/vanbreugel-lab/pybounds
+Author: Ben Cellini, Burak Boyacioglu, Floris van Breugel
+Author-email: bcellini00@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pybounds
