@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+glovo_mo_ranking/__init__.py
+glovo_mo_ranking.egg-info/PKG-INFO
+glovo_mo_ranking.egg-info/SOURCES.txt
+glovo_mo_ranking.egg-info/dependency_links.txt
+glovo_mo_ranking.egg-info/top_level.txt
