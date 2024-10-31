@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+LPC3D.egg-info/PKG-INFO
+LPC3D.egg-info/SOURCES.txt
+LPC3D.egg-info/dependency_links.txt
+LPC3D.egg-info/entry_points.txt
+LPC3D.egg-info/requires.txt
+LPC3D.egg-info/top_level.txt
+LPCD/LPC3D.py
+LPCD/__init__.py
