@@ -1,0 +1,2 @@
+[console_scripts]
+thinklabs-powerflow = thinklabs_powerflow.cli:main
