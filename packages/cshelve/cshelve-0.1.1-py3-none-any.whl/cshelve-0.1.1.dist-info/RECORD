@@ -1,0 +1,12 @@
+cshelve/__init__.py,sha256=bGrXChCt7Z6dSh7A6HlJxRh5CdJnK5LIffv0Pwtxy5k,2594
+cshelve/_azure.py,sha256=t_A9Ke8B2e5qqnIbD18h3u1CRMk5abIBVwHHpLBC8Is,8179
+cshelve/_factory.py,sha256=j80-Jl2LAuQJ4wqY2EL1t721y20yZi25bfspIkCuAeo,469
+cshelve/_flag.py,sha256=v13JF1jXwyN830YWc4qjQzcdPB1oDci6s2oE0zXm884,1320
+cshelve/_parser.py,sha256=7xQXh44gHMhMhysPAuf2F-4BmCVIX_kDRKbuIs73Bi4,1159
+cshelve/cloud_mutable_mapping.py,sha256=B7KzqNKG5JXUtyqZ-EVO5dadhZY7YpLHKIOVww1EI5g,901
+cshelve/exceptions.py,sha256=av3yFpB4_hHBdtmln9AYGR6ohmCGE6D9wF6hLZzxp6U,1648
+cshelve-0.1.1.dist-info/LICENSE,sha256=eNcvoKCrr2Pb0CVEvWX3CKp5NbahO3vs9_-iRmjJ-bw,1071
+cshelve-0.1.1.dist-info/METADATA,sha256=zZZBQNMBdbEpPGDP-5qfPRj4yEQoe7yBOrm2RI3FM2I,8790
+cshelve-0.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+cshelve-0.1.1.dist-info/top_level.txt,sha256=Yd-JOr3b8kmnPrTucS5Hp7DYaFDQtGs1H3I922irmiI,8
+cshelve-0.1.1.dist-info/RECORD,,
