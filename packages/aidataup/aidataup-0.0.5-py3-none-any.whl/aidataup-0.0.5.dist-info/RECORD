@@ -1,0 +1,16 @@
+aidataup/__init__.py,sha256=srpj1tjjPdfcE5K6GaP_ajHG4c5Np1bOnVI03RC7zAc,281
+aidataup/cleans/clean_thailand_car_plateno.py,sha256=KripSL1d6HvQ6kdeebCy2WW3gfQVjWmwxz3_etP8rCg,2306
+aidataup/convert/convert_num_th_to_global.py,sha256=7ublLKykaM4fK4dzUWg8B0WrAeNNnhWP7sTDM66RjFw,545
+aidataup/extract/extract_api.py,sha256=sTeRwwZBNjIYvzvtsT4U0WJahLKeVGx-RArr9PdhxKE,192
+aidataup/utils/database_manager.py,sha256=-mU9L9hUkUj5ZhmI5Jr5EbUrX6KhEr_WmQTVg0saPFA,1388
+aidataup/utils/connector/connector_mysql.py,sha256=eo3WMNgAn_BzrCMXC1ix-XqgnNdfhNFgi0UPwy2YaoI,388
+aidataup/utils/connector/connector_postgresql.py,sha256=3zqc8woVShcryogjYeMwVb6EzdsyIsinHaCMJ_U94WI,675
+aidataup/utils/connector/connector_sqlite.py,sha256=QQGPsBhy-NujUzTn1w3vzjejxth_QavymVh3GV-ViKc,277
+aidataup/verify/verify_citizenid.py,sha256=Ue6s2NVEYkuuLwuGKJkYs3hdV7RSDzLnSpT3Cx4fvvs,2148
+aidataup/verify/verify_datetime.py,sha256=tPq3ydr9J5V91wBfYDh96RDp_Ib6jqUcpSDj0dXQr1g,1652
+aidataup/verify/verify_email.py,sha256=DaubgEtISmzvKJ32cRMYT0TRNIfplA0mMk-2wJXqkvg,1239
+aidataup/verify/verify_phone.py,sha256=wzEPLzwPn1hGsElWfc65hv-i-oGl58L-E0HEiN8EAc8,1843
+aidataup-0.0.5.dist-info/METADATA,sha256=9MwItzMtGwfkobr8WhX4GHCvd8UE8aXhw6UjUaoWJrQ,1987
+aidataup-0.0.5.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+aidataup-0.0.5.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+aidataup-0.0.5.dist-info/RECORD,,
