@@ -1,0 +1,11 @@
+capepy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+capepy/aws/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+capepy/aws/dynamodb.py,sha256=akbsgFGAAbLDg2Aj_wT1owOjaN8hXyU2H5SFHbUyjlw,3699
+capepy/aws/glue.py,sha256=BMXXm0_ryapLi1amFLehUtCMnes_h6eWZyTWoxcYF3w,3834
+capepy/aws/lambda_.py,sha256=6KXO8aZQzA5fypg1tncwiziZK30AXJ66jS3lmYksvWA,1738
+capepy/aws/meta.py,sha256=eoIVQadoKNfN33mOzhNMM7bqtVXTJOpoofeZsBHlVwo,2597
+capepy/aws/utils.py,sha256=w-ifBKO5ZD6oA73bfufVcPSoxMRFXEVmFMN4UF1Ubrk,679
+capepy-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+capepy-0.1.0.dist-info/METADATA,sha256=9piAQjO64jyAMgVyNdc_YyZvXhVFSDO5v4wSb3NNukg,1434
+capepy-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+capepy-0.1.0.dist-info/RECORD,,
