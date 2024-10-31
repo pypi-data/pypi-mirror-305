@@ -1,0 +1,12 @@
+include LICENSE setup.py
+
+global-include *.yaml
+global-include *.jpg
+global-include *.md
+global-include *.png
+include sas_yolov7/utils/aws/mime.sh
+include sas_yolov7/utils/aws/userdata.sh
+include sas_yolov7/utils/google_app_engine/Dockerfile
+include sas_yolov7/utils/google_app_engine/additional_requirements.txt
+include sas_yolov7/scripts/get_coco.sh
+include sas_yolov7/requirements.txt
