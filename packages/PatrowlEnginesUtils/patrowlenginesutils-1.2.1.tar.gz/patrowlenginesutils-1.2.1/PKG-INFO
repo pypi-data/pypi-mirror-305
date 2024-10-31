@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: PatrowlEnginesUtils
+Version: 1.2.1
+Summary: Common classes for PatrowlEngines
+Home-page: https://github.com/Patrowl/PatrowlEnginesUtils
+Author: Nicolas Mattiocco
+Author-email: getsupport@patrowl.io
+License: AGPLv3
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
