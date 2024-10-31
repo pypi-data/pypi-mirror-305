@@ -1,0 +1,4 @@
+venv/
+.pypirc
+Others/
+push_to_pypi.sh
