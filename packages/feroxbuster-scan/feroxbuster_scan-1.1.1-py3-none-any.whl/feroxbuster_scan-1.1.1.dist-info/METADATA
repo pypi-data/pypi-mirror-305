@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: feroxbuster-scan
+Version: 1.1.1
+Summary: A tool to download, run, and generate reports for Feroxbuster scans
+Author: Adithya A N
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# Feroxbuster Scan
+
+## Description
+
+A tool to download, run, and generate reports for Feroxbuster scans.
+
+## Installation Steps
+
+### Step 1: Create a Python Virtual Environment
+
+First, create a virtual environment to isolate dependencies:
+
+```bash
+python -m venv venv
+```
+
+Activate the environment:
+
+- On Windows:
+  ```bash
+  venv\Scripts\activate
+  ```
+- On macOS and Linux:
+  ```bash
+  source venv/bin/activate
+  ```
+
+### Step 2: Install Feroxbuster Package
+
+In the activated virtual environment, run:
+
+```bash
+pip install feroxbuster-scan
+```
+
+### Step 3: Navigate to Feroxbuster_scan  Folder
+
+Locate the `feroxbuster_scan` folder and navigate into it:
+
+```bash
+cd venv/Lib/site-packages/feroxbuster_scan/
+```
+
+### Step 4: Install Required Libraries
+
+Ensure that the `requests` library is installed by running:
+
+```bash
+pip install requests
+pip install setuptools
+```
+
+### Step 5: Run the Script
+
+You can now run the Python script:
+
+```bash
+python feroxbuster_scan.py
+```
+
+## Usage
+
+After running the script, follow the prompts to enter the URL for scanning and wait for the process to complete. Once done, an HTML report will be generated.
+
+## Disclaimer
+
+This script is designed to automate the setup and execution of Feroxbuster. Always ensure you have permission to run content discovery scans on a target website. Unauthorized use could result in legal consequences.
