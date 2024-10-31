@@ -1,0 +1,24 @@
+import sys
+import numpy as np
+
+import mindtorch.torch as torch
+import mindtorch.torch.distributed as dist
+
+def func(backend):
+    dist.init_process_group(backend)
+
+    rank = dist.get_rank()
+
+    if rank == 0:
+        data = torch.tensor([1, 2.]).to(f'cuda:{rank}')
+    else:
+        data = torch.zeros(2).to(f'cuda:{rank}')
+
+    dist.broadcast(data, 0)
+
+    assert np.allclose(data.cpu().numpy(), np.array([1, 2.]))
+    assert data.shape == (2,)
+
+if __name__ == '__main__':
+    backend = sys.argv[1]
+    func(backend)
