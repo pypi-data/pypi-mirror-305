@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+customer_analyzer123.egg-info/PKG-INFO
+customer_analyzer123.egg-info/SOURCES.txt
+customer_analyzer123.egg-info/dependency_links.txt
+customer_analyzer123.egg-info/requires.txt
+customer_analyzer123.egg-info/top_level.txt
