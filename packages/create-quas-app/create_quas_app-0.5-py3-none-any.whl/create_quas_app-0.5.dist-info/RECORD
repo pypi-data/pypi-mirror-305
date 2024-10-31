@@ -1,0 +1,8 @@
+app/__init__.py,sha256=hqcP4eSIxgjKjN3EtcMSNCLPyyUFNRls0u9T2yakcYA,1241
+app/main.py,sha256=ZefmMu2XLnYdVMLrn_Y5pjXEyd5hjUXVljNHsply6Uc,1171
+app/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+create_quas_app-0.5.dist-info/METADATA,sha256=0PgN2PD6TsopsHZV4dlQ_d2KtIzvZyYOADvuCe-_gko,2860
+create_quas_app-0.5.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+create_quas_app-0.5.dist-info/entry_points.txt,sha256=OBp6duqdx8DgtqNqczuEZPC2g8Lz1hZfuGTSZdG6Olc,56
+create_quas_app-0.5.dist-info/top_level.txt,sha256=io9g7LCbfmTG1SFKgEOGXmCFB9uMP2H5lerm0HiHWQE,4
+create_quas_app-0.5.dist-info/RECORD,,
