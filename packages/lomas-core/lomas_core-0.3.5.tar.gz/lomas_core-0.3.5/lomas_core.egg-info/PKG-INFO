@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: lomas-core
+Version: 0.3.5
+Summary: Lomas core.
+Home-page: https://github.com/dscc-admin-ch/lomas/
+Author: Data Science Competence Center, Swiss Federal Statistical Office
+Author-email: dscc@bfs.admin.ch
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Security
+Requires-Python: >=3.11, <3.13
+Description-Content-Type: text/markdown
+Requires-Dist: diffprivlib==0.6.5
+Requires-Dist: diffprivlib_logger>=0.0.3
+Requires-Dist: fastapi>=0.111.1
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: opendp==0.10.0
+Requires-Dist: opendp_logger>=0.3.0
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: pymongo>=4.6.3
+Requires-Dist: scikit-learn>=1.4.2
+Requires-Dist: smartnoise-synth>=1.0.4
+Requires-Dist: smartnoise_synth_logger>=0.0.3
+
+<h1 align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/dscc-admin-ch/lomas/blob/wip_322_darkmode-logo/images/lomas_logo_darkmode_txt.png"  width="300">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/dscc-admin-ch/lomas/blob/wip_322_darkmode-logo/images/lomas_logo_txt.png"  width="300">
+  <img alt="LOMAS" src="https://github.com/dscc-admin-ch/lomas/blob/wip_322_darkmode-logo/images/lomas_logo_txt.png">
+</picture>
+</h1><br>
+
+# Core
+See the technical documentation of core: https://dscc-admin-ch.github.io/lomas-docs/core_api.html.
