@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0d7ff246-3984-4c41-a1ad-12990a1bd71c" name="Changes" comment="Simplified implementation of yes_no_inputter in inputter.py.">
+      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputter/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputter_tyedee/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputter/condition.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputter_tyedee/condition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputter/handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputter_tyedee/handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputter/inputter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputter_tyedee/inputter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;TyedeeGit&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/TyedeeGit/inputter&quot;,
+    &quot;accountId&quot;: &quot;295db434-9384-47ae-b04a-41362679c427&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2nwlYzChf70MbXWqqImJX3ViUlm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.pizza.executor&quot;: &quot;Run&quot;,
+    &quot;Python.taskman.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="V:\NEW STORAGE\Projects\inputter\tests" />
+      <recent name="V:\NEW STORAGE\Projects\inputter\src" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Created inputter library, readme, license, and example.">
+      <option name="closed" value="true" />
+      <created>1729658109118</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729658109118</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Included README.md and LICENSE.">
+      <option name="closed" value="true" />
+      <created>1729658167980</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729658167980</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added year and name to LICENSE.">
+      <option name="closed" value="true" />
+      <created>1729658228569</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729658228569</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d7ff246-3984-4c41-a1ad-12990a1bd71c" name="Changes" comment="Added year and name to LICENSE." />
+      <created>1729892071015</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729892071015</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added python 3.11 support.">
+      <option name="closed" value="true" />
+      <created>1729892598085</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729892598085</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added python 3.11 support.">
+      <option name="closed" value="true" />
+      <created>1729893524902</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729893524902</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed bugs from previous commit.">
+      <option name="closed" value="true" />
+      <created>1729894449663</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729894449663</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added handler.py, which has a Handler class, a wrapper for handler functions. Added more useful functions in condition.py and inputter.py.">
+      <option name="closed" value="true" />
+      <created>1730334579156</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730334579156</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Simplified implementation of yes_no_inputter in inputter.py.">
+      <option name="closed" value="true" />
+      <created>1730334981290</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730334981290</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created inputter library, readme, license, and example." />
+    <MESSAGE value="Included README.md and LICENSE." />
+    <MESSAGE value="Added year and name to LICENSE." />
+    <MESSAGE value="Added python 3.11 support." />
+    <MESSAGE value="Fixed bugs from previous commit." />
+    <MESSAGE value="Added handler.py, which has a Handler class, a wrapper for handler functions. Added more useful functions in condition.py and inputter.py." />
+    <MESSAGE value="Simplified implementation of yes_no_inputter in inputter.py." />
+    <option name="LAST_COMMIT_MESSAGE" value="Simplified implementation of yes_no_inputter in inputter.py." />
+  </component>
+</project>
