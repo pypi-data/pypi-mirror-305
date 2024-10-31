@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+diptorch/__init__.py
+diptorch/_modidx.py
+diptorch/filters.py
+diptorch/linalg.py
+diptorch/utils.py
+diptorch.egg-info/PKG-INFO
+diptorch.egg-info/SOURCES.txt
+diptorch.egg-info/dependency_links.txt
+diptorch.egg-info/entry_points.txt
+diptorch.egg-info/not-zip-safe
+diptorch.egg-info/requires.txt
+diptorch.egg-info/top_level.txt

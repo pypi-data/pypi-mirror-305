@@ -1,0 +1,15 @@
+einops
+matplotlib
+scikit-image
+torch
+
+[dev]
+nbdev
+black
+flake8
+ipykernel
+ipywidgets
+jupyterlab
+jupyterlab_execute_time
+jupyterlab-code-formatter
+isort
