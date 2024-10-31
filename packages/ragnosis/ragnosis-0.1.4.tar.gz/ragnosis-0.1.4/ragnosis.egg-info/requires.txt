@@ -1,0 +1,17 @@
+python-dotenv==1.0.1
+openai<2,>=1.48.0
+langchain<0.4,>=0.3.0
+streamlit==1.37
+beautifulsoup4<5,>=4.12.3
+rdflib==7.0.0
+langchain-community<0.4,>=0.3.0
+langchain-ollama<0.3,>=0.2.0
+fastembed<0.4,>=0.3.6
+faiss-cpu<2,>=1.8.0.post1
+langchain-openai<0.3,>=0.2.0
+pymupdf<2,>=1.24.10
+sentence-transformers<4,>=3.1.1
+langchain-huggingface<0.2,>=0.1.0
+langgraph<0.3,>=0.2.34
+markdown<4,>=3.7
+pdfkit<2,>=1.0.0
