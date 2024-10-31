@@ -1,0 +1,15 @@
+odoo/addons/crm_lead_dms_api/README.rst,sha256=rl6Gu-cmnkzLnbe6VZO-gGdha5cMFHthpVAlvV5VYJY,3206
+odoo/addons/crm_lead_dms_api/__init__.py,sha256=2MlftkRHiQBSzxjb_9994LGa5CaS_PfB_2Ti8NsADrI,130
+odoo/addons/crm_lead_dms_api/__manifest__.py,sha256=8lsgh9aa6R75QJnfKhrf1Qd8rahmhwo-s7KpNytmY6M,756
+odoo/addons/crm_lead_dms_api/models/__init__.py,sha256=vClPSqgyUonvumyCOWSukNc8P6TqF3csw3m0zb_mQ-g,27
+odoo/addons/crm_lead_dms_api/models/dms_category.py,sha256=drehFUv_1O_1q-Gm2nJx2gRrdqkX-W7TNK3uoyuJWfE,133
+odoo/addons/crm_lead_dms_api/services/__init__.py,sha256=PDr9T7xc3cP1q0rQMhy2AT6aNDhuHY6FgN5RGxjxOLc,130
+odoo/addons/crm_lead_dms_api/services/crm_lead_service.py,sha256=RJiobMVTqrtKOcSUQK6isT7TLeA1Kt_k0d--eD0Nq3k,2121
+odoo/addons/crm_lead_dms_api/static/description/icon.png,sha256=YYPwnWvAWbNuCXLknF0lJu0Rc19TMjcSY3zqoNkFUfk,10122
+odoo/addons/crm_lead_dms_api/static/description/icon.svg,sha256=OACyF8QeQCnrRADq-E53OqQNSOkLPtlfbtpbUWgMmds,4249
+odoo/addons/crm_lead_dms_api/tests/__init__.py,sha256=3NvpCJZrG2JEr0LOwzB_ni6we8WJAWMQKBAVrKocwws,135
+odoo/addons/crm_lead_dms_api/tests/test_crm_lead_service.py,sha256=w9d3ZvVkdEy5izkPuOc1kGzJjNlzjHU86jIN9bOUuqI,1698
+odoo_addon_crm_lead_dms_api-16.0.1.0.0.dist-info/METADATA,sha256=VhTaMoDUPw8D1ho_LtWmsQ6JFq_94hDujzQtr1GrMZI,4015
+odoo_addon_crm_lead_dms_api-16.0.1.0.0.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+odoo_addon_crm_lead_dms_api-16.0.1.0.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo_addon_crm_lead_dms_api-16.0.1.0.0.dist-info/RECORD,,
