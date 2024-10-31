@@ -1,0 +1,4 @@
+torch
+transformers
+numpy
+nvidia-nvcomp-cu12

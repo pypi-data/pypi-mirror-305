@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: neuzip
+Version: 0.1.1
+Home-page: https://github.com/BorealisAI/neuzip
+License: CC BY-NC-SA 4.0
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: numpy
+Requires-Dist: nvidia-nvcomp-cu12
