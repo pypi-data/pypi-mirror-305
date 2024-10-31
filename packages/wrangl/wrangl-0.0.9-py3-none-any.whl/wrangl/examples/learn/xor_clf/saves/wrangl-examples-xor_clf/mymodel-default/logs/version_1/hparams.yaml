@@ -1,0 +1,42 @@
+git:
+  enable: false
+wandb:
+  enable: false
+  project: wrangl-examples-xor_clf
+  name: mymodel-default
+  entity: victor
+  dir: /Users/victor/projects/r2llab/wrangl/wrangl/examples/learn/xor_clf/saves/wrangl-examples-xor_clf
+time_key: step
+early_stopping:
+  monitor: val_acc
+  mode: max
+optim:
+  name: Adam
+  params:
+    lr: 0.001
+debug: false
+seed: 0
+num_devices: 0
+batch_size: 100
+val_batch_size: 100
+grad_clip_norm: 10
+collate_fn: auto
+max_steps: 1000
+log_every_n_steps: 100
+val_check_interval: 100
+flush_logs_every_n_steps: 100
+test_only: false
+autoresume: false
+ckpt_path: latest.ckpt
+val_sample_size: 100
+name: mymodel-default
+suffix: default
+model: mymodel
+project: wrangl-examples-xor_clf
+dsave: /Users/victor/projects/r2llab/wrangl/wrangl/examples/learn/xor_clf/saves
+dproject: /Users/victor/projects/r2llab/wrangl/wrangl/examples/learn/xor_clf/saves/wrangl-examples-xor_clf
+precision: 16
+limit_val_batches: 1.0
+strategy: auto
+devices: 1
+dhid: 300
