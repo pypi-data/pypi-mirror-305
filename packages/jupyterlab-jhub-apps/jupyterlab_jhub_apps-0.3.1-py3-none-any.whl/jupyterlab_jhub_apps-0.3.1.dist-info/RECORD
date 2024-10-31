@@ -1,0 +1,15 @@
+jupyterlab_jhub_apps/__init__.py,sha256=bRQugC49XUYCjwF63KVqSFivBk_UCnwUxzbeq39SZiQ,598
+jupyterlab_jhub_apps/_version.py,sha256=nv5Uu2MLyzABY2us1cUpHarfkJSnoHk_O__p5VGTBUc,171
+jupyterlab_jhub_apps-0.3.1.data/data/share/jupyter/labextensions/jupyterlab-jhub-apps/package.json,sha256=e8GR3uwXFwWaEcN3XTYMCmNuTPkng_pfoxS1pShXdng,5868
+jupyterlab_jhub_apps-0.3.1.data/data/share/jupyter/labextensions/jupyterlab-jhub-apps/schemas/jupyterlab-jhub-apps/commands.json,sha256=BW1xiZNmHsT_xI77uEGEEMAHbZsqGPhNSAcvclforsU,1671
+jupyterlab_jhub_apps-0.3.1.data/data/share/jupyter/labextensions/jupyterlab-jhub-apps/schemas/jupyterlab-jhub-apps/package.json.orig,sha256=a9DN0sHp3B7-_ZrsuP_fLAO7p9TAMmvjRzw4j5_Ncps,6628
+jupyterlab_jhub_apps-0.3.1.data/data/share/jupyter/labextensions/jupyterlab-jhub-apps/static/628.6b0e426a7757a25980d3.js,sha256=aw5CandXolmA0zZHBtXdVmys2gtrNIty4rK3dJCeZ30,4628
+jupyterlab_jhub_apps-0.3.1.data/data/share/jupyter/labextensions/jupyterlab-jhub-apps/static/728.16f310623971c56f3538.js,sha256=FvMQYjlxxW81OCioTPplFx75XvGAyiT4Z0o3lyOtju0,4275
+jupyterlab_jhub_apps-0.3.1.data/data/share/jupyter/labextensions/jupyterlab-jhub-apps/static/remoteEntry.cdaf297ce43fa75ea69f.js,sha256=za8pfOQ_p16mn_KBnbeghDiwVtdNnS2H3e9n8SVBM74,6893
+jupyterlab_jhub_apps-0.3.1.data/data/share/jupyter/labextensions/jupyterlab-jhub-apps/static/style.js,sha256=w6CIyYBoji9zG4RYQenX9lb5emS8abT7ltc2Wlu2lnA,163
+jupyterlab_jhub_apps-0.3.1.data/data/share/jupyter/labextensions/jupyterlab-jhub-apps/static/third-party-licenses.json,sha256=W6N2sSD7tQihMqQk64F9xMd1Flfr2KO97esAiHUOYdM,2453
+jupyterlab_jhub_apps-0.3.1.data/data/share/jupyter/labextensions/jupyterlab-jhub-apps/install.json,sha256=-4Z-91gMqigysUXW0J_Rig_eW_Iex6V55XWjmvPkymM,201
+jupyterlab_jhub_apps-0.3.1.dist-info/METADATA,sha256=j0JA76tUO8aOv3ZKFO_65yEj4zvFctJhdwkA26J3f04,7227
+jupyterlab_jhub_apps-0.3.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+jupyterlab_jhub_apps-0.3.1.dist-info/licenses/LICENSE,sha256=0Be1v5Qokjs5Ladp8i68M5XVgfKqT-Cnda0ylkZARZA,1518
+jupyterlab_jhub_apps-0.3.1.dist-info/RECORD,,
