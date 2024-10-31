@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: hayai
+Version: 0.1.0
+Summary: 
+Author: Jiri Klimes
+Author-email: jiriklimes920@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: multiprocess (>=0.70.17,<0.71.0)
+Description-Content-Type: text/markdown
+
+
