@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: autoreview-ufz-VS
+Version: 1.0.2
+Summary: A package for automating operations on Excel files.
+Home-page: https://github.com/your_github_username/autoreviewufzvs
+Author: Vianney Sicard
+Author-email: vianney.sicard@ufz.de
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: pandas<2.0.0,>=1.1.0
+Requires-Dist: tqdm>=4.0.0
+Requires-Dist: numpy>=1.18.0
+Requires-Dist: python-docx>=1.1.2
+Requires-Dist: XlsxWriter>=3.2.0
+Requires-Dist: scikit-learn>=1.5.2
+
+# Review Scripts
+
+The following scripts are designed to facilitate the automated analysis of data exported from the Web of Science (WoS) database.
+
+## Usage
+
+The different scripts can be utilized according to specific analytical requirements.
+
+```sh
+python <file>.py
+```
+
+### File Concatenation
+
+The script `concatenate_xlsx.py` merges multiple Excel spreadsheets into a single consolidated table. Please ensure that the input tables have an identical structure to enable accurate concatenation. This script is particularly useful for aggregating multiple XLSX files exported from WoS.
+
+### Ordering
+
+The script `ordering.py` allows for the sorting and filtering of records based on user-defined criteria, with the final output provided in XLSX format.
+
+### Highlighting
+
+The scripts `script_highlight.py` and `script_highlight_excel.py` are used to highlight specified keywords from an Excel file. The output is generated in different formats: DOCX for `script_highlight.py` and XLSX for `script_highlight_excel.py`.
+
+### Full Article Analysis
+
+The script `analyse_articles_doi.py` retrieves full-text articles from the web based on DOIs listed in an Excel file. It subsequently highlights relevant terms within the full text of these articles, similar to the functionality provided by the other highlighting scripts.
+

@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "autoreview-ufz-VS"
+version = "1.0.2"
+description = "A package for automating operations on Excel files."
+authors = ["Vianney Sicard <vianney.sicard@ufz.de>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+
+# Dépendances du package
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = ">=1.1.0, <2.0.0"
+tqdm = ">=4.0.0"
+numpy = ">=1.18.0"
+python-docx = "^1.1.2"
+XlsxWriter = "^3.2.0"
+scikit-learn = "^1.5.2"
+
+# Scripts exécutables
+[tool.poetry.scripts]
+autoreview = "autoreviewufzvs.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
