@@ -1,0 +1,17 @@
+setup.py
+lexical_quality/__init__.py
+lexical_quality/coherence.py
+lexical_quality/grammar_spelling.py
+lexical_quality/main.py
+lexical_quality/readability.py
+lexical_quality/results.py
+lexical_quality.egg-info/PKG-INFO
+lexical_quality.egg-info/SOURCES.txt
+lexical_quality.egg-info/dependency_links.txt
+lexical_quality.egg-info/entry_points.txt
+lexical_quality.egg-info/requires.txt
+lexical_quality.egg-info/top_level.txt
+tests/__init__.py
+tests/test_coherence.py
+tests/test_grammar_spelling.py
+tests/test_readability.py

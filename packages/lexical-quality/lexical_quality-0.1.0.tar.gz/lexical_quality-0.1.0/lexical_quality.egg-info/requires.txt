@@ -1,0 +1,7 @@
+pandas
+numpy
+scikit-learn
+cleanlab
+textstat
+language-tool-python
+pytest
