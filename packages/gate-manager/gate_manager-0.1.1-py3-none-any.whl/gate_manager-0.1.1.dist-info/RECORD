@@ -1,0 +1,8 @@
+gate-manager/__init__.py,sha256=nOnLdeLrzVRbYPCvqHIWMzxXidVA2IwZ3zXZiCQuo8Y,31
+gate-manager/gate_manager.py,sha256=qSMl57BD8mADsVezkbMrEDT_2B1MbvntOBXkDPLQa54,4888
+gate-manager/nanonisGateClass.py,sha256=qSMl57BD8mADsVezkbMrEDT_2B1MbvntOBXkDPLQa54,4888
+gate_manager-0.1.1.dist-info/LICENSE,sha256=fQwuBuBF7nAGzS3xPmGz9neFy01jUicC7OgvB-pga0Q,1067
+gate_manager-0.1.1.dist-info/METADATA,sha256=p_jgVoI0W8AASVTpF9vu6j0hjJxQRU_wpWuMOCIY71w,822
+gate_manager-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gate_manager-0.1.1.dist-info/top_level.txt,sha256=MRRQfotGcmK6U4zPonUILPNuwLvBWnaSEiLi3aM-jCk,13
+gate_manager-0.1.1.dist-info/RECORD,,
