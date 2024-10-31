@@ -1,0 +1,12 @@
+impc_api/__init__.py,sha256=KV8Gbr82Vwmi1i4k3UW5DxZoHqVFaIlHdwttJjiBrfY,219
+impc_api/batch_solr_request.py,sha256=vEI5jK5a5qRo5DhtibBSIs7t2n3lGoYiMvGPHXqBj2I,9854
+impc_api/solr_request.py,sha256=Rm_PmobPYTLtIyWbeVygKMN27miWMXb8L4ZnRf-BwP0,7282
+impc_api/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+impc_api/utils/core_fields.json,sha256=YCd7qyS2HWNSzzEV0JDCdApICyXu5DeTepiY-8_PzgQ,9609
+impc_api/utils/validators.py,sha256=GHCjA0VYI5IfRFbK90FNC50Awbm9CgI37tuena1_iak,3955
+impc_api/utils/warnings.py,sha256=lwOeyiYWU_-81HliC6QoVoelzm80VTd8FZlEBKTo5p8,858
+impc_api-1.0.6.dist-info/LICENSE,sha256=Q0JCh9wl-MnNFXYu1cfXR-v0l9ZHE2HE3jETvPlbMII,11416
+impc_api-1.0.6.dist-info/METADATA,sha256=NlIG8B2AZspTRjUzpRbVrnl25QQrC7VS85TTBEVxDxs,5679
+impc_api-1.0.6.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+impc_api-1.0.6.dist-info/top_level.txt,sha256=6cx59Lpctl0dxaxVoxytYRSc8ywSKiP4Ig0S6TSIVsI,9
+impc_api-1.0.6.dist-info/RECORD,,
