@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+multiversity/__init__.py
+multiversity/multi_labeler.py
+multiversity/multicare_creator.py
+multiversity/multicare_dataset.py
+multiversity/multiplex_classification.py
+multiversity.egg-info/PKG-INFO
+multiversity.egg-info/SOURCES.txt
+multiversity.egg-info/dependency_links.txt
+multiversity.egg-info/requires.txt
+multiversity.egg-info/top_level.txt
