@@ -1,0 +1,3 @@
+google-generativeai>=0.1.0
+Pillow>=8.0.0
+opencv-python>=4.0.0
