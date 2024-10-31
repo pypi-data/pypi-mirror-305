@@ -1,0 +1,12 @@
+autoreviewufzvs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autoreviewufzvs/__main__.py,sha256=GTpp73pTMda03OOW4JUqLxorqS1y828HCNRqM_UmlIQ,1175
+autoreviewufzvs/concatenate_xls.py,sha256=nIwbXB9JHgiQz7HCgXu-z0KgRvRhKpkXtLgsd0mlby8,2058
+autoreviewufzvs/ordering.py,sha256=_GcK-pUCQ32sYAXKm5ReKwafWjjr66k2-BT15bVq4H8,10363
+autoreviewufzvs/script_highlight.py,sha256=ga1Qsfg7VTTtt0ho6djVTAutTON7-aNH2QQwe1fyiqQ,7831
+autoreviewufzvs/script_highlight_excel.py,sha256=y5AkhPLbCx87Dg85l-G9-1RmqkQCYeDWkgab7IYv8eM,8395
+autoreview_ufz_VS-1.0.2.dist-info/LICENCE,sha256=rbVnuEOnoCzORzrfSXlhpP1AfAXCJtCIiqPVLrk3Hv8,35814
+autoreview_ufz_VS-1.0.2.dist-info/METADATA,sha256=26Dj6IMmmJJcrqz2YgUGZSwZVeQyN2ifmv_ZIiumfWg,2317
+autoreview_ufz_VS-1.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+autoreview_ufz_VS-1.0.2.dist-info/entry_points.txt,sha256=fK-ro_oU8GSM5yqYtNZkT1sULc1Q8aGzFh1PX45Ta8I,66
+autoreview_ufz_VS-1.0.2.dist-info/top_level.txt,sha256=Mc53W7lumlhDllMVmNWR282N23GOwNsXNfDKuWwv0Xk,16
+autoreview_ufz_VS-1.0.2.dist-info/RECORD,,
