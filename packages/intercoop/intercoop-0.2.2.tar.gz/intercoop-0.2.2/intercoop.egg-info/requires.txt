@@ -1,0 +1,7 @@
+pycryptodome
+yamlns>=0.6
+requests
+requests-mock
+flask
+jsonschema<3
+erppeek
