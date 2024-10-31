@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: montyalex
+Version: 0.1.1
+Summary: Personal python related stuff for >=3.12
+Keywords: Monty Python,CLT,CLI,File-system,PDM
+Author-Email: "D. Alex Graham" <alex@aode.space>
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Homepage, https://github.com/alexxgraham/montyalex.git
+Project-URL: Repository, https://github.com/alexxgraham/montyalex.git
+Project-URL: Changelog, https://github.com/alexxgraham/montyalex/blob/main/CHANGELOG.md
+Requires-Python: >=3.12
+Requires-Dist: typer>=0.12.5
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: diskcache>=5.6.3
+Requires-Dist: more-itertools>=10.5.0
+Requires-Dist: msgspec[toml,yaml]>=0.18.6
+Requires-Dist: tzdata>=2024.2
+Requires-Dist: psutil>=6.1.0
+Description-Content-Type: text/markdown
+
+# montyalex
