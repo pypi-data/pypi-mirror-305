@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: exonize
+Version: 1.0.1
+Summary: A tool for finding duplicated exons in annotated genomes
+Author: Liam Longo, Christopher Wheat, Lars Arvestad
+Author-email: Marina Herrera Sarrias <marina.sarrias@math.su.se>
+Maintainer-email: Marina Herrera Sarrias <marina.sarrias@math.su.se>, Lars Arvestad <arve@math.su.se>
+License-File: LICENSE
+Requires-Dist: gffutils
+Requires-Dist: portion
+Requires-Dist: biopython
+Requires-Dist: networkx
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
