@@ -1,0 +1,6 @@
+linktools
+GitPython
+jinja2
+pyyaml
+
+[all]
