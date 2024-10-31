@@ -1,0 +1,17 @@
+coreax/__init__.py,sha256=tge5IYQRGucQEkjUCIi29QeFUquH1lACYnz4XvDOVmk,1589
+coreax/approximation.py,sha256=or41h8-ZfUpm1SNh7ByNEmAwK_WVAKgPHuYOuMRYdy8,13181
+coreax/coreset.py,sha256=nuUVPprWpi4GogamgGUIivqwYW47THVwAU7kAjbLZfM,6960
+coreax/data.py,sha256=njSkQ4KytacWu80lDGIcrkM2Js73mV8_g7_N9Hm9xZo,8678
+coreax/kernel.py,sha256=P_huo5ToA3bfwowA_1s53IGc00G-_o3tDQqKf-SGcUU,8702
+coreax/least_squares.py,sha256=xxGZzTK8fsDWpHcOUyaT6BrVQyOWBrfPUeGLTO-msfI,15261
+coreax/metrics.py,sha256=Kk7j97B-mBYEgaf7fAAJ5uHB3R-3okpv1c6jm0AWzAA,13061
+coreax/networks.py,sha256=hbcRouixt2T8stkhpmcZmIoBWHqQOKGiDS7VXZy44fI,2864
+coreax/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coreax/score_matching.py,sha256=XjndNjwlt1AtjlDO4UttUiHPXuuZfAfN-vQccIuF4AA,25710
+coreax/util.py,sha256=mDAE-tvOrz9OnBvlfPG4k_s04wVQMJgC-S-eJ_4M6II,16414
+coreax/weights.py,sha256=FpxEIIZogjw7wNX9XPRgErnmQYdx8k6dh48anjvAd98,11728
+coreax-0.3.0.dist-info/LICENSE,sha256=bhOKQ4n6doHUF37kbRJLxjHx3oGh4e-ce6MqNcYN00U,11335
+coreax-0.3.0.dist-info/METADATA,sha256=tUEApYMR7M9RBrqe0V7TGDu9EipT81IlhWiZiLdK9Zw,19766
+coreax-0.3.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+coreax-0.3.0.dist-info/top_level.txt,sha256=F8YChxjL_deH0K6a8vxBtKpV4bvQ4pHZwLjRcGFyNWo,7
+coreax-0.3.0.dist-info/RECORD,,
