@@ -1,0 +1,5 @@
+uvicorn_ssl_restarter/__init__.py,sha256=L0wjs15ZmfijOglevGsRSPN-9P56zLePBpR3Q6z-PF0,4411
+uvicorn_ssl_restarter/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uvicorn_ssl_restarter-0.1.4.dist-info/METADATA,sha256=QSgl8eG-JwRpEag-bb1X6PK1oiyBbtD-TTaSnG71LrU,1231
+uvicorn_ssl_restarter-0.1.4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+uvicorn_ssl_restarter-0.1.4.dist-info/RECORD,,
