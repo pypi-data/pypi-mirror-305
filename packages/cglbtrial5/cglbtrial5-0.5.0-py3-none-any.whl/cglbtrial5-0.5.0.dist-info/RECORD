@@ -1,0 +1,10 @@
+cglbtrial5/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cglbtrial5/conversion.py,sha256=8einaTfyP5-y5qHkA9R17aaAosKu8e3TWc6y3xXc1r4,83
+cglbtrial5/readers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cglbtrial5/readers/file_reader_interface.py,sha256=rX6sYKR7y7kZQp6AfEXEgC1jxYek2UTQ21cET5xIbuQ,607
+cglbtrial5/readers/file_reader_manager.py,sha256=HEJ_3lJqnyOqORk54qvyi0jFixvppGQUkPPtISf1BcM,1260
+cglbtrial5/readers/file_reader_txt.py,sha256=8xiZjgQzzR8vDsALv5j5cLiSAbAZj4TuRLiBGI-Onno,2136
+cglbtrial5-0.5.0.dist-info/METADATA,sha256=i1iQ_omHO6KRS1nH0jGnEipBYG14qp92Jw4urSkvMGQ,452
+cglbtrial5-0.5.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cglbtrial5-0.5.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cglbtrial5-0.5.0.dist-info/RECORD,,
