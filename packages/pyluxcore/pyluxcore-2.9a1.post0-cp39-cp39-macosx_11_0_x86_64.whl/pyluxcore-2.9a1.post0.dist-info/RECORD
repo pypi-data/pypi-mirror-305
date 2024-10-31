@@ -1,0 +1,11 @@
+pyluxcore/pyluxcore.so,sha256=vy__NemIBxhwFz5xuyDTww6uTPOGPNcTElGkC8SAQK8,50217984
+pyluxcore/__init__.py,sha256=4ZKV9oqcrPzBEuS1CQyKQOkAq8MXOPGZ4HSdUaTWZpY,1369
+pyluxcore/.dylibs/libOpenImageDenoise_device_cpu.2.3.0.dylib,sha256=LZz-H8EmaEvLP5USxx-z8-fTFmUZ35u9B49h5A6r354,568080
+pyluxcore/.dylibs/libtbb.12.dylib,sha256=gWMwDTpSQKIzjeIe0iSLySFy6vwuvb-tksBHlDnYJdM,479264
+pyluxcore/.dylibs/libOpenImageDenoise_core.2.3.0.dylib,sha256=xetUGtA0MWQpccvAgESngL5uwqNdxfAjjuLMoDysB_A,51234384
+pyluxcore/.dylibs/libOpenImageDenoise.2.dylib,sha256=tZCltH-F1eA6zAC9xGqasKSfF54M1wewncdThueYW_0,140592
+pyluxcore/.dylibs/libtbb.dylib,sha256=iAfust8zJx6QsSlty9da5prQdFveY9xDNKMywHl21dU,479328
+pyluxcore-2.9a1.post0.dist-info/RECORD,,
+pyluxcore-2.9a1.post0.dist-info/WHEEL,sha256=crSpuajsA6XeY8db8rV6wKtHaUOm-i5eglX8sL-Fl20,113
+pyluxcore-2.9a1.post0.dist-info/METADATA,sha256=S6jOHtnRX8nXgaw0eTKjIGDKbnW9pZ_RtQTbKFn5u_I,1681
+pyluxcore-2.9a1.post0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
