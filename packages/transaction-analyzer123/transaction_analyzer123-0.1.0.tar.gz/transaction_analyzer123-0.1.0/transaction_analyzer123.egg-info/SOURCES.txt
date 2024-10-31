@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+transaction_analyzer123.egg-info/PKG-INFO
+transaction_analyzer123.egg-info/SOURCES.txt
+transaction_analyzer123.egg-info/dependency_links.txt
+transaction_analyzer123.egg-info/requires.txt
+transaction_analyzer123.egg-info/top_level.txt
