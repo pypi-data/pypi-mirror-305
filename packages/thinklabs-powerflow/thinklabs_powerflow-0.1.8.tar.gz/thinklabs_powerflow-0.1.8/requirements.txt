@@ -1,0 +1,6 @@
+click
+requests
+pandas
+certifi
+psycopg2-binary
+boto3
