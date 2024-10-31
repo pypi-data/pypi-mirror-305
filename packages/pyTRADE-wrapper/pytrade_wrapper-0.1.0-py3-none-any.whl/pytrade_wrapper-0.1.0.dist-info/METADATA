@@ -1,0 +1,60 @@
+Metadata-Version: 2.3
+Name: pyTRADE-wrapper
+Version: 0.1.0
+Summary: A jpype based TRADE wrapper for using TRADE with Python
+Author-email: Marlow Fawn <marlow.fawn@tufts.edu>
+Requires-Python: >=3.10
+Requires-Dist: jpype1==1.5.0
+Requires-Dist: numpy==2.0.2
+Description-Content-Type: text/markdown
+
+## Disclaimer
+
+This is a MAJOR work in progress. Everything is subject to change, and for now this readme only describes calling TRADE
+services *from* Python.
+We have functionality to call a Python TRADE service (either from Java or Python). Documentation will come shortly.
+
+# Installing with pip
+
+##
+
+# Installing From Source
+
+## Setup
+
+1. Set up [DIARC](https://hrilab.tufts.edu:22280/diarc/diarc). See the DIARC readme for install instructions.
+2. Check out the branch `rl`.
+3. Run the command: `./gradlew publishToMavenLocal`.
+4. Download the [diarc-rl repo](https://hrilab.tufts.edu:22280/marlowfawn/diarc-rl).
+
+## Configuring
+
+1. In the DIARC readme, follow instructions for setting up Metric-FF. This will include creating/modifying
+   `gradle.properties`.
+2. In the DIARC `trade.properties.default`, follow the instructions for making your own trade.properties file for java.
+3. In your personal `trade.properties`, change `STARTDISCOVERY` to `true`.
+
+## Using the Python DIARC Wrapper
+
+1. If you just want to use TRADE, you can just import `pyTRADE.core.wrapper`. The JVM will automatically start.
+2. If you want to use the DIARC wrapper, instantiate the `TRADEWrapper` object.
+3. You can now use its various methods, most importantly `call_trade(...)`. 
+
+Note: After importing diarc_wrapper, you can also import anything from the DIARC and TRADE jars. Import order matters
+here!
+
+# DIARC Components
+## Implementing an existing interface
+
+
+
+## Making a new interface
+
+## Todo:
+
+- requirements.txt
+- Documentation + example of java -> python (including making interface)
+- Implement DIARC detectors
+- Let users add to the classpath
+
+For questions, email (marlow.fawn@gmail.com)
