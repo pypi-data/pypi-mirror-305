@@ -1,0 +1,8 @@
+biscuit_python-0.3.2.dist-info/METADATA,sha256=8EaTYGSBF3P4JAC-Te8EqtaTFn8M0lNtvjH7Wyma-GI,1750
+biscuit_python-0.3.2.dist-info/WHEEL,sha256=bNtRK4IG-ZINiRwRhIvmsDSb0Vife_pt6vsyhyhjHi8,95
+biscuit_python-0.3.2.dist-info/licenses/LICENSE,sha256=5zyvUlCGKeg-qZjEQKmdgIlaE7KQ90rwUmYmG7jD1fo,11546
+biscuit_auth/__init__.py,sha256=Lk6al8iZRnBoS2oq9KU7vUGvqELmLd-e5qma7CXEUyc,131
+biscuit_auth/__init__.pyi,sha256=L5W_4VB22SFbC7hiVENCai-AgtkRxk7HBNZcr-UzS1k,19145
+biscuit_auth/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biscuit_auth/biscuit_auth.cp311-win_amd64.pyd,sha256=GWdXFD98e6bs0fNbbQFsD8tUCWeZ7WI6Bc1P2zHE6SQ,3579904
+biscuit_python-0.3.2.dist-info/RECORD,,
