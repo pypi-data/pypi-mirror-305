@@ -1,0 +1,16 @@
+mypy_boto3_geo_places/__init__.py,sha256=05sTpVhofEVjnrIxOa-sfRIXdcb3h_VUwbcw8XNTTtE,463
+mypy_boto3_geo_places/__init__.pyi,sha256=hsAQc6NZRm08Ls1eIav1Z6mEEVc7eRmeGfElINz6MME,462
+mypy_boto3_geo_places/__main__.py,sha256=YYmjEaxOn7twIzoDCiK_y5VQHEl-uHhRCIRUWbKQ2iU,956
+mypy_boto3_geo_places/client.py,sha256=czgVRRCez-a9oRlliyARc1pqOb4YMGEplhzZX1WIBhU,7671
+mypy_boto3_geo_places/client.pyi,sha256=tNkTSwd23QSypnvY_5me4QuXgq6aBr9-mhmx3eOt0_s,7667
+mypy_boto3_geo_places/literals.py,sha256=Wq4DtD4unh7f4PoZDU_m7eI4VZalgIrbdsiziWkg8VA,11376
+mypy_boto3_geo_places/literals.pyi,sha256=A6LKQ2W7SMyJLJ_PNJNcXXOsg1xuPvI6uc61g8K2-LA,11374
+mypy_boto3_geo_places/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_geo_places/type_defs.py,sha256=60ST2ptlff1p34DAtNcAD-cVtcbbQjCqfHBlgWwnMEI,26132
+mypy_boto3_geo_places/type_defs.pyi,sha256=-CzHcD8z4nlccC3ylynVCvS8D2gLqNdt23mgAMXsO8I,26131
+mypy_boto3_geo_places/version.py,sha256=QzJ4mtQBMuwtVt4oxK9BXOs3Cp_Bhmdl52imBjh1t7c,62
+mypy_boto3_geo_places-1.35.52.dist-info/LICENSE,sha256=eQDadZQZ3vRCiNF510ZT4yJV2zgo4000AOBoDRZyvKg,1070
+mypy_boto3_geo_places-1.35.52.dist-info/METADATA,sha256=3ZpF-Fg1k8Jqwvc8zwRWGDuFC6B193iwPhuQpYh5xbw,12321
+mypy_boto3_geo_places-1.35.52.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+mypy_boto3_geo_places-1.35.52.dist-info/top_level.txt,sha256=I3sNpK1TFywtmdre2aeOyenV1l2jJZ7ACeVRwp6SvWg,22
+mypy_boto3_geo_places-1.35.52.dist-info/RECORD,,
