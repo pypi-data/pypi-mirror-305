@@ -1,0 +1,7 @@
+fastapi
+deepl
+selenium
+nltk
+pyperclip
+uvicorn
+webdriver_manager
