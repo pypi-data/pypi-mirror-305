@@ -1,0 +1,19 @@
+[project]
+name = "esther_scale_out"
+version = "0.1.9"
+description = "Default template for PDM package"
+authors = [
+    {name = "EstherCho-7", email = "dkgkqm777@gmail.com"},
+]
+dependencies = [
+    "psutil>=6.1.0",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+manage = "esther_scale_out.manage:main"
+
+[tool.pdm]
+distribution = true
