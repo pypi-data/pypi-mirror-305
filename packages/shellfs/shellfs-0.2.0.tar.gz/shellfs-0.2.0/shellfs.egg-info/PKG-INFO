@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: shellfs
+Version: 0.2.0
+Summary: Provides a filesystem abstraction based on shell commands
+Author-email: Jens Engel <jenisys@noreply.github.com>
+License: MIT
+Project-URL: Homepage, https://github.com/jenisys/shellfs
+Project-URL: Download, https://pypi.org/project/shellfs/
+Project-URL: Repository, https://github.com/jenisys/shellfs
+Project-URL: Issues, https://github.com/jenisys/shellfs/issues/
+Keywords: shellfs,fsspec,filesystem,filesystem-adapter,filesystem-spec
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: System :: Filesystems
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fsspec>=2024.10.0
+Requires-Dist: parse>=1.20.2
+Requires-Dist: parse_type>=0.6.4
+Requires-Dist: typing_extensions>=4.12.2
+Provides-Extra: develop
+Requires-Dist: setuptools; extra == "develop"
+Requires-Dist: setuptools-scm; extra == "develop"
+Requires-Dist: wheel; extra == "develop"
+Requires-Dist: build>=0.5.1; extra == "develop"
+Requires-Dist: twine>=1.13.0; extra == "develop"
+Requires-Dist: coverage>=4.4; extra == "develop"
+Requires-Dist: pytest>=5.0; extra == "develop"
+Requires-Dist: pytest-html>=1.19.0; extra == "develop"
+Requires-Dist: pytest-cov; extra == "develop"
+Requires-Dist: tox>=4.0; extra == "develop"
+Requires-Dist: virtualenv>=20.0.0; extra == "develop"
+Requires-Dist: ruff; python_version >= "3.7" and extra == "develop"
+Requires-Dist: pylint; extra == "develop"
+Provides-Extra: testing
+Requires-Dist: pytest>=5.0; extra == "testing"
+Requires-Dist: pytest-html>=1.19.0; extra == "testing"
+
+shellfs
+===============================================================================
+
+[shellfs] is a simple, in-performant filesystem that uses shell commands
+to implement filesystem operations. [shellfs] is based on [fsspec]
+that provides the core functionality for different filesystems.
+
+
+[shellfs] provides:
+
+* a filesystem abstraction if a shell is provided to run commands
+* the shell protocol provides a stable interface to run commands in any shell
+* a `ShellProtocol` as extension-point for different kind of shells
+  (to execute filesystem operation commands).
+* a `FileSystemProtocol` as extension-point to execute filesystem operations via shell commands,
+* a `FSOperationCommand` as low-level profile that acts as adapter.
+  between different shell command dialects and supports the shell command execution.
+* the shell protocol is implemented for the local shell (on Unix platforms).
+
+EXAMPLE:
+
+```python
+# -- FILE: example_use_shellfs.py
+# SHELL PROVIDES:
+#   * run(command, ...) method to execute commands (filesystem operations)
+#   * FSOPS_COMMAND_CLASS: Provides low-level functionality for FileSystemProtocol
+
+from shellfs import ShellFileSystem
+from shellfs.shell.unix import UnixShell
+from pathlib import Path
+
+this_shell = UnixShell()
+shellfs = ShellFileSystem(this_shell)
+some_dir_path = "/tmp/some_dir"
+some_file_path = Path(some_dir_path)/"some_file.txt"
+shellfs.touch(some_file_path)
+assert shellfs.exists(some_file_path) is True
+assert shellfs.isfile(some_file_path) is True
+assert shellfs.isdir(some_file_path) is False
+assert shellfs.isdir(some_dir_path) is True
+```
+
+NOTES:
+
+* The [shellfs] is not very performant.
+* The [shellfs] is intended to be used if no better filesystem exists
+  and only if a command shell is provided that allows to access the internal filesystem.
+
+RELATED:
+
+* [fsspec]
+
+[shellfs]: https://github.com/jenisys/shellfs
+[fsspec]: https://github.com/fsspec/filesystem_spec
+[universal_pathlib]: https://github.com/fsspec/universal_pathlib
