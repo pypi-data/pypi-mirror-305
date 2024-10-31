@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: shadowserver
+Version: 0.1.0
+Summary: A simple HTTP/HTTPS proxy server in Python
+Author: Benard K. Wachira
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: multidict
+Requires-Dist: asyncio
+
