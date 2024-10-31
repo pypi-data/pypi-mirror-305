@@ -1,0 +1,2 @@
+[console_scripts]
+blue-brain-token-fetch = blue_brain_token_fetch.nexus_token_fetch:start
