@@ -1,0 +1,3 @@
+[console_scripts]
+bert = bert_pytorch.__main__:train
+bert-vocab = bert_pytorch.dataset.vocab:build
