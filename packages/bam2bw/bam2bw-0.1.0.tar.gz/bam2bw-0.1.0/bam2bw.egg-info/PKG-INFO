@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: bam2bw
+Version: 0.1.0
+Summary: A command-line tool for converting SAM/BAM files into stranded bp resolution BigWig files. 
+Home-page: https://github.com/jmschrei/bam2bw
+Author: Jacob Schreiber
+Author-email: jmschreiber91@gmail.com
+License: LICENSE.txt
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pysam
+Requires-Dist: pyBigWig
+Requires-Dist: tqdm
