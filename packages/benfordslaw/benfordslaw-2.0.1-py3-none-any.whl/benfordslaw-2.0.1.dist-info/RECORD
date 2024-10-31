@@ -1,0 +1,10 @@
+benfordslaw/__init__.py,sha256=NwimifdL6BbzeeYILPveHNbyga9j6VydFSarKm_eERc,1188
+benfordslaw/benfordslaw.py,sha256=jzSvmFSYhYr8pZ_yVrjd43N-yGX5I55HCIlkdx0KwiU,12912
+benfordslaw/examples.py,sha256=6AqeDULfmk5pJxQyAzsHv-yAU8r4qn21pBnSrQ17c8c,4248
+benfordslaw/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+benfordslaw/tests/test_benfordslaw.py,sha256=Cja1ezbels7gewegtt4Wgsk9JBtkZRC3A_u9wvUg6FQ,2693
+benfordslaw-2.0.1.dist-info/LICENSE,sha256=3EttLw0RlmdSOuE0gbn1m-2oFk_uPk0LAITupfK0qWc,1124
+benfordslaw-2.0.1.dist-info/METADATA,sha256=nmDCs88-f-4i3gwHWAk2gukkKkwlHeoU9hk3p2WliLo,5815
+benfordslaw-2.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+benfordslaw-2.0.1.dist-info/top_level.txt,sha256=W9vcgB_FkEovdPooRlEs2wP67uRTyHo1s-fpkYKbvc0,12
+benfordslaw-2.0.1.dist-info/RECORD,,
