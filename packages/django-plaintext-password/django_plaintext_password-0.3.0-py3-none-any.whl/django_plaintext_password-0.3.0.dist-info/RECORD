@@ -1,0 +1,8 @@
+plaintext_password/__init__.py,sha256=la8dwm11d12YmwuaKWycIlEPigWGontgo4ACjpohpRY,1105
+plaintext_password/checks.py,sha256=VDEAMZmMuQ6BgQcdfj9ja-v8s2Nf2T6CSKtb7aPZdjA,429
+plaintext_password/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_plaintext_password-0.3.0.dist-info/LICENSE,sha256=Q4qyuwr_-zTZsxjZFOyBOGaUKJt-66kufUOh13sYjW4,1068
+django_plaintext_password-0.3.0.dist-info/METADATA,sha256=tGvfuzt8zvb815AkEoESfRpm2dWEwQyY4fuO-wNNKFU,5341
+django_plaintext_password-0.3.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+django_plaintext_password-0.3.0.dist-info/top_level.txt,sha256=cB0FejdiPAElVED2nT2QjCZfSQeaAW7hL7W74Y6AQq8,19
+django_plaintext_password-0.3.0.dist-info/RECORD,,
