@@ -1,0 +1,11 @@
+teamwork/__init__.py,sha256=ji7wqRD3BuzSi0Xc_0ij_5Vrn56FkD2V8SyQCBqqWdQ,141
+teamwork/defs.py,sha256=3bfFSSgovG-EXRikIoX-n3RE1Qwfa7vJ8-nOs1XwD38,1198
+teamwork/_async/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+teamwork/_async/client.py,sha256=TtawVaPMWezgUIW-vXwoSPLNFr4GyBh_svPaLo6dAzs,772
+teamwork/_async/messaging.py,sha256=EtP0BolmoVSbIeXMm4bHQhVJ2_1BHNqZdgCaGFwZIPw,3065
+teamwork/_async/user.py,sha256=TYEuJQQw4t9dTRBHjGke9G1-jvz_oqUInyD0BQCLgd0,2732
+teamwork_python-0.1.0.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+teamwork_python-0.1.0.dist-info/METADATA,sha256=nBqtKquyJQaoRHBDT9WT6w4qL1MWrxQjdcI5O9ABI4k,2266
+teamwork_python-0.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+teamwork_python-0.1.0.dist-info/top_level.txt,sha256=-mVw4pQrCDvgPbQE_bjXb87NehSqlMXRWP4-CuJ8iqg,9
+teamwork_python-0.1.0.dist-info/RECORD,,
