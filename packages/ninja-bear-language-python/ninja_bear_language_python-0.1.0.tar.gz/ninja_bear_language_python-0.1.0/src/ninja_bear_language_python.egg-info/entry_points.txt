@@ -1,0 +1,2 @@
+[ninja_bear_language_python]
+config = ninja_bear_language_python.config:Config
