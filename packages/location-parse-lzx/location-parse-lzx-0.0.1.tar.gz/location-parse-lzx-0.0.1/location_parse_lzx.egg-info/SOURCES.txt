@@ -1,0 +1,9 @@
+setup.py
+dictionary/__init__.py
+dictionary/dictionary_loader.py
+location_parse_lzx.egg-info/PKG-INFO
+location_parse_lzx.egg-info/SOURCES.txt
+location_parse_lzx.egg-info/dependency_links.txt
+location_parse_lzx.egg-info/top_level.txt
+parsers/__init__.py
+parsers/location_parser.py
