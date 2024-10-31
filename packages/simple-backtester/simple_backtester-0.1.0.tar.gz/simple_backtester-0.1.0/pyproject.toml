@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "simple-backtester"
+version = "0.1.0"
+description = "Simple, no frills backtesting"
+authors = ["Shida SB <ssbakh07@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+setuptools = { version="*", python="<3.10"}
+python = ">=3.9"
+numpy = ">1.26.0, <2.0.0"
+pandas = "*"
+tqdm = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
