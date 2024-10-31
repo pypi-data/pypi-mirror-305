@@ -1,0 +1,10 @@
+app/__init__.py,sha256=_keT7mK3jkkwkpUrJja5u8Qoa2yN8-djtuKhI6p2Yvg,1466
+app/main.py,sha256=HQYc7bMiVqcC31qCEqV9xjBvQo1-jxFWGEPaahJOHUU,1373
+app/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/utils/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/utils/helpers/logging.py,sha256=xxskKhk-icpgXGZYxl4sLYq_BVj8V9n7HSy72Zh3cj0,438
+create_quas_app-0.5.5.dist-info/METADATA,sha256=pzfIIcQI9vwRm6vWV1Th0KOoVaXyXYpZQdudu-x9jkQ,5733
+create_quas_app-0.5.5.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+create_quas_app-0.5.5.dist-info/entry_points.txt,sha256=OBp6duqdx8DgtqNqczuEZPC2g8Lz1hZfuGTSZdG6Olc,56
+create_quas_app-0.5.5.dist-info/top_level.txt,sha256=io9g7LCbfmTG1SFKgEOGXmCFB9uMP2H5lerm0HiHWQE,4
+create_quas_app-0.5.5.dist-info/RECORD,,
