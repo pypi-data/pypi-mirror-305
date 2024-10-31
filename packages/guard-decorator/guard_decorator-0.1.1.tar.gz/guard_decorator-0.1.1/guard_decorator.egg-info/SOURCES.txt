@@ -1,0 +1,9 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+guard_decorator/__init__.py
+guard_decorator.egg-info/PKG-INFO
+guard_decorator.egg-info/SOURCES.txt
+guard_decorator.egg-info/dependency_links.txt
+guard_decorator.egg-info/top_level.txt
