@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: revus
+Version: 0.0.1
+Summary: Automated PR Review Application using LLM
+Home-page: https://github.com/sudobooo/revus
+License: MIT
+Author: Sergei Masiutin
+Author-email: sergeimasiutin@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: gitpython (>=3.1.43,<4.0.0)
+Requires-Dist: langchain (>=0.3,<0.4)
+Requires-Dist: langchain-openai (>=0.2.3,<0.3.0)
+Requires-Dist: openai (>=1.52.0,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: rich (>=13.5.2,<14.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Project-URL: Repository, https://github.com/sudobooo/revus
+Description-Content-Type: text/markdown
+
+# Revus
+
+## What's Revus?
+
+This application performs automatic reviews.
+
+The README will be updated as the application is developed.
