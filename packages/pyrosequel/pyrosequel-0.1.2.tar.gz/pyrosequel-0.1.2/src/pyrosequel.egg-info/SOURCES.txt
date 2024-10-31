@@ -1,0 +1,14 @@
+LICENSE
+README.MD
+pyproject.toml
+setup.cfg
+src/pyrosequel/__init__.py
+src/pyrosequel/column.py
+src/pyrosequel/model.py
+src/pyrosequel/query.py
+src/pyrosequel/sqlfn.py
+src/pyrosequel/sqlitedb.py
+src/pyrosequel.egg-info/PKG-INFO
+src/pyrosequel.egg-info/SOURCES.txt
+src/pyrosequel.egg-info/dependency_links.txt
+src/pyrosequel.egg-info/top_level.txt
