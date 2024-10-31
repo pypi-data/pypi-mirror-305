@@ -1,0 +1,9 @@
+linux/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linux/change_mac.py,sha256=vQ6uKYWhDgmqnR7llEAooJCQKtAEsa2wZXdqEZRO4o8,1747
+windows/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+windows/change_mac.py,sha256=_tseOu2QGgDvhQ8en1V1CSmltT193FFWstgSlaTtbkg,745
+macrenew-1.0.0.dist-info/LICENSE.txt,sha256=CA95-vgyLfv91Z0CG8bAO02cjioAFOQlqt-BnvbdsLs,1078
+macrenew-1.0.0.dist-info/METADATA,sha256=IhqzxWQp3_7I5KDwO8yWDNwHIu0fWO25v_Z5T1Ib0G8,1452
+macrenew-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+macrenew-1.0.0.dist-info/top_level.txt,sha256=0uapFq-nETL25gomc3G2-Ai6ZqrUuzuVUl7U3_zG3ho,14
+macrenew-1.0.0.dist-info/RECORD,,
