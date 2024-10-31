@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: katsu
+Version: 0.1.0
+Summary: Mueller calculus, polarimetry, and motion control
+Author: Jaren N. Ashcraft
+Author-email: "Jaren N. Ashcraft" <jashcraft@arizona.edu>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2024 Jaren N. Ashcraft
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Project-URL: GitHub, https://github.com/jashcraf/katsu
+Project-URL: Documentation, https://katsu.readthedocs.org
+Keywords: python,optics,telescope,polarization,mueller,polarimetry
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pyserial
+
+# Katsu: Integrated polarimetry and polarization simulation
+[![codecov](https://codecov.io/gh/Jashcraf/katsu/graph/badge.svg?token=NXLEQE61YX)](https://codecov.io/gh/Jashcraf/katsu)
+[![Documentation Status](https://readthedocs.org/projects/katsu/badge/?version=latest)](https://katsu.readthedocs.io/en/latest/?badge=latest)
+[![status](https://joss.theoj.org/papers/82536dc5307fe34ddd929c89ed3d2575/status.svg)](https://joss.theoj.org/papers/82536dc5307fe34ddd929c89ed3d2575)
+
+<img src="logo.png" alt="drawing" width="350"/>
+
+Katsu is a Python 3.8+ library that contains an integrated library for modeling simple polarization effects (represented with Mueller calculus), simulating full stokes and mueller polarimetry, and integrating both of these as data reduction tools for conducting polarimetry in the laboratory. We also feature motion control routines for commercially available rotation stages for a more Pythonic interface to devices that would otherwise require serial communication. 
+
+## Documentation
+The documentation can be found at [katsu.readthedocs.io](https://katsu.readthedocs.io/en/latest). 
+
+## Optional dependencies
+
+Katsu has limited support for numpy-like backends, like `cupy` for accelerated computing and `jax` for automatic differentiation. These are not strict requirements, and must be installed by the user. To switch to them at runtime, either the `set_backend_to_cupy` or `set_backend_to_jax` method can be used from `katsu.math` at runtime.
+
+## Features
+
+- Mueller calculus
+- Mueller data reduction
+- Mueller polarimetry routines
+- Motion control for the Agilis piezoelectric rotation stages
+
+## Installation
+Currently Katsu is installable from source, just run the following in your terminal
+```
+git clone https://github.com/Jashcraf/katsu/
+cd katsu
+pip install .
+```
+
+## Contributions / Questions
+If you wish to contribute to Katsu, or have any questions about its use, please open an issue to start a discussion. Before a pull request is made, we prefer that an issue is made to discuss the contributions at a high level. 
+
+## Acknowledgements
+Thanks to Quinn Jarecki of UA's Polarization Lab for the starting theory on dual rotating retarder mueller polarimetry, and for overall helpful discussions. Thanks also to William Melby, Manxuan Zhang, and Max Millar-Blanchaer for being the first to test out the Mueller data reduction code.
