@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+detpy/__init__.py
+detpy.egg-info/PKG-INFO
+detpy.egg-info/SOURCES.txt
+detpy.egg-info/dependency_links.txt
+detpy.egg-info/requires.txt
+detpy.egg-info/top_level.txt
