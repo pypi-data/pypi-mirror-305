@@ -1,0 +1,3 @@
+[console_scripts]
+ABRSQOL_invert_quality_of_life = ABRSQOL:invert_quality_of_life
+ABRSQOL_testdata = ABRSQOL:testdata
