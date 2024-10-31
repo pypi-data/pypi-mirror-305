@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+ovos_audio_plugin_mpv.egg-info/PKG-INFO
+ovos_audio_plugin_mpv.egg-info/SOURCES.txt
+ovos_audio_plugin_mpv.egg-info/dependency_links.txt
+ovos_audio_plugin_mpv.egg-info/entry_points.txt
+ovos_audio_plugin_mpv.egg-info/requires.txt
+ovos_audio_plugin_mpv.egg-info/top_level.txt
+ovos_plugin_mpv/__init__.py
+ovos_plugin_mpv/version.py
