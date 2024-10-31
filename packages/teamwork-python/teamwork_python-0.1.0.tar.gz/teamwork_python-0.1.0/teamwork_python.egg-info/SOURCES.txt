@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+teamwork/__init__.py
+teamwork/defs.py
+teamwork/_async/__init__.py
+teamwork/_async/client.py
+teamwork/_async/messaging.py
+teamwork/_async/user.py
+teamwork_python.egg-info/PKG-INFO
+teamwork_python.egg-info/SOURCES.txt
+teamwork_python.egg-info/dependency_links.txt
+teamwork_python.egg-info/requires.txt
+teamwork_python.egg-info/top_level.txt
+tests/test_messaging.py
+tests/test_user.py
