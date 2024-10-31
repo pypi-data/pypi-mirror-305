@@ -1,0 +1,316 @@
+Metadata-Version: 2.1
+Name: kpi_library
+Version: 0.0.1
+Summary: Quality profiler library
+Author-email: Arantzazu Lopez-Larrainzar Salazar <alopezlarrainzar@iti.es>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pandas==2.0.3
+Requires-Dist: visions[type_geometry,type_image_path]~=0.7.6
+Requires-Dist: nltk==3.8.1
+Requires-Dist: scipy~=1.9.3
+Requires-Dist: numpy~=1.23.3
+Requires-Dist: regex==2022.10.31
+Requires-Dist: contractions==0.1.73
+Requires-Dist: pyspellchecker==0.7.1
+Requires-Dist: statsmodels==0.13.5
+
+# kpi
+
+## Table of contents
+1. Description
+2. KPI library
+    1. GeneralMethods
+    2. NumericMethods
+    3. CategoricalMethods
+    4. DateMethods
+    5. TextMethods
+2. Installation
+3. Usage
+
+
+## Description
+**kpi_library** is a Python library designed to offer various profiling techniques for structured data. Moreover, the library strives to present profiling techniques in a straightforward and user-friendly manner, allowing users to employ them with minimal effort.
+
+Going deeper into the details, the methods are grouped based on the data they analyze, i.e., general data (they do not care about the data type), numeric, categorical, date and text data.
+
+Each module has a method called `to_dqv` that returns the result of processing the metric that is wanted to be implemented, in the data, following the DQV (meta)data model format. The method needs as parameter the name of the metric and the parameters for this method, and it will return the following object:
+
+```
+{
+    "dqv_isMeasurementOf": "class_name.metric_name",
+    "dqv_computedOn": "data_name",
+    "dqv_value": "result of processing the metric in the data",
+    "ddqv_hasParameters": [{
+        "parameter_name": "parameter name",
+        "value": "value of the parameter"
+    }]
+}
+```
+
+## KPI library
+
+In this section, each of the modules will be explained and we will deep into the different metrics implemented into each of them.
+
+### GeneralMethods
+
+This module contains the metrics that obtains general metadata from a dataset. All these metrics return a list of dictionaries containing the name of the data they are processing (`data_name`) (if the data is the entire dataset it returns `DATASET` as data name, but if it is processing a column of the dataset it contains the name of the column), the name of the metric (`method_name`), the data type of the result (`data_type`), and the result (`value`). Once the result is obtained by the `to_dqv` method, it returns the result with the DQV format mentioned above.
+
+- `num_rows` - returns the number of rows in the data.
+
+- `num_columns` - returns the number of columns in the data.
+
+- `count` - counts the number of non-null values per column and returns a list of dictionaries, one per column that differ from each other thanks to the `data_name` key.
+
+- `position` - returns the position of each column in the data.
+
+- `duplicated_entries` - computes the number of rows that are duplicated in the dataset and returns the number of those entries and also its percentage. For that, it returns two different dictionaries, one containing the number of duplicated entries which will have `duplicated_entries` as method name, and another containing the percentage, using `duplicated_entries_percent` as method name.
+
+- `completeness` - it computes the number of missing values, i.e., those entries that contain a null value. So, it returns two dictionaries containing the number (`completeness` as method name) and percentage (`completeness_percent`) of null values per column in the dataset.
+
+- `unique_entries` - computes the number and percentage of distinct elements in each column. It has the same functionality as the `completeness` metric.
+
+- `data_types` - infers the data type of each column.
+
+- `memory_usage_bytes` - computes the memory needed for each column in bytes.
+
+### NumericMethods
+This module contains profiling methods for numerical data that try to obtain descriptive statistics about the central tendency and the dispersion of the data. The result of these metrics differ from the result of the general method, since they only return the statistic that has been calculated. The numerical metrics are:
+
+- `min` - returns the minimum value of the data.
+
+- `max` - returns the maximum value.
+
+- `mean` - computes the mean value.
+
+- `median` - computes the median (second quartile) of the data.
+
+- `std` - computes the standard deviation of the data.
+
+- `fifth_percentile` - computes the 5th-percentile.
+
+- `first_quartile` - computes the first quartile (25th-percentile).
+
+- `median` - computes the median (50th-percentile).
+
+- `third_quartile` - computes the third quartile (75th-percentile).
+
+- `ninety_fifth_percentile` - computes the 95th-percentile.
+
+- `mode` - this metric returns different values depending on the `return_element` parameter:
+    - When set to `element` (the default value), the metric returns the most frequent element of the data.
+    - When set to `frequency`, the metric returns the frequency of occurrence of the most frequent element.
+    - When set to `normalized`, it returns the percentage of occurrence of the most frequent element.
+
+- `range` - computes the difference between the maximum and minimum value of the data.
+
+- `iqr` (interquartile range) - computes the different between the third and first quartile of the data.
+
+- `coefficient_variation` - computes the coefficient of variation, i.e., the ratio of the standard deviation to the mean, showing the extent of variability in relation to the mean of the population.
+
+- `mad` - computes the Mean Absolute Deviation (MAD), i.e., the average distance between each data point and the mean, giving an idea about the variability in a dataset.
+
+- `kurtosis` - computes the kurtosis value of the data.
+
+- `skewness` - computes the skewness value.
+
+- `sum` - sums all values in the data.
+
+- `count_zeros` - counts the number of entries that are equal to zero.
+
+- `count_negatives` - counts the number of negative values in the data.
+
+- `outliers`: returns the number or percentage of outliers in the data, depending on the value of the boolean parameter `normalized`. If normalized is set to true, it returns the percentage of outliers in the data.
+
+- `box_plot`: calculates the statistical information needed to build a box-and-whiskers plot, i.e., the minimum and maximum value, the first, second (median) and third quartile, the mean and the list of outliers (data that fall outside the interval described by the whiskers). This information is saved in a dictionary format with their respective keys.
+
+- `histogram`: this metric divides the entire range of values into a series of intervals (bins) and then counts how many values fall into each interval. Thus, it returns a list of dictionaries containing the values of the interval (`limits`) and the number of elements falling in the specified bin (`frequency`).
+
+### CategoricalMethods
+First of all, categorical values are those that represent a category or group of data, in contrast to numerical values, which represent quantities. For example, the color of a product or the category of an image can be categorical values.
+
+The metrics of this module have the same functionality than the numerical module and only returns the value that has been obtained:
+- `mode`- this method works similarly to the mode metric of the numerical module.
+
+- `length_distribution` - computes the character length distribution of the data and returns a list of dictionaries containing the length in characters (`item`) and the frequency at which it appears (`frequency`).
+
+- `outliers` - has the same functionality as the outlier metric of the numerical module.
+
+- `frequency_distribution` - computes the frequency of occurrence of each element and returns an ordered list of dictionaries containing the element (`item`) and its frequency (`frequency`) in number or percentage, depending on the value of the `normalized` parameter (if `normalized` is set to `true`, it returns the percentage of occurrence). The list is sorted according to the frequency of each element, so that the first dictionary will contain the most frequent element and its frequency.
+
+- `pie_chart` - it is similar to the frequency distribution metric, but allows specifying the number of elements that will be displayed in the graph. Assuming that the elements to be shown are less than the actual ones, this metric adds to the result a new dictionary containing the element `other`, referring to the frequency contemplated by the other elements that are not shown.
+
+### DateMethods
+This module differs from the others because in addition to needing the data to be analyzed, it needs the format of the dates. If no format is passed, the module will infer it and all those dates that do not fit this format will become null values. Note that something similar happens if an incorrect format is given, the module will try to transform the data and will turn into null those values that could not be converted.
+
+The metrics that have been implemented are the following:
+
+- `number_non_transformed_dates` - gets the number of values that do not follow the date format that has been inferred or passed as input.
+
+- `min`
+
+- `max`
+
+- `mode` - gets the date that appears with more frequency in the data.
+
+- `mode_frequency` - gets the frequency of the most frequent date.
+
+- `mode_frequency_percent` - gets the percentage of occurrence of the most frequent date.
+
+- `mean`
+
+- `median`
+
+- `range`
+
+- `fifth_percentile`
+
+- `first_quartile`
+
+- `third_quartile`
+
+- `ninety_fifth_percentile`
+
+- `range`
+
+- `iqr`
+
+- `std`
+
+- `frequency_distribution` - gets the number of times each date appears in the data.
+
+- `frequency_distribution_percent` - gets the percentage of occurrence of each date in the data.
+
+- `histogram` - studies how the data is distributed, dividing the date range into a specific number of intervals (bins) and calculating the number of dates that fall within each bin. This metric works very similarly to the `histogram` metric of the numerical module.
+
+- `histogram_percent` - provides the same information as the `histogram` metric but instead of returning the frequency as an integer, i.e. the number of dates that fall within each bin, it returns the percentage of the data that fall within each bin.
+
+Nothing has been commented on some metrics, because they have a similar operation to the metrics, with the same name, of the modules that have been previously explained.
+
+### TextMethods
+
+This module examines the structure and quality of text data.
+
+Depending on the metric, they can return only the computed value or a list of dictionaries containing the name of the
+metric (`metric_name`), the data type of the result (`data_type`) and the result (`value`).
+
+The following metrics only return the computed value and, as it can be seen, there are some metrics that finish with the suffix `_percent` and that is because rather than returning the frequency as the number of times an element appears, they return it as the percentage of elements that are similar in the data:
+- `count_sentences` - counts the number of sentences and returns a list of dictionaries containing the sentences length (`item`) and its frequency (`frequency`).
+
+- `count_sentences_percent`
+
+- `count_words` - this metric is similar to the `count_sentences` metric but it counts the number of words in each entry.
+
+- `count_words_percent`
+
+- `count_characters` - it is similar to the `count_sentences` metric but it counts the number of characters in each entry.
+
+- `count_characters_percent`
+
+- `longest_words` - tokenizes the texts into words and returns a list of those with a length greater than the length given as input (`length` parameter).
+
+- `longest_frequent_words` - also tokenizes the texts into words and returns a list of those with a length greater than the length given as parameter (`length`) and with a frequency of occurrence greater than that given as input (`frequency`).
+
+- `collocations_distribution` - computes the frequency distribution of the collocations in the data, being a collocation a combination of words that appear more frequently than usual, and returns the most frequently occurring collocations, i.e., an ordered list of dictionaries containing the collocation (`item`), and the frequency of occurrence (`frequency`). Depending on the parameter `collocation` this metric will return the collocations of two words (bigram), three words (trigram) or both (both).
+
+- `collocations_distribution_percent`
+
+- `abbreviation_distribution` - an abbreviation is a shortened form of a word or phrase, for example the abbreviation of *kilogram* is *Kg*.
+
+- `abbreviation_distribution_percent`
+
+- `acronym_distribution` - an acronym is an abbreviation formed from the initial letters of other words and pronounced as a word (e.g. *AI* stands for *Artificial Intelligence*).
+
+- `acronym_distribution_percent`
+
+- `uppercase_distribution` - uppercase words refer to text or letters that are written in capital letters.
+
+- `uppercase_distribution_percent`
+
+- `spell_mistakes_distribution` - spell mistakes refers to errors in spelling, i.e., words that are written incorrectly according to the accepted conventions of a particular language.
+
+- `spell_mistakes_distribution_percent`
+
+Conversely, the following metrics return a list of dictionaries:
+- `distribution_most_frequent_elements` - calculates the frequency distribution of elements in the data and returns an ordered list of dictionaries containing the element (`element`) and the frequency of occurrence (`frequency`) in number and percentage. This method returns only the number of elements specified as parameter (`num_items`) and, depending on the parameters, it will calculate the frequency of the entries or the words that form the entry, and will eliminate or not those words that can be interpreted as stopwords.
+
+    In any case, this metric returns a list of two dictionaries, one containing the frequency as integer and the other containing the frequency as percentage. They differ from each other by the metric name, `distribution_most_frequent_elements` for the integer and `distribution_most_frequent_elements_percent` for the percentage.
+
+- `distribution_less_frequent_elements` - seeks, on the other hand, to visualize those elements that appear less frequently, so it will return the same list but sorted in reverse order, with the least frequent elements in first place. This method returns the same type of answer than `distribution_most_frequent_elements`.
+
+- `lexical_diversity` - computes the total number of words, the number of distinct words and the rate between both results. For that, it returns a list of three dictionaries containing the total number of words (the metric name is `lexical_diversity_total`), the number of distinct words (`lexical_diversity_distinct` being the metric name) and the rate (`lexical_diversity_uniqueness`).
+
+## Installation
+
+To install **kpi** from source you need to download the file `kpi-0.0.1.tar.gz`, which is in the folder `dist`, and run the following command:
+
+```
+pip install kpi-0.0.1.tar.gz
+```
+
+With this command, any of package dependencies will be installed and you could use the library in your own environment or in local.
+
+
+## Usage
+
+This section will show different examples of how to use each of the modules explained above. In any case, all of them follow the next procedure:
+1. Create a pandas DataFrame or Series object where the data is stored.
+2. Create an instance of the class that you are going to use, passing as parameter the pandas object.
+3. Using the instance, call the `to_dqv` method and specify which method and parameters it should use.
+
+```
+>>> import pandas as pd
+>>> import kpi_library
+>>>
+>>> data = pd.DataFrame([{"Num":0.1209,"Cat":"Female","Date":None,"Text":"He\'s uncertein about his future."},{"Num":0.0665,"Cat":"Male","Date":"02/02/2000","Text":"I want to be a pilot in the future."},{"Num":0.8651,"Cat":"Male","Date":"03/02/2000","Text":"She felt insecure about her future at NASA."},{"Num":0.2336,"Cat":"Female","Date":"04/02/2000","Text":"I can\'t help thinking of the future."},{"Num":0.2336,"Cat":"Female","Date":"05/02/2000","Text":"I can\'t help thinking of the future."}])
+>>> data
+      Num    Cat2        Date                                         Text
+0  0.1209  Female        None             He's uncertein about his future.
+1  0.0665    Male  02/02/2000          I want to be a pilot in the future.
+2  0.8651    Male  03/02/2000  She felt insecure about her future at NASA.
+3  0.2336  Female  04/02/2000         I can't help thinking of the future.
+4  0.2336  Female  05/02/2000         I can't help thinking of the future.
+>>>
+>>> gm = kpi_library.GeneralMethods(data)
+>>> gm.to_dqv(method_name='completeness', parameters=[])
+[{'dqv_isMeasurementOf': 'general.completeness', 'dqv_computedOn': 'Num', 'rdf_datatype': 'Integer', 'ddqv_hasParameters': [], 'dqv_value': '0'}, {'dqv_isMeasurementOf': 'general.completeness_percent', 'dqv_computedOn': 'Num', 'rdf_datatype': 'Float', 'ddqv_hasParameters': [], 'dqv_value': '0.0'}, {'dqv_isMeasurementOf': 'general.completeness', 'dqv_computedOn': 'Cat', 'rdf_datatype': 'Integer', 'ddqv_hasParameters': [], 'dqv_value': '0'}, {'dqv_isMeasurementOf': 'general.completeness_percent', 'dqv_computedOn': 'Cat', 'rdf_datatype': 'Float', 'ddqv_hasParameters': [], 'dqv_value': '0.0'}, {'dqv_isMeasurementOf': 'general.completeness', 'dqv_computedOn': 'Date', 'rdf_datatype': 'Integer', 'ddqv_hasParameters': [], 'dqv_value': '1'}, {'dqv_isMeasurementOf': 'general.completeness_percent', 'dqv_computedOn': 'Date', 'rdf_datatype': 'Float', 'ddqv_hasParameters': [], 'dqv_value': '0.2'}, {'dqv_isMeasurementOf': 'general.completeness', 'dqv_computedOn': 'Text', 'rdf_datatype': 'Integer', 'ddqv_hasParameters': [], 'dqv_value': '0'}, {'dqv_isMeasurementOf': 'general.completeness_percent', 'dqv_computedOn': 'Text', 'rdf_datatype': 'Float', 'ddqv_hasParameters': [], 'dqv_value': '0.0'}]
+>>>
+>>> gm.to_dqv(method_name='position', parameters=[])
+[{'dqv_isMeasurementOf': 'general.position', 'dqv_computedOn': 'Num', 'rdf_datatype': 'Integer', 'ddqv_hasParameters': [], 'dqv_value': '0'}, {'dqv_isMeasurementOf': 'general.position', 'dqv_computedOn': 'Cat', 'rdf_datatype': 'Integer', 'ddqv_hasParameters': [], 'dqv_value': '1'}, {'dqv_isMeasurementOf': 'general.position', 'dqv_computedOn': 'Date', 'rdf_datatype': 'Integer', 'ddqv_hasParameters': [], 'dqv_value': '2'}, {'dqv_isMeasurementOf': 'general.position', 'dqv_computedOn': 'Text', 'rdf_datatype': 'Integer', 'ddqv_hasParameters': [], 'dqv_value': '3'}]
+>>>
+>>>
+>>> nm = kpi_library.NumericMethods(data['Num'])
+>>> nm.to_dqv(method_name='histogram', parameters=[{'parameter_name': 'num_bins', 'value': '3'}])
+[{'dqv_isMeasurementOf': 'numeric.histogram', 'dqv_computedOn': 'Num', 'rdf_datatype': 'List<Map<String,String>>', 'ddqv_hasParameters': [{'parameter_name': 'num_bins', 'value': '3'}], 'dqv_value': '[{"limits": "[0.0665, 0.3327)", "frequency": 4}, {"limits": "[0.3327, 0.5989)", "frequency": 0}, {"limits": "[0.5989, 0.8651]", "frequency": 1}]'}]
+>>> nm.to_dqv(method_name='mean', parameters=[])
+[{'dqv_isMeasurementOf': 'numeric.mean', 'dqv_computedOn': 'Num', 'rdf_datatype': 'Float', 'ddqv_hasParameters': [], 'dqv_value': '0.30394'}]
+>>>
+>>>
+>>> cm = kpi_library.CategoricalMethods(data['Cat'])
+>>> cm.to_dqv('frequency_distribution', [])
+[{'dqv_isMeasurementOf': 'categorical.frequency_distribution', 'dqv_computedOn': 'Cat', 'rdf_datatype': 'List<Map<String,String>>', 'ddqv_hasParameters': [], 'dqv_value': '[{"item": "Female", "frequency": 3}, {"item": "Male", "frequency": 2}]'}]
+>>> cm.to_dqv('frequency_distribution', [{'parameter_name': 'normalized', 'value': 'true'}])
+[{'dqv_isMeasurementOf': 'categorical.frequency_distribution', 'dqv_computedOn': 'Cat', 'rdf_datatype': 'List<Map<String,String>>', 'ddqv_hasParameters': [{'parameter_name': 'normalized', 'value': 'true'}], 'dqv_value': '[{"item": "Female", "frequency": 0.6}, {"item": "Male", "frequency": 0.4}]'}]
+>>>
+>>>
+>>> dm = kpi_library.DateMethods(data['Date'], strftime="%d/%m/%Y)
+>>> dm.to_dqv('mode', [{'parameter_name': 'return_element', 'value': 'element'}])
+[{'dqv_isMeasurementOf': 'date.mode', 'dqv_computedOn': 'Date', 'rdf_datatype': 'DateTime', 'ddqv_hasParameters': [{'parameter_name': 'return_element', 'value': 'element'}], 'dqv_value': '2000-02-02 00:00:00'}]
+>>> dm.to_dqv('median', [])
+[{'dqv_isMeasurementOf': 'date.median', 'dqv_computedOn': 'Date', 'rdf_datatype': 'DateTime', 'ddqv_hasParameters': [], 'dqv_value': '2000-03-17 12:00:00'}]
+>>>
+>>>
+>>> tm = kpi_library.TextMethods(data['Text'])
+>>> tm.to_dqv('count_words', parameters=[])
+[{'dqv_isMeasurementOf': 'text.count_words', 'dqv_computedOn': 'Text', 'rdf_datatype': 'List<Map<String,String>>', 'ddqv_hasParameters': [], 'dqv_value': '[{"item": 6, "frequency": 1}, {"item": 9, "frequency": 1}, {"item": 8, "frequency": 3}]'}]
+>>> tm.to_dqv('abbreviation_distribution', parameters=[])
+[{'dqv_isMeasurementOf': 'text.abbreviation_distribution', 'dqv_computedOn': 'Text', 'rdf_datatype': 'Float', 'ddqv_hasParameters': [{'parameter_name': 'average', 'value': 'true'}], 'dqv_value': '0.6'}]
+>>> tm.to_dqv('distribution_most_frequent_elements', parameters=[{'parameter_name': 'num_items', 'value': '4'}, {'parameter_name': 'tokenization', 'value': 'true'}, {'parameter_name': 'stopwords_removal', 'value': 'true'}, {'parameter_name': 'language', 'value': 'english'}])
+[{'dqv_isMeasurementOf': 'text.distribution_most_frequent_elements', 'dqv_computedOn': 'Text', 'rdf_datatype': 'List<Map<String,String>>', 'ddqv_hasParameters': [{'parameter_name': 'num_items', 'value': '4'}, {'parameter_name': 'tokenization', 'value': 'true'}, {'parameter_name': 'stopwords_removal', 'value': 'true'}, {'parameter_name': 'language', 'value': 'english'}], 'dqv_value': '[{"item": "future", "frequency": 5}, {"item": "help", "frequency": 2}, {"item": "thinking", "frequency": 2}, {"item": "uncertein", "frequency": 1}]'}, {'dqv_isMeasurementOf': 'text.distribution_most_frequent_elements_percent', 'dqv_computedOn': 'Text', 'rdf_datatype': 'List<Map<String,String>>', 'ddqv_hasParameters': [{'parameter_name': 'num_items', 'value': '4'}, {'parameter_name': 'tokenization', 'value': 'true'}, {'parameter_name': 'stopwords_removal', 'value': 'true'}, {'parameter_name': 'language', 'value': 'english'}], 'dqv_value': '[{"item": "future", "frequency": 0.33333}, {"item": "help", "frequency": 0.13333}, {"item": "thinking", "frequency": 0.13333}, {"item": "uncertein", "frequency": 0.06667}]'}]
+```
+
+## Roadmap
+- [ ] Develop a database that contains all information related to the implemented metrics.
+- [ ] Develop profiling methods for semi- and unstructured data, such as JSON messages, images, or videos.

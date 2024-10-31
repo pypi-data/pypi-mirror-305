@@ -1,0 +1,14 @@
+# profiling
+pandas==2.0.3
+visions[type_geometry,type_image_path]~=0.7.6
+
+nltk==3.8.1
+scipy~=1.9.3
+numpy~=1.23.3
+regex==2022.10.31
+
+contractions==0.1.73
+
+pyspellchecker==0.7.1
+
+statsmodels==0.13.5
