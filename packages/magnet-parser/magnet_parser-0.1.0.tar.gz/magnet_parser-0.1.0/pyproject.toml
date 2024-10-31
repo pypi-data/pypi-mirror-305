@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magnet-parser"
+version = "0.1.0"
+description = "A module for decoding and encoding magnet URIs."
+authors = [
+    { name = "Muhammad Al Fajri", email = "admin@pyjri.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["magnet", "parser", "URI"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+magnet = "magnet_parser.magnet:main"

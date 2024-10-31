@@ -1,0 +1,2 @@
+[console_scripts]
+magnet = magnet_parser.magnet:main
