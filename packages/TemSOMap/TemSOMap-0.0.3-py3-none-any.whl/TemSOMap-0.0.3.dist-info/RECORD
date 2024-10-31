@@ -1,0 +1,11 @@
+temsomap/Mapper.py,sha256=6CkRBqtVmKBNQY6oygMP2pNFJH9B7qA9KL9cukdEyxY,28061
+temsomap/__init__.py,sha256=thyVCaNHh8-18n_S_aWqGE0S8pb5jbbOQAAySnt5IEI,134
+temsomap/_version_.py,sha256=L3cGl9yHY-lleWg3lI_5lGvv7yZjbKVUdtJvN4aUZgw,32
+temsomap/temso_utils.py,sha256=4HJOtIDzFJtaEdaaIG7x6kCHtZDbjr6VgPyI2F_p6ms,23957
+temsomap/treebuild.py,sha256=i7V0cpvUHpo61E8QOwptqPWuPNbmQLIrDRSmsyaLOm8,1721
+temsomap/utils.py,sha256=5ykgY1mMzWDhDzu5q68W4wvP9I9JrzbcsjMPj30vCK0,31375
+TemSOMap-0.0.3.dist-info/LICENSE,sha256=EpH_l4ppCRjyT6ySM6bF0njqwnnBZNSi1pz41aidrSE,1051
+TemSOMap-0.0.3.dist-info/METADATA,sha256=LJmqaiHALqLri_P5q9k1QyV8fVLTmSjtu8FnevCsfhU,571
+TemSOMap-0.0.3.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+TemSOMap-0.0.3.dist-info/top_level.txt,sha256=lKCM27ODP9QRKqoPRXZP-jYS4wgw9-7cVWkoSfA7h34,9
+TemSOMap-0.0.3.dist-info/RECORD,,
