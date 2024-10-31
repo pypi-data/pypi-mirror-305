@@ -1,0 +1,3 @@
+[console_scripts]
+run-my-emr-api = app.emr_job_api:run_app
+
