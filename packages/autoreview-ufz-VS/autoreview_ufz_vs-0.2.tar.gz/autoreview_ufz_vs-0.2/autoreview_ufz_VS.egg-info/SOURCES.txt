@@ -1,0 +1,16 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+autoreview/__init__.py
+autoreview/__main__.py
+autoreview/concatenate_xls.py
+autoreview/ordering.py
+autoreview/script_highlight.py
+autoreview/script_highlight_excel.py
+autoreview_ufz_VS.egg-info/PKG-INFO
+autoreview_ufz_VS.egg-info/SOURCES.txt
+autoreview_ufz_VS.egg-info/dependency_links.txt
+autoreview_ufz_VS.egg-info/entry_points.txt
+autoreview_ufz_VS.egg-info/requires.txt
+autoreview_ufz_VS.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+pandas
+tqdm
+numpy
+docx
+xlsxwriter
+scikit-learn
