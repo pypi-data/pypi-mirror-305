@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: sbeditor
+Version: 0.0.0b6
+Summary: A parser for all things sb3
+Home-page: https://github.com/FAReTek1/sbeditor
+Author: faretek1
+Author-email: 
+License: MIT
+
+# sbeditor
+
+A parser for all things sb3 (and sprite3)
+Lets you read **and write** sb3 files!
+
+This is a very much work-in-progress project but the underlying functionality is complete. Currently adding a ton of
+classes to `sbuild.py` so that you don't need to remember/look up block opcodes/input names
+
+## Sb3 docs
+
+https://en.scratch-wiki.info/wiki/Scratch_File_Format
+https://en.scratch-wiki.info/wiki/List_of_Block_Opcodes
+
+You can install sbeditor using pip:
+`pip install sbeditor`
