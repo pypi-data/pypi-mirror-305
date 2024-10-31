@@ -1,0 +1,12 @@
+pyluxcore/pyluxcore.pyd,sha256=NN576yMk2RLgOj45VyulAxONoiVb0stJpAUfNHnlCu0,36009984
+pyluxcore/__init__.py,sha256=aLQV2oFVsKsrHXt3HPH5sE-kXf6rNmFsGw9z1ZBd7_w,1711
+pyluxcore-2.9a1.post0.dist-info/DELVEWHEEL,sha256=F34Bjv8WoT9LgRiW3Tup77_AByPX_P35UL864yUxJIE,1176
+pyluxcore-2.9a1.post0.dist-info/METADATA,sha256=S6jOHtnRX8nXgaw0eTKjIGDKbnW9pZ_RtQTbKFn5u_I,1681
+pyluxcore-2.9a1.post0.dist-info/RECORD,,
+pyluxcore-2.9a1.post0.dist-info/WHEEL,sha256=yxQ6vqLV6BGCdqSh8_cFSPC6ooSNYEn3BaaiIZLFM6w,106
+pyluxcore-2.9a1.post0.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pyluxcore.libs/msvcp140-c1e83becf360a3c7d74d5944ff39eef0.dll,sha256=e4pvKDiE5kSFWdz1ELAMGohb-45ZjqBc0sKQyHRlcyY,575056
+pyluxcore.libs/OpenImageDenoise-9f3f6b2be4228a40cbe5258a75287a6c.dll,sha256=Y1_JBNcjtDJmWAkQrDv7k_CqljPnqxHDJE-rnpwX-P0,166912
+pyluxcore.libs/OpenImageDenoise_core-9ef956fcb83b4bd7eb15b28a0acfd66c.dll,sha256=-BKxyn9iG9t-RV19S7O5_SFVzpPYynb2YV2WfrInQt0,50615296
+pyluxcore.libs/tbb-6cf3ece4eb4c7dd1f063ac861e63ab76.dll,sha256=DO2LpKnqP0os-m8ZzCwVwNGeJyoHGtHja8Rpn4lx1ro,291328
+pyluxcore.libs/vcomp140-22879e983256ea8698391b30fb06a920.dll,sha256=JDTS4F0b-aMnzge-PPEgGUu_GJNsJyDuCrDgiB-joAQ,192080
