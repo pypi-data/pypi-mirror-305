@@ -1,0 +1,9 @@
+markdown
+requests
+cartopy>=0.20.2
+matplotlib
+numpy
+scipy
+pandas
+datetime
+argparse
