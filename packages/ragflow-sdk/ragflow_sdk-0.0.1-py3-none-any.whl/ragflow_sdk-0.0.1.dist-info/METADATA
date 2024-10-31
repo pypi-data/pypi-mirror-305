@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: ragflow-sdk
+Version: 0.0.1
+Summary: Python client sdk of [RAGFlow](https://github.com/infiniflow/ragflow). RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding.
+License: Apache License, Version 2.0
+Author: Zhichang Yu
+Author-email: yuzhichang@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: requests (>=2.30.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# python-ragflow
+
+# update python client
+
+- Update "version" field of [project] chapter
+- Build new python SDK
+- Upload to pypi.org
+- Install new python SDK
+
+# build python SDK
+
+```shell
+rm -f dist/* && python setup.py sdist bdist_wheel
+```
+
+# install python SDK
+```shell
+pip uninstall -y ragflow && pip install dist/*.whl
+```
+
+This will install ragflow-sdk and its dependencies.
+
+# upload to pypi.org
+```shell
+twine upload dist/*.whl
+```
+
+Enter your pypi API token according to the prompt.
+
+Note that pypi allows a version of a package [be uploaded only once](https://pypi.org/help/#file-name-reuse). You need to change the `version` inside the `pyproject.toml` before building and uploading.
+
+# using
+
+```python
+
+```
+
+# For developer
+```shell
+pip install -e .
+```
+
