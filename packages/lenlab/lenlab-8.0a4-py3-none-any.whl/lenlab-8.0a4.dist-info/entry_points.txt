@@ -1,0 +1,5 @@
+[console_scripts]
+lenlab = lenlab.cli:main
+
+[pytest11]
+lp_plugin = lenlab.tests.lp_plugin
