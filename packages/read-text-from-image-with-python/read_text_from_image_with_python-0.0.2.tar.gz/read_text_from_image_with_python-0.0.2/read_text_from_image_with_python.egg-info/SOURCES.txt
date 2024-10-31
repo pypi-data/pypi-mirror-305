@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+extract_text_from_image/__init__.py
+generate_file/__init__.py
+processing_image/__init__.py
+read_text_from_image_with_python.egg-info/PKG-INFO
+read_text_from_image_with_python.egg-info/SOURCES.txt
+read_text_from_image_with_python.egg-info/dependency_links.txt
+read_text_from_image_with_python.egg-info/requires.txt
+read_text_from_image_with_python.egg-info/top_level.txt
