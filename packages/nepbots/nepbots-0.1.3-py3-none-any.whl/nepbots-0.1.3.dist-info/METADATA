@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: nepbots
+Version: 0.1.3
+Summary: A simple API client for Nepbots
+Author: NePCoder
+Author-email: your.email@example.com
+Keywords: python,api,nepbots
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
