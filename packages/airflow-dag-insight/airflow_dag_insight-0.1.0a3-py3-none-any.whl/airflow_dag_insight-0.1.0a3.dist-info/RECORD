@@ -1,0 +1,11 @@
+airflow_dag_insight/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_dag_insight/my_plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_dag_insight/my_plugins/dag_insight.py,sha256=k7WbbtdCHzu7Ov9A-RQKuDeOnKtm5wDkPclKHHPZ51Q,18786
+airflow_dag_insight/my_plugins/helper/event_driven_dags_query.sql,sha256=cfoPsAFY6OwhVlOG110M2337sdXAJnfNSh4OFm5Nw0U,11613
+airflow_dag_insight/my_plugins/templates/dag_insight.html,sha256=07M9y0_Qv3GHo7-ZueeupuGOhdYf4JOfclHQ5RpsXcE,15825
+airflow_dag_insight-0.1.0a3.dist-info/LICENSE,sha256=imzvQHEg453p_1i08jEvdsiKh2FhoPBYKFME575xzEM,1069
+airflow_dag_insight-0.1.0a3.dist-info/METADATA,sha256=e_GJdpxBwKKloNRXwOD_pTCCggM0ep3lMTrrvNbEeyk,2691
+airflow_dag_insight-0.1.0a3.dist-info/NOTICE,sha256=8Pe7c4W9pHNSlHUDK1P0l0l0mqNFCywtBQYirw6PPEw,155
+airflow_dag_insight-0.1.0a3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+airflow_dag_insight-0.1.0a3.dist-info/entry_points.txt,sha256=_gCUx22sYFVhyUoxOXFRjv9FRuum2ZdcN59dPvXNNbI,98
+airflow_dag_insight-0.1.0a3.dist-info/RECORD,,
