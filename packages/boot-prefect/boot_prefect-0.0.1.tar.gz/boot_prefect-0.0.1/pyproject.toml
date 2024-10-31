@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "boot_prefect"
+authors = [
+    { name = "Christopher Marriott", email = "christopher.marriott@nspcc.org.uk" },
+]
+description = "A simple CLI that shortcuts starting a local Prefect server and worker"
+readme = "README.md"
+version = "0.0.1"
+dependencies = ["click"]
+license = { file = "LICENCE" }
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+]
+
+[project.urls]
+homepage = "https://github.com/nspcc-cm/boot_prefect"
+repository = "https://github.com/nspcc-cm/boot_prefect.git"
+
+[project.scripts]
+boot_prefect = "boot_prefect.boot_prefect:main"

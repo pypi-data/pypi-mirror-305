@@ -1,0 +1,12 @@
+.gitignore
+LICENCE
+README.md
+pyproject.toml
+boot_prefect/__init__.py
+boot_prefect/boot_prefect.py
+boot_prefect.egg-info/PKG-INFO
+boot_prefect.egg-info/SOURCES.txt
+boot_prefect.egg-info/dependency_links.txt
+boot_prefect.egg-info/entry_points.txt
+boot_prefect.egg-info/requires.txt
+boot_prefect.egg-info/top_level.txt
