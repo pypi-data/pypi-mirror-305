@@ -1,0 +1,519 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "\u012erenginys jau sukonfig\u016bruotas",
+            "already_in_progress": "Konfig\u016bracijos procesas jau vyksta"
+        },
+        "error": {
+            "token_unauthorized": "\u017detonas neteisingas arba neteis\u0117tas."
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "access_token": "Asmenin\u0117s prieigos raktas",
+                    "country": "\u0160alis"
+                },
+                "description": "\u012eveskite ThinQ [PAT (Personal Access Token)] ( {pat_url} ), sukurt\u0105 naudojant j\u016bs\u0173 LG ThinQ paskyr\u0105.",
+                "title": "Prisijunkite prie ThinQ"
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "clean_light_reminder": {
+                "name": "Nuvalykite indikatoriaus lemput\u0119"
+            },
+            "eco_friendly_mode": {
+                "name": "Eco draugi\u0161kas"
+            },
+            "machine_clean_reminder": {
+                "name": "Ma\u0161inos valymo priminimas"
+            },
+            "one_touch_filter": {
+                "name": "\u0160vie\u017eio oro filtras"
+            },
+            "operation_mode": {
+                "name": "Galia"
+            },
+            "power_save_enabled": {
+                "name": "Energijos taupymo re\u017eimas"
+            },
+            "remote_control_enabled": {
+                "name": "Nuotolinis paleidimas"
+            },
+            "remote_control_enabled_for_location": {
+                "name": "{location} nuotolinis paleidimas"
+            },
+            "rinse_refill": {
+                "name": "Reikia papildyti skalavimo skys\u010dio"
+            },
+            "sabbath_mode": {
+                "name": "\u0160abas"
+            },
+            "signal_level": {
+                "name": "Skambu\u010dio garsas"
+            }
+        },
+        "event": {
+            "error": {
+                "state_attributes": {
+                    "event_type": {
+                        "state": {
+                            "unknown_error": "Produktas reikalauja d\u0117mesio",
+                            "vibration_sensor_error": "Vibracijos jutiklio klaida",
+                            "water_drain_error": "Vandens nuleidimo klaida",
+                            "water_leakage_error": "Vandens nutek\u0117jimo problema",
+                            "water_leaks_error": "Vandens nutek\u0117jimo problema",
+                            "water_level_sensor_error": "Vandens jutiklio klaida",
+                            "water_supply_error": "Vandens tiekimo klaida"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "light_status": {
+                "name": "\u0160viesa"
+            },
+            "relative_hour_to_start": {
+                "name": "Tvarkara\u0161\u010dio \u012fjungimas"
+            },
+            "relative_hour_to_start_for_location": {
+                "name": "{location} tvarkara\u0161\u010dio \u012fjungimas"
+            },
+            "relative_hour_to_start_wm": {
+                "name": "V\u0117lavimas prasideda"
+            },
+            "relative_hour_to_start_wm_for_location": {
+                "name": "{location} v\u0117lavimas prasideda"
+            },
+            "relative_hour_to_stop": {
+                "name": "Grafiko i\u0161jungimas"
+            },
+            "relative_hour_to_stop_for_location": {
+                "name": "{location} tvarkara\u0161tis i\u0161jungimas"
+            },
+            "relative_hour_to_stop_wm": {
+                "name": "V\u0117lavimas baigiasi"
+            },
+            "relative_hour_to_stop_wm_for_location": {
+                "name": "{location} v\u0117lavimas baigiasi"
+            },
+            "sleep_timer_relative_hour_to_stop": {
+                "name": "Miego laikmatis"
+            },
+            "sleep_timer_relative_hour_to_stop_for_location": {
+                "name": "{location} miego laikmatis"
+            },
+            "target_temperature": {
+                "name": "Temperat\u016bra"
+            },
+            "target_temperature_for_location": {
+                "name": "{location} temperat\u016bra"
+            },
+            "wind_temperature": {
+                "name": "V\u0117jo temperat\u016bra"
+            }
+        },
+        "select": {
+            "air_clean_operation_mode": {
+                "state": {
+                    "start": "Prad\u0117ti",
+                    "stop": "Sustabdyti"
+                }
+            },
+            "cook_mode": {
+                "name": "Virimo re\u017eimas",
+                "state": {
+                    "bake": "Kepti",
+                    "convection_bake": "Konvekcinis kepimas",
+                    "convection_roast": "Konvekcinis kepimas",
+                    "crisp_convection": "Tra\u0161ki konvekcija",
+                    "roast": "Skrudinti"
+                }
+            },
+            "cook_mode_for_location": {
+                "name": "{location} kepimo re\u017eimas",
+                "state": {
+                    "bake": "Kepti",
+                    "convection_bake": "Konvekcinis kepimas",
+                    "convection_roast": "Konvekcinis kepimas",
+                    "crisp_convection": "Tra\u0161ki konvekcija",
+                    "roast": "Skrudinti"
+                }
+            },
+            "current_job_mode": {
+                "name": "Veikimo re\u017eimas"
+            },
+            "display_light": {
+                "state": {
+                    "off": "I\u0161jungta"
+                }
+            },
+            "fresh_air_filter": {
+                "name": "\u0160vie\u017eio oro filtras",
+                "state": {
+                    "auto": "Automatinis",
+                    "off": "I\u0161jungta",
+                    "smart_off": "I\u0161jungta"
+                }
+            },
+            "hygiene_dry_mode": {
+                "name": "D\u017eiovinimo re\u017eimas",
+                "state": {
+                    "fast": "Greitai",
+                    "normal": "Subtilus",
+                    "off": "I\u0161jungta",
+                    "silent": "Tyli"
+                }
+            },
+            "light_brightness": {
+                "name": "\u0160viesa"
+            },
+            "monitoring_enabled": {
+                "name": "Oro kokyb\u0117s jutiklis",
+                "state": {
+                    "always": "Visada \u012fjungta",
+                    "on_working": "\u012esijungia kartu su produktu"
+                }
+            },
+            "operation_mode": {
+                "name": "Operacija",
+                "state": {
+                    "power_off": "I\u0161jungti maitinim\u0105",
+                    "preheating": "Pakaitinimas",
+                    "start": "Prad\u0117ti",
+                    "stop": "Sustabdyti",
+                    "wake_up": "Miego re\u017eimas i\u0161jungtas"
+                }
+            },
+            "operation_mode_for_location": {
+                "name": "{location} operacija",
+                "state": {
+                    "power_off": "I\u0161jungti maitinim\u0105",
+                    "preheating": "Pakaitinimas",
+                    "start": "Prad\u0117ti"
+                }
+            }
+        },
+        "sensor": {
+            "battery_level": {
+                "name": "Baterija",
+                "state": {
+                    "high": "Pilnas",
+                    "low": "\u017demas",
+                    "mid": "Vidutinis",
+                    "warning": "Tu\u0161\u010dia"
+                }
+            },
+            "beer_remain": {
+                "name": "Recepto eiga"
+            },
+            "brightness": {
+                "name": "Ap\u0161vietimo intensyvumas"
+            },
+            "brightness_for_location": {
+                "name": "{location} ap\u0161vietimo intensyvumas"
+            },
+            "cock_state": {
+                "name": "UVnano",
+                "state": {
+                    "cleaning": "Vykdoma",
+                    "normal": "Bud\u0117jimo re\u017eimas"
+                }
+            },
+            "current_dish_washing_course": {
+                "name": "Dabartinis ciklas",
+                "state": {
+                    "auto": "Automatinis",
+                    "delicate": "Subtilus",
+                    "download_cycle": "Atsisiuntimo ciklas",
+                    "eco": "Eco",
+                    "express": "Express",
+                    "heavy": "Intensyvus",
+                    "machine_clean": "Ma\u0161ina \u0161vari",
+                    "normal": "Normalus",
+                    "quick": "Greitai",
+                    "refresh": "Atnaujinti",
+                    "rinse": "Nuplaukite",
+                    "short_mode": "Trumpas re\u017eimas",
+                    "spray": "Pur\u0161kimas",
+                    "steam": "Garo prie\u017ei\u016bra"
+                }
+            },
+            "current_job_mode": {
+                "name": "Veikimo re\u017eimas",
+                "state": {
+                    "air_clean": "I\u0161valyti",
+                    "auto": "Automatinis"
+                }
+            },
+            "current_state": {
+                "state": {
+                    "carbonation": "Karbonizavimas",
+                    "change_condition": "Nustatym\u0173 keitimas",
+                    "charging": "\u012ekrovimas",
+                    "charging_complete": "\u012ekrovimas baigtas",
+                    "checking_turbidity": "Dirvo\u017eemio lygio nustatymas",
+                    "cleaning": "Valymas",
+                    "cleaning_is_done": "Valymas atliktas",
+                    "complete": "Atlikta",
+                    "cook": "Maisto gaminimas",
+                    "cook_complete": "Atlikta",
+                    "cooking_in_progress": "Maisto gaminimas",
+                    "cool_down": "Atv\u0117sinkite",
+                    "cooling": "Au\u0161inimas",
+                    "detecting": "Aptikimas",
+                    "detergent_amount": "Pateikiama informacija apie ploviklio kiek\u012f",
+                    "diagnosis": "Vykdoma i\u0161manioji diagnostika",
+                    "dispensing": "Automatinis dozavimas",
+                    "display_loadsize": "Krovinio dydis",
+                    "done": "Atlikta",
+                    "drying": "D\u017eiovinimas",
+                    "during_aging": "Sen\u0117jimas",
+                    "during_fermentation": "Fermentacija",
+                    "end": "Baigta",
+                    "end_cooling": "D\u017eiovinimas",
+                    "error": "Produktas reikalauja d\u0117mesio",
+                    "extracting_capsule": "Kapsuli\u0173 virimas",
+                    "extraction_mode": "Saugojimas",
+                    "firmware": "Atnaujinama programin\u0117 \u012franga",
+                    "fota": "Atnaujinama",
+                    "frozen_prevent_initial": "Apsaugos nuo u\u017e\u0161alimo bud\u0117jimo re\u017eimas",
+                    "rinse_hold": "Laukiama skalavimo",
+                    "rinsing": "Skalavimas",
+                    "running": "B\u0117gimas",
+                    "running_end": "U\u017ebaigti",
+                    "shoes_module": "Bat\u0173 d\u017eiovinimas",
+                    "sleep": "Miego re\u017eimu",
+                    "smart_grid_run": "Veikia i\u0161manusis tinklas",
+                    "soaking": "Mirkyti",
+                    "softening": "Mink\u0161tiklis",
+                    "spinning": "Sukimas",
+                    "standby": "Bud\u0117jimo re\u017eimas",
+                    "stay": "Atnaujinti",
+                    "steam": "Atnaujinti",
+                    "steam_softening": "Gar\u0173 mink\u0161tinimas",
+                    "sterilize": "Sterilizuokite",
+                    "temperature_stabilization": "Temperat\u016bros reguliavimas",
+                    "working": "Valymas",
+                    "wrinkle_care": "Rauk\u0161li\u0173 prie\u017ei\u016bra"
+                }
+            },
+            "current_state_for_location": {
+                "name": "{location} dabartin\u0117 b\u016bsena",
+                "state": {
+                    "as_pop_up": "Produktas reikalauja d\u0117mesio",
+                    "change_condition": "Nustatym\u0173 keitimas",
+                    "charging": "\u012ekrovimas",
+                    "charging_complete": "\u012ekrovimas baigtas",
+                    "checking_turbidity": "Dirvo\u017eemio lygio nustatymas",
+                    "cleaning": "Valymas",
+                    "cleaning_is_done": "Valymas atliktas",
+                    "pause": "Pristabdyta",
+                    "paused": "Pristabdyta",
+                    "power_off": "I\u0161jungta",
+                    "power_on": "\u012ejungta",
+                    "rinse_hold": "Laukiama skalavimo",
+                    "rinsing": "Skalavimas",
+                    "running": "B\u0117gimas",
+                    "running_end": "U\u017ebaigti",
+                    "shoes_module": "Bat\u0173 d\u017eiovinimas",
+                    "sleep": "Miego re\u017eimu",
+                    "smart_grid_run": "Veikia i\u0161manusis tinklas",
+                    "soaking": "Mirkyti",
+                    "softening": "Mink\u0161tiklis"
+                }
+            },
+            "growth_mode": {
+                "state": {
+                    "ext_herb": "Vaista\u017eol\u0117s",
+                    "ext_leaf": "Dar\u017eov\u0117s",
+                    "standard": "Automatinis"
+                }
+            },
+            "growth_mode_for_location": {
+                "name": "{location} re\u017eimas",
+                "state": {
+                    "ext_herb": "Vaista\u017eol\u0117s",
+                    "ext_leaf": "Dar\u017eov\u0117s",
+                    "standard": "Automatinis"
+                }
+            },
+            "hop_oil_info": {
+                "name": "Apyniai"
+            },
+            "light_start": {
+                "name": "\u0160viesos laiku"
+            },
+            "light_start_for_location": {
+                "name": "{location} \u012fjungia \u0161vies\u0105 laiku"
+            },
+            "monitoring_enabled": {
+                "name": "Oro kokyb\u0117s jutiklis",
+                "state": {
+                    "always": "Visada \u012fjungta",
+                    "on_working": "\u012esijungia kartu su produktu"
+                }
+            },
+            "night_target_temperature": {
+                "name": "Nakties augimo temperat\u016bra"
+            },
+            "night_target_temperature_for_location": {
+                "name": "{location} nakties augimo temperat\u016bra"
+            },
+            "odor_level": {
+                "name": "Kvapas",
+                "state": {
+                    "invalid": "Neteisinga",
+                    "normal": "Normalus",
+                    "strong": "Stiprus",
+                    "very_strong": "Labai stiprus",
+                    "weak": "Silpnas"
+                }
+            },
+            "personalization_mode": {
+                "name": "Asmeninis re\u017eimas",
+                "state": {
+                    "auto_inside": "Automatinis re\u017eimas",
+                    "auto_outside": "Blokavimo re\u017eimas",
+                    "baby": "K\u016bdikio prie\u017ei\u016bros re\u017eimas",
+                    "cooking": "Kepimo re\u017eimas",
+                    "exercise": "Pratim\u0173 re\u017eimas",
+                    "others": "Kiti"
+                }
+            },
+            "rinse_level": {
+                "state": {
+                    "rinselevel_4": "4"
+                }
+            },
+            "running": {
+                "name": "Veikimo laikas"
+            },
+            "running_for_location": {
+                "name": "{location} veikimo laikas"
+            },
+            "sleep_timer_relative_to_stop": {
+                "name": "Miego laikmatis"
+            },
+            "sleep_timer_relative_to_stop_for_location": {
+                "name": "{location} miego laikmatis"
+            },
+            "softening_level": {
+                "name": "Mink\u0161tinimo lygis",
+                "state": {
+                    "softeninglevel_4": "4"
+                }
+            },
+            "sterilizing_state": {
+                "name": "Auk\u0161tos temperat\u016bros sterilizavimas",
+                "state": {
+                    "off": "I\u0161jungta",
+                    "on": "Sterilizavimas"
+                }
+            },
+            "target": {
+                "name": "Gaminimo laikas"
+            },
+            "target_for_location": {
+                "name": "{location} kepimo laikas"
+            },
+            "target_temperature": {
+                "name": "Temperat\u016bra",
+                "state": {
+                    "freezer": "\u0160aldiklis",
+                    "fridge": "\u0160aldytuvas",
+                    "kimchi": "Kimchi",
+                    "meat_fish": "M\u0117sa/\u017euvis",
+                    "off": "I\u0161jungta",
+                    "rice_grain": "Ry\u017eiai/gr\u016bdai",
+                    "storage": "Sand\u0117liavimas",
+                    "temperature_number": "Skai\u010dius",
+                    "vegetable_fruit": "Dar\u017eov\u0117s / vaisiai"
+                }
+            },
+            "target_temperature_for_location": {
+                "name": "{location} temperat\u016bra",
+                "state": {
+                    "freezer": "\u0160aldiklis",
+                    "fridge": "\u0160aldytuvas"
+                }
+            },
+            "total_pollution_level": {
+                "state": {
+                    "bad": "Nesveika",
+                    "good": "Geras",
+                    "invalid": "Neteisinga",
+                    "normal": "Vidutinis",
+                    "very_bad": "Prastas"
+                }
+            },
+            "used_time": {
+                "name": "Naudotas vandens filtras"
+            },
+            "water_type": {
+                "name": "Tipas"
+            },
+            "wind_volume_for_location": {
+                "name": "{location} v\u0117jo greitis"
+            },
+            "wort_info": {
+                "name": "Misa",
+                "state": {
+                    "dark": "Tamsus",
+                    "deep_gold": "DeepGold",
+                    "hoppy": "Apyniai",
+                    "wheat": "Kvie\u010diai"
+                }
+            },
+            "yeast_info": {
+                "name": "Miel\u0117s",
+                "state": {
+                    "american_ale": "Amerikieti\u0161kas alus",
+                    "english_ale": "Angli\u0161kasis alus",
+                    "lager": "Lageris",
+                    "weizen": "Weizen"
+                }
+            }
+        },
+        "switch": {
+            "auto_mode": {
+                "name": "Automatinis re\u017eimas"
+            },
+            "express_mode": {
+                "name": "Ledo pliusas"
+            },
+            "hot_water_mode": {
+                "name": "Kar\u0161tas vanduo"
+            },
+            "humidity_warm_mode": {
+                "name": "\u0160iltas r\u016bkas"
+            },
+            "hygiene_dry_mode": {
+                "name": "D\u017eiovinimo re\u017eimas"
+            },
+            "mood_lamp_state": {
+                "name": "Nuotaikos \u0161viesa"
+            },
+            "optimal_humidity": {
+                "name": "V\u0117dinimas"
+            },
+            "power_save_enabled": {
+                "name": "Energijos taupymas"
+            },
+            "rapid_freeze": {
+                "name": "Greitas u\u017e\u0161aldymas"
+            },
+            "sleep_mode": {
+                "name": "Miego re\u017eimas"
+            },
+            "uv_nano": {
+                "name": "UVnano"
+            },
+            "warm_mode": {
+                "name": "\u0160ildymas"
+            }
+        }
+    }
+}

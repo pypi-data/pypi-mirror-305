@@ -1,0 +1,51 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured",
+            "already_in_progress": "Configuration flow is already in progress",
+            "cannot_connect": "Failed to connect",
+            "reconfiguration_successful": "Successfully reconfigured the Music Assistant integration.",
+            "reconfigure_successful": "Re-configuration was successful"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect",
+            "invalid_server_version": "The Music Assistant server is not the correct version",
+            "unknown": "Unexpected error"
+        },
+        "step": {
+            "discovery_confirm": {
+                "description": "Do you want to add the Music Assistant Server `{url}` to Home Assistant?",
+                "title": "Discovered Music Assistant Server"
+            },
+            "init": {
+                "data": {
+                    "url": "URL of the Music Assistant server"
+                }
+            },
+            "manual": {
+                "data": {
+                    "url": "URL of the Music Assistant server"
+                },
+                "description": "Enter the URL to your already running Music Assistant Server. If you do not have the Music Assistant Server running, you should install it first.",
+                "title": "Manually add Music Assistant Server"
+            }
+        }
+    },
+    "issues": {
+        "invalid_server_version": {
+            "description": "Check if there are updates available for the Music Assistant Server and/or integration.",
+            "title": "The Music Assistant server is not the correct version"
+        }
+    },
+    "selector": {
+        "enqueue": {
+            "options": {
+                "add": "Add to queue",
+                "next": "Play next",
+                "play": "Play",
+                "replace": "Play now and clear queue",
+                "replace_next": "Play next and clear queue"
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Az eszk\u00f6z m\u00e1r konfigur\u00e1lva van",
+            "reconfigure_successful": "\u00dajrakonfigur\u00e1l\u00e1s sikeres volt"
+        },
+        "error": {
+            "cannot_connect": "Sikertelen csatlakoz\u00e1s",
+            "unknown": "V\u00e1ratlan hiba"
+        }
+    },
+    "selector": {
+        "enqueue": {
+            "options": {
+                "replace": "Lej\u00e1tsz\u00e1s most \u00e9s a v\u00e1r\u00f3lista t\u00f6rl\u00e9se",
+                "replace_next": "K\u00f6vetkez\u0151 lej\u00e1tsz\u00e1sa \u00e9s a v\u00e1r\u00f3lista t\u00f6rl\u00e9se"
+            }
+        }
+    }
+}
