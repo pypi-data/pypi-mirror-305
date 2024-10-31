@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: ectrans4py
+Version: 1.2.50
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: numpy
+Requires-Dist: ctypesForFortran<2.0.0
