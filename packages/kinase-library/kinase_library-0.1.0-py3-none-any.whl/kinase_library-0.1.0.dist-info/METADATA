@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: kinase-library
+Version: 0.1.0
+Summary: The Kinase Library Project: a Global Atlas of the Human Protein Kinome
+Author-email: yaront <tmy2110@cumc.columbia.edu>, harinlee0803 <harin.lee@cellsignal.com>, sean-landry <sean.landry@cellsignal.com>
+License: Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported
+Project-URL: Homepage, https://github.com/TheKinaseLibrary/kinase-library
+Project-URL: Source, https://github.com/TheKinaseLibrary/kinase-library
+Keywords: kinase,phosphorylation,substrate,motif,substrate specificity,cell signaling,signaling,phosphoproteomics,kinase enrichment,signaling network,kinome,peptide library,phosphosite
+Requires-Python: <3.12,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: adjustText ~=0.8
+Requires-Dist: Bio ~=1.5.9
+Requires-Dist: gseapy
+Requires-Dist: matplotlib ~=3.7.2
+Requires-Dist: natsort ~=8.4.0
+Requires-Dist: numpy ~=1.25.1
+Requires-Dist: pandas ~=2.0.3
+Requires-Dist: pyarrow ~=12.0.1
+Requires-Dist: scikit-learn ~=1.3.0
+Requires-Dist: scipy ~=1.11.1
+Requires-Dist: seaborn ~=0.12.2
+Requires-Dist: statsmodels ~=0.14.0
+Requires-Dist: tqdm ~=4.65.0
+
+# kinase-library
+Python package for the Kinase Library project
