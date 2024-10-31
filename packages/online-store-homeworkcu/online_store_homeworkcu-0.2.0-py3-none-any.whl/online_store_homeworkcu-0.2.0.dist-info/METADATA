@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: online-store-homeworkcu
+Version: 0.2.0
+Summary: Исполняемый пакет для управления пользователями и заказами в онлайн-магазине
+Author-email: Andrey <burovaatt@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+Система управления клиентами и заказами в онлайн магазине
+
+Пример команды: python -m online_store
