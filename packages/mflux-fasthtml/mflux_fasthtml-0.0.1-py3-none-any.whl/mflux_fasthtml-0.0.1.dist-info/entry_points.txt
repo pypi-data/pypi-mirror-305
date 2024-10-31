@@ -1,0 +1,2 @@
+[console_scripts]
+mflux-fasthtml = mflux_fasthtml.cli:mflux_fasthtml
