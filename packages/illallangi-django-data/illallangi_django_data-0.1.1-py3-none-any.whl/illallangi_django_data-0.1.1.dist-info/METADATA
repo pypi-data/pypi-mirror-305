@@ -1,0 +1,35 @@
+Metadata-Version: 2.3
+Name: illallangi-django-data
+Version: 0.1.1
+Summary: A Django application for Coley's Data Lake.
+Project-URL: Homepage, https://github.com/illallangi/django-data-server
+Project-URL: Repository, https://github.com/illallangi/django-data-server.git
+Project-URL: Issues, https://github.com/illallangi/django-data-server/issues
+Project-URL: Changelog, https://github.com/illallangi/django-data-server/blob/master/CHANGELOG.md
+Author-email: Andrew Cole <andrew.cole@illallangi.com>
+Maintainer-email: Andrew Cole <andrew.cole@illallangi.com>
+License: MIT License
+License-File: LICENSE
+Keywords: data,data-lake,django
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10.1
+Requires-Dist: dj-database-url>=2.3.0
+Requires-Dist: django-createsuperuserwithpassword>=2.0.0
+Requires-Dist: django-extensions>=3.2.3
+Requires-Dist: django-htmx>=1.19.0
+Requires-Dist: django>=5.1.2
+Requires-Dist: djp
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: toposort>=1.10
+Description-Content-Type: text/markdown
+
+# Illallangi Django Data Server
+
+Illallangi Django Data Server is a collection of Django applications to serve as a data lake.
+
+## Requirements
+
+- Python >= 3.10.12
