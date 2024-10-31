@@ -1,0 +1,38 @@
+# these values will be used if no client is specified
+# if you only have one Elastic stack, put it here
+default:
+  options:
+    data_directory: ./stacker_data/
+  client:
+    verify: /etc/pki/tls/cert.pem
+  substitutions:
+    # remember to keep your regular expressions in single-quoted strings
+    # or your backslashes will be interpreted as escape sequences.
+    dump_kibana_urls:
+      search: '[\w-]*kibana[\w-]*\.llnl\.gov'
+      replace: "#{KIBANA_URL}"
+    dump_elastic_urls:
+      search: '[\w-]*elastic[-\w]*.llnl.gov'
+      replace: "#{ELASTICSEARCH_URL}"
+
+# you can select the configuration profile you want to use
+# with the option `-p <client_name>`"
+profiles:
+  pre:
+    kibana:
+      base_url: https://lc-kibana-pre.llnl.gov
+    elasticsearch:
+      base_url: https://lc-elastic-hot-1-pre.llnl.gov:9200
+    client:
+      headers:
+        Authorization: "Apikey <REDACTED>"
+    options:
+      watcher_users:
+        geralt: <REDACTED>
+    substitutions:
+      load_kibana_url:
+        search: '#{KIBANA_URL}'
+        replace: lc-kibana-pre.llnl.gov
+      load_elastic_url:
+        search: '#{ELASTICSEARCH_URL}'
+        replace: lc-elastic-hot-1-pre.llnl.gov

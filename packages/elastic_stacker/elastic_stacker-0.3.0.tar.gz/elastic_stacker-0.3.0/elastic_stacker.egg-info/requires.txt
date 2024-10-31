@@ -1,0 +1,6 @@
+httpx
+marshmallow
+python-slugify
+fire
+pyyaml
+ecs-logging
