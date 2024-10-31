@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: lexical_quality
+Version: 0.1.0
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: cleanlab
+Requires-Dist: textstat
+Requires-Dist: language-tool-python
+Requires-Dist: pytest
+

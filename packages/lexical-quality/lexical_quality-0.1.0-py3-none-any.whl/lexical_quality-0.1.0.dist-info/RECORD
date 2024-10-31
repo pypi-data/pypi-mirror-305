@@ -1,0 +1,15 @@
+lexical_quality/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lexical_quality/coherence.py,sha256=HoCKQ3KSrFm7Kqqurp2iiQeQUVIPqIzaSpXpAvSRZCw,599
+lexical_quality/grammar_spelling.py,sha256=GZ-kFnzorNQ3AnRj0NFVoYRWUNCbjB7fKanMEBnHZkA,681
+lexical_quality/main.py,sha256=dXz1yHLwAiMemMBmA5hyfu3cZHgrcIOFuN9KQqkuQXE,4934
+lexical_quality/readability.py,sha256=qjHmbBP3rgSmnwtpdqG9c2-OTT925zFM0sE-oRDexfU,220
+lexical_quality/results.py,sha256=gQfDe4waWZpgZb27Udjh2kTt6LCLcox8DR4-Q2VzXrQ,1812
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_coherence.py,sha256=ogvLFzBNm5f6Md9bPHmGIsplxmetR_bm1HB73qUqhvA,715
+tests/test_grammar_spelling.py,sha256=_qrZ_vyc1ddVqTBpgDW348QTGvxDuRlY3XNSp9SmOXs,564
+tests/test_readability.py,sha256=DK0xzjYAN4R7LZJmvh1VsxV-f60eHF9luZM7qSnBRrE,647
+lexical_quality-0.1.0.dist-info/METADATA,sha256=xNZ4IB5U1voVVXxY0HS77XRCjlBULu9k3bFYLsu3TB4,237
+lexical_quality-0.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+lexical_quality-0.1.0.dist-info/entry_points.txt,sha256=hNbV1bJxBdO98LiD5wOktoCUTEpcYcEoKofE39WS6yQ,62
+lexical_quality-0.1.0.dist-info/top_level.txt,sha256=7tfOXf_ISFeDNmtP6E5xop5C_IBgbba2myo1i6OG28Q,22
+lexical_quality-0.1.0.dist-info/RECORD,,
