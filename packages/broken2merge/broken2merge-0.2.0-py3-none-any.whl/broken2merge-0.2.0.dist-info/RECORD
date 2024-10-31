@@ -1,0 +1,10 @@
+broken2merge/__init__.py,sha256=Q2j-SRamC-F4AW87R8r7WL0ZSCSbjLRKAPQSZuBczL4,197
+broken2merge/__main__.py,sha256=yrYXHl9q_e-5u1nOjQuQoJEgywbsyr-ZDWHCFBqBle4,1911
+broken2merge/alignment.py,sha256=NYzQPf0oVZNz09oTPHHCnfEeFq1E35r7y_MhF8DM6XA,15381
+broken2merge/cli.py,sha256=XINpuLVJ7nShQQT_A4i14oXU_eAKB_EKV3kXnMxYq6I,3213
+broken2merge/utils.py,sha256=lDnGu3SdnLPiITh4pzdK-_sKBYjJMVdcPhdEMY1XIHA,904
+broken2merge-0.2.0.dist-info/LICENSE,sha256=BLmrAY2tvwrjyN-AJm8MCN3MHDKRLKm69yGvWV0UEBw,1114
+broken2merge-0.2.0.dist-info/METADATA,sha256=jFqvBAttpGkl1V6DgGbR2H-IQd3Me1RKTriV40Gsy4Q,4516
+broken2merge-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+broken2merge-0.2.0.dist-info/entry_points.txt,sha256=kFEPrxddYtzy-mX4Si73Xm9Ecj3XNjRJYH7m-6G6Pdk,59
+broken2merge-0.2.0.dist-info/RECORD,,
