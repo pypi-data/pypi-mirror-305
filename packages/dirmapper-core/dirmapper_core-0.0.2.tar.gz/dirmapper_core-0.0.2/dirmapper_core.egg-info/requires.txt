@@ -1,0 +1,7 @@
+requests
+openai
+pytest
+mypy
+pydantic
+pyyaml
+typing-extensions
