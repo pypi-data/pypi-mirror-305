@@ -1,0 +1,11 @@
+ommx<2.0.0,>=1.3.0
+amplify<2.0.0,>=1.2.0
+
+[dev]
+pyright
+pytest
+ruff
+sphinx
+sphinx-autoapi
+sphinx_fontawesome
+sphinx_rtd_theme
