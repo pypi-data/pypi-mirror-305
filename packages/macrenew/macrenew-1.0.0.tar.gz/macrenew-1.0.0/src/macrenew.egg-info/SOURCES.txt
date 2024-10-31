@@ -1,0 +1,12 @@
+LICENSE.txt
+README.txt
+pyproject.toml
+setup.cfg
+src/linux/__init__.py
+src/linux/change_mac.py
+src/macrenew.egg-info/PKG-INFO
+src/macrenew.egg-info/SOURCES.txt
+src/macrenew.egg-info/dependency_links.txt
+src/macrenew.egg-info/top_level.txt
+src/windows/__init__.py
+src/windows/change_mac.py
