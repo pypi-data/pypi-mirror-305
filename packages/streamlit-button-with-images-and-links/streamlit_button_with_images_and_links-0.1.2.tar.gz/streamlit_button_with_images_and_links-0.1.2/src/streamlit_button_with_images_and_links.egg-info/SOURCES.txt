@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/streamlit_button_with_images_and_links.egg-info/PKG-INFO
+src/streamlit_button_with_images_and_links.egg-info/SOURCES.txt
+src/streamlit_button_with_images_and_links.egg-info/dependency_links.txt
+src/streamlit_button_with_images_and_links.egg-info/requires.txt
+src/streamlit_button_with_images_and_links.egg-info/top_level.txt
+src/streamlit_clickable_images/__init__.py
+src/streamlit_clickable_images/frontend/index.html
+src/streamlit_clickable_images/frontend/main.js
+src/streamlit_clickable_images/frontend/streamlit-component-lib.js
+src/streamlit_clickable_images/frontend/style.css

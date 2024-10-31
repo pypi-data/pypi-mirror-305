@@ -1,0 +1,37 @@
+.clickable-image {
+    animation: fadeIn 2s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform changes */
+}
+.clickable-image:hover {
+    opacity: 1;
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    font-weight: 400;
+}
+.p {
+    transition: transform 0.3s ease-in-out; 
+}
+.line {
+    position: absolute;
+    bottom: -5px; /* Adjust this value to move the line up or down */
+    left: 0;
+    right: 0;
+    border-top: 1px solid #333; /* Adjust color and thickness as needed */
+    z-index: -1; /* Place the line behind the label */
+  }
+  a {
+    color: rgba(56,234,247,0.9);
+    transition:  transform 0.3s ease-in-out,color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    color:rgba(86, 60, 201, 0.9)
+    
+  }
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
