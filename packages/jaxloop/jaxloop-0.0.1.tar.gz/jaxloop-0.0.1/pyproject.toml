@@ -1,0 +1,20 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "jaxloop"
+version = "0.0.1"
+authors = [{name = "Jeff Carpenter", email = "code@jeffcarp.com"}]
+description = "A loop library."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/jeffcarp/loop-docs"
+Issues = "https://github.com/jeffcarp/loop-docs/issues"
