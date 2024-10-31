@@ -1,0 +1,15 @@
+clp_ffi_py/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clp_ffi_py/ir/__init__.py,sha256=xTaViHVxraz-Sm3wYUAZrywb1lPR7a4IJzXk6pboVhk,685
+clp_ffi_py/ir/native.cp39-win_amd64.pyd,sha256=HEpD0O2ZScKdRTPZtsEj-JbuYTUaRf5druaMloD3DKc,221184
+clp_ffi_py/ir/native.pyi,sha256=5Gn9rBEhm315gdY4dEjwePdqRLHXXbWFCxPk14IwPVU,3376
+clp_ffi_py/ir/native_deprecated.py,sha256=4RZxuFkCuLbX7Nkciz9aLGUn9CgY14S39Ze9Pj1GtBQ,4410
+clp_ffi_py/ir/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clp_ffi_py/ir/query_builder.py,sha256=RYO13YBg5ox9V_jBXoom8TAHhu4tMgmIXdLc4QI3dmg,7338
+clp_ffi_py/ir/readers.py,sha256=nKDwzDp1NKpONJMO0ol6cJUAmvMPm8-6FJCSHWPSAxU,7068
+clp_ffi_py/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clp_ffi_py/utils.py,sha256=0DQQ49JQzAGdbVZQWGFGgy9v5e8SZeobc4ugZaTbCok,1155
+clp_ffi_py/wildcard_query.py,sha256=jeHrYXNGLbx4G7gCDiu0PMKbf-y8pppy6K0r1GFS8Qc,3922
+clp_ffi_py-0.0.13.dist-info/METADATA,sha256=i6tVtbugTeXPjeL9wQaMww0pDi1DJZwS7x4fpj0NCzk,13066
+clp_ffi_py-0.0.13.dist-info/WHEEL,sha256=s-IzttuPuPJp8zDv-jm-zGvTOCxdFCvjX9dIQ9zqnM8,104
+clp_ffi_py-0.0.13.dist-info/licenses/LICENSE,sha256=WtjCEwlcVzkh1ziO35P2qfVEkLjr87Flro7xlHz3CEY,11556
+clp_ffi_py-0.0.13.dist-info/RECORD,,
