@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+nepverse.egg-info/PKG-INFO
+nepverse.egg-info/SOURCES.txt
+nepverse.egg-info/dependency_links.txt
+nepverse.egg-info/requires.txt
+nepverse.egg-info/top_level.txt

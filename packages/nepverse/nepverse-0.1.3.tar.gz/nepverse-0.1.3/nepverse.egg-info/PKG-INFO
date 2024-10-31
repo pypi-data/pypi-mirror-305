@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: nepverse
+Version: 0.1.3
+Summary: A simple API wrapper for Nepcoder tools.
+Home-page: https://github.com/Nepcoder0981/nepverse
+Author: Nepcoder
+Author-email: nepcoder@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Nepverse
+
+Nepverse is a simple API wrapper for Nepcoder tools, providing a straightforward interface to perform searches using the Nepcoder API.
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install nepverse
