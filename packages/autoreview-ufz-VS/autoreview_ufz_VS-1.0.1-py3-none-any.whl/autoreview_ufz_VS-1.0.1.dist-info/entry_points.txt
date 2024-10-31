@@ -1,0 +1,2 @@
+[console_scripts]
+autoreviewufzvs = autoreviewufzvs.__main__:main
