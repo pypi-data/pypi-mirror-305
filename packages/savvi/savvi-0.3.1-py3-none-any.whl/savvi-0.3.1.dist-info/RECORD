@@ -1,0 +1,10 @@
+savvi-0.3.1.dist-info/METADATA,sha256=7fB4FbEGDj40bjmHvtVKpgOTItX2gzwrVDX6s2VpEY0,847
+savvi-0.3.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+savvi-0.3.1.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+savvi-0.3.1.dist-info/licenses/LICENSE,sha256=_Dqg7CepeWhTKJH2K95cN4r-zpNCPqEPNjlxSJs7-oI,1073
+savvi/__init__.py,sha256=dVzYaGK2pKRgtSf1-qyi0F7rEpdP86smDqey8SyTXks,3609
+savvi/linear_regression.py,sha256=YF4IEfkzfKtJsLw3aIarYBumuSWTyCEpzSQoFvGUS0A,4839
+savvi/multinomial.py,sha256=p7klPDwD1PkWjlrB0rFJCtWEU7AnrB7eoKnxScx9V24,8314
+savvi/special.py,sha256=GhUDc2Gr4v4hoE5bERz9rkddCCgMIzAbi2vS5rcVLn4,249
+savvi/utils.py,sha256=aX1oiF-R0cwy29YvOyvU9B9YiDwViFOp_314SSTd7m4,1238
+savvi-0.3.1.dist-info/RECORD,,
