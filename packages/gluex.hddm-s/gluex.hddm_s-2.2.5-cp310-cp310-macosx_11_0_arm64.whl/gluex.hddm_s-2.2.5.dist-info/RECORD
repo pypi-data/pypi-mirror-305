@@ -1,0 +1,9 @@
+gluex.hddm_s-2.2.5.dist-info/RECORD,,
+gluex.hddm_s-2.2.5.dist-info/LICENSE,sha256=guNhQjgEXYGAl4Nghfk09_ps1QJs-mwri2sFQcz2878,1070
+gluex.hddm_s-2.2.5.dist-info/WHEEL,sha256=U_Ihcyjt91jvkWxAOhJDc1hKc9T589Z1CcpLB4CwiYM,109
+gluex.hddm_s-2.2.5.dist-info/top_level.txt,sha256=1sy7WrgDAbSW3qpacdhWOOk2sU_moRx_P9UXnotF4m8,77
+gluex.hddm_s-2.2.5.dist-info/METADATA,sha256=7WYhEw_yzV7aRo4mUtXiNF5Sgmfnt30mdjwnEPvI4rU,2971
+gluex/hddm_s.cpython-310-darwin.so,sha256=upzAMHf4bi-J3LwIWQzzIBwYshsF1WV3XxiERcYk4yM,16771696
+gluex/hddm_s/event.xml,sha256=iR9Ahq4wOcoBgtzrSbPAN1KYE8jlkW2kPqujy65vIvw,18730
+gluex/hddm_s/sharedlibs.tar.gz,sha256=gZR8f6VMTZgFWlbITE0JFk-ryQdOaNrxSgBfgc0zPfQ,29684096
+gluex/xrootd_client/__init__.py,sha256=XNRT3cdJtR1iAr9Tv_6lBzsEq3iTYR7Qkdr9FZsW2SE,1366
