@@ -1,0 +1,17 @@
+malcolm_test/__init__.py,sha256=OSWDUWVXShO5cjVlM1CoENmU1fpqYdOggxDrlevPkCA,237
+malcolm_test/malcolm_test.py,sha256=_k2QIGDNaodzUaGM994DAH3KkRhb2gfe0UbXP5HGZAQ,29635
+malcolm_test/tests/.gitignore,sha256=55z4t75U8SJmFkJWO0oJzXE0h0doBQYXY-Yvr5RyNVY,132
+malcolm_test/virter/debian-12/init/00-system.toml,sha256=m8lXDDlGrmgfDl0Hus69lris8FwrPus_Xk5O0UbK2LY,7912
+malcolm_test/virter/debian-12/init/01-apt-init.toml,sha256=BWmN-Jm_WskiLY3BZ-JEMrn06_0UeNaLePOb1DIV5VU,835
+malcolm_test/virter/debian-12/init/02-docker.toml,sha256=DHmXFCscGjDvzceSt4zdKGtHiObkLbRzfVjBoR4moRI,1033
+malcolm_test/virter/debian-12/init/03-podman.toml,sha256=ByYaC8_aQLQQcnA6vb7L9_I9YujCPodIPQ0cY3U47Bk,1879
+malcolm_test/virter/malcolm-fini/01-wipe.toml,sha256=dX0Mx0iY2N5-xF75NtjjR_eXhu4V7dMJqT-a5Uk8NJQ,330
+malcolm_test/virter/malcolm-init/01-clone-install.toml,sha256=IjJKdfd48tT77EqjlFIuTRk3I1FBqIIPnfHaFVm2FcI,8342
+malcolm_test/virter/malcolm-init/02-auth_setup.toml,sha256=_ZysTmjKZvnxD1dmL2nX0lzSH8rf9LBEXQu36YYbaKc,876
+malcolm_test/virter/malcolm-init/03-pull.toml,sha256=NNjdGoHxLy7SDDUKAml_JLjzby5JxgX_7qGK6dsZbk4,563
+malcolm_test/virter/malcolm-init/99-reboot.toml,sha256=zK6MbaEgXK6ZPItpZLqKt6KpGlAnqOINQq4L1UoJEjo,86
+malcolm_test-0.1.0.dist-info/METADATA,sha256=rBkNXF78iDrJAc6781D6OXw1fNzB-3LslXef8xNVgZk,5873
+malcolm_test-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+malcolm_test-0.1.0.dist-info/entry_points.txt,sha256=LpwBgwSiMB7E1EoIRQ7Nfl74qjm8tBffFExrxuGSp7o,51
+malcolm_test-0.1.0.dist-info/licenses/LICENSE.txt,sha256=btyL3lS-sQel1QgSmYbe4T7zp-sGzXMRu2v6zB8Q3CE,568
+malcolm_test-0.1.0.dist-info/RECORD,,

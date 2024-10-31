@@ -1,0 +1,2 @@
+[console_scripts]
+malcolm-test = malcolm_test:main
