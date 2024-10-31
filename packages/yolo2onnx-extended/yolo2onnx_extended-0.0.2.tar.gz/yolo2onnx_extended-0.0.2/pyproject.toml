@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yolo2onnx_extended"
+version = "0.0.2"
+authors = [
+    {name = "Francisco Tendero", email = "francisco.tendero@tdk.com"},
+]
+description = "YOLOv8 to ONNX Exporter with Pre and Post Processing"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["yolo", "onnx", "preprocessing", "postprocessing"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "torch",
+    "torchaudio",
+    "torchvision",
+    "onnx",
+    "onnxruntime",
+    "onnxruntime-extensions",
+    "ultralytics",
+]
+# dynamic = ["version"]
+
+[project.optional-dependencies]
+# gpu = ["torch==2.2.2+cu118", "torchaudio==2.2.2+cu118", "torchvision==0.17.2+cu118", "onnxruntime-gpu"]
+gpu = ["onnxruntime-gpu"]
+dev = ["black", "flake8"]
+
+[project.urls]
+Homepage = "https://bitbucket.tdk-electronics.biz/scm/dsc/yolo2onnx-extended.git"
+
+# ... other project metadata fields as listed in:
+#     https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
