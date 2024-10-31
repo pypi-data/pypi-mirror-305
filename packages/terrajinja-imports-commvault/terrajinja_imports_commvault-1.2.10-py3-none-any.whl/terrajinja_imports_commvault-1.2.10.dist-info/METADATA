@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: terrajinja-imports-commvault
+Version: 1.2.10
+Summary: Prebuild import for commvault
+Home-page: https://gitlab/terrajinja
+Author: Terrajinja Team
+Author-email: int-terrajinja@schubergphilis.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cdktf >=0.20.3
+
+# terrajinja-imports-commvault
+
+since there is no package maintained by commvault vendor, this is a intermediate package to skip the cdktf get process
+this makes the library available from within Terrajinja
+
+
+History
+-------
+
+0.0.1 (31-10-2024)
+---------------------
+
+* First code creation
+
