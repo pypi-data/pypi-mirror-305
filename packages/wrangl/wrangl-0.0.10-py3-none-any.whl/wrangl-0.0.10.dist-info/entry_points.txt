@@ -1,0 +1,2 @@
+[console_scripts]
+wrangl = wrangl.interactive.cmd:main
