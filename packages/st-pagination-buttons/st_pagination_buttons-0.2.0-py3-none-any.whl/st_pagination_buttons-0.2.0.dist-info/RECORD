@@ -1,0 +1,14 @@
+st_pagination_buttons/__init__.py,sha256=bBfgtnI28cd2LbxmYY110jkLD5Dw95w8yzdQMEjU-F8,1524
+st_pagination_buttons/example.py,sha256=rALpQCq-uJa6kX-iB4NqXJpZxqrEgiGqsx3d_gmyuNw,417
+st_pagination_buttons/frontend/build/asset-manifest.json,sha256=VRfcXF5G7VGmTVrj03J8N6z-3vdZ5AKYgXHCAR6Mw8M,221
+st_pagination_buttons/frontend/build/bootstrap.min.css,sha256=hTwg6axJ8dAPmGVJmYTrsQS3JhKWA0skJ-td54UbEOk,197459
+st_pagination_buttons/frontend/build/bootstrap.min.css.map,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+st_pagination_buttons/frontend/build/index.html,sha256=xktPhHbHRPMJ51XsDsb7Oc5T0LB4ozMVKNGQJ4bIxoI,471
+st_pagination_buttons/frontend/build/static/js/main.e4dc00c8.js,sha256=fGML0kXn-j4pkRDy83B_xXz2VMFoAXFt7UA9-yaeuZM,192106
+st_pagination_buttons/frontend/build/static/js/main.e4dc00c8.js.LICENSE.txt,sha256=s-XL8Zem1680kJa9h1APqx4H7gsVsSS7Fv65dThWkwg,542
+st_pagination_buttons/frontend/build/static/js/main.e4dc00c8.js.map,sha256=SM0y4OCz-e6SL8p9B3g_wEwbKbkgidAU-n6kb4eG-0g,940411
+st_pagination_buttons-0.2.0.dist-info/LICENSE,sha256=yn4IIXN_X_A8eqnN67jXK6jxfva_og0AaEaDlMpxfcU,1070
+st_pagination_buttons-0.2.0.dist-info/METADATA,sha256=JvtOJLmN3PZjE7L60i88b0R_3R69XH6JyUWqGR5M768,1112
+st_pagination_buttons-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+st_pagination_buttons-0.2.0.dist-info/top_level.txt,sha256=nJF1nzBoUd-aW2aAe1GwK5O-ZIPYa--gyhj96-i-ixY,22
+st_pagination_buttons-0.2.0.dist-info/RECORD,,
