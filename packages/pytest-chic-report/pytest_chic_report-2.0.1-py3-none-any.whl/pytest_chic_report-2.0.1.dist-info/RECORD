@@ -1,0 +1,9 @@
+pcr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pcr/args_cli.py,sha256=8x5erBXxxSErYSVtkYn0fczJw24KSrXrQdpGSwa7IGc,1503
+pcr/client_http.py,sha256=onuW-5paEX4aHT1G7UmEDc4wr5Swka_N7l_23_86W2M,2053
+pcr/plugin.py,sha256=clSPqJHbJX4L5ufs5OVxTQwCZ_8EhzrbOqjG5GYDPAU,5517
+pytest_chic_report-2.0.1.dist-info/METADATA,sha256=hEBRWr7y-v0qPLxd2Gzf3EWP8mCC0Wj2YmtBuCZDl2E,1936
+pytest_chic_report-2.0.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+pytest_chic_report-2.0.1.dist-info/entry_points.txt,sha256=onQCLzrTFGMF1JQVvqrDZYqR5G5nubrI5tqejCX9bsE,28
+pytest_chic_report-2.0.1.dist-info/top_level.txt,sha256=79Qkjm2mLv6nW80OLfFVzhNv2XmqHedOeavk23wAjpk,4
+pytest_chic_report-2.0.1.dist-info/RECORD,,
