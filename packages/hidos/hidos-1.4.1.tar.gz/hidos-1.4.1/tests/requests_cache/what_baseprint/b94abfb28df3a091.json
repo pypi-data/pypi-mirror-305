@@ -1,0 +1,41 @@
+{
+  "created_at": "2024-10-28T01:33:51.441373+00:00",
+  "elapsed": 0.357667,
+  "encoding": "ISO-8859-1",
+  "headers": {
+    "Accept-Ranges": "bytes",
+    "Age": "0",
+    "Allow": "GET, OPTIONS, HEAD, OPTIONS",
+    "Connection": "keep-alive",
+    "Content-Type": "text\/plain",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "Date": "Mon, 28 Oct 2024 01:33:51 GMT",
+    "Referrer-Policy": "same-origin",
+    "Strict-Transport-Security": "max-age=15768000;",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept, origin, Cookie",
+    "Via": "1.1 varnish (Varnish\/6.5)",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "X-RateLimit-Limit": "1200",
+    "X-RateLimit-Remaining": "1198",
+    "X-RateLimit-Reset": "1730082830",
+    "X-Varnish": "693702442"
+  },
+  "reason": "OK",
+  "request": {
+    "body": "",
+    "headers": {
+      "Accept": "*\/*",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Authorization": "REDACTED",
+      "Connection": "keep-alive",
+      "User-Agent": "python-requests\/2.31.0"
+    },
+    "method": "GET",
+    "url": "https:\/\/archive.softwareheritage.org\/api\/1\/graph\/leaves\/swh:1:rev:1ca488e4d3f33059a04656f855ba22ef5393298a\/?direction=backward&edges=rev%3Arev%2Crev%3Asnp%2Csnp%3Aori&resolve_origins=true"
+  },
+  "status_code": 200,
+  "url": "https:\/\/archive.softwareheritage.org\/api\/1\/graph\/leaves\/swh:1:rev:1ca488e4d3f33059a04656f855ba22ef5393298a\/?direction=backward&edges=rev%3Arev%2Crev%3Asnp%2Csnp%3Aori&resolve_origins=true",
+  "_decoded_content": "https:\/\/gitlab.com\/perm.pub\/successions.git\nhttps:\/\/gitlab.com\/perm.pub\/successions\/\nhttps:\/\/gitlab.com\/castedo\/study-docs.git\n"
+}

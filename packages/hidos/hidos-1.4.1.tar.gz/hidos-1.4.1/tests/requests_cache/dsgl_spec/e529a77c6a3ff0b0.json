@@ -1,0 +1,95 @@
+{
+  "created_at": "2024-10-28T09:58:36.661660+00:00",
+  "elapsed": 0.331255,
+  "encoding": "utf-8",
+  "headers": {
+    "Accept-Ranges": "bytes",
+    "Age": "0",
+    "Allow": "GET, OPTIONS, HEAD, OPTIONS",
+    "Connection": "keep-alive",
+    "Content-Length": "2382",
+    "Content-Type": "application\/json",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "Date": "Mon, 28 Oct 2024 09:58:36 GMT",
+    "Referrer-Policy": "same-origin",
+    "Strict-Transport-Security": "max-age=15768000;",
+    "Vary": "Accept, origin, Cookie",
+    "Via": "1.1 varnish (Varnish\/6.5)",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "X-RateLimit-Limit": "120",
+    "X-RateLimit-Remaining": "112",
+    "X-RateLimit-Reset": "1730113079",
+    "X-Varnish": "694685255"
+  },
+  "reason": "OK",
+  "request": {
+    "body": "",
+    "headers": {
+      "Accept": "*\/*",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Connection": "keep-alive",
+      "User-Agent": "python-requests\/2.31.0"
+    },
+    "method": "GET",
+    "url": "https:\/\/archive.softwareheritage.org\/api\/1\/snapshot\/6574025f9f2986efdb4f19db009bdab19af7edc2\/"
+  },
+  "status_code": 200,
+  "url": "https:\/\/archive.softwareheritage.org\/api\/1\/snapshot\/6574025f9f2986efdb4f19db009bdab19af7edc2\/",
+  "_decoded_content": {
+    "id": "6574025f9f2986efdb4f19db009bdab19af7edc2",
+    "branches": {
+      "HEAD": {
+        "target": "refs\/heads\/main",
+        "target_type": "alias",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/892a1f2bf6c7f8f0ce63d26d80f0d2309dc04303\/"
+      },
+      "refs\/heads\/main": {
+        "target": "892a1f2bf6c7f8f0ce63d26d80f0d2309dc04303",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/892a1f2bf6c7f8f0ce63d26d80f0d2309dc04303\/"
+      },
+      "refs\/heads\/successions\/0iV47kWzQAuyONrIDG538k3x3Qc": {
+        "target": "a89e79cf19c8cb6b39f29eb15c8cc9f225063123",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/a89e79cf19c8cb6b39f29eb15c8cc9f225063123\/"
+      },
+      "refs\/heads\/successions\/DZFCt68peNNajZ34WtZni9VYxzo": {
+        "target": "87615b0b3a398df1e262843a411d7d964c15658d",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/87615b0b3a398df1e262843a411d7d964c15658d\/"
+      },
+      "refs\/heads\/successions\/H5NOlCVM9P5Vv4LbeuwJsaME8kM": {
+        "target": "ec4f0deb9309caa8729bf16153bbb570ac4cb4ac",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/ec4f0deb9309caa8729bf16153bbb570ac4cb4ac\/"
+      },
+      "refs\/heads\/successions\/aEBkfZe1f4ooWcgt2Qs9gjtmkFo": {
+        "target": "075a50947bf75fa9f3039f06ab4deb50e9853b04",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/075a50947bf75fa9f3039f06ab4deb50e9853b04\/"
+      },
+      "refs\/heads\/successions\/cPSRAQpD5aWsvNHZADxFcZbKdLI": {
+        "target": "70f491010a43e5a5acbcd1d9003c457196ca74b2",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/70f491010a43e5a5acbcd1d9003c457196ca74b2\/"
+      },
+      "refs\/heads\/successions\/czdv8PyJKF7LneTnaVT6pgAKyh8": {
+        "target": "2629ae3918722c2c3215217905a536d5db26c666",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/2629ae3918722c2c3215217905a536d5db26c666\/"
+      },
+      "refs\/heads\/successions\/ji2STto1mZ3i2BmnGxbkebejKH4": {
+        "target": "d8f286ce2aa97ff2f84ea56645827bfed6b64dc7",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/d8f286ce2aa97ff2f84ea56645827bfed6b64dc7\/"
+      },
+      "refs\/heads\/successions\/krP1W87DCQajl5bJABhHW8HLq7c": {
+        "target": "f249b1f9aa23a0e9926913fd9d32a2fbd8faa99e",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/f249b1f9aa23a0e9926913fd9d32a2fbd8faa99e\/"
+      }
+    },
+    "next_branch": null
+  }
+}

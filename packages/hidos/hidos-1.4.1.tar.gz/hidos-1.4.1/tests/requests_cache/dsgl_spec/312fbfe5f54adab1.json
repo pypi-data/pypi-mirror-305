@@ -1,0 +1,85 @@
+{
+  "created_at": "2024-10-28T09:58:57.944838+00:00",
+  "elapsed": 0.330438,
+  "encoding": "utf-8",
+  "headers": {
+    "Accept-Ranges": "bytes",
+    "Age": "0",
+    "Allow": "GET, OPTIONS, OPTIONS, HEAD",
+    "Connection": "keep-alive",
+    "Content-Length": "1900",
+    "Content-Type": "application\/json",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "Date": "Mon, 28 Oct 2024 09:58:57 GMT",
+    "Referrer-Policy": "same-origin",
+    "Strict-Transport-Security": "max-age=15768000;",
+    "Vary": "Accept, origin, Cookie",
+    "Via": "1.1 varnish (Varnish\/6.5)",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "X-RateLimit-Limit": "120",
+    "X-RateLimit-Remaining": "108",
+    "X-RateLimit-Reset": "1730113079",
+    "X-Varnish": "681035737"
+  },
+  "reason": "OK",
+  "request": {
+    "body": "",
+    "headers": {
+      "Accept": "*\/*",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Connection": "keep-alive",
+      "User-Agent": "python-requests\/2.31.0"
+    },
+    "method": "GET",
+    "url": "https:\/\/archive.softwareheritage.org\/api\/1\/snapshot\/5f90c564c2c73e4c319285d9284d5ba46cbe92ca\/"
+  },
+  "status_code": 200,
+  "url": "https:\/\/archive.softwareheritage.org\/api\/1\/snapshot\/5f90c564c2c73e4c319285d9284d5ba46cbe92ca\/",
+  "_decoded_content": {
+    "id": "5f90c564c2c73e4c319285d9284d5ba46cbe92ca",
+    "branches": {
+      "HEAD": {
+        "target": "refs\/heads\/main",
+        "target_type": "alias",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/892a1f2bf6c7f8f0ce63d26d80f0d2309dc04303\/"
+      },
+      "refs\/heads\/main": {
+        "target": "892a1f2bf6c7f8f0ce63d26d80f0d2309dc04303",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/892a1f2bf6c7f8f0ce63d26d80f0d2309dc04303\/"
+      },
+      "refs\/heads\/successions\/0iV47kWzQAuyONrIDG538k3x3Qc": {
+        "target": "2887f0dac96e4d1140d0dfb76926604c299985b6",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/2887f0dac96e4d1140d0dfb76926604c299985b6\/"
+      },
+      "refs\/heads\/successions\/DZFCt68peNNajZ34WtZni9VYxzo": {
+        "target": "3b3fddefbdb463d5ecd98bf68d6aea57ab1709de",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/3b3fddefbdb463d5ecd98bf68d6aea57ab1709de\/"
+      },
+      "refs\/heads\/successions\/aEBkfZe1f4ooWcgt2Qs9gjtmkFo": {
+        "target": "f5998fb381c2167a78fce72c7f6d7bd1d4d6cbba",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/f5998fb381c2167a78fce72c7f6d7bd1d4d6cbba\/"
+      },
+      "refs\/heads\/successions\/cNA6UJNQvawejAA45NqofL1FLBs": {
+        "target": "22cd0de869b3945fc08b4af224e88473880ae08e",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/22cd0de869b3945fc08b4af224e88473880ae08e\/"
+      },
+      "refs\/heads\/successions\/czdv8PyJKF7LneTnaVT6pgAKyh8": {
+        "target": "e6cbafc0e70cf88900619dd9f4ebebef76513bd0",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/e6cbafc0e70cf88900619dd9f4ebebef76513bd0\/"
+      },
+      "refs\/heads\/successions\/ji2STto1mZ3i2BmnGxbkebejKH4": {
+        "target": "66dbd5af5615564dcbf2ae7fa9911610ba050168",
+        "target_type": "revision",
+        "target_url": "https:\/\/archive.softwareheritage.org\/api\/1\/revision\/66dbd5af5615564dcbf2ae7fa9911610ba050168\/"
+      }
+    },
+    "next_branch": null
+  }
+}
