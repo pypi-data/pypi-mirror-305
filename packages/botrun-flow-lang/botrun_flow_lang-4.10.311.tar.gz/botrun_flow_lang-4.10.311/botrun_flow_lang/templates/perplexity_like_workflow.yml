@@ -1,0 +1,299 @@
+botrun_app:
+  name: Perplexity Like Search
+  description: 有上網搜尋功能的 chatbot
+  mode: chatbot
+workflow:
+  nodes:
+  - type: start
+    id: fc6f3824-9cb4-4de7-9144-6690a7e08a96
+    title: Start
+    desc: ''
+    input_variables: []
+    output_variables:
+    - variable_name: user_input
+    print_start: false
+    print_stream: false
+    print_complete: false
+    complete_output: null
+  - type: llm
+    id: 1a1daf5c-25ea-4d86-9578-6ace5b7cf4d2
+    title: 產生相關議題的問題集...
+    desc: ''
+    input_variables: []
+    output_variables:
+    - variable_name: llm_output
+    print_start: true
+    print_stream: true
+    print_complete: false
+    complete_output: null
+    model:
+      completion_params: {}
+      name: anthropic/claude-3-5-sonnet-20241022
+    prompt_template:
+    - role: user
+      content: "\n    你是一個專業的調查員，你會依據以下問題，去網路上搜尋相關資料，並且回答使用者。\n    當使用者輸入一個問題時，你會\n\
+        \    1. 理解查詢：理解用戶輸入的查詢。這不僅僅是簡單的關鍵字匹配，而是深入分析查詢的上下文和意圖，以便更準確地理解用戶需求。\n    2.\
+        \ 重構查詢：在理解查詢後，你會重構查詢以適應其搜索和分析模型。這包括將用戶的自然語言問題轉換為可以在網路上有效搜索的訊息格式，從而提高搜索效率和結果的相關性。\n\
+        \    3. 條列重構查詢：將重構後的查詢，條列成多個子問題，每個子問題都是一個可以在網路上搜尋到的具體問題。\n\n    以下是使用者輸入的問題:\n\
+        \    {{#fc6f3824-9cb4-4de7-9144-6690a7e08a96.user_input#}}\n\n  請使用以下 JSON\
+        \ 格式嚴格回應,只包含問題內容:\n  \n    \"第1個子問題\",\n    \"第2個子問題\",\n    ...\n    \"最後一個子問題\"\
+        \n    ]\n"
+    context: {}
+    vision: {}
+  - type: code
+    id: 45584e95-33fe-4ef9-b1b9-e7c3e795af16
+    title: Split Question List
+    desc: ''
+    input_variables:
+    - node_id: 1a1daf5c-25ea-4d86-9578-6ace5b7cf4d2
+      variable_name: llm_output
+    output_variables:
+    - variable_name: question_list
+    print_start: false
+    print_stream: false
+    print_complete: false
+    complete_output: null
+    code: "\nimport json\ndef main(llm_output):\n    question_list = json.loads(llm_output)\n\
+      \    return {\"question_list\": question_list}\n        "
+  - type: code
+    id: 98965d9c-e38c-4808-ad64-9fec50a00b3c
+    title: 將產生的問題進行 Google 搜尋...
+    desc: ''
+    input_variables: []
+    output_variables: []
+    print_start: true
+    print_stream: false
+    print_complete: false
+    complete_output: null
+    code: "\ndef main():\n    return {\n        \"result\": \"\"\n    }\n        "
+  - - type: iteration
+      id: 6abcc8cb-28cc-4f8c-9f77-d639ab54f2c7
+      title: Iteration
+      desc: ''
+      input_variables: []
+      output_variables: []
+      print_start: false
+      print_stream: false
+      print_complete: false
+      complete_output: null
+      input_selector:
+        node_id: 45584e95-33fe-4ef9-b1b9-e7c3e795af16
+        variable_name: question_list
+      output_selector:
+        node_id: 3afcae93-a670-4073-9c59-2ec161d899f1
+        variable_name: results
+      is_async: true
+    - type: http-request
+      id: 69a04b5b-5347-456e-b105-3c3b3ccf6aa2
+      title: 將問題進行 Google 搜尋...
+      desc: ''
+      input_variables: []
+      output_variables:
+      - variable_name: status_code
+      - variable_name: body
+      - variable_name: headers
+      print_start: false
+      print_stream: false
+      print_complete: false
+      complete_output: null
+      authorization:
+        type: none
+        config: null
+      body:
+        type: json
+        data:
+          query: '{{#6abcc8cb-28cc-4f8c-9f77-d639ab54f2c7.item#}}'
+          num: 5
+      headers: ''
+      method: post
+      params: ''
+      timeout:
+        total: 30.0
+      url: https://botrun-flow-lang-fastapi-dev-36186877499.asia-east1.run.app/api/search
+    - type: code
+      id: 7013db81-9402-4448-b173-2f5b9ee40999
+      title: 搜尋的問題對應到相關網頁連結...
+      desc: ''
+      input_variables:
+      - node_id: 6abcc8cb-28cc-4f8c-9f77-d639ab54f2c7
+        variable_name: item
+      - node_id: 69a04b5b-5347-456e-b105-3c3b3ccf6aa2
+        variable_name: body
+      output_variables:
+      - variable_name: search_question
+      - variable_name: links
+      print_start: false
+      print_stream: false
+      print_complete: false
+      complete_output: null
+      code: "\nimport json\nfrom urllib.parse import quote\ndef main(item, body):\n\
+        \    search_results = json.loads(body)\n    items = search_results.get(\"\
+        items\", [])\n    links = [item.get(\"link\") for item in items if item.get(\"\
+        link\")]\n    final_links = []\n    for link in links:\n        final_links.append(quote(link,\
+        \ safe=':/'))\n    print(f\"final_links: {final_links}\")\n    return {\n\
+        \        \"search_question\": item,\n        \"links\": final_links    \n\
+        \    }\n        "
+    - - type: iteration
+        id: 32a3e113-51ea-4be5-94d4-90dce855eb2e
+        title: Iteration Scrape All Pages
+        desc: ''
+        input_variables: []
+        output_variables: []
+        print_start: false
+        print_stream: false
+        print_complete: false
+        complete_output: null
+        input_selector:
+          node_id: 7013db81-9402-4448-b173-2f5b9ee40999
+          variable_name: links
+        output_selector:
+          node_id: 32221132-cd4c-4651-a1e8-099afa868989
+          variable_name: result
+        is_async: true
+      - type: http-request
+        id: ce630faf-80d1-4726-b10d-5d30cd4ab7ad
+        title: Scraping Web Page
+        desc: ''
+        input_variables: []
+        output_variables:
+        - variable_name: status_code
+        - variable_name: body
+        - variable_name: headers
+        print_start: false
+        print_stream: false
+        print_complete: false
+        complete_output: null
+        authorization:
+          type: none
+          config: null
+        body:
+          type: none
+          data: null
+        headers: ''
+        method: get
+        params: 'url: {{#32a3e113-51ea-4be5-94d4-90dce855eb2e.item#}}'
+        timeout:
+          total: 30.0
+        url: https://botrun-crawler-fastapi-prod-36186877499.asia-east1.run.app/scrape
+      - type: code
+        id: 32221132-cd4c-4651-a1e8-099afa868989
+        title: Getting Scrape Result
+        desc: ''
+        input_variables:
+        - node_id: ce630faf-80d1-4726-b10d-5d30cd4ab7ad
+          variable_name: status_code
+        - node_id: ce630faf-80d1-4726-b10d-5d30cd4ab7ad
+          variable_name: body
+        - node_id: 32a3e113-51ea-4be5-94d4-90dce855eb2e
+          variable_name: item
+        output_variables:
+        - variable_name: result
+        print_start: false
+        print_stream: false
+        print_complete: false
+        complete_output: null
+        code: "\nimport json\ndef main(status_code, body, item):\n    print(f\"[Getting\
+          \ Scrape Result]url: {item}\")\n    print(f\"[Getting Scrape Result]status_code:\
+          \ {status_code}\")\n    result={\"url\": item,}\n    if status_code == 200:\n\
+          \        body = json.loads(body)\n        print(f\"body: {body['data']['markdown'][:100]}\"\
+          )\n        if body['data']['markdown'].find(\"Verify you are human by completing\
+          \ the action below.\") != -1:\n            result[\"content\"] = \"\"\n\
+          \        elif body['data']['markdown'].find(\" ## Verifying you are human.\
+          \ This may take a few seconds.\") != -1:\n            result[\"content\"\
+          ] = \"\"\n        elif body['data']['markdown'].find(\"The requested URL\
+          \ was rejected. Please consult with your administrator\") != -1:\n     \
+          \       result[\"content\"] = \"\"\n        else:\n            result[\"\
+          content\"] = body['data']['markdown']\n    else:\n        result[\"content\"\
+          ] = \"\"\n    return {\"result\": result}\n\n            "
+    - type: code
+      id: 3afcae93-a670-4073-9c59-2ec161d899f1
+      title: Mapping Question To Scrape Result
+      desc: ''
+      input_variables:
+      - node_id: 6abcc8cb-28cc-4f8c-9f77-d639ab54f2c7
+        variable_name: item
+      - node_id: 32a3e113-51ea-4be5-94d4-90dce855eb2e
+        variable_name: output
+      output_variables:
+      - variable_name: results
+      print_start: false
+      print_stream: false
+      print_complete: false
+      complete_output: null
+      code: "\ndef main(item, output):\n    results=[]\n    for result in output:\n\
+        \        if result['content']:\n            result[\"question\"] = item\n\
+        \            results.append(result)\n    print(f\"[Mapping Question To Scrape\
+        \ Result] question: {item}, results length: {len(results)}\")\n    return\
+        \ {\"results\": results}\n"
+  - type: code
+    id: 22d1b0ea-baeb-4106-898e-e4f8651cccd4
+    title: Consolidating All Information
+    desc: ''
+    input_variables:
+    - node_id: fc6f3824-9cb4-4de7-9144-6690a7e08a96
+      variable_name: user_input
+    - node_id: 6abcc8cb-28cc-4f8c-9f77-d639ab54f2c7
+      variable_name: output
+    output_variables:
+    - variable_name: all_info
+    print_start: false
+    print_stream: false
+    print_complete: false
+    complete_output: null
+    code: "\nimport json\ndef main(user_input, output):\n    all_info=f\"使用者輸入的問題:\\\
+      n {user_input}\\n\\n\"\n    output_text=json.dumps(output, ensure_ascii=False,\
+      \ indent=2)\n    all_info+=f\"網路搜尋回來的資訊:\\n {output_text}\"\n    return {\"\
+      all_info\": all_info}\n"
+  - type: llm
+    id: 1a6ac895-aa77-4cac-bc4b-d6c5b55c770f
+    title: 做完研究後最後的回答...
+    desc: ''
+    input_variables: []
+    output_variables:
+    - variable_name: llm_output
+    print_start: true
+    print_stream: true
+    print_complete: false
+    complete_output: null
+    model:
+      completion_params: {}
+      name: gemini/gemini-1.5-pro
+    prompt_template:
+    - role: user
+      content: "\n    你是一個專業的資訊分析員，你會依據以下使用者的問題，以及網路搜尋到的資訊，統整出最完整的回答。\n\n    {{#22d1b0ea-baeb-4106-898e-e4f8651cccd4.all_info#}}\n\
+        \    "
+    context: {}
+    vision: {}
+  - type: code
+    id: 73b00f0b-16d6-48b6-ad42-8a6c71a6f5e7
+    title: 取得參考資料的連結...
+    desc: ''
+    input_variables:
+    - node_id: 6abcc8cb-28cc-4f8c-9f77-d639ab54f2c7
+      variable_name: output
+    output_variables:
+    - variable_name: result
+    print_start: false
+    print_stream: false
+    print_complete: false
+    complete_output: result
+    code: "\nimport json\ndef main(output):\n    msg = json.dumps(output, ensure_ascii=False,\
+      \ indent=2)\n    sources=[]\n    for results in output:\n        for result\
+      \ in results:\n            if result.get('content') and result.get('url'):\n\
+      \                sources.append(result.get(\"url\").strip())\n    sources =\
+      \ list(set(sources))\n    text=\"參考資料:\\n\"\n    for source in sources:\n  \
+      \      text+=f\"- {source}\\n\"\n    if len(sources) > 0:\n        return {\"\
+      result\": text}\n    else:\n        return {\"result\": \"\"}\n"
+  - type: answer
+    id: 23cc5d02-0755-4edd-9007-adbab8de82f2
+    title: Answer
+    desc: ''
+    input_variables:
+    - node_id: 1a6ac895-aa77-4cac-bc4b-d6c5b55c770f
+      variable_name: llm_output
+    output_variables:
+    - variable_name: answer
+    print_start: false
+    print_stream: false
+    print_complete: false
+    complete_output: null
