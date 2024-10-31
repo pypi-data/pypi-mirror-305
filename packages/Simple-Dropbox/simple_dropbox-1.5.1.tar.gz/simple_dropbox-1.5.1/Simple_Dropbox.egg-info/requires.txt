@@ -1,0 +1,4 @@
+requests
+dropbox
+clipboard
+customtkinter
