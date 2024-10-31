@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: hello-world-baalmeida
+Version: 0.0.1
+Summary: Demonstrando uso de pacotes.
+Home-page: https://github.com/sendobruno/simple-package-template
+Author: Bruno Almeida
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# hello-world-baalmeida
+
+Description. 
+The package hello_world is used to:
+	- Package use demonstration
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install hello-world-baalmeida
+
+```bash
+pip install hello-world-baalmeida
+```
+
+<!-- ## Usage
+
+```python
+from hello_world import file1_name
+file1_name.my_function()
+``` -->
+
+## Author
+Bruno Almeida
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

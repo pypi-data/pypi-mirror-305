@@ -1,0 +1,9 @@
+README.md
+setup.py
+hello-world-baalmeida/__init__.py
+hello-world-baalmeida/file1_name.py
+hello-world-baalmeida/file2_name.py
+hello_world_baalmeida.egg-info/PKG-INFO
+hello_world_baalmeida.egg-info/SOURCES.txt
+hello_world_baalmeida.egg-info/dependency_links.txt
+hello_world_baalmeida.egg-info/top_level.txt
