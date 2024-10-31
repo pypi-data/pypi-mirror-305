@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: auditor_apel_plugin
+Version: 0.6.3
+Summary: AUDITOR plugin for sending accounting data to APEL
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-auditor ==0.6.3
+Requires-Dist: requests ==2.32.3
+Requires-Dist: cryptography ==43.0.3
+Requires-Dist: pyyaml ==6.0.2
+Requires-Dist: pydantic ==2.9.2
+Provides-Extra: build
+Requires-Dist: build ==1.2.2.post1 ; extra == 'build'
+Requires-Dist: setuptools ==75.3.0 ; extra == 'build'
+Provides-Extra: style
+Requires-Dist: black ==24.10.0 ; extra == 'style'
+Requires-Dist: ruff ==0.7.1 ; extra == 'style'
+Provides-Extra: tests
+Requires-Dist: pytest ==8.3.3 ; extra == 'tests'
+Requires-Dist: pytest-cov ==5.0.0 ; extra == 'tests'
+Requires-Dist: mypy ==1.13.0 ; extra == 'tests'
+Requires-Dist: types-pyyaml ==6.0.12.20240917 ; extra == 'tests'
+Requires-Dist: types-requests ==2.32.0.20241016 ; extra == 'tests'
+
+# AUDITOR-APEL-plugin
+
+Plugin for AUDITOR to report job records to APEL
+
+## License
+
+Licensed under
+
+ - BSD-2-Clause Plus Patent License ([LICENSE](https://github.com/ALU-Schumacher/AUDITOR/tree/main/plugins/apel/LICENSE))
+
+### Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you shall be licensed as above, without any additional terms or conditions.
