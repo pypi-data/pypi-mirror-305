@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pipui
+Version: 0.1.2
+Summary: pipui
+Author: merlon
+License: BSD
+Requires-Python: >=3.6, <4
+Requires-Dist: uvicorn
+Requires-Dist: jinja2
+Requires-Dist: fastapi
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
