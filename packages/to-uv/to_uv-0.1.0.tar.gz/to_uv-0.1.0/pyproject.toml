@@ -1,0 +1,148 @@
+[project]
+name = "to-uv"
+version = "0.1.0"
+description = "Migrate to 'uv' from other python package and project managers."
+readme = "README.md"
+authors = [{ name = "Grant Ramsay", email = "seapagan@gmail.com" }]
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=2.9.2",
+    "rich>=13.9.3",
+    "typer>=0.12.5",
+]
+
+[project.scripts]
+to-uv = "to_uv.main:main"
+
+[project.urls]
+# "HomeHage" = "https://xxxxxx"
+"Pull Requests" = "https://github.com/seapagan/to-uv/pulls"
+"Bug Tracker" = "https://github.com/seapagan/to-uv/issues"
+"Changelog" = "https://github.com/seapagan/to-uv/blob/main/CHANGELOG.md"
+"Repository" = "https://github.com/seapagan/to-uv"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+  "mock>=5.1.0",
+  "mypy>=1.13.0",
+  "poethepoet>=0.29.0",
+  "pytest>=8.3.3",
+  "pytest-clarity>=1.0.1",
+  "pytest-cov>=5.0.0",
+  "pytest-env>=1.1.5",
+  "pytest-mock>=3.14.0",
+  "pytest-randomly>=3.16.0",
+  "pytest-reverse>=1.8.0",
+  "pytest-sugar>=1.0.0",
+  "pytest-watcher>=0.4.3",
+  "ruff>=0.7.1",
+]
+
+[tool.poe.tasks]
+pre.cmd = "pre-commit run --all-files"
+pre.help = "Run pre-commit checks"
+
+mypy.cmd = "mypy . --strict"
+mypy.help = "Run mypy checks"
+format.cmd = "ruff format ."
+format.help = "Format code with Ruff"
+ruff.cmd = "ruff check --output-format=concise ."
+ruff.help = "Run Ruff checks"
+
+test.cmd = "pytest"
+test.help = "Run tests using Pytest"
+"test:watch".cmd = "ptw . --now --clear"
+"test:watch".help = "Run tests using Pytest in watch mode"
+
+changelog.cmd = "github-changelog-md"
+changelog.help = "Generate a changelog"
+
+"docs:publish".cmd = "mkdocs gh-deploy"
+"docs:publish".help = "Publish documentation to GitHub Pages"
+"docs:build".cmd = "mkdocs build"
+"docs:build".help = "Build documentation locally to './site' folder"
+"docs:serve".cmd = "mkdocs serve -w TODO.md -w CHANGELOG.md -w CONTRIBUTING.md"
+"docs:serve".help = "Serve documentation locally"
+"docs:serve:all".cmd = "mkdocs serve -w TODO.md -w CHANGELOG.md -w CONTRIBUTING.md -a 0.0.0.0:9000"
+"docs:serve:all".help = "Serve documentation locally on all interfaces"
+
+[tool.ruff]
+line-length = 80
+lint.select = ["ALL"] # we are being very strict!
+lint.ignore = [
+  "ANN101",
+  "ANN102",
+  "PGH003",
+  "FBT002",
+  "FBT003",
+  "B006",
+] # These rules are too strict even for us 😝
+lint.extend-ignore = [
+  "COM812",
+  "ISC001",
+] # these are ignored for ruff formatting
+
+src = ["to_uv"]
+target-version = "py39" # minimum python version supported
+
+[tool.ruff.format]
+indent-style = "space"
+quote-style = "double"
+
+[tool.ruff.lint.pylint]
+max-args = 6
+
+[tool.ruff.lint.pep8-naming]
+classmethod-decorators = ["pydantic.validator", "pydantic.root_validator"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.extend-per-file-ignores]
+"tests/**/*.py" = [
+  "S101",    # we can (and MUST!) use 'assert' in test files.
+  "ANN001",  # annotations for fixtures are sometimes a pain for test files
+  "ARG00",   # test fixtures often are not directly used
+  "PLR2004", # magic numbers are often used in test files
+  "SLF001",  # sometimes we need to test private methods
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["to_uv"]
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+
+python_version = "3.9"
+exclude = ["docs"]
+
+[[tool.mypy.overrides]]
+disable_error_code = ["method-assign", "no-untyped-def", "attr-defined"]
+module = "tests.*"
+
+[tool.pytest.ini_options]
+addopts = [
+  "--cov",
+  "--cov-report",
+  "term-missing",
+  "--cov-report",
+  "html",
+  "--cov-report",
+  "lcov",
+]
+filterwarnings = [
+  "ignore:'direction' argument is deprecated:DeprecationWarning",
+]
+mock_use_standalone_module = true
+markers = []
+
+[tool.coverage.run]
+source = ["to_uv"]
+omit = ["*/tests/*"]
