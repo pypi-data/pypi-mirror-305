@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: persian_numbers
+Version: 1.1
+Summary: A Django template filter to convert numbers to Persian in template tags
+Home-page: https://github.com/hmeymandi/persian_numbers
+Author: Hossein Meymandi
+Author-email: hossainm67@gmail.com
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A Django template filter to convert numbers to Persian in template tags
+
+# Persian Numbers
+

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+persian_numbers/__init__.py
+persian_numbers.egg-info/PKG-INFO
+persian_numbers.egg-info/SOURCES.txt
+persian_numbers.egg-info/dependency_links.txt
+persian_numbers.egg-info/top_level.txt
+persian_numbers/templatetags/__init__.py
+persian_numbers/templatetags/persian_filters.py
