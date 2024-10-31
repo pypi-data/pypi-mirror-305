@@ -1,0 +1,11 @@
+image_processing_jaderjf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+image_processing_jaderjf/processing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+image_processing_jaderjf/processing/combination.py,sha256=urjPsxnCRlKS76L2HhmgdUHOmqK86fILnMYQhACkGEg,781
+image_processing_jaderjf/processing/transformation.py,sha256=tvxffUTxWxq_pW_rEHkCLlWVM6f52sj1Gnutany12dQ,344
+image_processing_jaderjf/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+image_processing_jaderjf/utils/io.py,sha256=Rdl5rRuDfJuSUnxh5bzO_RAFEAZN0AEcCQ-Pmu6jbnM,193
+image_processing_jaderjf/utils/plot.py,sha256=5ItdH6qOPwWIlJfotgiq8vDaPEOHSVoyuT36KG_YOGQ,979
+image_processing_jaderjf-0.0.1.dist-info/METADATA,sha256=qTK__peu22tknCBXz42_i2JhHjtg02cXa5h6KtrYeF8,855
+image_processing_jaderjf-0.0.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+image_processing_jaderjf-0.0.1.dist-info/top_level.txt,sha256=ddg2Kq6Got268-idX6iwt80GcWMpC2IxGYjzg8dBGMQ,25
+image_processing_jaderjf-0.0.1.dist-info/RECORD,,
