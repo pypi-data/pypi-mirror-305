@@ -1,0 +1,11 @@
+.gitignore
+.gitmodules
+LICENSE
+README.md
+pyproject.toml
+setup.py
+.github/workflows/publish.yml
+src/rclpy_intellisense.egg-info/PKG-INFO
+src/rclpy_intellisense.egg-info/SOURCES.txt
+src/rclpy_intellisense.egg-info/dependency_links.txt
+src/rclpy_intellisense.egg-info/top_level.txt
