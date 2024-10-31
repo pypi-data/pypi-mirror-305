@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=62.3.0", "pyyaml", "jinja2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linktools_cntr"
+description = "linktools container toolkit"
+requires-python = ">=3.6"
+authors = [{name = "Hu Ji", email = "669898595@qq.com"}]
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {text = "Apache 2.0"}
+dynamic = ["version", "dependencies", "optional-dependencies", "scripts", "entry-points"]
+
+[project.urls]
+Homepage = "https://github.com/ice-black-tea/linktools-cntr"
+Repository = "https://github.com/ice-black-tea/linktools-cntr.git"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["linktools_cntr*"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+linktools_cntr = ["assets/**"]
