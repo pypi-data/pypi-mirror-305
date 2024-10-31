@@ -1,0 +1,103 @@
+# kpi_library/date/range.py
+import json
+import pandas as pd
+from typing import Optional
+
+from ..model import MetricModel, ParameterModel
+from ..errors import DataTypeError, EmptyDatasetError
+from ..result_types import ResultTypes
+
+
+class DateRange(MetricModel):
+    """
+    This metric returns the range between the maximum and minimum value of a time column.
+
+    Example
+    -------
+    >>> dm = DateRange()
+    >>> data = pd.Series(["2022-03-20 00:00:00", "2022-03-21 00:00:00", "2022-03-22 00:00:00", "2022-03-23 00:00:00", \
+    "2022-03-24 00:00:00", "2022-03-25 00:00:00"], name='timestamp')
+    >>> dm.run(data, date_format=r'%Y-%m-%d %H:%M:%S')
+    Timedelta('5 days 00:00:00')
+    >>> data = pd.Series(["2022-03-20", "2022-03-20", "2022-03-22", "2022-03-23", "2022-03-24", "2022-03-25"])
+    >>> dm.run(data, date_format=r'%Y-%m-%d')
+    Timedelta('5 days 00:00:00')
+    >>> dm.to_dqv(data, date_format=r'%Y-%m-%d')
+    [{'dqv_isMeasurementOf': 'date.range', 'dqv_computedOn': '', 'rdf_datatype': 'Timedelta', 'ddqv_hasParameters': [{\
+'parameter_name': 'date_format', 'value': '"%Y-%m-%d"'}], 'dqv_value': '5 days 00:00:00'}]
+    >>> dm.to_dqv(data, date_format="-1")
+    [{'dqv_isMeasurementOf': 'date.range', 'dqv_computedOn': '', 'rdf_datatype': 'Timedelta', 'ddqv_hasParameters': [{\
+'parameter_name': 'date_format', 'value': '"-1"'}], 'dqv_value': 'null'}]
+    >>> data = pd.Series(["01:00:05", "01:00:05", "01:00:20", "01:00:20", "01:00:30", "01:00:40"], name='timestamp')
+    >>> dm.run(data, date_format='%H:%M:%S')
+    Timedelta('0 days 00:00:35')
+    >>> dm.run(pd.Series([None, None, None]))
+    >>> dm.to_dqv(pd.Series([None, None, None]))
+    [{'dqv_isMeasurementOf': 'date.range', 'dqv_computedOn': '', 'rdf_datatype': 'Timedelta', 'ddqv_hasParameters': [{\
+'parameter_name': 'date_format', 'value': 'null'}], 'dqv_value': 'null'}]
+    >>> dm.to_dqv(pd.Series(["None", "None", "None"]))
+    [{'dqv_isMeasurementOf': 'date.range', 'dqv_computedOn': '', 'rdf_datatype': 'Timedelta', 'ddqv_hasParameters': [{\
+'parameter_name': 'date_format', 'value': 'null'}], 'dqv_value': 'null'}]
+    >>> dm.to_dqv(pd.Series([1, 1, 1]))
+    [{'dqv_isMeasurementOf': 'date.range', 'dqv_computedOn': '', 'rdf_datatype': 'Error', 'ddqv_hasParameters': [{\
+'parameter_name': 'date_format', 'value': 'null'}], 'dqv_value': 'null'}]
+    """
+    def __init__(self):
+        super(DateRange, self).__init__(
+            identifier='date.range',
+            keyword='DateRange',
+            title='Range',
+            definition='Range between the maximum and minimum value of time data.',
+            expected_data_type=str(ResultTypes.TIMEDELTA.value),
+            dimension='profile',
+            category='inherent'
+        )
+        self.has_parameters = [
+            ParameterModel(name='date_format', data_type=str(ResultTypes.STRING.value), default_value=None,
+                           possible_values=None, description='The format to parse the dates.')]
+
+    def to_dqv(self, data: pd.Series, **kwargs):
+        # run method
+        params = {'date_format': kwargs.get('date_format', None)}
+        try:
+            result = self.run(data, **kwargs)
+        except (EmptyDatasetError, DataTypeError):
+            # error found
+            return [{
+                'dqv_isMeasurementOf': f'{self.identifier}',
+                'dqv_computedOn': '',
+                'rdf_datatype': 'Error',
+                'ddqv_hasParameters': self._turn_dictionary_to_parameter(params),
+                'dqv_value': json.dumps(None)
+            }]
+        # no error, result obtained
+        return [{
+            'dqv_isMeasurementOf': f'{self.identifier}',
+            'dqv_computedOn': '' if data.name is None else data.name,
+            'rdf_datatype': self.expected_data_type,
+            'ddqv_hasParameters': self._turn_dictionary_to_parameter(params),
+            'dqv_value': json.dumps(None) if result is None else str(result)
+        }]
+
+    def run(self, data: pd.Series, **kwargs) -> Optional[pd.Timedelta]:
+        """
+        This method returns the range between the maximum and minimum value of the data given as parameter.
+
+        Parameters
+        ----------
+        data: :obj:`pandas.Series`
+            Object containing the data to be processed.
+        kwargs: :obj:`dict`
+            Dictionary containing the time format (`date_time`).
+
+        Returns
+        -------
+        _: :obj:`pandas.Timedelta`, optional.
+            Range value of the data.
+        """
+        srs = self._check_date_data(data, kwargs.get('date_format', None)).dropna()
+        # check if dataset is empty
+        if srs.empty:
+            return None
+        # compute statistic
+        return srs.max() - srs.min()
