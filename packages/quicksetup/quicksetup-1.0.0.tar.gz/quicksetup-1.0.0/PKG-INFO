@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: quicksetup
+Version: 1.0.0
+Summary: For beginners to do a quick installation.
+License: MIT
+Keywords: essentials
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: pystyle
+Requires-Dist: colorama
+Requires-Dist: numpy
+Requires-Dist: datetime
+Requires-Dist: discord
+Requires-Dist: discord.py
+Requires-Dist: customtkinter
+Requires-Dist: auto-py-to-exe
+Requires-Dist: beutifulsoup4
+Requires-Dist: pycord
+Requires-Dist: pygame
+Requires-Dist: pyinstaller
+Requires-Dist: pyautogui
+Requires-Dist: pynput
+Requires-Dist: pyperclip
+Requires-Dist: python-nmap
+Requires-Dist: selenium
+Requires-Dist: scapy
+Requires-Dist: twine
+Requires-Dist: tesseract
+Requires-Dist: termcolor
+
+This package is simply so when you first get Python, it installs all of the common packages.
+
+# Packages in...
+
+Version 1:
+ - requests
+ - pystyle
+ - colorama
+ - numpy
+ - datetime
+ - discord
+ - discord.py
+ - customtkinter
+ - auto-py-to-exe
+ - beutifulsoup4
+ - pycord
+ - pygame
+ - pyinstaller
+ - pyautogui
+ - pynput
+ - pyperclip
+ - python-nmap
+ - selenium
+ - scapy
+ - twine
+ - tesseract
+ - termcolor
