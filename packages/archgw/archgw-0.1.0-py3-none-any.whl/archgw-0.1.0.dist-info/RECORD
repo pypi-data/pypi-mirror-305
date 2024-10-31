@@ -1,0 +1,13 @@
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli/config_generator.py,sha256=RWHArturWQt4f6dGxDmFPfeCXej3k5TJD-wrryJI0Ko,4007
+cli/consts.py,sha256=VsI88tQc07ggBAv7dkdZKXjncUheRSCHTh-nOresoaQ,361
+cli/core.py,sha256=pdTip9IaRM_AYF9iP7ga1DCz7sFgzBcrc1JvbhiKXgU,7783
+cli/main.py,sha256=iON6TqmM5TH7OgOlKq0yHGiyfUfu9nR3ZVvJ4TYaVnU,11595
+cli/targets.py,sha256=uaWoNHRo9LtTbEhJu_oZGbpQ7uLtj6I1H2Y7FjzMVus,14844
+cli/utils.py,sha256=Pky8XnRdY3O2cI2Vcp7TKupgc3XmHrX_JlnDLQYD3Go,4404
+config/arch_config_schema.yaml,sha256=U9Oe-QDiro8VnO0TQQNrN8NNtR58_JRIMh7dNntg39w,3385
+config/docker-compose.yaml,sha256=1oUjm-rwyJH04OdbK12XgYX0twtsLiI-3qNAiC-jd6I,571
+archgw-0.1.0.dist-info/METADATA,sha256=0Uh10pyRgkUCoyQOw8dJqLiJdYEjNh9e4xA8thkUb2U,2172
+archgw-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+archgw-0.1.0.dist-info/entry_points.txt,sha256=veng1sTphHZOO6DvBOHBmBkXOgZQRSBaBY0EGSRyZJY,40
+archgw-0.1.0.dist-info/RECORD,,
