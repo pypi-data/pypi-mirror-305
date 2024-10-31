@@ -1,0 +1,7 @@
+pyproject.toml
+setup.py
+ostro/auth/__init__.py
+ostro_auth.egg-info/PKG-INFO
+ostro_auth.egg-info/SOURCES.txt
+ostro_auth.egg-info/dependency_links.txt
+ostro_auth.egg-info/top_level.txt
