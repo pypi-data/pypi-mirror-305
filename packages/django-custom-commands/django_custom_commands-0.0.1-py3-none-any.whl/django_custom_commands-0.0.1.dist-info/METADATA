@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: django-custom-commands
+Version: 0.0.1
+Summary: A Django package which allows specifying custom paths to load managenent commands from.
+Home-page: https://github.com/mikicz/django-custom-commands
+Keywords: django,commands
+Author: Mikuláš Poul
+Author-email: mikulaspoul@gmail.com
+Requires-Python: >=3.11
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 5.1
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: Public Domain
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Project-URL: Repository, https://github.com/mikicz/django-custom-commands
+Description-Content-Type: text/markdown
+
+# Django Custom Commands
+
+A Django package which allows specifying custom paths to load managenent commands from.
