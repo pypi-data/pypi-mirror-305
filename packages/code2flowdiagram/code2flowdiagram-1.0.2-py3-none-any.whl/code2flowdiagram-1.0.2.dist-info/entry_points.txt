@@ -1,0 +1,2 @@
+[console_scripts]
+code2flowdiagram = code2flowdiagram.engine:main
