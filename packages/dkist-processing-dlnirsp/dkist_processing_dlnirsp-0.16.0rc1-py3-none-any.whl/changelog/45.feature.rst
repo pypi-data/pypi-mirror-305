@@ -1,0 +1,2 @@
+Add ability to determine order of X/Y mosaic step loops.
+Understanding the loop order is crucial for correctly slicing the mosaic when observations were aborted.
