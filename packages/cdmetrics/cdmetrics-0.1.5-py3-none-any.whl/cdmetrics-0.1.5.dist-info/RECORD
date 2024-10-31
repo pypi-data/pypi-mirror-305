@@ -1,0 +1,11 @@
+CDmetrics/CDdm.py,sha256=4TWTmSxUqkClJgaPtFR7FW-X37eUI4M1gVKhX4jkjQw,2375
+CDmetrics/CDmc.py,sha256=sxSYFc8HRkukMMOHvPXiXAVaekrRB1k8pglunvaFwJE,1686
+CDmetrics/CDpu.py,sha256=tPEgs25xQXFuboU_CUGWwTXZCY6vs8mmJZhJTPqvwow,1921
+CDmetrics/__init__.py,sha256=rPSfWgIeq2YWVPyESOAwCBt8vftsTpIkuLAGDEzyRQc,22
+CDmetrics/nn.py,sha256=HA6e5HQ-4hH4XzV9pSiW6Sbt62uxRvlMGDfdVqn9La8,2673
+CDmetrics/utils.py,sha256=ubOH60WxPub2faqUnzo9ufT8qLdTs4VY_8MzjS0wsg0,1823
+cdmetrics-0.1.5.dist-info/LICENSE,sha256=jV8WN0fFctHgbFKB0b7HFOuKqHCb9Rm958bxhqTyJk8,1089
+cdmetrics-0.1.5.dist-info/METADATA,sha256=GmoB6oBdFbI_e5ofB_7LowtWrN7evYC2BdKrgQAoQQI,4318
+cdmetrics-0.1.5.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+cdmetrics-0.1.5.dist-info/top_level.txt,sha256=Rha-LDD8Mte5GpvGeWRWOhAHskkdQbeGFzU2BXXL4Fw,10
+cdmetrics-0.1.5.dist-info/RECORD,,
