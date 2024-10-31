@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/seemore/__init__.py
+src/seemore/core.py
+src/seemore/module.py
+src/seemore.egg-info/PKG-INFO
+src/seemore.egg-info/SOURCES.txt
+src/seemore.egg-info/dependency_links.txt
+src/seemore.egg-info/requires.txt
+src/seemore.egg-info/top_level.txt
+tests/test_core.py
