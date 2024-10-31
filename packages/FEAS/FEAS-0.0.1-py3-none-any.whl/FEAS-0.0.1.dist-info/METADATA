@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: FEAS
+Version: 0.0.1
+Summary: Fire Evacuation Automation System
+Home-page: https://github.com/tahiriqbal70/FEAS
+Author: TAHIR IQBAL
+Author-email: tahiriqbal70@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Fire Evacuation Automation System is a software that helps to automate the fire evacuation process. It can be used to monitor the fire situation, detect and locate fire extinguishers, and control the fire evacuation process.
