@@ -1,0 +1,2 @@
+[console_scripts]
+geminictrlpc = geminicontrolpc.geminicontrolpc:main
