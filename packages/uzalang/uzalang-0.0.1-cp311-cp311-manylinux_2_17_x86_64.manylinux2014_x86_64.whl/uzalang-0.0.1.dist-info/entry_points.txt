@@ -1,0 +1,2 @@
+[console_scripts]
+uza = uza.cli:main
