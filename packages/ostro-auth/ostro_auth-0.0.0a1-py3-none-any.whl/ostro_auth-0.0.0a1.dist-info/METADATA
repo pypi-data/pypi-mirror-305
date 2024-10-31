@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: ostro-auth
+Version: 0.0.0a1
+Summary: Auth package for the Ostro project
+Requires-Python: >=3.6
+
