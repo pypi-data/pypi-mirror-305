@@ -1,0 +1,15 @@
+test/test_end_to_end_vm.py,sha256=YbFK5VyfqZCiP0fk1yHQtlz8gkrYCSMO4TprvS6DkME,1688
+test/test_parser.py,sha256=3K6Cl9T-0hQDDdHT0PdU8dv8OYcddBo-u7OGudye_lQ,4366
+test/helper.py,sha256=sWCSdKmy51GObtMzqapMNmn0bqD3qgr8WFNDSlyZbuU,1268
+test/test_end_to_end.py,sha256=a7-qI1lQUkZNOVIyY_UoPCPVIJDKisKIXCb1HxFu8jQ,932
+test/__init__.py,sha256=oPXE09vCpI3Yi-jv-p4cHWJBLcgyb_RxgVe_tygdrPk,103
+test/test_typing.py,sha256=G0R91dp5vgpt3SiZ4Jf96fe3AeYcULrueD0sHDh7PH4,1956
+uza-0.0.1.dist-info/top_level.txt,sha256=79NacVxXdgshl6e1_gRuqHDO4n2792ZtKsZSagjqCls,8
+uza-0.0.1.dist-info/RECORD,,
+uza-0.0.1.dist-info/LICENSE,sha256=E4yqJ_nIem0N3YPm9UlhRi8COzVpitE_WfD8A84_ng4,1064
+uza-0.0.1.dist-info/entry_points.txt,sha256=n48MoqsR9hJvT1vT4hfkPdixKUnOmC1HA4ZaLpFaq2A,37
+uza-0.0.1.dist-info/METADATA,sha256=FEGIgQPz0m38KyKcAk9FKXHK0HHq13TuLybsZ5s1ewU,94
+uza-0.0.1.dist-info/WHEEL,sha256=159kqNsZaAKJ8cpWVY6xL_YwLJnbJ33tlCsaPyRbeYY,146
+vm/main.py,sha256=D18kjGNtkJtYFjj4l_UicXf1jauV7A5Bhk6QK0E0z60,1197
+vm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vm/lib/libvm.so,sha256=H8sbAonjAKv-stViMiDrUSi7-KnJm9bl1fQCRhfSFJI,17976
