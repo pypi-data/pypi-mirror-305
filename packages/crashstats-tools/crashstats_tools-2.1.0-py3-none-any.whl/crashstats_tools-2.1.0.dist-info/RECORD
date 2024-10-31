@@ -1,0 +1,13 @@
+crashstats_tools/__init__.py,sha256=wHygoHF98cHmFEV0CK6Z1JbeZWKHoUVQqCxPdnoc-4c,415
+crashstats_tools/cmd_fetch_data.py,sha256=co3m8LLXSEn8W022PYBKoKsuF-KAZbNd0K4Du4bQjf0,10393
+crashstats_tools/cmd_reprocess.py,sha256=vD1I2B3nHBs-CToJcmDeXVjMYb6lM5-AOTbDdq-IweA,6083
+crashstats_tools/cmd_supersearch.py,sha256=CkWUkdU34illdVSIwqFwhLTSgpVNjJUA8n7DlwDFKlQ,9938
+crashstats_tools/cmd_supersearchfacet.py,sha256=8EbtokNUeidTtakc1z6Ot7DmvmE5H-Std2MdZGCGyx4,19241
+crashstats_tools/libcrashstats.py,sha256=J5FJuHn1jJwdmiZvcNYc8PzDocf5CCZ81bCScWuImw8,6902
+crashstats_tools/utils.py,sha256=CIdmGEm42U_4a61jDNp-YpkoCttPAUCSEAIxQYzUw6E,13989
+crashstats_tools-2.1.0.dist-info/LICENSE,sha256=vvF0ftqIue1G6UgwsNl4w0mdrV3-ONNklxdgiBkB2t0,15977
+crashstats_tools-2.1.0.dist-info/METADATA,sha256=aHS8QPcFpRv4gJ4N4TcJbXFGTdyNx5CLTlWjerIij6Y,24807
+crashstats_tools-2.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+crashstats_tools-2.1.0.dist-info/entry_points.txt,sha256=5F21kQ6veVDzlugFbo22Nokj3fBo17S5fVdIJ2RZcJM,264
+crashstats_tools-2.1.0.dist-info/top_level.txt,sha256=5kv2kEVMRbaNtoqxAQrHJIYVaDwI4ZQZRoaOu2I8Png,17
+crashstats_tools-2.1.0.dist-info/RECORD,,
