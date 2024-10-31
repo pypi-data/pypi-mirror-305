@@ -1,0 +1,15 @@
+revus/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+revus/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+revus/app/cli.py,sha256=NbR9I4J2HTiZLstMsx_MbHt8CnBH2vT2NGQ6uEk6LDM,1762
+revus/app/code_reviewer.py,sha256=XEpsuZwquD35Penaet_ayA6mmVK9HLtzC22Cyi7_BiA,3545
+revus/app/config.py,sha256=yDWVdGBjYi2fq2TEeEpycT2FsK76zd0f2e-XKsJTb2g,862
+revus/app/git_operations.py,sha256=4iAZ6RdHld1ZMhEuFMxS7JXbfOd9uokQg7LpQsCMQoU,1326
+revus/app/llm_client.py,sha256=DTkm3CcqyYKmPy1YwhkO6KkHnqz4AAO_lk538XO4PBw,830
+revus/app/logger.py,sha256=VCFV_N-8i_cUYqMz6ZLXDb9OHWxZF0TesS1Uyj-10cQ,502
+revus/app/review_executor.py,sha256=Swv47Aifs58xFkw_gH64mkQc22r39tIeDylhq4FNY_A,555
+revus/app/review_manager.py,sha256=-Wu9jGx8j-_Quoy6ByYdahlDt0HvHx3xLXlh6xiBjO0,1156
+revus/main.py,sha256=NAQszdpU2YuRowAES6ZYDVQHGn6geh0N12ops8mQ948,130
+revus-0.0.2.dist-info/METADATA,sha256=WbXtVStSgiHdDCW67h_YbUfTWDwP3YG_gUGxvj8gyuA,2443
+revus-0.0.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+revus-0.0.2.dist-info/entry_points.txt,sha256=9i2dMM1XijOJ-e2B1Sulpxi7PGyEhBd-wcsfZwF9nRM,41
+revus-0.0.2.dist-info/RECORD,,
