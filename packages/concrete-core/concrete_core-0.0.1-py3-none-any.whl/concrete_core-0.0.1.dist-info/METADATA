@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: concrete-core
+Version: 0.0.1
+Summary: AI Agent Orchestration
+Requires-Python: <4.0.0,>=3.11.9
+Description-Content-Type: text/markdown
+
