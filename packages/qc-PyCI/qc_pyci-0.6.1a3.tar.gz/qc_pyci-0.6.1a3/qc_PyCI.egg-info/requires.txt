@@ -1,0 +1,12 @@
+numpy>=1.13
+scipy>=1.0
+
+[doc]
+sphinx
+nbsphinx
+sphinx_rtd_theme
+
+[test]
+pytest>=6.0
+pycodestyle
+pydocstyle
