@@ -1,0 +1,109 @@
+[project]
+name = "crashstats-tools"
+description = "Tools for working with Crash Stats (https://crash-stats.mozilla.org/)"
+version = "2.1.0"
+readme = "README.rst"
+keywords = ["socorro"]
+authors = [{name = "Will Kahn-Greene"}]
+license = {text = "MPLv2"}
+requires-python = ">=3.9"
+dependencies = [
+    "click",
+    "more_itertools",
+    "python-dotenv",
+    "requests",
+    "rich",
+    "tomli>=1.1.0; python_version < '3.11'",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+urls.Homepage = "https://github.com/mozilla-services/crashstats-tools"
+urls.Source = "https://github.com/mozilla-services/crashstats-tools"
+urls.Issues = "https://github.com/mozilla-services/crashstats-tools"
+
+[project.scripts]
+fetch-data = "crashstats_tools.cmd_fetch_data:fetch_data"
+reprocess = "crashstats_tools.cmd_reprocess:reprocess"
+supersearch = "crashstats_tools.cmd_supersearch:supersearch_cli"
+supersearchfacet = "crashstats_tools.cmd_supersearchfacet:supersearchfacet"
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "cogapp",
+    "freezegun",
+    "pytest",
+    "responses",
+    "ruff",
+    "setuptools",
+    "tox",
+    "tox-gh-actions",
+    "twine",
+    "wheel",
+]
+
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.ruff]
+target-version = "py39"
+src = ["src"]
+line-length = 88
+
+[tool.ruff.lint]
+# Enable pycodestyle (E), pyflakes (F), and bugbear (B) rules
+select = ["E", "F", "B"]
+
+# Ignore line-length violations; ruff format does its best and we can rely on
+# that
+ignore = ["E501"]
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = True
+envlist =
+    py39
+    py39-lint
+    py310
+    py311
+    py312
+
+[gh-actions]
+python =
+    3.9: py39
+    3.10: py310
+    3.11: py311
+    3.12: py312
+
+[testenv]
+extras = dev
+commands = pytest {posargs}
+
+[testenv:py39-lint]
+allowlist_externals = ruff
+basepython = python3.9
+changedir = {toxinidir}
+commands =
+    ruff format --check src tests
+    ruff check src tests
+"""
