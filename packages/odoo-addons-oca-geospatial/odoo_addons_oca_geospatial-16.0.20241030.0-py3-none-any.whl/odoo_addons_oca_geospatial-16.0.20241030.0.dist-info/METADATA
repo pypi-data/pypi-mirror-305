@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-geospatial
+Version: 16.0.20241030.0
+Summary: Meta package for oca-geospatial Odoo addons
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 16.0
+Requires-Dist: odoo-addon-base-geoengine<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-base-geoengine-demo<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-base-geolocalize-company<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-geoengine-base-geolocalize<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-geoengine-partner<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-web-leaflet-lib<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-web-view-leaflet-map<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-web-view-leaflet-map-partner<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-website-geoengine<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-website-geoengine-store-locator<16.1dev,>=16.0dev
+
+UNKNOWN
