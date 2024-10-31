@@ -1,0 +1,15 @@
+class {{ model.name }}(Model):
+    """{{ model.description }}
+
+    Attributes:
+    {% for field in model.fields %}
+        {{ field.name | to_snake }} ({{ field.annotation_type }}): {{ field.description}}
+    {% endfor %}
+    """
+
+    _gql_type: str = "{{ model.gql_type }}"
+    _gql_root_field: str = "{{ model.root_field }}"
+
+    {% for field in model.fields %}
+    {{ field.name | to_snake }}: {{ field.annotation_type }} = {{ field.default_value }}
+    {% endfor %}
