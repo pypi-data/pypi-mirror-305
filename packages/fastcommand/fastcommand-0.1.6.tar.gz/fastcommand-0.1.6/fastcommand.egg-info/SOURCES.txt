@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+fastcommand/__init__.py
+fastcommand/main.py
+fastcommand.egg-info/PKG-INFO
+fastcommand.egg-info/SOURCES.txt
+fastcommand.egg-info/dependency_links.txt
+fastcommand.egg-info/top_level.txt
