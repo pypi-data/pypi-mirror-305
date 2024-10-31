@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+serial_generator.egg-info/PKG-INFO
+serial_generator.egg-info/SOURCES.txt
+serial_generator.egg-info/dependency_links.txt
+serial_generator.egg-info/top_level.txt
+your_module/__init__.py
+your_module/generator.py
