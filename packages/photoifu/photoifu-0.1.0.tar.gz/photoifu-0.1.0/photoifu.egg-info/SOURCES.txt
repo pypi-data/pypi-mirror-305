@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+photoifu/__init__.py
+photoifu/photoref.py
+photoifu/slice.py
+photoifu/utils.py
+photoifu.egg-info/PKG-INFO
+photoifu.egg-info/SOURCES.txt
+photoifu.egg-info/dependency_links.txt
+photoifu.egg-info/not-zip-safe
+photoifu.egg-info/requires.txt
+photoifu.egg-info/top_level.txt

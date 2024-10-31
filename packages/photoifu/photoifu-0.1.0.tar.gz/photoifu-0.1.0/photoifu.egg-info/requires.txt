@@ -1,0 +1,13 @@
+numpy
+pandas
+scipy
+matplotlib
+pixelproject
+propobject
+
+[docs]
+nbsphinx
+
+[tests]
+pytest
+coverage
