@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: pyxel_helper
+Version: 0.0.2
+Summary: Helper for the retro game engine Pyxel, that adds basic game engine elements
+Author-email: Mildu <mildu.misc@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
