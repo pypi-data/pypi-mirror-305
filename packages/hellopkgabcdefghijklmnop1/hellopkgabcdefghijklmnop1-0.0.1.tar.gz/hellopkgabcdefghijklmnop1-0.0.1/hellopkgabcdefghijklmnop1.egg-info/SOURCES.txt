@@ -1,0 +1,7 @@
+setup.py
+JustATest0/__init__.py
+JustATest0/hello.py
+hellopkgabcdefghijklmnop1.egg-info/PKG-INFO
+hellopkgabcdefghijklmnop1.egg-info/SOURCES.txt
+hellopkgabcdefghijklmnop1.egg-info/dependency_links.txt
+hellopkgabcdefghijklmnop1.egg-info/top_level.txt
