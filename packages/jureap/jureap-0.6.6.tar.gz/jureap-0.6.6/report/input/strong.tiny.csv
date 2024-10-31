@@ -1,0 +1,5 @@
+﻿system,nodes,GPUs,runtime,Full,Per Step,Elem/GPU,Pts/GPU,JOBID
+juwelsbooster,8,32,116.9806,n/a,0.1169806,0,0,10468429
+juwelsbooster,16,64,66.9942,n/a,0.0669942,0,0,10468430
+juwelsbooster,24,96,50.2268,n/a,0.0502268,0,0,10468431
+juwelsbooster,32,128,45.0038,n/a,0.0450038,0,0,10468432
