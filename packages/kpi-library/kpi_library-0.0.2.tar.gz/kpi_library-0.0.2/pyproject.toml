@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'kpi_library'
+version = '0.0.2'
+authors = [
+    {name='Arantzazu Lopez-Larrainzar Salazar', email='alopezlarrainzar@iti.es'}
+]
+description="Quality profiler library"
+readme='README.md'
+requires-python=">=3.10"
+classifiers=[
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
