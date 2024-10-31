@@ -1,0 +1,8 @@
+README.md
+setup.py
+HelloProject/Hello.py
+HelloProject/_init_.py
+busisfirstpackage.egg-info/PKG-INFO
+busisfirstpackage.egg-info/SOURCES.txt
+busisfirstpackage.egg-info/dependency_links.txt
+busisfirstpackage.egg-info/top_level.txt
