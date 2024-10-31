@@ -1,0 +1,10 @@
+stringzilla.cpython-310-arm-linux-gnueabihf.so,sha256=WTdMNJxKmEI0be04ZgPK3SYLBRzs14i3-0tFX4q2ioA,346752
+stringzilla-3.10.7.dist-info/entry_points.txt,sha256=Xb61_R-C3KmzJc7YSQ3lf6xJGw-cE8CeeMaFuAGiVRw,64
+stringzilla-3.10.7.dist-info/top_level.txt,sha256=U1mcf1aXFqpjrfKgss9_dJWQaMOA-h9IR790RYAeT_Q,16
+stringzilla-3.10.7.dist-info/METADATA,sha256=8XjsgKTuH-V4qr0xXwI9fd6jj5yy-rUBkxnlHnMjLok,79842
+stringzilla-3.10.7.dist-info/WHEEL,sha256=UCbtw1u9KNheCdguf6AjXgySE4i9bkFrkFwzjiPK87E,112
+stringzilla-3.10.7.dist-info/RECORD,,
+stringzilla-3.10.7.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cli/wc.py,sha256=jvNleQtvxHoPkM0TtZ4-vWrcZE68023DwFKNN4fxpLg,4303
+cli/split.py,sha256=OCc-DsSiOqfk2gPRn31D47OzgF0VS08Hg3d-jI-sMjY,3430
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
