@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "easy_insight"
+version = "0.1.0"
+description = "A simple library for easy exploratory data analysis"
+authors = ["Durgesh Rathod <durgeshrathod.777@gmail.com>"]
+readme = "README.md"  # Make sure this file exists
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pandas = "^2.2.3"
+numpy = "^2.1.2"
+matplotlib = "^3.9.2"
+setuptools = "^75.3.0"
+twine = "^5.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
