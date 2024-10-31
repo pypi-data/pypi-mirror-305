@@ -1,0 +1,8 @@
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_z_scores.py,sha256=QSn0B4zKIkKidTaJwFmjO8bx-F8okGcGjJ5VuPeFsno,5294
+z_score_calculator/__init__.py,sha256=1v2qOs25K7uXKQCEG-o80D9sWNfVFYj5X5MEAZC01AE,26
+z_score_calculator/calculator.py,sha256=jcqjDdmcTWWgF746-aEsUwryZtNm1RmbNukFPZbyUiw,4465
+ZScoreCalculator-0.2.0.dist-info/METADATA,sha256=zwiZwG6iCyGHCbXyfiNilxEHKFgaA6x7fl4_Pxmcrqw,380
+ZScoreCalculator-0.2.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+ZScoreCalculator-0.2.0.dist-info/top_level.txt,sha256=9BhT3IHOxOTd-jq-neCR4yycF7JBN8hLlvA6M5JDpqY,24
+ZScoreCalculator-0.2.0.dist-info/RECORD,,
