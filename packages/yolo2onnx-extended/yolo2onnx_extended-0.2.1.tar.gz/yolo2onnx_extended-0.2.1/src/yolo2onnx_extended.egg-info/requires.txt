@@ -1,0 +1,15 @@
+torch
+torchaudio
+torchvision
+onnx
+onnxruntime
+onnxruntime-extensions
+ultralytics
+typer
+
+[dev]
+black
+flake8
+
+[gpu]
+onnxruntime-gpu
