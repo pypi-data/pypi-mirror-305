@@ -1,0 +1,43 @@
+[project]
+name = "xiaomi_flashable_firmware_creator"
+version = "2.2.14"
+description = "Create flashable firmware zip from MIUI and HyperOS Recovery ROMs!"
+authors = [{ name = "yshalsager", email = "contact@yshalsager.com" }]
+license = { file = "LICENSE" }
+repository = "https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator/"
+homepage = "https://xmfirmwareupdater.com/projects/xiaomi-flashable-firmware-creator/"
+keywords = ["xiaomi", "firmware", "android"]
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "remotezip>=0.12.3",
+    "protobuf>=4.22.1,<6.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.0.0",
+    "ruff>=0.7.1",
+]
+
+[project.scripts]
+xiaomi_flashable_firmware_creator = "xiaomi_flashable_firmware_creator.xiaomi_flashable_firmware_creator:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+only-include = ["xiaomi_flashable_firmware_creator", "pyproject.toml", "README.md"]
+
+[tool.ruff]
+fix = true
+src = ["xiaomi_flashable_firmware_creator"]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+line-ending = "lf"

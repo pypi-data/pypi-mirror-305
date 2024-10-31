@@ -1,0 +1,13 @@
+__pycache__
+build/
+dist/
+.idea/
+.vscode/
+env/
+venv/
+.python-version
+*.log
+*.build
+*.zip
+*bak*
+tmp*
