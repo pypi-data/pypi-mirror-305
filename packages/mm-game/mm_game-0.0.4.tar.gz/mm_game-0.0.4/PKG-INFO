@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: mm_game
+Version: 0.0.4
+Summary: Embbed python package for market data (with pybind11)
+Author-Email: Hoang Nguyen <nguyendoanhoang0705@gmail.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Description-Content-Type: text/markdown
+
+# Market Maker Game
+
+[![Gitter][gitter-badge]][gitter-link]
+
+|      CI              | Status |
+|----------------------|--------|
+| Conda Recipe         | [![Conda Actions Status][actions-conda-badge]][actions-conda-link] |
+| Pip Builds           | [![Pip Actions Status][actions-pip-badge]][actions-pip-link] |
+
+This package, `Market Maker Game`, simulates market data for testing and developing trading strategies. It is built with [pybind11](https://github.com/pybind/pybind11) and [scikit-build-core](https://github.com/scikit-build/scikit-build-core), supporting Python 3.9+ (for legacy support, see older versions using [scikit-build (classic)](https://scikit-build.readthedocs.io/en/latest/])).
+
+[gitter-badge]:            https://badges.gitter.im/pybind/Lobby.svg
+[gitter-link]:             https://gitter.im/pybind/Lobby
+[actions-badge]:           https://github.com/your-username/market_maker_game/workflows/Tests/badge.svg
+[actions-conda-link]:      https://github.com/your-username/market_maker_game/actions?query=workflow%3AConda
+[actions-conda-badge]:     https://github.com/your-username/market_maker_game/workflows/Conda/badge.svg
+[actions-pip-link]:        https://github.com/your-username/market_maker_game/actions?query=workflow%3APip
+[actions-pip-badge]:       https://github.com/your-username/market_maker_game/workflows/Pip/badge.svg
+
+## Features
+
+- **Market Data Simulation**: Provides realistic simulated market data for testing trading algorithms.
+- **Customizable**: Instantiate `MarketData` objects with custom parameters for flexible scenario testing.
+- **Easy Integration**: Built with `pybind11`, making it easy to integrate into Python environments.
+
+## Requirements
+
+- **Python**: 3.9+
+- **pip**: 21.0+
+
+## Setup
+
+To set up the development environment, ensure you have the required versions of Python and pip installed. You can check your current versions with:
+
+```bash
+python --version
+pip --version
+```
+
+If you need to upgrade pip, you can do so with:
+
+```bash
+pip install --upgrade pip
+```
+
+Install package from PYPI
+
+```bash
+python -m pip install mm_game
+```
+
+## Installation for local development
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/market_maker_game.git
+   ```
+
+2. Install the package:
+    ```bash
+    pip install ./mm_game
+    ```
+
+3. Test
+    ```python
+    from mm_game import MarketData
+    ```
+
+## Example Usage
+```python
+from market_maker_game import MarketData
+
+# Initialize MarketData with initial prices
+market_data = MarketData(100.0, 105.0)
+
+# Get the next set of simulated prices
+next_prices = market_data.getNextPrices()
+print("Next simulated prices:", next_prices)
+```
+
+## Deployment
+
+```
+build.bat
+```
+
+## Key Files
+**Required**
+
+`pyproject.toml`: Defines the package's Python dependencies.
+
+`CMakeLists.txt`: CMake configuration. 
+
+`src/main.cpp`: C++ source code implementing market data simulation.
+
+`src/market_maker_game/__init__.py`: Python wrapper for the C++ module.
+
+## License
+This package is provided under a BSD-style license, as specified in the LICENSE file. By using or contributing to this project, you agree to the license terms.
+
+
+
