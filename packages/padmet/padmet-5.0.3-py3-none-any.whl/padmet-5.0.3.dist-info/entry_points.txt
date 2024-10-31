@@ -1,0 +1,2 @@
+[console_scripts]
+padmet = padmet.__main__:main
