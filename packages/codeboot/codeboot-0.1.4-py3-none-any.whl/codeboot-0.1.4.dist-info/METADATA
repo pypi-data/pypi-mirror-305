@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: codeboot
+Version: 0.1.4
+Summary: Fonctions de Codeboot. Voir doc codeboot
+Home-page: https://github.com/Victorio-NASCIMENTO/Fonctions_Codeboot/tree/main
+Author: Victorio N.
+Author-email: victorio.nascimento@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pygame
+
