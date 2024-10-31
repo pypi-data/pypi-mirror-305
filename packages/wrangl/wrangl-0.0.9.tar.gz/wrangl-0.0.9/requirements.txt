@@ -1,0 +1,10 @@
+ujson
+plotille
+pandas
+pdoc
+wandb
+hydra-core
+hydra-submitit-launcher
+lightning
+gitpython
+seaborn
