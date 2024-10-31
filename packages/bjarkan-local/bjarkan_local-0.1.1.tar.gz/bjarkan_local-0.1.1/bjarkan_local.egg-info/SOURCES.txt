@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+bjarkan_local.egg-info/PKG-INFO
+bjarkan_local.egg-info/SOURCES.txt
+bjarkan_local.egg-info/dependency_links.txt
+bjarkan_local.egg-info/requires.txt
+bjarkan_local.egg-info/top_level.txt
