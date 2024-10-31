@@ -1,0 +1,5 @@
+[console_scripts]
+enjam = enjam.main:run
+
+[gui_scripts]
+
