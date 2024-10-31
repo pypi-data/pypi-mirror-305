@@ -1,0 +1,12 @@
+numpy
+argparse
+textual
+pillow
+cairosvg
+shutil
+tqdm
+art
+tree-sitter==0.21.3
+tree-sitter-languages==1.10.2
+asyncio
+traceback
