@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+v1.0.2
+------
+
+* Add check for amount when using node\_type
