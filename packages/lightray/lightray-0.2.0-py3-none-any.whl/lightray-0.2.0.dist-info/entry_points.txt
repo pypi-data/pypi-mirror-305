@@ -1,0 +1,3 @@
+[console_scripts]
+lightray=lightray.cli:cli
+
