@@ -1,0 +1,12 @@
+SimpleITK/_SimpleITK.abi3.so,sha256=rCOg0TeORBB6xUbxpk7Ng4CHSsirUDhnzOFInz3nHP4,362656872
+SimpleITK/SimpleITK.py,sha256=hf-5mVgzTw9pevtipgSFQ2djqXirdvPRJLEm_Aowrsc,1980333
+SimpleITK/__init__.py,sha256=rcqfwADepv7hsdlUdAnvq6QvDdbh5amE9vd5GpUGiqo,846
+SimpleITK/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SimpleITK/extra.py,sha256=6xOrjL6nZsl6iUVPLYSy0j8IetdvajCjwUckVxCq_lg,16368
+SimpleITK/_version.py,sha256=4XprL0cDOVon2Dbz0kzeDXkpgeTSyua-O3xhjRu8t4o,1522
+SimpleITK_SimpleElastix-2.5.0.dev49.dist-info/RECORD,,
+SimpleITK_SimpleElastix-2.5.0.dev49.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+SimpleITK_SimpleElastix-2.5.0.dev49.dist-info/NOTICE,sha256=CR8SzcM7lSinW9xYMEDEoO_iT0LP4WckdQVYCaP3Y6o,174
+SimpleITK_SimpleElastix-2.5.0.dev49.dist-info/top_level.txt,sha256=B1KR4Uq5HwDUTeXLYhuUE_Ryfnp5j8Tik9KptJj7Wr8,10
+SimpleITK_SimpleElastix-2.5.0.dev49.dist-info/METADATA,sha256=Ptn7d8DTBLguS0ZWURcvA52U3EwK470gsnKA5SCPLWA,2308
+SimpleITK_SimpleElastix-2.5.0.dev49.dist-info/WHEEL,sha256=xQll4wLmAkhw85gpOuwZlJUiogE7IdK7PfwHHQD4Ljk,151
