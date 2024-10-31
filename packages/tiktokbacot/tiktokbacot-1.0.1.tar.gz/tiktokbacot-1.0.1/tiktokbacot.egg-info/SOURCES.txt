@@ -1,0 +1,9 @@
+README.md
+setup.py
+tiktokbacot/__init__.py
+tiktokbacot/tts.py
+tiktokbacot.egg-info/PKG-INFO
+tiktokbacot.egg-info/SOURCES.txt
+tiktokbacot.egg-info/dependency_links.txt
+tiktokbacot.egg-info/requires.txt
+tiktokbacot.egg-info/top_level.txt
