@@ -1,0 +1,9 @@
+ndx_binned_spikes/spec/ndx-binned-spikes.extensions.yaml,sha256=E-4CuR2srT9g4cn_jINAw6egPioVyymLEWZ3fMcKV60,2383
+ndx_binned_spikes/spec/ndx-binned-spikes.namespace.yaml,sha256=ADk6TJW0OC6OSJgxhWJpwe2Tj_4ywI4mnNCQiheBwRU,255
+ndx_binned_spikes/__init__.py,sha256=JrAZ6BiWxerECsRwyeruC_uokwhUi_4Upacl0acstXI,7414
+ndx_binned_spikes/testing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ndx_binned_spikes/testing/mock.py,sha256=N9JLePvQR_2ldP_VT9iSAhc6-S_NvyeLH6jflE3kVac,6120
+ndx_binned_spikes-0.2.1.dist-info/METADATA,sha256=tiVeWCkqlwq1Vr6r5EnEQVr2c_EEs8r7HdEuEYATfbg,16199
+ndx_binned_spikes-0.2.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+ndx_binned_spikes-0.2.1.dist-info/licenses/LICENSE.txt,sha256=1Er-XZEOLba-7Sav24tcU7Ch5Ltk7wpTv9k-WDRTFmI,1087
+ndx_binned_spikes-0.2.1.dist-info/RECORD,,
