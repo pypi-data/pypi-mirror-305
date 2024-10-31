@@ -1,0 +1,9 @@
+kew/__init__.py,sha256=cGsHhHRaaOR9gTSJaH2sXNl0iB7-puphFFvzXrwJxok,467
+kew/exceptions.py,sha256=jL2CAlnh1fTa5cgk4Vl3rbsQhc9ZwbxfWn_DwrWAO6c,452
+kew/manager.py,sha256=NBLyhhxnUSoRi_eR6wFHhzGHj-5Ed3T-lJNgTQsMgr8,10403
+kew/models.py,sha256=Ze3ndjOl18qD1NaJBgSCwT2_qnDKEoHX1o1L9HO1Oxw,1679
+kew/tests/conftest.py,sha256=t31N13zPgUYLAtcOp8AjNuK22B8OhBjkiTYNqdWvrD4,264
+kew/tests/test_queue_manager.py,sha256=TI6I8S7wy38-oE7eTDe-Jew47NZSN6dt-BtH7ICYegc,5938
+kew-0.1.1.dist-info/METADATA,sha256=27vALw1W9Oxm4d8ZI8WygrmY7Gur5-qixW3jSeyDNnE,5534
+kew-0.1.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+kew-0.1.1.dist-info/RECORD,,
