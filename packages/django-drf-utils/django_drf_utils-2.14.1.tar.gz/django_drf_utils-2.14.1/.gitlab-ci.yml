@@ -1,0 +1,61 @@
+stages:
+  - test
+  - publish
+
+include:
+  - template: Workflows/MergeRequest-Pipelines.gitlab-ci.yml
+  - template: Jobs/Secret-Detection.latest.gitlab-ci.yml
+  - template: Jobs/SAST.latest.gitlab-ci.yml
+  - project: biomedit/tools/ci
+    file:
+      - "/template/lint-commit.yml"
+      - "/template/publish-gitlab-release.yml"
+
+.base:
+  stage: test
+  image: docker.io/library/python:3.13-alpine
+
+format:
+  extends: .base
+  before_script:
+    - pip install `sed -nE 's/.*(ruff==[0-9\.]+).*/\1/p' pyproject.toml`
+  script:
+    - ruff format --check .
+
+lint:
+  extends: .base
+  before_script:
+    - pip install `sed -nE 's/.*(ruff==[0-9\.]+).*/\1/p' pyproject.toml`
+  script:
+    - ruff check .
+
+lint-types:
+  extends: .base
+  before_script:
+    - pip install .[dev]
+  script:
+    - mypy
+
+lint-security:
+  extends: .base
+  before_script:
+    - pip install `sed -nE 's/.*(bandit==[0-9\.]+).*/\1/p' pyproject.toml`
+  script:
+    - bandit --ini .bandit
+
+test:
+  extends: .base
+  before_script:
+    - pip install `sed -nE 's/.*(tox==[0-9\.]+).*/\1/p' pyproject.toml`
+  script:
+    - tox
+  coverage: '/^TOTAL.+?(\d+\%)$/'
+
+publish:
+  stage: publish
+  image: ghcr.io/astral-sh/uv:python3.13-alpine
+  script:
+    - uv build
+    - uv publish
+  only:
+    - tags
