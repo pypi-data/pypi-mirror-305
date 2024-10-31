@@ -1,0 +1,10 @@
+aristech_stt_client/__init__.py,sha256=cLYVWoyN6atqppGoc8JLJYLwnAyOWUnhZ-iaBqZpo_s,351
+aristech_stt_client/client.py,sha256=knLoTSsSud3Pt1bONGY3OORqtP8RrS4kdt6p24_EA60,5909
+aristech_stt_client/proto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aristech_stt_client/proto/stt_service_pb2.py,sha256=vpd7eCW3soufvP2BQcaIEyJ0FH9Fc8bXSFtvCZCU1GQ,11843
+aristech_stt_client/proto/stt_service_pb2.pyi,sha256=VV8RvzHf-hWJT5W6lTsA5YOuctcnTyJWRFjOuqJd7mE,40807
+aristech_stt_client/proto/stt_service_pb2_grpc.py,sha256=RzhlcUFV6W3IsVyq7JT8XQXHLrU4n7OCsZ2AazkWaos,12197
+aristech_stt_client-1.1.0.dist-info/METADATA,sha256=p7lNrtOcPetoAi6ttqvBhXooSV4Cs9D1dabx7FxUE5w,2943
+aristech_stt_client-1.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+aristech_stt_client-1.1.0.dist-info/top_level.txt,sha256=sN2cLuKP4ZYYBuY0L9bkCnE0Kso_um0LJHnhEmIY00Y,20
+aristech_stt_client-1.1.0.dist-info/RECORD,,
