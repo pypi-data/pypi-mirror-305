@@ -1,0 +1,7 @@
+click
+requests
+pandas==2.2.3
+numpy==2.1.2
+certifi
+psycopg2-binary
+boto3
