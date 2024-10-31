@@ -1,0 +1,12 @@
+restfull/__init__.py,sha256=7EOuewmsF0HQeytDnMvFA0r--n5vV6oNx-MSoiEceyw,85
+restfull/base_auth.py,sha256=eZ6L0FTco-xpG6SyNwj_qlPSWMhRQjm-cH4FjZy_-ZI,256
+restfull/basic_auth.py,sha256=C4YJUgyeZCXFIFqRj1SCA7IA9c8lqlxB7K9vDKpG8Hw,632
+restfull/bearer_auth.py,sha256=8t6EoF6tnAUbFFC17qjP2dhrnUf8dY-UlSXtuXwizYE,416
+restfull/data.py,sha256=betw1aBdOdj-Xy6itv1dvtPA3SwJ7bY_vbT8KC6r3pQ,855
+restfull/exceptions.py,sha256=UsMEItq3l_U2kwM4B5n1cZzwKZqpzV9XV3BAR5TL760,689
+restfull/no_auth.py,sha256=ORwmTdm8QUVp858NNHLn5VzubzGWJAHcFDmzKcExnCk,248
+restfull/restapi.py,sha256=t_SHhbmaovhweNr472WoO05Pm_X-KXrACoPn63MEkwc,15711
+restfull-1.0.13.dist-info/LICENSE.txt,sha256=fPpSXsVClsKqv6QhFoKI5B-bLbV_NXY8WA0bANyMfTk,1074
+restfull-1.0.13.dist-info/METADATA,sha256=6u3IJBIZOiBnCYC_7m3GL2sHONxT3RmxJvF0jwUGljs,2040
+restfull-1.0.13.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+restfull-1.0.13.dist-info/RECORD,,
