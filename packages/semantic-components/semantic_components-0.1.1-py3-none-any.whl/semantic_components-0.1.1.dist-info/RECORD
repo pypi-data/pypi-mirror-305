@@ -1,0 +1,12 @@
+semantic_components/__init__.py,sha256=WqYCoWvqZeKpSrKN4gGQTeWmqyz6eQYhh2e4KvUiuW0,16
+semantic_components/cluster_pipeline.py,sha256=ntHXbOO5ccusO2wD9Ezc2VabcDyUfWocxjg_usNGk8Q,5763
+semantic_components/decomposition.py,sha256=LA3YJ_ONR-m0b8sUle27VOfBSYeTxSxPV57fFC9q9ic,16388
+semantic_components/evaluation.py,sha256=qHkE225AhqxGBMNbl6vbX5pboVa5xX598BrpZO_RlHw,17847
+semantic_components/representation.py,sha256=EAMp1yG-U7xS0Q3NFslHtL0sSa2XmHx1vwwx-_cWb6o,23298
+semantic_components/sca.py,sha256=UPNrZmAvhmTphxZnEbT9sm-PMP0zQGkQKhiggUR801o,16916
+semantic_components/translate_gpt.py,sha256=y5_8XiNcLlQvtqG_4s33Wc9jRYZQG7o0grEuEisVbMo,2035
+semantic_components-0.1.1.dist-info/LICENSE,sha256=J_al-3XJYGvJSg4JWuPNZ8-QlCERVdIppVZkJBtvaJE,1071
+semantic_components-0.1.1.dist-info/METADATA,sha256=iIxRaakbzvDJw5clhx9EIPK3s176xN7YDAD8yQT77L8,9495
+semantic_components-0.1.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+semantic_components-0.1.1.dist-info/top_level.txt,sha256=-cK9dNLEaZhaupE1Lxs7Soc2DF-a3J7OzO4dbma7RrM,20
+semantic_components-0.1.1.dist-info/RECORD,,
