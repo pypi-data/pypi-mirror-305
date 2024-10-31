@@ -1,0 +1,9 @@
+shiller_data_processing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shiller_data_processing/data_extraction.py,sha256=q2n7t0LtFYE9hmsdfbSVA-R8RIfrB5T38RYfQVtoANQ,4809
+shiller_data_processing/dataframe_manipulations.py,sha256=24YQYweEyr4ZlTVX7uPzxAzcYpyBEBsHQua9ejCFrQA,2211
+shiller_data_processing/shiller_header_constants.py,sha256=68HX2UyXwp9BezrHJwlZc3FhZUaLfJaT77japQgyjXU,262
+shiller_data_processing-0.0.9.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+shiller_data_processing-0.0.9.dist-info/METADATA,sha256=z8IWHO20y4-759ds2584-WMfl4DPglULv8h7iY8uwZQ,664
+shiller_data_processing-0.0.9.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+shiller_data_processing-0.0.9.dist-info/top_level.txt,sha256=wWsOCYsbUi8IRN67qY7kkhFzwDbJIjXc3iCGSWcnWeQ,24
+shiller_data_processing-0.0.9.dist-info/RECORD,,
