@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: wcfutils
+Version: 0.1.1
+Summary: chenfei handy utils
+Home-page: https://chenfei-wu.github.io/
+Author: Chenfei Wu
+Author-email: cqwuchenfei@163.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: redis
+Requires-Dist: fsspec
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: tqdm
+Requires-Dist: yaml
+Requires-Dist: msgpack
+Requires-Dist: Pillow
+Requires-Dist: urllib3
+Requires-Dist: requests
+Requires-Dist: psutil
+Requires-Dist: imageio
+Requires-Dist: h5py
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: torchdata
+Requires-Dist: einops
+Requires-Dist: wandb
+Requires-Dist: safetensors
+Requires-Dist: opencv-python
+Requires-Dist: av
+Requires-Dist: webdataset
+Requires-Dist: configobj
+
+
+Deep learning Utils.
