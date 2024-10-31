@@ -1,0 +1,2 @@
+[ninja_bear_language_go]
+config = ninja_bear_language_go.config:Config
