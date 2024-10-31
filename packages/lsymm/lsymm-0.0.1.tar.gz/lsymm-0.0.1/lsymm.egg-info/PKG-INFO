@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: lsymm
+Version: 0.0.1
+Summary: for student
+Home-page: https://github.com/seongkai102
+Author: seongkai
+Author-email: lsy45508297lee@gmail.com
+Keywords: python package,pypi,school
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6

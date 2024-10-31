@@ -1,0 +1,8 @@
+README.md
+setup.py
+lsymm/__init__.py
+lsymm/module.py
+lsymm.egg-info/PKG-INFO
+lsymm.egg-info/SOURCES.txt
+lsymm.egg-info/dependency_links.txt
+lsymm.egg-info/top_level.txt
