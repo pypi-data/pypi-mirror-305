@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+carbone_connect/__init__.py
+carbone_connect/client.py
+py_carbone_connect.egg-info/PKG-INFO
+py_carbone_connect.egg-info/SOURCES.txt
+py_carbone_connect.egg-info/dependency_links.txt
+py_carbone_connect.egg-info/requires.txt
+py_carbone_connect.egg-info/top_level.txt
+tests/test_client.py
