@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+magnet_parser/__init__.py
+magnet_parser/magnet.py
+magnet_parser.egg-info/PKG-INFO
+magnet_parser.egg-info/SOURCES.txt
+magnet_parser.egg-info/dependency_links.txt
+magnet_parser.egg-info/entry_points.txt
+magnet_parser.egg-info/top_level.txt
