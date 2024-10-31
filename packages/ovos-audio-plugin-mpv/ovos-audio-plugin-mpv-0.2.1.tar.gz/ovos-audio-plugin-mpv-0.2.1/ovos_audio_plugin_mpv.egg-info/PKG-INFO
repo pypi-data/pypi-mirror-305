@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: ovos-audio-plugin-mpv
+Version: 0.2.1
+Summary: mpv plugin for ovos
+Home-page: https://github.com/OpenVoiceOS/ovos-audio-plugin-mpv
+Author: JarbasAi
+Author-email: jarbasai@mailfence.com
+License: Apache-2.0
+Description: UNKNOWN
+Keywords: ovos audio plugin
+Platform: UNKNOWN
