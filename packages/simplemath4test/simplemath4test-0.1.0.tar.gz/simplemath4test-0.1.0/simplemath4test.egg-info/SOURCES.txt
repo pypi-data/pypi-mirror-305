@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+simplemath4test/__init__.py
+simplemath4test/operations.py
+simplemath4test.egg-info/PKG-INFO
+simplemath4test.egg-info/SOURCES.txt
+simplemath4test.egg-info/dependency_links.txt
+simplemath4test.egg-info/top_level.txt
+tests/test_operations.py
