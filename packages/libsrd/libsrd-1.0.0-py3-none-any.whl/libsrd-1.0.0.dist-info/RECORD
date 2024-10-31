@@ -1,0 +1,10 @@
+libsrd/__init__.py,sha256=5A9tJU6ckxjVSgSPhyXqVZTMJyUfa0JEMA5ksTTE6kc,142
+libsrd/image_convert.py,sha256=1XEM5e-VnkhFQZ4R8-tg_d_l2oC3OZeoaVwP1Yh_l5U,1395
+libsrd/merge_pdf.py,sha256=sk1WWtvrr41h5G5QTBTivK1qkDGyKmsqHeIAN_Jdq-Y,1049
+libsrd/table.py,sha256=aRFIwNRbctuSqFfsfV4cjLYTNNp0BTD1FbN0U-mqQbk,3244
+libsrd-1.0.0.dist-info/LICENSE,sha256=NBxZwHpNDRhuxaBAiD24OZeeXuUblifADeX7nFlsFSc,1087
+libsrd-1.0.0.dist-info/METADATA,sha256=BGKuD-M5DcBGWPr2IgBUc5aTQQlKFLEd2jh49RNU1F8,343
+libsrd-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+libsrd-1.0.0.dist-info/entry_points.txt,sha256=rb6C4qXnDKlRM6Isk4Y7MJ7eNFxZm6bxMrZ2cNGCSdE,95
+libsrd-1.0.0.dist-info/top_level.txt,sha256=_lq8RR_L8uZdNdxreg6N03efng9SnySUVKQdF1FGLM0,7
+libsrd-1.0.0.dist-info/RECORD,,
