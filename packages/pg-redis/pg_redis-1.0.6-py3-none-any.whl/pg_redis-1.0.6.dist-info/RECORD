@@ -1,0 +1,7 @@
+pg_redis/__init__.py,sha256=PSHNQxhodd328IVudOT5uL6vTqFRqxCBA_E2IwV5eQc,108
+pg_redis/define.py,sha256=PuhGUdIMPnirbG-EuaQ_Uywug8gi8gBHmVsmVE8jZrQ,377
+pg_redis/redis.py,sha256=qv8JkzoUG8gs-DoyDNNGEaQ0wXE_qWqDc--EzYO87wc,1271
+pg_redis-1.0.6.dist-info/METADATA,sha256=t17PV_viCFQfD46FhMdbR82Z8DoqAJQ1lOqfJF270II,195
+pg_redis-1.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pg_redis-1.0.6.dist-info/top_level.txt,sha256=NPVIjTBtkoDZFA1PQYVGKXu417mHhra5YVORWmfRwDE,9
+pg_redis-1.0.6.dist-info/RECORD,,
