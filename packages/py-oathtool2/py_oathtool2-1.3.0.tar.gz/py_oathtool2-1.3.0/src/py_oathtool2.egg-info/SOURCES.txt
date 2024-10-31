@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/py_oathtool2/__init__.py
+src/py_oathtool2/otp.py
+src/py_oathtool2.egg-info/PKG-INFO
+src/py_oathtool2.egg-info/SOURCES.txt
+src/py_oathtool2.egg-info/dependency_links.txt
+src/py_oathtool2.egg-info/entry_points.txt
+src/py_oathtool2.egg-info/requires.txt
+src/py_oathtool2.egg-info/top_level.txt
+test/test_otp.py

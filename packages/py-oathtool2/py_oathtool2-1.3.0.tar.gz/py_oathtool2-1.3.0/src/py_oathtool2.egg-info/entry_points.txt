@@ -1,0 +1,2 @@
+[console_scripts]
+otp = py_oathtool2.otp:main
