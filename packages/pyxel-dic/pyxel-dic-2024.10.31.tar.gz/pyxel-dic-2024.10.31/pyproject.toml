@@ -1,0 +1,37 @@
+[build-system]
+requires = [
+    "setuptools==68.2.2",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyxel-dic"
+version = "2024.10.31"
+authors = [
+  { name="JC Passieux", email="jc.passieux@gmail.com" },
+]
+description = "Finite Element (FE) Digital Image/Volume Correlation (DIC/DVC) library for experimental mechanics"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "meshio",
+    "opencv-python",
+    "gmsh",
+    "scikit-image",
+    "interpylate",
+    "cgal",
+]
+license = {file = "LICENSE"}
+
+
+[project.urls]
+"Homepage" = "https://github.com/jcpassieux/pyxel"
+"Bug Tracker" = "https://github.com/jcpassieux/pyxel/issues"
