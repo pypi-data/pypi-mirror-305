@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: psfit
+Version: 0.1.1
+Summary: Parallel Sparse Fitting Toolbox for Distributed Sparse Model Training.
+Home-page: https://github.com/alirezalm/psfit
+Author: Alireza Olama
+Author-email: alireza.lm69@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: ray
+Requires-Dist: scikit-learn
+
+# psfit
+Parallel Sparse Fitting Toolbox (PsFit) for distributed sparse training
