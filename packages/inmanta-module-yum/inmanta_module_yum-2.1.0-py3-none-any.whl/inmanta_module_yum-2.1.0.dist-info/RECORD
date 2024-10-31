@@ -1,0 +1,8 @@
+inmanta_plugins/yum/__init__.py,sha256=Vw1wdvPMxKAHEy278KjyL94IHMLKKOicPdH10jYJ2K4,5571
+inmanta_plugins/yum/setup.cfg,sha256=UjoblGHRzmRLVYbDsik1VqnCrBt2_e02tiBzMhUz5tw,2058
+inmanta_plugins/yum/model/_init.cf,sha256=QW3z4XyD_uMb_CMQn4vL_iWxbB4mkJiy_byPIJb1BBA,3915
+inmanta_plugins/yum/templates/repo.tmpl,sha256=TLvt43CGKp_VPDvWrBWsjIsioI7Y6ik-_yhQLhKevH0,475
+inmanta_module_yum-2.1.0.dist-info/METADATA,sha256=ep1Fppf825rSAOGEEtyHII-eCpC9cQGeDdMlPqsDQnU,188
+inmanta_module_yum-2.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+inmanta_module_yum-2.1.0.dist-info/top_level.txt,sha256=rb9c6eWQS8KFuSa3ktEcXpk-oSsCL9ZCVAgv7S0Eg_w,16
+inmanta_module_yum-2.1.0.dist-info/RECORD,,
