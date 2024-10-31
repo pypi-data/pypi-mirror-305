@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: evdetect
+Version: 0.1.1
+Summary: Parametric event detection & inference library
+Home-page: https://github.com/nikosga/evDetect/tree/main
+Author: Nick Gavriil
+License: Apache-2.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: statsmodels
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+
+# evDetect
+Parametric event detection & inference library
+
+## Install
+
+```
+pip install evdetect
+```
+
+## How to use
+
+**Example**
+
+```python
+from evdetect.evdetector import Detector
+from evdetect.gen_data import Scenario
+
+s = Scenario()
+d=Detector()
+d.fit(s.data)
+print(d.summary())
+d.predict()
+d.plot()
+```
+
+For more examples see the tutorial in the notebooks folder.
