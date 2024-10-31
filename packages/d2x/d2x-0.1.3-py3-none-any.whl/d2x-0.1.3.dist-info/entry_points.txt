@@ -1,0 +1,4 @@
+[console_scripts]
+d2x=d2x.cli:cli
+d2x=d2x.cli:main
+
