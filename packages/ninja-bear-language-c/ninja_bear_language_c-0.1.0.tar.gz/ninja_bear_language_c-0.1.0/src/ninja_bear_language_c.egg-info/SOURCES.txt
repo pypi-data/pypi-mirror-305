@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/ninja_bear_language_c/__init__.py
+src/ninja_bear_language_c/config.py
+src/ninja_bear_language_c/generator.py
+src/ninja_bear_language_c.egg-info/PKG-INFO
+src/ninja_bear_language_c.egg-info/SOURCES.txt
+src/ninja_bear_language_c.egg-info/dependency_links.txt
+src/ninja_bear_language_c.egg-info/entry_points.txt
+src/ninja_bear_language_c.egg-info/requires.txt
+src/ninja_bear_language_c.egg-info/top_level.txt
+tests/test.py

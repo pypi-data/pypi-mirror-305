@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ninja-bear-language-c
+Version: 0.1.0
+Summary: C language support for ninja-bear
+Home-page: https://github.com/monstermichl/ninja-bear-language-c.git
+Author: monstermichl
+Keywords: ninja-bear,plugin,language,c
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: ninja-bear>=0.1.0; extra == "dev"
+Requires-Dist: wheel>=0.41.1; extra == "dev"
+Requires-Dist: twine>=4.0.2; extra == "dev"
+Requires-Dist: ruff>=0.0.47; extra == "dev"
+Requires-Dist: coverage>=7.2.7; extra == "dev"
+
+# ninja-bear-language-c
+This [ninja-bear](https://pypi.org/project/ninja-bear) plugin adds support for the C programming language.
