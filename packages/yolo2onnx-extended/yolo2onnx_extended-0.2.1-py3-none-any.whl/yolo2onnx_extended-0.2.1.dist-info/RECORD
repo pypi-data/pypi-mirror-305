@@ -1,0 +1,11 @@
+yolo2onnx_extended/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yolo2onnx_extended/__main__.py,sha256=w8ZFmfSmdZkaY2uuLbnWvuOB0JSrwNyKq0gZqvbQOyg,81
+yolo2onnx_extended/cli.py,sha256=au76y1aAYjlfXgacFeMJaTnhh5lr1sOVW4uCqNEY4o8,131
+yolo2onnx_extended/export.py,sha256=sSXtLZ-YnRDgosvTqCGY6Rw0szWJJv6aNhScce7yhHk,5900
+yolo2onnx_extended/exporter.py,sha256=GT-N74zV8XfyEc68mbrR9hrXaaf_QFKLMtP1MxMrllI,22215
+yolo2onnx_extended-0.2.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yolo2onnx_extended-0.2.1.dist-info/METADATA,sha256=zj4WqwEANXFd-NwlS6FW9MViJ-y68hzSUSNCZ_wm9mY,3488
+yolo2onnx_extended-0.2.1.dist-info/WHEEL,sha256=UvcQYKBHoFqaQd6LKyqHw9fxEolWLQnlzP0h_LgJAfI,91
+yolo2onnx_extended-0.2.1.dist-info/entry_points.txt,sha256=6IzxFX3b3hc6oH9nXSIdV19FLg0DHVU5T646xvDOmWc,54
+yolo2onnx_extended-0.2.1.dist-info/top_level.txt,sha256=vmOb31vvbcbsT3SRkXi0k7bCReLBT31Fjc0p0p8tdio,19
+yolo2onnx_extended-0.2.1.dist-info/RECORD,,
