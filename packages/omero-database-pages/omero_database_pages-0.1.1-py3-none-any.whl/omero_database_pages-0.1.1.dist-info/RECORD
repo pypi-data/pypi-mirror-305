@@ -1,0 +1,15 @@
+database_pages/03-database_pages.omero,sha256=lH04vsE4L5gYSLiUS7C6DXxItbWtNHSHsRlyxat35cA,374
+database_pages/__init__.py,sha256=F-5EoA_tbd8OaN69bc3-9UaH_3u5LwR5WmLcDmS7304,66
+database_pages/apps.py,sha256=Ue1FfleodsEq7n1UB3P5BwX8cuxR32Uxwr8SH5hglek,988
+database_pages/setup_integration.py,sha256=7RryalKx1aIk4NdiLfxIWOd1-majrWjQz53feYjLZS4,556
+database_pages/urls.py,sha256=rG8ABiVtL0d5-DXOF25OjMqxj8-2Z45KwvM-U05QZoM,282
+database_pages/views.py,sha256=-EaYoVPQLvA6AwaiApXlAufQg5BxBhmpmmRoh9Im5RU,3375
+database_pages/static/databasepages/css/database_pages.css,sha256=m8AWW4TThJzlyn0S4e5AG_yPo098LaIHF6kXex2ho2Q,817
+database_pages/templates/databasepages/webclient_plugins/imports_database_page.html,sha256=zHD9bECbf0OTnfCD7OfPhzIRE23LDRKY8KIJMhKlDjY,2086
+database_pages/templates/databasepages/webclient_plugins/workflows_database_page.html,sha256=v72D-dXfiuGgRixxa9cZHf-rllUxSnTll2Ea-BvMxTk,2088
+omero_database_pages-0.1.1.dist-info/LICENSE,sha256=iEtDSVe6aIMRlZDRzkl_1ESpyLcDC278TeglQBxnJb8,34501
+omero_database_pages-0.1.1.dist-info/METADATA,sha256=dMA1WCqS6OpGy0_SGUUi0nZTR_izjZ2srMRv6b9U92c,3402
+omero_database_pages-0.1.1.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+omero_database_pages-0.1.1.dist-info/entry_points.txt,sha256=0dPjZSiIw1G17AYC-ieoTf6Frz2yelajapq2KudpRGo,86
+omero_database_pages-0.1.1.dist-info/top_level.txt,sha256=hezyB3sHhmf2QzWkXTDaZxx6yFC8NAzdxy6jvaAfLeA,15
+omero_database_pages-0.1.1.dist-info/RECORD,,
