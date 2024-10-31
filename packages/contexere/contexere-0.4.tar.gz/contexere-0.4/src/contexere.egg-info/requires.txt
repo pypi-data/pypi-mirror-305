@@ -1,0 +1,7 @@
+pytz
+pandas
+
+[testing]
+setuptools
+pytest
+pytest-cov
