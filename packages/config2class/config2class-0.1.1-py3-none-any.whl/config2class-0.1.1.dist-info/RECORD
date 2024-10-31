@@ -1,0 +1,13 @@
+config2class/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+config2class/__main__.py,sha256=P_7uQnsei18D6vZX7dT7opS-H_vYXwsalNFw3qaSR0g,811
+config2class/code_abstraction.py,sha256=titOvvbcK8wVtvY9laWG1p9Ge8PmuVZ9umEumDBbliI,2869
+config2class/constructor.py,sha256=efY4ce63BHzlaY0axipmPZkQCKNKiJkztGhAOSMzIKk,2573
+config2class/main.py,sha256=u1WXNEXHwssx5_IeveXDcddvBi2yJFuGFzh4G7q5MAQ,1484
+config2class/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+config2class/utils/filesystem.py,sha256=kN-iJCniKEyLI_DS6p0Wdj03kJpwsEp_mm4gk1atvIc,587
+config2class/utils/parser.py,sha256=joZEyVZ1C7x838REmV7MGa8BiGD-tCrnS6pMWucphzM,967
+config2class-0.1.1.dist-info/LICENSE,sha256=9M2ghki7-Ye0ZK_GLTbOOZFliCDfaBKJEaRpnVbu9pc,1069
+config2class-0.1.1.dist-info/METADATA,sha256=wYiUPAlX--dWdvmaD6TnpODbzpwtD5AFjt0tYDM8cLo,2968
+config2class-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+config2class-0.1.1.dist-info/entry_points.txt,sha256=IGyuc04JjbYKJ1cLtPscfT8vwZhH_sUQCB9g4BxudB0,59
+config2class-0.1.1.dist-info/RECORD,,
