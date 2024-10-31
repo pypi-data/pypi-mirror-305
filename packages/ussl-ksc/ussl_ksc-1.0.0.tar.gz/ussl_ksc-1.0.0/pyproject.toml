@@ -1,0 +1,10 @@
+[tool.poetry]
+name = "ussl-ksc"
+version = "1.0.0"
+description = "KSC for USSL"
+authors = []
+packages = [{include = "KlAkOAPI"}]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
