@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "p_order": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "description": "Order of properties"
+            }
+        }
+    },
+    "required": ["p_order"]
+}

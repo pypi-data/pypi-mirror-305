@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "properties": {
+        "err_handling": {
+            "type": "string",
+            "description": "Error handling method"
+        }
+    },
+    "required": []
+}

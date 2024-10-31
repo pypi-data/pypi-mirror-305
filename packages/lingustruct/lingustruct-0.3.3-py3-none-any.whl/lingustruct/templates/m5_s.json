@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "prio": {
+            "type": "object",
+            "properties": {
+                "c": {
+                    "type": "integer",
+                    "description": "Critical"
+                },
+                "h": {
+                    "type": "integer",
+                    "description": "High"
+                },
+                "m": {
+                    "type": "integer",
+                    "description": "Medium"
+                },
+                "l": {
+                    "type": "integer",
+                    "description": "Low"
+                }
+            },
+            "required": ["c", "h", "m", "l"]
+        }
+    },
+    "required": ["prio"]
+}
