@@ -1,0 +1,2 @@
+include xy_django_serializer
+recursive-include xy_django_serializer/* *
