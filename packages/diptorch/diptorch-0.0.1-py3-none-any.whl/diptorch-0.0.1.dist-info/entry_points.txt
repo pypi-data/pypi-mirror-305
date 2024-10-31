@@ -1,0 +1,2 @@
+[nbdev]
+diptorch = diptorch._modidx:d
