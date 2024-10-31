@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+compare/compreface_sdk_python.egg-info/PKG-INFO
+compare/compreface_sdk_python.egg-info/SOURCES.txt
+compare/compreface_sdk_python.egg-info/dependency_links.txt
+compare/compreface_sdk_python.egg-info/requires.txt
+compare/compreface_sdk_python.egg-info/top_level.txt

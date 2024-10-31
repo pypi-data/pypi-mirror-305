@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: compreface-sdk-python
+Version: 1.0.0
+Summary: 'CompareFace Python SDK
+Home-page: https://github.com/zyk-miao/-compreface-sdk-python.git
+Author: yukai bill
+Author-email: yukaibill@gmail.com
+License: Apache License 2.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx
+
+# compreface-sdk-python
+
+exadel-inc/CompreFace Python SDK
+
+https://github.com/exadel-inc/CompreFace/blob/master/docs/Rest-API-description.md
