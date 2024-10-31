@@ -1,0 +1,2 @@
+[console_scripts]
+sentitoolkit = SentiToolKit.Main_tensor_model:main
