@@ -1,0 +1,16 @@
+profanity_sanitizer/__init__.py,sha256=L3aaovrLJXsjHhy_qAeAMLQjwRPyWjYcdF4diAKOzYc,162
+profanity_sanitizer/ai_model_handler.py,sha256=_AYH-CCk1w5UifRzQWQ1ZX8FckxLKLR2OK2CPtugF3o,802
+profanity_sanitizer/data_loader.py,sha256=SqI7MPcYcC_w-vQkT8fcaxIyK-T52cGUz62qEQlruXU,929
+profanity_sanitizer/fuzzy_matcher.py,sha256=zJ9ZWHVNgodWFihLzqGGfMMXawSnBj1eXGc51e4quUk,553
+profanity_sanitizer/profanity_sanitizer.py,sha256=iqiMhpT6nEHFKMgypkG9o10kUZdNtOU2I5oLfkDxbpM,13570
+profanity_sanitizer/semantic_similarity_checker.py,sha256=AxgVnXx3dicVa9uEWr3tdozNQLUAbFYcetncJ_Y-JFg,899
+profanity_sanitizer/data/allowed_words.json,sha256=XK2ikSSAXY4EVNxbZyJbv4cHXP_VNBjpxW9nRwgiDiw,4
+profanity_sanitizer/data/banned_words.json,sha256=dPk4I_lTRtuPy-o3jPvesCK-Y_9M1DYWyAklXIi3xuA,1364
+profanity_sanitizer/data/replacements.json,sha256=4ai6Fi5mS5ydqTh-SsrRWNhR2dApM6q5cs4HwD-5APo,696
+profanity_sanitizer/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+profanity_sanitizer/models/profanity_result.py,sha256=-7qDlIvW2l0aVqr4yCxHrQ9HYmy3erNU5kIkB_2O0c8,196
+profanity_sanitizer-0.1.4.dist-info/METADATA,sha256=TFw6h-mpr7nUVjv14Rwtgrxywg9qHoP4HWl34fkxh3o,3848
+profanity_sanitizer-0.1.4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+profanity_sanitizer-0.1.4.dist-info/entry_points.txt,sha256=Yrp16PHkfSyeDu-4MoiaTkiACHeBFurneCL0CUCslKs,86
+profanity_sanitizer-0.1.4.dist-info/licenses/LICENSE,sha256=tcRuCuEPPP6bh0zncaZcrAQvqauOhqDUYWM3PRGXhz4,1093
+profanity_sanitizer-0.1.4.dist-info/RECORD,,

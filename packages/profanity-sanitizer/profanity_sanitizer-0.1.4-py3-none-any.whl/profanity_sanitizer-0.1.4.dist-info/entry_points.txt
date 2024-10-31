@@ -1,0 +1,2 @@
+[console_scripts]
+profanity-filter = src.profanity_sanitizer.profanity_sanitizer:main
