@@ -1,0 +1,12 @@
+bak/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bak/smart_fit.py,sha256=3yZzlwMt6DCuWeBMJaH6biNYKbetvefMoPvsHO58oH8,163
+dist2/__init__.py,sha256=MfEVDGxFVztIIbBu3baqirVQ0N2-hKjVg5lmpq1ib5A,673
+dist2/setup.py,sha256=S3ZDAy6gJOwei8F5MfTQwRdBFLna0dwbALo36Y4pNP8,3439
+dist2/smart_fit.py,sha256=Q7dESQhhxse-8MYn1lyo5uV_kx0m6aPI6mmXCM3S990,4192
+dist2/pyarmor_runtime_005639/__init__.py,sha256=dS9Yd6q24jEkAZLMY12XUdLUE61y9qdPb8oln7bX2XI,99
+pyarmor_runtime_005639/__init__.py,sha256=dS9Yd6q24jEkAZLMY12XUdLUE61y9qdPb8oln7bX2XI,99
+smart_fit-0.0.5.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+smart_fit-0.0.5.dist-info/METADATA,sha256=OoUXD9By1WHA9nbj8t8Vd8oZEX3S8v-ZFfHl0gm1qoE,1120
+smart_fit-0.0.5.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+smart_fit-0.0.5.dist-info/top_level.txt,sha256=oQpWkXP8uKB4j7a_bT6s5P2cYs3VvDc1degyxyHXSLY,33
+smart_fit-0.0.5.dist-info/RECORD,,
