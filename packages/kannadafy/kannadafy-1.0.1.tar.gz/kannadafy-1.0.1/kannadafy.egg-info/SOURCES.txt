@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+kannadafy.egg-info/PKG-INFO
+kannadafy.egg-info/SOURCES.txt
+kannadafy.egg-info/dependency_links.txt
+kannadafy.egg-info/entry_points.txt
+kannadafy.egg-info/top_level.txt
