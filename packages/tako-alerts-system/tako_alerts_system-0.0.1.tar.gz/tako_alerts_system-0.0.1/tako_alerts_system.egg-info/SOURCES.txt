@@ -1,0 +1,8 @@
+README.md
+setup.py
+its_system_alerts/__ini__.py
+its_system_alerts/__init__.py
+tako_alerts_system.egg-info/PKG-INFO
+tako_alerts_system.egg-info/SOURCES.txt
+tako_alerts_system.egg-info/dependency_links.txt
+tako_alerts_system.egg-info/top_level.txt
