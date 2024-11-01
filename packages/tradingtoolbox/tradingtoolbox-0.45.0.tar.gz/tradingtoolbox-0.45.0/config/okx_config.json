@@ -1,0 +1,10 @@
+{
+  "apiKey": "d3fb15a0-73c7-4ff1-918b-859b42974895",
+  "secret": "126AC0E7F6156A16A8EDFD4EADE3672A",
+  "password": "AG7(635=mM{?",
+  "enableRateLimit": true,
+  "newUpdates": true,
+  "options": {
+    "defaultType": "swap"
+  }
+}
