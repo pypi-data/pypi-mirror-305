@@ -1,0 +1,14 @@
+[project]
+name = "doxyzpyauth"
+version = "0.0.1"
+description = "doxyz组织下的py认证库"
+requires-python = ">=3.11"
+readme = "README.md"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool]
