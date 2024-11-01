@@ -1,0 +1,2 @@
+[console_scripts]
+interactflow = src.main:main
