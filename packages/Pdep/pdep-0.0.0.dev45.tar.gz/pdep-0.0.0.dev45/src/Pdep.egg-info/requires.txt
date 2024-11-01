@@ -1,0 +1,6 @@
+requirements-parser>=0.11.0
+packaging
+LoggerMan==0.0.0.dev58
+MDit==0.0.0.dev29
+PyShellMan==0.0.0.dev19
+PySyntax==0.0.0.dev4
