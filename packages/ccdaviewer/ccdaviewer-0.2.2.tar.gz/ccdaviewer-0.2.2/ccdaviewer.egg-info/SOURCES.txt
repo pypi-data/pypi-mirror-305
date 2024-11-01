@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+ccdaviewer/__init__.py
+ccdaviewer/ccdaviewer.py
+ccdaviewer.egg-info/PKG-INFO
+ccdaviewer.egg-info/SOURCES.txt
+ccdaviewer.egg-info/dependency_links.txt
+ccdaviewer.egg-info/requires.txt
+ccdaviewer.egg-info/top_level.txt
