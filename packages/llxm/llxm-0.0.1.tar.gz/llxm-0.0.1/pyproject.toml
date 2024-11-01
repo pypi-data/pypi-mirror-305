@@ -1,0 +1,7 @@
+[project]
+name = "llxm"
+version = "0.0.1"
+description = "llxm -- the new home of zyx"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
