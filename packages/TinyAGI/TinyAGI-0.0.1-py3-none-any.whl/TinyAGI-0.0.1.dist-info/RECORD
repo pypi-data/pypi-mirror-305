@@ -1,0 +1,10 @@
+tinyagi/__init__.py,sha256=uQ4ANiOSpTQRcqm5okYHfQ0Vts__Fq3zNZVBRkZ1sUs,48
+tinyagi/cli.py,sha256=YSpHFOuf9BUJromL02q0eIVEnK-ek8RQeUOVOmBUyUE,2638
+tinyagi/config.py,sha256=b36vRe8drUCjlbskBrv8hN741qVkbbma9L8Ohecw3K0,748
+tinyagi/model.py,sha256=t58rg1bo6Ez722Mi8RYBd8i7LLRQJPd_ObMsw6t62vc,1396
+tinyagi/server.py,sha256=cVxzKX-zsBIJjcnkLz8RXcGYT6D_5MaufmZW--ax-2k,3489
+TinyAGI-0.0.1.dist-info/METADATA,sha256=RAJ5qhUBNZc0YcyMLMuByAxRCBrbpGdYovKepHMnbcc,3180
+TinyAGI-0.0.1.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+TinyAGI-0.0.1.dist-info/entry_points.txt,sha256=j1MTQ3DY3V6iTfDnocco8nAlF6vKZaf0zrG2Ih5W8YM,95
+TinyAGI-0.0.1.dist-info/top_level.txt,sha256=OvyzDVzI4V0cNPTylWghSft0mJa26aTqDKLJdHhZuqE,8
+TinyAGI-0.0.1.dist-info/RECORD,,
