@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ApaDown
+Version: 1.0.0
+Summary: Download Files hosted in an Apache Server
+Author: DJEBARRA Rabah Abderrazak
+Author-email: djebarra.ra@gmail.com
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: beautifulsoup4

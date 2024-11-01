@@ -1,0 +1,12 @@
+setup.py
+ApaDown/ApaDown.py
+ApaDown/__init__.py
+ApaDown/cli.py
+ApaDown/download.py
+ApaDown/get_downloadable_links.py
+ApaDown.egg-info/PKG-INFO
+ApaDown.egg-info/SOURCES.txt
+ApaDown.egg-info/dependency_links.txt
+ApaDown.egg-info/entry_points.txt
+ApaDown.egg-info/requires.txt
+ApaDown.egg-info/top_level.txt
