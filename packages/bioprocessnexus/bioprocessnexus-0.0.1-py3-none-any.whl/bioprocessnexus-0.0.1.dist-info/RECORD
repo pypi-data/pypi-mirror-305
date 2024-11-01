@@ -1,0 +1,17 @@
+bioprocessnexus/bioprocessnexus.py,sha256=yKsKQ4u9Tzz04QM7VGQu7Wk1uXPPCuufeuO7sm1hbaw,10138
+bioprocessnexus/data_managment.py,sha256=5u3ZFFSYFgEEO0FpdMaLOB_Eg5n59Xrxti4KRfRs1kw,15770
+bioprocessnexus/explanations.py,sha256=5R3Aub1H8hNFAioWOTpdoQUKqjAqL7-Vmea8B_LBtiw,12347
+bioprocessnexus/helpers.py,sha256=sBsfGs8IG82KEOaakcdGEC8QTRKZuysNxrPGojquksg,2545
+bioprocessnexus/hist.py,sha256=5vZX-ZYgt251qWknEdGi1TY8zkNgXfP-ifcJHLiFOU8,7164
+bioprocessnexus/interact_hist.py,sha256=dd71NZ2YnlcK6bZo42_1FjtjpgA4m7AgZX2qgmfPW04,16055
+bioprocessnexus/mc_subsampling.py,sha256=bH-iEgTtn2Z-q44HJNkUf20gd22K3QhTs5eG5i1vRLQ,21129
+bioprocessnexus/model_training.py,sha256=Z1pANE0NZ-kf177ledLuhNT7UQiEYzloE2HJ75uih0Q,15719
+bioprocessnexus/optimizer.py,sha256=YwecrRG6bITs1ubM2a-z6U6AWWn92nX2BZr0tBwZXgU,10240
+bioprocessnexus/performance_eval.py,sha256=TcOuE6Lquw3Gn4j3OEgxaFrJghBIni3MtMBlmQ0Ri2I,4571
+bioprocessnexus/prediction_making.py,sha256=Lz6O01wMQwZ2GPfxNG7GcKknMWdTg31cM_siChy8cS0,15184
+bioprocessnexus/scaling_performance.py,sha256=h_XXsvSGWjowiIw9F4m76hWIpHRCE5k7WEG1EI4JIRk,8444
+bioprocessnexus-0.0.1.dist-info/LICENSE,sha256=biDoi4Hv9WrKv7rRslcKCnCloszeCMyOsXfjepJPgBU,1070
+bioprocessnexus-0.0.1.dist-info/METADATA,sha256=PgheQa1VL8JjqVMoT7z1SK8IXRG8EtWfYXx6WeOXEp0,453
+bioprocessnexus-0.0.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+bioprocessnexus-0.0.1.dist-info/top_level.txt,sha256=g2ThgR9V7rs1cn8Ck__0CZYHNSVkjjqGnwx1fwTpYCo,16
+bioprocessnexus-0.0.1.dist-info/RECORD,,
