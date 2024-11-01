@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: py4eos
+Version: 0.1.0
+Summary: Convenience functions for working with HDF4-EOS datasets
+Author: K. Arthur Endsley
+Author-email: arthur.endsley@ntsg.umt.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8.0
+Requires-Dist: numpy<2.0.0
+Requires-Dist: rasterio>=1.0.0
+Requires-Dist: affine>=2.0.0
+Requires-Dist: pyhdf>=0.11.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: earthaccess>=0.9.0; extra == "dev"
