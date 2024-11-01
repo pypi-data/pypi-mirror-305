@@ -1,0 +1,87 @@
+[tool.poetry]
+name = "django-bdtopo"
+version = "0.0.3"
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+description = "Import and manage all IGN BDTOPO® data in one (customizable) app!"
+authors = ["Kapt dev team <dev@kapt.mobi>"]
+license = "GPLv3"
+readme = "README.md"
+repository = "https://gitlab.com/kapt/open-source/django-bdtopo"
+packages = [
+  { include = "django_bdtopo" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = ">=4.0"
+psycopg2 = "^2.9.10"
+
+[tool.poetry.dev-dependencies]
+gitchangelog = "^3.0.4"
+bumpversion = "*"
+black = "24.10.0"
+flake8 = "7.1.1"
+isort = "5.13.2"
+
+[tool.poetry.group.test.dependencies]
+pytest-django = "^4.9.0"
+pytest-spec = "^4.0.0"
+pytest-xdist = "^3.6.1"
+pytest-cov = "^6.0.0"
+factory-boy = "^3.3.1"
+coverage = "^7.6.4"
+python-dotenv = "1.*"
+
+[build-system]
+requires = ["poetry-core>=1.4.3", "setuptools"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+known_local_folder = ["src"]
+sections="FUTURE,STDLIB,DJANGO,THIRDPARTY,LOCALFOLDER,FIRSTPARTY"
+import_heading_stdlib = "Standard Library"
+import_heading_firstparty= "Project"
+import_heading_thirdparty= "Third party"
+import_heading_localfolder= "Local application / specific library imports"
+known_django= "django"
+import_heading_django= "Django"
+
+[tool.black]
+include = '\.pyi?$'
+exclude = '''
+(
+    \.eggs         # exclude a few common directories in the
+  | \.git          # root of the project
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | node_modules
+)
+'''
+
+
+[tool.coverage.run]
+branch = true
+source = ["django_bdtopo"]
+command_line = "-m pytest --ds=tests.settings"
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.coverage.xml]
+output = "coverage.xml"

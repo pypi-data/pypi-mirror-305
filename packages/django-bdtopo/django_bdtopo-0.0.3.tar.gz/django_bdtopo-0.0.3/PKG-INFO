@@ -1,0 +1,329 @@
+Metadata-Version: 2.1
+Name: django-bdtopo
+Version: 0.0.3
+Summary: Import and manage all IGN BDTOPO® data in one (customizable) app!
+Home-page: https://gitlab.com/kapt/open-source/django-bdtopo
+License: GPLv3
+Author: Kapt dev team
+Author-email: dev@kapt.mobi
+Requires-Python: >=3.9,<4.0
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Dist: Django (>=4.0)
+Requires-Dist: psycopg2 (>=2.9.10,<3.0.0)
+Project-URL: Repository, https://gitlab.com/kapt/open-source/django-bdtopo
+Description-Content-Type: text/markdown
+
+# Django BDTOPO®
+
+Import and manage all the IGN BDTOPO® data in one (customizable) app!
+
+![Example of Commune object as seen in Django admin](https://gitlab.com/-/project/63069471/uploads/e39eb621b7afc2de0eba8994c03c89cc/django-bdtopo.jpg)
+
+> Example of Commune object as seen in Django admin.
+
+# Warnings
+
+Importing all the data for all the apps is pretty heavy (time & size-wise):
+- **~12Go** to download the three-part sql 7zipped file
+- **~40+ Go** available space (extracted data)
+- *Very big* tables with millions of entries
+- *Huge* import time (like 2 hours on a somewhat beefy computer)
+- *Huge* backups (raw .sql files are ~120GB)
+
+You'll need the `7z` command line utility (tested on linux).
+
+Each set of tables is imported in it's own app. Those apps are named after the folders the sql files came from:
+- Administratif (`administratif`)
+- Bâti (`bati`)
+- Hydrographie (`hydrographie`)
+- Lieux nommés (`lieux_nommes`)
+- Occupation du sol (`occupation_du_sol`)
+- Services et activités (`services_et_activites`)
+- Transport (`transport`)
+- Zones réglementées (`zones_reglementees`)
+
+----
+
+Some tables in `administratif` app have some speciel "foreign keys" that are only char fields (like `liens_vers_autorite_administrative`). Those chars are in fact references to the column `cleabs` in various other tables (`mairie`, `services_et_activites_zone_d_activite_ou_d_interet`). We have added those fields as foreignkeys to our models (`autorite_administrative`), and the foreign key are retrieved in the `create_models_links` management command.
+
+You can find more info on [BD TOPO® Version 3 - Description du contenu](https://geoservices.ign.fr/sites/default/files/2021-07/DC_BDTOPO_3-0.pdf).
+
+----
+
+# Install
+
+1) Install using pip (or poetry)
+    ```sh
+    poetry add django-bdtopo
+    ```
+2) Add the apps you want in your `INSTALLED_APPS`
+    ```py
+    INSTALLED_APPS = [
+        # ...
+        # Mandatory apps:
+        "django_bdtopo",
+        "django_bdtopo.apps.services_et_activites",  # Services et activités (objects are used in administratif & other apps)
+        "django_bdtopo.apps.lieux_nommes",  # Lieux nommés (objects are used in administratif & other apps)
+
+        # Choose which app to add (or add them all):
+        "django_bdtopo.apps.administratif",  # Administratif
+        "django_bdtopo.apps.bati",  # Bâti
+        "django_bdtopo.apps.hydrographie",  # Hydrographie
+        "django_bdtopo.apps.occupation_du_sol",  # Occupation du sol
+        "django_bdtopo.apps.transport",  # Transport
+        "django_bdtopo.apps.zones_reglementees",  # Zones réglementées
+    ```
+3) Import data
+    Importing data is harder than on most other apps, since nothing in Django allow us to import data from a .sql, rename tables, and *automagically* create models.
+    So you'll need to import the data using our super cool script (it doesn't bite, but you'll need to define some env vars (in your website `settings.py` file)).
+    ```py
+    # Add those vars in your settings.py:
+    # Django-bdtopo update_bdtopo script requirements
+    # --------------------------------------
+    DBTOPO_DB_NAME = DATABASES["default"]["NAME"]
+    DBTOPO_DB_HOST = DATABASES["default"]["HOST"]
+    DBTOPO_DB_PORT = DATABASES["default"]["PORT"]
+    DBTOPO_DB_USER = DATABASES["default"]["USER"]
+    ```
+    ```sh
+    # define your pg password like this to prevent being prompted for the password 180 times
+    PGPASSWORD="pg_password_here" poetry run python3 manage.py update_bdtopo
+    ```
+    Answer (yes/no) to each import question (in order to import data to an app or another).
+4) Run migrations (fake them)
+    ```sh
+    # Fake all first migrations (tables already exist in db) - migrate only the apps you've imported
+    poetry run python3 manage.py migrate services_et_activites 0001 --fake
+    poetry run python3 manage.py migrate lieux_nommes 0001 --fake
+    poetry run python3 manage.py migrate administratif 0001 --fake
+    poetry run python3 manage.py migrate bati 0001 --fake
+    poetry run python3 manage.py migrate hydrographie 0001 --fake
+    poetry run python3 manage.py migrate occupation_du_sol 0001 --fake
+    poetry run python3 manage.py migrate transport 0001 --fake
+    poetry run python3 manage.py migrate zones_reglementees 0001 --fake
+    # Run "real" migration (add new fk fields)
+    poetry run python3 manage.py migrate administratif 0002
+    ```
+5) Run the script to create real ForeignKey to different objects.
+    ```sh
+    poetry run python3 manage.py create_models_links
+    ```
+6) That's all folks!
+
+----
+
+# Update bdtopo
+
+Updating bdtopo is no easy task, since it comes directly as .sql files.
+
+We must:
+
+- import the new data
+- update the models based on this data (if it don't change too much)
+- generate new migrations based on this data (if it don't change too much, or else we need to write migrations manually in order to preserve data)
+- fake the migration
+- launch tests to ensure that nothing broke
+
+*We cannot be sure that the schema will stay the same, but we have no other choice than to hope that if change exist, they stay relatively small (big changes to the models may break the projects using this app).*
+
+## Step by step update
+
+1) Update source files url(s)
+
+2) Import new data
+
+*Move to a django project (in order to use manage.py).*
+
+3) Generate new models (in new files in order to still have the old models in case of error)
+```sh
+poetry run python ./src/frontend/manage.py inspectdb administratif_arrondissement administratif_arrondissement_municipal administratif_collectivite_territoriale administratif_commune administratif_commune_associee_ou_deleguee administratif_condominium administratif_departement administratif_epci administratif_region > ../django-bdtopo/django_bdtopo/apps/administratif/models.new.py
+
+poetry run python ./src/frontend/manage.py inspectdb bati_batiment bati_cimetiere bati_construction_lineaire bati_construction_ponctuelle bati_construction_surfacique bati_ligne_orographique bati_pylone bati_reservoir bati_terrain_de_sport bati_toponymie_bati > ../django-bdtopo/django_bdtopo/apps/bati/models.new.py
+
+poetry run python ./src/frontend/manage.py inspectdb hydrographie_bassin_versant_topographique hydrographie_cours_d_eau hydrographie_detail_hydrographique hydrographie_limite_terre_mer hydrographie_noeud_hydrographique hydrographie_plan_d_eau hydrographie_surface_hydrographique hydrographie_toponymie_hydrographie hydrographie_troncon_hydrographique > ../django-bdtopo/django_bdtopo/apps/hydrographie/models.new.py
+
+poetry run python ./src/frontend/manage.py inspectdb lieux_nommes_detail_orographique lieux_nommes_lieu_dit_non_habite lieux_nommes_toponymie_lieux_nommes lieux_nommes_zone_d_habitation > ../django-bdtopo/django_bdtopo/apps/lieux_nommes/models.new.py
+
+poetry run python ./src/frontend/manage.py inspectdb occupation_du_sol_haie occupation_du_sol_zone_d_estran occupation_du_sol_zone_de_vegetation > ../django-bdtopo/django_bdtopo/apps/occupation_du_sol/models.new.py
+
+poetry run python ./src/frontend/manage.py inspectdb services_et_activites_canalisation services_et_activites_erp services_et_activites_ligne_electrique services_et_activites_poste_de_transformation services_et_activites_toponymie_services_et_activites services_et_activites_zone_d_activite_ou_d_interet > ../django-bdtopo/django_bdtopo/apps/services_et_activites/models.new.py
+
+poetry run python ./src/frontend/manage.py inspectdb transport_aerodrome transport_equipement_de_transport transport_itineraire_autre transport_non_communication transport_piste_d_aerodrome transport_point_d_acces transport_point_de_repere transport_point_du_reseau transport_route_numerotee_ou_nommee transport_section_de_points_de_repere transport_toponymie_transport transport_transport_par_cable transport_troncon_de_route transport_troncon_de_voie_ferree transport_voie_ferree_nommee transport_voie_nommee transport_voie_nommee_beta > ../django-bdtopo/django_bdtopo/apps/transport/models.new.py
+
+poetry run python ./src/frontend/manage.py inspectdb zones_reglementees_foret_publique zones_reglementees_parc_ou_reserve zones_reglementees_toponymie_zones_reglementees > ../django-bdtopo/django_bdtopo/apps/zones_reglementees/models.new.py
+```
+
+*Move to django-bdtopo folder.*
+
+4) Move old models to backup (& remove old files if they still exist)
+```sh
+rm django_bdtopo/apps/administratif/models.py.bak
+mv django_bdtopo/apps/administratif/models.py django_bdtopo/apps/administratif/models.py.bak > /dev/null 2>&1
+
+rm django_bdtopo/apps/bati/models.py.bak
+mv django_bdtopo/apps/bati/models.py django_bdtopo/apps/bati/models.py.bak > /dev/null 2>&1
+
+rm django_bdtopo/apps/hydrographie/models.py.bak
+mv django_bdtopo/apps/hydrographie/models.py django_bdtopo/apps/hydrographie/models.py.bak > /dev/null 2>&1
+
+rm django_bdtopo/apps/lieux_nommes/models.py.bak
+mv django_bdtopo/apps/lieux_nommes/models.py django_bdtopo/apps/lieux_nommes/models.py.bak > /dev/null 2>&1
+
+rm django_bdtopo/apps/occupation_du_sol/models.py.bak
+mv django_bdtopo/apps/occupation_du_sol/models.py django_bdtopo/apps/occupation_du_sol/models.py.bak > /dev/null 2>&1
+
+rm django_bdtopo/apps/services_et_activites/models.py.bak
+mv django_bdtopo/apps/services_et_activites/models.py django_bdtopo/apps/services_et_activites/models.py.bak > /dev/null 2>&1
+
+rm django_bdtopo/apps/transport/models.py.bak
+mv django_bdtopo/apps/transport/models.py django_bdtopo/apps/transport/models.py.bak > /dev/null 2>&1
+
+rm django_bdtopo/apps/zones_reglementees/models.py.bak
+mv django_bdtopo/apps/zones_reglementees/models.py django_bdtopo/apps/zones_reglementees/models.py.bak > /dev/null 2>&1
+```
+
+5) Rename `models.new.py` into `models.py`
+```sh
+mv django_bdtopo/apps/administratif/models.new.py django_bdtopo/apps/administratif/models.py
+mv django_bdtopo/apps/bati/models.new.py django_bdtopo/apps/bati/models.py
+mv django_bdtopo/apps/hydrographie/models.new.py django_bdtopo/apps/hydrographie/models.py
+mv django_bdtopo/apps/lieux_nommes/models.new.py django_bdtopo/apps/lieux_nommes/models.py
+mv django_bdtopo/apps/occupation_du_sol/models.new.py django_bdtopo/apps/occupation_du_sol/models.py
+mv django_bdtopo/apps/services_et_activites/models.new.py django_bdtopo/apps/services_et_activites/models.py
+mv django_bdtopo/apps/transport/models.new.py django_bdtopo/apps/transport/models.py
+mv django_bdtopo/apps/zones_reglementees/models.new.py django_bdtopo/apps/zones_reglementees/models.py
+```
+6) Remove header lines
+```sh
+sed -i '1,7d' django_bdtopo/apps/administratif/models.py
+sed -i '1,7d' django_bdtopo/apps/bati/models.py
+sed -i '1,7d' django_bdtopo/apps/hydrographie/models.py
+sed -i '1,7d' django_bdtopo/apps/lieux_nommes/models.py
+sed -i '1,7d' django_bdtopo/apps/occupation_du_sol/models.py
+sed -i '1,7d' django_bdtopo/apps/services_et_activites/models.py
+sed -i '1,7d' django_bdtopo/apps/transport/models.py
+sed -i '1,7d' django_bdtopo/apps/zones_reglementees/models.py
+```
+7) Insert a new line at the beginning of the file to indicate that the file has been generated
+```sh
+today=$(date +'%Y-%m-%d')
+sed -i "1i\# Original IGN django generated model as of $today" django_bdtopo/apps/administratif/models.py
+sed -i "1i\# Original IGN django generated model as of $today" django_bdtopo/apps/bati/models.py
+sed -i "1i\# Original IGN django generated model as of $today" django_bdtopo/apps/hydrographie/models.py
+sed -i "1i\# Original IGN django generated model as of $today" django_bdtopo/apps/lieux_nommes/models.py
+sed -i "1i\# Original IGN django generated model as of $today" django_bdtopo/apps/occupation_du_sol/models.py
+sed -i "1i\# Original IGN django generated model as of $today" django_bdtopo/apps/services_et_activites/models.py
+sed -i "1i\# Original IGN django generated model as of $today" django_bdtopo/apps/transport/models.py
+sed -i "1i\# Original IGN django generated model as of $today" django_bdtopo/apps/zones_reglementees/models.py
+```
+
+8) Remove the lines containing managed = False
+```sh
+sed -i '/managed = False/d' django_bdtopo/apps/administratif/models.py
+sed -i '/managed = False/d' django_bdtopo/apps/bati/models.py
+sed -i '/managed = False/d' django_bdtopo/apps/hydrographie/models.py
+sed -i '/managed = False/d' django_bdtopo/apps/lieux_nommes/models.py
+sed -i '/managed = False/d' django_bdtopo/apps/occupation_du_sol/models.py
+sed -i '/managed = False/d' django_bdtopo/apps/services_et_activites/models.py
+sed -i '/managed = False/d' django_bdtopo/apps/transport/models.py
+sed -i '/managed = False/d' django_bdtopo/apps/zones_reglementees/models.py
+```
+
+9) Rename models to remove the prefixes
+```sh
+sed -i 's/class Administratif/class /g' django_bdtopo/apps/administratif/models.py
+sed -i 's/class Bati/class /g' django_bdtopo/apps/bati/models.py
+sed -i 's/class Hydrographie/class /g' django_bdtopo/apps/hydrographie/models.py
+sed -i 's/class LieuxNommes/class /g' django_bdtopo/apps/lieux_nommes/models.py
+sed -i 's/class OccupationDuSol/class /g' django_bdtopo/apps/occupation_du_sol/models.py
+sed -i 's/class ServicesEtActivites/class /g' django_bdtopo/apps/services_et_activites/models.py
+sed -i 's/class Transport/class /g' django_bdtopo/apps/transport/models.py
+sed -i 's/class ZonesReglementees/class /g' django_bdtopo/apps/zones_reglementees/models.py
+```
+
+10) Rename the Epci model to EPCI
+```sh
+sed -i 's/class Epci/class EPCI/g' django_bdtopo/apps/administratif/models.py
+```
+
+*Move to a django project.*
+
+11) Generates the initial migration
+```sh
+run -frontend makemigrations administratif
+run -frontend makemigrations bati
+run -frontend makemigrations hydrographie
+run -frontend makemigrations lieux_nommes
+run -frontend makemigrations occupation_du_sol
+run -frontend makemigrations services_et_activites
+run -frontend makemigrations transport
+run -frontend makemigrations zones_reglementees
+```
+
+12) Run pre-commit on the generated files
+```sh
+find django_bdtopo/*/migrations/ -name "*.py" -print | xargs pre-commit run --files
+pre-commit run --files "django_bdtopo/*/models.py"
+```
+
+13) Fake the migrations
+```sh
+run -frontend migrate administratif --fake
+run -frontend migrate bati --fake
+run -frontend migrate hydrographie --fake
+run -frontend migrate lieux_nommes --fake
+run -frontend migrate occupation_du_sol --fake
+run -frontend migrate services_et_activites --fake
+run -frontend migrate transport --fake
+run -frontend migrate zones_reglementees --fake
+```
+
+14) That's all folks!
+
+----
+
+## Contributing
+
+Feel free to send feedbacks on the module using it's [Home page](https://gitlab.com/kapt/open-source/django-brouillons).
+
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contributions.
+
+
+## Tests
+
+Tests are located in the `tests` packages.
+
+Tests are written with [pytest](https://docs.pytest.org/en/).
+
+To run the tests, you must :
+- have a postgres database server available with postgis extension
+- have a user with the right to create databases
+- set the right environment variables matching your environment in a `tests/.env` file (see [tests/.env.example](tests/.env.example))
+- install the dependencies with `poetry install` command
+- launch the command [./launch_tests.sh](launch_tests.sh)
+
+A coverage report can be generated using the command [./run_coverage.sh](run_coverage.sh)
+
+----
+
+# Todo
+
+- update `create_models_links` to include other apps (now it creates fk only for administratif app)
+- auto-detect which apps are installed before running the migrations
+- meaningful errors messages in case of problem
+- add tests
+
+
