@@ -1,0 +1,10 @@
+relative_abundance/__init__.py,sha256=-HJI7IAfqEkqfF8LiZisabPzIOE-JRKS4uy0cpH-Qow,65
+relative_abundance/calculate_abundance.py,sha256=avI20fb2V-EITQZ9PiOpzJLdUiHtVXg0i8yRvDUoSsM,9337
+relative_abundance/plotting_utils.py,sha256=wBdwCGl9aZIib7sWWm7sx3gGD5g7xTN319OxaLJ92wQ,8322
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_math_functions.py,sha256=kyI7O8-fvVc0QFpIAS4YNttd1YPNJaSkDiSYyISqXJU,1960
+test/test_relative_abundance.py,sha256=PqOtImyg6B8wec9a5bmTwMb4ZWnJqvvNHZZRJ570UNU,4993
+RelativeAbundance-0.2.1.dist-info/METADATA,sha256=vVISmOVHpe27DjvY2vLcEef37yzzztQkL-lMavL5-OM,373
+RelativeAbundance-0.2.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+RelativeAbundance-0.2.1.dist-info/top_level.txt,sha256=M-26lwbqLCwKQSlBe5_DOypXVPrTj8lLLJ4wYKDcbAM,24
+RelativeAbundance-0.2.1.dist-info/RECORD,,
