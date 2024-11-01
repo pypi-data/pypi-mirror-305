@@ -1,0 +1,39 @@
+[build-system]
+requires = [
+    "setuptools >= 42.0",
+    "wheel",
+    "cmake>=3.12",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyfollower"
+authors = [
+    {name = "Rabbytr", email = "dejavu.rabbyt@gmail.com"},
+]
+description = "Follower Crowd Simulation"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.7"
+keywords = ["Crowd", "Simulation"]
+license = {text = "Apache License 2.0"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "setuptools >= 42.0",
+    "wheel"
+]
+# dynamic = ["version"]
+version = "0.1.4"
+
+[tool.setuptools]
+packages = ["pyfollower"]
+

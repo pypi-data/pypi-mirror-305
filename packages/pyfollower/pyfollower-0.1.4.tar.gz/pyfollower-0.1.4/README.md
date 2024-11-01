@@ -1,0 +1,114 @@
+# Follower Crowd Simulation
+
+[![Pypiversion](https://img.shields.io/pypi/v/pyfollower.svg)](https://pypi.org/project/pyfollower/)
+![Document](https://img.shields.io/badge/docs-in_progress-violet)
+![Formant](https://img.shields.io/pypi/format/pyfollower.svg)
+[![Implementation](https://img.shields.io/pypi/implementation/pyfollower.svg)](https://www.python.org/)
+[![License](https://img.shields.io/pypi/l/pyfollower.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+![Pyversion](https://img.shields.io/pypi/pyversions/pyfollower.svg)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/pyfollower.svg?label=PyPI%20downloads)](https://pypi.org/project/pyfollower/)
+[![DOI](https://img.shields.io/badge/DOI-10.48550/arXiv.2407.00674-red)](https://doi.org/10.48550/arXiv.2407.00674)
+[![Wheel](https://img.shields.io/pypi/wheel/pyfollower.svg)](https://pypi.org/project/pyfollower/#files)
+
+Follower Crowd Simulation (`Follower`) is a project that simulates the movement of a crowd/robots of comformists with self-organizing characteristic. In `Follower`, [ORCA](https://gamma.cs.unc.edu/ORCA/) is adapted as the basic collision avoidance model. This project is writen in C++ and built using CMake. `pyfollower` is the python interfaces for `Follower` with many easy-to-use APIs.
+
+### Getting started
+
+To get started with Follower Crowd Simulation, you'll need to have Python 3.7+ installed on your system. You can download Python from the [official website](https://www.python.org/), and Follower Crowd Simulation can be installed using pip:
+
+```shell
+pip install pyfollower
+```
+
+The installation process of this project requires Cmake and C++ compilation environment, so if you are a Windows user, it is a better choice to use a [compiled wheel file](https://pypi.org/project/pyfollower/#files)
+
+```shell
+pip install pyfollower-xxx.whl
+```
+
+After you have installed it, you can simply use this simulation Engine. As an example(Please make sure the numpy and matplotlib is installed):
+
+```python
+import numpy as np
+from pyfollower import FollowerEngine
+
+# Initial scenario
+dest = dict()
+N = 50
+sim = FollowerEngine(agent_radius=0.5)
+sim.pref_velocity_correction(1)
+
+for idx, i in enumerate(np.linspace(0, 1, N + 1)):
+    if i == 1: break
+    theta = i * np.pi * 2
+    ox, oy = np.cos(theta), np.sin(theta)
+    dx, dy = np.cos(theta + np.pi), np.sin(theta + np.pi)
+    t = np.array([ox, oy, dx, dy]) * 20
+    agent_id = sim.add_agent(*t)
+    dest[agent_id] = t[-2:]
+
+# Test obstacles
+sim.add_obstacles([(5, 5), (-5, 5), (-5, -5), (5, -5)])
+sim.process_obstacles()
+obs = np.array([(-5, -5), (-5, 5), (5, 5), (5, -5), (-5, -5)])
+
+# Run simulation --- Main loop
+traj = []
+for i in range(100):
+    if not i % 10: print(sim.time)
+    x = sim.get_agent_positions()
+    for agent_id in range(N):
+        dx = dest[agent_id] - x[agent_id, :]
+        dist = np.sqrt(np.sum(dx ** 2))
+        if dist < 0.5:
+            prev = (0, 0)
+        else:
+            prev = 1.0 * dx / dist
+        sim.set_agent_pref(agent_id, *prev)
+    traj.append(x)
+    print(x.T)
+    sim.follower_step()
+
+# Plot
+import pylab as pl
+import matplotlib.cm as cm
+fig = pl.figure('Trajectory', facecolor='thistle', figsize=(4, 4))
+ax = fig.gca()
+
+traj = np.stack(traj)
+
+pl.xlim(-20, 20)
+pl.ylim(-20, 20)
+ax.imshow(np.zeros((40, 40), np.bool), extent=(-20, 20, -20, 20), cmap='viridis')\
+    .format_cursor_data = lambda data: ""
+
+colors = cm.hsv(np.linspace(0, 1, N))
+for i in range(N):
+    ax.plot(traj[:, i, 0], traj[:, i, 1], c=colors[i])
+ax.scatter(*x.T, c=range(N), s=20, cmap='hsv')
+ax.plot(obs[:, 0], obs[:, 1], c='white')
+
+ax.format_coord = lambda x, y: f'({x:^6.1f}, {y:^6.1f})'
+[spine.set_color('white') for spine in ax.spines.values()]
+ax.tick_params(axis='both', colors='white')
+
+pl.show()
+```
+
+### Citation
+During installation, due to differences in individual machines, various tricky issues may arise.
+If you encounter any difficulties using this simulator, please do not hesitate to send an email to [dejavu.rabbyt@gmail.com]().
+
+If you find our work helpful (or if you are so kind as to offer us some encouragement), please consider citing the paper.
+
+```bibtex
+@misc{liao2024emergent,
+      title={Emergent Crowd Grouping via Heuristic Self-Organization}, 
+      author={Xiao-Cheng Liao and Wei-Neng Chen and Xiang-Ling Chen and Yi Mei},
+      year={2024},
+      eprint={2407.00674},
+      archivePrefix={arXiv},
+      primaryClass={cs.MA},
+      url={https://arxiv.org/abs/2407.00674}, 
+}
+```
