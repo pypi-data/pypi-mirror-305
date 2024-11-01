@@ -1,0 +1,14 @@
+geosss/__init__.py,sha256=kJAqMFPxb9zdgjdIRHqiLRvaglLlXtPD8evJs5jZ4YA,1658
+geosss/demo_utils.py,sha256=VnR9yC0RVtT9hKou-BK7-SzuqDTA8LlfyzoOTaU5zLY,1981
+geosss/distributions.py,sha256=veQkK6JV0b51yohp7DsMai277WHwlRITkjEJ_9oQun0,7049
+geosss/mcmc.py,sha256=9cFKnqMhE3cXf_SBs5Xdh2eZYD2VEfiyaCoLvwQtZjM,10285
+geosss/rand.py,sha256=nm-qH2cMuSNAKmHkMWDNNTj85UBFgWLDCnJYuBqKU60,5092
+geosss/sphere.py,sha256=tHWrkL2fbyRIc0azVBjnjPOpou1UKD2RpnSfQEYryxI,3001
+geosss/spherical_curve.py,sha256=h-6bKRzyIKb4mrWW5GdKajK726rMK3hzVydHBOE-Yhk,6240
+geosss/testing.py,sha256=emporIC5yXRDU8wohv0FFbwPr9X3p1T1DgqMo3h7oWQ,7334
+geosss/utils.py,sha256=27OJfsl_9tndnsvdiBOWlsKN1PX2ttS-QYrcBKmv4g8,5178
+geosss/vMF_diagnostics.py,sha256=1wvFr1EHS-RGp5eDsmKhA2glYAVc_OZZlcIjoV6fXmE,14897
+geosss-0.2.1.dist-info/LICENSE,sha256=HU9za5pcdJMC8xpIxJQySWnNJbCt6Lrd0WbHOf6vpsk,1474
+geosss-0.2.1.dist-info/METADATA,sha256=oOAVYvx09vUAf3pYUmqx6MpmhVhFJwdD92P2Xbjn0fs,6769
+geosss-0.2.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+geosss-0.2.1.dist-info/RECORD,,
