@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: num_akr
+Version: 1.0
+Author: Ameba
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pyperclip
+
