@@ -1,0 +1,9 @@
+bakdroid/__init__.py,sha256=bJOq9R8AMSiNv9i_457m8WihnDrNY7EPJNLrpSNLFzk,480
+bakdroid/cli.py,sha256=vHuFnA_dEQChvLCXNpa3as3pWeMFgHIA-F0mS7FnHdo,1346
+bakdroid/crypto.py,sha256=z-_PkXjVVrG5u3gHDPsRuQHG_pCAfj4cSs9pXw7CquM,2419
+bakdroid/header.py,sha256=bb-mvG9-iwNGkh9tkPqeOC8LKHruWHm3WGi7CnZJCe8,828
+bakdroid/unpacker.py,sha256=ETG0gMOV8SFPm8SUXUEj7iRx5iNatgHFADNOjyCPwlw,2280
+bakdroid-0.1.0.dist-info/METADATA,sha256=SOB0Pzg6ETmFy8d1XazgSEADidDgxVyiimql1Lk097I,3141
+bakdroid-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+bakdroid-0.1.0.dist-info/entry_points.txt,sha256=Yim73qBhc_EmuZMuH7w9mZnzbeaGEa57zOhPB7_6Oh0,45
+bakdroid-0.1.0.dist-info/RECORD,,
