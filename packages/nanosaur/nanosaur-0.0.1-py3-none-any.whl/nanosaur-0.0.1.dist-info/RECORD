@@ -1,0 +1,11 @@
+nanosaur/__init__.py,sha256=6sBAVEdyjTHChRHUPhM6tMRqIbacOBLI2uoJacV67LQ,1853
+nanosaur/installation.py,sha256=kxOhq4frhh2S6Ox3XmdMZKFnL_sKlR6azVJE-2dACpI,7710
+nanosaur/main.py,sha256=bOTRU6pF2v1bx6a_PVX0hMuGupdgWqyjCyo9PcBUsXI,4495
+nanosaur/prompt_colors.py,sha256=YXd2NK-HRAkwIt43eUz43SXxz6viOWa9MceNrystQ00,3192
+nanosaur/utilities.py,sha256=j_2gkkfCbe_KaAj7nLL2ZRhuCKZ3J1MQzTWin5dk6-k,4137
+nanosaur-0.0.1.dist-info/LICENSE,sha256=5SYnlrGv8h93AAuNH2CHUL0JN76TgIdwy4Xjm5M_ylc,1073
+nanosaur-0.0.1.dist-info/METADATA,sha256=EmeR5xxQpUwMJUwYfLxM7rEzMPL0V2180jGKKw7nue4,2100
+nanosaur-0.0.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+nanosaur-0.0.1.dist-info/entry_points.txt,sha256=T6JHK7SZekgZ5QxEZ-HYFEHSG9zVd7cyvtceK2TiBa0,48
+nanosaur-0.0.1.dist-info/top_level.txt,sha256=_2DsvqNuNUjCTWQN23gCExstYcaKpXHJifX-sB4ylc4,9
+nanosaur-0.0.1.dist-info/RECORD,,
