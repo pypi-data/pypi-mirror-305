@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+pyKannada/__init__.py
+pyKannada/__main__.py
+pyKannada/kannada_keywords.py
+pyKannada/main.py
+pyKannada.egg-info/PKG-INFO
+pyKannada.egg-info/SOURCES.txt
+pyKannada.egg-info/dependency_links.txt
+pyKannada.egg-info/entry_points.txt
+pyKannada.egg-info/not-zip-safe
+pyKannada.egg-info/requires.txt
+pyKannada.egg-info/top_level.txt
