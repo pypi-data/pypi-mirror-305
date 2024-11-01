@@ -1,0 +1,17 @@
+#ifndef EXPORT_ATTRIBUTES_{{name|upper}}_H
+#define EXPORT_ATTRIBUTES_{{name|upper}}_H
+
+#define _{{name|upper}}_IN_CHANNELS  {{InChannels}}
+#define _{{name|upper}}_OUT_CHANNELS {{OutChannels}}
+
+{% for i in range(KernelDims|length) %}
+#define _{{name|upper}}_KERNEL_{{i}} {{KernelDims[i]}}
+{%- endfor %}
+{% for i in range(StrideDims|length) %}
+#define _{{name|upper}}_STRIDE_{{i}} {{StrideDims[i]}}
+{%- endfor %}
+{% for i in range(DilationDims|length) %}
+#define _{{name|upper}}_DILATION_{{i}} {{DilationDims[i]}}
+{%- endfor %}
+
+#endif /* EXPORT_ATTRIBUTES_{{name|upper}}_H */
