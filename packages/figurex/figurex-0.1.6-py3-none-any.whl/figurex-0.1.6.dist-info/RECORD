@@ -1,0 +1,9 @@
+figurex/__init__.py,sha256=su4BkI1jVNl8qY0KdilUUZtB7E8WLjSX2_Q5-cKcj4w,239
+figurex/basemap.py,sha256=GV-0IZ0-Sgo3DqyD8rkPgDDx3J0g1Crz2afHI1T48zY,7586
+figurex/cartopy.py,sha256=6szG9jYRzsJiZY95USzfIZTPRXgrusd035SjTQwzeYI,6717
+figurex/figure.py,sha256=_Z68t4pB2oLsCTNrosPztZbSMMN3Lg1-O2GgMnIK4Qg,16512
+LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+figurex-0.1.6.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+figurex-0.1.6.dist-info/METADATA,sha256=V_oFJQskBOotaC-bT1sm1Eqj3hFDaQuPi6NGsshDzOc,3474
+figurex-0.1.6.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+figurex-0.1.6.dist-info/RECORD,,
