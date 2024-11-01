@@ -1,0 +1,13 @@
+xy_django_app_information/__init__.py,sha256=dk5Ts2xy0l0GCEGtpzuLJrh_pRumwjkM4FpOCJskeFY,132
+xy_django_app_information/abstracts.py,sha256=4RjTdljuDAosz1L_a_-tLsXv18g9677eyqpf1lRoBrU,9331
+xy_django_app_information/admin.py,sha256=DhuWqdddgYJJzyNBFrIilhYWQAsGszKgq34A2Iya_n8,668
+xy_django_app_information/apps.py,sha256=Jyud-EDZS36aW__rcKPDMHomwWChE_1ztbOOp_FBCLc,178
+xy_django_app_information/models.py,sha256=DZgrsmoxIgBUx_Z_DRdEub-4ky31xdj1_0pnnvUAz7s,2076
+xy_django_app_information/serializers.py,sha256=ECjQjQinpnWg7o8cMsKI0skLhLFR4xPVg7RGCAY5LP8,1307
+xy_django_app_information/tests.py,sha256=2Oazo6K1JtLcJCaFIq5eah30vMT7rksGHUVNQ-pEjhc,84
+xy_django_app_information/views.py,sha256=1RKwWLlBaffQwOAs_PVCbdOeF3V81RlYcAeEVIB5a-g,87
+xy_django_app_information-1.0.0.dist-info/LICENSE,sha256=8NreXJM3ab-0PXXvuVF9QqDoXrglPouAZDdv3Vj-70U,9247
+xy_django_app_information-1.0.0.dist-info/METADATA,sha256=Jw4C5cubpBowVXNIl07_csiJNpf8s1x5U4eAK__5uKY,3717
+xy_django_app_information-1.0.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+xy_django_app_information-1.0.0.dist-info/top_level.txt,sha256=leFEivBaAwq-EuKkHXTHH2Ua_5bAPXdtd7nddzlK0KU,26
+xy_django_app_information-1.0.0.dist-info/RECORD,,
