@@ -1,0 +1,13 @@
+{
+   "version": "1.0",
+   "scores_db": "./output/scores.sqlite",
+   "emodels_hoc_dir": "./output/emodels_hoc",
+   "to_skip_features": [],
+   "pdf_filename": "output_megate/megating.pdf",
+   "megate_thresholds": [
+       {"emodel": [".*"], "fullmtype": [".*"], "etype": [".*"], "features": [".*"], "megate_threshold": 5}
+   ],
+   "output_dir": "./output_megate",
+   "check_opt_scores": true,
+   "plot_emodels_per_morphology": true
+}

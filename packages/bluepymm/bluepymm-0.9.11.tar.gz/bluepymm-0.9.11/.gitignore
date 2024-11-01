@@ -1,0 +1,13 @@
+/tmp
+*.pyc
+/.*.swp
+/bluepymm.egg-info
+/dist/
+/venv
+/.noseids
+/build
+/.tox
+/.coverage
+/cov_reports/
+.python-version
+.vscode
