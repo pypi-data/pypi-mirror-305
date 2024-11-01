@@ -1,0 +1,2 @@
+[console_scripts]
+autogluon-assistant = autogluon_assistant:main

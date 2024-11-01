@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/autogluon_assistant/__init__.py
+src/autogluon_assistant.egg-info/PKG-INFO
+src/autogluon_assistant.egg-info/SOURCES.txt
+src/autogluon_assistant.egg-info/dependency_links.txt
+src/autogluon_assistant.egg-info/entry_points.txt
+src/autogluon_assistant.egg-info/requires.txt
+src/autogluon_assistant.egg-info/top_level.txt
