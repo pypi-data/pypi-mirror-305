@@ -1,0 +1,9 @@
+cftime
+numpy
+HydroErr
+pandas
+pyyaml
+StrEnum
+
+[test]
+pytest>=6.0
