@@ -1,0 +1,3 @@
+[console_scripts]
+carbon-txt = carbon_txt_validator.cli:app
+carbon-txt-validator = carbon_txt_validator.cli:app
