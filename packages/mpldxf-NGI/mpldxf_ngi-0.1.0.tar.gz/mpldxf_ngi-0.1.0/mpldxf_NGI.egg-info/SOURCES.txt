@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+versioneer.py
+mpldxf/__init__.py
+mpldxf/_version.py
+mpldxf/backend_dxf.py
+mpldxf/dxf_colors.py
+mpldxf/test_backend_ezdxf.py
+mpldxf_NGI.egg-info/PKG-INFO
+mpldxf_NGI.egg-info/SOURCES.txt
+mpldxf_NGI.egg-info/dependency_links.txt
+mpldxf_NGI.egg-info/requires.txt
+mpldxf_NGI.egg-info/top_level.txt
