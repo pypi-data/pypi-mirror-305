@@ -1,0 +1,8 @@
+texmd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+texmd/md.py,sha256=wxeiqjxnzP-T_c_o-jtgEVSJ69VB86GEuSn_TAd5uds,3143
+texmd/texmd.py,sha256=qMHsuKrF6XKwLThrQTQA0mSUkR6-kxe8NpmgjgWDqDk,8788
+texmd-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+texmd-0.0.1.dist-info/METADATA,sha256=eB5VrsqE5ReIGB6mn-Rp8_xgCkAKQWSWcMgASSN-TYo,684
+texmd-0.0.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+texmd-0.0.1.dist-info/top_level.txt,sha256=ivH2ZYi93NTdqjwIlakOWU2o_23nt-RTS109Hh5J5Kw,6
+texmd-0.0.1.dist-info/RECORD,,
