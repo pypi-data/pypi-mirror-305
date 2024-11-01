@@ -1,0 +1,3 @@
+[console_scripts]
+import-translations=import_translations.import_translations:main
+
