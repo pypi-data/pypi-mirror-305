@@ -1,0 +1,13 @@
+alfred/__init__.py,sha256=tJxDS3l8ZxZUqGh58MQksqbWB-qdtqIfXbq5o2P89Q8,105
+alfred/action.py,sha256=9zZuayOuKrpCRdxf28HQkMggB9l2G_US12mJt6OUNoo,770
+alfred/agent_for_shell.py,sha256=XsbyrwWr8ZF_H0ODJqzQATr6jlJEAHDfxkmwEK8bGAA,2456
+alfred/main.py,sha256=O22A-9qiFzO1tJaHvoVQUYIx4BFk8qUbu4qmGiZQCyc,380
+process_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+process_manager/action.py,sha256=9P44x8nHZWA-o5_ohENrhwcuN7biW1rXWRE38Dnr6l8,9487
+process_manager/agent.py,sha256=9JXXhXzJ_YCESYq1W-gSSHY-IPgwBg78FB9ULHQ_zKc,1006
+ceo_alfred-0.0.2b0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+ceo_alfred-0.0.2b0.dist-info/METADATA,sha256=Z5DC9GhcjgG7OoI85axDkoUbLZrYPN624MoSs7nj9qc,41970
+ceo_alfred-0.0.2b0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+ceo_alfred-0.0.2b0.dist-info/entry_points.txt,sha256=5lq3Gbk7w7WpXAVGbl0pc9tim0zcUx2BIpa03F73Cwg,44
+ceo_alfred-0.0.2b0.dist-info/top_level.txt,sha256=5J2Akp_zV0L4UaEFJHqwbzLhM2p0EEp1wVyOAfnkAj0,23
+ceo_alfred-0.0.2b0.dist-info/RECORD,,
