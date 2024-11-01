@@ -1,0 +1,17 @@
+cssselect
+lxml
+psutil
+selenium
+urllib3
+
+[debug]
+html2text
+
+[dev]
+black
+coverage[toml]
+html2text
+pytest
+ruff
+toml
+lxml-stubs
