@@ -1,0 +1,6 @@
+mlregistry/__init__.py,sha256=hsQ5F6RBuxXGyc_MQ787pV5nqzFXOxxMMrOhJZ0H03E,259
+mlregistry/registry.py,sha256=iGAzqM6CP_bWhD9ma8V1ECh4ikOcCQDbp0508E44kfg,5636
+mlregistry-0.2.0.dist-info/LICENSE,sha256=xaMmSaui1itQNp2WE6mT7zoqwyhLqqObOA5YW7BqXnc,1073
+mlregistry-0.2.0.dist-info/METADATA,sha256=Uvcsl2KirjBJE6KA2iodW3Zn56glhGPmHxkOqwjQvDI,4378
+mlregistry-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+mlregistry-0.2.0.dist-info/RECORD,,
