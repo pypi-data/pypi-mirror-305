@@ -1,0 +1,251 @@
+"""
+Text-to-Speech Module for converting text into speech using various providers.
+
+This module provides functionality to convert text into speech using various TTS models.
+It supports both ElevenLabs, OpenAI and Edge TTS services and handles the conversion process,
+including cleaning of input text and merging of audio files.
+"""
+
+import logging
+import os
+import re
+import tempfile
+from typing import List, Tuple, Optional, Union, Dict, Any, Set
+from pydub import AudioSegment
+
+from .tts.factory import TTSProviderFactory
+from .utils.config import load_config
+from .utils.config_conversation import load_conversation_config
+
+logger = logging.getLogger(__name__)
+
+
+class TextToSpeech:
+    def __init__(
+        self,
+        model: str = "openai",
+        api_key: Optional[str] = None,
+        conversation_config: Optional[Dict[str, Any]] = None,
+    ):
+        """
+        Initialize the TextToSpeech class.
+
+        Args:
+                        model (str): The model to use for text-to-speech conversion.
+                                                Options are 'elevenlabs', 'openai' or 'edge'. Defaults to 'openai'.
+                        api_key (Optional[str]): API key for the selected text-to-speech service.
+                        conversation_config (Optional[Dict]): Configuration for conversation settings.
+        """
+        self.config = load_config()
+        self.conversation_config = load_conversation_config(conversation_config)
+        self.tts_config = self.conversation_config.get("text_to_speech", {})
+
+        # Get API key from config if not provided
+        if not api_key:
+            api_key = getattr(self.config, f"{model.upper()}_API_KEY", None)
+
+        # Initialize provider using factory
+        self.provider = TTSProviderFactory.create(model, api_key)
+
+        # Setup directories and config
+        self._setup_directories()
+        self.audio_format = self.tts_config.get("audio_format", "mp3")
+        self.ending_message = self.tts_config.get("ending_message", "")
+
+    def _get_provider_config(self) -> Dict[str, Any]:
+        """Get provider-specific configuration."""
+        # Get provider name in lowercase without 'TTS' suffix
+        provider_name = self.provider.__class__.__name__.lower().replace("tts", "")
+
+        # Get provider config from tts_config
+        provider_config = self.tts_config.get(provider_name, {})
+
+        # If provider config is empty, try getting from default config
+        if not provider_config:
+            provider_config = {
+                "model": self.tts_config.get("default_model", "tts-1"),
+                "default_voices": {
+                    "question": self.tts_config.get("default_voice_question", "alloy"),
+                    "answer": self.tts_config.get("default_voice_answer", "echo"),
+                },
+            }
+
+        logger.debug(f"Using provider config: {provider_config}")
+        return provider_config
+
+    def convert_to_speech(self, text: str, output_file: str) -> None:
+        """
+        Convert input text to speech and save as an audio file.
+
+        Args:
+                text (str): Input text to convert to speech.
+                output_file (str): Path to save the output audio file.
+        """
+
+        # Then clean up TSS markup
+        cleaned_text = text
+
+        try:
+            with tempfile.TemporaryDirectory(dir=self.temp_audio_dir) as temp_dir:
+                audio_segments = self._generate_audio_segments(cleaned_text, temp_dir)
+                self._merge_audio_files(audio_segments, output_file)
+                logger.info(f"Audio saved to {output_file}")
+
+        except Exception as e:
+            logger.error(f"Error converting text to speech: {str(e)}")
+            raise
+
+    def _generate_audio_segments(self, text: str, temp_dir: str) -> List[str]:
+        """Generate audio segments for each Q&A pair."""
+        qa_pairs = self.split_qa(text)
+        audio_files = []
+        provider_config = self._get_provider_config()
+
+        for idx, (question, answer) in enumerate(qa_pairs, 1):
+            for speaker_type, content in [("question", question), ("answer", answer)]:
+                temp_file = os.path.join(
+                    temp_dir, f"{idx}_{speaker_type}.{self.audio_format}"
+                )
+                voice = provider_config.get("default_voices", {}).get(speaker_type)
+                model = provider_config.get("model")
+
+                audio_data = self.provider.generate_audio(content, voice, model)
+                with open(temp_file, "wb") as f:
+                    f.write(audio_data)
+                audio_files.append(temp_file)
+
+        return audio_files
+
+    def _merge_audio_files(self, audio_files: List[str], output_file: str) -> None:
+        """
+        Merge the provided audio files sequentially, ensuring questions come before answers.
+
+        Args:
+                audio_files: List of paths to audio files to merge
+                output_file: Path to save the merged audio file
+        """
+        try:
+
+            def get_sort_key(file_path: str) -> Tuple[int, int]:
+                """
+                Create sort key from filename that puts questions before answers.
+                Example filenames: "1_question.mp3", "1_answer.mp3"
+                """
+                basename = os.path.basename(file_path)
+                # Extract the index number and type (question/answer)
+                idx = int(basename.split("_")[0])
+                is_answer = basename.split("_")[1].startswith("answer")
+                return (
+                    idx,
+                    1 if is_answer else 0,
+                )  # Questions (0) come before answers (1)
+
+            # Sort files by index and type (question/answer)
+            audio_files.sort(key=get_sort_key)
+
+            # Create empty audio segment
+            combined = AudioSegment.empty()
+
+            # Add each audio file to the combined segment
+            for file_path in audio_files:
+                combined += AudioSegment.from_file(file_path, format=self.audio_format)
+
+            # Ensure output directory exists
+            os.makedirs(os.path.dirname(output_file), exist_ok=True)
+
+            # Export the combined audio
+            combined.export(output_file, format=self.audio_format)
+            logger.info(f"Merged audio saved to {output_file}")
+
+        except Exception as e:
+            logger.error(f"Error merging audio files: {str(e)}")
+            raise
+
+    def split_qa(self, input_text: str) -> List[Tuple[str, str]]:
+        """
+        Split the input text into question-answer pairs.
+
+        Args:
+                input_text (str): The input text containing Person1 and Person2 dialogues.
+
+        Returns:
+                List[Tuple[str, str]]: A list of tuples containing (Person1, Person2) dialogues.
+        """
+        # Add ending message to the end of input_text
+        input_text += f"<Person2>{self.ending_message}</Person2>"
+
+        # Regular expression pattern to match Person1 and Person2 dialogues
+        pattern = r"<Person1>(.*?)</Person1>\s*<Person2>(.*?)</Person2>"
+
+        # Find all matches in the input text
+        matches = re.findall(pattern, input_text, re.DOTALL)
+
+        # Process the matches to remove extra whitespace and newlines
+        processed_matches = [
+            (" ".join(person1.split()).strip(), " ".join(person2.split()).strip())
+            for person1, person2 in matches
+        ]
+        return processed_matches
+
+    def _setup_directories(self) -> None:
+        """Setup required directories for audio processing."""
+        self.output_directories = self.tts_config.get("output_directories", {})
+        self.temp_audio_dir = self.tts_config.get("temp_audio_dir")
+
+        # Create directories if they don't exist
+        for dir_path in [
+            self.output_directories.get("transcripts"),
+            self.output_directories.get("audio"),
+            self.temp_audio_dir,
+        ]:
+            if dir_path and not os.path.exists(dir_path):
+                os.makedirs(dir_path)
+
+
+def main(seed: int = 42) -> None:
+    """
+    Main function to test the TextToSpeech class.
+
+    Args:
+            seed (int): Random seed for reproducibility. Defaults to 42.
+    """
+    try:
+        # Load configuration
+        config = load_config()
+
+        # Override default TTS model to use edge for tests
+        test_config = {"text_to_speech": {"default_tts_model": "edge"}}
+
+        # Read input text from file
+        with open(
+            "tests/data/transcript_336aa9f955cd4019bc1287379a5a2820.txt", "r"
+        ) as file:
+            input_text = file.read()
+
+        # Test ElevenLabs
+        tts_elevenlabs = TextToSpeech(model="elevenlabs")
+        elevenlabs_output_file = "tests/data/response_elevenlabs.mp3"
+        tts_elevenlabs.convert_to_speech(input_text, elevenlabs_output_file)
+        logger.info(
+            f"ElevenLabs TTS completed. Output saved to {elevenlabs_output_file}"
+        )
+
+        # Test OpenAI
+        tts_openai = TextToSpeech(model="openai")
+        openai_output_file = "tests/data/response_openai.mp3"
+        tts_openai.convert_to_speech(input_text, openai_output_file)
+        logger.info(f"OpenAI TTS completed. Output saved to {openai_output_file}")
+
+        # Test Edge
+        tts_edge = TextToSpeech(model="edge")
+        edge_output_file = "tests/data/response_edge.mp3"
+        tts_edge.convert_to_speech(input_text, edge_output_file)
+        logger.info(f"Edge TTS completed. Output saved to {edge_output_file}")
+
+    except Exception as e:
+        logger.error(f"An error occurred during text-to-speech conversion: {str(e)}")
+        raise
+
+
+if __name__ == "__main__":
+    main(seed=42)
