@@ -1,0 +1,19 @@
+[build-system]
+build-backend = 'mesonpy'
+requires = ['meson-python']
+
+[tool.meson-python.args]
+setup = ['--vsenv']
+install = ['--tags=python']
+
+[project]
+name = 'smbios'
+version = '1.2.6'
+description = 'Identify virtual machine'
+readme = 'README.md'
+requires-python = '>=3.8'
+license = { file = 'LICENSE' }
+authors = [
+  { name = 'Perry Werneck', email = 'perry.werneck@gmail.com' },
+]
+
