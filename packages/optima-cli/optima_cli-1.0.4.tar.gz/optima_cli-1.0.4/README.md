@@ -1,0 +1,97 @@
+# OPTIM CLI
+
+OPTIM CLI is a powerful command-line interface tool designed to streamline the management and interaction with optimization problems. It provides an efficient way to create, upload, and manage optimization problems and their associated files through simple commands.
+
+## Features
+
+* 🚀 Quick problem creation and management
+* 📁 Easy file upload system for problems and instances
+* 📋 Comprehensive problem type visualization
+* 💻 Both CLI and Python package functionality
+* 🔄 Interactive prompts for missing parameters
+* 📝 Metadata and README management capabilities
+
+## Installation
+
+### Prerequisites
+
+- **Python 3.11 or higher**
+
+  ```
+  # Check your Python version
+  python --version
+
+  # Install Python via Homebrew (MacOS)
+  brew install python@3.11
+
+  # Or use Conda
+  conda create -n optim-env python=3.11
+  conda activate optim-env
+  ```
+
+### Installing OPTIM-CLI
+
+```
+pip install optima-cli
+```
+
+## Usage
+
+### Command Line Interface
+
+#### Basic Commands
+
+```
+# View all available commands
+op
+
+# View problems and problem types
+op view-problems
+op view-problem-types
+```
+
+#### Problem Management
+
+```
+# Create a new problem
+op create [-u <username>]
+
+# Upload problem files
+op upload [-u <username>] [-prob <problem_abbr>] [-p <src_path>]
+
+# Upload problem instances
+op upload-instances [-u <username>] [-prob <problem_abbr>] [-p <src_path>]
+
+# Upload README file
+op upload-readme [-u <username>] [-prob <problem_abbr>] [-p <src_path>]
+
+# Upload metadata
+op upload-metadata [-u <username>] [-prob <problem_abbr>] [-p <src_path>]# View all available commands
+op
+
+# View problems and problem types
+op view-problems
+op view-problem-types
+```
+
+**Note:** All command parameters are optional. If omitted, OPTIM CLI will interactively prompt for the required information.
+
+### Python Package Usage
+
+Currently, only the viewing functions are available as a Python package. Other functionality (create, upload, etc.) is still under development and will be added in future releases.
+
+**Available functions:**
+
+```
+from optima.commands.op_view import view_problems, view_problem_types
+
+# View available problems
+view_problems()
+
+# View problem types
+view_problem_types()
+```
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
