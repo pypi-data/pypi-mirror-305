@@ -1,0 +1,42 @@
+[project]
+name = "saldo"
+version = "0.1.3"
+description = "net income calculator for Portugal"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Francisco Macedo" },
+    { name = "Francisco Macedo", email = "franciscovcbm@gmail.com" },
+]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = []
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/franciscobmacedo/saldo"
+Changelog = "https://github.com/franciscobmacedo/saldo/releases"
+Issues = "https://github.com/franciscobmacedo/saldo/issues"
+CI = "https://github.com/franciscobmacedo/saldo/actions"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+dev = [
+    "ruff",
+    "mypy",
+    "pre-commit",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
