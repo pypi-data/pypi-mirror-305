@@ -1,0 +1,11 @@
+ecmwfspec-0.0.3.dist-info/METADATA,sha256=KqjFqwiZolk1j-5o2L2D7Ax3jq5G_QRik1TOQuusnew,2575
+ecmwfspec-0.0.3.dist-info/WHEEL,sha256=rsbISUvAUcl4HUjm1gKb_L9aoizBeGE4RqNs1UJntCA,94
+ecmwfspec-0.0.3.dist-info/entry_points.txt,sha256=RGZujJFd0J_4_EYLQcw9pj4D8i1Ur9YoERF6TbFdWrI,210
+ecmwfspec/__init__.py,sha256=r6K_IihQk7swNfx0EcXlLMwaVjWtbIqHyQxc3iabUwA,286
+ecmwfspec/core.py,sha256=x9VvqaD1eIzn2oyA2xExX5FhC2dCgifRoRguo2_CW78,15591
+ecmwfspec/ecfs_wrapper.py,sha256=UT_qbfN_cDrzIiGDSCOZ_msxZVKgwmJkE_KygengjIg,3104
+ecmwfspec/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ecmwfspec/tests/conftest.py,sha256=CZ7hQ1MzGaBXZIWGfRVECScABOipG2A_dHT88cVmHLI,7988
+ecmwfspec/tests/test_open_dataset.py,sha256=QDyj8tRr2deecMHy1hiyOTqS1-_wjCwiKgo4e1X2wGo,6639
+ecmwfspec/xr_accessor.py,sha256=NfwT_PewyhHSc3UPEcRNe3kyCHN_PlqlBbVUI-HuXuc,4672
+ecmwfspec-0.0.3.dist-info/RECORD,,
