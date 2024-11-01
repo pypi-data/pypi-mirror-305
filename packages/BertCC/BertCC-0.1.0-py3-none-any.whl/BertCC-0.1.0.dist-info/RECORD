@@ -1,0 +1,14 @@
+bertcc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bertcc/__main__.py,sha256=fnuCvUIX3PYV-pX6GZBKunfLiet8cr34bvvSIzCgSpI,1481
+bertcc/converter.py,sha256=xzgeC6vdsdXXpI4sBVh-adm9e2hidAQInHr82mPolMw,9433
+bertcc/utils/STCharacters.txt,sha256=RN1Wcow-8zDza5v0t9E7zJuCLMGzNJ3sm7N01s1Nris,34325
+bertcc/utils/STPhrases.txt,sha256=PRgWdmxIAI_vuYhMD6UZw15v1RuNjbF8QGr1Gwo-kEI,1004975
+bertcc/utils/TWVariants.txt,sha256=MOb4OV7b_ddOKT_YucYhBdeHyEn7sgjSp4MurGlnNNc,312
+bertcc/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bertcc/utils/constants.py,sha256=GK8LEvkCfQVEcTPTLh9_dmXocQsRLR_YrdEzrxJxvSM,2274
+BertCC-0.1.0.dist-info/LICENSE,sha256=-1MUh_ZmkJ1IcjnaYTDiJW2MhvJuwmdM5qpXY7x_jFY,9164
+BertCC-0.1.0.dist-info/METADATA,sha256=5W-TwQMsbdnvu0rTM8ZAotPnNSUv3dri4zeSsQzHxq4,6815
+BertCC-0.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+BertCC-0.1.0.dist-info/entry_points.txt,sha256=eixjVDuq-ZDm6KaJ59AN_zpVSeKO1p8O128jUSWxe08,48
+BertCC-0.1.0.dist-info/top_level.txt,sha256=j2rdmGZON1lw287-rkaMXwQwvXkIieyCyq08qH5y5uQ,7
+BertCC-0.1.0.dist-info/RECORD,,

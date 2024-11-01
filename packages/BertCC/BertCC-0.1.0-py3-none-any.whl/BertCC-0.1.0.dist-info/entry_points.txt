@@ -1,0 +1,2 @@
+[console_scripts]
+bertcc = bertcc.__main__:main
