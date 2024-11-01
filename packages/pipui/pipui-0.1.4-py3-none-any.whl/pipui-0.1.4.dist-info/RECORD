@@ -1,0 +1,9 @@
+pipui/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pipui/__main__.py,sha256=5eBP59NLwUmHMHTQqyUpkjvLhAg0VxlJUiVOVd8-1Fo,175
+pipui/main.py,sha256=5KY9xvsTRLY8RZ1EB2bvXUNXGn6mXGX8IRpAXYWdjN8,11260
+pipui/templates/index.html,sha256=_CtKpumvI4cy3N_Bf5EppvGWOIKiOKtuamq2oeHZxUI,12953
+pipui-0.1.4.dist-info/METADATA,sha256=JJS1-Lh6LQUAkVbrCfcLcKDis6HdPXeuHLhFFiIetPw,255
+pipui-0.1.4.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+pipui-0.1.4.dist-info/entry_points.txt,sha256=IRNyVZ6fPXYQNRCjdE_DznyHJtAxHgaRjYpIXbDKeCk,42
+pipui-0.1.4.dist-info/top_level.txt,sha256=ysBq3FFisqCrGabQnPZO1wfJLOKnvt6w05byItZhaIY,6
+pipui-0.1.4.dist-info/RECORD,,
