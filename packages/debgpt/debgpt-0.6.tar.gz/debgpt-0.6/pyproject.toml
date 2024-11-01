@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "debgpt.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["debgpt*"]
+exclude = ["doc*", "tests*"]
+
+[project]
+dynamic = ["version"]
+name = 'debgpt'
+description = "DebGPT -- Terminal LLM Tool with Debian/Linux-Specific Design"
+requires-python = ">= 3.9"
+dependencies = [
+    'rich',
+    'prompt_toolkit',
+    'openai',
+    'requests',
+    'bs4',
+    'tomli',
+    'tenacity',
+    'pygments',
+    'urwid'
+]
+authors = [
+  {name = "Mo Zhou", email = "lumin@debian.org"},
+]
+readme = "README.md"
+license = {text = "MIT License"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://salsa.debian.org/deeplearning-team/debgpt"
+Issues = "https://salsa.debian.org/deeplearning-team/debgpt/-/issues"
+
+[project.scripts]
+debgpt = "debgpt.cli:main"
+
+[project.optional-dependencies]
+gemini = [
+    'google-generativeai',
+]
+anthropic = [
+    'anthropic',
+]
+test = [
+    "pytest>=7.0",
+]
+dev = [
+    "pyflakes",
+    "pylint",
+]
+backend = [
+    'pytorch',
+    'transformers',
+]
+all = [
+    "debgpt[gemini]",
+    "debgpt[anthropic]",
+]
