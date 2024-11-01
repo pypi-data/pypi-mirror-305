@@ -1,0 +1,9 @@
+landregistry/exceptions/__init__.py,sha256=BYfuVqqld1X12Simu6FVJdoekrgyvDhRsxE4v7-6GUg,152
+landregistry/exceptions/application_error.py,sha256=cpA_V-39iSN3S93gS63CDihTdmyshZG6F6krryc39tI,1192
+landregistry/exceptions/codes.py,sha256=7vRLDC43fATo0V5HevyLxPhjVudLiv0Onie1gRiVY3U,55
+landregistry/exceptions/handlers.py,sha256=akJ15jkIf1caMngceCgTEvWuiKiJjYzpJlphbnwaNY8,5644
+landregistry/exceptions/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+landregistry_exception_handlers-0.9.9.dist-info/METADATA,sha256=lFHQvLcKpyHnEnT4kL-Cbq7hrDWDYXw51DhLI_U-u7o,3442
+landregistry_exception_handlers-0.9.9.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+landregistry_exception_handlers-0.9.9.dist-info/top_level.txt,sha256=hMEDBmIxLq43q01HoEeDgA0zt5wnBqwNHU6Lz7mot48,13
+landregistry_exception_handlers-0.9.9.dist-info/RECORD,,
