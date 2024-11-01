@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: k8sidecar-python-lib
+Version: 0.1
+Summary: Descripción de tu librería
+Home-page: https://github.com/cloudmedialab-uv/k8sidecar-python-lib
+Author: Andoni Salcedo Navarro
+Author-email: andonisalcedo@gmail.com
+License: UNKNOWN
+Description: # k8sidecar python lib
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
