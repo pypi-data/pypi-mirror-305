@@ -1,0 +1,10 @@
+svglatex/__init__.py,sha256=OCU61nfNv_OP2JnEQ8caYIqaAPZjkQZf_gbW7xXt0Oo,196
+svglatex/_version.py,sha256=Uisc4OZ3KWuxYFEdiB_XM0MWlY_YyW8_5PH86gAu2TI,58
+svglatex/converter.py,sha256=xiyVbp3koPTEdaL308-_aoj7-sBR3lfrCYNOcocsStE,30919
+svglatex/interface.py,sha256=uWhtv2ey_jC3yz_aANFbLD-SISNQLWyLxLUS1JS_MoM,5678
+svglatex-0.0.3.dist-info/LICENSE,sha256=iL7pTXx83zP8xl8MMOXvIaU3-xLJS1YoWpcxEBnKyPU,1540
+svglatex-0.0.3.dist-info/METADATA,sha256=-STftg3m4AItjkQ5zdAlrEZAggt8gfpzy05AqHt_UOE,1356
+svglatex-0.0.3.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+svglatex-0.0.3.dist-info/entry_points.txt,sha256=5z9WlsEneaJnD_OHXwQg-pt1Wc4aA6NbC4zSo_uvvZc,53
+svglatex-0.0.3.dist-info/top_level.txt,sha256=D0U0s_1rOw_l9GVrAiQ5DjaqPaC_ORsNe05F_hayGIs,9
+svglatex-0.0.3.dist-info/RECORD,,
