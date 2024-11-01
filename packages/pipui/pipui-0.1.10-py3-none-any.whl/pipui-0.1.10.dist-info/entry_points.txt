@@ -1,0 +1,3 @@
+[console_scripts]
+pipui = pipui.main:main
+
