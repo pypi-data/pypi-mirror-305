@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hierarchicalvs
+Version: 1.0
+Summary: a fully AI-driven virtual screening package
+Author: shukaigu
+Author-email: 3160101168@zju.edu.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+HierarchicalVS is a fully AI-driven virtual screening platform. HierarchicalVS first employs KarmaDock for efficient docking, followed by CarsiDock for accurate docking and RTMscore for re-scoring.
+
