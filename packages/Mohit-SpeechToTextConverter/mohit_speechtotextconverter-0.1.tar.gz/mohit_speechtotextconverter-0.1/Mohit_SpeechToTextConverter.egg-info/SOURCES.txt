@@ -1,0 +1,7 @@
+setup.py
+Mohit_SpeechToTextConverter/__init__.py
+Mohit_SpeechToTextConverter.egg-info/PKG-INFO
+Mohit_SpeechToTextConverter.egg-info/SOURCES.txt
+Mohit_SpeechToTextConverter.egg-info/dependency_links.txt
+Mohit_SpeechToTextConverter.egg-info/requires.txt
+Mohit_SpeechToTextConverter.egg-info/top_level.txt

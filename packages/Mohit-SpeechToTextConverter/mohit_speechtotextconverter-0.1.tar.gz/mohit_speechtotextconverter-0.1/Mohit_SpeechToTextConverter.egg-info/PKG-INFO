@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Mohit_SpeechToTextConverter
+Version: 0.1
+Summary: This is a speech-to-text package created by Mohit Kumar
+Author: Mohit Kumar
+Author-email: megamohit2006@gmail.com
+Requires-Dist: selenium
+Requires-Dist: webdriver_manager
