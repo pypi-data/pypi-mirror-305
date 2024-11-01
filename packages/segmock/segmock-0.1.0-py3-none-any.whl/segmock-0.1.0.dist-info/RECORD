@@ -1,0 +1,12 @@
+segmock/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+segmock/__main__.py,sha256=xgyEbz_Hc7cFSuRlN6eG62sS6Rn8OCU3QH0i0rczwzQ,114
+segmock/app.py,sha256=fpeAujvcEi1bUSDCAVu9Yr-QeAL4hwhavXnxehucvL8,889
+segmock/app.tcss,sha256=c4sVGhF_FDmztqU72poMwtivvMk5s0_en5BC4NTIDd4,399
+segmock/blocking_screen.py,sha256=7mS4ArTKg2-zIUIBYGOxFVqfJZCzJ-j-2eFMI8uKEjw,979
+segmock/clock.py,sha256=uWGXXGO9o97h1yJOji8QiV7r7UpH9wlzzjCH9CqXpzI,708
+segmock/stopwatch.py,sha256=t5NhMGtuAjrYfDtakJa9Yi9XPeO4R-tbEW5PNmLDnaM,2699
+segmock-0.1.0.dist-info/METADATA,sha256=ym8yaZTbomBoJIYm3KW0tO7-mncC4fkJC-_Aw2JkMMQ,1012
+segmock-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+segmock-0.1.0.dist-info/entry_points.txt,sha256=l_QdCX7NWdu5vrbMcST0XTVHEE32Fd8F5h6XgrbLrH4,50
+segmock-0.1.0.dist-info/licenses/LICENSE,sha256=xXQ19fkhm81A1zKWTQO59ioffWOVZ0rimWNMjBd4zyI,1067
+segmock-0.1.0.dist-info/RECORD,,
