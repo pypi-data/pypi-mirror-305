@@ -1,0 +1,16 @@
+omi/__init__.py,sha256=J-j-u0itpEFT6irdmWmixQqYMadNl1X91TxUmoiLHMI,22
+omi/__main__.py,sha256=cva08UJD0zbac5lROrDVo_aE8zHj25q7ouwX8jTFfmM,374
+omi/base.py,sha256=B214HJLobydFbGDGP3ZcDfQxKpesj4IN1PyqtoeY8aI,4600
+omi/cli.py,sha256=SmG-_F8laMbEGRNIen-qGYDJ2gEAuI0kdGkObeelAXA,801
+omi/conversion.py,sha256=kWWq8gG0cYfeGyuxtqHJd803Yb16rZ5PhjK_z3GO_VI,9747
+omi/data/README.md,sha256=HcKLkXT8rHH__QvlPbqHTtXY1metMcCDhEmMvWq6hxg,114
+omi/data/licenses.json,sha256=joRL6R3bBcC7ZC6Iz4T5gYJyR8kgYHL654Se7kkBgio,300253
+omi/inspection.py,sha256=9QFuGdC-_i4XApkc2RA1LqRGUzVxhVAbfule76Ib2VU,4214
+omi/license.py,sha256=uuGC1sFaiIpBk6bFyGoz8sv2ymIcu0odGykHxfYpAm4,3419
+omi/settings.py,sha256=4PcTnw5uqZPHP31a4zGzAdvBxLRrQNwxVrqofDUw9hY,75
+omi/validation.py,sha256=O1eFk-AsBG-7y8ComX2Dp4tBNvi28mqQZeLJq0UrLW8,16557
+omi-1.0.0.dist-info/AUTHORS.rst,sha256=fn2q7oekGRo8G-f6qr-tiaGl_pdXwSzqjopDbmBCPvU,142
+omi-1.0.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+omi-1.0.0.dist-info/METADATA,sha256=LbV4Z6L23m6qBoo2S1Rqo_1WYfwJK7uessB5P7uXJJg,9205
+omi-1.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+omi-1.0.0.dist-info/RECORD,,
