@@ -1,0 +1,328 @@
+Metadata-Version: 2.1
+Name: DQMaRC
+Version: 1.0.4
+Summary: A Python Tool for Structured Data Quality Profiling
+Home-page: https://github.com/christie-nhs-data-science/DQMaRC
+Author: Anthony Lighterness and Michael Adcock
+Author-email: Anthony Lighterness <anthony.lighterness@nhs.net>, Michael Adcock <michael.adcock2@nhs.net>
+Maintainer-email: Anthony Lighterness <tony.lighterness@gmail.com>, Michael Adcock <michael.adcock2@nhs.net>
+License: Open Government License v3
+        --------------------------
+        
+        https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+        
+        You are encouraged to use and re-use the Information that is available under this licence freely and flexibly, with only a few conditions.
+        
+        Using Information under this licence
+        ------------------------------------
+        
+        Use of copyright and database right material expressly made available under this licence (the 'Information') indicates your acceptance of the terms and conditions below.
+        
+        The Licensor grants you a worldwide, royalty-free, perpetual, non-exclusive licence to use the Information subject to the conditions below.
+        
+        This licence does not affect your freedom under fair dealing or fair use or any other copyright or database right exceptions and limitations.
+        
+        You are free to:
+        
+        - copy, publish, distribute and transmit the Information;
+        - adapt the Information;
+        - exploit the Information commercially and non-commercially for example, by combining it with other Information, or by including it in your own product or application.
+        
+        You must (where you do any of the above):
+        
+        - acknowledge the source of the Information in your product or application by including or linking to any attribution statement specified by the Information Provider(s) and, where possible, provide a link to this licence;
+        
+        If the Information Provider does not provide a specific attribution statement, you must use the following:
+        
+        > Contains public sector information licensed under the Open Government Licence v3.0.
+        
+        If you are using Information from several Information Providers and listing multiple attributions is not practical in your product or application, you may include a URI or hyperlink to a resource that contains the required attribution statements.
+        
+        These are important conditions of this licence and if you fail to comply with them the rights granted to you under this licence, or any similar licence granted by the Licensor, will end automatically.
+        
+        Exemptions
+        ----------
+        
+        This licence does not cover:
+        
+        - personal data in the Information;
+        - Information that has not been accessed by way of publication or disclosure under information access legislation (including the Freedom of Information Acts for the UK and Scotland) by or with the consent of the Information Provider;
+        - departmental or public sector organisation logos, crests and the Royal Arms except where they form an integral part of a document or dataset;
+        - military insignia;
+        - third party rights the Information Provider is not authorised to license;
+        - other intellectual property rights, including patents, trade marks, and design rights; and
+        - identity documents such as the British Passport
+        
+        Non-endorsement
+        ---------------
+        
+        This licence does not grant you any right to use the Information in a way that suggests any official status or that the Information Provider and/or Licensor endorse you or your use of the Information.
+        
+        No warranty
+        -----------
+        
+        The Information is licensed 'as is' and the Information Provider and/or Licensor excludes all representations, warranties, obligations and liabilities in relation to the Information to the maximum extent permitted by law.
+        
+        The Information Provider and/or Licensor are not liable for any errors or omissions in the Information and shall not be liable for any loss, injury or damage of any kind caused by its use. The Information Provider does not guarantee the continued supply of the Information.
+        
+        Governing Law
+        -------------
+        
+        This licence is governed by the laws of the jurisdiction in which the Information Provider has its principal place of business, unless otherwise specified by the Information Provider.
+        
+        Definitions
+        -----------
+        
+        In this licence, the terms below have the following meanings:
+        
+        'Information' means information protected by copyright or by database right (for example, literary and artistic works, content, data and source code) offered for use under the terms of this licence.
+        
+        'Information Provider' means the person or organisation providing the Information under this licence.
+        
+        'Licensor' means any Information Provider which has the authority to offer Information under the terms of this licence or the Keeper of Public Records, who has the authority to offer Information subject to Crown copyright and Crown database rights and Information subject to copyright and database right that has been assigned to or acquired by the Crown, under the terms of this licence.
+        
+        'Use' means doing any act which is restricted by copyright or database right, whether in the original medium or in any other medium, and includes without limitation distributing, copying, adapting, modifying as may be technically necessary to use it in a different mode or format.
+        
+        'You', 'you' and 'your' means the natural or legal person, or body of persons corporate or incorporate, acquiring rights in the Information (whether the Information is obtained directly from the Licensor or otherwise) under this licence.
+        
+        About the Open Government Licence
+        ---------------------------------
+        
+        The National Archives has developed this licence as a tool to enable Information Providers in the public sector to license the use and re-use of their Information under a common open licence. The National Archives invites public sector bodies owning their own copyright and database rights to permit the use of their Information under this licence.
+        
+        The Keeper of the Public Records has authority to license Information subject to copyright and database right owned by the Crown. The extent of the offer to license this Information under the terms of this licence is set out in the UK Government Licensing Framework. http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/re-use-and-licensing/ukglf/
+        
+        This is version 3.0 of the Open Government Licence. The National Archives may, from time to time, issue new versions of the Open Government Licence. If you are already using Information under a previous version of the Open Government Licence, the terms of that licence will continue to apply.
+        
+        These terms are compatible with the Creative Commons Attribution License 4.0 and the Open Data Commons Attribution License, both of which license copyright and database rights. This means that when the Information is adapted and licensed under either of those licences, you automatically satisfy the conditions of the OGL when you comply with the other licence. The OGLv3.0 is Open Definition compliant.
+        
+        Further context, best practice and guidance can be found in the UK Government Licensing Framework section on The National Archives website. http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/
+        
+        Open Government License for public sector information
+Project-URL: Documentation, https://christie-nhs-data-science.github.io/DQMaRC/
+Project-URL: Repository, https://github.com/christie-nhs-data-science/DQMaRC
+Project-URL: Issues, https://github.com/christie-nhs-data-science/DQMaRC/issues
+Keywords: data quality,data quality profiling
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+License-File: LICENSE.txt
+Requires-Dist: pandas
+Requires-Dist: numpy<2.0
+Requires-Dist: ipywidgets
+Requires-Dist: plotly
+Requires-Dist: shiny
+Requires-Dist: ipydatagrid
+Requires-Dist: nbconvert
+Requires-Dist: nbformat
+Requires-Dist: jupyterlab
+
+# DQMaRC: A Python Tool for Structured Data Quality Profiling
+
+* **Version:** 1.0.4 
+* **Author:** Anthony Lighterness and Michael Adcock  
+* **License:** MIT License and Open Government License v3
+
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+
+---
+
+## Overview
+
+**DQMaRC** (Data Quality Markup and Ready-to-Connect) is a Python tool designed to facilitate comprehensive data quality profiling of structured tabular data. It allows data analysts, engineers, and scientists to systematically assess and manage the quality of their datasets across multiple dimensions including completeness, validity, uniqueness, timeliness, consistency, and accuracy.
+
+DQMaRC can be used both programmatically within Python scripts and interactively through a Shiny web application front-end user interface, making it versatile for different use cases ranging from ad-hoc analysis to integration within larger data pipelines.
+
+## Key Features
+
+- **Multi-dimensional Data Quality Checks:** Evaluate datasets across key dimensions including Completeness, Validity, Uniqueness, Timeliness, Consistency, and Accuracy.
+- **Customisable Test Parameters:** Configure data quality test parameters easily via python or a user friendly spreadsheet to tailor your data quality assessment to your dataset.
+- **Interactive Shiny App:** Setup, run, explore and visualise data quality issues interactively through a Shiny app for Python.
+- **Integration with Data Pipelines:** Easily integrate DQMaRC into your data processing pipelines for scheduled data quality checks.
+- **Detailed Reporting:** Generate comprehensive reports detailing data quality issues at both the cell and aggregate levels.
+
+## Installation
+
+### Using Pip or Conda
+
+You can install DQMaRC using pip or conda. Ensure you have a virtual environment activated.
+
+```bash
+pip DQMaRC
+```
+
+```bash
+conda install DQMaRC
+```
+
+### Dependencies
+
+The package dependencies are listed in the `requirements.txt` file and will be installed automatically during the installation of DQMaRC.
+
+## Getting Started
+
+### 1. Import Libraries
+
+Start by importing the necessary libraries and DQMaRC modules in your Python environment.
+
+```python
+import pandas as pd
+from DQMaRC import DataQuality
+```
+
+### 2. Load Your Data
+
+Load the dataset you wish to profile.
+
+```python
+# Load your data
+df = pd.read_csv('path_to_your_data.csv')
+```
+
+### 3. Initialise DQMaRC and Set Test Parameters
+
+Initialise the DQ tool and set the test parameters. You can generate a template or import predefined parameters.
+
+```python
+# Initialise the Data Quality object
+dq = DataQuality(df)
+
+# Generate test parameters template
+test_params = dq.get_param_template()
+
+# (Optional) Load pre-configured test parameters
+# test_params = pd.read_csv('path_to_test_parameters.csv')
+
+# Set the test parameters
+dq.set_test_params(test_params)
+```
+
+### 4. Run Data Quality Checks
+
+Run the data quality checks across all dimensions.
+
+```python
+dq.run_all_metrics()
+```
+
+### 5. Retrieve and Save Results
+
+Retrieve the full results and join them with your original dataset for detailed analysis.
+
+```python
+# Get the full results
+full_results = dq.raw_results()
+
+# Join results with the original dataset
+df_with_results = df.join(full_results, how="left")
+
+# Save results to a CSV file
+df_with_results.to_csv('path_to_save_results.csv', index=False)
+```
+
+## Using the Shiny App
+
+In addition to programmatic usage, DQMaRC includes an interactive Shiny web app for Python that allows users to explore and visualise data quality issues.
+
+You can test the DQMaRC ShinyLive Demo by copying and pasting the URL located [HERE](https://github.com/christie-nhs-data-science/DQMaRC/blob/main/DQMaRC_ShinyLiveEditor_link) into your webbrowser. This link will take you to a ShinyLive Editor where you can test the DQMaRC functionality. If you encounter an error, try refreshing the webpage once or twice. If you still encounter an error after this, please feel free to get in touch by contacting us or raising an issue on our repository.
+
+**PLEASE NOTE**
+The ShinyLive UI is recommended only for **testing** and getting used to the DQMaRC too functionality. This interface is deployed on your machine, meaning it is only as secure as your machine is. It will store data you upload in its local memory before being wiped when you exit the app.
+
+### Running the Shiny App
+
+To run the Shiny app, use the following command in your terminal:
+
+```bash
+shiny run --reload --launch-browser path_to_your_app/app.py
+```
+
+### Deploying the Shiny App
+
+For deploying the Shiny app on a server, follow the [official Shiny for Python deployment guide](https://shiny.posit.co/py/docs/install-create-run.html).
+
+## Documentation
+
+Comprehensive documentation for DQMaRC, including detailed API references and user guides, is available [HERE](https://christie-nhs-data-science.github.io/DQMaRC/) or in the project `docs/` directory.
+
+## Repo Structure
+### Top-level Structure
+
+```
+
+DQMaRC	
+│   requirements.txt 			# package dependencies
+│   setup.py	 			# setup configuration for the python package distribution
+│       
+├───docs	 			# user docs material
+│   │...   
+│           
+├───DQMaRC  				# source code
+│   │   Accuracy.py
+│   │   app.py
+│   │   Completeness.py
+│   │   Consistency.py
+│   │   DataQuality.py
+│   │   Dimension.py
+│   │   Timeliness.py
+│   │   Uniqueness.py
+│   │   UtilitiesDQMaRC.py
+│   │   Validity.py
+│   │   __init__.py
+│   │   
+│   ├───data	 			# data used in the tutorial(s)
+│   │   │   DQ_df_full.csv
+│   │   │   test_params_definitions.csv
+│   │   │   toydf_subset.csv
+│   │   │   toydf_subset_test_params_24.05.16.csv
+│   │   │   
+│   │   └───lookups	 		# data standards and or value lists for data validity checks
+│   │           LU_toydf_gender.csv
+│   │           LU_toydf_ICD10_v5.csv
+│   │           LU_toydf_M_stage.csv
+│   │           LU_toydf_tumour_stage.csv
+│   │           
+│   ├───notebooks	
+│   │      Backend_Tutorial.ipynb   	# Tutorial for python users
+│...
+
+```
+
+## Contributing
+
+Contributions to DQMaRC are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute to this project.
+
+## License
+
+DQMaRC is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Acknowledgments
+
+This project was developed by Anthony Lighterness and Michael Adcock. Special thanks to all contributors and testers who helped in the development of this tool.
+
+## Citation
+
+Please use the following citation if you use DQMaRC:
+
+Lighterness, A., Adcock, M.A., and Price, G. (2024). DQMaRC: A Python Tool for Structured Data Quality Profiling (Version 1.0.0) [Software]. Available from https://github.com/christie-nhs-data-science/DQMaRC.
+
+## Notice on Maintenance and Support
+
+Please Note: This library is an open-source project maintained by a small team of contributors. 
+While we strive to keep the package updated and well-maintained, ongoing support and development may vary depending on resource availability.
+
+We strongly encourage users to engage with the project by reporting any issues, errors, or suggestions for improvements. 
+Your feedback is invaluable in helping us identify and prioritise areas for improvement. 
+Please feel free to submit questions, bug reports, or feature requests via our GitHub issues page or by reaching out.
+
+Thank you for your understanding and for contributing to the growth and improvement of this project!
+
+---
+
+*For more information, please visit the [project repository](https://github.com/christie-nhs-data-science/DQMaRC)*
