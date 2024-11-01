@@ -1,0 +1,14 @@
+[project]
+name = "doxyzpy"
+version = "0.0.1"
+description = "doxyzpy预留组织名，形如doxyzpy前缀的包名烦请别冲突"
+requires-python = ">=3.11"
+readme = "README.md"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool]
