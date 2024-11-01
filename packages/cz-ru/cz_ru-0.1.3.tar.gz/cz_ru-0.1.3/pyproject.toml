@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "cz-ru"
+version = "0.1.3"
+description = "Russian config for Commitizen based on Conventional Commits"
+authors = ["teatov <teatov@proton.me>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/teatov/cz-ru"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+commitizen = "^3.30.0"
+
+
+[tool.commitizen]
+name = "cz_ru"
+tag_format = "$version"
+version_scheme = "semver"
+version_provider = "poetry"
+update_changelog_on_bump = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
