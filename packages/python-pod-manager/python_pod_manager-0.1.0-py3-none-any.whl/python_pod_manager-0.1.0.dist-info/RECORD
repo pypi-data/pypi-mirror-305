@@ -1,0 +1,12 @@
+Python Pod Manager Source/__init__.py,sha256=Mb5pTrfLIOKGIF151BfbspIYlXYHMdb0klB3dfni9qw,365
+Python Pod Manager Source/app_manager.py,sha256=PxfxWyq9QJFagikVeb8bNAWQw5IvCkt_wI0ulnwBqWQ,2710
+Python Pod Manager Source/config_loader.py,sha256=3nAKyXt6Yb30gezRDTfB0ktAq6_k8BijtJxgNwyUo4E,3531
+Python Pod Manager Source/logger_manager.py,sha256=hjHEBMzUF4_AMhouE-EIFYI7DkAjBR4j1cTi0AznrVM,1111
+Python Pod Manager Source/main.py,sha256=wMgW4XpChYV6T-TW9gz96pHQmor9vt7aD46xCg-zRgU,4356
+Python Pod Manager Source/path_manager.py,sha256=6qQtnGomgAIehdaOQT8zmFWUWmwNykFjLdRkTRaJS0E,1301
+Python Pod Manager Source/pod_manager.py,sha256=3woZi6YaqMD_LEaiazsbYjoHiJ693oCCFxCA7KdLGQ0,3183
+Python Pod Manager Source/service_manager.py,sha256=3U7aKQV_cRhv8CW_mZjy7TvkeXmDngK-wDLs1EW5J7w,4459
+python_pod_manager-0.1.0.dist-info/METADATA,sha256=kZ9pEFopqXw2_kuQZoOiXkRhDcVTDgEigqSdo5jzyiQ,481
+python_pod_manager-0.1.0.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+python_pod_manager-0.1.0.dist-info/top_level.txt,sha256=vGeibjQq5qbCWSQ7fmdtXFvLPCjOpVFfz9B8E3UrNcE,26
+python_pod_manager-0.1.0.dist-info/RECORD,,
