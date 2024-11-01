@@ -1,0 +1,48 @@
+[project]
+name = "git-secret-store"
+version = "0.1.0"
+authors = [{ name = "Hashberg" }]
+description = "A simple tool to store encrypted data into a git repository."
+readme = { file = "README.rst", content-type = "text/markdown" }
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.10",
+    "Natural Language :: English",
+    "Typing :: Typed",
+]
+dependencies = ["pycryptodomex>=3.19"]
+
+
+[project.urls]
+Repository = "https://github.com/hashberg-io/git-secret-store"
+Issues = "https://github.com/hashberg-io/git-secret-store/issues"
+
+[build-system] # see https://pypi.org/classifiers/
+requires = [
+    "setuptools>=63.4.3",  # see https://github.com/python/mypy/issues/13392#issuecomment-1212727421
+    "wheel",
+    "setuptools_scm>=6.2",
+]
+build-backend = "setuptools.build_meta"
+
+# see https://github.com/pypa/setuptools_scm
+[tool.setuptools_scm]
+version_scheme = "post-release"   # use post-release scheme (default is pre-release of next version)
+local_scheme = "no-local-version" # interferes with PyPI
+
+[tool.black]
+line-length = 80
+target-version = ["py310", "py311", "py312"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[project.scripts]
+git-secret = "git_secret.script:main"
