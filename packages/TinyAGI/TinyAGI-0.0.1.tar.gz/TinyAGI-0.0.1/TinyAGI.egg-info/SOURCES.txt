@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+TinyAGI.egg-info/PKG-INFO
+TinyAGI.egg-info/SOURCES.txt
+TinyAGI.egg-info/dependency_links.txt
+TinyAGI.egg-info/entry_points.txt
+TinyAGI.egg-info/requires.txt
+TinyAGI.egg-info/top_level.txt
+tinyagi/__init__.py
+tinyagi/cli.py
+tinyagi/config.py
+tinyagi/model.py
+tinyagi/server.py
