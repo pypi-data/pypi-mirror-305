@@ -1,0 +1,13 @@
+pycargoebuild/__init__.py,sha256=5gE6QAMVDSX9Xmnhqq_muKKqqaegsnDcRE4332SRtUU,195
+pycargoebuild/__main__.py,sha256=5vNeAKlSU5wB6pXM9uk-UIiy8XmQl9SxqRBWc4wZ0ls,18352
+pycargoebuild/cargo.py,sha256=B4ZkYy4h6iDDPqvyAnKVhVpLbTgsmT8mzWKycxnZhk4,9190
+pycargoebuild/ebuild.py,sha256=JPSCKeuQKs9duuTpGyljJ8ReTfxqEYgZwoaxVyRkwCU,10551
+pycargoebuild/fetch.py,sha256=K1q5itVyH90IUP9ksFrA6Fb-yoccnJFD8YmO9qPkoKA,2993
+pycargoebuild/format.py,sha256=m7Lgv8AVqprhx8YhYveilLIgHHVpjZV9X7UKf2agUDM,4756
+pycargoebuild/license.py,sha256=H9d79m9Uq-5hHG4i0dg1sqMgA5Rrli_DDBfUR1Fk9Ss,4388
+pycargoebuild-0.13.4.data/data/share/bash-completion/completions/pycargoebuild,sha256=W2I47v6bzDYhJA_u16D6yZvA3Pjxsxwe3RQIamzpOTU,1232
+pycargoebuild-0.13.4.dist-info/entry_points.txt,sha256=NEq-vDtn8wnkvj4KCh56tW-CPJDZb3ta_2PZaZaGhoQ,68
+pycargoebuild-0.13.4.dist-info/COPYING,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+pycargoebuild-0.13.4.dist-info/WHEEL,sha256=-ta_u8-23-bwm4JkHhR_rJkpb_X1cxtvIsLH0KOv1sU,82
+pycargoebuild-0.13.4.dist-info/METADATA,sha256=RsrZ9hFbG47NNkqmy3hvAoka1y8EoilMKRoD_ZVnTAo,3812
+pycargoebuild-0.13.4.dist-info/RECORD,,
