@@ -1,0 +1,15 @@
+ocr_app.py,sha256=E9Mj8YZWKXCXJfHPmCNbSBkR1sdY4UjTGyVqk8Fj8K4,5398
+ocr_image.py,sha256=ryUwHKLpw6jVBY12Hh1YB9rgHgRRx4VYEPRdOeMcF2o,2801
+run_ocr_app.py,sha256=68YaFreKNC-kFobtCQ6PiE7sA3ZFcAroeZUpr0nJSV4,211
+texify/inference.py,sha256=JiOTdT7fiGV35mNDEp5vMsoIk0UlslTH_8QNB4vaDvg,1194
+texify/model/config.py,sha256=Te0Bu2OhH60zyLCrFOgZ_SSF8wNwtWu2zJkDxxrmMSE,2632
+texify/model/model.py,sha256=Q6hH8-tvH2uj8nk4rjCDcybL58qZ8whY7D7ZOZHffrM,5917
+texify/model/processor.py,sha256=YOU9fz9q8OSFP2Dgo44v9BYImR0afiHxiYAEryzEK1s,8118
+texify/output.py,sha256=FSlFzpU6LYTCRn8w1Fv4K2FKLInXEKTtpAsG85NIHwQ,1224
+texify/settings.py,sha256=jiUrDyltwdtiY1M2tulCwdemwc0TkjFrTMYYk5Azpp4,1287
+texify/util.py,sha256=CrzEcZukKl-H7CduibGIhWf58_uEQBwjGrpCCmG6jbQ,362
+texify-0.2.1.dist-info/LICENSE,sha256=S0QCQDw_gM2WrdqEJVaWVZW5TswFkMqnL9r84ZTXo-I,35091
+texify-0.2.1.dist-info/METADATA,sha256=dYUom7OZjmENHmWJuWSM52w46sMsfpfP9X5iyYUP4jk,10291
+texify-0.2.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+texify-0.2.1.dist-info/entry_points.txt,sha256=IRap1y3hifLbDLLx-nFj1dXZjmW0exXaoZUZnQwJNu4,72
+texify-0.2.1.dist-info/RECORD,,
