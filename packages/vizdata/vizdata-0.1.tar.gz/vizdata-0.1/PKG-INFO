@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: vizdata
+Version: 0.1
+Summary: Simple Exploratory Data Analysis tool.
+Home-page: https://github.com/darkhan-ai/vizdata
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# vizdata
+
+```commandline
+python setup.py sdist bdist_wheel
+```
+
+```commandline
+twine check dist/*
+```
