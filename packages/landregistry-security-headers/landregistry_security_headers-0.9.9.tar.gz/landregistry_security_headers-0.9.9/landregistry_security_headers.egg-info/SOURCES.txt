@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+landregistry/security_headers/__init__.py
+landregistry/security_headers/csp_reporting.py
+landregistry/security_headers/exceptions.py
+landregistry/security_headers/header_defaults.py
+landregistry/security_headers/py.typed
+landregistry/security_headers/response_without_csp.py
+landregistry/security_headers/security_headers.py
+landregistry_security_headers.egg-info/PKG-INFO
+landregistry_security_headers.egg-info/SOURCES.txt
+landregistry_security_headers.egg-info/dependency_links.txt
+landregistry_security_headers.egg-info/requires.txt
+landregistry_security_headers.egg-info/top_level.txt

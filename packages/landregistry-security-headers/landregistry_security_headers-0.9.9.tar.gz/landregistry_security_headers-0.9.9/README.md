@@ -1,0 +1,186 @@
+# Security Headers for Flask Web Applications
+
+Convienience Flask extension for setting security headers. See below for the full list.
+
+**Note** This extension will not set headers such as `Content-Type`, `Cache-Control` or `Clear-Site-Data`. You'll need to set those yourself when you need them.
+
+This package depends on:
+
+- Flask
+
+## Usage
+
+Instantiate it like a normal flask extension:
+
+```python
+from landregistry.security_headers import SecurityHeaders, UIDefaultHeaders
+from <somewhere> import app
+
+# ...
+
+headers = SecurityHeaders()
+headers.init_app(app, UIDefaultHeaders)
+```
+
+Three default configurations are provided:
+
+- `UIDefaultHeaders` - a set of headers suited for a web front-end.
+- `APIDefaultHeaders` - a set of headers suited for a REST API.
+- `EmptyDefaultHeaders` - no defaults.
+
+### Updating an existing UI
+
+If you have a skeleton-based UI application that pre-dates this extension's inclusion, you can easily update it to use this package as follows:
+
+- Add `landregistry-security-headers` to your requirements.
+- Remove imports and references to `security_headers` and `content_security_policy` inbuilt packages
+- Add imports and initialisation of the new extension.
+
+```diff
+  # ...
+  from landregistry.healthchecks import HealthChecks
++ from landregistry.security_headers import SecurityHeaders, UIDefaultHeaders
+
+  from server import config
+  # ...
+- from server.custom_extensions.content_security_policy.main import ContentSecurityPolicy
+  # ...
+- from server.custom_extensions.security_headers.main import SecurityHeaders
+  from server.exceptions import application_error_renderer, http_error_renderer, unhandled_error_renderer
+
+  # Create empty extension objects here
+  # ...
+- security_headers = SecurityHeaders()
+  # ...
+- content_security_policy = ContentSecurityPolicy()
+  # ...
+  health = HealthChecks()
++ headers = SecurityHeaders()
+
+  def register_extensions(app):
+      """Adds any previously created extension objects into the app, and does any further setup they need."""
+      enhanced_logging.init_app(app)
+-     security_headers.init_app(app)
+      # ...
+-     content_security_policy.init_app(app)
+      # ...
+      health.init_app(app)
+      health.add_dependencies(DEPENDENCIES)
++     headers.init_app(app, UIDefaultHeaders)
+      # ...
+```
+
+You can then remove the `content_security_policy` and `security_headers` folders from the `custom_extensions` folder.
+
+If you have customised these, see below on configuring the new extension.
+
+### Default values
+
+| Header                            | UI Default                      | API Default      |
+| --------------------------------- | ------------------------------- | ---------------- |
+| X-Frame-Options                   | DENY                            |                  |
+| Strict-Transport-Security         | max-age=31536000                | max-age=31536000 |
+| X-Content-Type-Options            | nosniff                         |                  |
+| Report-To                         | (see below)                     |                  |
+| Content-Security-Policy           | (see below)                     | (see below)      |
+| X-Content-Security-Policy         | Same as Content-Security-Policy | Same as Content-Security-Policy |
+| X-XSS-Protection                  | 1; mode=block                   |                  |
+| Referrer-Policy                   | strict-origin-when-cross-origin |                  |
+| Permissions-Policy                | (see below)                     |                  |
+| Cross-Origin-Embedded-Policy      | require-corp                    |                  |
+| Cross-Origin-Opener-Policy        | same-origin                     |                  |
+| Cross-Origin-Reosurce-Policy      | same-origin                     |                  |
+| X-Permitted-Cross-Domain-Policies | none                            |                  |
+
+
+**Default UI CSP Headers**
+
+```
+Content-Security-Policy: default-src 'self';script-src 'self' https://*.googletagmanager.com 'sha256-+6WnXIl4mbFTCARd8N3COQmT3bJJmo32N8q8ZSQAIcU=' 'sha256-G29/qSW/JHHANtFhlrZVDZW1HOkCDRc78ggbqwwIJ2g=' 'sha256-s7w4Nk/Xk6wc1nlA5PiGroLjvaV+XU1ddIlx89jmBjc=';connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;img-src 'self' https://*.google-analytics.com https://*.googletagmanager.com;font-src 'self' data:;style-src 'self';object-src 'none';block-all-mixed-content;report-uri /content-security-policy-report/;report-to default;
+
+Report-To: {"group":"default","max_age":10886400,"endpoints":[{"url": "<schema>://<host>/content-security-policy-report/"}]}
+```
+
+**Default API CSP Headers**
+
+```
+Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
+```
+
+**Default UI Permissions Policy**
+
+```
+Permissions-Policy: accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=(), clipboard-read=(), clipboard-write=(), gamepad=(), speaker-selection=(), conversion-measurement=(), focus-without-user-activation=(), hid=(), idle-detection=(), interest-cohort=(), serial=(), sync-script=(), trust-token-redemption=(), window-management=(), vertical-scroll=()
+```
+
+### Overriding defaults
+
+Provide entries in your application configuration (e.g. `config.py`):
+
+- `X_FRAME_OPTIONS`
+- `STRICT_TRANSPORT_SECURITY`
+- `X_CONTENT_TYPE_OPTIONS`
+- `REPORT_TO`
+- `CONTENT_SECURITY_POLICY`
+- `X_XSS_PROTECTION`
+- `REFERRER_POLICY`
+- `PERMISSIONS_POLICY`
+- `CROSS_ORIGIN_EMBEDDER_POLICY`
+- `CROSS_ORIGIN_OPENER_POLICY`
+- `CROSS_ORIGIN_RESOURCE_POLICY`
+- `X_PERMITTED_CROSS_DOMAIN_POLICIES`
+
+Whatever you set to the variable will be applied to the corresponding header
+
+### CSP Customisation
+
+To customise parts of the Content Security Policy
+
+- `SECURITY_CSP_SCRIPT_HASHES` - overrides the default script hashes. Space delimited. Default is <something>
+- `SECURITY_CSP_SCRIPT_SOURCES` - overrides the default script-src. Default is "https://*.googletagmanager.com"
+- `SECURITY_CSP_STYLE_SOURCES` - overrides the style-src. Default is "'self'".
+- `REPORT_TO_URI` - overrides the default URI in the REPORT_TO header.
+
+If overriding SCRIPT_HASHES/SOURCES and want to keep defaults, you can get the default values from `DEFAULT_SCRIPT_SOURCES`, `DEFAULT_SCRIPT_HASHES` or `DEFAULT_STYLE_SOURCE`
+
+Some placeholders may be included in the CSP:
+
+- `{script_src}` - replaced with `SECURITY_CSP_SCRIPT_SOURCES`
+- `{script_hashes}` - replaced with `SECURITY_CSP_SCRIPT_HASHES`
+- `{style_src}` - replaced with `SECURITY_CSP_STYLE_SOURCES`
+- `{report_uri}` - replaced with the relative URL of the CSP reporting endpoint
+
+And in the Report-To header:
+
+- `{full_report_uri}` - replaced with the full URL of the CSP reporting endpoint
+
+### CSP Violation Report Logging
+
+To change how the CSP violation report endpoint logs reports, provide a config entry for `CONTENT_SECURITY_POLICY_REPORT_LEVEL`.
+
+Valid values are `ERROR`, `WARNING`, `INFO`, and `DEBUG`, corresponding to to the log level that will be used to log the report. A value of `NONE` may be provided to stop logging altogether. **Be sure you really want to do this**.
+
+The default logging level is `ERROR` if no level is specified.
+
+### Per-endpoint overrides
+
+Use the `headers` object as a decorator to override headers:
+
+```python
+@test_blueprint.route("", methods=["GET"])
+@headers(X_CONTENT_TYPE_OPTIONS=None, X_XSS_PROTECTION="1")
+def get_test():
+    return make_response("Test", 200)
+```
+
+Note that this will cause your app to fail (to even start) if you specify headers the extension isn't expecting.
+
+Note this extension won't override headers that you've set in a response. For example, in this case:
+
+```python
+@test_blueprint.route("/example")
+def example():
+    return Response("", 200, headers={'X-Content-Type-Options': 'Setting some nonsense here'})
+```
+
+...the `X-Content-Type-Options` header will be set to `Setting some nonsense here`, regardless of extension configuration. Setting a header to `None` this way *will not* remove the header, but will set it to the string literal `None`. Removing headers requires the decorator approach.
