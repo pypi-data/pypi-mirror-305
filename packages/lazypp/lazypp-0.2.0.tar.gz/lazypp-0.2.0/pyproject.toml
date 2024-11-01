@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+readme = "README.md"
+authors = [{ name = "Gen Fujimoto" }]
+name = "lazypp"
+version = "0.2.0"
+description = "A Python package named lazypp"
+requires-python = ">=3.11"
+dependencies = ["rich", "xxhash"]
+
+[project.optional-dependencies]
+tests = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["lazypp*"]
+
+[tool.pytest.ini_options]
+addopts = "--color=yes"
+
+[tool.ruff.lint]
+extend-select = ["I"]

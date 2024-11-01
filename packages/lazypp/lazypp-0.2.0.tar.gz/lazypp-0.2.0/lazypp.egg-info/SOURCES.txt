@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+lazypp/__init__.py
+lazypp/dummy_output.py
+lazypp/file_objects.py
+lazypp/task.py
+lazypp.egg-info/PKG-INFO
+lazypp.egg-info/SOURCES.txt
+lazypp.egg-info/dependency_links.txt
+lazypp.egg-info/requires.txt
+lazypp.egg-info/top_level.txt
+tests/test_complex_task.py
+tests/test_entry.py
+tests/test_task.py
