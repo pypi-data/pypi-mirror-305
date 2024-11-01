@@ -1,0 +1,12 @@
+numpy
+scikit-learn
+typing
+pandas
+pydantic
+strictyaml
+pathlib
+pytest
+tox
+flake8
+black
+isort
