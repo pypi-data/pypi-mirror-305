@@ -1,0 +1,15 @@
+LICENSE
+pyproject.toml
+readme.md
+s3pro/__init__.py
+s3pro/auth.py
+s3pro/clients.py
+s3pro/entities.py
+s3pro/exceptions.py
+s3pro/utils.py
+s3pro.egg-info/PKG-INFO
+s3pro.egg-info/SOURCES.txt
+s3pro.egg-info/dependency_links.txt
+s3pro.egg-info/requires.txt
+s3pro.egg-info/top_level.txt
+tests/test_s3.py
