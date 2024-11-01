@@ -1,0 +1,2 @@
+[console_scripts]
+kompile = pyklang.kompile:main

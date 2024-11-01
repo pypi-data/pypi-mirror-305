@@ -1,0 +1,10 @@
+pyklang/__init__.py,sha256=wcrSaV4wKEzDCjq3VArP1Lj90OBQ9k9uMqUTdSmZSrk,155
+pyklang/bindings.cpython-311-darwin.so,sha256=S7Gk8FWEJKZAgL3Rfgc-9mfiP-_zxpi92HXhhMN9juQ,706912
+pyklang/bindings.pyi,sha256=IU0ucX55_hNbeeV19PVRkiyrQvtB35-0nEUcG_2Gyb0,488
+pyklang/kompile.py,sha256=iQ_a_tIuGjCfKgOetyvR9o311trj_U0bXfIRzY2BiX8,838
+pyklang/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyklang-0.1.0.dist-info/METADATA,sha256=0W4zn7GdPuDoWItgB3aCMDYio-5Ju9ZnjGHDW0rywJE,1373
+pyklang-0.1.0.dist-info/WHEEL,sha256=EzMNAL3E3o-SnLAYMTM_3Y6tztzXBehUB9jfU2WRpnI,109
+pyklang-0.1.0.dist-info/entry_points.txt,sha256=D8SKl65r7FUInDBfmxsEG2vvenl3oJoYulGr3KdDfIU,49
+pyklang-0.1.0.dist-info/top_level.txt,sha256=rPflETJpwSnBmgqodBS8PjOOZWPD7F5CAEP7U3seNek,8
+pyklang-0.1.0.dist-info/RECORD,,
