@@ -1,0 +1,14 @@
+collektions-1.0.2.dist-info/METADATA,sha256=Jpx1q-rVD6SCjtw0UGGClWRYQ6J2SJXQfIMF16pv3aw,731
+collektions-1.0.2.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+collektions-1.0.2.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+collektions/__init__.py,sha256=mBvnzeWg8eYrpPl59xjCR8BZE2z7H-BPDT0UqF_a2zk,2251
+collektions/_defaults.py,sha256=x2oE-wfF6WFJEBn73gdSlSPVNNeXfn_eaAVeBzkYGS0,200
+collektions/_iterable.py,sha256=OFnAv80RfOce8qQhQZXcvWnHmBNNuqmYkkSX-mcnM4o,25489
+collektions/_mapping.py,sha256=np3yxBLRXoLmlAsuxKswjTxQ2Pu5NmCP8c0CRGKUpuo,2437
+collektions/_sequence.py,sha256=VPCTJL1f1-tjuuo-mwjqodQCRYZVEFcYeE2zYBDuAlw,4360
+collektions/_types.py,sha256=WPg6h58qusw_sJ6O9Dv5_eSyWciwRQQXQJLNR7C7zYA,737
+collektions/preconditions.py,sha256=ZWM8wXw7oMuxs0Qoh8J1FjVituBASi-BvjMlM9aIS4E,1884
+collektions/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+collektions/shadow.py,sha256=BOm2nCOBzY1jhYf9IhUBqwXDT_VZRRk6dJJqklBBG0k,2261
+collektions/version.py,sha256=aAt-4D5evTZKhbTMX2vhDFu76cSvHKnEDmuxUB2dla0,27
+collektions-1.0.2.dist-info/RECORD,,
