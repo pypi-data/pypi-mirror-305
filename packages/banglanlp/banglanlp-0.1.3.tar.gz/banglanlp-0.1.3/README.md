@@ -1,0 +1,38 @@
+Author 1: Md Istiak Tanvir - eruddro@gmail.com
+
+Author 2: Asma Akter - asmaul9377@gmail.com
+
+Author 3: Md Tanvirul Islam - tanvirulislam.cse@diu.edu.bd
+
+
+BanglaNLP
+
+Banglanlp is an innovative toolkit designed for Natural Language Processing (NLP) applications in Bangla language. The one of the focus of this package is on stemming—transforming inflected or derived Bangla words back to their root forms. This package utilizes a unique, algorithmically efficient approach to ensure accurate root detection across a wide range of Bangla words, making it a powerful tool for Bangla language processing tasks.
+
+Features
+Efficient Stemming: Built with an optimized algorithm for fast and accurate stemming of Bangla words.
+Flexible Dataset Support: Supports customizable datasets for dynamic, versatile use across NLP applications.
+Additional NLP Functions: Designed to accommodate future Bangla NLP functions such as stop word removal, tokenization, and more.
+Cross-Platform Compatibility: Works seamlessly on major operating systems.
+Installation
+Install the package using pip:
+
+bash
+pip install banglanlp
+
+Usage
+Here’s a basic example of how to use Banglanlp for stemming:
+
+python
+from banglanlp.rootfinder import bstem
+
+# Sample word for stemming
+word = "ফুটবলটি খুব দেখতে চমৎকারই ছিল "
+root_word = bstem(word)
+print("Root form:", root_word)
+
+Future Scope
+In future updates, more functionalities will be added to make Banglanlp a comprehensive toolkit for Bangla language NLP, including syntax parsing, sentiment analysis, and more.
+
+License
+This project is licensed under the MIT License, making it freely accessible and open to contributions.
