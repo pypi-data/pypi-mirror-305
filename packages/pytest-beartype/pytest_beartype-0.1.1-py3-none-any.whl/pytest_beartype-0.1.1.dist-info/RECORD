@@ -1,0 +1,8 @@
+pytest_beartype/__init__.py,sha256=i25y2U289KK9d6tfhEHTyI5Y84QcBc4YtWmoX1SWzHU,4666
+pytest_beartype/py.typed,sha256=DtCsIDq6KOv2NOEdQjTbeMWJKRh6ZEL2E-6Mf1RLeMA,59
+pytest_beartype-0.1.1.dist-info/LICENSE,sha256=lL965OpoM7CFOnzB8fKN2FebNKMcnBYq64gl3sI-1dw,1072
+pytest_beartype-0.1.1.dist-info/METADATA,sha256=CJk4Q3nDP8OuUal65qm8fXsMx9Dje67gQYDuOgLouzg,2031
+pytest_beartype-0.1.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+pytest_beartype-0.1.1.dist-info/entry_points.txt,sha256=0TTkmwKpZxXSJtrm7rAkiMANtEbm6gOPVX3s5kGLDC8,45
+pytest_beartype-0.1.1.dist-info/top_level.txt,sha256=om1fXD6DX2_1llV9JDrZBWRNAz2PwuT4Xb22udCZXD4,16
+pytest_beartype-0.1.1.dist-info/RECORD,,
