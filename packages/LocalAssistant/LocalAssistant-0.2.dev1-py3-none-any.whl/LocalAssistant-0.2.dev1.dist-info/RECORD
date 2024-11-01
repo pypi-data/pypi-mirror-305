@@ -1,0 +1,10 @@
+LocalAssistant/__init__.py,sha256=cDow9UFnOswfLS1qfntnqhT2Vs1ZL2h0TqDwIkJBuVE,349
+LocalAssistant/locas_config.json,sha256=kWULOdHBepFPrtpYYQmoUkU7K8U-Bhil5E3F8eBNhQw,179
+LocalAssistant/models.py,sha256=BnrUsqBfXwuhf3GHBhYdkYfeHV5oAoVh0iH3AX3trEw,24438
+LocalAssistant/parser.py,sha256=R_-Yw9uhvaPTnDea2M62KfKE-3zfWIWyapeDQZlExzg,16401
+LocalAssistant/utils.py,sha256=h-OiP9oMVMTP5-OQ67USuHI1JjIab660G0Vn8vI53oQ,4326
+LocalAssistant-0.2.dev1.dist-info/METADATA,sha256=hP4nDsRr0aIMkX64dz4CidPZmd5ttMp_MVj_TwiLKsY,2164
+LocalAssistant-0.2.dev1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+LocalAssistant-0.2.dev1.dist-info/entry_points.txt,sha256=om4SronjsVB0tN4ml1k2UgCqcSA6qACccR7Euy34bkk,53
+LocalAssistant-0.2.dev1.dist-info/top_level.txt,sha256=zbXUALCccuBUpLmpAd8Xl-0ZM39wq6paC80ZJyyzhqM,15
+LocalAssistant-0.2.dev1.dist-info/RECORD,,
