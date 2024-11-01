@@ -1,0 +1,11 @@
+pyreadstore/__init__.py,sha256=ZjLNgHCFK1OJ58VBO1IOWTTPaM747zPJkLW8xjGSZ0Y,58
+pyreadstore/__version__.py,sha256=8vN_eAYjuRZnlVaG7dwKtAevkdVv1vjDyVHn129KgYU,79
+pyreadstore/pyreadstore.py,sha256=2x-PM7nw7cIfYuLeNm-dyfbHZcJrp4_wJvcANI6hKmU,13427
+pyreadstore/rsclient.py,sha256=ImkfEO-8aPGhbEepcFZrQuzhyxYxksTatUT9Hitf-Z0,16499
+pyreadstore/rsdataclasses.py,sha256=3pejeqrvxA2TZOw2jWm6i9hPt6A7DSXI38wluo_s-Mk,1902
+pyreadstore/rsexceptions.py,sha256=H0vZqRtyw9XHalAu5FKQlbdjQLGY-_3QD7kVtlA_rTo,827
+pyreadstore-1.0.0.dist-info/LICENSE,sha256=U8tIcgN9IlZC5y6KmRJvRXnNICPikLSSb8t75EPSKS4,25795
+pyreadstore-1.0.0.dist-info/METADATA,sha256=ik-gsYjTHSvtVcjuUgMUPqoczBDpPe0urt7LQ19zu_I,12026
+pyreadstore-1.0.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+pyreadstore-1.0.0.dist-info/top_level.txt,sha256=AjWWZyowx6lqgxcJ8zQUlnUgJITbewYlqtY1lA8TO0U,12
+pyreadstore-1.0.0.dist-info/RECORD,,
