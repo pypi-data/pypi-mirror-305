@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyOwlBoard
+Version: 0.0.2
+Summary: OwlBoard API Client
+Home-page: https://git.fjla.uk/owlboard/pyowlboard
+Author: Frederick Boniface
+Author-email: api@owlboard.info
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.20.0
+Requires-Dist: urllib3>=2.2.3
+
+# pyOwlBoard
+## The Python client for the OwlBoard API
+
+This client was written as part of 'dgp2'.  As it stands, only the features required for dgp2 and few others are implemented.
