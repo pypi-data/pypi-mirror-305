@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+xn-model
+
+[auth]
+xn-auth
+
+[auth-pswd]
+pswd-auth
+
+[auth-tg]
+xtg-auth
+
+[dev]
+build
+python-dotenv
+twine
