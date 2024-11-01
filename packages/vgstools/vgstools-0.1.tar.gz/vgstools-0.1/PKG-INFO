@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: vgstools
+Version: 0.1
+Summary: A collection of the tools I made in my first year
+Home-page: https://github.com/Enderz420/vgstools
+Author: Enderz
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# A Collection of tools from my first year!
+
+This package just serves as a collection of tools which I may or may not need in the future.
+
+It includes 
+- ``load_words`` to sort wordlists into a list for easy list/string handling.
+- ``decrypt_words()`` to decrypt a wordlist encoded in a caesar cipher (look in KPR-Prosjekt on my profile for context) 
+- ``validate_password`` a password strength checker and 
+- ``decrypt()`` which is the same as ``decrypt_words()`` but only takes a single string
