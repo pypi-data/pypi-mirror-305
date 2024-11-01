@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pyonir
+Version: 0.0.1
+Summary: a python library for building web applications
+Home-page: https://pyonir.dev
+Author: Derry Spann
+Author-email: pyonir@derryspann.com
+License-File: LICENSE.md

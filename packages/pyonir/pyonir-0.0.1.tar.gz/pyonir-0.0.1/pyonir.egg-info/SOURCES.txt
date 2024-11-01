@@ -1,0 +1,11 @@
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+pyonir/__init__.py
+pyonir/cli.py
+pyonir.egg-info/PKG-INFO
+pyonir.egg-info/SOURCES.txt
+pyonir.egg-info/dependency_links.txt
+pyonir.egg-info/entry_points.txt
+pyonir.egg-info/top_level.txt
