@@ -1,0 +1,1 @@
+hg+https://bitbucket.org/mozman/ezdxf@default#egg=ezdxf-0.7.0alpha

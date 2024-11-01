@@ -1,0 +1,11 @@
+mpldxf/__init__.py,sha256=WW5HdDnsoI8Z6Y4oaVBuBvBwgYtnolbAwFuoAKypKyQ,1550
+mpldxf/_version.py,sha256=PKy5OkplVuwCSvL56v-lGS4pzI6tFGlyqioCLh_gKm8,492
+mpldxf/backend_dxf.py,sha256=hej5ix0oplslERXbEYHtS4cdh_Asme6llETSrvqGSxY,20715
+mpldxf/dxf_colors.py,sha256=nBxeieWY5sLonI9qa7TR_RIAxPP635hLYypN-AXhTPI,2032
+mpldxf/test_backend_ezdxf.py,sha256=X_xx47cMFYu7loZ7ABY-EF6v2vEEn9SOLH_Ofvi1MME,2740
+mpldxf_NGI-0.1.0.dist-info/LICENSE,sha256=K8_JMqm6940_lJgosb1AoS2r0H4q6NW_-ZMcXNPTzRw,1097
+mpldxf_NGI-0.1.0.dist-info/METADATA,sha256=_atuzuv7qwpnd0Y4o20wMJu4hKpwAvM4qiK0ff9Zql8,1552
+mpldxf_NGI-0.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+mpldxf_NGI-0.1.0.dist-info/dependency_links.txt,sha256=j0rxCD6eFGGJLwynLjlOGKcL6uAGmhfhKAMelnUe2EA,67
+mpldxf_NGI-0.1.0.dist-info/top_level.txt,sha256=nJsEDy7gR20_-ddNgPwLAgm4UlKze4lni9mAeTNmaw8,7
+mpldxf_NGI-0.1.0.dist-info/RECORD,,
