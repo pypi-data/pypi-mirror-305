@@ -1,0 +1,28 @@
+[project]
+name = "pytest-schedule"
+version = "0.0.8"
+description = "Automate and customize test scheduling effortlessly on local machines."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Oleg Matskiv", email = "alpaca00tuha@gmail.com" }]
+keywords = ["pytest", "schedule", "automation", "parallel", "concurrent", "tests", "test"]
+
+dependencies = [
+    "setuptools>=65.5.1",
+    "dpath==2.1.3",
+    "loguru==0.6.0",
+]
+
+[project.scripts]
+pytest-schedule = "pytest_schedule.__main__:schedule"
+
+[build-system]
+requires = ["setuptools>=65.5.1", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = [
+    ".github", "tests", "build", "dist",
+    "pytest-schedule.egg-info", ".gitignore",
+]

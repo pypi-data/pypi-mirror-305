@@ -1,0 +1,2 @@
+[console_scripts]
+pytest-schedule = pytest_schedule.__main__:schedule
