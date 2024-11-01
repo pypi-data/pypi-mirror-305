@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: doxyzpy
+Version: 0.0.1
+Summary: doxyzpy预留组织名，形如doxyzpy前缀的包名烦请别冲突
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# doxyzpy
+
+
+* 预留开发中的包名，待开发到达一定阶段方发布
