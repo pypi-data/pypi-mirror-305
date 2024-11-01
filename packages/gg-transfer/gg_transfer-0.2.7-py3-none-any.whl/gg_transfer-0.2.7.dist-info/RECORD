@@ -1,0 +1,11 @@
+ggtransfer/__init__.py,sha256=mHeay3v4AMTFXg8XUoR0uYXgoHKSELNVJ24QyW9in2o,953
+ggtransfer/__main__.py,sha256=pYx9J3huIihonpiM72OCAAldg3qP78t8p0Gk_yMVZtg,5027
+ggtransfer/_exceptions.py,sha256=B8Au0fhHgpMgH3kDnvGtiebgSA86x2vC-Q52IexkNAw,1733
+ggtransfer/_receive.py,sha256=dnUBkcHD_OsgCjE7Ps-pcAbUmwls314dUTbjCNVPyDI,8332
+ggtransfer/_send.py,sha256=Z85v-kUvc5Nu41PiEZJsZkNPpolePZNxYk5uMbjvNR8,7776
+gg_transfer-0.2.7.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+gg_transfer-0.2.7.dist-info/METADATA,sha256=ijLPj3a3D9-UJpZXrpAgTB0pvzrCKKUCQEeO-6oM5WU,6747
+gg_transfer-0.2.7.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+gg_transfer-0.2.7.dist-info/entry_points.txt,sha256=BZX7U7eVlrCDJTg5jMTG14hx_94fHlU2y3EuDFwkMkw,58
+gg_transfer-0.2.7.dist-info/top_level.txt,sha256=NSUI7F8aWpCLeGNPtQ7DnJv735whxDelJMcFm2sa-LM,11
+gg_transfer-0.2.7.dist-info/RECORD,,
