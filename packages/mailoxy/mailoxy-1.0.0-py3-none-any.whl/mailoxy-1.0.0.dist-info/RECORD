@@ -1,0 +1,14 @@
+mailoxy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mailoxy/aes.pyd,sha256=Xw093VuXvB07j7N4veBNnOVmFQsKb2fpTHmRHxIWdOk,65536
+mailoxy/db_types.py,sha256=w5m-uQ5r-SE_TkD5yo_QtJlzZ8C7y_WlkxPhjXGNygE,28204
+mailoxy/dmr.py,sha256=Eff1_VOn-G18t7L6JdWP5xE0aEQpftFJ6YvcvCCxH_s,31572
+mailoxy/errors.py,sha256=fCtV2YzuqiLurIth9lJLPo9Lm-7E5Mmp8gUyKqh4uPA,677
+mailoxy/mai2.pyd,sha256=tRbnZBL0g22EHyFDMVGlgztc_-tPpjd4IKXCOVJQPDs,473088
+mailoxy/maihttp.pyd,sha256=Q60_4dFnguAZWjX4vxdzcZPFKvTbs5b6oNPGjIJ21sE,360448
+mailoxy/maimanager.pyd,sha256=KWvGJkWR1-r1W3bnsCHM9dQ9pzX6vs92OZnSKgMhcZQ,82432
+mailoxy/maitypes.py,sha256=NG5RKgTlUEm283h6Pegp6fCGOvsyHEcVLcwmQYGjqfo,32025
+mailoxy/userid.pyd,sha256=fCkA0_e6cUlUsplKkc8X9el6MSdOAYRahuTaRmXX-i4,59392
+mailoxy-1.0.0.dist-info/METADATA,sha256=siFktTzDMrwjBJST9iHmq9H7ZBCls5b2Ol1cCakaA40,1766
+mailoxy-1.0.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+mailoxy-1.0.0.dist-info/top_level.txt,sha256=XZbm-rSNc8N2NZWsaJLfDFEBc7yLF3xs3gnOur_OHdk,8
+mailoxy-1.0.0.dist-info/RECORD,,
