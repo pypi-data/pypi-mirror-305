@@ -1,0 +1,9 @@
+django
+djangorestframework
+django-filter~=22.1
+openimis-be-core
+graphene-django
+
+[dev]
+pytest
+pytest-django
