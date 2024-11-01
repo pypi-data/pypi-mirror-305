@@ -1,0 +1,13 @@
+django<6.0,>3.2
+colorlog>=6.8.2
+django-ninja
+gevent
+gunicorn
+celery
+django-celery-beat
+django-celery-results
+django-cors-headers
+dj-database-url
+python-dotenv
+django-ninja-extra
+psycopg2-binary
