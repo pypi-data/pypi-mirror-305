@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "cyberpanel-cf-dns"
+version = "0.1.0"
+description = ""
+authors = ["Shakir <shakirali.sacube@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+cloudflare = "^3.1.0"
+python-dotenv = "^1.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.13.2"
+black = "^24.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
