@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: ksec
+Version: 0.1.0
+Summary: Kubernetes secrets pretty printer
+Author-email: Tucker Beck <tucker.beck@gmail.com>
+License-Expression: MIT
+Requires-Python: >=3.12
+Requires-Dist: auto-name-enum>=2.0.0
+Requires-Dist: typer>=0.12.5
+Provides-Extra: yaml
+Requires-Dist: pyyaml>=6.0.2; extra == 'yaml'
