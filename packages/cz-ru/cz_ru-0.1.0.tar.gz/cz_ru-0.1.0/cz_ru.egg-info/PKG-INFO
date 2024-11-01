@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: cz_ru
+Version: 0.1.0
+Home-page: https://github.com/teatov/cz-ru
+License: MIT
+License-File: LICENSE
+Requires-Dist: commitizen
+
+Конфиг для Commitizen на русском языке
