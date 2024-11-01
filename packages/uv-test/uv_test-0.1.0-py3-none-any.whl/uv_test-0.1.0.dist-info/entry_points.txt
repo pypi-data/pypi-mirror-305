@@ -1,0 +1,2 @@
+[console_scripts]
+uv-test = uv_test:main
