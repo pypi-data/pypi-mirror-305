@@ -1,0 +1,13 @@
+streamlit_slb_card/__init__.py,sha256=cE29Dufw6wMfyTXrQ-17N9Na_DMNbcBkHIpMTYa3pXs,3842
+streamlit_slb_card/example.py,sha256=AZb1iJQCaLhKBAjsUcjed7j7DoU1iOtPZ5tD-7WPoGo,4064
+streamlit_slb_card/frontend/build/asset-manifest.json,sha256=7mIgrH3_G3o8AvGRRMR1B0i2vER9nqTuNOvyxqVWbow,221
+streamlit_slb_card/frontend/build/bootstrap.min.css,sha256=hTwg6axJ8dAPmGVJmYTrsQS3JhKWA0skJ-td54UbEOk,197459
+streamlit_slb_card/frontend/build/index.html,sha256=ISgaAX8Sv1bkQ4PlGodVz0Vn_GSzl1i6jrBxhJZ4Hds,492
+streamlit_slb_card/frontend/build/static/js/main.305b8d4f.js,sha256=1iC1O50dkiE3yz8uMqV1w-vwrQUuArxwJXSJb6eEsfs,622146
+streamlit_slb_card/frontend/build/static/js/main.305b8d4f.js.LICENSE.txt,sha256=GEQyocLjC4i-4YQy5VpHVN9RCBwWx-C_jtUVCQZkRTg,1476
+streamlit_slb_card/frontend/build/static/js/main.305b8d4f.js.map,sha256=3MMKyigaqMb-zqCwHqehSxuo4pz0X0minZJoFyFke-k,2857595
+streamlit_slb_card-1.0.8.dist-info/LICENSE,sha256=9VDWIUfeWnnobvVpN2KtC5cHaNpAmxhdjyF4LivEPNw,1063
+streamlit_slb_card-1.0.8.dist-info/METADATA,sha256=G5lDGEMAhJyOVPBEzAV2qu5NtY7RnCdKT1ML5gMOzEY,2205
+streamlit_slb_card-1.0.8.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+streamlit_slb_card-1.0.8.dist-info/top_level.txt,sha256=f1NXwruubstfmIufR8AMKRhXzbh_4eiT5w3CRJc-jFA,19
+streamlit_slb_card-1.0.8.dist-info/RECORD,,
