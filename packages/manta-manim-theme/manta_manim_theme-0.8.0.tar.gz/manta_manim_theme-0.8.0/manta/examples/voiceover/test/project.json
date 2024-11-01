@@ -1,0 +1,65 @@
+[
+    {
+        "sections_len": 1,
+        "sections": [
+            {
+                "id": 0,
+                "name": "01",
+                "type": "normal",
+                "is_sub_section": false,
+                "original_video": "/Users/qwerty/PycharmProjects/manta-manim-theme/manta/examples/voiceover/media/videos/voiceover_example/2160p60/sections/MyTermTextExamplesScene_0000_01.mp4",
+                "width": 3840,
+                "height": 2160,
+                "fps": "60",
+                "duration": 1.0,
+                "project_name": "test",
+                "in_project_video": "video_0000.mp4",
+                "in_project_thumbnail": "thumb_0000.jpg",
+                "in_project_id": 0,
+                "parent_id": 0
+            }
+        ]
+    },
+    {
+        "sections_len": 1,
+        "sections": [
+            {
+                "id": 1,
+                "name": "02",
+                "type": "normal",
+                "is_sub_section": false,
+                "original_video": "/Users/qwerty/PycharmProjects/manta-manim-theme/manta/examples/voiceover/media/videos/voiceover_example/2160p60/sections/MyTermTextExamplesScene_0001_02.mp4",
+                "width": 3840,
+                "height": 2160,
+                "fps": "60",
+                "duration": 1.0,
+                "project_name": "test",
+                "in_project_video": "video_0001.mp4",
+                "in_project_thumbnail": "thumb_0001.jpg",
+                "in_project_id": 1,
+                "parent_id": 1
+            }
+        ]
+    },
+    {
+        "sections_len": 1,
+        "sections": [
+            {
+                "id": 2,
+                "name": "03",
+                "type": "normal",
+                "is_sub_section": false,
+                "original_video": "/Users/qwerty/PycharmProjects/manta-manim-theme/manta/examples/voiceover/media/videos/voiceover_example/2160p60/sections/MyTermTextExamplesScene_0002_03.mp4",
+                "width": 3840,
+                "height": 2160,
+                "fps": "60",
+                "duration": 3.283333,
+                "project_name": "test",
+                "in_project_video": "video_0002.mp4",
+                "in_project_thumbnail": "thumb_0002.jpg",
+                "in_project_id": 2,
+                "parent_id": 2
+            }
+        ]
+    }
+]
