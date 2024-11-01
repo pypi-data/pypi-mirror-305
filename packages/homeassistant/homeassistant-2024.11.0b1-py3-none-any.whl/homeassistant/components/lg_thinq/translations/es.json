@@ -1,0 +1,58 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "El dispositivo ya est\u00e1 configurado",
+            "already_in_progress": "El flujo de configuraci\u00f3n ya est\u00e1 en curso"
+        },
+        "error": {
+            "token_unauthorized": "El token no es v\u00e1lido o no est\u00e1 autorizado."
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "access_token": "Token de acceso personal",
+                    "country": "Pa\u00eds"
+                },
+                "description": "Por favor, introduce un ThinQ [PAT(Personal Access Token)]({pat_url}) creado con tu cuenta LG ThinQ.",
+                "title": "Conectar con ThinQ"
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "clean_light_reminder": {
+                "name": "Indicador luminoso de limpieza"
+            },
+            "eco_friendly_mode": {
+                "name": "Respetuoso con el medio ambiente"
+            },
+            "machine_clean_reminder": {
+                "name": "Recordatorio de limpieza de la m\u00e1quina"
+            },
+            "one_touch_filter": {
+                "name": "Filtro de aire fresco"
+            },
+            "operation_mode": {
+                "name": "Energ\u00eda"
+            },
+            "power_save_enabled": {
+                "name": "Modo de ahorro de energ\u00eda"
+            },
+            "remote_control_enabled": {
+                "name": "Inicio remoto"
+            },
+            "remote_control_enabled_for_location": {
+                "name": "Inicio remoto de {location}"
+            },
+            "rinse_refill": {
+                "name": "Es necesario rellenar el enjuague"
+            },
+            "sabbath_mode": {
+                "name": "Sabbath"
+            },
+            "signal_level": {
+                "name": "Sonido del timbre"
+            }
+        }
+    }
+}
