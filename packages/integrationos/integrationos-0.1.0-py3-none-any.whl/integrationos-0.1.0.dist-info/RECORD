@@ -1,0 +1,12 @@
+integrationos/__init__.py,sha256=EbHxQDYLAoTsbnf71vWgMK33ZLyUybUvG0OZA7S7zcY,141
+integrationos/client.py,sha256=yvKUgujp2jwhcfLjMB9p7boBLDxqYartQ-Pef8a4BS8,9073
+integrationos/paginate.py,sha256=dAxf6d5HvBOHQiAolwggPazCoXBb-JqyAT74YcS2LVU,3156
+integrationos/resource.py,sha256=EcyXrywqlDEfDt5dveRAHcXdRGhsq50s_hnF3609bc0,10091
+integrationos/utils.py,sha256=FsN-yHDoiQ59bYVle8xZxFocrCkai3_RVXztoeDDhzU,588
+integrationos/types/__init__.py,sha256=u0s4KGxhPdWarVGabvP_0I15xznEDAxrRbbAREFfmpM,209
+integrationos/types/generic.py,sha256=yBMhr7K5a8a76oaF7ephEqQsWD6a10xktm_fkUKA-Kg,2929
+integrationos/types/models.py,sha256=VW_GfLY8GkNTmLR_OPm63dbHNCEZf3cz3avdEWf5kW0,126086
+integrationos-0.1.0.dist-info/METADATA,sha256=0Mpy4dAVdd_qNa7yLNcM2YMKTVvsrj7EEfq-do45AJE,1526
+integrationos-0.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+integrationos-0.1.0.dist-info/top_level.txt,sha256=CFzYjAotZIq4EwAcJRyN0kZaDUIZgoXvW1kCbePvmWY,14
+integrationos-0.1.0.dist-info/RECORD,,
