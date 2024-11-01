@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: bytes-structure
+Version: 0.1.1
+Summary: Parse raw bytes into Python data structure and create bytes message from Python data structure.
+Home-page: https://github.com/bborovskij/bytes_structure
+Author: Bohdan Borovskyi
+Author-email: bborovskij@gmail.com
+License: MIT License
+Project-URL: Source Code, https://github.com/bborovskij/bytes_structure
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Parse raw bytes into Python data structure and create bytes message from Python data structure.
+
+# Install locally
+$ pip install
+
+See examples/ to start.
+
+# Remove
+$ pip uninstall bytes-structure
