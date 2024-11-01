@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+rocket_aya_hamdi/__init__.py
+rocket_aya_hamdi/rocket.py
+rocket_aya_hamdi.egg-info/PKG-INFO
+rocket_aya_hamdi.egg-info/SOURCES.txt
+rocket_aya_hamdi.egg-info/dependency_links.txt
+rocket_aya_hamdi.egg-info/requires.txt
+rocket_aya_hamdi.egg-info/top_level.txt
