@@ -1,0 +1,13 @@
+core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core/compare_face.py,sha256=u_V2Ex9bVF8H_QGwEfuokcR3eXBdCEiF8EGJw3wmiRg,937
+services/__init__.py,sha256=OasUpmNZwE4YRUJqAr5QDCiLYwla60wCT4ArmqfJo9c,155
+services/base_service.py,sha256=2TFEX5oCh_kxDVN2QPMwQ5heoE1nPUxs43NCAojN184,277
+services/detection_service.py,sha256=PZ4_8-eRzWClkHaYMO_U9tDut2VTlMFEXyfWYl03f3c,1142
+services/recognition_service.py,sha256=I0EcJq-vUvg_Ojgz8LIcVVn5O7QaIwZrB1zZNlpmP5c,5420
+services/server_api_list.py,sha256=8IQFZ84ylDdVrslJIz9nhzxKDWu1G_FyuLYhjLKdBzo,220
+services/verification_service.py,sha256=bWDWdBXCRVwlM67GCBWmLnMuO98l8Dfk8Lghk2pLPIM,1375
+compreface_sdk_python-1.0.5.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+compreface_sdk_python-1.0.5.dist-info/METADATA,sha256=0RomcF7lR8Kym0qvojTL4YC5U5RjzV19k7KRU_oRJzQ,2513
+compreface_sdk_python-1.0.5.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+compreface_sdk_python-1.0.5.dist-info/top_level.txt,sha256=nRlH3YjQhtwkxBIAbFeadGVhuyAL6ehJThSj24qop7w,14
+compreface_sdk_python-1.0.5.dist-info/RECORD,,
