@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: federatedml
+Version: 0.0.2
+Summary: federated learning package
+Author-email: Kerem Bayramoğlu <kerembay9@gmail.com>
+Project-URL: Homepage, https://github.com/yourusername/my_package
+Project-URL: Documentation, https://github.com/yourusername/my_package#readme
+Project-URL: Issues, https://github.com/yourusername/my_package/issues
+Keywords: federated learning,machine learning,privacy
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pytest
+
+federated learning library
