@@ -1,0 +1,10 @@
+configurer/__init__.py,sha256=bzG91g9DQksugcb0rk3Qu72XUV1Lvr1wstA3a9VcrsY,204
+configurer/main.py,sha256=TcX-3gVPlk7L5-oM0jjl9Je1sIHlR78U7y2KH8SpQXY,59
+configurer/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+configurer/core/loader.py,sha256=-0VGZ2sJxC3vLeGHANt6m4a0634-HFeb2GKbT_rwGOE,3159
+configurer/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+configurer/utils/helpers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+configurer-0.1.0.dist-info/METADATA,sha256=jpbH0zoNaq1ZrL1siapon47og1Hr5QABLqk7WQ_Uch4,2597
+configurer-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+configurer-0.1.0.dist-info/licenses/LICENSE,sha256=J_XFalAKjGutN6xAoTpuVIfR5nCXhGvQDnViy3H7Gjg,1067
+configurer-0.1.0.dist-info/RECORD,,
