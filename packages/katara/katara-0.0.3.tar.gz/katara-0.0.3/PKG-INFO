@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: katara
+Version: 0.0.3
+Summary: custom dev/research toolkit by tensorkelechi
+Project-URL: Homepage, https://pypi.org/project/katara/
+Project-URL: Repository, https://github.com/kelechi-c/katara
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: datasets
+Requires-Dist: diffusers
+Requires-Dist: librosa
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pillow
+Requires-Dist: safetensors
+Requires-Dist: scikit-image
+Requires-Dist: soundfile
+Requires-Dist: torch
+Requires-Dist: torchsummary
+Requires-Dist: tqdm
+Requires-Dist: transformers
+Requires-Dist: useful-moonshine
+Requires-Dist: wandb
+Description-Content-Type: text/markdown
+
+### katara
+
+**my custom research/development toolkit**
+...

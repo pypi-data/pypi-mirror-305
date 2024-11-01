@@ -1,0 +1,45 @@
+[project]
+name = "katara"
+version = "0.0.3"
+description = "custom dev/research toolkit by tensorkelechi"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "librosa",
+    "opencv-python",
+    "numpy",
+    "torch",
+    "datasets",
+    "pillow",
+    "soundfile",
+    "torchsummary",
+    "transformers",
+    "diffusers",
+    "wandb",
+    "scikit-image",
+    "tqdm",
+    "safetensors",
+    "useful-moonshine"
+]
+
+[project.urls]
+Homepage = "https://pypi.org/project/katara/"
+Repository = "https://github.com/kelechi-c/katara"
+
+[tool.setuptools.packages.find]
+where =["."]
+include = ["katara*"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["katara"]
