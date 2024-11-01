@@ -1,0 +1,5 @@
+[console_scripts]
+cleanse = cleanse.cli:main
+
+[gui_scripts]
+
