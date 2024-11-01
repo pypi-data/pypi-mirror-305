@@ -1,0 +1,10 @@
+ApaDown/ApaDown.py,sha256=YrYbxCJn7_KpXcCYM5MR1ri4OkByXmk74tH_CSKdq2w,383
+ApaDown/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ApaDown/cli.py,sha256=CarM6fSl4v8Dq-qn0hek4myMRRdcc4T81cRyFNxFaBU,121
+ApaDown/download.py,sha256=7qBn9twW-W-I9U1dlyoikvjYti6i0QordJ9x_a2JeiM,6953
+ApaDown/get_downloadable_links.py,sha256=UTYfIAwCM5_TFlQ3e3kbTtcPlhNOt5T2UGyLsbJ817w,1662
+ApaDown-1.0.0.dist-info/METADATA,sha256=xGHAnceuihodL-K623jvywhHXC-leNr0HvsK5y7TlcA,247
+ApaDown-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ApaDown-1.0.0.dist-info/entry_points.txt,sha256=DJOjRSm1Cfa8fH9nZtQf4d_8ofLb3bnwJySOhueAau8,45
+ApaDown-1.0.0.dist-info/top_level.txt,sha256=PI1Lu8owH_YFUKS6VrfAzNzSR4DHHqmzLdm7fgt1rVE,8
+ApaDown-1.0.0.dist-info/RECORD,,
