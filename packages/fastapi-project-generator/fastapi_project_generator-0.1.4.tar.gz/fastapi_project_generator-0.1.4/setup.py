@@ -1,0 +1,41 @@
+import io
+import os
+from setuptools import setup, find_packages
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+# Read the README file
+with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
+
+setup(
+    name='fastapi-project-generator',
+    version='0.1.4',
+    packages=find_packages(),
+    package_data={
+        'fastapi_project_generator': ['templates/**/*', 'templates/**/**/*'],
+    },
+    include_package_data=True,
+    install_requires=[
+        'click>=7.0',
+        'jinja2>=2.10',
+    ],
+    entry_points='''
+        [console_scripts]
+        fastapi-init=fastapi_project_generator.cli:main
+    ''',
+    author='Nirodya Pussadeniya',
+    author_email='nirodya@synacal.ai',
+    description='A package to generate FastAPI project structures.',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    url='https://github.com/Synacal/fastAPI-project-template.git',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'Framework :: FastAPI',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ],
+    python_requires='>=3.6',
+)
