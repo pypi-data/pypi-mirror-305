@@ -1,0 +1,87 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+# See https://www.python.org/dev/peps/pep-0621/
+name = 'sirocco'
+dynamic = ["version"]
+description = 'A library for creating weather and climate workflows.'
+authors = [
+  {name = 'Matthieu Leclair', email = 'matthieu.leclair@env.ethz.ch'},
+  {name = 'Julian Geiger', email = 'julian.geiger@psi.ch'},
+  {name = 'Alexander Goscinski', email = 'alexander.goscinski@psi.ch'},
+]
+readme = 'README.md'
+classifiers = [
+  'Development Status :: 1 - Planning',
+  'Intended Audience :: Science/Research',
+  'Operating System :: POSIX :: Linux',
+  'Programming Language :: Python',
+  'Programming Language :: Python :: 3.12',
+  'Topic :: Scientific/Engineering',
+  'Topic :: Scientific/Engineering :: Atmospheric Science',
+]
+keywords = ["workflow"," icon", "aiida", "aiida-workgraph"]
+requires-python = '>=3.12'
+dependencies = [
+  "isoduration",
+  "pydantic",
+  "pydantic-yaml",
+  "aiida-core>=2.5"
+]
+[project.urls]
+Repository = "https://github.com/C2SM/Sirocco.git"
+Changelog = "https://github.com/C2SM/Sirocco/blob/main/CHANGELOG.md"
+
+[tool.pytest.ini_options]
+# Configuration for [pytest](https://docs.pytest.org)
+addopts = "--pdbcls=IPython.terminal.debugger:TerminalPdb"
+
+[tool.coverage.run]
+# Configuration of [coverage.py](https://coverage.readthedocs.io)
+# reporting which lines of your plugin are covered by tests
+source = ["sirocco"]
+
+[tool.ruff]
+include = ["src/*py", "tests/*py"]
+target-version = "py39"
+
+[tool.ruff.lint]
+ignore = [
+  "TID252", # prefer relative import over absolute
+  "TRY003", # write custom error messages for formatting
+]
+
+## Hatch configurations
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/sirocco/",
+]
+
+[tool.hatch.version]
+path = "src/sirocco/__init__.py"
+
+[tool.hatch.envs.hatch-test]
+extra-dependencies = [
+    "ipdb"
+]
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.12"]
+
+[tool.hatch.envs.docs]
+description = "Build the documentation"
+extra-dependencies = [
+    "mkdocs-material",
+]
+
+[tool.hatch.envs.docs.scripts]
+build = [
+  "mkdocs build -f docs/mkdocs.yml",
+  "echo 'Now open docs/build/index.html with your browser'"
+]
+serve = [
+  "mkdocs serve -f docs/mkdocs.yml",
+]
