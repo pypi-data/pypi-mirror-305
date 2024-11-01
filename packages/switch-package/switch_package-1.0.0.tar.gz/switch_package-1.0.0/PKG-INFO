@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: switch-package
+Version: 1.0.0
+Summary: A package that implements a switch statment
+Home-page: https://github.com/Salvanim/switch.git
+Author: Salvanim
+Author-email: djfisher@icloud.com
+Project-URL: Docs, https://github.com/Salvanim/switch/blob/main/switch/README.txt
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
