@@ -1,0 +1,7 @@
+README.md
+setup.py
+tinytroupe/__init__.py
+tinytroupe.egg-info/PKG-INFO
+tinytroupe.egg-info/SOURCES.txt
+tinytroupe.egg-info/dependency_links.txt
+tinytroupe.egg-info/top_level.txt
