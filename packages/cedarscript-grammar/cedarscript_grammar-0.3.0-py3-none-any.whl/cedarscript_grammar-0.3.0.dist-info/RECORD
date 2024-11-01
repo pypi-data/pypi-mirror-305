@@ -1,0 +1,9 @@
+cedarscript_grammar/__init__.py,sha256=x6fl8bkwg5DIcxkP-9gaDU63FacM94IQR7qqXwEPZzo,1743
+cedarscript_grammar/_version.py,sha256=Jk2iAU7m-7Vx9XV1TtdD9ZoJraIncDq_4_Wd-qtUotg,411
+cedarscript_grammar/libtree-sitter-cedarscript.dll,sha256=N5gqAzUk_HcC4xVzuEo_MloWjdw1T6B-T807esDFlj0,135064
+cedarscript_grammar/libtree-sitter-cedarscript.dylib,sha256=Iuc8WA9VijnVututfnqUZ6ZUHB4h3gLSr7e1zV829sw,100032
+cedarscript_grammar/libtree-sitter-cedarscript.so,sha256=Sj1GapA2aUvhzjvlTyVHldVa-fV2Y6SmDHMt1GfmIGg,70184
+cedarscript_grammar-0.3.0.dist-info/METADATA,sha256=z0lB066o4hkRe6stqZcVNIJrACJ_mEed-MPrrTjjW8w,23508
+cedarscript_grammar-0.3.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+cedarscript_grammar-0.3.0.dist-info/top_level.txt,sha256=87fXSEo6iEnYm_0QRzLdCl8t8apw84FQ3drTmpfSsSI,20
+cedarscript_grammar-0.3.0.dist-info/RECORD,,
