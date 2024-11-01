@@ -1,0 +1,7 @@
+setup.py
+num_akr/__init__.py
+num_akr.egg-info/PKG-INFO
+num_akr.egg-info/SOURCES.txt
+num_akr.egg-info/dependency_links.txt
+num_akr.egg-info/requires.txt
+num_akr.egg-info/top_level.txt
