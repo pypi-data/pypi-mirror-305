@@ -1,0 +1,94 @@
+Metadata-Version: 2.3
+Name: EnergyFlow
+Version: 1.3.4
+Summary: Python package for the Energy Flow suite of particle physics tools
+Project-URL: Homepage, https://energyflow.network
+Project-URL: Issues, https://github.com/thaler-lab/EnergyFlow/issues
+Project-URL: Source Code, https://github.com/thaler-lab/EnergyFlow
+Author-email: "Patrick T. Komiske III" <pkomiske@mit.edu>
+Maintainer-email: Rikab Gambhir <rikab@mit.edu>, Jordan Ashley <jordan.ashley@cern.ch>
+License-File: LICENSE
+Keywords: CMS,Deep Sets,EFM,EFN,EFP,EMD,Earth Mover Distance,Energy Flow Moment,Energy Flow Network,Energy Flow Polynomial,MOD,Open Data,PFN,Particle Flow Network,Wasserstein,architecture,collider,correlator,energy flow,energyflow,jets,metric,multigraph,neural network,open,physics,polynomial,substructure
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Requires-Dist: h5py!=3.11.0,>=2.9.0
+Requires-Dist: importlib-metadata>=1.4.0; python_version < '3.8'
+Requires-Dist: numpy>=1.17.0
+Requires-Dist: wasserstein>=1.0.1
+Provides-Extra: all
+Requires-Dist: igraph; extra == 'all'
+Requires-Dist: scikit-learn; extra == 'all'
+Requires-Dist: tensorflow>=2.5.0; extra == 'all'
+Provides-Extra: archs
+Requires-Dist: scikit-learn; extra == 'archs'
+Requires-Dist: tensorflow>=2.5.0; extra == 'archs'
+Provides-Extra: examples
+Requires-Dist: matplotlib; extra == 'examples'
+Requires-Dist: scikit-learn; extra == 'examples'
+Requires-Dist: tensorflow>=2.5.0; extra == 'examples'
+Provides-Extra: generation
+Requires-Dist: igraph; extra == 'generation'
+Provides-Extra: tests
+Requires-Dist: igraph; extra == 'tests'
+Requires-Dist: pot>=0.8.0; extra == 'tests'
+Requires-Dist: pytest; extra == 'tests'
+Requires-Dist: scikit-learn; extra == 'tests'
+Requires-Dist: tensorflow>=2.5.0; extra == 'tests'
+Description-Content-Type: text/markdown
+
+# EnergyFlow
+[![Build Status](https://github.com/thaler-lab/EnergyFlow/actions/workflows/test-energyflow.yml/badge.svg)](https://github.com/thaler-lab/EnergyFlow/actions/workflows/test-energyflow.yml?query=branch%3Amaster)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/thaler-lab/EnergyFlow/master)
+
+EnergyFlow is a Python package that computes Energy Flow Polynomials (EFPs) as defined in Ref. [1], implements Energy Flow Networks (EFNs) and Particle Flow Networks (PFNs) as defined in Ref. [2], computes Energy Mover's Distances as defined in Ref. [3], and provides access to some particle physics [datasets hosted on Zenodo](https://zenodo.org/search?page=1&size=20&q=komiske&sort=title) including the jet datasets in MOD HDF5 format used in Ref. [4].
+
+#### Installation
+
+To install EnergyFlow with pip, simply execute:
+
+```console
+python -m pip install energyflow
+```
+
+#### Documentation
+
+The documentation is maintained at [https://energyflow.network](https://energyflow.network).
+
+##### References
+
+[1] P. T. Komiske, E. M. Metodiev, and J. Thaler, _Energy Flow Polynomials: A complete linear basis for jet substructure_, [JHEP __04__ (2018) 013](https://doi.org/10.1007/JHEP04(2018)013) [[1712.07124](https://arxiv.org/abs/1712.07124)].
+
+[2] P. T. Komiske, E. M. Metodiev, and J. Thaler, _Energy Flow Networks: Deep Sets for Particle Jets_, [JHEP __01__ (2019) 121](https://doi.org/10.1007/JHEP01(2019)121) [[1810.05165](https://arxiv.org/abs/1810.05165)].
+
+[3] P. T. Komiske, E. M. Metodiev, and J. Thaler, _The Metric Space of Collider Events_, [Phys. Rev. Lett. __123__ (2019) 041801](https://doi.org/10.1103/PhysRevLett.123.041801) [[1902.02346](https://arxiv.org/abs/1902.02346)].
+
+[4] P. T. Komiske, R. Mastandrea, E. M. Metodiev, P. Naik, and J. Thaler, _Exploring the Space of Jets with CMS Open Data_, [Phys. Rev. D **101** (2020) 034009](https://doi.org/10.1103/PhysRevD.101.034009) [[1908.08542](https://arxiv.org/abs/1908.08542)].
+
+[5] P. T. Komiske, E. M. Metodiev, and J. Thaler, _Cutting Multiparticle Correlators Down to Size_, [Phys. Rev. D **101** (2020) 036019](https://doi.org/10.1103/PhysRevD.101.036019) [[1911.04491](https://arxiv.org/abs/1911.04491)].
+
+[6] A. Andreassen, P. T. Komiske, E. M. Metodiev, B. Nachman, and J. Thaler, _OmniFold: A Method to Simultaneously Unfold All Observables_, [Phys. Rev. Lett. __124__ (2020) 182001](https://doi.org/10.1103/PhysRevLett.124.182001) [[1911.09107](https://arxiv.org/abs/1911.09107)].
+
+[7] P. T. Komiske, E. M. Metodiev, and J. Thaler, _The Hidden Geometry of Particle Collisions_, [JHEP __07__ (2020) 006](https://doi.org/10.1007/JHEP07(2020)006) [[2004.04159](https://arxiv.org/abs/2004.04159)].
