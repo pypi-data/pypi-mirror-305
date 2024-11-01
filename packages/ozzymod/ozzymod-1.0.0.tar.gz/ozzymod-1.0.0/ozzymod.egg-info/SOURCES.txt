@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+ozzymod/__init__.py
+ozzymod.egg-info/PKG-INFO
+ozzymod.egg-info/SOURCES.txt
+ozzymod.egg-info/dependency_links.txt
+ozzymod.egg-info/top_level.txt
