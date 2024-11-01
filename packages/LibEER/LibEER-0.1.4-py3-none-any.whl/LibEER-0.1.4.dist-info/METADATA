@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: LibEER
+Version: 0.1.4
+Summary: LibEER: A Comprehensive Benchmark and Algorithm Library for EEG-based Emotion Recognition
+Author-email: Yang Shusen <yangshusen87@stu.xjtu.edu.cn>
+Keywords: emotion recognition,eeg,EEG-based emotion recognition
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.17.0
+Requires-Dist: torch>=1.0.0
+Requires-Dist: tqdm>=4.0.0
+Requires-Dist: scipy>=1.0.0
+Requires-Dist: scikit-learn>=1.0.0
+
