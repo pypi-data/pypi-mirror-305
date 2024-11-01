@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# ${ROOT}/bin/
+BIN="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
+
+# current directory
+CWD=$(pwd)
+
+# ${ROOT}/
+ROOT=$(cd ${BIN}/../../ && pwd && cd ${CWD})
+
+# ${ROOT}/lib/
+LIB=${ROOT}/lib
+
+# ${ROOT}/lib/unimelb-mf-clients.jar
+JAR=${LIB}/unimelb-mf-clients.jar
+
+# check if unimelb-mf-clients.jar exists
+[[ ! -f $JAR ]] && echo "${JAR} is not found." >&2 && exit 2
+
+# JRE included?
+JRE=${ROOT}/jre
+if [[ -d ${JRE} ]]; then
+  JAVA=${JRE}/bin/java
+else
+  JAVA=$(which java)
+  [[ -z ${JAVA} ]] && echo "could not find java" && exit 1
+fi
+
+# execute the command
+$JAVA -Xmx200m -cp "${JAR}" unimelb.mf.client.ssh.cli.SFTPGetCLI ${1+"$@"}

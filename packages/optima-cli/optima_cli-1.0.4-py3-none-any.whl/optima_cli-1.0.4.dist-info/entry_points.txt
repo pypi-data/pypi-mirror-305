@@ -1,0 +1,2 @@
+[console_scripts]
+op = optima.cli:cli
