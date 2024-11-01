@@ -1,0 +1,8 @@
+bisHash/__init__.py,sha256=8yZs6HMG2x00-qPD2KxOoX6Hzgada-1GDX9pwbkbN5M,96
+bisHash/hashing.py,sha256=VZFm4j9gSLITGlITYePksDV4WsAyhA4-rUTRLlI3vGs,1924
+my_package/__init__.py,sha256=7h5xxJJWV4-Dh0G0xyMmYh9cM6-x7t8XZUavb6_eWi8,82
+my_package/hashing.py,sha256=VZFm4j9gSLITGlITYePksDV4WsAyhA4-rUTRLlI3vGs,1924
+bisHash-0.23.dist-info/METADATA,sha256=vRpsiN2i9Mdb5gUCtuRMf9NeIepFhVVus52CJ7DeAIA,525
+bisHash-0.23.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+bisHash-0.23.dist-info/top_level.txt,sha256=4zfvNpWIGpZyVToX3GU_8Pl4iFIBiyTVD2vcwCHDj1U,8
+bisHash-0.23.dist-info/RECORD,,
