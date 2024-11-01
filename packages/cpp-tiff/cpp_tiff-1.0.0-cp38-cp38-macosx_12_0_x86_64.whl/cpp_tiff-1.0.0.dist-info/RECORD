@@ -1,0 +1,10 @@
+cpptiff/__init__.py,sha256=rNQYBYOlY6SxM83UCl2U7_EY2rPjCw3JVzZwwmmjbOE,50
+cpptiff/cpptiffwrappers.py,sha256=BY5DFD3jttJgpmZfyCf7QsMF8LvoJvJJDK4gtp51G4A,337
+cpptiff/cpptiff.cpython-38-darwin.so,sha256=x6y1Rru7SZUyfBSsW27-6N09J-akawnixeDrZsB0UDA,345312
+cpptiff/.dylibs/libcppTiff.dylib,sha256=RkA0wRwX49DVG8ugvfKYI8F3L-yXWZRg1HfDqHFArUc,2060640
+cpptiff/.dylibs/libgcc_s.1.1.dylib,sha256=J_fmqw0LRKhc_qQL4BHPsFKQEbKQkcg4jUU9U1sdQtY,205728
+cpptiff/.dylibs/libgomp.1.dylib,sha256=RXRKVIPL_IXWp5mojKTc32zFF1w_YjYoZxSSL50_apI,476896
+cpp_tiff-1.0.0.dist-info/RECORD,,
+cpp_tiff-1.0.0.dist-info/WHEEL,sha256=j8_MCNBI7KgztMI2VCVmNiYcEly_P_7tu-qcbaOXbrw,108
+cpp_tiff-1.0.0.dist-info/top_level.txt,sha256=7R5B-YLztzQ_9LyzPchaFZh1g5ApvbivJrpWMud_fU4,8
+cpp_tiff-1.0.0.dist-info/METADATA,sha256=lrJOp7an2xyc_8aWaDm67VWDuHbjOPipNCNqEaPWinM,237
