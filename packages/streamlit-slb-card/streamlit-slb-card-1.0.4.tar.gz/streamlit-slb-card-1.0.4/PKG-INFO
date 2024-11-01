@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: streamlit-slb-card
+Version: 1.0.4
+Summary: Streamlit component that allows to create custom card content for streamlit dashboard
+Home-page: 
+Author: Sharizan Redzuan
+Author-email: sredzuan@slb.com
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Provides-Extra: devel
+License-File: LICENSE
+
+# streamlit-custom-component
+
+Streamlit component that allows you to do X
+
+## Installation instructions
+
+```sh
+pip install streamlit-slb-card
+```
+
+## Usage instructions
+
+```python
+import streamlit as st
+
+from streamlit-slb-card import streamlit_slb_card
+
+streamlit_slb_card()
+```
