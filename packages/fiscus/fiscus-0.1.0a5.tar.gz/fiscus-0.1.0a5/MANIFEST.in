@@ -1,0 +1,24 @@
+# MANIFEST.in
+
+# Exclude virtual environment files if they exist (adjust if your venv is under another path)
+exclude myvenv/*
+recursive-exclude myvenv *
+
+# Exclude .pyx, .py, .c, and .h source files from fiscus package
+exclude src/fiscus/*.pyx
+exclude src/fiscus/*.py
+exclude src/fiscus/*.c
+exclude src/fiscus/*.h
+
+# Include all .so files
+recursive-include src/fiscus *.so
+
+# Exclude all __pycache__ directories and their contents across the project
+recursive-exclude __pycache__ *
+recursive-exclude src/fiscus/__pycache__ *
+recursive-exclude tests/__pycache__ *
+
+# Exclude other specific files from the root or tests folder if not needed in distribution
+exclude main.py
+exclude requirements.txt
+exclude run_tests.py
