@@ -1,0 +1,7 @@
+setup.py
+nimastparser/__init__.py
+nimastpaser.egg-info/PKG-INFO
+nimastpaser.egg-info/SOURCES.txt
+nimastpaser.egg-info/dependency_links.txt
+nimastpaser.egg-info/requires.txt
+nimastpaser.egg-info/top_level.txt
