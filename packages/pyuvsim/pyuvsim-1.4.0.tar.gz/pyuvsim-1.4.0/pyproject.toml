@@ -1,0 +1,127 @@
+[build-system]
+requires = ["setuptools>=64", "wheel", "setuptools_scm>=8.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyuvsim"
+authors = [
+    {name = "Adam Lanman", email = "alanman@mit.edu"},
+    {name = "Bryna Hazelton", email = "brynah@phys.washington.edu"},
+    {name = "Daniel Jacobs", email = "wheresmytab@gmail.com"},
+    {name = "Matthew Kolopanis", email = "mjkolopa@asu.edu"},
+    {name = "Jonathan Pober", email = "jonathan_pober@brown.edu"},
+    {name = "James Aguirre", email = "jaguirre@sas.upenn.edu"},
+    {name = "Nithyanandan Thyagarajan", email = "nithyanandan.t@gmail.com"},
+    {name = "Steven Murray", email = "murray.steveng@gmail.com"},
+]
+maintainers = [
+    {name = "Bryna Hazelton", email = "brynah@phys.washington.edu"},
+    {name = "Matthew Kolopanis", email = "mjkolopa@asu.edu"}
+]
+description = "Python objects and interfaces for representing diffuse, extended and compact astrophysical radio sources"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    "astropy>=6.0",
+    "numpy>=1.23",
+    "psutil",
+    "pyradiosky>=1.0.1",
+    "pyuvdata>=3.1.0",
+    "pyyaml>=5.4.1",
+    "scipy>=1.8",
+    "setuptools>=64",
+    "setuptools_scm>=8.1",
+]
+requires-python = ">=3.10"
+keywords = ["radio astronomy", "interferometry"]
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+
+[project.optional-dependencies]
+casa = ["python-casacore>=3.5.2"]
+healpix = ["astropy-healpix>=1.0.2"]
+moon = ["lunarsky>=0.2.5"]
+sim = ["mpi4py>=3.1.1"]
+all = ["pyuvsim[casa,healpix,moon,sim]"]
+test = ["coverage", "pre-commit", "pytest", "pytest-cov>=5.0"]
+doc = ["matplotlib", "pypandoc", "sphinx"]
+profiler = ["line-profiler"]
+dev = ["pyuvsim[all,test,doc,profiler]"]
+
+
+[project.urls]
+Repository = "https://github.com/RadioAstronomySoftwareGroup/pyuvsim"
+Documentation = "https://pyuvsim.readthedocs.io/"
+
+# Note that this approach is "discouraged" in favor of [project.scripts], but
+# that requires entry-point functions, which would require some refactoring.
+[tool.setuptools]
+script-files = [
+    "scripts/im_to_catalog.py",
+    "scripts/plot_csv_antpos.py",
+    "scripts/profiling_plots.py",
+    "scripts/run_param_pyuvsim.py",
+    "scripts/run_profile_pyuvsim.py",
+    "scripts/summarize_profiling.py",
+    "scripts/uvdata_to_config.py",
+    "scripts/uvdata_to_telescope_config.py",
+]
+
+[tool.setuptools_scm]
+
+[tool.pytest.ini_options]
+addopts = "--ignore=scripts"
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle
+    "W", # pycodestyle warnings
+    "F", # Pyflakes
+    "D", # pydocstyle
+    "UP", # pyupgrade
+    "B", # flake8-bugbear
+    "A", # flake8-builtins
+    "C4", # flake8-comprehensions
+    "N", # pep8-naming
+    "SIM", # flake8-simplify
+    "I", # isort
+    "C90", # McCabe complexity
+]
+ignore = [
+    "N803", # non-lowercase arguments (we use N* for axes lengths)
+    "N806", # non-lowercase variable (we use N* for axes lengths)
+    "B028", # no-explicit-stacklevel for warnings
+    "SIM108", # prefer ternary opperators. I find them difficult to read.
+    "D203", # one-blank-line-before-class. we use two.
+    "D212", # multi-line-summary-first-line. We put it on the second line.
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D"] # Don't require docstrings for tests
+"docs/*.py" = ["D", "A"] # Don't require docstrings or worry about builtins for docs
+"setup.py" = ["D"] # Don't require docstrings for setup.py
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 100
+
+[tool.ruff.lint.mccabe]
+max-complexity = 30
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+known-first-party = ["pyuvsim"]
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
