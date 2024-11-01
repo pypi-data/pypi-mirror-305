@@ -1,0 +1,6 @@
+httpx
+pydantic
+python-dotenv
+case-converter
+jinja2
+requests
