@@ -1,0 +1,11 @@
+pynpdc/__init__.py,sha256=PdluC2JfbFhjhfjDNgwTVGGnZD_0FswF1_OcITURql0,1217
+pynpdc/auth_client.py,sha256=32UivXj2aeT_aDoqwvs0c0-dEXwYukgBPZmDPyZfFpQ,6947
+pynpdc/dataset_client.py,sha256=FkKnUm8q8D7NWZVnYmhbxY6J1RZOTuAgqJzFcOK7K5E,29158
+pynpdc/exception.py,sha256=3r4RVwl1c9zk61cW9oDe61j4PbFiXT-96SsB4nh89yE,413
+pynpdc/models.py,sha256=F3MWUVy3kctH4zowF95QV4sSg4iWzH8_aYDemKa8Egk,29968
+pynpdc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynpdc/utils.py,sha256=FxF45Of_KyQDacVyiOLt3khLqRx_Tmkw0ISdP7eNAC8,579
+pynpdc-0.18.1.dist-info/METADATA,sha256=a7A3BtvC9w0c0XpPqHWsoWidgLhLKB9V8ZE_rTlnsdM,7404
+pynpdc-0.18.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+pynpdc-0.18.1.dist-info/top_level.txt,sha256=PE-ZKYkhhtzshhQZVwoFXq_pcULwk8KBT3u4-B7bbIg,7
+pynpdc-0.18.1.dist-info/RECORD,,
