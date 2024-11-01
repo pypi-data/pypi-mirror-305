@@ -1,0 +1,9 @@
+torqueclient/__init__.py,sha256=1d9B7dfO2bdDoxe5Q8BdDqM9xrImoK9MrZxwClArR-E,85
+torqueclient/api.py,sha256=wf9G_928uw4aB-wfgtGf6t9v5NSOwRptFjbUbmVWhSA,18992
+torqueclient/cache.py,sha256=fOkgU1BkFDMQxLO2hvCKBeGr7f6GKJM4G3e6hhrbUCo,6876
+torqueclient/version.py,sha256=wwbrOIx2rQA0YHGob_KGFY89qGDsh20rh2M3y3Ua458,22
+torqueclient-0.6.8.dist-info/LICENSE.md,sha256=MqCnOBu8uXsEOzRZWh9EBVfVz-kE9NkXcLCrtGXo2yU,34354
+torqueclient-0.6.8.dist-info/METADATA,sha256=hZgVQueCFZ40rpVxPqbpKAY9qUddg6gg33f5JPgHC0o,1034
+torqueclient-0.6.8.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+torqueclient-0.6.8.dist-info/top_level.txt,sha256=dvO__YxjwMqy3rRZGEkHm2ehGBsHP1IvWWB70-3H9LY,13
+torqueclient-0.6.8.dist-info/RECORD,,
