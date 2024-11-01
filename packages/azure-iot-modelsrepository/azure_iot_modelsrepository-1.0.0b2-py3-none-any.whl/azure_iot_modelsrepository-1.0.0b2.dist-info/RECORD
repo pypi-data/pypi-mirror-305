@@ -1,0 +1,14 @@
+azure/iot/modelsrepository/__init__.py,sha256=AAyYN-BtapkBHlzgIEDrQUtYr5h9jHxqPSwH5hpyYBA,781
+azure/iot/modelsrepository/_client.py,sha256=U17k7Ls6lAxsSM4eMkJw20bNmnoP52AVJjeQWCV2nDo,11125
+azure/iot/modelsrepository/_constants.py,sha256=FgCtxCtkwLULHzYc3UjQdm9lxh0FQptq6r2kY_XOkF0,588
+azure/iot/modelsrepository/_pseudo_parser.py,sha256=2UHqyZ2zbbEOlWQWELO-1dxNjtMc05NwhHQVsZ90iAg,3702
+azure/iot/modelsrepository/_resolver.py,sha256=gRgWhHjQcnzasI0Y5UtXzFyi5ZzLb6BUL6yCpw12Bpw,6689
+azure/iot/modelsrepository/_version.py,sha256=JeAnXtctTJz53eQ2BQbfyor92Mmt16_oJlMnmYegF8g,330
+azure/iot/modelsrepository/dtmi_conventions.py,sha256=0bmL_TcdCwLdXwVerQy-iL9nO93sSSQ5wZzDvZQePe0,2040
+azure/iot/modelsrepository/exceptions.py,sha256=iqyrQ-jt9mGS-xdETcCWkzwwXDH7kVHc5VInYFRe-zI,350
+azure/iot/modelsrepository/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+azure_iot_modelsrepository-1.0.0b2.dist-info/LICENSE,sha256=fHekSorNm0H9wgmGSoAWs9QwtdDgkwmBjVt0RDNt90Q,1074
+azure_iot_modelsrepository-1.0.0b2.dist-info/METADATA,sha256=tATV2vU2hUxHJUMw_kh95KOSO_aYsRCgbOqQT2JCwVw,1333
+azure_iot_modelsrepository-1.0.0b2.dist-info/WHEEL,sha256=pL8R0wFFS65tNSRnaOVrsw9EOkOqxLrlUPenUYnJKNo,91
+azure_iot_modelsrepository-1.0.0b2.dist-info/top_level.txt,sha256=S7DhWV9m80TBzAhOFjxDUiNbKszzoThbnrSz5MpbHSQ,6
+azure_iot_modelsrepository-1.0.0b2.dist-info/RECORD,,
