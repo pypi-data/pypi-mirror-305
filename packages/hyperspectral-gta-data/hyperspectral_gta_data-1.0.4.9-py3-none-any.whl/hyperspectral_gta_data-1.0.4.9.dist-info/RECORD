@@ -1,0 +1,8 @@
+hyperspectral_gta_data/__init__.py,sha256=lv1kDO7xgGF7O99iQO8To-nYzl9wpukRFEQxIq_o86Q,312
+hyperspectral_gta_data/create_data_dict.py,sha256=0d6uyMv3vxIox1NRFAMjkBH2l4SSUlfHma-b5m8tTd4,2104
+hyperspectral_gta_data/data_download.py,sha256=7PeEfqdGHky7c2nKFWj3m1P-Dfy6NrcETxvs0XL0aes,7588
+hyperspectral_gta_data-1.0.4.9.dist-info/LICENSE,sha256=VeDhmdFEAVAiExCahriniNjd584D5kgnyDwkQujYbmM,1095
+hyperspectral_gta_data-1.0.4.9.dist-info/METADATA,sha256=3O9BV5gvIC-gAzYZ4v903-U0QnNlCP6beS7KcABp-gY,1015
+hyperspectral_gta_data-1.0.4.9.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+hyperspectral_gta_data-1.0.4.9.dist-info/top_level.txt,sha256=CWGL89wfgJCFc4oFqoF92w_NI3dOQgJVtwUNTBR5PTQ,23
+hyperspectral_gta_data-1.0.4.9.dist-info/RECORD,,
