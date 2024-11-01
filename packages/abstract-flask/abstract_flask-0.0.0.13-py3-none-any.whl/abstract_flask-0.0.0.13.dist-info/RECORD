@@ -1,0 +1,15 @@
+abstract_flask/Abs_Manager.py,sha256=xz5F_v-SHV3Vpvje6vUu4EI_rks7DciZsCFvJXnWg1k,12376
+abstract_flask/Abs_Manager_dynamic.py,sha256=_gbyV6mZE0hD7AgxYiSBD0TJSLWmbo5srMyLWPL0VaM,13555
+abstract_flask/__init__.py,sha256=v3PuPJk9r40WO76juvtWKgKcq1BtevwREnZwbF_8AKQ,113
+abstract_flask/abs_Manager.py,sha256=xz5F_v-SHV3Vpvje6vUu4EI_rks7DciZsCFvJXnWg1k,12376
+abstract_flask/abs_Manager_dynamic.py,sha256=_gbyV6mZE0hD7AgxYiSBD0TJSLWmbo5srMyLWPL0VaM,13555
+abstract_flask/abstract_flask.py,sha256=YE8wY71344tLGYGGbaafHtDXTz4rWLIZxod2P6zQcLw,2989
+abstract_flask/directories.py,sha256=Ejr0X_hEXyCehVejRFQvunckwsHuYLGBG4_ux3R4s-w,9554
+abstract_flask/fileManager.py,sha256=vz2YVojrb3NTlXaluBiZKrD3BHtodAY3WfTpLQyXadQ,522
+abstract_flask/file_utils.py,sha256=LjooECh6sP9Mx9OJD2yYCzlDK5SxLg-hrwxLyTl5adI,12389
+abstract_flask/network_tools.py,sha256=aO8Z5mW7xHS06sjsnP2HFDkYSWMRGp3EYj5V-J8dbno,553
+abstract_flask/request_utils.py,sha256=Bvlmi2wkbD3j4J61JGX6wdgyvzAaiS71dXq-Lb0a-zE,2988
+abstract_flask-0.0.0.13.dist-info/METADATA,sha256=O-znmGqISGx75dS9xy4XZgBNZcjnZ_arQI0kEnpUZUg,494
+abstract_flask-0.0.0.13.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+abstract_flask-0.0.0.13.dist-info/top_level.txt,sha256=wm6gA3ilceFJthH3BU-cJNpNtloN0aBrP30GHvh1vIA,15
+abstract_flask-0.0.0.13.dist-info/RECORD,,
