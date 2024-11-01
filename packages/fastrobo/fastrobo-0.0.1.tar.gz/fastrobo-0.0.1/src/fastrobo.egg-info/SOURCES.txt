@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/fastrobo/__init__.py
+src/fastrobo.egg-info/PKG-INFO
+src/fastrobo.egg-info/SOURCES.txt
+src/fastrobo.egg-info/dependency_links.txt
+src/fastrobo.egg-info/requires.txt
+src/fastrobo.egg-info/top_level.txt

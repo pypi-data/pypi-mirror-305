@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastrobo"
+version = "0.0.1"
+authors = [{ name = "Jianglong Ye", email = "jianglong.yeh@gmail.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+# not include torch in the dependencies
+dependencies = ["typing-extensions", "numpy"]
+
+[project.urls]
+Homepage = "https://fastrobo.jianglongye.com/"
+Repository = "https://github.com/jianglongye/fastrobo"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+fastrobo = ["**/*.c", "**/*.cpp", "**/*.h", "**/*.hpp", "**/*.cu", "**/*.cuh"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+ignore = ["F722"]
+
+[tool.mypy]
+exclude = ["tests", "build", "scripts", "src/fastrobo/datasets"]
+ignore_missing_imports = true
+
+[tool.pyright]
+reportInvalidTypeForm = "none"
+typeCheckingMode = "off"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::beartype.roar.BeartypeDecorHintPep585DeprecationWarning",
+]
