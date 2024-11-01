@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: plone.classicui
+Version: 1.0.0a1
+Summary: Plone Classic UI distribution
+Home-page: https://github.com/plone/plone.classicui
+Author: Plone Foundation
+Author-email: releasemanager@plone.org
+License: GPL version 2
+Project-URL: Source, https://github.com/plone/plone.classicui
+Project-URL: Tracker, https://github.com/plone/plone.classicui/issues
+Keywords: Python Plone CMS Distribution
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone :: 6.1
+Classifier: Framework :: Plone :: 6.1
+Classifier: Framework :: Plone :: Distribution
+Classifier: Framework :: Plone
+Classifier: Framework :: Zope :: 5
+Classifier: Framework :: Zope
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools
+Requires-Dist: plone.distribution
+Requires-Dist: plone.base
+Requires-Dist: Zope
+Provides-Extra: test
+Requires-Dist: plone.app.testing; extra == "test"
+Requires-Dist: plone.testing; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-plone>=0.5.0; extra == "test"
+Requires-Dist: zest.releaser[recommended]; extra == "test"
+Requires-Dist: zestreleaser.towncrier; extra == "test"
+
+# plone.classicui
+
+The `plone.classicui` package provides all the templates and the code which is
+necessary to render the classic Plone user interface.
+
+The package contains page templates that were previously part of following packages,
+like `plone.app.layout` and `plone.app.portlets`.
+
+
+## 1.0.0a1 (2024-10-31)
+
+
+### New features:
+
+- Initial release.
+  [multiple Plone developers] #1
+
+
+### Internal:
+
+- Add distribution tests [@ericof] #11
+- Add dependencies from Plone package [@ericof] #12
+
+# Changelog
+
+## 1.0a1 (unreleased)
+
+- Initial release.
+  []
