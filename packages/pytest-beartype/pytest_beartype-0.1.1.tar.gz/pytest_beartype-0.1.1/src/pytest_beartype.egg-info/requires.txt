@@ -1,0 +1,8 @@
+beartype
+pytest
+
+[dev]
+black
+mypy
+pytest-cov
+tox
