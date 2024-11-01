@@ -1,0 +1,11 @@
+#ifndef EXPORT_PARAMETERS_{{name|upper}}_H
+#define EXPORT_PARAMETERS_{{name|upper}}_H
+
+#include <aidge/data/Tensor.hpp>
+#include <memory>
+
+std::shared_ptr<Aidge::Tensor> {{name}} = std::make_shared<Aidge::Tensor>(Aidge::Array{{dims|length}}D<{{data_t}}, {{ dims|join(", ") }}> {
+{{ values }}
+});
+
+#endif /* EXPORT_PARAMETERS_{{name|upper}}_H */
