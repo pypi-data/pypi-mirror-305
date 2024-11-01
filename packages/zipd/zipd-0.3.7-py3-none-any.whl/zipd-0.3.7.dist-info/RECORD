@@ -1,0 +1,10 @@
+zipd/__init__.py,sha256=PdcYTW6unpOoXXUuqI6ttCzCaI-rWguXaJIJMo32F4s,229
+zipd/__main__.py,sha256=vR_V6Q_5MtmXQkujgJPQTfh5iyaTLOd_NlXPL4joWSM,280
+zipd/argparsing.py,sha256=0eqSEFyNb0Mk0GynYuvHIkv-8iqoZC6P3LaP6kpgwL4,2817
+zipd/cli.py,sha256=vsC2goQrKpImMfJK8ceqpN29j7vQ5lFoLaqYVooS8SU,12077
+zipd/runcommand.py,sha256=Z96LrTAa_6k20xsXNX_z9YKdsIb71n40zuWvaV6CSrw,4113
+zipd-0.3.7.dist-info/METADATA,sha256=bktoWnghqxn1NswFMuMJ5DfQedKKf6d0Bf7bNjnAWO8,3873
+zipd-0.3.7.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+zipd-0.3.7.dist-info/entry_points.txt,sha256=jsCzVPS9INYl1qjjOwlrdkJL3Uvd3dSIoam8Kyt2oz8,44
+zipd-0.3.7.dist-info/licenses/LICENSE,sha256=bYg4EFY7HR3dOumInlvIGgYj-_R7U57DgZ2_EEdOKXs,1065
+zipd-0.3.7.dist-info/RECORD,,
