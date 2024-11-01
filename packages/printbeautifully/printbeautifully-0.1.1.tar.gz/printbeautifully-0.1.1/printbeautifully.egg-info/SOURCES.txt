@@ -1,0 +1,7 @@
+README.md
+setup.py
+beautifulprint/__init__.py
+printbeautifully.egg-info/PKG-INFO
+printbeautifully.egg-info/SOURCES.txt
+printbeautifully.egg-info/dependency_links.txt
+printbeautifully.egg-info/top_level.txt
