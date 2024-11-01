@@ -1,0 +1,9 @@
+django_admin_helpers/__init__.py,sha256=MpAT5hgNoHnTtG1XRD_GV_A7QrHVU6vJjGSw_8qMGA4,22
+django_admin_helpers/apps.py,sha256=mkkV76IimInl_WQzEVauUMroWH5NxlS88OCkbzFVxu8,251
+django_admin_helpers/conf.py,sha256=4uSBrCB8zUPxgUX-WMrKpwAj8SkvJc3NqDurrcAh32Q,1179
+django_admin_helpers/links.py,sha256=LKjbJLM9QsgIiJTyKCTPaFrgs9pDGMzTJZxpSngyXBA,2510
+django_admin_helpers/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_admin_helpers-1.2.0.dist-info/LICENSE,sha256=ji4Rf9Jc6RASNBAcebQKpyCbnx0s6ESGoI3WktUE-Hg,1068
+django_admin_helpers-1.2.0.dist-info/METADATA,sha256=nTFavUjCMdEW9aV4FQICxp0PG31qC8_R06t51XhKLfc,5231
+django_admin_helpers-1.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+django_admin_helpers-1.2.0.dist-info/RECORD,,
