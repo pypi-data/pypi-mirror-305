@@ -1,0 +1,2 @@
+[pymt.plugins]
+Era5 = pymt_era5.bmi:Era5

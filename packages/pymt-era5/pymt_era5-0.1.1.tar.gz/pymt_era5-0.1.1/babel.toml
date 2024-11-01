@@ -1,0 +1,32 @@
+[library]
+[library.Era5]
+language = "python"
+library = "bmi_era5"
+header = ""
+entry_point = "BmiEra5"
+
+
+[build]
+undef_macros = []
+define_macros = []
+libraries = []
+library_dirs = []
+include_dirs = []
+extra_compile_args = []
+
+[package]
+name = "pymt_era5"
+requirements = [""]
+
+[info]
+github_username = "gantian127"
+package_author = "Tian Gan"
+package_author_email = "gantian127@gmail.com"
+package_license = "MIT"
+summary = "PyMT plugin for ERA5 data"
+
+
+[ci]
+python_version = ["3.9"]
+os = ["linux", "mac", "windows"]
+
