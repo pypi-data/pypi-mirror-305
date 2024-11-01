@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: nimastpaser
+Version: 1.0.1
+Summary: Python Package made by Mhadhbi Issam . 
+Home-page: https://gitlab.com/game-dev-comapny/libraries/nimastparser.git
+Author: $GITLAB_USER_LOGIN
+Author-email: mhadhbixissam@gmail.com
+Project-URL: Documentation, https://pydefold.readthedocs.io/en/latest/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: Pydefold ==1.2.5
+Requires-Dist: gitpython
+Requires-Dist: jinja2
+
+# nimastparser
+
+Python Library to parse and unparse nim code into ast tree . 
+
+
+## Getting started
+
+### Install 
+```bash
+pip install nimastparser
+```
+
+### Usage : 
+>   *Note* : ***nim Compiler must be installed on your machine*** .
+
+```python
+from nimastparser import nim 
+
+code = '''
+
+let value = 2
+case value
+of 1:
+    echo "Value is one"
+of 2:
+    echo "Value is two"
+of 3, 4:
+   echo "Value is three or four"
+else:
+    echo "Value is something else"
+
+
+'''
+# nim = None , get nim path from system using whcih nim 
+# otherwise nim = path/to/nim
+tree = nim.parse(code=code , nim = None ) 
+print(f"Ast Tree :\n{tree}")
+
+# nim = None , get nim path from system using whcih nim 
+# otherwise nim = path/to/nim
+generated_code = nim.unparse(code=tree , nim  = None )
+print(f"Converted code from Tree :\n{generated_codetree}")
+
+```
