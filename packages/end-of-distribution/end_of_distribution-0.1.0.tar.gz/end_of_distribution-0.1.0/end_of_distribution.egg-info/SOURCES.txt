@@ -1,0 +1,9 @@
+LICENCE
+README.md
+setup.py
+end_of_distribution.egg-info/PKG-INFO
+end_of_distribution.egg-info/SOURCES.txt
+end_of_distribution.egg-info/dependency_links.txt
+end_of_distribution.egg-info/top_level.txt
+lib/__init__.py
+lib/end_of_distribution.py
