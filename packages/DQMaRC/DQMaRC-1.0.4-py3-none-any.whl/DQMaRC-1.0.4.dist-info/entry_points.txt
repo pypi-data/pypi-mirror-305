@@ -1,0 +1,2 @@
+[console_scripts]
+DQMaRC = DQMaRC:main
