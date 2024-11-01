@@ -1,0 +1,32 @@
+[project]
+name = "runescape-wrapper"
+version = "0.0.0"
+description = "The project tries to unify all runescape api's into one package"
+readme = "README.md"
+authors = [
+    { name = "extreme4all", email = "40169115+extreme4all@users.noreply.github.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.10.10",
+    "asyncio>=3.4.3",
+    "pydantic>=2.9.2",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+runescape = "runescape-wrapper:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+    "pytest-asyncio>=0.24.0",
+    "ruff>=0.7.1",
+    "pyright>=1.1.387",
+    "pytest-cov>=6.0.0",
+    "build>=1.2.2.post1",
+]
