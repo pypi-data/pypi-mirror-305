@@ -1,0 +1,17 @@
+robotframework_metrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+robotframework_metrics/dashboard_stats.py,sha256=tey32n9_JVN241Ueb70lLS1SkjJZ_9LKypGR_ZWOdSo,3967
+robotframework_metrics/details.py,sha256=QxfEd_clGQ9aufK2m5C0A_bp4A0o4roXqusEeUzByY4,2546
+robotframework_metrics/keyword_results.py,sha256=ySht1SvPfvDW2LOKEzs8Pw4oN5U-CjSgN0z_xVDUGY4,592
+robotframework_metrics/keyword_times.py,sha256=Cj98gasXBq4xWJiRnMS6RhARs-6ZRJWmlWafCO4jeDw,544
+robotframework_metrics/robotmetrics.py,sha256=WDTKicvqShpP0YmchX4KftsK_M-psy1eUuynszbElpA,5601
+robotframework_metrics/runner.py,sha256=7kmp8xE9aOPYz6kGi9S2hZXlODDOx7Zv_uQ3X-kkYrQ,2479
+robotframework_metrics/suite_results.py,sha256=Ia3pmpwamiusSP3E7pKOkXXU2bM2X5253nkenaAzZhw,987
+robotframework_metrics/test_results.py,sha256=t_d7feW5QiycNlMYm2Pf2HQAqEGCTJVMtKPV0Tgcq3Y,862
+robotframework_metrics/version.py,sha256=rC-xrJq-mRfqOI5xxJ9mrazVPQuL2i-ttXLuM3Ye7ig,23
+robotframework_metrics/templates/index.html,sha256=uVAbhYICm0Wi4nPufRAFxqmDSSAISo-5yo3up-2ueTg,32698
+robotframework_metrics-3.6.0.dist-info/LICENSE,sha256=v84VNnLo4BaB3sgB3F5x_dlQLzcdayUHGlQ_fGLhZ8A,1096
+robotframework_metrics-3.6.0.dist-info/METADATA,sha256=CJOVJrvNTZywRU8rrTbvil_xoVkw1zCsnSZamXYZskA,593
+robotframework_metrics-3.6.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+robotframework_metrics-3.6.0.dist-info/entry_points.txt,sha256=3z9BXyHYmJn64fUTTZ4ZoreMQ-oUFrngjX1B4V80Zjw,69
+robotframework_metrics-3.6.0.dist-info/top_level.txt,sha256=hc6d1xDdlRP4Phz5wFDwkrWq2ZNAZ_RD-Gw17iNqtS8,23
+robotframework_metrics-3.6.0.dist-info/RECORD,,
