@@ -1,0 +1,38 @@
+[project]
+name = "cleanse"
+version = "0.1.0"
+description = "Recursively check Python packages for purity."
+authors = [
+    { name = "bitnom", email = "14287229+bitnom@users.noreply.github.com" },
+]
+dependencies = [
+    "click>=8.1.7",
+    "rich>=13.9.3",
+]
+requires-python = ">=3.10,<3.13"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+cleanse = "cleanse.cli:main"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.pdm.scripts]
+test = "pytest tests/ --cov=src/cleanse"
+lint = "pylint src/cleanse tests"
