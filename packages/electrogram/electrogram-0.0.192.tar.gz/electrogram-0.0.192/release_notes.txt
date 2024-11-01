@@ -1,0 +1,27 @@
+## Release Notes
+
+### chore: update CI workflows, remove deprecated method.
+
+New Features:
+- Introduce a new function to scrape error data from Telegram's API and update corresponding TSV files.
+- Add support for handling web page previews in message parsing.
+- Add a new optional parameter 'copy_text' to the InlineKeyboardButton class for copying text to the clipboard.
+- Introduce a new optional parameter 'message_thread_id' in the search_messages method to target specific message threads in supergroups.
+
+Enhancements:
+- Refactor the sort_tsv_files function to improve readability and maintainability.
+- Update exception handling in session start method to include Unauthorized exception.
+
+CI:
+- Update the Python version in the format_and_test workflow to 3.13.
+- Create a new GitHub Actions workflow for scraping errors from Telegram's API.
+
+Chores:
+- Remove the GetNearbyChats method from the chats module.
+
+---------
+
+Signed-off-by: 5hojib <yesiamshojib@gmail.com>
+Co-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+Co-authored-by: 5hojib <5hojib@users.noreply.github.com>
+Co-authored-by: sourcery-ai[bot] <58596630+sourcery-ai[bot]@users.noreply.github.com>
