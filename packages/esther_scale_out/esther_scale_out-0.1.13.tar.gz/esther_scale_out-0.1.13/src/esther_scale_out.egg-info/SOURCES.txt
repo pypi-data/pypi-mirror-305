@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/esther_scale_out/__init__.py
+src/esther_scale_out/manage.py
+src/esther_scale_out.egg-info/PKG-INFO
+src/esther_scale_out.egg-info/SOURCES.txt
+src/esther_scale_out.egg-info/dependency_links.txt
+src/esther_scale_out.egg-info/entry_points.txt
+src/esther_scale_out.egg-info/requires.txt
+src/esther_scale_out.egg-info/top_level.txt
