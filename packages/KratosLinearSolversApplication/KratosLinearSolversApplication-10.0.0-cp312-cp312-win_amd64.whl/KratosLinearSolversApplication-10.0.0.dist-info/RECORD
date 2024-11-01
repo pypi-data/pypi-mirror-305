@@ -1,0 +1,9 @@
+KratosMultiphysics/.libs/KratosLinearSolversApplication.pyd,sha256=zEXXTOOlREis-EYoXS3EqLH9W2kwWdaP0T2Dl5FEdVs,1558528
+KratosMultiphysics/.libs/KratosLinearSolversCore.lib,sha256=xYWmB5o7HznA_qEHvJLwkhZea0zwDqge3chfQwLpOAM,429318
+KratosMultiphysics/.libs/KratosLinearSolversCore.pyd,sha256=2vP8G5_BGBn06IB4JT3ShPHlzDKoWWKiaEVLGxRcRzo,1052160
+KratosMultiphysics/LinearSolversApplication/__init__.py,sha256=fQrGbsmKFHfHrhOkSPikil7V2OG1KRYNZYdsLPdocMw,692
+KratosMultiphysics/LinearSolversApplication/dense_linear_solver_factory.py,sha256=byp3axSD6poCBXfiNA5UbEwBBf-Dvfx-1JDeS6IlbgU,1254
+KratosLinearSolversApplication-10.0.0.dist-info/METADATA,sha256=XLHbZ5Rv9BxbEhH7UW4PzgVBp1MswQPBvYuCCjEcMzs,9265
+KratosLinearSolversApplication-10.0.0.dist-info/WHEEL,sha256=fZWyj_84lK0cA-ZNCsdwhbJl0OTrpWkxInEn424qrSs,102
+KratosLinearSolversApplication-10.0.0.dist-info/top_level.txt,sha256=8Ov--opRCptLbHStjyiZUVpzN1OUU_F7c7fGmsR5cMc,19
+KratosLinearSolversApplication-10.0.0.dist-info/RECORD,,
