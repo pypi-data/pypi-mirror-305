@@ -1,0 +1,9 @@
+ccxt_download/__init__.py,sha256=OxE-pjFEhoGYi47-cvd_RLWUa3P6jIvfxEzNAh7yS8w,48
+ccxt_download/constants.py,sha256=WY8Hm_EwaFEOLrkYujr9HEh4P_zIEI7qlLtoNvRPRSA,1217
+ccxt_download/public.py,sha256=5c77qAcDrQk3Tjk31l1F23i7TESuChl1cu0aCtlMQfY,19905
+ccxt_download/utilities.py,sha256=byPBL8yvHavjmPdIBRmqbDBGA-wjMjN_bxVIbtJKuEs,12424
+ccxt_download-0.4.1.dist-info/LICENSE,sha256=lheKdxF07IYXf3IRiN6Xed8E83hcodnfnEa89AYBo7E,1069
+ccxt_download-0.4.1.dist-info/METADATA,sha256=_T9M95Q6GwdnrZYLeoxytGIsl8EzGik2r-uRdQvCY6Q,4972
+ccxt_download-0.4.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+ccxt_download-0.4.1.dist-info/top_level.txt,sha256=uLcdx0kV_s_FhaumZ-eFIhgF8VIMZ12Ewu7qyd-N7WM,14
+ccxt_download-0.4.1.dist-info/RECORD,,
