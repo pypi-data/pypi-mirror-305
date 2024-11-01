@@ -1,0 +1,7 @@
+[project]
+name = "PyHOPE"
+authors = [
+	{name = "Numerics Research Group (NRG)", email = "numerics@iag.uni-stuttgart.de"},
+]
+version = "0.0.0"
+description = "Coming soon"

@@ -1,0 +1,6 @@
+pyproject.toml
+PyHOPE.egg-info/PKG-INFO
+PyHOPE.egg-info/SOURCES.txt
+PyHOPE.egg-info/dependency_links.txt
+PyHOPE.egg-info/top_level.txt
+pyhope/__init__.py
