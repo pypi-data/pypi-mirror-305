@@ -1,0 +1,36 @@
+# colorprints v1.43
+
+This is a code library i made for fun in class one day. I was really bored.
+
+The Code is quite simple and mostly for personal use but I wanted to learn how to upload code packages so here it is.
+
+---
+
+## These Functions take a string value and print it out in the color specified
+
+
+printred(string)
+
+printblue(string)
+
+printgreen(string)
+
+printyellow(string)
+
+printorange(string)
+
+printpurple(string)
+
+printcyan(string)
+
+printgrey(string)
+
+---
+
+## These Functions intake Int (0-255) Color Values that represent RGB. Aswell as a String Value
+
+printRGB(int,int,int,String)
+
+### Gradient print takes 6 int values. first 3 are for starting RGB, the last 3 are for the ending RGB.
+
+printgradient(int,int,int,int,int,int,String)
