@@ -1,0 +1,9 @@
+simple_backtester/__init__.py,sha256=Yan5nBHe1_vBOVELnhueeSxzlGs22xCdTKMYOdpBrIE,153
+simple_backtester/data.py,sha256=DuxK7Vr2gcmKoUrcd5EykuzjeRCl5UWSbVsz6NclaGU,3057
+simple_backtester/order.py,sha256=iOnN-zTy3bqXI61J0JTNKutdfe-TLCneQbagNGkfHf8,7754
+simple_backtester/strat.py,sha256=b_hFvWgdLoyCdBK2w2isO4bBiLbFKQ1Iv4c1DdswI8c,10035
+simple_backtester/types.py,sha256=DeJkA5qAutJNxCiC-qoIFjSo0T8cUEaxmBqExuVH4pg,299
+simple_backtester-0.1.1.dist-info/LICENSE,sha256=5_S4MhOjjxG6BibT2Fw334otH4kMJ8ce0aS2pTNI2Po,1062
+simple_backtester-0.1.1.dist-info/METADATA,sha256=L3LbzZmsGz8FzcNZUV8KFGqLXVAa4z0dvwBpFX_gQpg,6968
+simple_backtester-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+simple_backtester-0.1.1.dist-info/RECORD,,
