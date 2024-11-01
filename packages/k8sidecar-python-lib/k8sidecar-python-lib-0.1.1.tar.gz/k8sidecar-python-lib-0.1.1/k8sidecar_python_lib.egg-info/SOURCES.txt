@@ -1,0 +1,7 @@
+README.md
+setup.py
+k8sidecar_python_lib.egg-info/PKG-INFO
+k8sidecar_python_lib.egg-info/SOURCES.txt
+k8sidecar_python_lib.egg-info/dependency_links.txt
+k8sidecar_python_lib.egg-info/requires.txt
+k8sidecar_python_lib.egg-info/top_level.txt
