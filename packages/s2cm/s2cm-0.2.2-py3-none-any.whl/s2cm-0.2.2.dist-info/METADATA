@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: s2cm
+Version: 0.2.2
+Summary: Server to cliet messenger, for notifying clients in a client-server models
+Home-page: https://github.com/Austin-rgb/s2cm
+Download-URL: https://github.com/Austin-rgb/s2cm/releases
+Author: Austine Ochieng
+Author-email: prof.odhiambo.ostinel@gmail.com
+Maintainer: Austin-rgb
+Maintainer-email: prof.odhiambo.ostine@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: bcrypt
+Requires-Dist: peewee
+Requires-Dist: requests
+Requires-Dist: flask
+Requires-Dist: flask-socketio
+
