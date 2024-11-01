@@ -1,0 +1,5 @@
+Metadata-Version: 2.3
+Name: base-dag
+Version: 0.1.0
+Summary: A simple base implementation of a Directed Acyclic Graph, intended to be subclassed for more specific functionality.
+Author-email: Mitchell Tillman <mtillman14@gmail.com>
