@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: MCC-Linux-driver
+Version: 0.1.6
+Summary: Linux Drivers for MCC
+Home-page: https://github.com/nuttysunday/Linux_Drivers
+Author: S Ghodke
+Author-email: sghodke@ncsu.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: libusb1
+Requires-Dist: usb1
+Requires-Dist: pyusb
+Requires-Dist: hidapi
+Requires-Dist: pybluez
+
+UNKNOWN
+
