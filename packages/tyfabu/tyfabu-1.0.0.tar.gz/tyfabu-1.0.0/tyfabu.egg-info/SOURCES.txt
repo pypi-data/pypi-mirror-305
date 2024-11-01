@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+tool.py
+tt.pypirc
+tyfabu.egg-info/PKG-INFO
+tyfabu.egg-info/SOURCES.txt
+tyfabu.egg-info/dependency_links.txt
+tyfabu.egg-info/top_level.txt
