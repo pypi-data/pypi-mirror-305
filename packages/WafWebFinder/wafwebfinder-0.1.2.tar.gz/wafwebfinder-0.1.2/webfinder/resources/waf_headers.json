@@ -1,0 +1,18 @@
+{
+  "CloudFront" : [
+    "X-Amz-Cf",
+    "cloudfront",
+    "cloudfront.net"
+  ],
+  "Akamai" : [
+    "X-Akamai",
+    "akamaitechnologies.com"
+  ],
+  "BigIP" : [
+    "BigIP"
+  ],
+  "AWS Global Accelerator" : [
+    "awsglobalaccelerator.com"
+  ]
+}
+
