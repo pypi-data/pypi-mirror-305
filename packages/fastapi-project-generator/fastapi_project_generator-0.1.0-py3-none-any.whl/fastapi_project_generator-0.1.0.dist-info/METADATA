@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: fastapi-project-generator
+Version: 0.1.0
+Summary: A package to generate FastAPI project structures.
+Home-page: https://github.com/Synacal/fastAPI-project-template.git
+Author: Nirodya Pussadeniya
+Author-email: nirodya@synacal.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: FastAPI
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: click >=7.0
+Requires-Dist: jinja2 >=2.10
+
