@@ -1,0 +1,6 @@
+setup.py
+Mohit_STT/__init__.py
+Mohit_STT.egg-info/PKG-INFO
+Mohit_STT.egg-info/SOURCES.txt
+Mohit_STT.egg-info/dependency_links.txt
+Mohit_STT.egg-info/top_level.txt
