@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+ser_gen.egg-info/PKG-INFO
+ser_gen.egg-info/SOURCES.txt
+ser_gen.egg-info/dependency_links.txt
+ser_gen.egg-info/top_level.txt
