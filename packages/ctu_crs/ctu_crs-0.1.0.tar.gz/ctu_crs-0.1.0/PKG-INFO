@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ctu_crs
+Version: 0.1.0
+Summary: Package to control CTU/CIIRC robots CRS93 and CRS97 via MARS control unit.
+Author-Email: Vladimir Petrik <vladimir.petrik@cvut.cz>
+License: BSD 3-Clause
+Requires-Python: >=3.10
+Requires-Dist: ctu-mars-control-unit>=0.1.1
+Requires-Dist: numpy>=2.1.2
+Requires-Dist: pyyaml>=6.0.2
+Description-Content-Type: text/markdown
+
+# CRS robots control at CTU/CIIRC
+Package to control CTU/CIIRC robots CRS93 and CRS97 via MARS control unit.
+
+## Installation
+
+```
+pip isntall ctu_crs #todo: update with PyPI package
+```
+
+## Usage
+
+
+todo: 
+install:
+vim
+terminator
+pycharm
