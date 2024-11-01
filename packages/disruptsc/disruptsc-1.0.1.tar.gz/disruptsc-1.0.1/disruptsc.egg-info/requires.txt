@@ -1,0 +1,4 @@
+cpython
+geopandas==0.11.1
+networkx==2.8.6
+PyYAML==6.0
