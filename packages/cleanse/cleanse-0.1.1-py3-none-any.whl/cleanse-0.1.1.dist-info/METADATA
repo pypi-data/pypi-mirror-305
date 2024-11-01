@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: cleanse
+Version: 0.1.1
+Summary: Recursively check Python packages for purity.
+Keywords: dependencies,analysis,pure-python
+Author-Email: bitnom <14287229+bitnom@users.noreply.github.com>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Project-URL: Repository, https://github.com/firesight-ai/cleanse
+Requires-Python: <3.13,>=3.9
+Requires-Dist: click>=8.1.7
+Requires-Dist: rich>=13.9.3
+Description-Content-Type: text/markdown
+
+# cleanse
+
+A tool to analyze Python package dependencies for purity.
+
+## Installation
+
+```bash
+pip install cleanse
+```
+
+## Usage
+
+```bash
+# Analyze requirements file
+cleanse analyze requirements.txt
+
+# Show verbose output
+cleanse analyze -v requirements.txt
+
+# Output as JSON
+cleanse analyze --json requirements.txt
+
+# Show help
+cleanse --help
+```
+
+## Development
+
+This project uses PDM for dependency management.
+
+```bash
+# Install dependencies
+pdm install
+
+# Run tests
+pdm run test
+
+# Run linting
+pdm run lint
+```
+
+## License
+
+MIT License

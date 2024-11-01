@@ -1,0 +1,8 @@
+cleanse-0.1.1.dist-info/METADATA,sha256=GkKqts5y7cbwHHRE8gCO46rvtz968jh6YVjKNkpOuZ4,1507
+cleanse-0.1.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+cleanse-0.1.1.dist-info/entry_points.txt,sha256=r-ERFl9Dv6nc4DFE1IJu72lDZM4Frbmggyy1mT570m4,61
+cleanse/__init__.py,sha256=zwJJ8rT1yZQmfPol8vbiWP1dt-yoU2VMGK3js42IHmU,122
+cleanse/cli.py,sha256=2b_gr3HJfQyRpmhiZhP27rOu5jcOzme6Iq6kJpvN81s,2254
+cleanse/core.py,sha256=JW0Lq5xRefzxPEJRqOfDq-0ziCHJQKxXyTs8wh24bAc,3420
+cleanse/utils.py,sha256=Ah-K82pd3hhr-kwtCD-Puxq2ewlGL1StKhl6x8yyVRw,1576
+cleanse-0.1.1.dist-info/RECORD,,
