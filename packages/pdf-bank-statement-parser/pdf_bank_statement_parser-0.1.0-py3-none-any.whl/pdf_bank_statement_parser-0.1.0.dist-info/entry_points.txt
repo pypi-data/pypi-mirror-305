@@ -1,0 +1,2 @@
+[console_scripts]
+parse-bank-statement-pdf = pdf_bank_statement_parser.cli:parse_transactions
