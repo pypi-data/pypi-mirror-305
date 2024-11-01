@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/elvis_repl/__init__.py
+src/elvis_repl/core.py
+src/elvis_repl.egg-info/PKG-INFO
+src/elvis_repl.egg-info/SOURCES.txt
+src/elvis_repl.egg-info/dependency_links.txt
+src/elvis_repl.egg-info/requires.txt
+src/elvis_repl.egg-info/top_level.txt
+tests/tests_elvis.py

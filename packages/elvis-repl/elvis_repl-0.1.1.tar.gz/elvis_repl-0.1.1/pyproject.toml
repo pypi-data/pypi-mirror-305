@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elvis-repl"
+version = "0.1.1"
+description = "Elvis has left the building - A REPL template engine that remembers"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "BSD-3-Clause"}
+authors = [
+    {name = "Kaspar Kallas", email = "kaspar.kana.kallas@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Framework :: IPython",
+    "Framework :: Jupyter",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["repl", "template", "development", "jupyter"]
+
+[project.optional-dependencies]
+test = ["pytest>=6.0"]
+jupyter = ["ipython"]
+
+[project.urls]
+"Homepage" = "https://github.com/KKallas/elvis"
+"Bug Tracker" = "https://github.com/KKallas/elvis/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["tests_*.py"]  # Changed from test_*.py to tests_*.py
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v -s"
