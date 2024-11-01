@@ -1,0 +1,16 @@
+aiomatter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiomatter/aiologger.py,sha256=z3Nvh18z25Lsf5rDL_qlMjTbnkuF3oiC14pdM73DwaE,766
+aiomatter/bot.py,sha256=0k_J9sJFvgI8Adoto5-HObQ7XvOFTD0EdOjyxWlTAZg,3361
+aiomatter/driver.py,sha256=HcB4RFsLlfd1lrcfyk-UiOwjL0P-_8NbCffHYnJeV3Q,4858
+aiomatter/events.py,sha256=wahbG-VYxk4MeowHOJJGC0D2Cx3bxiryzvu76vWqkwU,1574
+aiomatter/plugin.py,sha256=vrUnNDBH90rzRBK8gCBxNy46692X79WatFDYUuCiwOE,1038
+aiomatter/settings.py,sha256=ejkh3_cAv1vxlWZC0TAt1nQ8O417xMRZMUPSfgzeEz8,1086
+aiomatter/wrappers.py,sha256=SlIuqg7tQyFpr0d85yqHdt1Sok4K-U6dAqVy_kvVHYo,1321
+aiomatter/schemas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiomatter/schemas/post_events.py,sha256=vi2KPpsSYKmBh7z7innDfHCMNls9SsaG-PJb2p5kB4o,2086
+aiomatter/schemas/system_events.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiomatter/schemas/user.py,sha256=yesu1CuP7eFLDbhdygFW6vB4y6Aow3hqw-jfnKBkXlg,2842
+aiomatter-0.1.6.dist-info/METADATA,sha256=uEpezCFQ_HIQXzhD6qxsCS9bvWZDh9Dp1h77jv6hr9Y,3077
+aiomatter-0.1.6.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+aiomatter-0.1.6.dist-info/top_level.txt,sha256=59Iko2jfCrd_nVSxYXXUAsjtv80RM-gS1hNI8lBk9Lk,10
+aiomatter-0.1.6.dist-info/RECORD,,
