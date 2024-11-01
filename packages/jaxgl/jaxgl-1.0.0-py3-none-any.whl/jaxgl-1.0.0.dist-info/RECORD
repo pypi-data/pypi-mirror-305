@@ -1,0 +1,9 @@
+jaxgl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jaxgl/maths.py,sha256=AxetNbqaowmyM-DwswjHfG66inNfdIZgLwBblX7RZGI,373
+jaxgl/renderer.py,sha256=IpMjFZiPP11X8z5VqNZ70V9zGf2N0wwWFHNqDu-K0GQ,2266
+jaxgl/shaders.py,sha256=rLRcMawZV2_PcqsEIalkeQyvdlADODVAOaOIQpJY4yw,7010
+jaxgl-1.0.0.dist-info/LICENSE,sha256=_4TCcXcLOyZuBqG_xQuB4F37mBG1Xpz7VGhTyFGQvu8,1059
+jaxgl-1.0.0.dist-info/METADATA,sha256=wV-RZSOxXSAHtMCPwVm0Jtpd7626q0W6wURvXU6dulU,4954
+jaxgl-1.0.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+jaxgl-1.0.0.dist-info/top_level.txt,sha256=F-PM9EU8IyiPuwugNprVfejTH2fVgiV5CPF9kCpH62s,6
+jaxgl-1.0.0.dist-info/RECORD,,
