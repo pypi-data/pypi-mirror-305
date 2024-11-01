@@ -1,0 +1,14 @@
+mediapipe_viewer/__init__.py,sha256=CJCFhIWRVNnxV9gMACogFOKf1EB3X7v2OdiZj00fqN8,841
+mediapipe_viewer/__main__.py,sha256=O9KEJgNwdIVAebYzyEVAC1NU-zxBQOA4BTKuUPIf4AE,86
+mediapipe_viewer/config.py,sha256=15twlPWeJqzlonpzHNrjxupwAXqfJ3bJHK6mvzB-8Ik,381
+mediapipe_viewer/pose/__init__.py,sha256=L3m95rGze6aR1WUunlFCx7dn6jp3dxEGHO-eAKKnTx4,1086
+mediapipe_viewer/pose/mediapipe_pose.py,sha256=WIBFMGVrWfaMzuo4ZpkFBPaelPG3KjUnxDR8GQTFXZ4,6285
+mediapipe_viewer/pose/mediapipe_pose_config.py,sha256=liYJWaKO4_-C6EYEm6JqyQ-fDaxxw5bKXTaBGbcGyXo,355
+mediapipe_viewer/pose/mediapipe_pose_video.py,sha256=zsvXeULmtLNgBynmimxfj5NC12FvOKypb9pcPGAxqo4,1087
+mediapipe_viewer/pose/mediapipe_pose_video_base.py,sha256=zrRIIQ_hosjwt0qVYVb3JUnOj2eEzUlIStFjuS4_D3Y,4750
+mediapipe_viewer/pose/mediapipe_pose_video_data.py,sha256=SGGHQDO7vF2Ch0SH-p2Cc7jEmaMDfW_NJMqm0jDL8Y4,1294
+mediapipe_viewer/pose/mediapipe_pose_video_viewer.py,sha256=_0jn6deYkOMQ0Lv4fHrk_Y6IIYJsIsNiY82LnGJ9BPs,8263
+mediapipe_viewer-0.1.0.dist-info/METADATA,sha256=dpqwDj9xaT3WnxufE2LHcVVhDCwZBZvvzd4ciX5cjmU,366
+mediapipe_viewer-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+mediapipe_viewer-0.1.0.dist-info/entry_points.txt,sha256=RhBClvs1yLINflbKNhBWyXHk4OlU5yp1AA3s0fPC8p8,59
+mediapipe_viewer-0.1.0.dist-info/RECORD,,
