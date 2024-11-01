@@ -1,0 +1,1 @@
+ALLOWED_UI_RESPONSES: list[int] = [500, 404, 403, 429]
