@@ -1,0 +1,8 @@
+description: Salaires, pensions et rentes
+metadata:
+  documentation_start: true
+  label_en: Wages and pensions deductions
+  order:
+  - abatpro
+  - abatpen
+  - abat_supp
