@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: crapdf
+Version: 0.2.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: pytest ; extra == 'tests'
+Provides-Extra: tests
+Summary: Extract text from a PDF file.
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/AWeirdDev/crapdf
+
+# 🦀 crapdf
+Extract text from a PDF file. Uses the `lopdf` crate. Kind of crappy.
+
+```python
+from crapdf import extract, extract_bytes
+
+# Extract from file path
+texts: list[str] = extract("file.pdf")
+
+# Extract from bytes
+with open("file.pdf", "rb") as f:
+    content = f.read()
+
+texts: list[str] = extract_bytes(content)
+```
+
+## Performance
+
+Run the benchmarks using `bench.py`. Make sure to install dev dependencies from `requirements-dev.txt`.
+
+The overall performance is similar to [`pypdf`](https://pypi.org/project/pypdf).
+
+***
+
+AWeirdDev. [GitHub Repo](https://github.com/AWeirdDev/crapdf)
+
