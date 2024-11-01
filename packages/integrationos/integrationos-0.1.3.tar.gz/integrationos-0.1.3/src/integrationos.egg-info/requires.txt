@@ -1,0 +1,10 @@
+httpx
+pydantic
+python-dotenv
+case-converter
+jinja2
+requests
+email-validator
+
+[test]
+pytest<8.0.0,>=7.0.0
