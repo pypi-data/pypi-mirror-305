@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: switchObject
+Version: 1.0.0
+Summary: A package that implements a switch statment
+Home-page: https://github.com/Salvanim/switch.git
+Author: Salvanim
+Author-email: djfisher@icloud.com
+Project-URL: Docs, https://github.com/Salvanim/switch/blob/main/switch/README.txt
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+This project adds a switch object
+
+On creation the object stores cases withing a dictionary, where the key is the case and the value is the result
+
+On call the object checks the value pased and returs the result for that value that matches a case.
+
+A result can be a function which will run when a case is matched
+
+The call statemet takes parameters for this case
+
+Cases can be dynaimically changed by setting the values with __setitem__, and also accessed with __getitem__
