@@ -1,0 +1,2 @@
+[console_scripts]
+yatomat = yatomat.yatomat:main
