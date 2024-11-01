@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: casper_r2sdf_fft
+Version: 0.0.5
+Summary: A model for the CASPER FFT
+Project-URL: Homepage, https://github.com/talonmyburgh/casper_dspdevelt
+Project-URL: Issues, https://github.com/talonmyburgh/casper_dspdevel/issues
+Author-email: Matthew Schiller <mschille@nrao.edu>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# CASPER R2SDF FFT Model
+This is a fixed point model of the CASPERHDL FFT block
