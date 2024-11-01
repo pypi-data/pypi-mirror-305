@@ -1,0 +1,12 @@
+prune_media/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+prune_media/apps.py,sha256=5BPVzfHIISjkhF8Nunc1-nmxdEVpzbBu5xq2V30fs-c,650
+prune_media/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prune_media/utils.py,sha256=WSWFcaZKsHFsrmCyGkaUmog6Zam6ESsnypJScnxXhwg,3424
+prune_media/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prune_media/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prune_media/management/commands/prune_media.py,sha256=hB18kbw3nAI1SWeLytGFBSv-R-joUrsvQs4XUQQ69Ac,2615
+prune_media/management/commands/show_empty_media_dirs.py,sha256=IoTmQ8Rj9z1yr69u5FpD0AGY0qj4AcMieYm80WVckPE,1061
+django_prune_media-0.1.0.dist-info/METADATA,sha256=HRmRXhpym5tvxTeVrqsNAMg9m1a1Z8BZOrkG7H6Tvac,868
+django_prune_media-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+django_prune_media-0.1.0.dist-info/licenses/LICENSE,sha256=_YPft0qW2gxTemq9Sysu-6ZbSa7PtC2-edDLJVbPgKw,1493
+django_prune_media-0.1.0.dist-info/RECORD,,
