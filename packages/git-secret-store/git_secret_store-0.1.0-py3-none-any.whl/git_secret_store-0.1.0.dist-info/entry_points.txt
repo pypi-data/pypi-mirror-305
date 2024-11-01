@@ -1,0 +1,2 @@
+[console_scripts]
+git-secret = git_secret.script:main

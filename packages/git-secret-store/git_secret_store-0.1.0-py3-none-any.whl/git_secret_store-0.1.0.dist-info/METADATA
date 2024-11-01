@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: git-secret-store
+Version: 0.1.0
+Summary: A simple tool to store encrypted data into a git repository.
+Author: Hashberg
+Project-URL: Repository, https://github.com/hashberg-io/git-secret-store
+Project-URL: Issues, https://github.com/hashberg-io/git-secret-store/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Natural Language :: English
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pycryptodomex>=3.19
+
