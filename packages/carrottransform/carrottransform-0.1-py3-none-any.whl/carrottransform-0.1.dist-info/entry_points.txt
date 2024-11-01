@@ -1,0 +1,2 @@
+[console_scripts]
+carrot-transform-lite = carrottransform.cli.command:transform
