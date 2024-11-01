@@ -1,0 +1,59 @@
+[project]
+name = "cleanse"
+version = "0.1.1"
+description = "Recursively check Python packages for purity."
+authors = [
+    { name = "bitnom", email = "14287229+bitnom@users.noreply.github.com" },
+]
+dependencies = [
+    "click>=8.1.7",
+    "rich>=13.9.3",
+]
+requires-python = ">=3.9,<3.13"
+keywords = [
+    "dependencies",
+    "analysis",
+    "pure-python",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Repository = "https://github.com/firesight-ai/cleanse"
+
+[project.scripts]
+cleanse = "cleanse.cli:main"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.pdm.scripts]
+test = "pytest tests/ --cov=src/cleanse"
+lint = "pylint src/cleanse tests"
