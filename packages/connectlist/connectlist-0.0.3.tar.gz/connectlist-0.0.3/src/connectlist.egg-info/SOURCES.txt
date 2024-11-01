@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/connectlist.egg-info/PKG-INFO
+src/connectlist.egg-info/SOURCES.txt
+src/connectlist.egg-info/dependency_links.txt
+src/connectlist.egg-info/top_level.txt
+src/contact_list/__init__.py
+src/contact_list/example.py
