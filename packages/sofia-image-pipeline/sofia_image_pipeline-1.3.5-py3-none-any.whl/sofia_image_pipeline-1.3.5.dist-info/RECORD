@@ -1,0 +1,17 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/combine_images.py,sha256=q3mQiklPMMTGtERYFs6EvQcxBXrpDH2yWh-5TvsWQmw,2811
+src/download_usr_fig.py,sha256=x-_vN9uyBBe75qmoQUmYHV0BVZ2lsyNDlAA0P2G45bs,6048
+src/image_pipeline.py,sha256=_rGard39XMF9LxAdouRvoCmknwVgYGFr5sg2WP2IL3A,12414
+src/make_images.py,sha256=WS06N4f8LQzhuXv6MEgE3juxLyPaJTOknswAvEhW64M,60581
+src/make_spectra.py,sha256=4kerMgN8SmVcyn5vPO6R9Fpd2vrr_tTMHJP8-Gkoldc,16106
+src/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/modules/functions.py,sha256=x5FTj09chJFUBOaHKiBBSS1fVtcXFfyWXVXkeuiHt04,22013
+src/modules/get_ancillary.py,sha256=6pwWtr_OH3xZ7bEXWOxSwsOg4jC5FruCel5NaaYR8qU,8127
+src/modules/get_hst_cosmos.py,sha256=_nth800aZMqNUxQuVTpDTBBGolkCYQBPY7_DwPvRW1M,1188
+src/modules/panstarrs_fcns.py,sha256=3nvtkI0AlxRldihzs5Wdih_XBHXbqHfK8HlIjfMBqug,4128
+sofia_image_pipeline-1.3.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sofia_image_pipeline-1.3.5.dist-info/METADATA,sha256=IMXfVZ6rFuyDKbESvF0-rVCMDJhBcDXGo_JR98cleF0,13629
+sofia_image_pipeline-1.3.5.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+sofia_image_pipeline-1.3.5.dist-info/entry_points.txt,sha256=a1gzdYJz8KKRL6Y4ohsMnMq4aBHto0TT4IDy9xd7Cbk,110
+sofia_image_pipeline-1.3.5.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+sofia_image_pipeline-1.3.5.dist-info/RECORD,,
