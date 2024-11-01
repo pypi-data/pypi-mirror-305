@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "nonebot_plugin_lolmatch"
+version = "0.4.0"
+description = ""
+authors = ["Alex Newton <sharenfan222@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/MaxCrazy1101/nonebot_plugin_lolmatch"
+repository = "https://github.com/MaxCrazy1101/nonebot_plugin_lolmatch"
+keywords = ["nonebot", "nonebot2", "LoL"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0.0"
+aiohttp = ">=3.10.0"
+ujson = "^5"
+nonebot2 = "^2.2.0"
+nonebot_plugin_apscheduler = ">=0.4.0,<2.0.0"
+nonebot_plugin_htmlrender = ">=0.3.0,<1.0.0"
+nonebot-plugin-orm = ">=0.7.0,<1.0.0"
+pillow = ">=8"
+
+[tool.poetry.dev-dependencies]
+nonebot-adapter-onebot = ">=2.2.4"
+nonebot-plugin-orm = { extras = ["default"], version = ">=0.7.0" }
+
+[tool.nonebot]
+plugins = ["nonebot_plugin_lolmatch"]
+adapters = [
+    { name = "OneBot V12", module_name = "nonebot.adapters.onebot.v12", project_link = "nonebot-adapter-onebot", desc = "OneBot V12 协议" },
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11", project_link = "nonebot-adapter-onebot", desc = "OneBot V11 协议" },
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.optional-dependencies]
+datastore = ["nonebot-plugin-datastore>=1.2.0"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "W",   # pycodestyle warnings
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "UP",  # pyupgrade
+    "C4",  # flake8-comprehensions
+    "T10", # flake8-debugger
+    "T20", # flake8-print
+    "PYI", # flake8-pyi
+    "PT",  # flake8-pytest-style
+    "Q",   # flake8-quotes
+]
+ignore = [
+    "E402", # module-import-not-at-top-of-file
+]
+
+
+# omit = ["*/compat.py", "*/migrations/*"]
+
+# [tool.pytest.ini_options]
+# addopts = ["--import-mode=importlib"]
+# asyncio_mode = "auto"
