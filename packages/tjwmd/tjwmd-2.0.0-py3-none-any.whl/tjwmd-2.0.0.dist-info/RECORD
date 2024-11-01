@@ -1,0 +1,7 @@
+tjwmd/__init__.py,sha256=eGCNBadCv2zDdsru_eyH4DfBfFbH-js9XqHhoR2Cpy0,22
+tjwmd/digits_labels.py,sha256=Shss22aKHU2l6bjC9kilWKG_F9MCgZ5jPzsKhr7fXAg,528
+tjwmd/tjwmd.py,sha256=m1znylDbVqXhJ5pRmd7ZMastw28KzJRAsue_ny0gAik,4855
+tjwmd/utils.py,sha256=2C57QnFBsGa-00PFIE-zjaI8Kx3s6dkPGvsVUUw_WMs,2195
+tjwmd-2.0.0.dist-info/METADATA,sha256=Xb727lysZfO-ZXWGj_xjpfkDx9wXkeAY6MMTbo61ZFE,1307
+tjwmd-2.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tjwmd-2.0.0.dist-info/RECORD,,
