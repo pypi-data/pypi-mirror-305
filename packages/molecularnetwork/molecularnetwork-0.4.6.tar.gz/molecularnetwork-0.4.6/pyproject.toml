@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "molecularnetwork"
+version = "0.4.6"
+description = "Helper Library to create Molecular Networks"
+authors = ["Manas Mahale <manas.mahale@bcp.edu.in>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
