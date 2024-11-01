@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+shield-sdk/__init__.py
+shield_sdk.egg-info/PKG-INFO
+shield_sdk.egg-info/SOURCES.txt
+shield_sdk.egg-info/dependency_links.txt
+shield_sdk.egg-info/top_level.txt
