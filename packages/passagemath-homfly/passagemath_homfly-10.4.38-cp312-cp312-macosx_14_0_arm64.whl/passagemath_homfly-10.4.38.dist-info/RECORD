@@ -1,0 +1,11 @@
+passagemath_homfly.dylibs/libgc.1.dylib,sha256=CfNjdFzTatCWriZgCnHdI9WfM_dPAHJbi08K9sTfM2I,281456
+passagemath_homfly.dylibs/libhomfly.0.dylib,sha256=q6hU9WxGaRMUEiXpK6q6LFNy6gIhLFFBMqiAW-GQ0-U,73760
+passagemath_homfly.dylibs/libpari-gmp-tls.dylib,sha256=4hbb_YZOIT50G7l626i0XJRlE_DsDbaz4gX1hGbo0HE,9820768
+passagemath_homfly.dylibs/libgmp.10.dylib,sha256=ssAKmWbEUE2wHPqD4Nf7HVqFxIdflL8MPyxfC77vNEs,606176
+passagemath_homfly-10.4.38.dist-info/RECORD,,
+passagemath_homfly-10.4.38.dist-info/WHEEL,sha256=69lVEbYmdetQxqTBx8T5glhkQ9U-a9mlqzyKu85TzLc,109
+passagemath_homfly-10.4.38.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_homfly-10.4.38.dist-info/METADATA,sha256=eA3uxDOVEoY-ejMd3IrW8kTRjFKUx0tDKUtNiTkUJAA,2392
+sage/all__sagemath_homfly.py,sha256=acUGFX0Wx4P0uJwgj5m9ANtfRaZriA7rgY4-VlJE8xc,45
+sage/libs/all__sagemath_homfly.py,sha256=acUGFX0Wx4P0uJwgj5m9ANtfRaZriA7rgY4-VlJE8xc,45
+sage/libs/homfly.cpython-312-darwin.so,sha256=MCvrXjPlxTfIbexwQe824_qOyxCvXzoEUMsePKIqt68,95248
