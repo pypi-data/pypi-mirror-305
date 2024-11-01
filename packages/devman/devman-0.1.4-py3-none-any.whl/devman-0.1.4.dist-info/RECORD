@@ -1,0 +1,11 @@
+devman/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+devman/__main__.py,sha256=RbAYxp57Bow7U-M_GIVCfld2p5RJBw5n5kenvX0sh4w,156
+devman/cli.py,sha256=qkw99sJoxjZFi6WgDhxaw4lzian7QhgvgkTdMxXNCWI,4617
+devman/config.py,sha256=2mSDif0nYVGyk4ONJqFuNTD-UuD-m46j1MhqAU-3j5M,2201
+devman/exitcodes.py,sha256=yUFe7nypA2cuXlP9E5oMUQszC1jMayz1dJ2-wWaWXII,2451
+devman/podman.py,sha256=4eUJJY59TvECNibrULeTpOMEnpUsDjcIcB7UaxdSklg,3776
+devman-0.1.4.dist-info/METADATA,sha256=Nje7Aewzcrv_7wmn5L-9kVJTW3HvnAz2sIxzv24_ZDg,2313
+devman-0.1.4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+devman-0.1.4.dist-info/entry_points.txt,sha256=J-0nUkxGMz9n14u44Pe1EZEQfETInZ4cngbD9Yp6msc,48
+devman-0.1.4.dist-info/licenses/LICENSE,sha256=N8jK6hIaAULWvbKbGPBx6uQX4A1kDxg665IgRkOVWlA,1073
+devman-0.1.4.dist-info/RECORD,,
