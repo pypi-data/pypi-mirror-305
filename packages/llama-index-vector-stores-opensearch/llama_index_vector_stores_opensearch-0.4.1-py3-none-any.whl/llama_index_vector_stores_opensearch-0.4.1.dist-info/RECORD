@@ -1,0 +1,6 @@
+llama_index/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llama_index/vector_stores/opensearch/__init__.py,sha256=U1_XAkZb6zcskOk4s10NB8Tjs9AZRGdRQLzOGpbWdBA,176
+llama_index/vector_stores/opensearch/base.py,sha256=H_5DUMn8q4E9iY7_LIQcdpfT8dZRjLfnml3OTjoVM2Q,37141
+llama_index_vector_stores_opensearch-0.4.1.dist-info/METADATA,sha256=S8hRWaD0NKc9Yzt8pxXr3-21aIL1q3ff0N7JOTengdc,728
+llama_index_vector_stores_opensearch-0.4.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+llama_index_vector_stores_opensearch-0.4.1.dist-info/RECORD,,
