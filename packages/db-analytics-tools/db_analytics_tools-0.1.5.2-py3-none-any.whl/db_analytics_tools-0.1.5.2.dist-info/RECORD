@@ -1,0 +1,12 @@
+db_analytics_tools/__init__.py,sha256=NHwQuRG_26BV5WN53L9YbV1LQs_cA5omWOhjDipniTc,374
+db_analytics_tools/analytics.py,sha256=jM1zwULXW0wZsDaAcKhXH7o0phEp7ETv_wigy5CVhH8,63
+db_analytics_tools/integration.py,sha256=35bQJlVg2Q5Sv-E6Vybn7s5_q3nnnIENopxxTeRnViM,9643
+db_analytics_tools/learning.py,sha256=6zY9-TMUVtNNe83MCzEgcTcSFJetR0SmU1a_dK_BC8k,66
+db_analytics_tools/mail.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+db_analytics_tools/plotting.py,sha256=EOmmWyLx8Pb3cDlalAbn7_qOiysYsg9wnjOkDIa_d7Q,1550
+db_analytics_tools/utils.py,sha256=bC1MuA-7pfKaQR6Zt-f7IZKbsgNg4dhZadTI2aV415s,15343
+db_analytics_tools-0.1.5.2.dist-info/LICENSE,sha256=_FjqZxCW9vPoU1ysmLOXTDetx-akzXkSlenCjCljsT4,1068
+db_analytics_tools-0.1.5.2.dist-info/METADATA,sha256=84pGKbhqPJ_7XjCFx4RcWKpnXazujtoXQNc40zWTJVk,10895
+db_analytics_tools-0.1.5.2.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+db_analytics_tools-0.1.5.2.dist-info/top_level.txt,sha256=iCY5He5MwDvpKqUAxCBYQhDfc9eHkxHzVLCAa9hBvgE,19
+db_analytics_tools-0.1.5.2.dist-info/RECORD,,
