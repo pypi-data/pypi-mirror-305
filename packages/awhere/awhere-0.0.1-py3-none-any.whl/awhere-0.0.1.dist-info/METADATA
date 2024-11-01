@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: awhere
+Version: 0.0.1
+Summary: Agents Anywhere - An agentic workflow framework
+Author: Al Wonder
+Author-email: al@yiwonder.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: all
+Requires-Dist: dynaconf (>=3.2.6,<4.0.0)
+Requires-Dist: fastapi (>=0.115.4,<0.116.0)
+Requires-Dist: pydantic (>=2.9.2,<3.0.0)
+Requires-Dist: uvicorn (>=0.32.0,<0.33.0)
+Description-Content-Type: text/markdown
+
+# ⧊where (awhere): Agents Anywhere
+
+⧊where (pronounced *aware [uh-wehr]*) is an agentic workflow framework.
+
+> THIS PROJECT IS IN ACTIVE DEVELOPMENT. PLEASE CHECK BACK LATER!
+
+---
+<span style="font-size:8pt;">Copyright &copy; 2024 Weavers @ Eternal Loom. All rights reserved.</span>
