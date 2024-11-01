@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rennips"
+version = "0.2.0"
+description = "A minimalist Python progress spinner for iterative processes"
+readme = "README.md"
+authors = [{ name = "Oh Jongjin", email = "5jx2oh@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["progress", "spinner", "progress-bar", "cli"]
+dependencies = []
+requires-python = ">=3.7"
+
+[project.urls]
+Homepage = "https://github.com/Oh-JongJin/rennips"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rennips"]
