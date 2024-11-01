@@ -1,0 +1,11 @@
+landregistry/security_headers/__init__.py,sha256=HBkJSBeisERnipolMelEY9eUw4ckxZJ-6Gy7OpjcrBM,445
+landregistry/security_headers/csp_reporting.py,sha256=QbbXPjZuTGsS729HbBBT5ZqsRDWRzXlco2LD-vpFiIw,1809
+landregistry/security_headers/exceptions.py,sha256=KdujQCIQnEHcAzfXzgWiDHN5heuSQ2N9I7l2aAc2OrI,104
+landregistry/security_headers/header_defaults.py,sha256=aaIofcugQoGUDezvtDEPtYCHKqTu5_nbv_3aFK3cdZQ,5428
+landregistry/security_headers/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+landregistry/security_headers/response_without_csp.py,sha256=PuU9yH2oRm1Nd4a7tmVJ7sIvv5gDm4ZTlohCaSw-ZmA,482
+landregistry/security_headers/security_headers.py,sha256=Y-AMYYSV3Hmip6HZ37jsZh9XbfMT-eetsMaZIBrhhYc,6006
+landregistry_security_headers-0.9.9.dist-info/METADATA,sha256=4gRH0hrhE4jiJQfx_GDT2Iy27AaD-DxmMW1s_CRaFx4,8847
+landregistry_security_headers-0.9.9.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+landregistry_security_headers-0.9.9.dist-info/top_level.txt,sha256=hMEDBmIxLq43q01HoEeDgA0zt5wnBqwNHU6Lz7mot48,13
+landregistry_security_headers-0.9.9.dist-info/RECORD,,
