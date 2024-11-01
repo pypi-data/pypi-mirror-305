@@ -1,0 +1,8 @@
+LICENSE.txt
+README.txt
+pyproject.toml
+setup.cfg
+src/remotesystemlogger.egg-info/PKG-INFO
+src/remotesystemlogger.egg-info/SOURCES.txt
+src/remotesystemlogger.egg-info/dependency_links.txt
+src/remotesystemlogger.egg-info/top_level.txt
