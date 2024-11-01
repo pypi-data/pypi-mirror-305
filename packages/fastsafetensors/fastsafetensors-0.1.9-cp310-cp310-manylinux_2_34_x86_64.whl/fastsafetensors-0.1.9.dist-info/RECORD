@@ -1,0 +1,16 @@
+fastsafetensors/__init__.py,sha256=pilsFGr4YB-sfjc6inIWOix7QLGaU9JP4Bq4xTxAuQo,314
+fastsafetensors/common.py,sha256=o5XrRgatuqzDEjXNgKvy6Q1Mga6vJeoLToMInV9ByKA,10811
+fastsafetensors/cpp.cpython-310-x86_64-linux-gnu.so,sha256=SouHK5i7QrWdW8XRZp7jNDjz1jGbSJPYrIOC7lzmC_Y,5137128
+fastsafetensors/dlpack.py,sha256=324qmpqvcGxmhSnM3hPpylEfPik1DHMwwbPNv1vpKgg,6095
+fastsafetensors/file_buffer.py,sha256=CVmFdvmPlONNtZm0WUavXgNmg-3cN7EQaO4XkeatgzE,8768
+fastsafetensors/loader.py,sha256=yA-ZmEqJTy1td-c1upPXJ-0LcStV6dpjg4hVCsjUyFI,7722
+fastsafetensors/tensor_factory.py,sha256=BSREB9DrlwsNsCFxL6SDJSgeLNeKRTOV87xoMSBDcNQ,9916
+fastsafetensors/copier/gds.py,sha256=ewsuqlkA8HxrlVwzc3GWmcbgLwoYA9eZ84Y60LyrD1o,4028
+fastsafetensors/copier/nogds.py,sha256=lJmSH8sExsETKAxoLoZL3U0kH-0eH2V5DB1byKTvbw4,1908
+fastsafetensors/cpp/ext.cpp,sha256=dW_X1hnzInv8lNPWxONqGk3mt35KWGRbH0ivpWwzQqM,25325
+fastsafetensors/cpp/ext.hpp,sha256=ZYOLQWFasOTjYaVW49O7MWR9txIZHvADqEXLsIZqJkw,6519
+fastsafetensors-0.1.9.dist-info/LICENSE,sha256=FrrGYkpbqYYPpjSmkrp5l9lQRvV_HOMKY6EG_np7pLE,11334
+fastsafetensors-0.1.9.dist-info/METADATA,sha256=EQI4EJx0TblTD84NqEgrXlfMEveKnQ9_e1H9aiiMKqQ,11871
+fastsafetensors-0.1.9.dist-info/WHEEL,sha256=40mpRN0s-jX5uEzkm9vjMkaOIGdr3YMaOaWSJHygSjs,114
+fastsafetensors-0.1.9.dist-info/top_level.txt,sha256=8EpQe2lKKHBjNBBhB9kLtxcOiiczzx50DOZgihASFq0,16
+fastsafetensors-0.1.9.dist-info/RECORD,,
