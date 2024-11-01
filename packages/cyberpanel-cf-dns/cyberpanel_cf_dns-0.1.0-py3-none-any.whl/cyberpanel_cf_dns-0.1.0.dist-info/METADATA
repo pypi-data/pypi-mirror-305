@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cyberpanel-cf-dns
+Version: 0.1.0
+Summary: 
+Author: Shakir
+Author-email: shakirali.sacube@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cloudflare (>=3.1.0,<4.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# cyberpanel-cf-dns
+
