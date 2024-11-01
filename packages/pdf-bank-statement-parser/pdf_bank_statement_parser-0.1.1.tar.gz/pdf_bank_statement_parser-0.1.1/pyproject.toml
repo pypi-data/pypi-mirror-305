@@ -1,0 +1,31 @@
+[project]
+name = "pdf-bank-statement-parser"
+version = "0.1.1"
+description = "Command-line tool for converting PDF bank statements into CSV"
+authors = [{ name = "Joseph Bolton", email = "joseph.jazz.bolton@gmail.com" }]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Natural Language :: English",
+  "Topic :: File Formats",
+  "Topic :: Office/Business :: Financial :: Spreadsheet",
+  "Topic :: Text Processing",
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["pypdfium2>=4.30.0"]
+
+[tool.uv]
+dev-dependencies = ["ipython>=8.29.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+homepage = "https://github.com/J-sephB-lt-n/pdf-bank-statement-parser"
+changelog = "https://github.com/J-sephB-lt-n/pdf-bank-statement-parser/blob/main/CHANGELOG.md"
+
+[project.scripts]
+parse-bank-statement-pdf = "pdf_bank_statement_parser.cli:parse_transactions"
