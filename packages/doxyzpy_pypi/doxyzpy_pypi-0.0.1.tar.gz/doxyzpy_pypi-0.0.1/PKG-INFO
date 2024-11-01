@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: doxyzpy_pypi
+Version: 0.0.1
+Summary: doxyz组织下的py包发布管理
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# doxyzpy_pypi
+
+* 预留开发中的包名，待开发到达一定阶段方发布
