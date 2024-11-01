@@ -1,0 +1,54 @@
+version = 1
+requires-python = ">=3.10"
+
+[manifest]
+members = [
+    "mind-castle",
+    "mind-castle-aws",
+    "mind-castle-test",
+    "mind-castle-vault",
+]
+
+[[package]]
+name = "mind-castle"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "mind-castle-test" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "mind-castle-test", editable = "stores/mind-castle-test" }]
+
+[[package]]
+name = "mind-castle-aws"
+version = "0.1.1"
+source = { editable = "stores/mind-castle-aws" }
+dependencies = [
+    { name = "mind-castle" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "mind-castle", editable = "." }]
+
+[[package]]
+name = "mind-castle-test"
+version = "0.1.1"
+source = { editable = "stores/mind-castle-test" }
+dependencies = [
+    { name = "mind-castle" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "mind-castle", editable = "." }]
+
+[[package]]
+name = "mind-castle-vault"
+version = "0.1.1"
+source = { editable = "stores/mind-castle-vault" }
+dependencies = [
+    { name = "mind-castle" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "mind-castle", editable = "." }]
