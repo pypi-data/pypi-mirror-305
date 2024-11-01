@@ -1,0 +1,11 @@
+snapdiff/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snapdiff/deepdiff_custom.py,sha256=atgyGrX6LKN6Dqe9KC1wBVCQ5RvIXygpelw9qyMILHk,7529
+snapdiff/invoke_utils.py,sha256=gBZYQEAU9K9QX4s0xDC7p8gx_cBx84uhOLAL8_0gAPI,1958
+snapdiff/snapper.py,sha256=SWckF3WFAw8YcBIBlMio8sz894ZpQ9zpzAXOXyiwop4,6967
+snapdiff/tasks.py,sha256=nT16aChllhHGnmzxh_2gG6UHiIbmmqxkQcMgIJbVLPA,753
+snapdiff/utils.py,sha256=rAjRgR2vmo5WwT_tDDcJRx3eku0H8-K92olIjqF53HE,2953
+snapdiff-0.1.0.dist-info/LICENSE,sha256=wXnVbVmJEXexpqDoQ7f1ze_lO2uoP3xF_2Bxf6g6_lo,1076
+snapdiff-0.1.0.dist-info/METADATA,sha256=SPk35BxtB-Lo-LstOqhY5jBXSNkvuH0jABaIl_5Y7Xk,498
+snapdiff-0.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+snapdiff-0.1.0.dist-info/top_level.txt,sha256=ytQKYNN14-pRYsl8X4u0A1_3YJqtDRseP4G6d7jz7Pg,9
+snapdiff-0.1.0.dist-info/RECORD,,
