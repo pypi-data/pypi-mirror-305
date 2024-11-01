@@ -1,0 +1,13 @@
+atl/__init__.py,sha256=P3g4QgFDrAu7QYNxfRBBoNpkijym6nl8CwKKFCl0mE8,89
+atl/atl.py,sha256=YFJOAJ5_BESCygGp6fsHAAT0_eNT5mIrcWFFevWBVfY,5632
+atl/cli.py,sha256=7CEa3bDpG5d3E1hPxvZ2hU4WVYlbzqE67n53ZVFyRYo,3662
+atl/constants.py,sha256=sLq-RSMU7CgaNLmzCltgzd6ydSVspbEKss5wF5Jlb1E,148
+atl/noise.py,sha256=R76yOXN-EQ4dXxoUvZzpB9LWeLfrnHS2RMw5ntV71jE,4684
+atl/query.py,sha256=g4JaKEv9SbdBK8uT0CL8sFjxZzatzI_kEnB2ztkWqag,2004
+atl/scaling.py,sha256=6ZG4L8XP-U2JRmNOgM34NfGGm6qlXEWvB6xanss5jV0,839
+atl/tess_stars2px.py,sha256=ZqNjwDSgQlylHHcQToRZsNsaow0fFTT63wTJfldx-vs,70607
+tess_atl-0.0.3.1.dist-info/entry_points.txt,sha256=3MBesmHP-5fShBd23L1HLRR2To8IRVludSxZ5SOB2iE,36
+tess_atl-0.0.3.1.dist-info/LICENSE,sha256=XzJWwJXYR33ruRTWdH5GBOLmKRxKPeOzZIQT-8lt9S0,1077
+tess_atl-0.0.3.1.dist-info/WHEEL,sha256=mDWfuUpXG6Hkf9spPlsULzgRMDGfzsrFZv7ImJR4LJY,100
+tess_atl-0.0.3.1.dist-info/METADATA,sha256=OGizK1m-oBmKEjIDjgHnsM84dKhvR8gnOoeeibiWKj8,7515
+tess_atl-0.0.3.1.dist-info/RECORD,,
