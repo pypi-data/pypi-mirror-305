@@ -1,0 +1,9 @@
+numpy>=1.26
+tqdm
+scipy>=1.13
+matplotlib
+h5py
+six
+
+[tests]
+pytest
