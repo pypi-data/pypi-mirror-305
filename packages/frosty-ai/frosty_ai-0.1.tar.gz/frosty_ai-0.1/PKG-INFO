@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: frosty_ai
+Version: 0.1
+Requires-Dist: requests
+Requires-Dist: openai>=0.27.0
+Requires-Dist: mistralai>=1.0.0
+Requires-Dist: anthropic>=0.16.0
+Requires-Dist: urllib3<1.27,>=1.25.4
