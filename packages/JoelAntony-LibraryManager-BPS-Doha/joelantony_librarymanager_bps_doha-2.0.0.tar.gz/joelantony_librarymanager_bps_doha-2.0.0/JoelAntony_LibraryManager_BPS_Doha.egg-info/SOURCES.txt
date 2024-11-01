@@ -1,0 +1,8 @@
+README.md
+setup.py
+JoelAntony_LibraryManager_BPS_Doha.egg-info/PKG-INFO
+JoelAntony_LibraryManager_BPS_Doha.egg-info/SOURCES.txt
+JoelAntony_LibraryManager_BPS_Doha.egg-info/dependency_links.txt
+JoelAntony_LibraryManager_BPS_Doha.egg-info/top_level.txt
+library_management_system/__init__.py
+library_management_system/main.py
