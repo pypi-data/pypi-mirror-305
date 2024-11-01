@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: shield_sdk
+Version: 0.0.1
+Summary: Namespace reservation package
+Author: Shield Team
+Author-email: cybersecurity.svc@bugcrowd.com
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+This package reserves the namespace on PyPI
