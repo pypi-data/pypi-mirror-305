@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: uv-test
+Version: 0.1.0
+Summary: Add your description here
+Author-email: wangmengdi06 <wangmengdi06@58.com>
+Requires-Python: >=3.10
+Requires-Dist: docarray>=0.40.0
+Requires-Dist: fastapi>=0.115.4
+Provides-Extra: test
+Requires-Dist: polars>=1.12.0; extra == 'test'

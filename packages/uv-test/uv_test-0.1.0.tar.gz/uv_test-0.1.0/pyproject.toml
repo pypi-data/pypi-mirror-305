@@ -1,0 +1,29 @@
+[project]
+name = "uv-test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "wangmengdi06", email = "wangmengdi06@58.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "docarray>=0.40.0",
+    "fastapi>=0.115.4",
+]
+
+[project.scripts]
+uv-test = "uv_test:main"
+
+[project.optional-dependencies]
+test = [
+    "polars>=1.12.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+default = true
