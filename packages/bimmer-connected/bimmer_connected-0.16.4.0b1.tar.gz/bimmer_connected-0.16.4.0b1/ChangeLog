@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.16.4b1
+--------
+
+* Allow passing a httpx verify context (#655)
