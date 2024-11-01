@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: runescape-wrapper
+Version: 0.0.0
+Summary: The project tries to unify all runescape api's into one package
+Author-email: extreme4all <40169115+extreme4all@users.noreply.github.com>
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: aiohttp>=3.10.10
+Requires-Dist: asyncio>=3.4.3
+Requires-Dist: pydantic>=2.9.2
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# runescape

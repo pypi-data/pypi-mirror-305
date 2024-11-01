@@ -1,0 +1,15 @@
+runescape_wrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+runescape_wrapper/osrs/__init__.py,sha256=sOEx2RcU8fC-47mbQvCxrwnog2ZR32jwnA2FQxVZdvM,50
+runescape_wrapper/osrs/asyncio/__init__.py,sha256=sOEx2RcU8fC-47mbQvCxrwnog2ZR32jwnA2FQxVZdvM,50
+runescape_wrapper/osrs/asyncio/exchange.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+runescape_wrapper/osrs/asyncio/hiscore.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+runescape_wrapper/osrs/asyncio/wiki.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+runescape_wrapper/osrs/sync/__init__.py,sha256=sOEx2RcU8fC-47mbQvCxrwnog2ZR32jwnA2FQxVZdvM,50
+runescape_wrapper/rs3/__init__.py,sha256=RO5xQ2zEpclkRGLI-TXH6S1TYMjdB7QtD1pUF_mKiFQ,49
+runescape_wrapper/rs3/asyncio/__init__.py,sha256=sOEx2RcU8fC-47mbQvCxrwnog2ZR32jwnA2FQxVZdvM,50
+runescape_wrapper/rs3/sync/__init__.py,sha256=sOEx2RcU8fC-47mbQvCxrwnog2ZR32jwnA2FQxVZdvM,50
+runescape_wrapper-0.0.0.dist-info/METADATA,sha256=qHOsYZFYypJHV6pcq0FPcw_H4EXYiv6hB-d18XEyOW8,431
+runescape_wrapper-0.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+runescape_wrapper-0.0.0.dist-info/entry_points.txt,sha256=nH_pkPDKWPBd8x9JN6fWcDAmSZqd1BUsaTvXuSBTA9U,53
+runescape_wrapper-0.0.0.dist-info/licenses/LICENSE,sha256=caIogSaueqbzFk_8Q12u7FXqXAfT7vi3iJJ88H6OWUw,1068
+runescape_wrapper-0.0.0.dist-info/RECORD,,
