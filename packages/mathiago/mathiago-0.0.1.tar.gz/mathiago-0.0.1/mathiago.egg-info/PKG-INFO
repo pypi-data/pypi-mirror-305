@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: mathiago
+Version: 0.0.1
+Summary: Pacote com funções matemáticas para treino em python
+Home-page: https://github.com/Tavarestiag
+Author: tavares_tiag
+Author-email: tiagoalvestavares1@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# mathiago
+
+DescriÃ§Ã£o. 
+O pacote mathiago Ã© usado para:
+	Teoria dos numeros:
+		-MDC;
+		-MMC;
+		-verifica_primo;
+		-primeiros_primos;
+		-primos_ate;
+	SequÃªncias elementares:
+		-termo_geral_pa
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install mathiago
+
+```bash
+pip install mathiago
+```
+
+## Author
+Tiago Alves Tavares
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

@@ -1,0 +1,9 @@
+README.md
+setup.py
+mathiago/Sequencias_elementares.py
+mathiago/__init__.py
+mathiago/teoria_dos_numeros.py
+mathiago.egg-info/PKG-INFO
+mathiago.egg-info/SOURCES.txt
+mathiago.egg-info/dependency_links.txt
+mathiago.egg-info/top_level.txt
