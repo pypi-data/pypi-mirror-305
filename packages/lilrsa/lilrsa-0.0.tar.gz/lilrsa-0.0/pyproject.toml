@@ -1,0 +1,15 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "lilrsa"
+authors = [{name = "Elia Toselli", email = "elia.toselli@outlook.it"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+dependencies = [
+    "sympy"
+]
+[project.urls]
+Home = "https://github.com/hilcon222/lilrsa"
