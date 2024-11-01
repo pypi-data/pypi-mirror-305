@@ -1,0 +1,13 @@
+square_database/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+square_database/configuration.py,sha256=_BjgZ0r-d1DDzx_vW4huv8hffSKGskSRyH6pgheQJ2k,2484
+square_database/main.py,sha256=U4Q1JcwS6COkgARIvbdrikx6CCQf2ptUSHHWQE_Im7w,22206
+square_database/messages.py,sha256=OtVmmXlgn2tRIZ28DLUKeugSKNUhQPd0PaB4uO9kRvk,734
+square_database/data/config.ini,sha256=ThwvNwZ_I2V3VA7QjDraT9cJSn7KVghZ6W1uGozBhtE,764
+square_database/pydantic_models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+square_database/pydantic_models/pydantic_models.py,sha256=zp-FhkdV3exfQIqj4e5_oShN_9Avk5_7ptE6pmFQTTg,1065
+square_database/utils/CommonOperations.py,sha256=SaMeJsf84_KKk8_GDysrzRg7ane2tzIYBGZoiZDz7C0,1088
+square_database/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+square_database-2.2.1.dist-info/METADATA,sha256=M5eJ6-B3Sd3Hj8TqT5Iz4iazJFf5xGwUKwR2eVSPISA,2287
+square_database-2.2.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+square_database-2.2.1.dist-info/top_level.txt,sha256=c9QUPQPhqT3ImNuN_Nqlq5UcaXu4Bzrgm9DXFYpSJzw,16
+square_database-2.2.1.dist-info/RECORD,,
