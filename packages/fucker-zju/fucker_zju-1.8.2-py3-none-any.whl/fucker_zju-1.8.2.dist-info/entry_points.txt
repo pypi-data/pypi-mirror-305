@@ -1,0 +1,2 @@
+[console_scripts]
+fucker_zju = fucker_zju.task:test
