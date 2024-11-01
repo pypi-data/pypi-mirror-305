@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: brepmatching
+Version: 0.1.0
+Summary: originated by https://github.com/deGravity/brepmatching
+License: BSD-2-Clause
+Author: Kazuma NAITO
+Author-email: kazuma.naito@murata.com
+Requires-Python: >=3.9.3,<3.13
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cmake (>=3.30.5,<4.0.0)
+Requires-Dist: dotmap (>=1.3.30,<2.0.0)
+Requires-Dist: femtetutils (>=1.0.0,<2.0.0)
+Requires-Dist: numpy (>=1.26.2,<2.0.0)
+Requires-Dist: pandas (>=2.1.3,<3.0.0)
+Requires-Dist: parse (>=1.20.2,<2.0.0)
+Requires-Dist: pybind11[global] (>=2.13.6,<3.0.0)
+Requires-Dist: pytorch-lightning (>=1.9.0,<2.0.0)
+Requires-Dist: pywin32 (>=306,<307)
+Requires-Dist: scikit-learn (>=1.5.2,<2.0.0)
+Requires-Dist: scipy (>=1.11.4,<2.0.0)
+Requires-Dist: setuptools (>=75.2.0,<76.0.0)
+Requires-Dist: torch (>=2.3.0,<2.4.0)
+Requires-Dist: torch-geometric (>=2.6.1,<2.7.0)
+Requires-Dist: tqdm (>=4.66.5,<5.0.0)
+Requires-Dist: xxhash (>=3.5.0,<4.0.0)
+Description-Content-Type: text/markdown
+
+# BRepMatching-Femtet
+
+## About This Library
+BRepMatching-Femtet is a library that assigns permanent IDs to the topology of two Parasolid files and estimates their correspondence. This library is derived from [BRepMatching](https://github.com/deGravity/BRepMatching) (written by deGravity (Ben Jones)) that is the implementation of the paper[1].
+
+
+## Installation
+You can install it via pip:
+
+```pip install brepmatching-femtet```
+
+Please note that a licensed version of Femtet is required for this library to function properly.
+
+
+## License
+This library is licensed under the MIT License.
+It utilizes Eigen 3.4.0, which can be obtained from [this site](https://eigen.tuxfamily.org/index.php?title=Main_Page).
+
+
+## Usage
+
+```python
+from brepmatching.pyfemtet_scripts import Predictor
+from win32com.client import Dispatch
+
+# get Femtet control
+Femtet = Dispatch('FemtetMacro.Femtet')
+
+# initialize (create temporary foldere and child process)
+predictor = Predictor(Femtet)
+
+# predict
+id_map: dict = predictor.predict(
+    'orig.x_t',
+    'var.x_t',
+)
+
+# finalize (delete temporary folder and terminate child process)
+del predictor
+
+```
+
+## References
+[1] B-rep Matching for Collaborating Across CAD Systems,  
+[https://doi.org/10.48550/arXiv.2306.03169](https://doi.org/10.48550/arXiv.2306.03169)
+
