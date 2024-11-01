@@ -1,0 +1,52 @@
+# streamlit-slb-card
+
+Streamlit component that allows to create custom card content for streamlit dashboard
+
+## Installation instructions
+
+```sh
+pip install streamlit-slb-card
+```
+
+## Usage instructions
+
+```python
+import streamlit as st
+
+from streamlit_slb_card import streamlit_slb_card
+
+# sample data
+
+# LineChart
+# data = {
+#         "xAxis": ["Nov 1", "Nov 2", "Nov 3", "Nov 4", "Nov 5", "Nov 6"],
+#         "value": [2, 5.5, 2, 8.5, 1.5, 1],
+#         "color": "maroon"
+#     }
+
+# PieChart
+# data = [
+#         { "id": 0, "value": 10, "label": 'Helmet Violation', "color": 'green' },
+#         { "id": 1, "value": 32, "label": 'Coverall Violation', "color": 'red' },
+#         { "id": 2, "value": 45, "label": 'Glove Violation', "color": 'blue' },
+#         { "id": 3, "value": 28, "label": 'Vest Violation', "color": 'orange' }
+#     ]
+
+# BarChart
+# data = {
+#         "name": ["Total Wells", "Total Active", "Total Down"],
+#         "value": [45, 30, 15],
+#         "color": "green"
+#     }
+
+streamlit_slb_card(
+    title="Crew Health", 
+    titleTextAlign="left",
+    titleTextSize="25",
+    headerContent=f"<div><div style='font-size:14px;font-weight: bold'>Average Pulse Rate</div><div><span style='font-size:40px'>10</span> beats/min</div></div>",
+    showChart=True,    
+    chartType="LineChart", # Supported charts -> PieChart, BarChart, LineChart
+    chartTitle= "Violation Types",
+    chartData=[]
+)
+```
