@@ -1,0 +1,10 @@
+armcnc/__init__.py,sha256=aL7wgOMQQ9AjUk78Livtfh5-5182FJ15WIDXfL3jgc0,1874
+armcnc/packages/__init__.py,sha256=9WaGB-wz_PO-rpCAQNNleRgNr_D1zPFmzV8D_kQJdsE,765
+armcnc/packages/machine/__init__.py,sha256=VjvgnV0GPENJLdB6tmtfrwjpsaF6Fj01uFGvRRZYUto,686
+armcnc/packages/service/__init__.py,sha256=XRGOWxv9Q7fPVQ6lt5xiFxH3-en61NpFj1AjGkLVmlo,1889
+armcnc/utils/__init__.py,sha256=jvCLjTtmxEQa7udyfDBpAV_M_zf_lKNVjLFFCrFTCis,695
+armcnc/utils/loging/__init__.py,sha256=AgtYNKkFQHant-Ju0RJmso-hnTHKz0fzY7VpQHwGwso,2988
+armcnc-2.0.1.dist-info/METADATA,sha256=0OKtfoXEVCQ95AetiqDmm3_0Lp4RJzBdHKsJQucp5_Q,1000
+armcnc-2.0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+armcnc-2.0.1.dist-info/top_level.txt,sha256=snxsL1u8ontu6BIaUlbgWnlAh_x52vqM3V3RaDII-uI,7
+armcnc-2.0.1.dist-info/RECORD,,
