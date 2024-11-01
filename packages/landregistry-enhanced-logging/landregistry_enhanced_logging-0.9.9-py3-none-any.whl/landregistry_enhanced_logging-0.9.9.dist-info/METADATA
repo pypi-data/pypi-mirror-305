@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: landregistry-enhanced-logging
+Version: 0.9.9
+Summary: Standardised logging configuration for HMLR applications
+Author: Ian Harvey
+Author-email: ian.harvey@landregistry.gov.uk
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: flask
+Requires-Dist: flask >=2.2.0 ; extra == 'flask'
+Requires-Dist: landregistry-trace-id >=1.0.0 ; extra == 'flask'
+Provides-Extra: kombu
+Requires-Dist: kombu >=5.0.0 ; extra == 'kombu'
+
+# Enhanced Logging for HMLR Applications
+
+## Consistent logging for applications
+
+### Features
+* Filter that adds the current trace ID to each log record
+* Formatter to write each log message in a standard JSON format, compatible
+with the [common development environment](https://github.com/LandRegistry/common-dev-env) and STP standard logging configuration.
+* Includes the `content_security_policy` logger configuration for the skeleton UI
+
+This package *can* depend on one of:
+* Flask and Flask-LogConfig
+* Kombu
+
+You should include these dependencies in your `requirements.in` as <thing>, for example:
+
+```
+landregistry-enhanced-logging[flask]  # Depend on Flask
+landregistry-enhanced-logging[kombu]  # Depend on Kombu
+landregistry-enhanced-logging         # No dependencies
+```
+
+
+#### Flask applications
+Import `FlaskEnhancedLogging` and initialise it as a Flask extension:
+
+```python
+from landregistry.enhanced_logging import FlaskEnhancedLogging
+from <somewhere> import app
+
+enhanced_logging = FlaskEnhancedLogging()
+enhanced_logging.init_app(app)
+
+# Then just use the default Flask app logger:
+app.logger.info('This is a log message')
+```
+
+#### Kombu applications
+Import `KombuEnhancedLogging` and initialise it:
+
+```python
+from landregistry.enhanced_logging import KombuEnhancedLogging
+
+logger_ext = KombuEnhancedLogging()
+logger = logger_ext.get_logger()
+logger_ext.init(LOG_LEVEL, KOMBU_LOG_LEVEL)
+
+logger.info('This is a log message')
+```
+
+The `KombuEnhancedLogging` constructor takes an optional `app_module_name` parameter used to name the logger with a
+default value of `server`.
+
+
+#### Other applications
+Import `EnhancedLogging` and initialise it:
+
+```python
+from landregistry.enhanced_logging import EnhancedLogging
+
+extension = EnhancedLogging()
+logger = extension.logger
+extension.init(LOG_LEVEL)
+
+logger.info("This is a log message")
+```
