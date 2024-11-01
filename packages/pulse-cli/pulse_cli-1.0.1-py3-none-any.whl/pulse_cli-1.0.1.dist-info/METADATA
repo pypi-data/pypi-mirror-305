@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pulse-cli
+Version: 1.0.1
+Summary: A cross-platform CLI tool for managing the Pulse service
+Home-page: https://your-repository-url.com
+Author: Petrobench
+Author-email: support@petrobench.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Requires-Dist: requests
+
