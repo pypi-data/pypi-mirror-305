@@ -1,0 +1,13 @@
+pyappstoreconnect/__init__.py,sha256=MF64bwUCd4sm3dvcxZnkb4ujHtxT_KeuXdD0nVieEt4,27
+pyappstoreconnect/appAnalytics.py,sha256=mTIVEfvvfOmMZpW81sUF7_qbfie8FDVgtX14Enl1ljs,7981
+pyappstoreconnect/benchmarks.py,sha256=xQEl5SZUk8l8tdsRu6X4nuwXr4SDBv2XE25z0jeiVQM,3668
+pyappstoreconnect/client.py,sha256=z0i05Euiazklz70U8A6TFZxvqNP8dGj9IMMuZzOQNok,16231
+pyappstoreconnect/metricsWithFilter.py,sha256=HStcjJKUWrdL3octtd2GN7cy4Lkr7GwXLa_IhVf_Wmo,3399
+pyappstoreconnect/metricsWithGroup.py,sha256=LLHYrqz507_N2dscoQWJFFAGjo8-jQz-SDRFZVmaFew,2599
+pyappstoreconnect/settings.py,sha256=G4urpxFi3EpcLa4iRxMHH3x-Mwj0qWbkMv114vvYY_A,763
+pyappstoreconnect/timeSeriesAnalytics.py,sha256=Gmpw2WJCw6fo_VUzEIjgZ-6INfSW1AB0BP3m4fLomgw,1795
+pyappstoreconnect-2.0.0.dist-info/LICENSE,sha256=gV2SngSNYhRbuQ4A7tMQqOFKBjJoYK-VdgpM0ffi0dw,1071
+pyappstoreconnect-2.0.0.dist-info/METADATA,sha256=RtfAs5nm0EkxZCwMie3TCxIryuAuEWFMfnro_C8YygE,2146
+pyappstoreconnect-2.0.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+pyappstoreconnect-2.0.0.dist-info/top_level.txt,sha256=H6gZ8RwzprdNVvbAYZXAGDhUJUy7okp5Sx_AfLFtU_8,18
+pyappstoreconnect-2.0.0.dist-info/RECORD,,
