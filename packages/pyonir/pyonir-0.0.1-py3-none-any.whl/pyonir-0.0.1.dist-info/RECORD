@@ -1,0 +1,9 @@
+pyonir/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyonir/cli.py,sha256=-v8vnlKNp1wuU_CU5ex88E_pNYgUiqMgYk3dV1_C6iM,63
+pyonir/main.py,sha256=-v8vnlKNp1wuU_CU5ex88E_pNYgUiqMgYk3dV1_C6iM,63
+pyonir-0.0.1.dist-info/LICENSE.md,sha256=n_EMcK2o7D_lg6xW-eAbwdweJ8FzQqeyMcWC8abHkKk,1517
+pyonir-0.0.1.dist-info/METADATA,sha256=eiRD482Dv-52n2-FRfvBldZgL-XYCXzIhNgbA9P6Icg,218
+pyonir-0.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+pyonir-0.0.1.dist-info/entry_points.txt,sha256=iCZJnsyIbEAa8RAAIs4WbG9WIoxCssaDHJ1KNQ0TQq0,48
+pyonir-0.0.1.dist-info/top_level.txt,sha256=1ztTr6BM4piLXVV6gCG-LokUsl90IKkCq8uQuMG0lCo,7
+pyonir-0.0.1.dist-info/RECORD,,
