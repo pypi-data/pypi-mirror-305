@@ -1,0 +1,3 @@
+[commitizen.plugin]
+cz_ru=cz_ru:CzRu
+
