@@ -1,0 +1,2 @@
+[flake8.extension]
+L001 = flake8_linenumber:LineNumberPlugin
