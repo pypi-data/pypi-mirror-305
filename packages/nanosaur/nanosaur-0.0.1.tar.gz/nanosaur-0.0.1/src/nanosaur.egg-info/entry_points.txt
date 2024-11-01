@@ -1,0 +1,2 @@
+[console_scripts]
+nanosaur = nanosaur.main:main
