@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: electrox
+Version: 1.0.0
+Summary: Electrox is a Python framework for 2D game development with Gen Z vibes
+Author: Hussain Luai
+Author-email: hxolotl15@gmail.com
+License-File: LICENSE
+Requires-Dist: tkinter
