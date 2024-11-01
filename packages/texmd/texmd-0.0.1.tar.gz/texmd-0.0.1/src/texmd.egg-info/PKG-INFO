@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: texmd
+Version: 0.0.1
+Summary: A simple library that translates LaTeX to Markdown.
+Home-page: https://github.com/Alphaharrius/texmd
+Author: Alphaharrius
+Author-email: me@alphaharrius.cc
+License: Apache-2.0
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic
+Requires-Dist: pylatexenc
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# texmd
+A small library that converts LaTeX to Markdown.

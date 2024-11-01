@@ -1,0 +1,6 @@
+pydantic
+pylatexenc
+
+[dev]
+pytest
+twine

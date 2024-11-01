@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/texmd/__init__.py
+src/texmd/md.py
+src/texmd/texmd.py
+src/texmd.egg-info/PKG-INFO
+src/texmd.egg-info/SOURCES.txt
+src/texmd.egg-info/dependency_links.txt
+src/texmd.egg-info/requires.txt
+src/texmd.egg-info/top_level.txt
