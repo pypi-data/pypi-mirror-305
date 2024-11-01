@@ -1,0 +1,14 @@
+[project]
+name = "doxyzpycore"
+version = "0.0.1"
+description = "doxyz组织下的py核心库"
+requires-python = ">=3.11"
+readme = "README.md"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool]
