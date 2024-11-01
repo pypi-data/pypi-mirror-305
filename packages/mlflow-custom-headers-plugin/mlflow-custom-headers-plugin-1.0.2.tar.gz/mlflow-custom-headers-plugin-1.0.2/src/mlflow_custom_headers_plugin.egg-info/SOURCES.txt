@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/mlflow_custom_headers_plugin/__init__.py
+src/mlflow_custom_headers_plugin/headers.py
+src/mlflow_custom_headers_plugin.egg-info/PKG-INFO
+src/mlflow_custom_headers_plugin.egg-info/SOURCES.txt
+src/mlflow_custom_headers_plugin.egg-info/dependency_links.txt
+src/mlflow_custom_headers_plugin.egg-info/entry_points.txt
+src/mlflow_custom_headers_plugin.egg-info/requires.txt
+src/mlflow_custom_headers_plugin.egg-info/top_level.txt
