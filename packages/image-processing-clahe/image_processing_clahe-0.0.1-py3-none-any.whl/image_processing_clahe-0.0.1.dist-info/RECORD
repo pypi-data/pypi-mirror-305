@@ -1,0 +1,7 @@
+image_processing_clahe/__init__.py,sha256=xqlGLSSl3nrW2b8304RhnX--ZvEx0wZuNrcCozqxVMk,109
+image_processing_clahe/algoritmo.py,sha256=GR3TV2Itr1cHfG5FWKYanbN1-JliwvQ0Xx1knd6hVns,1052
+image_processing_clahe/image_processing.py,sha256=FNhb-cu0vYjwvtJsBd6CVIMeSPZZ4HTaZwcQF44zmcE,1034
+image_processing_clahe-0.0.1.dist-info/METADATA,sha256=qfbklboxxjIDEPwCFYqQ7xbFbLdomyX49ohnplZg604,1111
+image_processing_clahe-0.0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+image_processing_clahe-0.0.1.dist-info/top_level.txt,sha256=0k2VmORFf_uf93A58h0dwqAnlWsWyvh2qSsNDJUtYxw,23
+image_processing_clahe-0.0.1.dist-info/RECORD,,
