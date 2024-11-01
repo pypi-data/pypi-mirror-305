@@ -1,0 +1,13 @@
+furion.egg-info/
+furion.cfg
+furion.log
+upstream.json
+build/
+dist/
+*.pyc
+.DS_Store
+.idea/
+*.bak
+*.orig
+.python-version
+.pdm-python
