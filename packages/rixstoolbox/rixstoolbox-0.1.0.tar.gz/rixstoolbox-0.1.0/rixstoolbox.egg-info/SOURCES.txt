@@ -1,0 +1,9 @@
+README.md
+setup.py
+rixstoolbox/__init__.py
+rixstoolbox/math.py
+rixstoolbox.egg-info/PKG-INFO
+rixstoolbox.egg-info/SOURCES.txt
+rixstoolbox.egg-info/dependency_links.txt
+rixstoolbox.egg-info/requires.txt
+rixstoolbox.egg-info/top_level.txt
