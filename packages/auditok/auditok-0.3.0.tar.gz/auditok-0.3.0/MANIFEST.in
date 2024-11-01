@@ -1,0 +1,9 @@
+include setup.py
+include LICENSE
+include CHANGELOG
+include INSTALL
+include README.rst
+recursive-include auditok/data *
+recursive-include tests *
+include doc/figures/auditok-logo.png
+include doc/figures/example_1.png
