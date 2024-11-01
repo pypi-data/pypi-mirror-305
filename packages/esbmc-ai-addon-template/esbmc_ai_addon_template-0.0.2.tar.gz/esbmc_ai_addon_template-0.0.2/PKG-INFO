@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: esbmc_ai_addon_template
+Version: 0.0.2
+Summary: Addon template project for ESBMC-AI.
+Project-URL: Homepage, https://github.com/Yiannis128/esbmc_ai_addon_template
+Project-URL: Source Code, https://github.com/Yiannis128/esbmc_ai_addon_template
+Project-URL: Documentation, https://github.com/Yiannis128/esbmc_ai_addon_template/wiki
+Project-URL: Issues, https://github.com/Yiannis128/esbmc_ai_addon_template/issues
+Author-email: Yiannis Charalambous <yiannis128@hotmail.com>
+License-File: LICENSE
+Keywords: AI,LLM,addon,automated code repair,esbmc
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# ESBMC-AI Addon Template
+
+Template for creating ESBMC-AI addons.
+
+## Setup
+
+Simply build the package and install it to your environment. Then in ESBMC-AI's
+config file add the module to load. In this case the following field will be
+needed:
+
+```toml
+addon_modules = ["esbmc_ai_addon_template"]
+```
+
+Make sure that the ChatCommand is exposed using __all__ in the __init__.py file.
