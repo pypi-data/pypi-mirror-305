@@ -1,0 +1,14 @@
+libdata/__init__.py,sha256=jp5FGyrgSJiqwNBRPC7BTXI6uYpKworMBsZPgmYBbrg,228
+libdata/common.py,sha256=49RfV-MVq7unQH_EVzpQ_XU14k_Q2O3HbZ2LiUZKNm0,4361
+libdata/json.py,sha256=W62Unu6f9Px0WcexgY46fwpbF-UVzfkwqTNBJf8qhlE,1459
+libdata/json_dir.py,sha256=jXEqlNWGqRpAJ7Daw3aa-_A8ZehKUwm7_xRGmTRWMrE,3619
+libdata/jsonl.py,sha256=-uhF2ZEUWZqbabzaF_u0xFei63Xt39Q3YCzRBdKYzik,2635
+libdata/mongodb.py,sha256=KI-zpRm2pItKYzGwtHm1GesCmCXnPbOCMzVpWfORzNc,6060
+libdata/mysql.py,sha256=zWFzPGiwkiztfJTTNsiB2ujymWzpedtyhaoyqpbKCy0,6629
+libdata/yaml_dir.py,sha256=iDPDiY-jeDUyGvDyZX0gbTsiNmVDULiQ_I7x9z19LJk,3797
+libdata-0.2.dist-info/LICENSE,sha256=qEC6dl8x2u4d9pz5uPGxG_dUvDAJY3LbHJBSpv4P278,1070
+libdata-0.2.dist-info/METADATA,sha256=g4IVDaNCWaLX0FU03pw_DTtFNG9dn__-XvRS5N2YbZ0,426
+libdata-0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+libdata-0.2.dist-info/top_level.txt,sha256=OE00tgLPwPonNxa4JrERDoFmsURwhMbaw8ykT783d-o,8
+libdata-0.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+libdata-0.2.dist-info/RECORD,,
