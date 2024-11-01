@@ -1,0 +1,2 @@
+[console_scripts]
+pycasino = casino.pycasino:main
