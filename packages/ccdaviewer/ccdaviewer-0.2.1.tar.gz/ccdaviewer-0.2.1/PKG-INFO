@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ccdaviewer
+Version: 0.2.1
+Summary: This is the python client to the API hosted by https://www.ccdaviewer.com
+Home-page: https://github.com/tanaka-chiromo/ccdaviewer
+Download-URL: https://github.com/tanaka-chiromo/ccdaviewer/archive/refs/tags/v_021.tar.gz
+Author: Tanaka Chiromo
+Author-email: tanakachiromo@gmail.com
+License: MIT
+Keywords: ccdaviewer,API,Client
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
