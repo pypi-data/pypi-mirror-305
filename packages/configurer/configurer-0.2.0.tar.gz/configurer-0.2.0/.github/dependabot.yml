@@ -1,0 +1,53 @@
+# .github/dependabot.yml
+version: 2
+updates:
+  # Python packages
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+    target-branch: "development"
+    labels:
+      - "dependencies"
+      - "python"
+    commit-message:
+      prefix: "⬆️ "
+      include: "scope"
+    # Configure pull request limits
+    open-pull-requests-limit: 10
+    # Group dependencies updates
+    groups:
+      # Group all test dependencies together
+      test-dependencies:
+        patterns:
+          - "pytest*"
+          - "coverage"
+          - "pytest-cov"
+      # Group all production dependencies together
+      production-dependencies:
+        patterns:
+          - "pyyaml"
+          - "typing-extensions"
+    # Ignore certain dependencies or versions if needed
+    # ignore:
+    #   - dependency-name: "some-package"
+    #     versions: [">=4.0.0"]
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+    target-branch: "development"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "⬆️ "
+      include: "scope"
