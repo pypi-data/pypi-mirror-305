@@ -1,0 +1,16 @@
+biopython
+biotite
+einops
+gemmi
+mrcfile
+starfile
+wandb
+torch
+tqdm
+matplotlib
+numpy
+scipy
+PyYAML
+pandas
+seaborn
+scikit-learn
