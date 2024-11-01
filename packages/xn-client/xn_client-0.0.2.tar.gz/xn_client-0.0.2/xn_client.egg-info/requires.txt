@@ -1,0 +1,7 @@
+aiohttp
+
+[dev]
+build
+pytest-asyncio
+python-dotenv
+twine
