@@ -1,0 +1,1 @@
+p6_cdk_s3_protector
