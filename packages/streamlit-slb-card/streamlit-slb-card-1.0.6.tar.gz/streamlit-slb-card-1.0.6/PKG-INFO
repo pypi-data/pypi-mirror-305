@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: streamlit-slb-card
+Version: 1.0.6
+Summary: Streamlit component that allows to create custom card content for streamlit dashboard
+Home-page: 
+Author: Sharizan Redzuan
+Author-email: sredzuan@slb.com
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Provides-Extra: devel
+License-File: LICENSE
+
+# streamlit-slb-card
+
+Streamlit component that allows to create custom card content for streamlit dashboard
+
+## Installation instructions
+
+```sh
+pip install streamlit-slb-card
+```
+
+## Usage instructions
+
+```python
+import streamlit as st
+
+from streamlit_slb_card import streamlit_slb_card
+
+streamlit_slb_card(
+    title="Crew Health", 
+    titleTextAlign="left",
+    titleTextSize="25",
+    headerContent=f"<div><div style='font-size:14px;font-weight: bold'>Average Pulse Rate</div><div><span style='font-size:40px'>10</span> beats/min</div></div>",
+    showChart=True,    
+    chartType="LineChart", # Supported charts -> PieChart, BarChart, LineChart
+    chartTitle= "Violation Types",
+    chartData=[]
+)
+```
