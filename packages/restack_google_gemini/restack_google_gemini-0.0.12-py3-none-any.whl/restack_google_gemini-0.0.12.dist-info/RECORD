@@ -1,0 +1,14 @@
+restack_google_gemini/__init__.py,sha256=ASjtysqoy9pD8CC9va76cIKYbGIdzLsw4QVxovGxZkg,850
+restack_google_gemini/functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restack_google_gemini/functions/chat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restack_google_gemini/functions/chat/get_history.py,sha256=D9Hdcgz1FylBzdEMCl93lb6NSqK1KAfu2mCWvpAk6jQ,220
+restack_google_gemini/functions/chat/send_message.py,sha256=Yesf9sAIWWhU5UBKRMn_Fx-5ThZpgLQpDuLXjLdBrtw,272
+restack_google_gemini/functions/chat/start_chat.py,sha256=stVba7GdEOBUOQsp3aGLlj5rD7BnTQBfwJzQZrtfSh8,649
+restack_google_gemini/functions/generate_content.py,sha256=tVVlVEKatlVyDg0EvaezPbWUY4Zg8C2VTDSaDvltN54,602
+restack_google_gemini/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restack_google_gemini/service.py,sha256=LKhwLLEykDr119w5tDghAxvijGenZz4kOBhJr3Pq2Dc,821
+restack_google_gemini/task_queue.py,sha256=tMpa6_1x14Tf6IpMt7kS-mVVzMA11HBwKB8e8QYig_0,28
+restack_google_gemini/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restack_google_gemini-0.0.12.dist-info/METADATA,sha256=lDo-4iHmeU2kENqK9_FSIfoL-WnzG4BwHoTO224kYLA,718
+restack_google_gemini-0.0.12.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+restack_google_gemini-0.0.12.dist-info/RECORD,,
