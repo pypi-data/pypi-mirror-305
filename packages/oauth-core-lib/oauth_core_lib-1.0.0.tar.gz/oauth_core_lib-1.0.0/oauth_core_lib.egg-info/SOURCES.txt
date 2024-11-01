@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+core/__init__.py
+core/oauth/__init__.py
+core/oauth/apple.py
+core/oauth/google.py
+core/oauth/secrets.py
+oauth_core_lib.egg-info/PKG-INFO
+oauth_core_lib.egg-info/SOURCES.txt
+oauth_core_lib.egg-info/dependency_links.txt
+oauth_core_lib.egg-info/requires.txt
+oauth_core_lib.egg-info/top_level.txt
