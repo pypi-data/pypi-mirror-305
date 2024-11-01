@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: pynite-plotly
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Connor Ferster <connor@structuralpython.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: ipykernel>=6.29.5
+Requires-Dist: plotly-3d-primitives>=0.2.0
+
+
