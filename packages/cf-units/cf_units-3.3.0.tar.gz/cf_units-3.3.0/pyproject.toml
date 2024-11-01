@@ -1,0 +1,166 @@
+[build-system]
+# Defined by PEP 518
+requires = [
+  "setuptools>=45",
+  "setuptools_scm[toml]>=7.0",
+  "wheel",
+  "numpy",
+  "Cython>=3.0",
+]
+# Defined by PEP 517
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cf-units"
+authors = [
+    {name = "cf-units Contributors", email = "scitools.pub@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Topic :: Scientific/Engineering :: Oceanography",
+]
+dependencies = [
+    "cftime >=1.2",
+    "jinja2",
+    "numpy"
+    # udunits2 cannot be installed with pip, and it is expected to be
+    #  installed separately.
+]
+description = "Units of measure as required by the Climate and Forecast (CF) metadata conventions"
+dynamic = [
+    "version",
+]
+keywords = [
+    "units",
+    "cf",
+    "cf-metadata",
+    "netcdf",
+    "science",
+    "earth-science",
+    "oceanography",
+    "meteorology",
+    "climate",
+    "python",
+]
+license.file = "LICENSE"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+all = ["cf-units[docs,test]"]
+docs = ["sphinx"]
+test = ["codecov", "cython", "jinja2", "pip", "pytest", "pytest-cov"]
+
+[project.urls]
+Code = "https://github.com/SciTools/cf-units"
+Discussions = "https://github.com/SciTools/cf-units/discussions"
+Issues = "https://github.com/SciTools/cf-units/issues"
+Documentation = "https://cf-units.readthedocs.io"
+
+[tool.coverage.run]
+branch = true
+plugins = [
+    "Cython.Coverage"
+]
+include = [
+    "cf_units/*"
+]
+omit = [
+    "setup.py",
+    "cf_units/_version.py",
+    "cf_units/etc/*",
+    "cf_units/tests/*",
+    "cf_units/_udunits2_parser/parser/*",
+    "cf_units/_udunits2_parser/compile.py",
+    ".eggs"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if __name__ == .__main__.:"
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra -v --doctest-modules"
+doctest_optionflags = "NORMALIZE_WHITESPACE ELLIPSIS NUMBER"
+minversion = "6.0"
+testpaths = "cf_units"
+
+[tool.setuptools.packages.find]
+include = ["cf_units"]
+
+[tool.setuptools_scm]
+write_to = "cf_units/_version.py"
+local_scheme = "dirty-tag"
+
+[tool.ruff]
+# Ignore generated code.
+exclude = [
+    "cf_units/_udunits2_parser/parser",
+    "cf_units/_udunits2_parser/_antlr4_runtime",
+]
+line-length = 79
+
+[tool.ruff.lint]
+select = [
+    # pyflakes
+    "F",
+    # pycodestyle
+    "E",
+    "W",
+    # flake8-bugbear
+    "B",
+    # flake8-comprehensions
+    "C4",
+    # isort
+    "I",
+    # pyupgrade
+    "UP",
+]
+ignore = ["B904", "F403", "F405"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["cf_units"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 22
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.repo-review]
+# These are a list of the currently failing tests:
+ignore = [
+  "PY005",  # Has tests folder
+  "PP003",  # Does not list wheel as a build-dep
+  "PP304",  # Sets the log level in pytest
+  "PP305",  # Specifies xfail_strict
+  "PP306",  # Specifies strict config
+  "PP307",  # Specifies strict markers
+  "PP309",  # Filter warnings specified
+  "GH104",  # Use unique names for upload-artifact
+  "GH212",  # Require GHA update grouping
+  "PC110",  # Uses black or ruff-format
+  "PC140",  # Uses a type checker
+  "PC160",  # Uses a spell checker
+  "PC170",  # Uses PyGrep hooks (only needed if rST present)
+  "PC180",  # Uses a markdown formatter
+  "PC190",  # Uses Ruff
+  "PC901",  # Custom pre-commit CI message
+  "MY100",  # Uses MyPy (pyproject config)
+  "RF001",  # Uses RUFF
+]

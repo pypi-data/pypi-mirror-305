@@ -1,0 +1,17 @@
+cftime>=1.2
+jinja2
+numpy
+
+[all]
+cf-units[docs,test]
+
+[docs]
+sphinx
+
+[test]
+codecov
+cython
+jinja2
+pip
+pytest
+pytest-cov
