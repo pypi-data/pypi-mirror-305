@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: rpegment
+Version: 1.0.0
+Summary: 
+Author: Hoseyn Amiri
+Author-email: aamirihoseyn@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: cellpose (>=3.0.11,<4.0.0)
+Requires-Dist: czifile (>=2019.7.2,<2020.0.0)
+Requires-Dist: dash (>=2.18.1,<3.0.0)
+Requires-Dist: dash-bootstrap-components (>=1.6.0,<2.0.0)
+Requires-Dist: feret (>=1.3.1,<2.0.0)
+Requires-Dist: matplotlib (>=3.9.2,<4.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: scikit-image (>=0.24.0,<0.25.0)
+Description-Content-Type: text/markdown
+
+
