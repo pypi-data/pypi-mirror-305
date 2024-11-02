@@ -1,0 +1,12 @@
+orgmunge/Untitled Document,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+orgmunge/__init__.py,sha256=Ze55Z8DvWE_YpIgDpAWubvZfarcxD31emk0XfwaMd88,9200
+orgmunge/classes.py,sha256=KlduWnZ5of5GG-rLQC3R0nVc_tMpK1H4HdKIO6ffpnw,31481
+orgmunge/lexer.py,sha256=wjll4SYtmkzSlwrx9ZqsLqpRK3GkNZ8XT7ZVTJeiwMg,2802
+orgmunge/parser.out,sha256=qQFraqZHR4ka5SLUFqbd2BcftAvqdciReeRsJRKmJXU,91421
+orgmunge/parser.py,sha256=ebGuyAzN0eOpN2FQ80-NqQmNJrSxYPGD6o8XlDY3bWE,6845
+orgmunge/parsetab.py,sha256=_KB2Ua6N1EY2h1mzTz-o2RzHQmzNi4_by_4qfzAFZRc,17665
+orgmunge/todos.json,sha256=7XsB07y2bLLWjxJOLBtq2C6LbQvQcGxiRO75i0Rb7J8,180
+orgmunge-0.2.3.dist-info/LICENSE,sha256=Dqse-0McjTOIiAj0BRAt0MygqNJ6YJ2y7BA3pAknC24,1077
+orgmunge-0.2.3.dist-info/METADATA,sha256=3YUy_8E5pRDyrqCzdH3ICx0wSDYJt9R8fdo5Xk5pIJw,16826
+orgmunge-0.2.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+orgmunge-0.2.3.dist-info/RECORD,,
