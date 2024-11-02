@@ -1,0 +1,3 @@
+[console_scripts]
+translation-util=src.cli:main
+
