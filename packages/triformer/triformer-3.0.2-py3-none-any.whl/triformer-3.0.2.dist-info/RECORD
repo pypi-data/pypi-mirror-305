@@ -1,0 +1,11 @@
+triformer/__init__.py,sha256=1fbQL-VuE84kfob_JudV8k91DQ5ECFMAocf4KpbJDY0,113
+triformer/dropout.py,sha256=0Co9ItDYUAPHLBplEO01BiwHrz1egLGH1v3zEGqQpb0,1948
+triformer/layernorm.py,sha256=uEK5K6uv_twkaHfz9gAQvgAWp5s2r7l4hBbRwgJF1O8,4109
+triformer/softmax.py,sha256=FQPhdYEiJ1DTnkdzQfHEAIHhkABLu1eYjXnT0z258h0,4152
+triformer/transformer.py,sha256=YgPPfZ_8Y5QT4QMiQ8mJf4tJNH4Rhb56_R_NiZTKJDI,3128
+triformer/utils.py,sha256=VcRG6yiB5ojAcIGKg4IGZf56g6-GXRySvBdixew5l74,595
+triformer-3.0.2.dist-info/LICENSE,sha256=MQRCPqgBRepywI0FMfOA5le0tMOnoHESnuKKGSr3xTM,1105
+triformer-3.0.2.dist-info/METADATA,sha256=5jmuU7aNy6nWitkNoTwBYru_XwSMjIOH3cqxTAme1ds,729
+triformer-3.0.2.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+triformer-3.0.2.dist-info/top_level.txt,sha256=EWrZ_hXn0kwlcSItwYlZFsIiZrrme4_r7NFG7eDOL6A,10
+triformer-3.0.2.dist-info/RECORD,,
