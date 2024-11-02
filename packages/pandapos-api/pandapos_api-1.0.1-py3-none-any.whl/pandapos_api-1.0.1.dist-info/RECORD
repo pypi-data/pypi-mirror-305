@@ -1,0 +1,10 @@
+panda_pos_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+panda_pos_api/graphql_query_builder.py,sha256=U6b1f7mZiJTPSwP57Ocl6p5PintO9nQiCWBSOqGjEcE,1536
+panda_pos_api/main.py,sha256=LtM7OcE1k8fC43nsBwN_NfocWS1wjyd-kzcutxV4zqY,13837
+panda_pos_api/models/Product.py,sha256=AhEKLXlz7Jfti8_uOEXzI4QgGSIppKsOHDpFFQuU7iE,349
+panda_pos_api/models/Ticket.py,sha256=uEb9tWPqzrhYOTO-eBnSxvdDZ79VoRG4-PRik5iogiU,1586
+panda_pos_api/models/__init__.py,sha256=YeUOvwWMt_DFp2iuFMfijc9AlqFwL8wbV6aQnhQeyx4,45
+pandapos_api-1.0.1.dist-info/METADATA,sha256=swqDjTd9Cu-eMwlgYN-vxtQStZpl05ugx_ZL-ZsMeOk,131
+pandapos_api-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pandapos_api-1.0.1.dist-info/top_level.txt,sha256=WZeMgFiTeAagXYNZ0C9HsND0MqS5qRaqjcVuLIRXHBQ,14
+pandapos_api-1.0.1.dist-info/RECORD,,
