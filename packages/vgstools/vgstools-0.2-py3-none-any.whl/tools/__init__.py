@@ -1,0 +1,1 @@
+from .videregaande import validate_password, decrypt, decrypt_words, load_words
