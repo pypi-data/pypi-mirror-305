@@ -1,0 +1,6 @@
+[console_scripts]
+create_project = researchit_program_project_creation.project_creation:cli
+hello_world = researchit_program_project_creation.hello_world:cli
+
+[nbdev]
+researchit_program_project_creation = researchit_program_project_creation._modidx:d
