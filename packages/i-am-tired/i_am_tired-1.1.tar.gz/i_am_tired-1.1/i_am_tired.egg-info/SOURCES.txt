@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+i_am_tired.egg-info/PKG-INFO
+i_am_tired.egg-info/SOURCES.txt
+i_am_tired.egg-info/dependency_links.txt
+i_am_tired.egg-info/requires.txt
+i_am_tired.egg-info/top_level.txt

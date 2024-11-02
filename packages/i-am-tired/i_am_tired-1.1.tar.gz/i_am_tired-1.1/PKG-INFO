@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: i-am-tired
+Version: 1.1
+Summary: моя домашка
+Author: kirill
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.19.2
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2.1; extra == "dev"
+Requires-Dist: flake8>=3.8.4; extra == "dev"
+
+**Описание:**
+
+это мое дз на шестую неделю по черному питону
