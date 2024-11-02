@@ -1,0 +1,9 @@
+socket_cyg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+socket_cyg/example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+socket_cyg/example/client_example.py,sha256=_IWTTEg9KLw7LczAZfLjDa5iYFYrlTL-5n87B5t5Lxo,194
+socket_cyg/example/server_example.py,sha256=wbSpWTGS1_8igvkLxq9FA9dfSIvmdIajLLaxi5XbRBQ,226
+socket_cyg/socket_client.py,sha256=Q5mZV920mKQmSL0bqwvh2joqq1-viVt2ARM3e-J8dXE,4054
+socket_cyg/socket_server_asyncio.py,sha256=XG35ikXid0obXlZ71S2kPvKhYoCDJkuHCj0kX_ggD44,6082
+socket_cyg-0.1.3.dist-info/METADATA,sha256=l5Qbus0IaBkmzjwt9ulrBtVhsuuQ3rPJRrahkfLM6eg,577
+socket_cyg-0.1.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+socket_cyg-0.1.3.dist-info/RECORD,,
