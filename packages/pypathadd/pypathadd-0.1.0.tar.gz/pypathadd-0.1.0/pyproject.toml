@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools >= 40.9.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pypathadd"
+version = "0.1.0"
+authors = [{ name = "Simon Walser" }]
+description = "A function to append all folders and subfolders of the root directory to the Python path."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+# Optional: Add dependencies here
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/AIGR-sw/pypathadd"
+"Source" = "https://github.com/AIGR-sw/pypathadd"
+"Tracker" = "https://github.com/AIGR-sw/pypathadd/issues"

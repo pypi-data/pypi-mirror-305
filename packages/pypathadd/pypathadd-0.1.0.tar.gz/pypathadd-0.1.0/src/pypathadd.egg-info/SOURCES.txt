@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pypathadd/__init__.py
+src/pypathadd/pypathadd.py
+src/pypathadd.egg-info/PKG-INFO
+src/pypathadd.egg-info/SOURCES.txt
+src/pypathadd.egg-info/dependency_links.txt
+src/pypathadd.egg-info/top_level.txt
+tests/test_pypathadd.py
