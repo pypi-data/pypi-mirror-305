@@ -1,0 +1,9 @@
+numpy
+pandas
+torch
+transformers
+matplotlib
+tqdm
+joblib
+scikit-learn
+jugaad-trader
