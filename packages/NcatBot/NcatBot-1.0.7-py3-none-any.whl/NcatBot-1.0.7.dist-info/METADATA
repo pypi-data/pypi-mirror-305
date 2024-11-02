@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: NcatBot
+Version: 1.0.7
+Summary: 基于NapCat开发的PythonSDK
+Home-page: 
+Author: 吃点李子
+Author-email: 2793415379@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: websocket-client
+Requires-Dist: colorama
+Requires-Dist: tqdm
+Requires-Dist: python-box
+Requires-Dist: json
+Requires-Dist: PYyaml
+
+基于NapCat开发的PythonSDK
