@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+src/compare/__init__.py
+src/compare/core/__init__.py
+src/compare/core/compare_face.py
+src/compare/services/__init__.py
+src/compare/services/base_service.py
+src/compare/services/detection_service.py
+src/compare/services/recognition_service.py
+src/compare/services/server_api_list.py
+src/compare/services/verification_service.py
+src/compreface_sdk_python.egg-info/PKG-INFO
+src/compreface_sdk_python.egg-info/SOURCES.txt
+src/compreface_sdk_python.egg-info/dependency_links.txt
+src/compreface_sdk_python.egg-info/requires.txt
+src/compreface_sdk_python.egg-info/top_level.txt
