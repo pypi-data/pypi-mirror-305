@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+s3nosqldb/__init__.py
+s3nosqldb/core.py
+s3nosqldb/exceptions.py
+s3nosqldb.egg-info/PKG-INFO
+s3nosqldb.egg-info/SOURCES.txt
+s3nosqldb.egg-info/dependency_links.txt
+s3nosqldb.egg-info/requires.txt
+s3nosqldb.egg-info/top_level.txt
+tests/test_core.py
