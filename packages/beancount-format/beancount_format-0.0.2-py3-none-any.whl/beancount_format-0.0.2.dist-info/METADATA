@@ -1,0 +1,41 @@
+Metadata-Version: 2.3
+Name: beancount-format
+Version: 0.0.2
+Summary: Typed rtorrent rpc client
+Keywords: rtorrent,rpc
+Author-email: trim21 <trim21me@gmail.com>
+Requires-Python: ~=3.9
+Description-Content-Type: text/markdown
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: beancount-parser==1.2.3
+Requires-Dist: click~=8.0
+Requires-Dist: pytest==8.3.2 ; extra == "dev"
+Requires-Dist: pytest-github-actions-annotate-failures==0.2.0 ; extra == "dev"
+Requires-Dist: coverage==7.6.1 ; extra == "dev"
+Requires-Dist: pre-commit==3.8.0 ; extra == "dev" and ( python_version >= "3.9")
+Requires-Dist: mypy==1.13.0 ; extra == "dev" and ( python_version >= "3.9")
+Project-URL: Homepage, https://github.com/trim21/beancount-format
+Provides-Extra: dev
+
+format beancount
+
+# install
+
+```shell
+pip install beancount-format
+
+beancount-format ./beans/
+```
+
+as pre-commit hooks
+
+```yaml
+repos:
+  - repo: https://github.com/trim21/beancount-format
+    rev: 801ab26
+    hooks:
+      - id: beancount-format
+```
