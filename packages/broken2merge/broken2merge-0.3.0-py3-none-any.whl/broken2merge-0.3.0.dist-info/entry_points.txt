@@ -1,0 +1,3 @@
+[console_scripts]
+broken2merge=broken2merge.__main__:main
+
