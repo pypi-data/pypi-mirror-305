@@ -1,0 +1,14 @@
+oasisx/__init__.py,sha256=J5M6coVNNHsJpRt6ssWIUbnPcfIBTIFcHGSuN5HG2KY,364
+oasisx/__main__.py,sha256=aB9cxRhVnf1XJ0er2TZTwHCofUSek3f3vjc6wRIOfCw,207
+oasisx/bcs.py,sha256=t5VSY-QMdLe9bnRiHSzjKGt6bBrBWb60HEmj7AHXb5k,9213
+oasisx/fracstep.py,sha256=z0jB0IY6ndgfSif2NJxjxQZbw_fSalrT_6AjsO_vj-g,28574
+oasisx/function.py,sha256=HeRotHilFRDapAHUxi2HjIpeBMwdy28bynnCbFss7SU,5007
+oasisx/ksp.py,sha256=ZTB7zYtZmrPEEEmFmd5FFFH1i2TJwMeI5PwTcJDWtxk,2778
+oasisx/main.py,sha256=1YuEMJg8J1kQ2myGxqxwmN6r6nCgPwQMgm_j6B_ThW4,761
+oasisx/mesh.py,sha256=ADvy-tCglDMAdcXJYAewVH1SdzDV_iD3lT6jptC_wkc,321
+OasisX-1.2.0.dist-info/LICENSE,sha256=LlXDcriDPIKtm5LRZ9mD1as_NdtSlanSVp7XXZHc8Q0,1080
+OasisX-1.2.0.dist-info/METADATA,sha256=904JKVqHEjbClC7fVtfYQvBxMLa9ypiNLiDZ7xSCdO8,3139
+OasisX-1.2.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+OasisX-1.2.0.dist-info/entry_points.txt,sha256=jsHK17KUicwkefDlfuBoCZci6KBoMLGii4R23c2OWRk,48
+OasisX-1.2.0.dist-info/top_level.txt,sha256=MCxHWpizcrmznPYpV0K2CZgYUE3CcS2r3QDhW8MkT6E,7
+OasisX-1.2.0.dist-info/RECORD,,
