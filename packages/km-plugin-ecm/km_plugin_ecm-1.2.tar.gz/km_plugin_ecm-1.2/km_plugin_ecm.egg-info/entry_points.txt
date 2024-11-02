@@ -1,0 +1,2 @@
+[knowledge_management_plugin]
+ECM = km_plugin_ecm.ecm_api:EcmApi
