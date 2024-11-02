@@ -1,0 +1,2 @@
+[console_scripts]
+imapdedup = imapdedup.imapdedup:main
