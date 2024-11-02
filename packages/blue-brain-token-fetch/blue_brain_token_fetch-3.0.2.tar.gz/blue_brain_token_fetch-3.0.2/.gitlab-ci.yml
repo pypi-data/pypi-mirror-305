@@ -1,0 +1,48 @@
+include:
+  - project: dke/apps/templates/job-templates
+    file: job-templates.yml
+  - project: nse/ci
+    file:
+      - /ci/lib/common.yml
+      - /ci/jobs/build-package.yml
+      - /ci/jobs/publish-package.yml
+
+default:
+  image: "python:3.8"
+
+stages:
+  - unit-test
+  - lint-check
+  - build
+  - publish
+
+build-package:
+  rules:
+    - when: on_success
+publish-package:
+  rules:
+    - if: $CI_COMMIT_TAG
+
+before_script:
+  - pip install .[dev]
+
+# overriding SRC_PROJECT and TEST_FOLDER in the unit_test job would not work,
+# the template job needs to be overriden to change the variables it has defined
+.unit-tests:
+  variables:
+    SRC_PROJECT: $CI_PROJECT_NAME
+    TEST_FOLDER: 'tests'
+
+unit_test:
+  stage: unit-test
+  extends: .unit-tests
+  variables:
+   EXTRA_ARGS: --service_username $SERVICE_USERNAME --service_password $SERVICE_PASSWORD --regular_username $REGULAR_USERNAME --regular_password $REGULAR_PASSWORD
+
+lint_check:
+  stage: lint-check
+  extends: .flake8
+  script:
+  - pycodestyle blue_brain_token_fetch tests --max-line-length 180
+  - pylint blue_brain_token_fetch tests --fail-under=5
+
