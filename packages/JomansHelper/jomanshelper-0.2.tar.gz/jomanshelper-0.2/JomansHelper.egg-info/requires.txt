@@ -1,0 +1,4 @@
+colorama
+psutil
+platform
+fake_useragent
