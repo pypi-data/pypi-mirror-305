@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: vengeance-currency-api
+Version: 0.1
+Summary: A RESTful API for currency symbols and codes for countries across the world.
+Home-page: https://github.com/preetham-1811/currency-api
+Author: Preetham Kamishetty
+Author-email: kamishettypreetham@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask
+
+# Currency API
+
+A RESTful API that provides currency symbols and codes for various countries.
+
+## Installation
+
+1. Clone the repository:
+   git clone https://github.com/preetham-1811/currency-api.git
+   cd currency-api
+
+2. Install the required dependencies:
+    pip install -r requirements.txt
+
+Usage
+
+To run the API, create an instance of CurrencyAPI and call the run method:
+
+from currency_api import CurrencyAPI
+
+api = CurrencyAPI()
+api.run()
+
+
+API Endpoints
+-GET /currency/<country>: Retrieve currency information for a specific country.
+-GET /currencies: Retrieve a list of all available currencies.
