@@ -1,0 +1,43 @@
+.dockerignore
+.gitignore
+Dockerfile
+Dockerfile-3.10
+Dockerfile-GPU
+LICENSE
+MANIFEST.in
+README.md
+main.py
+pyproject.toml
+.github/workflows/publish.yml
+examples/example.py
+reference_deployment/LICENSE
+reference_deployment/README.md
+reference_deployment/docker-compose.yml
+reference_deployment/cookiecutter_template/README.md
+reference_deployment/cookiecutter_template/cookiecutter.json
+reference_deployment/cookiecutter_template/requirements.txt
+reference_deployment/cookiecutter_template/serverkit-{{ cookiecutter.package }}/Dockerfile
+reference_deployment/cookiecutter_template/serverkit-{{ cookiecutter.package }}/README.md
+reference_deployment/cookiecutter_template/serverkit-{{ cookiecutter.package }}/main.py
+reference_deployment/cookiecutter_template/serverkit-{{ cookiecutter.package }}/requirements.txt
+reference_deployment/cookiecutter_template/serverkit-{{ cookiecutter.package }}/sample_images/blobs.tif
+reference_deployment/registry/Dockerfile
+reference_deployment/registry/main.py
+reference_deployment/servers/serverkit-skimage/Dockerfile
+reference_deployment/servers/serverkit-skimage/README.md
+reference_deployment/servers/serverkit-skimage/main.py
+reference_deployment/servers/serverkit-skimage/requirements.txt
+reference_deployment/servers/serverkit-skimage/sample_images/blobs.tif
+reference_deployment/servers/serverkit-skimage/tests/test_skimage.py
+src/imaging_server_kit/__init__.py
+src/imaging_server_kit/_version.py
+src/imaging_server_kit/client.py
+src/imaging_server_kit/encoding.py
+src/imaging_server_kit/registry.py
+src/imaging_server_kit/serialization.py
+src/imaging_server_kit/server.py
+src/imaging_server_kit.egg-info/PKG-INFO
+src/imaging_server_kit.egg-info/SOURCES.txt
+src/imaging_server_kit.egg-info/dependency_links.txt
+src/imaging_server_kit.egg-info/requires.txt
+src/imaging_server_kit.egg-info/top_level.txt

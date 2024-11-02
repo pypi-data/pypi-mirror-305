@@ -1,0 +1,144 @@
+Metadata-Version: 2.1
+Name: imaging-server-kit
+Version: 0.0.1
+Summary: Run image processing algorithms in a FastAPI server.
+Author-email: Mallory Wittwer <mallory.wittwer@epfl.ch>
+License: Copyright (c) 2024, EPFL
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+          list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice,
+          this list of conditions and the following disclaimer in the documentation
+          and/or other materials provided with the distribution.
+        
+        * Neither the name of copyright holder nor the names of its
+          contributors may be used to endorse or promote products derived from
+          this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: homepage, https://gitlab.com/epfl-center-for-imaging/imaging-server-kit
+Project-URL: repository, https://gitlab.com/epfl-center-for-imaging/imaging-server-kit
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
+Requires-Dist: python-multipart
+Requires-Dist: tifffile
+Requires-Dist: numpy
+Requires-Dist: scikit-image
+
+![EPFL Center for Imaging logo](https://imaging.epfl.ch/resources/logo-for-gitlab.svg)
+# 🪐 Imaging Server Kit
+
+Run seamlessly interoperable algorithms on images using FastAPI.
+
+## Setup
+
+Build the `imaging-server-kit` image with `docker`:
+
+```
+docker build -t imaging-server-kit:3.9 .
+```
+
+or build specific images:
+
+```
+docker build -t imaging-server-kit:3.10 --file Dockerfile-3.10 .
+docker build -t imaging-server-kit:gpu --file Dockerfile-GPU .
+```
+
+**Run an algorithm server**
+
+The server will be running on `http://localhost:8000`.
+
+```bash
+docker build -t serverkit/rembg .
+docker run -it --rm -p 8000:8000 serverkit/rembg
+```
+
+**Run an algorithm server with multiple algorithms**
+
+See [deployment](./reference_deployment/README.md). The server will be running on `http://localhost:7000`.
+
+## Usage
+
+**Python client**
+
+Install the `imaging-server-kit` package with `pip`:
+
+```
+pip install git+https://gitlab.com/epfl-center-for-imaging/imaging-server-kit.git
+```
+
+Connect to an algorithm server and run algorithms from Python:
+
+```python
+from imaging_server_kit import Client
+
+client = Client()
+
+client.connect("http://localhost:7000")
+
+print(client.algorithms)
+# [`rembg`, `stardist`, `sam2`]
+
+data_tuple = client.run_algorithm(
+    algorithm="rembg",
+    image=(...),
+    rembg_model_name="silueta",
+)
+```
+
+More [examples](./examples/).
+
+**Napari client**
+
+Coming soon.
+
+**Web client**
+
+Coming soon.
+
+**QuPath client**
+
+Coming soon.
+
+**Fiji plugin**
+
+Coming soon.
+
+## Contributing
+
+Contributions are very welcome.
+
+## License
+
+This software is distributed under the terms of the [BSD-3](http://opensource.org/licenses/BSD-3-Clause) license.
+
+## Issues
+
+If you encounter any problems, please file an issue along with a detailed description.
