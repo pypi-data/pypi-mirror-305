@@ -1,0 +1,19 @@
+[build-system]
+build-backend = 'mesonpy'
+requires = ['meson-python']
+
+[tool.meson-python.args]
+setup = ['--vsenv']
+install = ['--tags=python']
+
+[project]
+name = 'virtualmachine'
+version = '1.3.3'
+description = 'Detect when running under virtual machine'
+readme = 'README.md'
+requires-python = '>=3.8'
+license = { file = 'LICENSE' }
+authors = [
+  { name = 'Perry Werneck', email = 'perry.werneck@gmail.com' },
+]
+
