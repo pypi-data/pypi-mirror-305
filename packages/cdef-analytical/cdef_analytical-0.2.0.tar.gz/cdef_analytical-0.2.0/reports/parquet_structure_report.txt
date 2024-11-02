@@ -1,0 +1,931 @@
+=== Comprehensive Parquet Files Analysis Report ===
+
+Analysis Date: 2024-10-30T11:53:12.394896
+Root Directory: /Users/tobiaskragholm/dev/TEST/data
+Total Files Analyzed: 170
+Total Directories: 160
+Distinct Schema Patterns: 16
+
+=== Data Organization Summary ===
+
+Schema Pattern 1:
+--------------------------------------------------
+Found in 1 directories:
+  - .
+
+Common Characteristics:
+  Files per directory: 9
+  Size range: 0.00 - 155.08 MB
+  Row count range: 1 - 2,798,840
+  Partition keys: 
+
+Schema:
+  * PNR (String)
+    Unique values range: 149,062 - 2,798,399
+    Null count: 0
+  * FOED_DAG (Date)
+    Unique values range: 8,736 - 33,006
+    Null count: 0
+  * FAR_ID (String)
+    Unique values range: 441,828 - 1,596,404
+    Null count: 0
+  * FAR_FDAG (Date)
+    Unique values: 21083
+    Null count: 214012
+  * MOR_ID (String)
+    Unique values range: 500,211 - 1,667,883
+    Null count: 0
+  * MOR_FDAG (Date)
+    Unique values: 21173
+    Null count: 95779
+  * FAMILIE_ID (String)
+    Unique values range: 506,075 - 598,072
+    Null count: 0
+
+Schema Pattern 2:
+--------------------------------------------------
+Found in 1 directories:
+  - analytical_data/derived
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 4.17 - 4.17 MB
+  Row count range: 506,075 - 506,075
+  Partition keys: 
+
+Schema:
+  * family_id (String)
+    Unique values: 506075
+    Null count: 0
+  * number_of_children (UInt32)
+    Unique values: 10
+    Null count: 0
+
+Schema Pattern 3:
+--------------------------------------------------
+Found in 1 directories:
+  - analytical_data/family
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 48.37 - 48.37 MB
+  Row count range: 1,206,257 - 1,206,257
+  Partition keys: 
+
+Schema:
+  * child_id (String)
+    Unique values: 1206257
+    Null count: 0
+  * father_id (String)
+    Unique values: 441828
+    Null count: 0
+  * mother_id (String)
+    Unique values: 500211
+    Null count: 0
+  * family_id (String)
+    Unique values: 506075
+    Null count: 0
+  * birth_date (Date)
+    Unique values: 8736
+    Null count: 0
+  * father_birth_date (Date)
+    Unique values: 21083
+    Null count: 214012
+  * mother_birth_date (Date)
+    Unique values: 21173
+    Null count: 95779
+
+Schema Pattern 4:
+--------------------------------------------------
+Found in 1 directories:
+  - analytical_data/static
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 39.03 - 39.03 MB
+  Row count range: 3,618,771 - 3,618,771
+  Partition keys: 
+
+Schema:
+  * individual_id (String)
+    Unique values: 2133443
+    Null count: 0
+  * birth_date (Date)
+    Unique values: 28545
+    Null count: 309791
+  * role (String)
+    Unique values: 3
+    Null count: 0
+
+Schema Pattern 5:
+--------------------------------------------------
+Found in 1 directories:
+  - analytical_data/derived/statistics
+
+Common Characteristics:
+  Files per directory: 2
+  Size range: 0.00 - 0.00 MB
+  Row count range: 2 - 4
+  Partition keys: 
+
+Schema:
+  * column (String)
+    Unique values: 2
+    Null count: 0
+  * stat_type (String)
+    Unique values range: 1 - 2
+    Null count: 0
+  * count (Int64)
+    Null count: 0
+  * value (Float64)
+    Null count: 0
+  * std (Float64)
+    Null count: 0
+  * missing (Int64)
+    Null count: 0
+
+Schema Pattern 6:
+--------------------------------------------------
+Found in 1 directories:
+  - analytical_data/longitudinal/demographics
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 0.00 - 0.00 MB
+  Row count range: 2,798,840 - 2,798,840
+  Partition keys: 
+
+Schema:
+  * AEGTE_ID (String)
+    Unique values: 2798450
+    Null count: 0
+  * ALDER (Int8)
+    Unique values: 79
+    Null count: 0
+  * ANTBOERNF (Int8)
+    Unique values: 5
+    Null count: 0
+  * ANTBOERNH (Int8)
+    Unique values: 5
+    Null count: 0
+  * ANTPERSF (Int8)
+    Unique values: 11
+    Null count: 0
+  * ANTPERSH (Int8)
+    Unique values: 11
+    Null count: 0
+  * BOP_VFRA (Date)
+    Unique values: 29349
+    Null count: 0
+  * CIVST (Categorical(ordering='physical'))
+    Unique values: 4
+    Null count: 0
+  * E_FAELLE_ID (String)
+    Unique values: 2678624
+    Null count: 0
+  * FAMILIE_ID (String)
+    Unique values: 598072
+    Null count: 0
+  * FAMILIE_TYPE (String)
+    Unique values: 3
+    Null count: 0
+  * FAR_ID (String)
+    Unique values: 1596404
+    Null count: 0
+  * FM_MARK (Categorical(ordering='physical'))
+    Unique values: 6
+    Null count: 0
+  * FOED_DAG (Date)
+    Unique values: 33006
+    Null count: 0
+  * HUSTYPE (Categorical(ordering='physical'))
+    Unique values: 6
+    Null count: 0
+  * IE_TYPE (String)
+    Unique values: 12
+    Null count: 0
+  * KOEN (String)
+    Unique values: 2
+    Null count: 0
+  * KOM (Int16)
+    Unique values: 898
+    Null count: 0
+  * MOR_ID (String)
+    Unique values: 1667883
+    Null count: 0
+  * OPR_LAND (String)
+    Unique values: 11
+    Null count: 0
+  * PLADS (Categorical(ordering='physical'))
+    Unique values: 3
+    Null count: 0
+  * PNR (String)
+    Unique values: 2798399
+    Null count: 0
+  * REG (Categorical(ordering='physical'))
+    Unique values: 6
+    Null count: 0
+  * STATSB (Categorical(ordering='physical'))
+    Unique values: 11
+    Null count: 0
+  * year (Int32)
+    Unique values: 30
+    Null count: 0
+
+Schema Pattern 7:
+--------------------------------------------------
+Found in 1 directories:
+  - analytical_data/longitudinal/education
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 0.00 - 0.00 MB
+  Row count range: 193,909 - 193,909
+  Partition keys: 
+
+Schema:
+  * PNR (String)
+    Unique values: 149062
+    Null count: 0
+  * HFAUDD (String)
+    Unique values: 6
+    Null count: 0
+  * HF_KILDE (String)
+    Unique values: 3
+    Null count: 0
+  * HF_VFRA (String)
+    Unique values: 372
+    Null count: 0
+  * HF_VTIL (String)
+    Unique values: 719
+    Null count: 0
+  * INSTNR (Int8)
+    Unique values: 99
+    Null count: 0
+  * year (Int32)
+    Unique values: 2
+    Null count: 0
+
+Schema Pattern 8:
+--------------------------------------------------
+Found in 1 directories:
+  - analytical_data/longitudinal/income
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 0.00 - 0.00 MB
+  Row count range: 1,376,615 - 1,376,615
+  Partition keys: 
+
+Schema:
+  * BESKST13 (Int8)
+    Unique values: 9
+    Null count: 0
+  * LOENMV_13 (Float64)
+    Null count: 0
+  * PERINDKIALT_13 (Float64)
+    Null count: 0
+  * PNR (String)
+    Unique values: 1376504
+    Null count: 0
+  * PRE_SOCIO (Int8)
+    Unique values: 5
+    Null count: 0
+  * year (Int32)
+    Unique values: 30
+    Null count: 0
+
+Schema Pattern 9:
+--------------------------------------------------
+Found in 1 directories:
+  - analytical_data/longitudinal/employment
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 0.00 - 0.00 MB
+  Row count range: 1,376,615 - 1,376,615
+  Partition keys: 
+
+Schema:
+  * PNR (String)
+    Unique values: 1376504
+    Null count: 0
+  * SOCIO13 (Categorical(ordering='physical'))
+    Unique values: 5
+    Null count: 0
+  * SENR (String)
+    Unique values: 1276691
+    Null count: 0
+  * year (Int32)
+    Unique values: 30
+    Null count: 0
+
+Schema Pattern 10:
+--------------------------------------------------
+Found in 30 directories:
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=1995
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=1996
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=1997
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=1998
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=1999
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2000
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2001
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2002
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2003
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2004
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2005
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2006
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2007
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2008
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2009
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2010
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2011
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2012
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2013
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2014
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2015
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2016
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2017
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2018
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2019
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2020
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2021
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2022
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2023
+  - analytical_data/longitudinal/demographics/bef_longitudinal.parquet/year=2024
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 5.14 - 5.21 MB
+  Row count range: 92,939 - 93,686
+  Partition keys: year
+
+Schema:
+  * AEGTE_ID (String)
+    Unique values range: 92,938 - 93,686
+    Null count: 0
+  * ALDER (Int8)
+    Unique values: 79
+    Null count: 0
+  * ANTBOERNF (Int8)
+    Unique values: 5
+    Null count: 0
+  * ANTBOERNH (Int8)
+    Unique values: 5
+    Null count: 0
+  * ANTPERSF (Int8)
+    Unique values: 11
+    Null count: 0
+  * ANTPERSH (Int8)
+    Unique values: 11
+    Null count: 0
+  * BOP_VFRA (Date)
+    Unique values range: 15,447 - 15,621
+    Null count: 0
+  * CIVST (Categorical(ordering='physical'))
+    Unique values: 4
+    Null count: 0
+  * E_FAELLE_ID (String)
+    Unique values range: 88,878 - 89,786
+    Null count: 0
+  * FAMILIE_ID (String)
+    Unique values range: 19,995 - 20,000
+    Null count: 0
+  * FAMILIE_TYPE (String)
+    Unique values: 3
+    Null count: 0
+  * FAR_ID (String)
+    Unique values range: 53,032 - 53,378
+    Null count: 0
+  * FM_MARK (Categorical(ordering='physical'))
+    Unique values: 6
+    Null count: 0
+  * FOED_DAG (Date)
+    Unique values range: 17,774 - 17,850
+    Null count: 0
+  * HUSTYPE (Categorical(ordering='physical'))
+    Unique values: 6
+    Null count: 0
+  * IE_TYPE (String)
+    Unique values range: 2 - 11
+    Null count: 0
+  * KOEN (String)
+    Unique values: 2
+    Null count: 0
+  * KOM (Int16)
+    Unique values: 898
+    Null count: 0
+  * MOR_ID (String)
+    Unique values range: 55,484 - 55,759
+    Null count: 0
+  * OPR_LAND (String)
+    Unique values: 11
+    Null count: 0
+  * PLADS (Categorical(ordering='physical'))
+    Unique values: 3
+    Null count: 0
+  * PNR (String)
+    Unique values range: 92,939 - 93,685
+    Null count: 0
+  * REG (Categorical(ordering='physical'))
+    Unique values: 6
+    Null count: 0
+  * STATSB (Categorical(ordering='physical'))
+    Unique values: 11
+    Null count: 0
+
+Schema Pattern 11:
+--------------------------------------------------
+Found in 1 directories:
+  - analytical_data/longitudinal/health/longitudinal
+
+Common Characteristics:
+  Files per directory: 2
+  Size range: 0.00 - 0.00 MB
+  Row count range: 350,121 - 350,121
+  Partition keys: 
+
+Schema:
+  * PNR (String)
+    Unique values: 350112
+    Null count: 0
+  * year (Int32)
+    Unique values: 29
+    Null count: 0
+  * num_blood_disorders_diagnoses (UInt32)
+    Unique values: 9
+    Null count: 0
+  * num_blood_disorders_admissions (UInt32)
+    Unique values: 9
+    Null count: 0
+  * num_immune_system_diagnoses (UInt32)
+    Unique values: 11
+    Null count: 0
+  * num_immune_system_admissions (UInt32)
+    Unique values: 11
+    Null count: 0
+  * num_endocrine_diagnoses (UInt32)
+    Unique values: 10
+    Null count: 0
+  * num_endocrine_admissions (UInt32)
+    Unique values: 10
+    Null count: 0
+  * num_neurological_diagnoses (UInt32)
+    Unique values: 10
+    Null count: 0
+  * num_neurological_admissions (UInt32)
+    Unique values: 10
+    Null count: 0
+  * num_cardiovascular_diagnoses (UInt32)
+    Unique values: 10
+    Null count: 0
+  * num_cardiovascular_admissions (UInt32)
+    Unique values: 10
+    Null count: 0
+  * num_respiratory_diagnoses (UInt32)
+    Unique values: 13
+    Null count: 0
+  * num_respiratory_admissions (UInt32)
+    Unique values: 13
+    Null count: 0
+  * num_gastrointestinal_diagnoses (UInt32)
+    Unique values: 9
+    Null count: 0
+  * num_gastrointestinal_admissions (UInt32)
+    Unique values: 9
+    Null count: 0
+  * num_musculoskeletal_diagnoses (UInt32)
+    Unique values: 1
+    Null count: 0
+  * num_musculoskeletal_admissions (UInt32)
+    Unique values: 1
+    Null count: 0
+  * num_renal_diagnoses (UInt32)
+    Unique values: 1
+    Null count: 0
+  * num_renal_admissions (UInt32)
+    Unique values: 1
+    Null count: 0
+  * num_congenital_diagnoses (UInt32)
+    Unique values: 1
+    Null count: 0
+  * num_congenital_admissions (UInt32)
+    Unique values: 1
+    Null count: 0
+
+Schema Pattern 12:
+--------------------------------------------------
+Found in 29 directories:
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=1995
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=1996
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=1997
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=1998
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=1999
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2000
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2001
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2002
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2003
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2004
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2005
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2006
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2007
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2008
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2009
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2010
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2011
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2012
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2013
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2014
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2015
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2016
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2017
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2018
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2019
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2020
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2021
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2022
+  - analytical_data/longitudinal/health/longitudinal/diagnosis_groups.parquet/year=2023
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 0.04 - 0.15 MB
+  Row count range: 2,798 - 14,197
+  Partition keys: year
+
+Schema:
+  * PNR (String)
+    Unique values range: 2,798 - 14,197
+    Null count: 0
+  * num_blood_disorders_diagnoses (UInt32)
+    Unique values range: 3 - 8
+    Null count: 0
+  * num_blood_disorders_admissions (UInt32)
+    Unique values range: 3 - 8
+    Null count: 0
+  * num_immune_system_diagnoses (UInt32)
+    Unique values range: 2 - 10
+    Null count: 0
+  * num_immune_system_admissions (UInt32)
+    Unique values range: 2 - 10
+    Null count: 0
+  * num_endocrine_diagnoses (UInt32)
+    Unique values range: 3 - 10
+    Null count: 0
+  * num_endocrine_admissions (UInt32)
+    Unique values range: 3 - 10
+    Null count: 0
+  * num_neurological_diagnoses (UInt32)
+    Unique values range: 2 - 9
+    Null count: 0
+  * num_neurological_admissions (UInt32)
+    Unique values range: 2 - 9
+    Null count: 0
+  * num_cardiovascular_diagnoses (UInt32)
+    Unique values range: 3 - 10
+    Null count: 0
+  * num_cardiovascular_admissions (UInt32)
+    Unique values range: 3 - 10
+    Null count: 0
+  * num_respiratory_diagnoses (UInt32)
+    Unique values range: 4 - 10
+    Null count: 0
+  * num_respiratory_admissions (UInt32)
+    Unique values range: 4 - 10
+    Null count: 0
+  * num_gastrointestinal_diagnoses (UInt32)
+    Unique values range: 2 - 9
+    Null count: 0
+  * num_gastrointestinal_admissions (UInt32)
+    Unique values range: 2 - 9
+    Null count: 0
+  * num_musculoskeletal_diagnoses (UInt32)
+    Unique values: 1
+    Null count: 0
+  * num_musculoskeletal_admissions (UInt32)
+    Unique values: 1
+    Null count: 0
+  * num_renal_diagnoses (UInt32)
+    Unique values: 1
+    Null count: 0
+  * num_renal_admissions (UInt32)
+    Unique values: 1
+    Null count: 0
+  * num_congenital_diagnoses (UInt32)
+    Unique values: 1
+    Null count: 0
+  * num_congenital_admissions (UInt32)
+    Unique values: 1
+    Null count: 0
+
+Schema Pattern 13:
+--------------------------------------------------
+Found in 29 directories:
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=1995
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=1996
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=1997
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=1998
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=1999
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2000
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2001
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2002
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2003
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2004
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2005
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2006
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2007
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2008
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2009
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2010
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2011
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2012
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2013
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2014
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2015
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2016
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2017
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2018
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2019
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2020
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2021
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2022
+  - analytical_data/longitudinal/health/longitudinal/health_summary.parquet/year=2023
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 0.04 - 0.22 MB
+  Row count range: 2,798 - 14,197
+  Partition keys: year
+
+Schema:
+  * PNR (String)
+    Unique values range: 2,798 - 14,197
+    Null count: 0
+  * num_primary_diagnoses (UInt32)
+    Unique values range: 3 - 20
+    Null count: 0
+  * num_diagnoses (UInt32)
+    Unique values range: 3 - 20
+    Null count: 0
+  * num_secondary_diagnoses (UInt32)
+    Unique values range: 1 - 20
+    Null count: 0
+  * num_admissions (UInt32)
+    Unique values range: 3 - 20
+    Null count: 0
+  * last_discharge (Date)
+    Unique values range: 385 - 394
+    Null count: 0
+  * most_common_admission_type (list[String])
+    Null count: 0
+  * num_unique_departments (UInt32)
+    Unique values range: 1 - 2
+    Null count: 0
+
+Schema Pattern 14:
+--------------------------------------------------
+Found in 2 directories:
+  - analytical_data/longitudinal/education/uddf_longitudinal.parquet/year=2020
+  - analytical_data/longitudinal/education/uddf_longitudinal.parquet/year=2022
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 0.99 - 0.99 MB
+  Row count range: 96,838 - 97,071
+  Partition keys: year
+
+Schema:
+  * PNR (String)
+    Unique values range: 74,426 - 74,637
+    Null count: 0
+  * HFAUDD (String)
+    Unique values: 6
+    Null count: 0
+  * HF_KILDE (String)
+    Unique values: 3
+    Null count: 0
+  * HF_VFRA (String)
+    Unique values: 372
+    Null count: 0
+  * HF_VTIL (String)
+    Unique values range: 672 - 719
+    Null count: 0
+  * INSTNR (Int8)
+    Unique values: 99
+    Null count: 0
+
+Schema Pattern 15:
+--------------------------------------------------
+Found in 30 directories:
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=1995
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=1996
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=1997
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=1998
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=1999
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2000
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2001
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2002
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2003
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2004
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2005
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2006
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2007
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2008
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2009
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2010
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2011
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2012
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2013
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2014
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2015
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2016
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2017
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2018
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2019
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2020
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2021
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2022
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2023
+  - analytical_data/longitudinal/income/ind_longitudinal.parquet/year=2024
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 0.96 - 1.00 MB
+  Row count range: 45,719 - 46,094
+  Partition keys: year
+
+Schema:
+  * BESKST13 (Int8)
+    Unique values: 9
+    Null count: 0
+  * LOENMV_13 (Float64)
+    Null count: 0
+  * PERINDKIALT_13 (Float64)
+    Null count: 0
+  * PNR (String)
+    Unique values range: 45,719 - 46,094
+    Null count: 0
+  * PRE_SOCIO (Int8)
+    Unique values: 5
+    Null count: 0
+
+Schema Pattern 16:
+--------------------------------------------------
+Found in 30 directories:
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=1995
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=1996
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=1997
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=1998
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=1999
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2000
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2001
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2002
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2003
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2004
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2005
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2006
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2007
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2008
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2009
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2010
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2011
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2012
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2013
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2014
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2015
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2016
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2017
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2018
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2019
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2020
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2021
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2022
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2023
+  - analytical_data/longitudinal/employment/akm_longitudinal.parquet/year=2024
+
+Common Characteristics:
+  Files per directory: 1
+  Size range: 0.68 - 0.69 MB
+  Row count range: 45,719 - 46,094
+  Partition keys: year
+
+Schema:
+  * PNR (String)
+    Unique values range: 45,719 - 46,094
+    Null count: 0
+  * SOCIO13 (Categorical(ordering='physical'))
+    Unique values: 5
+    Null count: 0
+  * SENR (String)
+    Unique values range: 45,603 - 45,988
+    Null count: 0
+
+=== Aggregate Statistics ===
+
+    File Size Distribution (MB):
+    - Minimum: 0.00
+    - 25th percentile: 0.15
+    - Median: 0.69
+    - 75th percentile: 1.00
+    - Maximum: 155.08
+    - Mean: 3.46
+    - Total: 587.84
+            
+
+=== Schema Compatibility ===
+
+Schema Compatibility Analysis:
+
+Partially Present Columns:
+- 'PNR' appears in 163 out of 170 files
+- 'FOED_DAG' appears in 33 out of 170 files
+- 'FAR_ID' appears in 33 out of 170 files
+- 'FAR_FDAG' appears in 1 out of 170 files
+- 'MOR_ID' appears in 33 out of 170 files
+- 'MOR_FDAG' appears in 1 out of 170 files
+- 'FAMILIE_ID' appears in 33 out of 170 files
+- 'total_combined_records' appears in 1 out of 170 files
+- 'combined_missing_far' appears in 1 out of 170 files
+- 'combined_missing_mor' appears in 1 out of 170 files
+- 'records_only_in_bef' appears in 1 out of 170 files
+- 'records_only_in_mfr' appears in 1 out of 170 files
+- 'SOCIO13' appears in 33 out of 170 files
+- 'SENR' appears in 33 out of 170 files
+- 'year' appears in 11 out of 170 files
+- 'HFAUDD' appears in 4 out of 170 files
+- 'HF_KILDE' appears in 4 out of 170 files
+- 'HF_VFRA' appears in 4 out of 170 files
+- 'HF_VTIL' appears in 4 out of 170 files
+- 'INSTNR' appears in 4 out of 170 files
+- 'is_scd' appears in 1 out of 170 files
+- 'first_scd_date' appears in 1 out of 170 files
+- 'total_bef_records' appears in 1 out of 170 files
+- 'bef_missing_far' appears in 1 out of 170 files
+- 'bef_missing_mor' appears in 1 out of 170 files
+- 'AEGTE_ID' appears in 32 out of 170 files
+- 'ALDER' appears in 32 out of 170 files
+- 'ANTBOERNF' appears in 32 out of 170 files
+- 'ANTBOERNH' appears in 32 out of 170 files
+- 'ANTPERSF' appears in 32 out of 170 files
+- 'ANTPERSH' appears in 32 out of 170 files
+- 'BOP_VFRA' appears in 32 out of 170 files
+- 'CIVST' appears in 32 out of 170 files
+- 'E_FAELLE_ID' appears in 32 out of 170 files
+- 'FAMILIE_TYPE' appears in 32 out of 170 files
+- 'FM_MARK' appears in 32 out of 170 files
+- 'HUSTYPE' appears in 32 out of 170 files
+- 'IE_TYPE' appears in 32 out of 170 files
+- 'KOEN' appears in 32 out of 170 files
+- 'KOM' appears in 32 out of 170 files
+- 'OPR_LAND' appears in 32 out of 170 files
+- 'PLADS' appears in 32 out of 170 files
+- 'REG' appears in 32 out of 170 files
+- 'STATSB' appears in 32 out of 170 files
+- 'BESKST13' appears in 32 out of 170 files
+- 'LOENMV_13' appears in 32 out of 170 files
+- 'PERINDKIALT_13' appears in 32 out of 170 files
+- 'PRE_SOCIO' appears in 32 out of 170 files
+- 'family_id' appears in 2 out of 170 files
+- 'number_of_children' appears in 1 out of 170 files
+- 'child_id' appears in 1 out of 170 files
+- 'father_id' appears in 1 out of 170 files
+- 'mother_id' appears in 1 out of 170 files
+- 'birth_date' appears in 2 out of 170 files
+- 'father_birth_date' appears in 1 out of 170 files
+- 'mother_birth_date' appears in 1 out of 170 files
+- 'individual_id' appears in 1 out of 170 files
+- 'role' appears in 1 out of 170 files
+- 'column' appears in 2 out of 170 files
+- 'stat_type' appears in 2 out of 170 files
+- 'count' appears in 2 out of 170 files
+- 'value' appears in 2 out of 170 files
+- 'std' appears in 2 out of 170 files
+- 'missing' appears in 2 out of 170 files
+- 'num_blood_disorders_diagnoses' appears in 30 out of 170 files
+- 'num_blood_disorders_admissions' appears in 30 out of 170 files
+- 'num_immune_system_diagnoses' appears in 30 out of 170 files
+- 'num_immune_system_admissions' appears in 30 out of 170 files
+- 'num_endocrine_diagnoses' appears in 30 out of 170 files
+- 'num_endocrine_admissions' appears in 30 out of 170 files
+- 'num_neurological_diagnoses' appears in 30 out of 170 files
+- 'num_neurological_admissions' appears in 30 out of 170 files
+- 'num_cardiovascular_diagnoses' appears in 30 out of 170 files
+- 'num_cardiovascular_admissions' appears in 30 out of 170 files
+- 'num_respiratory_diagnoses' appears in 30 out of 170 files
+- 'num_respiratory_admissions' appears in 30 out of 170 files
+- 'num_gastrointestinal_diagnoses' appears in 30 out of 170 files
+- 'num_gastrointestinal_admissions' appears in 30 out of 170 files
+- 'num_musculoskeletal_diagnoses' appears in 30 out of 170 files
+- 'num_musculoskeletal_admissions' appears in 30 out of 170 files
+- 'num_renal_diagnoses' appears in 30 out of 170 files
+- 'num_renal_admissions' appears in 30 out of 170 files
+- 'num_congenital_diagnoses' appears in 30 out of 170 files
+- 'num_congenital_admissions' appears in 30 out of 170 files
+- 'num_primary_diagnoses' appears in 30 out of 170 files
+- 'num_diagnoses' appears in 30 out of 170 files
+- 'num_secondary_diagnoses' appears in 30 out of 170 files
+- 'num_admissions' appears in 30 out of 170 files
+- 'last_discharge' appears in 30 out of 170 files
+- 'most_common_admission_type' appears in 30 out of 170 files
+- 'num_unique_departments' appears in 30 out of 170 files
+
+=== Time Series Analysis ===

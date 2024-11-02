@@ -1,0 +1,37 @@
+[project]
+name = "cdef-analytical"
+version = "0.2.0"
+description = "Add your description here"
+authors = [
+    { name = "Tobias Kragholm", email = "50784887+tkragholm@users.noreply.github.com" }
+]
+dependencies = [
+    "polars>=1.12.0",
+    "rich>=13.9.3",
+    "great-tables>=0.13.0",
+    "chardet>=5.2.0",
+    "scipy>=1.14.1",
+    "pandas>=2.2.3",
+    "selenium>=4.26.1",
+    "pillow>=11.0.0",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ipykernel>=6.29.5",
+    "marimo>=0.9.14",
+    "mypy>=1.13.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cdef_analytical"]
