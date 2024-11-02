@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: triangle-hse-opensource
+Version: 1.3
+Summary: Package of computing for HSE Open Source
+Author: Pavel Akhtyamov
+Author-email: akhtyamovpavel@gmail.com
+License-File: LICENSE
+Requires-Dist: six
+Requires-Dist: pybind11
+
+Package for computing triangle sum
