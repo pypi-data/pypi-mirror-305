@@ -1,0 +1,11 @@
+bihc/__init__.py,sha256=2uazxLhPVcbUQelrQs5t9vzAVjEYUfqbkkjUhukMAlY,172
+bihc/beam.py,sha256=8hZaFD5TgANbH_W527xzYQnhLdANV-ldLxgfln8lNJQ,28910
+bihc/fillingschemes.py,sha256=HmKsqMAx4SRipQtRhEkRycirwlhZxYHOPnu9EoPhuFA,3380
+bihc/impedance.py,sha256=2iJZJAzn9mroRDFcj_RcbW2dodKJPnxLVF9NzehEiHI,8023
+bihc/plot.py,sha256=stew5cKGnUHIXn9Xjc5dg1N1pOlEE-r8thNjEtd5kO0,9085
+bihc/power.py,sha256=KJz7hl5vAecR0AAiHDn6bLOhUU_KixsukZO5iq-jMaY,8999
+bihc-0.0.8.10.dist-info/LICENSE,sha256=7DMYSy-TL321ETo7Cv532dExLU4OhrOU_kHqR66ZmAc,760
+bihc-0.0.8.10.dist-info/METADATA,sha256=Xb-2EVMkP1DxFsbL_z-W043EwIi-iUdIvrRz_mmrv-k,6849
+bihc-0.0.8.10.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+bihc-0.0.8.10.dist-info/top_level.txt,sha256=utrSxvMlIFfQAdSyBqNJQhhdKH2p8u8XSU9tz1k5kJs,5
+bihc-0.0.8.10.dist-info/RECORD,,
