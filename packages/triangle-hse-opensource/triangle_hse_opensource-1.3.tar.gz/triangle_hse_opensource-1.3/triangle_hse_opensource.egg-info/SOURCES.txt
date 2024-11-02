@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/main.cpp
+tests/test_triangle.py
+tests/test_two_plus_two.py
+triangle/__init__.py
+triangle/triangle.py
+triangle_hse_opensource.egg-info/PKG-INFO
+triangle_hse_opensource.egg-info/SOURCES.txt
+triangle_hse_opensource.egg-info/dependency_links.txt
+triangle_hse_opensource.egg-info/requires.txt
+triangle_hse_opensource.egg-info/top_level.txt
