@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ohmygod
+Version: 0.1.0
+Summary: Rich CLI tool powered by Buddha
+Home-page: https://github.com/aintbe/ohmygod
+Author: aintbe
+Author-email: aint.imsorry@gmail.com
+Keywords: ohmygod,buddha,cli,console,terminal,rich
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Requires-Dist: rich
+Requires-Dist: colorama
+Requires-Dist: readchar
+
