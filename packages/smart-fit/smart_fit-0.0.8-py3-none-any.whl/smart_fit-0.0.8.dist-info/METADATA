@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: smart_fit
+Version: 0.0.8
+Summary: Smart Fit
+Author: Positronic AI
+Project-URL: Homepage, https://lit.ai
+Project-URL: Documentation, https://docs.lit.ai
+Keywords: deep learning,ai,data science
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: setuptools>=69.2.0
+Provides-Extra: dev
+Requires-Dist: lit[lint,security]; extra == "dev"
+Provides-Extra: lint
+Requires-Dist: ruff>=0.5.2; extra == "lint"
+Provides-Extra: security
+Requires-Dist: pyarmor>=8.5.2; extra == "security"
+
