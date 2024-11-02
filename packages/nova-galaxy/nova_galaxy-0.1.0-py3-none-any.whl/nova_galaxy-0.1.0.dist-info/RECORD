@@ -1,0 +1,12 @@
+nova/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nova/galaxy/__init__.py,sha256=2S2qhh8dPDvIwTheNqhSDoXfymBUf0dFxFPRY5mj770,370
+nova/galaxy/data_store.py,sha256=30ilaFYYKwCT1MbK1j_Yg-KB4Z4QWMbGVUpmiGC5Vjc,536
+nova/galaxy/dataset.py,sha256=bMgOWpkJM3_BPmf4gM11NUCC5ki3wqrLJQiRCJdLxuA,4377
+nova/galaxy/nova.py,sha256=AQHIGx7bUYOIgjsjuCeSzD067OSrwJvBXVrjcL-J8S0,2662
+nova/galaxy/outputs.py,sha256=toaSgqRVKUw92L0JyMG7qtkXd47N45Me9dJ3dHN7FXQ,1062
+nova/galaxy/parameters.py,sha256=Uag7bTJF14NiRD5wig6jbAtGyfT1knxdzkrmDPXLiQs,556
+nova/galaxy/tool.py,sha256=qApiptqv-ekkSqJ4859ubnGuG7ezwPSmGUPR3TOJgo8,2585
+nova_galaxy-0.1.0.dist-info/LICENSE,sha256=MOqZ8tPMKy8ZETJ2-HEvFTZ7dYNlg3gXmBkV-Y9i8bw,1061
+nova_galaxy-0.1.0.dist-info/METADATA,sha256=IfZZySJcCOfbpFRg5eJlZqVOfb24LwfRS4qI6whInSw,1793
+nova_galaxy-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+nova_galaxy-0.1.0.dist-info/RECORD,,
