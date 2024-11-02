@@ -1,0 +1,9 @@
+
+[dev]
+ruff
+mypy
+pytest
+pytest-cov
+sphinx
+sphinx-copybutton
+furo
