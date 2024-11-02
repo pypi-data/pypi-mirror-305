@@ -1,0 +1,8 @@
+django_signposting/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_signposting/middleware.py,sha256=f6_HSXEo2Vs1TllS_6-8mIQI2L09vJ__yyPtAO1-Gqs,1175
+django_signposting/utils.py,sha256=ZqZISscvv0xfuwJZlNYfuIW1_z2EPbR3PovZxq2xgrU,500
+django_signposting-0.10.0.dist-info/LICENSE,sha256=ZrErxyhB-pEFdUiFcQgHwjeffSx5UUfKgpRrJU6Vkak,1068
+django_signposting-0.10.0.dist-info/METADATA,sha256=GNpLfTkhC93x6ZfhDvaJrc7J0oqy600c3mpVwHdqJOY,3909
+django_signposting-0.10.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+django_signposting-0.10.0.dist-info/top_level.txt,sha256=FEfGYyJDGkgtDA9ooB-2t9uEs4jjwnLf7v4K0s6mNXE,19
+django_signposting-0.10.0.dist-info/RECORD,,
