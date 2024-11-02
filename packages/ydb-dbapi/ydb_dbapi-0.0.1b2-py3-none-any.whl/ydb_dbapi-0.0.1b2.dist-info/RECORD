@@ -1,0 +1,11 @@
+ydb_dbapi/__init__.py,sha256=JiTUZYzG0JLGWD6ulwS0G5gEBLwKnl65AzsYgfpwjGw,408
+ydb_dbapi/connections.py,sha256=BWrUbkredDNtMlXH1u1Kav47r1gyMqidsOKtvfU9A04,13605
+ydb_dbapi/constants.py,sha256=NKj6XBgepDWvbbw9McM66k_ATTZqhWIUxf4X1D_ztAo,3061
+ydb_dbapi/cursors.py,sha256=74NB1H2bjatweylDGXf52YxVn-PwUCG_MZ7_VHI6LJs,12299
+ydb_dbapi/errors.py,sha256=28R3d7Bo073hS2VvQkGGXn2ftXDbQoRHH3qurclPcX0,2458
+ydb_dbapi/utils.py,sha256=HV35zL1XALgT0tuDVlpuCf2ChwA49JjojIZHqhx0x3s,3882
+ydb_dbapi/version.py,sha256=bEFQczXO33fap1qKtyl3PtaXbGd6bzUmhe1i3CisZOI,20
+ydb_dbapi-0.0.1b2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ydb_dbapi-0.0.1b2.dist-info/METADATA,sha256=u_BwPto1MaYpLIBnSKD2wwfBFQJdpQIfY7CXNJpopbE,1714
+ydb_dbapi-0.0.1b2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+ydb_dbapi-0.0.1b2.dist-info/RECORD,,
