@@ -1,0 +1,16 @@
+atelierflow/__init__.py,sha256=GsAXJfopaTM5lHnfSFfQU8_Uhxm3y_7KUq7WkqSdXPg,367
+atelierflow/dataloader.py,sha256=njgIeP9n7K4A_OfjLC4IbS91Wkk7DivwFvkRsH1MMV4,947
+atelierflow/experiments.py,sha256=oUixyhZn0k60BzHgwoWgcpoT4VbdJ3eQ2j2jOETygPk,1750
+atelierflow/experimentsBuilder.py,sha256=m1LvC1-47IlyBaMlMhkv1ao88ijZhMFO_JtUkSn09HM,997
+atelierflow/model.py,sha256=2y-82wxBx8s8VxDB9r9hWnIZbHyzn4V-X-WTIWkBPKg,199
+atelierflow/datasets/acoustic_dataset.py,sha256=22BhwW5x1ujdVX8Ikcw6WVz2PX3bDUTCfGQNttK4WD4,2380
+atelierflow/datasets/dataset.py,sha256=r0NE9X0BdLsKVBwNVmJedF_YR-6rSLij55oJ-si7nl8,890
+atelierflow/metrics/metric.py,sha256=vTNG2xCa1-9N5KPYW-rJPU2KoAYNd2zdMajGxaxwfYw,265
+atelierflow/steps/step.py,sha256=DLuJ7TD3hQnsoQCpagxtEb0kgpaZHqiTUWSJ4ZCbm8w,167
+atelierflow/utils/read_avro.py,sha256=3XivWwaMN5o2CwAiKH88Qmh582IPkiy0PyxBqlesJ40,594
+atelierflow-0.0.2.dist-info/LICENSE,sha256=OQsXfQG8w9cbBKRDqu_uGVSQ9Zcw7dIHpWNm5jxSpeM,1075
+atelierflow-0.0.2.dist-info/METADATA,sha256=DG6XAFhINvtBuaaT4Rf2rwspfdg0mPj6wo1lAPAMyvc,1868
+atelierflow-0.0.2.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+atelierflow-0.0.2.dist-info/top_level.txt,sha256=J3NHUx3MCJRhZ1DTW79QiUcEJhnF6R5myu3RtMYhWbM,12
+atelierflow-0.0.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+atelierflow-0.0.2.dist-info/RECORD,,
