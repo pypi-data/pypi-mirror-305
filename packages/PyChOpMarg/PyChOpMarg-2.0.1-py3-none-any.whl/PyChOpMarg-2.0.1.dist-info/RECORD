@@ -1,0 +1,14 @@
+pychopmarg/__init__.py,sha256=x95euI4kGUgKqsvNZKcnnRIiJ0NkdNs5YS8-ifMHjws,597
+pychopmarg/__main__.py,sha256=3PxN-rg7I8-fthL3tvSvJIdfxKJvi3SXYHn1e0clXI0,273
+pychopmarg/cli.py,sha256=ZfYflFPctAejI58VYxol-esEa7-TURGXxJ1LFvkSyv4,1650
+pychopmarg/com.py,sha256=VfGBmRDr91oKeDBdd9DiVpLZOQokMhPH6AL6uSiV3jE,62199
+pychopmarg/common.py,sha256=RWsdnqa0gq590kZ_8-jt_088VE8uJvi7kfoMTA4aFKc,792
+pychopmarg/noise.py,sha256=rGwGtMzYSJy41D-ou3OZ-kkI2CgF8umR0sbi5rhDqkA,11441
+pychopmarg/optimize.py,sha256=8XVyz7uJdpSPVHLFuD_RBopVh7VMSwRkG_lECIhBDoc,15698
+pychopmarg/utility.py,sha256=u5D5nyq29DcBYfkdbS9q571r6r9aR3sjgV2mmzMmjsY,17878
+PyChOpMarg-2.0.1.dist-info/LICENSE,sha256=ZjPFCHGBHpOSEv4SxK9Ng8cyUD7JUhfE3FQs3Qx3C2o,1526
+PyChOpMarg-2.0.1.dist-info/METADATA,sha256=uUJeAz7Hx9FsVkjyKNzmuE5isWqH_UJ_r9aHmJuHWc4,1648
+PyChOpMarg-2.0.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+PyChOpMarg-2.0.1.dist-info/entry_points.txt,sha256=aA_W41-NVpKHZX1sEvjfmd6szJkEbDhYrDaQM6joMV0,50
+PyChOpMarg-2.0.1.dist-info/top_level.txt,sha256=QwSERRGWYBocozXwQoX7n-dnlaT7IKgx8dnOXCABp6g,11
+PyChOpMarg-2.0.1.dist-info/RECORD,,
