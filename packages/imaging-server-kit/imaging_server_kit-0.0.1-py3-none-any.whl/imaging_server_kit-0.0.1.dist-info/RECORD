@@ -1,0 +1,12 @@
+imaging_server_kit/__init__.py,sha256=6fdRi1RYnl6ibNuVQ3u29XhEpXUwWNmmz3aEKf3Ptkg,331
+imaging_server_kit/_version.py,sha256=pMnmqZnpVmaqR5nqHztNWzbbtb1oy5bPN_v7uhOH8K8,411
+imaging_server_kit/client.py,sha256=XHHWvhziwOdgvCvLiE4Pq7Eg1EOAZhxUET1VK8Pntr8,3917
+imaging_server_kit/encoding.py,sha256=RulGIVLdQnDhSSkLHo-MvBgM56zKJnvYR_Xj86GG2Aw,799
+imaging_server_kit/registry.py,sha256=rKo1UGccKuImG1MSDIFsUnKYfDz6KZ3Wl0u6HDyoKx4,2734
+imaging_server_kit/serialization.py,sha256=RcZxfBcdqjwWjcwxJA7yon_ZizeGNGL5GHkOJgSQ5Js,1931
+imaging_server_kit/server.py,sha256=fnFIVGUfB_19WqhJ4qILpVH3D5ZgNcnur9o3YCJx_qU,3481
+imaging_server_kit-0.0.1.dist-info/LICENSE,sha256=rAHt9UjSWQOkFCt0GZ-gu0Cr8fOHFW0BD-OQhixH4mM,1478
+imaging_server_kit-0.0.1.dist-info/METADATA,sha256=1iXByYLpPINWyzQeYdqAj2XzW-lpJvFjTiHE7XaSMuc,4469
+imaging_server_kit-0.0.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+imaging_server_kit-0.0.1.dist-info/top_level.txt,sha256=TEy2d0Zzb2kI8tDesIfbMT624gXUO6z4_J5Due618Qg,19
+imaging_server_kit-0.0.1.dist-info/RECORD,,
