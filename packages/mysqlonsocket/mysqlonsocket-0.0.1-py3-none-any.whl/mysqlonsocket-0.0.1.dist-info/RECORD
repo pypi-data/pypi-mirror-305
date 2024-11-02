@@ -1,0 +1,13 @@
+mysqlonsocket/__init__.py,sha256=04LKca-2EO6wq4-5vP72Gpz3tE5T3i4iCRL6GALtWaY,72
+mysqlonsocket/client.py,sha256=kst-S1d9ov9PydTpskyU-g75mv2tPIxMoKXYgf939lQ,2127
+mysqlonsocket/config.py,sha256=eVM2VsFQczJt4mH1FpyT8OgIPYBhL5P7RFg7b4ApxhY,283
+mysqlonsocket/configrations.py,sha256=eVM2VsFQczJt4mH1FpyT8OgIPYBhL5P7RFg7b4ApxhY,283
+mysqlonsocket/server.py,sha256=6fYFyKByI54ZZQCfrn2HvjFfR6ejUmLLjFZPhftA4_Y,4169
+mysqlonsocket/test_client.py,sha256=kxaVUe4yuwoEKA7Il6HEcmWd3GnsyJjePh-rMTPZoYQ,567
+mysqlonsocket/test_server.py,sha256=vFM6lARrKNwuM4e1thLDnWr3B2PjhLtuWwL0d_vF9uc,461
+mysqlonsocket/utils.py,sha256=Pt0R1UG7Dl29PiueTPB80PQEhclwH31Wck02l50STEo,899
+mysqlonsocket-0.0.1.dist-info/LICENSE.txt,sha256=c5Npfwxz73ht7IVaQAZ8HSdLjHEQvwCBQx1LmcppCzU,1074
+mysqlonsocket-0.0.1.dist-info/METADATA,sha256=jRq6-wRhhhGuO1O2onie7ayEfZcPzZ4KOsmjl0w5fPA,648
+mysqlonsocket-0.0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+mysqlonsocket-0.0.1.dist-info/top_level.txt,sha256=gxVBCgbP_04XzagozqpAnHt4BRQqK5rzav299Y6DBhM,14
+mysqlonsocket-0.0.1.dist-info/RECORD,,
