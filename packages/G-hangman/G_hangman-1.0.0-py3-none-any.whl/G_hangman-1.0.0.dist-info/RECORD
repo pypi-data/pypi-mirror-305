@@ -1,0 +1,13 @@
+hangman/Words.dat,sha256=1NtTwJ7xzND9nLkdGtk2YXOMTHGWlbrzGxr9v8xzZUI,1800
+hangman/__init__.py,sha256=5sKq51HCnFuyW8PHmF1pnjOZhx1l_qYyG4xGmFuHPQk,24
+hangman/data.py,sha256=UL2KRpGHiCtESSOCjCLYI81OgcDcOp3chIroFaesLd8,2010
+hangman/efx.py,sha256=9BEUCJNEGDLB7UCLaBjLqGWDAk9BqwamkhUBtDveZ0A,9224
+hangman/game.py,sha256=8eYvp3fDetUOQzZpf3UAEU0ZlF502mWB6PXQ-uYfDio,4362
+hangman/sides.py,sha256=u2n1ibPS0ZHV1GyPZzhZ-5vQ0J6PdEJK-t_kTaVV358,6189
+hangman/start.py,sha256=T-YQT4l27XNvFoeJ3F4z870zRtk_tQUPu3SwGfBOOXs,175
+G_hangman-1.0.0.dist-info/LICENSE,sha256=spcDy_z0A8Z4Zk57hGU7DyxDPRcB7mRJn4wuRbCnPR8,1209
+G_hangman-1.0.0.dist-info/METADATA,sha256=rPMwDjMLPksentJ8v4k9UyLa90U7od2tiM7un7HZm6A,2676
+G_hangman-1.0.0.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+G_hangman-1.0.0.dist-info/entry_points.txt,sha256=vA9LJ1T50X4pDjmyBldH19xdoeO1yLvPaOru-fyQRDs,41
+G_hangman-1.0.0.dist-info/top_level.txt,sha256=4HQXzmslsBNKub6z5oIEt7wHKjN-GBxZTae_RbySjIM,8
+G_hangman-1.0.0.dist-info/RECORD,,
