@@ -1,0 +1,11 @@
+sklesion/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sklesion/cl_info.pkl,sha256=jMlE_3qqG3jJfBQ_1UZkeJUfqUpbDE7tXSuCWjYfUUs,1286
+sklesion/cr_test.pkl,sha256=ZDBpJWaXajlGh9RZGpPGzxQjsnmADxgE81p4zNGF0lk,499
+sklesion/model.keras,sha256=3xqBpi_6vtpIOExKczE4Ezr4u0Y5WVA1RUIqKhwedbE,86237188
+sklesion/model.py,sha256=bs8FP81uhPVKsuj4KygPzfUxVZhNl0opYGNhtzBlPks,9196
+sklesion/model_props.pkl,sha256=Cfrv1w8IINCGuTHTZ35xPaw-pvYA4-mNTfByyf6MNlY,711
+sklesion/prob_to_label.py,sha256=Zbxvv2l7Y1UzYuK9O9PfNX_PATTq11hpZJ1jFZeMyVQ,2625
+sklesion-0.2.2.dist-info/METADATA,sha256=cDPm_JJ-QlFNxrhqxxEEZq3ZFXSm94a26lBBARtht7s,540
+sklesion-0.2.2.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+sklesion-0.2.2.dist-info/top_level.txt,sha256=TFFyz3AwrSpgs7oAtoP9A_ZfDqZs6f9saMHPvobHRpI,9
+sklesion-0.2.2.dist-info/RECORD,,
