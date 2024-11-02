@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+G_hangman.egg-info/PKG-INFO
+G_hangman.egg-info/SOURCES.txt
+G_hangman.egg-info/dependency_links.txt
+G_hangman.egg-info/entry_points.txt
+G_hangman.egg-info/top_level.txt
+hangman/Words.dat
+hangman/__init__.py
+hangman/data.py
+hangman/efx.py
+hangman/game.py
+hangman/sides.py
+hangman/start.py
