@@ -1,0 +1,12 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/cli.py,sha256=pEX8Vwh-CBnh1MS-K1K5cnbyNx1Z1o-iAmOE0VPK31c,1897
+export_translations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+export_translations/export_translations.py,sha256=8DJdHHAxZ2kxj9Z25RzV63FQ4OPOCE5VGmRf4Dn9914,1862
+import_translations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+import_translations/import_translations.py,sha256=O1UqDvuDWs75ptHkQYqrXvkEvQ_9-7kPm3ebFnCf6Y0,3439
+src/util.py,sha256=kmUTnEXNhfY9N8SfhUMi_fOkaTfG44zSp5GS3eD2SQY,1053
+translations_util-0.2.1.dist-info/LICENSE.txt,sha256=3UYO5ITOqQQ_xk5pYEAlULl4K5u-TPrZul3b8aUz3mk,1078
+translations_util-0.2.1.dist-info/METADATA,sha256=Aw1MlGcrIL1hMj3ABFayZBJatkH6To3H2NsvCmIv_WE,5061
+translations_util-0.2.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+translations_util-0.2.1.dist-info/entry_points.txt,sha256=8EiW3dqhFPsdmNiwGjKsfTCyA6jBVTEI5n07B7h_DMM,45
+translations_util-0.2.1.dist-info/RECORD,,
