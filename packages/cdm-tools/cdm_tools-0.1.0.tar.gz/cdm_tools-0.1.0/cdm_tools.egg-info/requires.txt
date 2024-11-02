@@ -1,0 +1,4 @@
+attrs>=24.2.0
+loguru>=0.7.2
+pydantic>=2.9.2
+pyspark>=3.5.3
