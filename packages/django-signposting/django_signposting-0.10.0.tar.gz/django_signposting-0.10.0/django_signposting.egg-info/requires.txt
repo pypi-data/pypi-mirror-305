@@ -1,0 +1,5 @@
+Django>=3.0
+signposting>=0.9.9
+
+[dev]
+pytest
