@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: lerxmlspy
+Version: 0.0.2
+Summary: Um pacote para leitura de arquivos XML e converter para DataFrames
+Home-page: https://github.com/RoSchilling/lerxmlspy
+Author: Rodrigo Schilling
+Author-email: rodrigo.schilling98@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: xmltodict
+Requires-Dist: pandas
+Requires-Dist: lxml
+
+# Pacote Ler XML SETRABH python - lerxmlspy
+
+## Sobre o Pacote
+O pacote consta com duas funÃ§Ãµes principais sendo:
+
+1. retorna_chave_acesso:
+   1. Esta funÃ§Ã£o recebe apenas um argunto, o "xml_content" no qual deve ser informado a variÃ¡vel que contÃ©m o xml logo apÃ³s ser aberto
+   
+   #### Exemplo
+
+   ```python
+   with open(arquivo_xml, 'rb') as f:
+        xml_content = f.read()
+   lerxmlspy.retorna_chave_acesso()
+
+2. DataFrameFromXML:
+   1. Esta funÃ§Ã£o contÃ©m 4 argumentos, sendo apenas um obrigatorio obrigatÃ³rios
+      1. path (obrigatÃ³rio) bytes: Caminho do arquivo XML
+      2. nome_documento (opcional) string: Inseri coluna com o nome do documento xml
+      3. list_manter (opcional) list: Se nÃ£o for informada utiliza a lista padronizada
+      4. dic_names (opcional) dict: Se nÃ£o for informada utiliza o dicionÃ¡rio padrÃ£o
+
+   ### Exemplo
+   ```python
+   lerxmlspy.DataFrameFromXML(caminho_arquivo)
