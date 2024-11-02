@@ -1,0 +1,2 @@
+[knowledge_management_plugin]
+FEISHU = km_plugin_feishu.feishu_api:FeiShuApi
