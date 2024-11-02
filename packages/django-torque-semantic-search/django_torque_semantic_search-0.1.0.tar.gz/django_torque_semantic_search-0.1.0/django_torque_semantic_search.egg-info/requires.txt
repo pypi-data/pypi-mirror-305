@@ -1,0 +1,3 @@
+django-torque
+pgvector
+orjson
