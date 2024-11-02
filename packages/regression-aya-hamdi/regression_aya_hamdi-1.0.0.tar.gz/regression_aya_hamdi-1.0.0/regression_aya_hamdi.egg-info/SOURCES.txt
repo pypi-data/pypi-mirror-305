@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+regression_aya_hamdi/__init__.py
+regression_aya_hamdi/linearRegression.py
+regression_aya_hamdi.egg-info/PKG-INFO
+regression_aya_hamdi.egg-info/SOURCES.txt
+regression_aya_hamdi.egg-info/dependency_links.txt
+regression_aya_hamdi.egg-info/requires.txt
+regression_aya_hamdi.egg-info/top_level.txt
