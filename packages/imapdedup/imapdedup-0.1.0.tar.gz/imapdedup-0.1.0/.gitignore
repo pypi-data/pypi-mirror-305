@@ -1,0 +1,12 @@
+.DS_Store
+*.pyc
+env
+venv
+.env
+.venv
+.mypy_cache
+.vscode
+.idea/
+dist/
+build/
+.ruff_cache/
