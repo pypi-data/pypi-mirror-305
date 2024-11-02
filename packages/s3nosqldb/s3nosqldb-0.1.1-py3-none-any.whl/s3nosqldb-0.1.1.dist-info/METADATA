@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: s3nosqldb
+Version: 0.1.1
+Summary: A NoSQL Database Implementation using Amazon S3
+Home-page: https://github.com/wqxxzd/s3nosqldb
+Author: Dan Zhang
+Author-email: dan.zhang0224@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3>=1.26.0
+Requires-Dist: pyarrow>=7.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: moto>=4.0.0; extra == "dev"
+
+# S3NoSQLDB
+
+A NoSQL Database Implementation using Amazon S3 for storage.
+
+## Features
+
+- Create and manage collections in S3 buckets
+- Batch document insertion with automatic ID generation
+- Concurrent processing using ThreadPoolExecutor
+- Query documents using custom filter functions
+- Parquet file format with gzip compression
+
+## Installation
+
+```bash
+pip install s3nosqldb
+```
+
+## Quick Start
+
+```python
+from s3nosqldb import S3NoSQLDB
+
+# Initialize the database
+db = S3NoSQLDB(
+    bucket_name="your-bucket-name",
+    base_path="optional/path",
+    batch_size=50000,
+    max_workers=4
+)
+
+# Create a collection
+db.create_collection("users", id_field="user_id", auto_generate_id=True)
+
+# Insert documents
+users = [
+    {"name": "John Doe", "age": 30},
+    {"name": "Jane Smith", "age": 25}
+]
+db.insert_batch("users", users)
+
+# Query documents
+def age_filter(doc):
+    return doc["age"] > 25
+
+results = db.query("users", filter_fn=age_filter)
+```
+
+## Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/wqxxzd/s3nosqldb.git
+cd s3nosqldb
+```
+
+2. Create a virtual environment and install dependencies:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -e .[dev]
+```
+
+3. Run tests:
+```bash
+pytest
+```
+
+## License
+
+This project is licensed under the MIT License.
+
+## Badges
+
+[![codecov](https://codecov.io/github/wqxxzd/S3NoSQLDB/graph/badge.svg?token=l8wT7p6YxQ)](https://codecov.io/github/wqxxzd/S3NoSQLDB)
