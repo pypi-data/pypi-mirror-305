@@ -1,0 +1,9 @@
+requests
+logging
+websocket-client
+colorama
+zipfile
+tqdm
+python-box
+json
+PYyaml
