@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+glovo_sql_supervisor/__init__.py
+glovo_sql_supervisor.egg-info/PKG-INFO
+glovo_sql_supervisor.egg-info/SOURCES.txt
+glovo_sql_supervisor.egg-info/dependency_links.txt
+glovo_sql_supervisor.egg-info/top_level.txt
