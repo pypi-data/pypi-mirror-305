@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+tools/__init__.py
+tools/videregaande.py
+vgstools.egg-info/PKG-INFO
+vgstools.egg-info/SOURCES.txt
+vgstools.egg-info/dependency_links.txt
+vgstools.egg-info/top_level.txt
