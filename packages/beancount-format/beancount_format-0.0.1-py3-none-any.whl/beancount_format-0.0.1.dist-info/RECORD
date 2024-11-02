@@ -1,0 +1,9 @@
+beancount_format/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beancount_format/__main__.py,sha256=-mCRviysK4aqs4Quk2zm5V15YFNmjbimn5-fTG_R1OY,77
+beancount_format/cli.py,sha256=rTBdMfyftDL4dobwuogWpY-DNLzbE7lJrNOJ6WdaojU,1399
+beancount_format/format.py,sha256=SXWICl_FdypOBr94WBeBZc4qVsJsDGA7LQKfVRn5O0Y,25080
+beancount_format-0.0.1.dist-info/entry_points.txt,sha256=WzAc_zyZPlIWztN4jm-ZKGKGKvOkQahRgfFbatSB9wI,62
+beancount_format-0.0.1.dist-info/LICENSE,sha256=LMdMbV_P2B7oib3E5xlgsrHZj7CBvXaCTghvU_wib34,1084
+beancount_format-0.0.1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+beancount_format-0.0.1.dist-info/METADATA,sha256=fZBVmq7h9wiLvqtFq_Xtw7VZLOD0QLwad2zJitCq2ew,1067
+beancount_format-0.0.1.dist-info/RECORD,,
