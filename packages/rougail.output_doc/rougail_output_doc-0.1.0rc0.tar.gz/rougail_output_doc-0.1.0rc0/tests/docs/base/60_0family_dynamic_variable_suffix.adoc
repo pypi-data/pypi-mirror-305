@@ -1,0 +1,64 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+var:  # A suffix variable
+  - val1
+  - val2
+dyn{{ suffix }}:
+  description: A dynamic family
+  type: dynamic
+  dynamic:
+    type: variable
+    variable: _.var
+  var: a value  # A dynamic variable with suffix {{ suffix }}
+----
+== Variables for "rougail"
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**rougail.var** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory` `unique` `multiple`                                                                                                            | 
+A suffix variable. +
+**Default**: 
+
+* val1
+* val2                                                                                                            
+|====
+
+=== A dynamic family
+
+`standard`
+
+
+This family builds families dynamically.
+
+**Suffixes**: the value of the variable "rougail.var".
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**rougail.dynval1.var** ou **rougail.dynval2.var** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+"A dynamic variable with suffix _val1_" ou "A dynamic variable with suffix _val2_". +
+**Default**: a value                                                                                                            
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  var:
+    - val1
+    - val2
+  dynval1:
+    var: a value
+  dynval2:
+    var: a value
+----

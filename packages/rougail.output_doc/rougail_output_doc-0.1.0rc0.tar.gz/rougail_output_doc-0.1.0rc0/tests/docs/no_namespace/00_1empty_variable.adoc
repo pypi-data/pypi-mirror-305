@@ -1,0 +1,31 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.0'
+empty:
+----
+== Variables
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**empty** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+Empty.                                                                                                         
+|====
+
+
+== Example with mandatory variables not filled in
+
+[,yaml]
+----
+empty: example
+----
+== Example with all variables modifiable
+
+[,yaml]
+----
+empty: example
+----

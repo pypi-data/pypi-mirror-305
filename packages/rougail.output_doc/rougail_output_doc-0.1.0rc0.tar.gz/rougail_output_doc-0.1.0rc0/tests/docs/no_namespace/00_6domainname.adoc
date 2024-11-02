@@ -1,0 +1,29 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+variable:
+  description: a domain name variable
+  type: domainname
+  default: my.domain.name
+----
+== Variables
+
+[cols="112a,112a",options="header"]
+|====
+| Variable                                                                                                       | Description                                                                                                    
+| 
+**variable** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[domainname]` `standard` `mandatory`                                                                                                                | 
+A domain name variable. +
+**Default**: my.domain.name                                                                                                                
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+variable: my.domain.name
+----

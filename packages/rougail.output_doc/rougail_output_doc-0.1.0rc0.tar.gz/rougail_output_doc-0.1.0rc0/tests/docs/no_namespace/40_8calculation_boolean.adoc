@@ -1,0 +1,69 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+bool: false  # a boolean variable
+multi1:
+  description: a first multi variable
+  type: boolean
+  multi: true
+  default:
+    type: jinja
+    jinja: |
+      {% if _.bool %}
+      True
+      False
+      {% else %}
+      False
+      {% endif %}
+    description: a calculation
+multi2:
+  description: a second multi variable
+  type: boolean
+  multi: true
+  default:
+    type: jinja
+    jinja: |
+      {% if not _.bool %}
+      True
+      False
+      {% else %}
+      False
+      {% endif %}
+    description: a calculation
+----
+== Variables
+
+[cols="129a,129a",options="header"]
+|====
+| Variable                                                                                                                        | Description                                                                                                                     
+| 
+**bool** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[boolean]` `standard` `mandatory`                                                                                                                                 | 
+A boolean variable. +
+**Default**: False                                                                                                                                 
+| 
+**multi1** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[boolean]` `standard` `mandatory` `unique` `multiple`                                                                                                                                 | 
+A first multi variable. +
+**Default**: a calculation.                                                                                                                                 
+| 
+**multi2** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[boolean]` `standard` `mandatory` `unique` `multiple`                                                                                                                                 | 
+A second multi variable. +
+**Default**: a calculation.                                                                                                                                 
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+bool: false
+multi1:
+  - false
+multi2:
+  - true
+  - false
+----

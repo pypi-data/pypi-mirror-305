@@ -1,0 +1,29 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.0'
+without_type:
+  description: a variable
+  default: non
+----
+== Variables for "rougail"
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**rougail.without_type** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+A variable. +
+**Default**: non                                                                                                            
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  without_type: non
+----

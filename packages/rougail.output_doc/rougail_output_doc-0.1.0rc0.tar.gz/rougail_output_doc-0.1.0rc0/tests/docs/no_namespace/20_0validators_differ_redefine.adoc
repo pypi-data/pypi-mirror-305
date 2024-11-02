@@ -1,0 +1,65 @@
+== dictionaries/rougail/01-base.yml
+
+[,yaml]
+----
+version: '1.1'
+var3:
+  redefine: true
+  validators:
+    - type: jinja
+      jinja: |
+        {% if _.var3 == _.var2 %}
+        var3 must be different than var2
+        {% endif %}
+      description: var3 must be different than var2
+----
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+var1: no    # a first variable
+var2: no    # a second variable
+var3:
+  description: a third variable
+  default: yes
+  validators:
+    - type: jinja
+      jinja: |
+        {% if _.var3 == _.var1 %}
+        var3 must be different than var1
+        {% endif %}
+      description: var3 must be different than var1
+----
+== Variables
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**var1** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+A first variable. +
+**Default**: no                                                                                                            
+| 
+**var2** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+A second variable. +
+**Default**: no                                                                                                            
+| 
+**var3** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+A third variable. +
+**Validator**: var3 must be different than var2. +
+**Default**: yes                                                                                                            
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+var1: no
+var2: no
+var3: yes
+----

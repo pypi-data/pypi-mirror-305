@@ -1,0 +1,50 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+var1: yes    # a first variable
+var2:
+  description: a second variable
+  type: boolean
+  default:
+    type: jinja
+    jinja: |
+      {% if rougail.var1 == 'no' %}
+      false
+      {% endif %}
+    description: return false if the value of var1 is "no"
+----
+== Variables for "rougail"
+
+[cols="109a,109a",options="header"]
+|====
+| Variable                                                                                                    | Description                                                                                                 
+| 
+**rougail.var1** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                             | 
+A first variable. +
+**Default**: yes                                                                                                             
+| 
+**rougail.var2** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[boolean]` `standard` `mandatory`                                                                                                             | 
+A second variable. +
+**Default**: return false if the value of var1 is "no".                                                                                                             
+|====
+
+
+== Example with mandatory variables not filled in
+
+[,yaml]
+----
+rougail:
+  var2: xxx
+----
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  var1: yes
+  var2: xxx
+----

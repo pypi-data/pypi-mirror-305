@@ -1,0 +1,70 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+var: val2  # a suffix variable
+dyn{{ suffix }}:
+  type: dynamic
+  description: a dynamic family
+  dynamic:
+    - val1
+    - type: variable
+      variable: _.var
+  vardyn:  # a dynamic variable
+----
+== Variables for "rougail"
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**rougail.var** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                         | 
+A suffix variable. +
+**Default**: val2                                                                                                         
+|====
+
+=== a dynamic family
+
+`basic`
+
+
+This family builds families dynamically.
+
+**Suffixes**: 
+
+* val1
+* the value of the variable "rougail.var".
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**rougail.dynval1.vardyn** ou **rougail.dynval2.vardyn** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+A dynamic variable.                                                                                                         
+|====
+
+
+== Example with mandatory variables not filled in
+
+[,yaml]
+----
+rougail:
+  dynval1:
+    vardyn: example
+  dynval2:
+    vardyn: example
+----
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  var: val2
+  dynval1:
+    vardyn: example
+  dynval2:
+    vardyn: example
+----

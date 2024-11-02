@@ -1,0 +1,65 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+condition: no    # a condition
+leader:
+  description: a leadership
+  type: leadership
+  leader:
+    description: a leader
+    multi: true
+    hidden:
+      type: jinja
+      jinja: |
+        {% if __.condition == "no" %}
+        condition is no
+        {% endif %}
+      description: if condition is no
+  follower:  # a follower
+----
+== Variables
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**condition** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                         | 
+A condition. +
+**Default**: no                                                                                                         
+|====
+
+=== a leadership
+
+`basic` _`hidden`_
+
+**Hidden**: if condition is no.
+
+
+This family contains lists of variable blocks.
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**leader.leader** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory` `unique` `multiple`                                                                                                         | 
+A leader.                                                                                                         
+| 
+**leader.follower** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+A follower.                                                                                                         
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+condition: no
+leader:
+  - leader: example
+    follower: example
+----

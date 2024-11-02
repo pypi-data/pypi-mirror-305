@@ -1,0 +1,69 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+condition: no    # a condition
+var1:
+  description: a first variable
+  disabled:
+    type: jinja
+    jinja: |
+      {% if _.condition == "yes" %}
+      condition is yes
+      {% endif %}
+    description: if condition is yes
+  default:
+    type: jinja
+    jinja: |
+      {{ _.condition }}
+    description: the value of condition
+var2:
+  description: a second variable
+  disabled:
+    type: jinja
+    jinja: |
+      {% if rougail.condition == "yes" %}
+      condition is yes
+      {% endif %}
+    description: if condition is yes
+  default:
+    type: jinja
+    jinja: |
+      {{ rougail.condition }}
+    description: the value of condition
+----
+== Variables for "rougail"
+
+[cols="121a,121a",options="header"]
+|====
+| Variable                                                                                                                | Description                                                                                                             
+| 
+**rougail.condition** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                                         | 
+A condition. +
+**Default**: no                                                                                                                         
+| 
+**rougail.var1** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory` _`disabled`_                                                                                                                         | 
+A first variable. +
+**Default**: the value of condition. +
+**Disabled**: if condition is yes.                                                                                                                         
+| 
+**rougail.var2** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory` _`disabled`_                                                                                                                         | 
+A second variable. +
+**Default**: the value of condition. +
+**Disabled**: if condition is yes.                                                                                                                         
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  condition: no
+  var1: no
+  var2: no
+----

@@ -1,0 +1,37 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+variable:
+  description: a variable
+  default:
+    type: jinja
+    jinja: |
+      {{ param1 }}_{{ param2 }}_{{ param3 }}_{{ param4 }}
+    params:
+      param1: string
+      param2: 1
+      param3: true
+      param4:
+    description: concat all parameters
+----
+== Variables
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**variable** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+A variable. +
+**Default**: concat all parameters.                                                                                                            
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+variable: string_1_True_None
+----

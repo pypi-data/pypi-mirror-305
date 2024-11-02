@@ -1,0 +1,83 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+variable:  # a variable
+family:  # a family
+  variable1:  # a first variable
+  subfamily:  # a sub family
+    variable:  # a variable
+  variable2:  # a second variable
+----
+== Variables for "rougail"
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**rougail.variable** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+A variable.                                                                                                         
+|====
+
+=== a family
+
+`basic`
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**rougail.family.variable1** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+A first variable.                                                                                                         
+|====
+
+==== a sub family
+
+`basic`
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**rougail.family.subfamily.variable** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+A variable.                                                                                                         
+|====
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**rougail.family.variable2** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+A second variable.                                                                                                         
+|====
+
+
+== Example with mandatory variables not filled in
+
+[,yaml]
+----
+rougail:
+  variable: example
+  family:
+    variable1: example
+    subfamily:
+      variable: example
+    variable2: example
+----
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  variable: example
+  family:
+    variable1: example
+    subfamily:
+      variable: example
+    variable2: example
+----

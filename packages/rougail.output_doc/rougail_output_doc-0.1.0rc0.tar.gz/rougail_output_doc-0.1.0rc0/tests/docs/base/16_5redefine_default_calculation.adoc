@@ -1,0 +1,46 @@
+== dictionaries/rougail/01-base.yml
+
+[,yaml]
+----
+version: '1.1'
+variable:
+  redefine: true
+  default:
+----
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+variable:
+  description: a variable
+  default:
+    type: jinja
+    jinja: yes
+----
+== Variables for "rougail"
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**rougail.variable** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+A variable.                                                                                                         
+|====
+
+
+== Example with mandatory variables not filled in
+
+[,yaml]
+----
+rougail:
+  variable: example
+----
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  variable: example
+----

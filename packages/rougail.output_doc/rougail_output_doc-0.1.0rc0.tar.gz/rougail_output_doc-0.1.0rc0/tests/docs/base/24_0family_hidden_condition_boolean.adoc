@@ -1,0 +1,62 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+condition: false  # a conditional variable
+family:
+  description: a family
+  hidden:
+    type: jinja
+    jinja: |
+      {% if not rougail.condition %}
+      condition is false
+      {% endif %}
+    description: if not condition
+  variable:  # a variable
+----
+== Variables for "rougail"
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**rougail.condition** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[boolean]` `standard` `mandatory`                                                                                                         | 
+A conditional variable. +
+**Default**: False                                                                                                         
+|====
+
+=== a family
+
+`basic` _`hidden`_
+
+**Hidden**: if not condition.
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**rougail.family.variable** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+A variable.                                                                                                         
+|====
+
+
+== Example with mandatory variables not filled in
+
+[,yaml]
+----
+rougail:
+  family:
+    variable: example
+----
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  condition: false
+  family:
+    variable: example
+----

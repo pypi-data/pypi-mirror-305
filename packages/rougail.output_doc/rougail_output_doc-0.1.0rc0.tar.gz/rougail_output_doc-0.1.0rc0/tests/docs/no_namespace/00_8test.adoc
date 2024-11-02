@@ -1,0 +1,83 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+var1:
+  description: the first variable
+  test:
+    - test
+var2:
+  description: the second variable
+  test:
+    - test
+  default: value
+var3:
+  description: the third variable
+  test:
+    - test1
+    - test2
+var4:
+  description: the forth variable
+  test:
+    - 
+    - test1
+    - test2
+var5:
+  description: the fifth variable
+  test:
+    - false
+----
+== Variables
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**var1** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+The first variable. +
+**Example**: test                                                                                                         
+| 
+**var2** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                         | 
+The second variable. +
+**Default**: value +
+**Example**: test                                                                                                         
+| 
+**var3** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+The third variable. +
+**Example**: test1                                                                                                         
+| 
+**var4** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+The forth variable. +
+**Example**: None                                                                                                         
+| 
+**var5** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+The fifth variable. +
+**Example**: False                                                                                                         
+|====
+
+
+== Example with mandatory variables not filled in
+
+[,yaml]
+----
+var1: test
+var2: test
+var3: test1
+var5: false
+----
+== Example with all variables modifiable
+
+[,yaml]
+----
+var1: test
+var2: test
+var3: test1
+var4:
+var5: false
+----

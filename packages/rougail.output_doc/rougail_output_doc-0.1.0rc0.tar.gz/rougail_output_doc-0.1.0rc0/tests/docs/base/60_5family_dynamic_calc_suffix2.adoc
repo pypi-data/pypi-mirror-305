@@ -1,0 +1,67 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+var:  # a suffix variable
+  - val1
+  - val2
+dyn{{ suffix }}:
+  description: a dynamic family
+  type: dynamic
+  dynamic:
+    type: variable
+    variable: _.var
+  var:
+    description: Suffix has value
+    default:
+      type: suffix
+----
+== Variables for "rougail"
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**rougail.var** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory` `unique` `multiple`                                                                                                            | 
+A suffix variable. +
+**Default**: 
+
+* val1
+* val2                                                                                                            
+|====
+
+=== a dynamic family
+
+`standard`
+
+
+This family builds families dynamically.
+
+**Suffixes**: the value of the variable "rougail.var".
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**rougail.dynval1.var** ou **rougail.dynval2.var** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+Suffix has value. +
+**Default**: value of the suffix.                                                                                                            
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  var:
+    - val1
+    - val2
+  dynval1:
+    var: val1
+  dynval2:
+    var: val2
+----

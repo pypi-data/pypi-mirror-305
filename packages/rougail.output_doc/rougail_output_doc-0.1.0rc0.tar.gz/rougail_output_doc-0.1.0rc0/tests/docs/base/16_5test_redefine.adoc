@@ -1,0 +1,75 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+var1: no    # a first variable
+var2:
+  description: a second variable
+  test:
+    - test
+  default: non
+var3:
+  description: a third variable
+  test:
+    - test
+----
+== dictionaries/rougail/10-base.yml
+
+[,yaml]
+----
+version: '1.1'
+var1:
+  redefine: true
+  test:
+    - test1
+var2:
+  redefine: true
+  test:
+    - test1
+var3:
+  redefine: true
+  test:
+----
+== Variables for "rougail"
+
+[cols="105a,105a",options="header"]
+|====
+| Variable                                                                                                | Description                                                                                             
+| 
+**rougail.var1** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                         | 
+A first variable. +
+**Default**: no +
+**Example**: test1                                                                                                         
+| 
+**rougail.var2** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                         | 
+A second variable. +
+**Default**: non +
+**Example**: test1                                                                                                         
+| 
+**rougail.var3** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                         | 
+A third variable.                                                                                                         
+|====
+
+
+== Example with mandatory variables not filled in
+
+[,yaml]
+----
+rougail:
+  var1: test1
+  var2: test1
+  var3: example
+----
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  var1: test1
+  var2: test1
+  var3: example
+----

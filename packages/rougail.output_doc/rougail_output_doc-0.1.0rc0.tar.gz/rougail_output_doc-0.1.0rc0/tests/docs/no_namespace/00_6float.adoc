@@ -1,0 +1,71 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+var1: 0.0  # the first variable
+var2:
+  description: the second variable
+  default: 0.0
+var3:
+  description: the third variable
+  type: float
+  default: 0.0
+var4: 10.1  # the forth variable
+var5:
+  description: the fifth variable
+  default: 10.1
+var6:
+  description: the sixth variable
+  type: float
+  default: 10.1
+----
+== Variables
+
+[cols="107a,107a",options="header"]
+|====
+| Variable                                                                                                  | Description                                                                                               
+| 
+**var1** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[float]` `standard` `mandatory`                                                                                                           | 
+The first variable. +
+**Default**: 0.0                                                                                                           
+| 
+**var2** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[float]` `standard` `mandatory`                                                                                                           | 
+The second variable. +
+**Default**: 0.0                                                                                                           
+| 
+**var3** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[float]` `standard` `mandatory`                                                                                                           | 
+The third variable. +
+**Default**: 0.0                                                                                                           
+| 
+**var4** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[float]` `standard` `mandatory`                                                                                                           | 
+The forth variable. +
+**Default**: 10.1                                                                                                           
+| 
+**var5** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[float]` `standard` `mandatory`                                                                                                           | 
+The fifth variable. +
+**Default**: 10.1                                                                                                           
+| 
+**var6** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[float]` `standard` `mandatory`                                                                                                           | 
+The sixth variable. +
+**Default**: 10.1                                                                                                           
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+var1: 0.0
+var2: 0.0
+var3: 0.0
+var4: 10.1
+var5: 10.1
+var6: 10.1
+----

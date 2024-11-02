@@ -1,0 +1,83 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+variable: value  # a variable
+----
+== dictionaries/extra/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+variable1:
+  description: a first variable
+  default:
+    type: variable
+    variable: rougail.variable
+variable2:
+  description: a second variable
+  default:
+    type: jinja
+    jinja: |
+      {{ rougail.variable }}
+    description: copy the value of rougail.variable
+variable3:
+  description: a third variable
+  default:
+    type: jinja
+    jinja: |
+      {{ variable }}
+    params:
+      variable:
+        type: variable
+        variable: rougail.variable
+    description: copy the value of rougail.variable
+----
+== Variables for "rougail"
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**rougail.variable** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+A variable. +
+**Default**: value                                                                                                            
+|====
+
+
+== Variables for "extra"
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**extra.variable1** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+A first variable. +
+**Default**: the value of the variable "rougail.variable".                                                                                                            
+| 
+**extra.variable2** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+A second variable. +
+**Default**: copy the value of rougail.variable.                                                                                                            
+| 
+**extra.variable3** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+A third variable. +
+**Default**: copy the value of rougail.variable.                                                                                                            
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  variable: value
+extra:
+  variable1: value
+  variable2: value
+  variable3: value
+----

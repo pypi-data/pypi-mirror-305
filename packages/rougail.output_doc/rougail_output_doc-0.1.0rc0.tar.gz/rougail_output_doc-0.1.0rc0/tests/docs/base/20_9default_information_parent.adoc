@@ -1,0 +1,53 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: 1.1
+family:
+  var1:  # a first variable
+  var2:
+    description: a second variable
+    default:
+      type: information
+      information: test_information
+      variable: __.family
+----
+== Variables for "rougail"
+
+=== rougail.family
+
+`basic`
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**rougail.family.var1** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory`                                                                                                            | 
+A first variable.                                                                                                            
+| 
+**rougail.family.var2** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                            | 
+A second variable. +
+**Default**: value of the information.                                                                                                            
+|====
+
+
+== Example with mandatory variables not filled in
+
+[,yaml]
+----
+rougail:
+  family:
+    var1: example
+    var2: example
+----
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  family:
+    var1: example
+    var2: example
+----

@@ -1,0 +1,39 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+var:
+  description: a variable
+  type: choice
+  default: 9
+  choices:
+    type: jinja
+    jinja: |
+      {% for item in trange(0, 10) %}
+      {{ item }}
+      {%- endfor %}
+    return_type: number
+    description: choice for 0 to 9
+----
+== Variables for "rougail"
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**rougail.var** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[choice]` `standard` `mandatory`                                                                                                            | 
+A variable. +
+**Choices**: choice for 0 to 9. +
+**Default**: 9                                                                                                            
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  var: 9
+----

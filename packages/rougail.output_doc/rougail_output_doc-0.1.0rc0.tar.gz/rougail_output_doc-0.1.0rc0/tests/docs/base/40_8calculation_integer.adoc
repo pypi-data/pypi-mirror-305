@@ -1,0 +1,55 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+bool: false  # a boolean variable
+int1:
+  description: first integer variable
+  type: number
+  default:
+    type: jinja
+    jinja: |
+      {% if rougail.bool %}1{% else %}2{% endif %}
+    description: if bool returns 1 otherwise return 2
+int2:
+  description: second integer variable
+  type: number
+  default:
+    type: jinja
+    jinja: |
+      {% if not rougail.bool %}3{% else %}4{% endif %}
+    description: if bool returns 3 otherwise return 4
+----
+== Variables for "rougail"
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**rougail.bool** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[boolean]` `standard` `mandatory`                                                                                                            | 
+A boolean variable. +
+**Default**: False                                                                                                            
+| 
+**rougail.int1** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[number]` `standard` `mandatory`                                                                                                            | 
+First integer variable. +
+**Default**: if bool returns 1 otherwise return 2.                                                                                                            
+| 
+**rougail.int2** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[number]` `standard` `mandatory`                                                                                                            | 
+Second integer variable. +
+**Default**: if bool returns 3 otherwise return 4.                                                                                                            
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  bool: false
+  int1: 2
+  int2: 3
+----

@@ -1,0 +1,64 @@
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.1'
+condition: yes    # a condition
+leader:
+  description: a leadership
+  type: leadership
+  leader:
+    description: a leader
+    multi: true
+  follower:
+    description: a follower
+    disabled:
+      type: jinja
+      jinja: |
+        {% if __.condition == "yes" %}true{% else %}false{% endif %}
+      description: if condition is yes
+----
+== Variables for "rougail"
+
+[cols="118a,118a",options="header"]
+|====
+| Variable                                                                                                             | Description                                                                                                          
+| 
+**rougail.condition** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `standard` `mandatory`                                                                                                                      | 
+A condition. +
+**Default**: yes                                                                                                                      
+|====
+
+=== a leadership
+
+`basic`
+
+
+This family contains lists of variable blocks.
+
+[cols="118a,118a",options="header"]
+|====
+| Variable                                                                                                             | Description                                                                                                          
+| 
+**rougail.leader.leader** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory` `unique` `multiple`                                                                                                                      | 
+A leader.                                                                                                                      
+| 
+**rougail.leader.follower** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[string]` `basic` `mandatory` _`disabled`_                                                                                                                      | 
+A follower. +
+**Disabled**: if condition is yes.                                                                                                                      
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  condition: yes
+  leader:
+    - leader: example
+      follower: example
+----

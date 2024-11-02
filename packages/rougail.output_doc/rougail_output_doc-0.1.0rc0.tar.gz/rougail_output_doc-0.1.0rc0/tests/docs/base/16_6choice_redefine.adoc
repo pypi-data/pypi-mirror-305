@@ -1,0 +1,48 @@
+== dictionaries/rougail/01-base.yml
+
+[,yaml]
+----
+version: '1.0'
+var:
+  redefine: true
+  choices:
+    - a
+    - c
+----
+== dictionaries/rougail/00-base.yml
+
+[,yaml]
+----
+version: '1.0'
+var:
+  type: choice
+  description: A choice
+  default: c
+  choices:
+    - a
+    - b
+    - c
+----
+== Variables for "rougail"
+
+[cols="108a,108a",options="header"]
+|====
+| Variable                                                                                                   | Description                                                                                                
+| 
+**rougail.var** +
+`https://rougail.readthedocs.io/en/latest/variable.html#variables-types[choice]` `standard` `mandatory`                                                                                                            | 
+A choice. +
+**Choices**: 
+
+* a
+* c ← (default)                                                                                                            
+|====
+
+
+== Example with all variables modifiable
+
+[,yaml]
+----
+rougail:
+  var: c
+----
