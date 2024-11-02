@@ -1,0 +1,10 @@
+include README.md
+include requirements.txt
+include LICENSE
+recursive-exclude tests *
+recursive-exclude debug *
+recursive-exclude notebooks *
+recursive-exclude data *
+recursive-exclude src/bluequbit/library/hierarchical_circuit *
+recursive-exclude environments *
+exclude src/bluequbit/__init__private.py
