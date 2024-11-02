@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: JomansHelper
+Version: 0.2
+Summary: Jomans Helper
+Author: .joman21.
+Requires-Dist: colorama
+Requires-Dist: psutil
+Requires-Dist: platform
+Requires-Dist: fake-useragent
+
