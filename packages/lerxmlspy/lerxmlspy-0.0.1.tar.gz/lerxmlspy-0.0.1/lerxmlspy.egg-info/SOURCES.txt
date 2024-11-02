@@ -1,0 +1,9 @@
+README.md
+setup.py
+lerxmlspy/__init__.py
+lerxmlspy/lerxmlspy.py
+lerxmlspy.egg-info/PKG-INFO
+lerxmlspy.egg-info/SOURCES.txt
+lerxmlspy.egg-info/dependency_links.txt
+lerxmlspy.egg-info/requires.txt
+lerxmlspy.egg-info/top_level.txt

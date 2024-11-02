@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: lerxmlspy
+Version: 0.0.1
+Summary: Um pacote para leitura de arquivos XML e converter para DataFrames
+Author: Rodrigo Schilling
+Requires-Dist: xmltodict
+Requires-Dist: pandas
+Requires-Dist: lxml
