@@ -1,0 +1,9 @@
+README.md
+setup.py
+bisHash/__init__.py
+bisHash/hashing.py
+bisHash1.egg-info/PKG-INFO
+bisHash1.egg-info/SOURCES.txt
+bisHash1.egg-info/dependency_links.txt
+bisHash1.egg-info/requires.txt
+bisHash1.egg-info/top_level.txt
