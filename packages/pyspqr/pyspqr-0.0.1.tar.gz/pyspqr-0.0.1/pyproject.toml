@@ -1,0 +1,19 @@
+[project]
+name = "pyspqr"
+version = "0.0.1"
+description = "Python bindings for SuiteSparseQR."
+license = {text = "GPLv3"}
+readme = "README.rst"
+authors = [{name = "Enzo Busseti"}]
+maintainers = [{name = "Enzo Busseti", email = "enzo.busseti@gmail.com"}]
+dependencies = ["numpy", "scipy"]
+
+[project.optional-dependencies]
+dev = ["build", "twine", "auditwheel", "rstcheck", "wheel"]
+
+[build-system]
+requires = ["setuptools>=61", "numpy", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Repository = "https://github.com/enzbus/suitesparseqr"

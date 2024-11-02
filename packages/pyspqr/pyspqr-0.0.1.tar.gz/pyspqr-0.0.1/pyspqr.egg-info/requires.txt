@@ -1,0 +1,9 @@
+numpy
+scipy
+
+[dev]
+build
+twine
+auditwheel
+rstcheck
+wheel
