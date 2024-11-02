@@ -1,0 +1,2 @@
+include xy_django_app_information
+recursive-include xy_django_app_information/* *
