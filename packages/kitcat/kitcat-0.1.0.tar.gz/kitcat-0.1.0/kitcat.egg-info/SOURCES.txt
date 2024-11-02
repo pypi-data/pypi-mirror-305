@@ -1,0 +1,7 @@
+README.md
+hello.py
+pyproject.toml
+kitcat.egg-info/PKG-INFO
+kitcat.egg-info/SOURCES.txt
+kitcat.egg-info/dependency_links.txt
+kitcat.egg-info/top_level.txt
