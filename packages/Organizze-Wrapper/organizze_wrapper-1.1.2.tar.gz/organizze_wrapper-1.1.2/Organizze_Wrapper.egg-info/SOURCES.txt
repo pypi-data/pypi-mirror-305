@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+OrganizzeWrapper/API.py
+OrganizzeWrapper/CartoesCredito.py
+OrganizzeWrapper/Categorias.py
+OrganizzeWrapper/Contas.py
+OrganizzeWrapper/FaturasCartao.py
+OrganizzeWrapper/Lancamentos.py
+OrganizzeWrapper/Metas.py
+OrganizzeWrapper/Usuarios.py
+OrganizzeWrapper/__init__.py
+Organizze_Wrapper.egg-info/PKG-INFO
+Organizze_Wrapper.egg-info/SOURCES.txt
+Organizze_Wrapper.egg-info/dependency_links.txt
+Organizze_Wrapper.egg-info/requires.txt
+Organizze_Wrapper.egg-info/top_level.txt
