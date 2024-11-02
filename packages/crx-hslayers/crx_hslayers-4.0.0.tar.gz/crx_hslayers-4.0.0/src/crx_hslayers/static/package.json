@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "hslayers-ng-app": "14.1.x",
+    "hslayers-cesium-app": "14.1.x"
+  }
+}
