@@ -1,0 +1,13 @@
+LICENSE,sha256=SznDEGDCqyjHnkQgzlCMsT9CTXehLDcl9z40klDHSbw,1092
+magazine/__init__.py,sha256=GslMs1gB_u9bJUClawy7rQ6F5IShPC2xvGBfpqCaIKI,210
+magazine/fonts/Roboto-Bold.ttf,sha256=7yqw5ALVy53ok-JjosROV_V_7Dl0sNmBv-hN7D2ug6E,162464
+magazine/fonts/Roboto-Regular.ttf,sha256=8OWiG_XJXkwbzivpijZW68xtQqIfQcTj6_ad2BVwLlQ,162876
+magazine/fonts/RobotoMono-Bold.ttf,sha256=VWPOWJ1gjqDaf-UfecboWuSItBTtXrfRZrhqoXwkNSY,87008
+magazine/fonts/RobotoMono-Regular.ttf,sha256=w8iOaiprWYm5hBNPzFHOaddn_RgCWHLoz0FsBMTaryA,86908
+magazine/io.py,sha256=Ln6L7SNN18H1MZUr2RBsvKQVwpCRskl-vAoQ9Oa6vOs,1376
+magazine/publish.py,sha256=blg3vu7zJAK1y48MJ5u-kYGcYedxtPcndW--LcF_wJo,7787
+magazine/story.py,sha256=ITlmX3Ew5xYFMAkNyRnCHhA6212Nwfr7ompGDDw5zuE,3137
+magazine-0.2.0.dist-info/LICENSE,sha256=SznDEGDCqyjHnkQgzlCMsT9CTXehLDcl9z40klDHSbw,1092
+magazine-0.2.0.dist-info/METADATA,sha256=eHGT48RHt-0E7c5LYt1huVmSBet2m9VVJF7vFgXnpV0,1967
+magazine-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+magazine-0.2.0.dist-info/RECORD,,
