@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mysqlonsocket
+Version: 0.0.1
+Summary: A module which helps you use your MySQL database over local network by connecting another devices.
+Author: VedantBarhate
+Author-email: vedant.barhate27@gmail.com
+Keywords: python,socket,sockets,mysql,sql,database,server-client,sql remote user
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE.txt
+Requires-Dist: mysql.connector
+Requires-Dist: cryptography

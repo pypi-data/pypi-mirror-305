@@ -1,0 +1,14 @@
+LICENSE.txt
+setup.py
+mysqlonsocket/__init__.py
+mysqlonsocket/client.py
+mysqlonsocket/configrations.py
+mysqlonsocket/server.py
+mysqlonsocket/test_client.py
+mysqlonsocket/test_server.py
+mysqlonsocket/utils.py
+mysqlonsocket.egg-info/PKG-INFO
+mysqlonsocket.egg-info/SOURCES.txt
+mysqlonsocket.egg-info/dependency_links.txt
+mysqlonsocket.egg-info/requires.txt
+mysqlonsocket.egg-info/top_level.txt
