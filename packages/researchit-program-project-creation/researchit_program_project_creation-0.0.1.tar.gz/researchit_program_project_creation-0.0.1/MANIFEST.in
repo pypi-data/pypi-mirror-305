@@ -1,0 +1,7 @@
+include settings.ini
+include LICENSE
+include CONTRIBUTING.md
+include README.md
+recursive-exclude * __pycache__
+include researchit_program_project_creation/config/config.default.env
+include researchit_program_project_creation/config/config.default.yaml

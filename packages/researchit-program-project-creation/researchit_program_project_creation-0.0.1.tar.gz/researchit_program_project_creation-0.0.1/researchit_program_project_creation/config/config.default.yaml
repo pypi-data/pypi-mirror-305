@@ -1,0 +1,37 @@
+# When accessing this in the code you'll work with it as a dict.
+# ENV variables will be replaced with their values. This is done with the envyaml package that is in the code template `load_config`.
+# By convention all variables for the project should have the RESEARCHIT_PROGRAM_PROJECT_CREATION_* prefix.
+# e.g
+# name: ${RESEARCHIT_PROGRAM_PROJECT_CREATION_NAME}
+
+example:
+    input:
+        name: "Test"
+project_creation:
+    project_dir: ${RESEARCHIT_PROGRAM_PROJECT_CREATION_OUTPUT_DIR}
+    linux_group_modifiers:
+            prefix: dpssi_group_
+            read_postfix: _r
+            write_postfix: _w
+    sample_sheet_expected_rows: [ProjectID,DisplayName,Owner,Admins,Info,Members_rw,Members_r,Tags,Start_date,End_date,End_date_estimate,related_projects,restricted_resources,In_progress,Reviewed_by_admin,calc_path,More_Info]
+    info_metadata_template: 
+        # Read-only
+        ProjectID: $ProjectID
+        DisplayName: $DisplayName
+        # Editable
+        Org: 
+        Related_projects: $Related_projects
+        Owner: $Owner
+        Admins: $Admins
+        Info: $Info
+        More_Info: $More_Info
+        Members:
+            Write: $Members_rw
+            Read-only: $Members_rw
+        Tags: $Tags
+        Start:
+            date: $Start_date
+        End:
+            date: $End_date
+            estimate: $End_date_estimate
+        Restricted_resources: $Restricted_resources
