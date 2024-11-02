@@ -1,0 +1,33 @@
+# HRC
+
+HRC is a Python library designed for controll of HRC Hand designed and manufactured by Faculty of Technical Sciences Novi Sad.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install HRC.
+
+```bash
+pip install HRC
+```
+
+## Usage
+
+```python
+import HRC
+
+# make an instance of HRC hand
+my_hand = HRC.HRC_Hand()
+
+# set finger's velocity
+my_hand.finger_1.set_desired_speed(0.5) #50%
+
+# set finger's torque
+my_hand.finger_2.set_desired_torque(0.1) #10%
+
+# move finger for desired amount
+my_hand.thumb_flexion.rotate(theta = 0.3, speed = 0.3, torque = 0.125) #finger will move with 30% of max speed, with 12.5% of max torque for 30% percent of maximum movement from current position
+```
+
+## License
+
+[FTN Novi Sad]
