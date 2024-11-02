@@ -1,0 +1,9 @@
+lti_dynamic_registration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lti_dynamic_registration/constants.py,sha256=_6EJByDiQavuQwuLzBcgrKXHUmE7ZXBzl-JR2s2VnME,388
+lti_dynamic_registration/types.py,sha256=jNt7m0uM2JcQC1auH7z5oWJVfyvlpBBk8awcRQM030Q,10640
+lti_dynamic_registration/views.py,sha256=OI2zydh6-D1QWN-c-0SqPdbs5SqVN6gfEIOTjAggCho,3258
+django_lti_dynamic_registration-0.1.1.dist-info/LICENSE,sha256=Gt4pozkUSRpyLxcu0XFmIhPLbcYz-U47IYjxfhna5b4,1100
+django_lti_dynamic_registration-0.1.1.dist-info/METADATA,sha256=ruFef5aDMmys04q0TXd_OY-ugTj1S_caDG4ml_U7Vns,2447
+django_lti_dynamic_registration-0.1.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+django_lti_dynamic_registration-0.1.1.dist-info/top_level.txt,sha256=VQm3AaQHPZeLtLvjLBkqchuxHEjmVUZXCEbB8CZjAlo,25
+django_lti_dynamic_registration-0.1.1.dist-info/RECORD,,
