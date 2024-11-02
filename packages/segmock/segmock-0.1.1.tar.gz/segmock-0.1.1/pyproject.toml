@@ -1,0 +1,47 @@
+[project]
+name = "segmock"
+version = "0.1.1"
+description = "7 segment clock (segmock)"
+readme = "README.md"
+authors = [
+    { name = "sou-san", email = "sou887867@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "textual>=0.85.1",
+    "textual-pyfiglet==0.5.0",
+]
+
+[project.scripts]
+segmock = "segmock.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.13.0",
+    "ruff>=0.7.1",
+    "textual-dev>=1.6.1",
+]
+
+[tool.ruff]
+line-length = 90
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "F", # Pyflakes
+    "B", # flake8-bugbear
+    "I", # isort
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "N", # pep8-naming
+    "C901", # mccabe linter (複雑度チェック)
+]
+
+ignore = [
+    "D103", # docstring が無い関数やクラスを許す
+    "E501", # 行あたりの文字数制限を無視する
+]
