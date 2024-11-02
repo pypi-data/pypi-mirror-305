@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/textual_cogs/__init__.py
+src/textual_cogs/dialogs.py
+src/textual_cogs/icons.py
+src/textual_cogs/labels.py
+src/textual_cogs.egg-info/PKG-INFO
+src/textual_cogs.egg-info/SOURCES.txt
+src/textual_cogs.egg-info/dependency_links.txt
+src/textual_cogs.egg-info/top_level.txt
